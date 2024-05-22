@@ -8,9 +8,9 @@ This repo includes our datasets and codes for generation and evaluation.
 
 <img src="./assets/overview.png" alt="image-20240328225051573" style="zoom:50%;" />
 
-- The directory [data](#data) contains 8 datasets we contributed for  Error Identification and Correction.
-- The directory [evaluation](#evaluation) is evaluation results for closed-source models (GPT-3.5, GPT-4, GLM-4, Gemini Pro) and open-source models (LLaMA-2-7B, LLaMA-2-13B, MetaMath-7B, MetaMath-13B).
-- The directory [code](#code) is our generation and evaluation codes.
+- The directory [data](./data/) contains 8 datasets we contributed for  Error Identification and Correction.
+- The directory [evaluation](./evaluation/) is evaluation results for closed-source models (GPT-3.5, GPT-4, GLM-4, Gemini Pro) and open-source models (LLaMA-2-7B, LLaMA-2-13B, MetaMath-7B, MetaMath-13B).
+- The directory [code](./code/) is our generation and evaluation codes.
 
 ## Data Release
 
@@ -20,14 +20,14 @@ Each data is in file named as `generated_cases_clean.jsonl`.
 
 To be specific: 
 
-- [generated_cases_GSM8K](./data/generated_cases_GSM8K): Cases of nine error types generated from GSM8K by GPT-4.
-- [generated_cases_MathQA](./data/generated_cases_MathQA): Cases of nine error types generated from MathQA by GPT-4.
-- [EP_robustness_testing_cases_GSM8K](./data/EP_robustness_testing_cases_GSM8K): Cases of nine error types for EP robustness testing from GSM8K containing 50 correct cases and 50 incorrect cases.
-- [EP_robustness_testing_cases_MathQA](./data/EP_robustness_testing_cases_MathQA): Cases of nine error types for EP robustness testing from MathQA.
+- [generated_cases_GSM8K](./data/generated_cases_GSM8K/): Cases of nine error types generated from GSM8K by GPT-4.
+- [generated_cases_MathQA](./data/generated_cases_MathQA/): Cases of nine error types generated from MathQA by GPT-4.
+- [EP_robustness_testing_cases_GSM8K](./data/EP_robustness_testing_cases_GSM8K/): Cases of nine error types for EP robustness testing from GSM8K containing 50 correct cases and 50 incorrect cases.
+- [EP_robustness_testing_cases_MathQA](./data/EP_robustness_testing_cases_MathQA/): Cases of nine error types for EP robustness testing from MathQA.
 - [incomplete_generated_cases_GSM8K](./data/incomplete_generated_cases_GSM8K/): Cases of incomplete generated cases from GSM8K.
 - [incomplete_generated_cases_MathQA](./data/incomplete_generated_cases_MathQA/): Cases of incomplete generated cases from MathQA.
-- [step_number_cases_GSM8K](./data/step_number_cases_GSM8K): Cases for specific step numbers of solution from GSM8K.
-- [step_number_cases_MathQA](./data/step_number_cases_MathQA): Cases for specific step numbers of solution from MathQA.
+- [step_number_cases_GSM8K](./data/step_number_cases_GSM8K/): Cases for specific step numbers of solution from GSM8K.
+- [step_number_cases_MathQA](./data/step_number_cases_MathQA/): Cases for specific step numbers of solution from MathQA.
 
 Each data is a `dict`, and the keys are:
 
