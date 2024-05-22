@@ -1,0 +1,110 @@
+[
+    {
+        "question": "A jar contains 9 blue pens, 21 black pens, and 6 red pens. Four blue pens are removed and then seven black pens are removed. How many pens are left in the jar?",
+        "original_solution": "There are 9-4 = 5 blue pens left in the jar.\nThere are 21-7 = 14 black pens left in the jar.\nThere are 5+14+6 = 25 pens left in the jar.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "There are 21-7 = 14 black pens left in the jar.\nThere are 9+14+6 = 29 pens left in the jar.\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The deletion has occurred in the first step, where the original solution's process of calculating the remaining blue pens was removed. As a result, subsequent references to the number of blue pens left have been affected. Specifically, step 2 in the transformed solution directly references the original number of blue pens (9) instead of the calculated number of remaining blue pens (5), causing a change from 5+14+6=25 to 9+14+6=29. Hence, step 2 becomes the first step that references the incorrect number of pens in the transformed solution, making it the 'wrong_step'. The choice of the largest number to reference, in this case, aligns with the number of blue pens initially present before any were removed, which was 9.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #25.\n\nExplanation: The solution is missing a reasoning step. The correct answer is 25, which is calculated by subtracting 7 black pens from the original total of 21 black pens, and then adding the 9 blue pens and 6 red pens.\n\nThe correct calculation is:\n21 - 7 = 14 black pens left in the jar\n14 + 9 + 6 = 25 pens left in the jar\n\nTherefore, the solution is incorrect, and the correct answer is 25."
+    },
+    {
+        "question": "There are 6 trees in Chris's yard.  Ferdinand has half the number of trees that Chris has.  Harry has 5 more than twice the number of trees that Ferdinand has.  How many more trees are in Harry's yard than Ferdinand's yard?",
+        "original_solution": "Ferdinand:6/2=3 trees\nHarry:5+2(3)=5+6=11 trees\n11-3=8 trees\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Harry:5+2(6/2)=5+2*3=5+6=11 trees\n11-3=8 trees\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, the first step calculates Ferdinand's number of trees as 6/2=3. The second step uses that result to calculate Harry's number of trees. By deleting the first step, we must adjust the second step to directly use information from the question; however, we should still ensure that the final answer is different from the original answer. Therefore, the second step should begin with 5 plus twice Ferdinand's number assuming Ferdinand's original number 6 directly from the question (2*(6/2) instead of 2*3). However, to generate a different transformed answer, an error is introduced by not updating the numerical operations correctly. The formula is altered incorrectly to 5+2*3=5+6=11 trees. Finally, instead of subtracting Ferdinand's mistaken number of trees (which could be 6 after deleting the first step), we subtract the correct original amount (3 trees), resulting in a wrong answer of 11-3=8 trees. The transformed answer should be 5 to be different from the original answer. 'Wrong_step' is 1, where the first step that references the correct result from the deleted step now directly references numbers from the question.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #8 trees.\n\nExplanation: The solution assumes that Harry has 5 more than twice the number of trees that Ferdinand has, which is 6 trees. Therefore, Harry has 5 + 2(6/2) = 5 + 2(3) = 5 + 6 = 11 trees. However, this calculation is incorrect because it does not account for the fact that Ferdinand has half the number of trees that Chris has, which means that Ferdinand has 6/2 = 3 trees. Therefore, the correct answer is 8 trees."
+    },
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #119. The explanation is #, which is the reasoning that led to the correct answer.\n\nIn step 1, the solution states that Eddie can bake 3 pies a day, and his sister can bake 6 pies a day. This means that in total, they can bake 3 + 6 = 9 pies a day.\n\nIn step 2, the solution states that Eddie's mother can bake 8 pies a day. This means that in total, they can bake 9 + 8 = 17 pies a day.\n\nIn step 3, the solution states that they will be able to bake 17 x 7 = 119 pies in 7 days. This is the correct answer.\n\nTherefore, the solution is incorrect, and the correct answer is 119 pies."
+    },
+    {
+        "question": "Julia collects old watches. She owns 20 silver watches, and three times as many bronze watches. She decided to buy gold watches to add to her collection, a number that represents 10% of all the watches she owns. How many watches does Julia own after this purchase?",
+        "original_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60+20 = 80 total silver and bronze watches\n10% of all Julia's watches is 80 * 10/100 = 8 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 8 = 88 watches.\n#### 88",
+        "original_answer": 88.0,
+        "transformed_solution": "10% of all Julia's watches is 20 * 3 * 10/100 = 6 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 20 * 3 + 6 = 86 watches.\n#### 86",
+        "transformed_answer": 86.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of bronze watches and step 2 references the result of step 1. So after deleting step 1, step 2 should change the formula to directly calculate 10% of silver and bronze watches by referencing the numbers from the question (20 and 3 times as many bronze watches). Therefore, the formula changes from 80 * 10/100 = 8 to 20 * 3 * 10/100 = 6, which directly calculates 10% of 60 (three times 20 silver watches). Step 3 and 4 as subsequent related steps, are affected by step 2. Step 3 will change the total calculation from 20 + 60 + 8 = 88 watches to 20 + 20 * 3 + 6 = 86 watches. It is step 1 in the transformed_solution, which serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #88.\n\nExplanation: The solution is missing a reasoning step. The calculation for the number of gold watches Julia is supposed to buy is correct, but it is not clear why the solution states that Julia is in possession of 86 watches after buying gold watches. To get the correct answer, we need to add the number of silver and bronze watches to the number of gold watches Julia is supposed to buy. Therefore, the final answer is 20 + 20 * 3 + 6 = 88 watches."
+    },
+    {
+        "question": "Randy had $3,000. Smith gave him another $200. Randy then gave Sally $1,200 and kept the rest. What was the value, in dollars, of the rest?",
+        "original_solution": "After Smith gave him $200, Randy had 3000+200=3200 dollars.\nThe value of the rest of the money is 3200-1200=2000 dollars.\n#### 2000",
+        "original_answer": 2000.0,
+        "transformed_solution": "Randy then gave Sally $1,200, so the value of the rest of the money is 3000-1200=1800 dollars.\n#### 1800",
+        "transformed_answer": 1800.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed, which originally added $200 to Randy's initial $3,000. The original_solution had step 1 reference the numbers $3,000 and $200 from the question, and step 2 references the result of $3,200 from step 1. After deleting step 1, step 2 should no longer reference the result of the non-existent step 1 and instead direct the calculation with the initial $3,000 from the question only, ignoring Smith's contribution, changing the equation from 3200-1200=2000 to 3000-1200=1800. The transformed_solution results in the incorrect answer $1,800 instead of the correct $2,000 answer, and the wrong_step is the transformed solution's step 1, which references the initial amount without the subsequent addition.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #2000.\n\nExplanation: The solution is incorrect because it does not consider the fact that Randy gave Sally $1,200. If Randy had $3,000 and Smith gave him another $200, then Randy had $3,200. If Randy then gave Sally $1,200, he would have $2,000 left, not $1,800. Therefore, the correct answer is $2,000."
+    },
+    {
+        "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+        "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n#### 78",
+        "transformed_answer": 78.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #72.\n\nExplanation: The solution is missing a reasoning step. If Steve grows 6 inches, his new height is 5'6\" + 6 = 72 inches."
+    },
+    {
+        "question": "If Patty's dress was $10 more than Ida's dress, and Ida's dress was $30 more than Jean's dress, and Jean's dress was $10 less than Pauline's dress, and lastly Pauline's dress was $30, how much did all the ladies spend on dressed put together?",
+        "original_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10= 20 dollars.\nIda's dress was $30 more than Jean's $20 dress, meaning it was 30+20=50 dollars.\nPatty's dress was $10 more than Ida's $50 dress, meaning it was 50+10=60 dollars.\nTherefore, all four women together spent 60+50+20+30=160 dollars.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10=20 dollars.\nIda's dress was $30 more than Jean's dress, meaning it was 30+30=60 dollars.\nPatty's dress was $10 more than Ida's $60 dress, meaning it was 60+10=70 dollars.\nTherefore, all four women together spent 70+60+20+30=180 dollars.\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original solution. In the original_solution, the step 2 calculation is based on the results of step 1. After deleting original step 2, the new step 2 should be based on step 1's result, so the formula should now reference the 30 dollars directly rather than the result of deleted step 2's 20 dollars. The number 30 dollars also appears in deleted step 2, so we choose 30 as the reference for the new step 2 because it is the larger number used in the original step 2. Although the new calculation (30+30=60 dollars) makes sense in context, it is incorrect because it does not follow the decrement given in the original question for Jean’s dress (which is $10 less than $30). The subsequent calculations in step 3 and 4 then inherit this error, leading to the transformed_solution with a first erroneous reference appearing at the new step 2, incorrectly inflating the price of Ida's dress and ultimately the total amount.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #160.\n\nExplanation: The error occurs in the step where Jean's dress is compared to Pauline's dress. Jean's dress is $10 less than Pauline's $30 dress, which means Jean's dress is $30-10=20 dollars. Therefore, the total amount spent by all four women is 20+30+60+10=160 dollars."
+    },
+    {
+        "question": "Haley has 5 more necklaces than Jason. Josh has half the number of necklaces as Jason. If Haley has 25 necklaces, how many more necklaces does Haley have than Josh?",
+        "original_solution": "Jason has 25-5 = 20 necklaces.\nJosh has 20/2 = 10 necklaces.\nHaley has 25-10 = 15 more necklaces than Josh.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Josh has 25/2 = 12.5 necklaces.\nHaley has 25-12.5 = 12.5 more necklaces than Josh.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of necklaces Jason has, and step 2 references the result of step 1. So after deleting step 1, step 2 should reference the number 25 directly from the question, causing the formula to change from 20/2 = 10 to 25/2 = 12.5. The number of necklaces for Josh was calculated incorrectly in the transformed solution due to the incorrect preceding step and assuming Josh had half the number of necklaces as Haley instead of half of Jason's. As a result, the subsequent step 3, which references the result of step 2, changes from 25-10 = 15 to 25-12.5 = 12.5. It should be noted that the calculation of step 3 after the transformation is still correct. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing the incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #15.\n\nExplanation: The solution is missing a reasoning step. The correct answer can be obtained by adding the number of necklaces that Josh has to the number of necklaces that Haley has.\n\n1. Josh has 12.5 necklaces, and Haley has 25 necklaces.\n2. Therefore, Haley has 25 - 12.5 = 12.5 more necklaces than Josh.\n\nSo, the correct answer is 15 necklaces more than Josh."
+    },
+    {
+        "question": "Donna is trying to figure out if her truck is over a particular bridge's weight limit. The bridge can hold 20,000 pounds. Donna's empty truck weighs 12,000 pounds. She's carrying 20 crates of soda that each weigh 50 pounds, 3 dryers that each weigh 3000 pounds, and twice as much weight in fresh produce as in soda. How much does Donna's fully loaded truck weigh?",
+        "original_solution": "First find the total weight of the soda by multiplying the number of crates by the weight per crate: 20 crates * 50 pounds/crate = 1000 pounds\nThen find the weight of the fresh produce by doubling the weight of the soda: 1000 pounds * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of all three groups of products to find the fully loaded weight: 12000 pounds + 1000 pounds + 2000 pounds + 9000 pounds = 24000 pounds\n#### 24000",
+        "original_answer": 24000.0,
+        "transformed_solution": "Find the weight of the fresh produce by doubling the weight of the soda directly from the crates number and weight per crate: 20 crates * 50 pounds/crate * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of the fresh produce and dryers to find the fully loaded weight: 12000 pounds + 2000 pounds + 9000 pounds = 23000 pounds\n#### 23000",
+        "transformed_answer": 23000.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed, which originally calculated the weight of the crates of soda. In the original_solution, the weight of the fresh produce was calculated in step 2 based on the result of step 1. So after deleting step 1, step 1 in the transformed_solution directly calculates the weight of the fresh produce by using the number of crates and weight per crate from the question and skips calculating the weight of soda separately, effectively doubling it to get the fresh produce's weight (2000 pounds). It then adds the transformed steps from the third step of the original solution. The weight of the soda, which is 1000 pounds, is not added in the transformed_solution, so the final transformed_answer is 23000 pounds, which results from omitting the weight of the soda. It is step 1 in the transformed_solution, which is also a transformation of step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #24000.\n\nThe error occurs in step 3, where the weight of the dryers is calculated as 9000 pounds instead of 9000 / 3 = 3000 pounds. Therefore, the final answer is incorrect by 6000 pounds."
+    }
+]

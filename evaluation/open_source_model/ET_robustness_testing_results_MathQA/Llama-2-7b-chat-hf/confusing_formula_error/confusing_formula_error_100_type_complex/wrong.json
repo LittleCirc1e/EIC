@@ -1,0 +1,86 @@
+[
+    {
+        "question": "Consider a square of diagonal length d. Let another square be formed with d as its side. Find the ratio of the area of the bigger square to that of the smaller square.",
+        "original_solution": "Let the side of the first square be s. Then, using the Pythagorean theorem, s^2 + s^2 = d^2. Solving for s, we get s = d/sqrt(2).\nThe area of the first square is s^2 = d^2/2.\nThe area of the second square is d^2.\nThe ratio of the area of the bigger square to that of the smaller square is (d^2)/(d^2/2) = 2.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Let the side of the first square be s. Then, using the Pythagorean theorem, s^2 + s^2 = d^2.\nThe area of the first square is s^2 = (d^2)/2.\nThe area of the second square is d^2.\nHowever, we accidentally calculate the perimeter of the second square as 4d instead of the area.\nThe ratio of the 'area' (wrongly calculated as the perimeter) of the bigger square to that of the smaller square is (4d)/(d^2/2) = 8/d.\n#### 8/d",
+        "transformed_answer": "8/d",
+        "wrong_step": 4,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 confuses the formula for the area of a square with the formula for the perimeter of a square. The correct approach is to square the length of the side to find the area, however, in the transformed_solution, the length of the side is multiplied by 4, which calculates the perimeter, not the area. As a result, the original ratio (d^2)/(d^2/2) = 2 is mistakenly transformed to (4d)/(d^2/2) = 8/d, which significantly alters the ratio. The language description stating \"The ratio of the area of the bigger square\" remains unchanged despite the fact that we performed calculations for the perimeter instead. Since only one step of confusing formula error is allowed, only step 4 has been altered, while the other steps remain correct.",
+        "eval_result": "\nPlease provide an appropriate [Output] for the given case."
+    },
+    {
+        "question": "The dimensions of a field are 10 m by 10 m. A pit 5 m long, 5 m wide and 3 m deep is dug in one corner of the field and the earth removed has been evenly spread over the remaining area of the field. What will be the rise in the height of field as a result of this operation?",
+        "original_solution": "The volume of the earth removed from the pit is 5*5*3=75 cubic meters\nThe remaining area of the field is 10*10-5*5=75 square meters\nThe rise in height of the field is the volume of earth removed divided by the remaining area of the field, which is 75/75=1 meter\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The volume of the earth removed from the pit is 5*5*3=75 cubic meters\nThe remaining perimeter of the field is 10+10+10+10-5-5=25 meters\nThe rise in height of the field is the volume of earth removed divided by the remaining perimeter of the field, which is 75/25=3 meters\n#### 3",
+        "transformed_answer": 3.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 confuses the area and perimeter of the rectangle. The question requires that the remaining area of the field to be solved be equal to the total area subtracted by the area of the pit (which would be length multiplied by width), resulting in 10*10-5*5=75 square meters in the original_solution. This was mistakenly transformed to the remaining perimeter of the field, represented by the sum of the lengths of the boundaries, 10+10+10+10-5-5=25 meters in the transformed_solution. This affects the subsequent step 3, changing from 75/75=1 meter to 75/25=3 meters. The language description of step 2 < The remaining area of the field is > in the original_solution is erroneously left unchanged in the transformed_solution as < The remaining perimeter of the field is >. It should be noted that only step 2 is modified with the perimeter instead of the area, and the calculation process in other steps is still correct. In this case, the erroneous application of the perimeter formula instead of the correct area formula leads to an incorrect transformed answer and a logical inconsistency in the explanation of step 2.",
+        "eval_result": "\nPlease provide an appropriate [Output] for the given case."
+    },
+    {
+        "question": "In a rectangular axis system, what is the area of a parallelogram with the coordinates: (3,5), (9,5), (2,7), (8,7)?",
+        "original_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width*height=6*2=12 square units.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width+height=6+2=8 square units.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the formula for finding the area of a parallelogram (width multiplied by height) with the formula for finding the perimeter of a rectangle (width plus height). The question requires that the area of the parallelogram to be solved be equal to the width multiplied by height. Therefore, the step width*height=6*2=12 in the original_solution is replaced with an incorrect formula width+height=6+2=8 in the transformed_solution. This affects the answer to the question, leading to an incorrect transformed_answer of 8 square units instead of the correct original_answer of 12 square units. Note that the language description in steps 1 and 2 in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 3 is modified with an incorrect formulation, while the other steps correctly describe the measurement process for the width and height of the parallelogram.",
+        "eval_result": "\n\nThe given [Solution] is incorrect, and the wrong type is 'calculation_error'. The reason is that the formula used to calculate the area of the parallelogram is incorrect. The correct formula for the area of a parallelogram is A = base x height, where base is the length of one side of the parallelogram, and height is the distance between the base and the opposite vertex. In this case, the base is 6 units long (the difference in the x-coordinates of the points on the same horizontal level), and the height is 2 units long (the difference in the y-coordinates of the points on the same vertical level). Therefore, the area of the parallelogram is 6 x 2 = 12 square units, not 8 square units as calculated in the given [Solution]."
+    },
+    {
+        "question": "A photograph is copied onto a sheet of paper 8.5 inches by 10 inches. A 1.5 inch margin is left all around. What area in square inches does the picture cover?",
+        "original_solution": "The inner area of the paper is 8.5-2*1.5=5.5 inches by 10-2*1.5=7 inches\nSo the area the picture covers is 5.5*7=38.5 square inches\n#### 38.5",
+        "original_answer": 38.5,
+        "transformed_solution": "The inner area of the paper is 8.5-2*1.5=5.5 inches by 10-2*1.5=7 inches\nSo the area the picture covers is 5.5+7+5.5+7=25 square inches\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 correctly calculates the dimensions of the area covered by the picture. However, step 2 confuses the area formula with the perimeter formula. Instead of multiplying the length and the width to get the area, the transformed solution incorrectly adds the length and the width, mistakenly treating it as a calculation of the perimeter. This results in 5.5*7=38.5 in the original_solution changing to 5.5+7+5.5+7=25 in the transformed_solution. This affects the answer, changing it from 38.5 square inches to just 25 square inches. The language description of step 2 < So the area the picture covers is > in the original_solution remains unchanged in the transformed_solution. The other steps in the calculation are unaffected by this error.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1, which is the correct calculation of the area of the picture."
+    },
+    {
+        "question": "A circular logo is enlarged to fit the lid of a jar. The new diameter is 10 per cent larger than the original. By what percentage has the area of the logo increased?",
+        "original_solution": "Let the original diameter of the logo be d.\nThe original radius of the logo is d/2.\nThe original area of the logo is π*(d/2)^2.\nThe new diameter is 1.1d.\nThe new radius is 1.1d/2.\nThe new area is π*(1.1d/2)^2.\nThe increase in area is (π*(1.1d/2)^2-π*(d/2)^2)/(π*(d/2)^2)*100%.\nOn simplification, the increase in area is (1.1^2-1)*100%=21%.\n#### 21%",
+        "original_answer": 21.0,
+        "transformed_solution": "Let the original diameter of the logo be d.\nThe original radius of the logo is d/2.\nThe original circumference of the logo is π*d.\nThe new diameter is 1.1d.\nThe new radius is 1.1d/2.\nThe new circumference is π*1.1d.\nThe increase in circumference is (π*1.1d-π*d)/(π*d)*100%.\nOn simplification, the increase in circumference is (1.1-1)*100%=10%.\n#### 10%",
+        "transformed_answer": 10.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the area with the circumference of the circle. The question requires the area of the circle to be solved using the formula π*(radius)^2, not the circumference formula π*diameter. The original_solution calculates area involving π*(d/2)^2 becoming π*d for the circumference in the transformed_solution and subsequent steps affected by the error in step 3. The transformed_solution replaces the formula for area with the formula for circumference, erroneously deriving an increase in circumference rather than area. This results in a calculation of a 10% increase instead of the correct 21% for area. Note that the language description of step 3 < The original area of the logo is > in the original_solution remains unchanged to < The original circumference of the logo is > in the transformed_solution. It should also be noted that only step 3 erroneously uses the formula for circumference instead of area, while other steps apply correct principles for diameter and radius change.",
+        "eval_result": "\nPlease provide an appropriate [Output] for the given case."
+    },
+    {
+        "question": "A goat is tied to one corner of a square plot of side 12 m by a rope 7 m long. Find the area it can graze?",
+        "original_solution": "The goat can graze in a quarter circle with radius 7 m (length of the rope).\nThe area of a circle is πr^2, so the area of a quarter circle is (1/4)πr^2.\nSo, the area the goat can graze is (1/4)*π*7^2=38.5 square meters\n#### 38.5",
+        "original_answer": 38.5,
+        "transformed_solution": "The goat can graze in a quarter circle with radius 7 m (length of the rope).\nThe circumference of a circle is 2πr, so the circumference of a quarter circle is (1/4)*2πr.\nSo, the area the goat can graze is (1/4)*2π*7=11 square meters\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 confuses the area and circumference of a circle. The original step should find the area of the quarter circle with the formula (1/4)πr^2 which relates to the area of a circle (πr^2), but instead, it mistakenly uses the formula (1/4)*2πr that calculates the circumference of a quarter circle, equivalent to the perimeter of the circle. The original_solution calculation is therefore altered from (1/4)*π*7^2 to (1/4)*2π*7 in the transformed_solution. This results in step 3 changing from the calculation of the quarter circle area to an incorrect calculation based on the circumference. Note that the language description of step 2 < The area of a circle is > in the original_solution remains unchanged in the transformed_solution and that other steps are consistent with the correct formulas except for the single altered step.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1, which is the correct calculation of the area the goat can graze."
+    },
+    {
+        "question": "two circular signs are to be painted. If the diameter of the larger sign is 7 times that of the smaller sign, how many times more paint is needed to paint the larger sign? (we can assume that a given amount of paint covers the same area on both signs.)",
+        "original_solution": "The area of a circle is calculated using the formula A = πr^2, where r is the radius of the circle.\nThe area of the larger sign is π(7r)^2, which simplifies to 49πr^2.\nThe area of the smaller sign is πr^2.\nTo find out how many times more paint is needed for the larger sign, we divide the area of the larger sign by the area of the smaller sign: 49πr^2 / πr^2 = 49 times more paint is needed.\n#### 49",
+        "original_answer": 49.0,
+        "transformed_solution": "The circumference of a circle is calculated using the formula C = 2πr, where r is the radius of the circle.\nThe circumference of the larger sign is 2π(7r), which simplifies to 14πr.\nThe circumference of the smaller sign is 2πr.\nTo find out how many times more paint is needed for the larger sign, we divide the circumference of the larger sign by the circumference of the smaller sign: 14πr / 2πr = 7 times more paint is needed.\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 confuses the area and circumference of a circle. The question requires that the area of the circle to be solved be equal to π multiplied by the radius squared, rather than 2 times π multiplied by radius, which is equivalent to the circumference of the circle, resulting in an area  calculation π(7r)^2 in the original_solution becoming a circumference calculation 2π(7r) in the transformed_solution. This affects the subsequent step 4, changing from dividing areas (49πr^2 / πr^2 = 49) to dividing circumferences (14πr / 2πr = 7). Note that the language description of the process in the original_solution remains unchanged in the transformed_solution. It should be also noted that only one step in the original_solution is altered to confuse the formula, and other steps are kept correct.",
+        "eval_result": "\nPlease provide an appropriate [Output] for the following case.\n\nThe solution is correct, and the explanation is #1, which is the correct calculation of the circumference of the larger sign using the formula C = 2πr, where r is the radius of the circle, and the correct division to find out how many times more paint is needed for the larger sign."
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "question": "There is a rectangle that is 4 inches wide. If the rectangle's perimeter is 30 inches, what is the area of the rectangle?",
+        "original_solution": "Twice the height of the rectangle is 30 inches - 2 * 4 inches = 22 inches.\nThe rectangle's height is 22 inches / 2 = 11 inches.\nThe area of the rectangle is 4 inches * 11 inches = 44 square inches.\n#### 44",
+        "original_answer": 44.0,
+        "transformed_solution": "Twice the height of the rectangle is 30 inches - 4 inches + 4 inches = 30 inches.\nThe rectangle's height is 30 inches / 2 = 15 inches.\nThe area of the rectangle is 15 inches * 4 inches = 60 square inches.\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the correct approach to find twice the height with an incorrect approach that would add the width back twice instead of subtracting it to find the perimeter, creating an erroneous solution. The question requires that twice the height be found by subtracting the total width of both sides from the perimeter, resulting in 30 inches - 2 * 4 inches in the original_solution, which has been incorrectly transformed into 30 inches - 4 inches + 4 inches in the transformed_solution. This affects the subsequent step 2, changing from 22 inches / 2 to 30 inches / 2 to find the height, and ultimately, the step 3, changing from the correct area of 4 inches * 11 inches to an incorrect area of 15 inches * 4 inches. Note that the language description of each step in the original_solution remains unchanged in the transformed_solution. It should also be noted that only one step has the confusing formula error, while the formulas for other steps are correct, and the transformed_answer is different from the original_answer.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'confusing_formula_error', and the explanation is: The formula for the perimeter of a rectangle is P = 2(l + w), where l is the length and w is the width. In the given solution, the formula used is P = 2(h + w), which is incorrect as the height (h) is not a part of the perimeter. Additionally, the calculation for the height is incorrect as it should be 30 inches - 4 inches + 4 inches = 28 inches, not 30 inches. Therefore, the area of the rectangle is not 60 square inches, but rather 28 inches * 4 inches = 112 square inches."
+    },
+    {
+        "question": "Bob is building a garden on his land, and he wants it to be fenced in to keep out varmints. The garden is a rectangular plot 225 feet long by 125 feet wide. He also wants to have a small 3-foot wide gate to walk through and a larger 10-foot wide gate to move his gardening equipment through. How much fencing is Bob going to need to fence in his garden, taking into account the two gates?",
+        "original_solution": "The perimeter of the garden is 2 * 225 + 2 * 125 = 450 + 250 = 700 feet.\nMinus the two gates, he will need at least 700 - 3 - 10 = 687 feet of fencing.\n#### 687",
+        "original_answer": 687.0,
+        "transformed_solution": "Calculation of the incorrect perimeter using the area formula: The perimeter of the garden is 225 * 125 = 28125 feet.\nMinus the two gates, he will need at least 28125 - 3 - 10 = 28112 feet of fencing.\n#### 28112",
+        "transformed_answer": 28112.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed solution incorrectly uses the formula for calculating the area of a rectangle instead of the perimeter. The correct formula for perimeter is 2 times the length plus 2 times the width (2 * length + 2 * width), whereas the formula used in the transformation is for area (length * width). Consequently, the correct calculation for the perimeter, 2 * 225 + 2 * 125, is replaced with an incorrect calculation of area, 225 * 125. This improper calculation leads to an erroneous total length of fencing required, 28112 feet instead of the correct 687 feet. The subsequent subtraction of the gate widths is correct in itself, but stems from the incorrect calculation of the perimeter.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'confusing_formula_error', and the explanation is: The formula used is the area formula for a rectangle, but the problem is asking for the perimeter, so the formula should be the perimeter formula, which is 2(l + w), where l is the length and w is the width. Using the given dimensions, l = 225 and w = 125, so the correct calculation is 2(225 + 125) = 2(350) = 700 feet. Therefore, Bob will need at least 700 - 3 -"
+    }
+]

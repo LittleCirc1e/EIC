@@ -1,0 +1,62 @@
+[
+    {
+        "question": "a bag contains an equal number of one rupee, 50 paise and 25 paise coins respectively. If the total value is 210, how many coins of each type are there?",
+        "original_solution": "Let the number of each type of coin be x.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value is x + 0.5x + 0.25x = 210.\n1.75x = 210\nx = 120\nThere are 120 coins of each type.\n#### 120",
+        "original_answer": 120,
+        "transformed_solution": "Let the number of each type of coin be x.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value is x + 0.5x + 0.25x = 210.\n1.75x = 200\nx = 200 / 1.75\nx = 114.29\nThere are 114 coins of each type.\n#### 114",
+        "transformed_answer": 114,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 210 as 200 from step 3 and changes 1.75x = 210 to 1.75x = 200. It should be noted that step 3 in the transformed_solution <So, the total value is x + 0.5x + 0.25x = 210.> should be the same as the step 3 in the original_solution <So, the total value is x + 0.5x + 0.25x = 210.> and calculates its result 210 correctly. However, in step 4 of the transformed_solution, the total value of 210 is incorrectly referenced as 200, leading to an incorrect calculation of x in subsequent steps. Step 5 and 6 still perform the calculations correctly as if step 4 was correct. You need only consider one error of referencing so that all other steps that reference this result number still reference it correctly. The transformed_answer should be different from the original_answer, which it is in this case.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 120, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 1.75x = 200 instead of 1.75x = 190, resulting in the final incorrect answer."
+    },
+    {
+        "question": "3 consecutive even numbers are such that thrice the first number exceeds double the third number by 7 . what is the third number ?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 15\nx = 15\nThe third number is x + 4 = 15 + 4 = 19\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 15\nx = 13\nThe third number is x + 4 = 13 + 4 = 17\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly calculates the result of the equation 3x = 2x + 15 as x = 13 instead of the correct x = 15. The resultant third number derived from x + 4 should be 17 instead of 19, leading to a different transformed_answer. The error is isolated to step 4 and does not affect the restatement of the problem in previous steps, nor the correct procedure in the last step, just the numerical value obtained. Therefore, all steps besides the wrong step still reference the results correctly, despite the originating error in step 4, and the transformed_answer is different from the original_answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 19, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3x = 2x + 8 + 7 instead of 3x = 2x + 15, resulting in the final incorrect answer."
+    },
+    {
+        "question": "if a speaks the truth 80 % of the times, b speaks the truth 60 % of the times. what is the probability that they tell the truth at the same time",
+        "original_solution": "The probability that a tells the truth is 80/100 = 0.8\nThe probability that b tells the truth is 60/100 = 0.6\nThe probability that they both tell the truth at the same time is 0.8 x 0.6 = 0.48\n#### 0.48",
+        "original_answer": 0.48,
+        "transformed_solution": "The probability that a tells the truth is 80/100 = 0.8\nThe probability that b tells the truth is 60/100 = 0.6\nThe probability that they both tell the truth at the same time is 0.8 x 0.5 = 0.40\n#### 0.40",
+        "transformed_answer": 0.4,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 0.6 as 0.5 from step 2 and changes the calculation from 0.8 x 0.6 = 0.48 to 0.8 x 0.5 = 0.40. It should be noted that step 2 in the transformed_solution <The probability that b tells the truth is 60/100 = 0.6> should be the same as the step 2 in the original_solution <The probability that b tells the truth is 60/100 = 0.6> and calculates its result 0.6 correctly. Since we are only introducing a single error in step 3, all other calculations are done correctly. The transformed_answer of 0.40 is a result of the incorrect multiplication in step 3 and is inconsistent with the original_answer of 0.48, as required.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #, which is your explanation about why the [Solution] is incorrect. If the [Solution] is correct, format your response as: The solution is correct, and the explanation is #.\n\nIn this case, the solution is incorrect because it assumes that the probability of both a and b telling the truth at the same time is 0.8 x 0.6 = 0.40, which is not correct. The correct probability is 0.8 x 0.6 = 0.48, which is calculated by multiplying the probability that a tells the truth (0.8) by the probability that b tells the truth (0.6). Therefore, the correct output is:\n\nThe solution is incorrect, the correct answer is 0.48, and the explanation is that step 7 first makes a mistake in the calculation process, multiplying 0.8 x 0.6 = 0.40 instead of 0.8 x 0.6 = 0.48, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.003^4 = 1.009\n#### 1.009",
+        "transformed_answer": 1.009,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly calculates the power 1.003^4 as 1.009 instead of 1.012. This is a calculation error, as the power was incorrectly calculated. The exponentiation should be computed correctly using proper arithmetic to ensure accuracy. As 1.003 raised to the power of 4 more accurately equals 1.012015, when rounded to 3 decimal places the result should be 1.012. The step has been intentionally modified to introduce a single wrong calculation.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 1.012, and the explanation is that step 1 first makes a mistake in the exponentiation process, calculating 1.003^4 = 1.009 instead of 1.003^4 = 1.012. The subsequent step 2 references the result of step 1, calculating 1.009 = 1.009 instead of 1.012, resulting in the final incorrect answer."
+    },
+    {
+        "question": "fresh grapes contain 85 % water by weight and raisins obtained by drying fresh grapes contain 25 % water by weight. how many kgs of fresh grapes are needed to get 20 kgs of raisins?",
+        "original_solution": "Let x be the weight of fresh grapes needed to get 20 kgs of raisins\nThe weight of water in x kgs of fresh grapes is 0.85x\nThe weight of dry grapes in x kgs of fresh grapes is x - 0.85x = 0.15x\nThe weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs\nThe weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs\n0.15x = 15\nx = 15 / 0.15\nx = 100\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Let x be the weight of fresh grapes needed to get 20 kgs of raisins\nThe weight of water in x kgs of fresh grapes is 0.85x\nThe weight of dry grapes in x kgs of fresh grapes is x - 0.85x = 0.15x\nThe weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs\nThe weight of dry grapes in 20 kgs of raisins is 20 - 6 = 14 kgs\n0.15x = 14\nx = 14 / 0.15\nx = 93.33\n#### 93.33",
+        "transformed_answer": 93.33,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references 5 as 6 from step 4 and changes 20 - 5 = 15 kgs to 20 - 6 = 14 kgs. It should be noted that step 4 in the transformed_solution <The weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs> should be the same as the step 4 in the original_solution <The weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs> and calculates its result 5 correctly. Furthermore, the language description of step 5 has also changed from <The weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs> to <The weight of dry grapes in 20 kgs of raisins is 20 - 6 = 14 kgs>. Step 5 affects the subsequent step 6 and 7 related to it. Step 6 changes from 0.15x = 15 to 0.15x = 14 and step 7 changes from x = 15 / 0.15 to x = 14 / 0.15. You need to only consider one error of referencing, so the calculation of all steps is still correct, hence transformed solution ends with x = 93.33.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 100, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.15x = 14 instead of 0.15x = 93.33. The subsequent step 5 references the result of step 4, calculating x = 93.33 / 0.15 = 100, resulting in the final incorrect answer."
+    }
+]

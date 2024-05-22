@@ -1,0 +1,122 @@
+[
+    {
+        "question": "At Kaleb's Restaurant, a group with six adults and two children came in to eat. If each adult meal cost six dollars and each children's meal was $4, and every person ordered a soda for $2 how much was the bill?",
+        "original_solution": "The cost for adult meals is 6 adults * $6 = $36.\nThe cost for children's meals is 2 children * $4 = $8.\nThe total people ordering drinks is 6 + 2 = 8.\nThe cost for drinks is 8 people * $2 = $16.\nThe total cost for the meal is $36 + $8 + $16 = $60.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "The cost for children's meals is 2 children * $4 = $8.\nThe total people ordering drinks is 6 + 2 = 8.\nThe cost for drinks is 8 people * $2 = $16.\nThe total cost for the meal is  $6 + $8 + $16 = $30.\n",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step was removed. The original_solution's first step calculates the cost of adult meals, and the last step references the result of $36 from the first step. After deleting the first step, the last step now needs to directly include the calculation of the cost for adult meals, changing from $36 + $8 + $16 = $60 to  $6 + $8 + $16 = $30. The wrong_step is 4 because it is the first step referencing the result from the now-deleted step, which has been transformed to include the original calculation for adult meals. The transformed_answer is different than the original_answer, increasing from $60 to $68 because the adult meal cost is now being incorrectly added in as 6 times the amount intended.",
+        "eval_result": "\nThe solution is correct, and the explanation is: The solution is correct because it takes into account the cost of each meal, the number of people ordering drinks, and the cost of each drink. The calculation for the total cost of the meal is accurate, and it is $30.\n\nWould you like me to make any changes to my response?"
+    },
+    {
+        "question": "Jack had $100. Sophia gave him 1/5 of her $100. How many dollars does Jack have now?",
+        "original_solution": "Sophia gave 100 * 1/5 = 20 $ to Jack.\nJack now has 100 + 20 = 120$\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "Jack now has 100 + 100 = 200$\n",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step where Sophia calculates the fraction of her money to give to Jack is removed, so the entire amount is incorrectly added to Jack's original $100 in the subsequent step. This implies that Jack received the entire $100 from Sophia instead of 1/5 of it. The step that adds $100 directly to Jack's original amount uses the number from the question and should only have used the result of the missing calculation of 1/5 of Sophia's $100. The wrong_step is step 1 in the transformed_solution, corresponding to the calculation of Jack's new total without considering Sophia's contribution as 1/5 of her money. This results in an incorrect transformed_answer of $200, different from the original_answer of $120.",
+        "eval_result": "\nThe solution is correct. The explanation is #.\n\nExplanation: The solution is correct because Sophia gave Jack 1/5 of her $100, which is equal to $20. Therefore, Jack now has $100 + $20 = $120."
+    },
+    {
+        "question": "Mason is trying to download a 880 MB game to his phone. After downloading 310 MB, his Internet connection slows to 3 MB/minute. How many more minutes will it take him to download the game?",
+        "original_solution": "First find how many MB are left to download: 880 MB - 310 MB = 570 MB\nThen divide that number by the download speed to find the download time: 570 MB / 3 MB/minute = 190 minutes\n#### 190",
+        "original_answer": 190.0,
+        "transformed_solution": "Divide the total size by the download speed to find the download time: 880 MB / 3 MB/minute = 293.33 minutes\n",
+        "transformed_answer": 293.33,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the numbers 880 and 310 from the question, and step 2 references the result of step 1. So after deleting step 1, step 2 should change the result 570 of the referenced step 1 to directly reference the number 880 in the question instead of subtracting 310 MB first, causing the formula to incorrectly change from 570 MB / 3 MB/minute to 880 MB / 3 MB/minute. It should be noted that this changes the logic of the problem as it incorrectly assumes Mason is starting the download from the beginning rather than continuing from 310 MB already downloaded. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step incorrectly referencing the entire game size in the transformed_solution after the removal of the actual first step, and so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution uses the correct formula to calculate the download time, which is the total size of the file divided by the download speed. In this case, the download time is 293.33 minutes, which is the correct answer."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "eval_result": "\nThe solution is correct. The explanation is:\n\nThe solution is correct because Marcus does indeed paint 2 paintings on the first day, then 4 paintings on the second day, 8 paintings on the third day, 16 paintings on the fourth day, and 32 paintings on the fifth day. The total number of paintings Marcus paints is indeed 2 + 4 + 8 + 16 + 32 = 62 paintings."
+    },
+    {
+        "question": "Linda's bag has 2 dimes, 6 quarters, and 5 nickels. Her mother gives her 2 more dimes, 10 quarters, and twice as many nickels as she has. How many coins does she have altogether?",
+        "original_solution": "When Linda's mother gave her 2 more dimes, the total number of dimes increased to 2+2 = 4 dimes.\nShe also increased the total number of quarters to 6+10 = 16 after her mother gave her 10 more.\nThe total number of dimes and quarters she has is 16+4 = 20\nLinda's mother also gave her twice as many nickels as she has, a total of 2*5 = 10 nickels.\nThe total number of nickels she has increased to 10+5 = 15\nAltogether, Linda has 20+15= 35 coins.\n#### 35",
+        "original_answer": 35.0,
+        "transformed_solution": "Linda's mother gave her 10 more quarters for a total of 6+10 = 16 quarters.\nLinda's mother also gave her twice as many nickels as she has, a total of 2*5 = 10 nickels.\nThe total number of nickels she has increased to 10+5 = 15\nAltogether, without counting dimes, Linda has 16+15 = 31 coins.\n",
+        "transformed_answer": 33.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 references the results from steps 1 and 2 (4 dimes, 16 quarters). However, upon deleting step 3, we also need to remove its reference to dimes entirely. The new transformed_solution now only references quarters and nickels (step 4 and 5), and hence the total is counted without the dimes initially. In step 4 of the transformed_solution, which is the new step referencing the addition of quarters and nickels (previously step 5 of the original_solution), the calculation has been changed from 20+15 to 16+15 to reflect that dimes have not been counted yet. Finally, the dimes are added in the last step straightforwardly, leading to a transformed_answer of 33 coins insted of the original 35 coins, due to omitting the extra dimes initially provided by Linda's mother. The first incorrect reference after the deletion is in the renamed step 4 of the transformed_solution, which previously was step 5 in the original_solution, so the wrong_step is 4.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the number of quarters Linda's mother gave her, and it also correctly calculates the number of nickels Linda's mother gave her. The total number of coins Linda has is 31, which is the correct answer."
+    },
+    {
+        "question": "Linda's bag has 2 dimes, 6 quarters, and 5 nickels. Her mother gives her 2 more dimes, 10 quarters, and twice as many nickels as she has. How many coins does she have altogether?",
+        "original_solution": "When Linda's mother gave her 2 more dimes, the total number of dimes increased to 2+2 = 4 dimes.\nShe also increased the total number of quarters to 6+10 = 16 after her mother gave her 10 more.\nThe total number of dimes and quarters she has is 16+4 = 20\nLinda's mother also gave her twice as many nickels as she has, a total of 2*5 = 10 nickels.\nThe total number of nickels she has increased to 10+5 = 15\nAltogether, Linda has 20+15= 35 coins.\n#### 35",
+        "original_answer": 35.0,
+        "transformed_solution": "Linda's mother gave her 10 more quarters for a total of 6+10 = 16 quarters.\nLinda's mother also gave her twice as many nickels as she has, a total of 2*5 = 10 nickels.\nThe total number of nickels she has increased to 10+5 = 15\nAltogether, without counting dimes, Linda has 16+15 = 31 coins.\n",
+        "transformed_answer": 33.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 references the results from steps 1 and 2 (4 dimes, 16 quarters). However, upon deleting step 3, we also need to remove its reference to dimes entirely. The new transformed_solution now only references quarters and nickels (step 4 and 5), and hence the total is counted without the dimes initially. In step 4 of the transformed_solution, which is the new step referencing the addition of quarters and nickels (previously step 5 of the original_solution), the calculation has been changed from 20+15 to 16+15 to reflect that dimes have not been counted yet. Finally, the dimes are added in the last step straightforwardly, leading to a transformed_answer of 33 coins insted of the original 35 coins, due to omitting the extra dimes initially provided by Linda's mother. The first incorrect reference after the deletion is in the renamed step 4 of the transformed_solution, which previously was step 5 in the original_solution, so the wrong_step is 4.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the number of quarters Linda's mother gave her, and it also correctly calculates the number of nickels Linda's mother gave her. The total number of coins Linda has is 31, which is the correct answer."
+    },
+    {
+        "question": "Jack, who weighs 60 pounds, wants to play on the see-saw with his cousin Anna, who weighs 40 pounds. How many 4-pound rocks does Jack need to hold to make their weights equal?",
+        "original_solution": "First find the total difference in weight between the two people: 60 pounds - 40 pounds = 20 pounds\nThen divide the weight difference by the weight of each rock to find the number of rocks need to even the weights: 20 pounds / 4 pound/rock = 5 rocks\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "To make their weights equal, Jack needs to hold: 60 pounds / 4 pound/rock = 15 rocks\n",
+        "transformed_answer": 15.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformation, step 1 of the original_solution, which calculates the weight difference, was deleted. Therefore, the transformed_solution should have started with the calculation based on the 60 pounds Jack weighs. However, instead of calculating the weight difference from step 1 and dividing that by the weight of each rock, the transformed_solution incorrectly refers directly to Jack's weight. This leads to a calculation of 60 pounds divided by 4 pounds per rock, equaling 15 rocks. The correct intermediate calculation of the weight difference was not considered, resulting in the number of needed rocks being artificially increased to 15. The referenced number 60 in the transformed solution's first step, which is step 1, is the weight of Jack from the question, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct. The explanation is: To make their weights equal, Jack needs to hold 15 rocks, because 60 pounds divided by 4 pounds per rock is equal to 15.\n\nOr, if the solution is incorrect, the correct answer is: The solution is incorrect, the correct answer is 20 rocks, and the explanation is: Jack needs to hold 20 rocks to make their weights equal, because 60 pounds divided by 4 pounds per rock is equal to 20."
+    },
+    {
+        "question": "Josh works 8 hours a day, 5 days a week, 4 weeks a month. Carl is an intern and works 2 hours less than Josh every day. Josh gets $9 an hour and Carl, half that. How much does the company pay for the 2 together in one month?",
+        "original_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/month = $1440 per month.\nCarl works less because he is an intern: 6 hours/day * 5 days/week * 4 weeks/month = 120 hours per month.\nCarl earns 120 hours * $4.5/hour = $540 per month.\nThe company pays for the 2 together: $1440 + $540 = $1980.\n#### 1980",
+        "original_answer": 1980.0,
+        "transformed_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/hour = $1440 per month.\nCarl earns 160 hours/month * $4.5/hour = $720 per month.\n",
+        "transformed_answer": 2160.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 calculates the hours Carl works per month by referencing the hours he works every day (6), which is found by subtracting 2 from the 8 hours Josh works a day in step 1. After deleting step 3, step 4 in the transformed_solution references the 160 hours from step 1 directly when calculating Carl's earnings. This simplifies Carl's monthly earnings calculation to 160 hours/month * $4.5/hour, which results in $720 per month for Carl. The transformed_solution combines steps 1 and 3 of the original_solution, assuming Carl works the same number of hours as Josh. The next step updates step 5 in the original_solution with the new combined total of $2160 instead of $1980. It is step 3 in the transformed_solution that serves as the first step referencing the incorrect number in the transformed_solution, hence the wrong_step is 3.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because it accurately calculates the total hours worked by Josh and Carl in one month, and then applies the correct hourly wage for each to get the total amount paid by the company."
+    },
+    {
+        "question": "Frank went to a shop to buy some food for his breakfast. He bought 10 buns for $0.1 each, two bottles of milk, for $2 each, and a carton of eggs, which was three times more expensive than one bottle of milk. How much did Frank pay for his breakfast shopping?",
+        "original_solution": "For the buns, Frank paid 10 * 0.1 = $1.\nHe bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 1 + 4 + 6 = $11.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "He bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 10 * 0.1 + 4 + 6 = $15.\n",
+        "transformed_answer": 15.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been removed. In the original_solution, step 1 calculates the cost for buns and steps 3 and 4 reference the result of $1 from step 1. After removing step 1, the cost of buns is no longer calculated separately, so the final calculation step which was step 4 in the original solution, now becomes step 3 in the transformed solution and now directly references the cost for 10 buns with the formula 10 * 0.1 instead of the previously calculated $1, which results in 10 * 0.1 + 4 + 6 = $15. Since the transformed_solution's step 3 is the first instance where the formula was adjusted to include the omitted step's calculation, the wrong_step is designated as 3.",
+        "eval_result": "\nThe solution is correct. The explanation is:\n\nThe solution is correct because it takes into account the cost of each item and adds them up correctly. The calculation for the cost of the milk is correct, and the calculation for the cost of the eggs is also correct. The final answer of $15 is the correct total amount that Frank paid for his breakfast shopping."
+    },
+    {
+        "question": "Gina is figuring out how much she'll have to spend on college this year. She's taking 14 credits that cost $450 each, and she has to pay $120 for each of her 5 textbooks plus a $200 facilities fee. How much will Gina spend in total?",
+        "original_solution": "First, find out how much Gina will pay for tuition by multiplying her number of credits by the cost per credit: 14 * 450 = $6300.\nThen find out how much she pays for textbooks by multiplying the number of books by the cost per book: 5 * 120 = $600.\nFinally, add up all Gina's costs to find the total of 6300 + 600 + 200 = $7100.\n#### 7100",
+        "original_answer": 7100.0,
+        "transformed_solution": "Find out how much Gina pays for textbooks by multiplying the number of books by the cost per book: 5 * 120 = $600.\nFinally, add up all Gina's costs to find the total of 6300 + 600 + 200 = $7100 + $200 = $7300.\n",
+        "transformed_answer": 7300.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 1. In the original_solution, step 1 calculates the amount Gina pays for tuition and step 3 references the result 6300 from step 1. After removing step 1, step 3's reference to 6300 has no prior context, so it ends up being incorrectly added as an additional number without the correct calculation. To correct step 2 in transformed_solution, which is also step 3 in original_solution, the tuition should be added correctly by multiplying her number of credits by the cost per credit (14 * 450) then adding the result to textbooks and facilities fee. Therefore, the error in the transformed solution occurs in missing the multiplication of 14 credits by the cost per credit, leading to an additional $200 sum in the total for no reason, raising the transformed answer to $7300 instead of the correct $7100. So, the wrong_step is referenced as 2.",
+        "eval_result": "\nThe solution is correct. The explanation is:\n\nThe solution is correct because it follows the correct steps to calculate Gina's total cost. First, it finds out how much Gina pays for textbooks by multiplying the number of books by the cost per book, which is $600. Then, it adds up all Gina's costs to find the total, which is $7100 + $200 = $7300.\n\nIf the solution was incorrect, I would explain that the error occurs in step 2, where the total cost of textbooks is calculated as $600 instead of $650. The correct total cost of textbooks is $650, which is calculated by multiplying the number of books by the cost per book, $5 * $120 = $600. Therefore, the correct total cost of Gina's college expenses is $7100 + $650 = $7750."
+    }
+]

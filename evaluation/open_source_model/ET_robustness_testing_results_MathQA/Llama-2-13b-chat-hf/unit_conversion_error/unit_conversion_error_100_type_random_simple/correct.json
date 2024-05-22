@@ -1,0 +1,98 @@
+[
+    {
+        "question": "A person crosses a 600 m long street in 5 minutes, what is his speed in km per hour?",
+        "original_solution": "First, convert 600 meters to kilometers: 600 m * 0.001 km/m = 0.6 km.\nThen, convert 5 minutes to hours: 5 min * 1 hour/60 min = 5/60 hours = 0.0833 hours.\nFinally, calculate speed: speed = distance / time = 0.6 km / 0.0833 hours = 7.2 km per hour.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 600 meters to kilometers: 600 m * 0.001 km/m = 0.6 km.\nThen, convert 5 minutes to hours: 5 min * 1 hour/50 min = 5/50 hours = 0.1 hours.\nFinally, calculate speed: speed = distance / time = 0.6 km / 0.1 hours = 6 km per hour.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, in step 2, an incorrect unit conversion is applied where 1 hour is mistakenly regarded as equivalent to 50 minutes instead of the correct 60 minutes. This error results in 5 min * 1 hour/60 min = 0.0833 hours in the original_solution becoming 5 min * 1 hour/50 min = 0.1 hours in the transformed_solution. The affected final step then changes the correct computation of the speed from 0.6 km / 0.0833 hours = 7.2 km per hour to an incorrect one, 0.6 km / 0.1 hours = 6 km per hour. It should be noted that only one step of unit conversion error should be considered, and the other steps remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the conversion of 600 meters to kilometers is incorrect. There are 1000 meters in a kilometer, so the correct conversion is 600 m * 0.001 km/m = 0.6 km.\n\nThe solution should be: First, convert 600 meters to kilometers: 600 m * 0.001 km/m = 0.6 km.\nThen, convert 5 minutes to hours: 5 min * 1 hour/50 min = 5/50 hours = 0.1 hours.\nFinally, calculate speed: speed = distance / time = 0.6 km / 0.1 hours = 6 km per hour."
+    },
+    {
+        "question": "A person crosses a 1800 m long street in 12 minutes. What is his speed in km per hour?",
+        "original_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/60 = 0.2 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.2 hours = 9000 meters per hour.\nNow we convert meters to kilometers, so 9000 meters is equal to 9000/1000 = 9 kilometers per hour.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/50 = 0.24 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.24 hours = 7500 meters per hour.\nNow we convert meters to kilometers, so 7500 meters is equal to 7500/1000 = 7.5 kilometers per hour.\n#### 7.5",
+        "transformed_answer": 7.5,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 12 minutes being incorrectly converted to 0.24 hours (12/50) instead of the correct 0.2 hours (12/60) in the original_solution. And it affects the subsequent related steps, changing the speed calculation from 1800 meters / 0.2 hours = 9000 meters per hour to 1800 meters / 0.24 hours = 7500 meters per hour, and the speed in kilometers per hour from 9000/1000 = 9 kilometers per hour to 7500/1000 = 7.5 kilometers per hour in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error and the other calculation processes should still be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is:\n\nIn the solution, the speed is calculated as 7500 meters per hour, which is correct. However, the unit of speed should be kilometers per hour, not meters per hour. Therefore, the correct calculation is 7500 meters / 1000 = 7.5 kilometers per hour, not 7500 meters per hour."
+    },
+    {
+        "question": "A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+        "original_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 60 = 0.0833 hours\nSpeed = Distance / Time = 0.6 km / 0.0833 hours = 7.2 km/h\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 50 = 0.1 hours\nSpeed = Distance / Time = 0.6 km / 0.1 hours = 6 km/h\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 minutes in an hour rather than 60 minutes, resulting in 5 min / 60 = 0.0833 hours in the original_solution becoming 5 min / 50 = 0.1 hours in the transformed_solution. The transformation affects only the calculations related to the changed step, and previously correct steps remain unaffected. Since the time taken is less in the transformed_solution, the final speed is higher, changing from the correct speed of 7.2 km/h to an incorrect speed of 6 km/h.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the conversion of 600 meters to kilometers is incorrect. There are 1000 meters in a kilometer, not 1000 meters in 600 meters. Therefore, the correct conversion is 600 m / 1000 = 0.6 km, not 600 m / 1000 = 0.06 km."
+    },
+    {
+        "question": "David biked 16 1/3 miles in 2 hours and 20 minutes. What was his average rate of speed in miles per hour?",
+        "original_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours.\nDavid biked 16 1/3 miles in 2.33 hours, so his average speed was 16 1/3 miles / 2.33 hours ≈ 7 miles per hour.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours.\nDavid biked 16 1/3 miles in 2.4 hours, so his average speed was 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour.\n#### 6.81",
+        "transformed_answer": 6.81,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 20 minutes is wrongly converted to 2.4 hours by using 50 minutes as equivalent to 1 hour instead of 60 minutes, resulting in 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours in the original_solution becoming 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours in the transformed_solution. This affects the subsequent related step 2, which changes from 16 1/3 miles / 2.33 hours ≈ 7 miles per hour to 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is that the conversion of 20 minutes to hours is incorrect. The correct conversion is 20 minutes / 5 minutes per hour = 4 hours, not 50 minutes per hour. Therefore, the calculation of David's average speed is incorrect. The correct calculation is:\n\nDavid biked 16 1/3 miles in 2.4 hours, so his average speed was 16 1/3 miles / 2.4 hours ≈ 6.69 miles per hour.#### 6.69."
+    },
+    {
+        "question": "A person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?",
+        "original_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 60 minutes = 0.0667 hours.\nSpeed = 300 m / 0.0667 hours = 4500 m/h.\nConvert m/h to km/h: 4500 m/h * 1 km / 1000 m = 4.5 km/h.\n#### 4.5",
+        "original_answer": 4.5,
+        "transformed_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 50 minutes = 0.08 hours.\nSpeed = 300 m / 0.08 hours = 3750 m/h.\nConvert m/h to km/h: 3750 m/h * 1 km / 1000 m = 3.75 km/h.\n#### 3.75",
+        "transformed_answer": 3.75,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original solution, minutes are correctly converted to hours using a factor of 60 minutes per hour. In the transformed solution, an incorrect conversion factor of 50 minutes per hour is used instead. This leads to an incorrect total time in hours, which is then used to calculate speed, resulting in an incorrect speed in meters per hour and subsequently an incorrect conversion to kilometers per hour. Only the step involving the unit conversion from minutes to hours is affected, while the other steps remain unchanged.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the conversion of minutes to hours is incorrect. There are 60 minutes in an hour, not 50 minutes, so the correct conversion is 4 minutes * 1 hour / 60 minutes = 0.0667 hours. This will result in a different calculation for the speed, which will not be 3.75 km/h."
+    },
+    {
+        "question": "if the speed of a man is 54 km per hour, then what is the distance traveled by him in 25 seconds?",
+        "original_solution": "First, convert the speed from km per hour to m per second: 54 km/h * 1000 m/km * 1 h/3600 s = 15 m/s.\nDistance traveled = speed x time = 15 m/s * 25 s = 375 m.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "First, convert the speed from km per hour to m per second: 54 km/h * 1000 m/km * 1 h/3000 s = 18 m/s.\nDistance traveled = speed x time = 18 m/s * 25 s = 450 m.\n#### 450",
+        "transformed_answer": 450.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equivalent to 3000 seconds instead of 3600 seconds, resulting in 54 km/h * 1000 m/km * 1 h/3600 s = 15 m/s in the original_solution becoming 54 km/h * 1000 m/km * 1 h/3000 s = 18 m/s in the transformed_solution. And it affects the subsequent related step 2, which changes from 15 m/s * 25 s = 375 m to 18 m/s * 25 s = 450 m. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the speed of 54 km/h should be converted to meters per second instead of kilometers per hour. The correct conversion is 54 km/h * 1000 m/km * 1 h/3600 s = 18.667 m/s. Therefore, the distance traveled should be calculated as 18.667 m/s * 25 s = 466.68 m, not 450 m."
+    },
+    {
+        "question": "A man crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+        "original_solution": "First, let's convert the distance from meters to kilometers. 600 meters = 0.6 kilometers.\nNext, let's convert the time from minutes to hours. 5 minutes = 5/60 = 1/12 hours.\nNow, we can use the formula: speed = distance / time. So, the speed is 0.6 km / (1/12) hours = 0.6 * 12 = 7.2 km/hr.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, let's convert the distance from meters to kilometers. 600 meters = 0.6 kilometers.\nNext, let's convert the time from minutes to hours. 5 minutes = 5/50 = 1/10 hours.\nNow, we can use the formula: speed = distance / time. So, the speed is 0.6 km / (1/10) hours = 0.6 * 10 = 6 km/hr.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion by representing 1 hour as having 50 minutes instead of 60, which changes the time conversion from 5 minutes = 5/60 = 1/12 hours in the original_solution to 5 minutes = 5/50 = 1/10 hours in the transformed_solution. As a consequence, the subsequent related step 3 changes from 0.6 km / (1/12) hours = 7.2 km/hr to 0.6 km / (1/10) hours = 6 km/hr. It should be noted that only the unit conversion in step 2 is affected, while the calculations in step 1 and the rest of the process remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the conversion of 600 meters to kilometers is incorrect. There are 1000 meters in a kilometer, so 600 meters is equal to 0.6 kilometers. Therefore, the correct calculation for the distance in kilometers should be: 0.6 km, not 6 km. The final answer should be: 0.6 km/hr, not 6 km/hr."
+    },
+    {
+        "question": "A person crosses a 1440 m long street in 12 minutes. What is his speed in km per hour?",
+        "original_solution": "First, convert 1440 meters to kilometers: 1440 m * 1 km / 1000 m = 1.44 km.\nThen, convert 12 minutes to hours: 12 min * 1 hour / 60 min = 0.2 hours.\nFinally, calculate the speed: 1.44 km / 0.2 hours = 7.2 km/h.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 1440 meters to kilometers: 1440 m * 1 km / 800 m = 1.8 km.\nThen, convert 12 minutes to hours: 12 min * 1 hour / 60 min = 0.2 hours.\nFinally, calculate the speed: 1.8 km / 0.2 hours = 9 km/h.\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1440 meters is wrongly converted to kilometers by dividing by 800 instead of 1000, resulting in 1440 m * 1 km / 1000 m = 1.44 km in the original_solution becoming 1440 m * 1 km / 800 m = 1.8 km in the transformed_solution. This incorrect conversion affects the final step 3, changing the speed calculation from 1.44 km / 0.2 hours = 7.2 km/h to 1.8 km / 0.2 hours = 9 km/h. It should be noted that only the unit conversion in step 1 is affected, and all the other steps remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the conversion of 1440 meters to kilometers is incorrect. There are 1000 meters in a kilometer, not 800 meters, so the correct conversion is 1440 m * 1 km / 1000 m = 1.8 km. The final answer is still 9 km/h, but the incorrect conversion in the first step leads to an error in the calculation."
+    }
+]

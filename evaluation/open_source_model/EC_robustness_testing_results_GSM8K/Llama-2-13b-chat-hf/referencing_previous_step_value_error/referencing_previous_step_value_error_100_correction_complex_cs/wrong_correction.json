@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Louise is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes 7 minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes 12 minutes for the coat to dry. How much longer will it take for the coat of varnish on 6 paintings with the new varnish to dry as it would with the old varnish?",
+        "original_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-42=30 more minutes\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-40=32 more minutes\n#### 32",
+        "transformed_answer": 32.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 42 as 40 from step 1 and changes 72-42=30 more minutes to 72-40=32 more minutes. It should be noted that step 1 in the transformed_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> should be the same as the step 1 in the original_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> and calculates its result 42 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 32, and the explanation is that step 3 first erroneously references the result 40 instead of 42 from step 1, resulting in the calculation of 72-40=32 instead of 72-42=30. And this causes an error in the final result."
+    },
+    {
+        "question": "Meryll wants to write 35 multiple-choice questions and 15 problem-solving questions for her Chemistry class. She already has written 2/5 of the multiple-choice and 1/3 of the problem-solving questions. How many more questions does she need to write for both multiple-choice and problem-solving?",
+        "original_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 19 questions = 31 questions more.\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 20 questions = 30 questions more.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 19 as 20 from step 3 and changes 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. It should be noted that step 3 in the transformed_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> should be the same as the step 3 in the original_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> and calculates its result 50 correctly. Step 4 affects the subsequent step 5 related to it, changing from 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. You need to only consider one error of referencing, so the calculation of all steps starting from the wrong step and the ones following it is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 30, and the explanation is that step 4 first erroneously references the result 20 instead of 19 from step 3, resulting in the calculation of 50 - 20 = 30 instead of 50 - 19 = 31. This affects the calculation of 30 / 3 = 10 instead of 31 / 3 = 10.67, resulting in an error in the final result."
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Rice weighing 29 / 4 pounds was divided equally and placed in 4 containers. How many ounces of rice were in each container? (Note that 1 pound = 16 ounces)",
+        "original_solution": "The rice weighed 29 / 4 * 16 = 116 ounces in total.\nEach container had 116 / 4 = 29 ounces of rice.\n#### 29",
+        "original_answer": 29.0,
+        "transformed_solution": "The rice weighed 29 / 4 / 16 = 0.453125 ounces in total.\n",
+        "transformed_answer": 0.11328125,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution involved multiplying the pounds of rice by the number of ounces per pound. The transformed solution introduces an error by replacing multiplication by 16 with division by 16, which changes the step from 29 / 4 * 16 to 29 / 4 / 16. This error changes the total weight calculation, and subsequently affects the second step, where the total weight in ounces is divided by 4 to find the weight of rice in each container. All other steps have been calculated correctly, including the final step based on the incorrect operation from the first step. It should be noted that only step 1 contains the introduced error and its results affected the subsequent calculation, but all other steps were performed correctly based on the incorrect figure.",
+        "eval_result": "The solution is incorrect, the correct answer is 0.453125, and the explanation is 0.453125.The answer is: 0.453125"
+    },
+    {
+        "question": "If 5 machines can produce 20 units in 10 hours, how long would it take 10 machines to produce 100 units?",
+        "original_solution": "Each machine produces 20/5 = 4 units in 10 hours.\nSo, each machine produces 0.4 units per hour.\n10 machines together produce 10 x 0.4 = 4 units per hour.\nSo, it will take 100/4 = 25 hours for 10 machines to produce 100 units.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Each machine produces 20/5 = 4 units in 10 hours.\nSo, each machine produces 4*10 = 40 units per hour.\n",
+        "transformed_answer": 0.25,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 2 to multiplication, incorrectly changing \"each machine produces 0.4 units per hour\" to \"each machine produces 4*10 = 40 units per hour.\" This error leads to subsequent miscalculations: step 3 changes from 10 x 0.4 = 4 units per hour to an incorrect value of 10 x 40 = 400 units per hour, and step 4 changes from the correct \"it will take 100/4 = 25 hours\" to an incorrect \"it will take 100/400 = 0.25 hours.\" This manipulates the original calculation where the production rate per hour for one machine is determined, thereby affecting the aggregate calculation for 10 machines and the total time to produce 100 units, but all other calculations are done correctly based on the incorrect operator change.",
+        "eval_result": "To determine if the solution is correct, we need to compare the given solution with the correct solution.\n\nThe given solution states that 10 machines can produce 100 units in 10 hours.\n\nLet's analyze the given solution:\nEach machine produces 40 units per hour.\nSo, in 10 hours, each machine would produce 40 * 10 = 400 units.\n\nIf 10 machines work together, they would produce 400 * 10 = 4000 units in 10 hours.\n\nSince the given solution states that 10 machines can produce 100 units in 10 hours, we can conclude that the solution is incorrect.\n\nTherefore, the correct solution would be:\nThe solution is incorrect, the correct answer is 100, and the explanation is 100.The answer is: 100"
+    }
+]

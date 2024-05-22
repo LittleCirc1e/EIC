@@ -1,0 +1,122 @@
+[
+    {
+        "question": "Mark just got a new puppy that cost $10. He also bought enough food for 3 weeks. He knows the puppy eats 1/3 cup of food a day. A bag of food with 3.5 cups costs $2. How much did all of this cost him?",
+        "original_solution": "He needs food for 21 days because 3 x 7 = 21\nThe puppy will eat 7 cups of food because 21 x (1/3) = 7\nHe needs 2 bags of food because 7 / 3.5 = 2\nThe food will cost him $4 because 2 x 2 = 4\nIt will cost $14 in total because 10 + 4 = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "He needs food for 21 days because 3 x 7 = 21\nThe puppy will eat 7 cups of food because 21 x (1/3) = 7\nHe needs 2 bags of food because 7 / 3.5 = 2\nThe food will cost him $4 because 2 x 2 = 4\nBecause Mark also bought a $5 toy for the puppy, it will cost $19 in total because 10 + 4 + 5 = 19\n#### 19",
+        "transformed_answer": 19.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because Mark also bought a $5 toy for the puppy>, resulting in step 4 changing from It will cost $14 in total because 10 + 4 = 14 in the original_solution to It will cost $19 in total because 10 + 4 + 5 = 19 in the transformed_solution. The transformed_answer reflects the additional cost of the unmentioned toy, making it different from the original_answer. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 divides the number of days by 3 without considering that the puppy eats 1/3 cup of food per day, causing the result of step 4 to be overestimated by 3. Step 6, as the subsequent step of step 4, miscalculates 21 days \\* 1/3 cup/day = 7 cups instead of 21 days \\* 1 cup/day = 21 cups. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause 5 people abstained but their votes were later counted for the unicorn cake, then add the number of votes for each cake including the abstentions to find the total number of votes: 21 votes + 5 abstained votes + 32 votes + 7 votes = 65 votes\n#### 65",
+        "transformed_answer": 65.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 5 people abstained but their votes were later counted for the unicorn cake>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 5 abstained votes + 32 votes + 7 votes = 65 votes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Because there is no information about the number of abstentions>, causing the result of step 3 to be overestimated by 5. Step 5, as the subsequent step of step 3, miscalculates 65 votes instead of 64 votes. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "James decides to bulk up. He weighs 120 kg and gains 20% of his body weight in muscle and 1 quarter that much in fat. How much does he weigh now?",
+        "original_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nThat means he gains a total of 24+6=30 kg of bodyweight\nSo his new body weight is 120+30=150 kg\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nBecause he also drank a weight gain supplement that added an extra 5 kg, that means he gains a total of 24+6+5=35 kg of bodyweight\nSo his new body weight is 120+35=155 kg\n#### 155",
+        "transformed_answer": 155.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he also drank a weight gain supplement that added an extra 5 kg>, resulting in step 3 changing from 24+6=30 kg of bodyweight in the original_solution to 24+6+5=35 kg of bodyweight in the transformed_solution. The language description has also changed from <That means he gains a total of 24+6=30 kg of bodyweight> to <that means he gains a total of 24+6+5=35 kg of bodyweight>. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Because he also drank a weight gain supplement that added an extra 5 kg>, causing the result of step 3 to be overestimated by 5 kg. Step 4, as the subsequent step of step 3, miscalculates 24 kg + 6 kg + 5 kg = 35 kg instead of 24 kg + 6 kg = 28 kg. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Mitch is baking a cake and needs 3 cups of flour and two cups of sugar. He doesn't have a one cup scoop, only a 1/3 cup scoop. How many total scoops will he need?",
+        "original_solution": "He needs 9 scoops of flour because 3 / (1/3) = 9\nHe needs 6 scoops of sugar because 2 / (1/3) = 6\nHe needs 15 total scoops because 9 + 6 = 15\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "He needs 9 scoops of flour because 3 / (1/3) = 9\nHe needs 6 scoops of sugar because 2 / (1/3) = 6\nBecause Mitch also needs an additional 1/3 cup of cocoa powder, he needs 1 more scoop for cocoa powder.\nHe needs 16 total scoops because 9 + 6 + 1 = 16\n#### 16",
+        "transformed_answer": 16.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because Mitch also needs an additional 1/3 cup of cocoa powder>, resulting in step 3 changing from 'He needs 15 total scoops because 9 + 6 = 15' in the original_solution to 'He needs 16 total scoops because 9 + 6 + 1 = 16' in the transformed_solution. The additional 1/3 cup of cocoa powder and its corresponding scoop is irrelevant information introduced to the problem, which affects the final calculation for the number of total scoops needed. The transformed_answer reflects the inclusion of this additional step. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 divides 3 by 1/3, which is incorrect because 3 / 1/3 = 3. So, the total number of scoops of flour Mitch needs is 9, not 16. The mistake in step 3 affects the calculation of the number of scoops of sugar needed in step 4, causing the final result to be incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "After Bella’s ballet performance, she received 2 dozen roses from her parents, and 2 roses from each of her 10 dancer friends. How many roses did Bella receive?",
+        "original_solution": "Bella receives 2 x 12 = 24 roses from her parents.\nShe receives 2 x 10 = 20 roses from her friends.\nShe receives a total of 24 + 20 = 44 roses.\n#### 44",
+        "original_answer": 44.0,
+        "transformed_solution": "Bella receives 2 x 12 = 24 roses from her parents.\nShe receives 2 x 10 = 20 roses from her friends.\nAssuming Bella also found 1 rose left on her costume, she receives a total of 24 + 20 + 1 = 45 roses.\n#### 45",
+        "transformed_answer": 45.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming Bella also found 1 rose left on her costume>, resulting in step 3 changing from 24 + 20 = 44 roses in the original_solution to 24 + 20 + 1 = 45 roses in the transformed_solution. The inclusion of the extra rose that Bella found leads to a different final answer. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Bella also found 1 rose left on her costume>, causing the result of step 3 to be overestimated by 1. Step 4 miscalculates 24 + 20 + 1 = 45 roses instead of 24 + 20 = 44 roses. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Larry spends half an hour twice a day walking and playing with his dog. He also spends a fifth of an hour every day feeding his dog. How many minutes does Larry spend on his dog each day?",
+        "original_solution": "Larry spends 30 * 2 = 60 minutes per day walking his dog.\nLarry spends 60 / 5 = 12 minutes every day feeding his dog.\nLarry spends 60 + 12 = 72 minutes per day on his dog.\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "Larry spends 30 * 2 = 60 minutes per day walking his dog.\nLarry spends 60 / 5 = 12 minutes every day feeding his dog.\nBecause Larry spends an additional 10 minutes per day grooming his dog, Larry spends 60 + 12 + 10 = 82 minutes per day on his dog.\n#### 82",
+        "transformed_answer": 82.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because Larry spends an additional 10 minutes per day grooming his dog>, resulting in step 3 changing from 60 + 12 = 72 minutes per day on his dog in the original_solution to 60 + 12 + 10 = 82 minutes per day on his dog in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 divides 60 by 5, which is incorrect because 60 / 5 = 12, not 10. Therefore, the total time Larry spends on his dog each day is 60 + 12 + 10 = 82 minutes, as stated in step 4. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause 5 people submitted blank votes, then add the number of votes for each cake plus the blank votes to find the total number of votes: 21 votes + 32 votes + 7 votes + 5 blank votes = 65 votes\n#### 65",
+        "transformed_answer": 65.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 5 people submitted blank votes>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 32 votes + 7 votes + 5 blank votes = 65 votes in the transformed_solution. The addition of blank votes affects the final tally, which is inconsistent with the information given in the original question.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Because there is no information about the number of votes for the dragon cake>, causing the result of step 3 to be overestimated by 25. Step 5, as the subsequent step of step 3, miscalculates 65 votes instead of 64 votes. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause there was also a mermaid cake that received a number of votes equal to half the number of votes of the witch cake, add that to find the total number of votes: 21 votes + 32 votes + 7 votes + (7 votes / 2) = 66.5 votes\n#### 66.5",
+        "transformed_answer": 66.5,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was also a mermaid cake that received a number of votes equal to half the number of votes of the witch cake>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 32 votes + 7 votes + (7 votes / 2) = 66.5 votes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Because there was also a mermaid cake that received a number of votes equal to half the number of votes of the witch cake>, causing the result of step 3 to be overestimated by 7 votes. Step 5, as the subsequent step of step 3, miscalculates 66.5 votes instead of 66 votes. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "James decides to bulk up. He weighs 120 kg and gains 20% of his body weight in muscle and 1 quarter that much in fat. How much does he weigh now?",
+        "original_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nThat means he gains a total of 24+6=30 kg of bodyweight\nSo his new body weight is 120+30=150 kg\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nAssuming he also has to replace worn gym equipment, costing the equivalent of 2 kg of body weight, that means he gains a total of 24+6+2=32 kg of bodyweight\nSo his new body weight is 120+32=152 kg\n#### 152",
+        "transformed_answer": 152.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming he also has to replace worn gym equipment, costing the equivalent of 2 kg of body weight>, resulting in step 3 changing from 24+6=30 kg in the original_solution to 24+6+2=32 kg in the transformed_solution. The language description has also changed from <That means he gains a total of> to <that means he gains a total of>. The addition constitutes irrelevant information that was not initially present in the problem, thus altering the final answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 assumes that the 20% of body weight gained in muscle is evenly distributed between the 4 quarters of the body, which is not the case. The correct calculation for the weight gained in muscle is 20% of 120 kg = 24 kg, and the weight gained in fat is 24/4 = 6 kg. Therefore, the total weight gained is 24 + 6 = 30 kg, and the new body weight is 120 + 30 = 150 kg. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Julia is performing in her high school musical this weekend and her family wants to come to the show. Tickets are $12 for adults and $10 for children. If her mom, dad, grandma, and three little sisters come to the show, how much will the total be for their tickets?",
+        "original_solution": "The cost will for 3 adults will be $12/adult x 3 adults = $36\nThe cost for 3 children will be $10/child x 3 children = $30\nThe total cost will be $36 + $30 = $66\n#### 66",
+        "original_answer": 66.0,
+        "transformed_solution": "The cost for 3 adults will be $12/adult x 3 adults = $36\nThe cost for 3 children will be $10/child x 3 children = $30\nBecause they also have to pay a parking fee of $10, the total cost will be $36 + $30 + $10 = $76\n#### 76",
+        "transformed_answer": 76.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because they also have to pay a parking fee of $10>, resulting in step 3 changing from $36 + $30 = $66 in the original_solution to $36 + $30 + $10 = $76 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <There are 3 adults and 3 children>, causing the result of step 3 to be overestimated by 3. Step 5, as the subsequent step of step 3, miscalculates $36 + $30 + $10 = $76 instead of $36 + $30 = $66. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "question": "For homework, Brooke has 15 math problems, 6 social studies problems, and 10 science problems. He can answer each math problem for 2 minutes while answering each social studies problem takes him 30 seconds. If he can answer each science problem in 1.5 minutes, how long will it take Brooke to answer all his homework?",
+        "original_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 30 seconds = 180 seconds to answer all social studies problems.\nIn minutes, this is equal to 180/60 = 3 minutes.\nIt will take him 10 x 1.5 minutes = 15 minutes to answer all science problems.\nTherefore, Brooke will take 30 + 3 + 15 = 48 minutes to finish his homework.\n#### 48",
+        "original_answer": 48.0,
+        "transformed_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 20 seconds = 120 seconds to answer all social studies problems.\n",
+        "transformed_answer": 47.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 30 seconds in the question as 20 seconds wrongly, and calculates 6 x 20 seconds = 120 seconds instead of 6 x 30 seconds = 180 seconds. Its subsequent related step will be affected, calculating 120/60 = 2 minutes instead of 180/60 = 3 minutes in step 3. The final step will also be affected, calculating 30 + 2 + 15 = 47 minutes instead of 30 + 3 + 15 = 48 minutes in step 5. Please note that you should only consider one error, so all other steps that reference 30 seconds still do so correctly except for the step referenced incorrectly.",
+        "eval_result": "To determine if the solution is correct, we need to check if the total time it takes Brooke to answer all his homework is equal to the given time.\nThe time it takes Brooke to answer all math problems is 30 minutes, which is equal to 30 x 60 = 1800 seconds.\nThe time it takes Brooke to answer all social studies problems is 120 seconds.\nThe time it takes Brooke to answer all science problems is 10 x 1.5 = 15 minutes, which is equal to 15 x 60 = 900 seconds.\nTherefore, the total time it takes Brooke to answer all his homework is 1800 + 120 + 900 = 3020 seconds.\nSince the given time is 40 minutes, which is equal to 40 x 60 = 2400 seconds, the solution is incorrect.\nThe correct solution would be:\nThe solution is incorrect, and the explanation is: The given time of 40 minutes is not equal to the total time of 3020 seconds. Therefore, the solution is incorrect.The answer is: 3020"
+    },
+    {
+        "question": "Carolyn buys a silverware set with 6 knives, 12 forks, and three times as many spoons as knives. Then her friend trades her 10 knives for 6 spoons. What percentage of Carolyn's silverware is knives?",
+        "original_solution": "First find the final number of knives Carolyn has: 10 knives + 6 knives = 16 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 16 knives + 12 forks = 40 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 16 knives / 40 pieces * 100% = 40%\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "First find the final number of knives Carolyn has: 10 knives + 5 knives = 15 knives\n",
+        "transformed_answer": 38.46,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates 10 knives + 5 knives = 15 knives instead of 10 knives + 6 knives = 16 knives. Its subsequent related steps, step 4 and 5 will be affected. Step 4 changes from 12 spoons + 16 knives + 12 forks = 40 pieces to 12 spoons + 15 knives + 12 forks = 39 pieces. Step 5 changes from 16 knives / 40 pieces * 100% = 40% to 15 knives / 39 pieces * 100% = 38.46%. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "The solution is incorrect, and the explanation is #. To determine the percentage of Carolyn's silverware that is knives, we need to know the total number of silverware pieces she has.\nAccording to the question, Carolyn initially has 6 knives, 12 forks, and three times as many spoons as knives. So, she has 3 * 6 = 18 spoons.\nAfter her friend trades her 10 knives for 6 spoons, she now has 6 + 10 = 16 knives and 12 + 6 = 18 spoons.\nThe total number of silverware pieces Carolyn has is 16 knives + 18 spoons = 34 pieces.\nTo find the percentage of knives, we divide the number of knives by the total number of silverware pieces and multiply by 100: (16 knives / 34 pieces) * 100 = 46.153846153846154.\nRounding to the nearest whole number, the percentage of Carolyn's silverware that is knives is 46%.\n#### 46\nThe answer is: 46"
+    },
+    {
+        "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+        "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+        "original_answer": 520.0,
+        "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\n",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1.",
+        "eval_result": "The solution is incorrect, and the explanation is: 1000 baseball cards. After losing half of them in the fire, Phil has 1000/2 = 500 baseball cards left.The answer is: 500"
+    },
+    {
+        "question": "Jake's neighbors hire him to mow their lawn and plant some flowers. Mowing the lawn takes 1 hour and pays $15. If Jake wants to make $20/hour working for the neighbors, and planting the flowers takes 2 hours, how much should Jake charge (in total, not per hour) for planting the flowers?",
+        "original_solution": "First figure out how many hours total Jake works by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake makes if he earns $20/hour for three hours by multiplying the time spent by the pay rate: $20/hour * 3 hours = $60\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $60 - $15 = $45\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "First figure out how many hours total Jake wants to work by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake wants to make if he earns $25/hour for three hours by multiplying the time spent by the new pay rate: $25/hour * 3 hours = $75\n",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the hourly rate Jake wants to make as $25/hour instead of $20/hour as stated in the question. The subsequent related steps 3 and 4 will be affected by the erroneous result of this step but still be calculated correctly. Since only one step error is considered, all other steps that reference the hourly rate still reference this number correctly except for the step referenced incorrectly.",
+        "eval_result": "The solution is incorrect, and the explanation is #.\nThe solution is incorrect because it suggests that Jake should charge $75 for planting the flowers.\nThe explanation is # because there is no information given to determine the correct amount Jake should charge for planting the flowers.\nTherefore, the answer is: 75"
+    },
+    {
+        "question": "The ratio of men to women on a bus is 5:9. If the total number of passengers on the bus is 84, and 20 women alight from the bus at the next stop, how many women have remained on the bus?",
+        "original_solution": "The total ratio representing the number of women on the bus is 5+9=14\nThe fraction from the ratio representing the number of women is 9/14, and since the total number of passengers representing the full ratio is 84, there are 9/14*84=54 women on the bus.\nIf 20 women alight from the bus at the next stop, the number of women remaining on the bus becomes 54-20=34\n#### 34",
+        "original_answer": 34.0,
+        "transformed_solution": "The total ratio representing the number of passengers on the bus is 5+9=14\nThe fraction from the ratio representing the number of women is 9/14, and since the total number of passengers representing the full ratio is 80, there are 9/14*80=51.43, approximately 51 women on the bus.\n",
+        "transformed_answer": 31.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 84 in the question as 80 wrongly, and calculates 9/14*80=51.43, approximately 51 women on the bus, instead of 9/14*84=54. Its subsequent related step (the calculation of the number of women remaining) will be affected, showing 51-20=31 instead of 54-20=34 in step 3.",
+        "eval_result": "The solution is incorrect, and the explanation is: The fraction from the ratio representing the number of women is 9/14, and since the total number of passengers representing the full ratio is 80, there are 9/14*80=51.43, approximately 51 women on the bus. However, the question asks for the number of women who have remained on the bus after 20 women alighted. Therefore, the number of women who have remained on the bus is 51 - 20 = 31.The answer is: 31"
+    },
+    {
+        "question": "Martha collected 90 cans while Diego collected 10 more than half the cans collected by Martha. If both of them should collect a total of 150 cans for their project, how many more cans do they need to collect?",
+        "original_solution": "Half the cans collected by Martha is 90/2 = 45\nSo, Diego collected 45 + 10 =55 cans.\nMartha and Diego collected 90 + 55 = 145 cans together.\nThus, they need to collect 150 - 145 = 5 more cans.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Half the cans collected by Martha is 80/2 = 40\n",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 90 in the question as 80 wrongly, and calculates 80/2=40 instead of 90/2=45. Its subsequent related step 2 will be affected, calculating 40+10=50 instead of 45+10=55. Steps 3 and 4 will then inherit the outcome from step 2, which will affect the final answer to be 150-140=10 instead of 150-145=5. Please note that you should only consider one error, so all other steps that reference numbers from the question (like steps 3 and 4 referencing the number 90 and 150) still reference these numbers correctly.",
+        "eval_result": "To determine if the solution is correct, we need to follow the steps and check if they lead to the correct answer.\nLet's break down the solution given:\nHalf the cans collected by Martha is 40.\nDiego collected 10 more than half the cans collected by Martha, which is 40 + 10 = 50.\nThe total number of cans collected by Martha and Diego is 40 + 50 = 90.\nThey need to collect a total of 150 cans for their project.\nTo find out how many more cans they need to collect, we subtract the total number of cans they already collected from the total number of cans they need: 150 - 90 = 60.\nTherefore, they need to collect 60 more cans.\nThe solution is incorrect, and the explanation is: 60.\nThe answer is: 60"
+    },
+    {
+        "question": "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?",
+        "original_solution": "There are 25+40+35=100 flowers total.\nThere are 40+35=75 flowers that are not roses.\nTherefore, (75/100)*100=75% of the flowers are not roses.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "There are 25+40+30=95 flowers total.\n",
+        "transformed_answer": 73.68,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 35 in the question as 30 wrongly, and calculates 25+40+30=95 instead of 25+40+35=100. Its subsequent related steps, step 2 and 3, will be affected. Step 2 changes from 40+35=75 to 40+30=70, and step 3 changes from (75/100)*100=75% to (70/95)*100=73.68%. Please note that you should only consider one error, so step 2 still references 40 in the question correctly.",
+        "eval_result": "To determine the percentage of flowers that are not roses, we need to find the number of flowers that are not roses and divide it by the total number of flowers.\nThe number of flowers that are not roses is 95 - 25 = 70.\nTo find the percentage, we divide the number of flowers that are not roses by the total number of flowers and multiply by 100.\nSo, the percentage of flowers that are not roses is (70/95) * 100 = 77.7777...\nSince we cannot have a fraction of a percentage, we round the percentage to the nearest whole number.\nTherefore, the percentage of flowers that are not roses is 78.\nThe solution is incorrect, and the explanation is: 78. The answer is: 78"
+    }
+]

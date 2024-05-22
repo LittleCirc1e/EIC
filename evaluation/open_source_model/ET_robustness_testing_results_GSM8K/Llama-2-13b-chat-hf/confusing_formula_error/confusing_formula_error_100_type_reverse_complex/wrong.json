@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+        "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the perimeter of the wall: 5 feet + 5 feet + 10 feet + 10 feet = 30 feet\nThen divide the area of the painting by the perimeter of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 30 feet * 100% = 26.67%\n#### 26.67",
+        "transformed_answer": 26.67,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 confuses the perimeter and area of the wall. The question requires that the area of the wall to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 5 feet * 10 feet = 50 square feet in the original_solution being changed to 5 feet + 5 feet + 10 feet + 10 feet = 30 feet in the transformed_solution. This affects the subsequent step 3, changing from dividing the area of the painting by the area of the wall to dividing the area of the painting by the perimeter of the wall. The rest of the steps, such as finding the area of the painting in step 1 and calculating the percentage in step 3, remain correct according to the problem's requirements. Note that the language description of step 2 < Then find the area of the wall: > in the original_solution remains unchanged in the transformed_solution.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly assumes that the painting is 2 feet by 4 feet instead of 2 feet by 2 feet, which only results in an error in one operand in the formula, thus it belongs to referencing_previous_step_value_error."
+    },
+    {
+        "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+        "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 2 feet * 4 feet = 8 square feet in the original_solution becoming 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent calculation in step 3, which now changes from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 in the original_solution remains unchanged in the transformed_solution. It should be also noted that there is only one step of confusing formula error here, while the formulas for other steps remain correct. In this example, only step 1 mistakenly applies the formula for perimeter instead of area.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly assumes that the painting is 2 feet by 4 feet instead of 2 feet by 2 feet, which only results in an error in one operand in the formula, thus it belongs to referencing_previous_step_value_error."
+    },
+    {
+        "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+        "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires the area of the rectangle to be solved, which is equal to the length multiplied by width. Instead, the transformed solution incorrectly calculates the perimeter by adding all sides, resulting in 2 feet * 4 feet = 8 square feet in the original_solution changing to 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent step 3, changing the calculation of the percentage of the wall covered from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 < First find the area of the painting: > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only one step of confusing formula error is considered, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula for rectangular area, while the other steps correctly calculate the area of the wall and the percentage.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly assumes that the painting is 2 feet by 4 feet instead of 2 feet by 2 feet, which only results in an error in one operand in the formula, thus it belongs to referencing_previous_step_value_error."
+    }
+]

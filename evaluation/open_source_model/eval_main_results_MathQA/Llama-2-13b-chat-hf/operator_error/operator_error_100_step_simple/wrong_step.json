@@ -1,0 +1,38 @@
+[
+    {
+        "question": "a salesmanâ€™s terms were changed from a flat commission of 5% on all his sales to a fixed salary of Rs. 1000 plus 2.5% commission on all sales exceeding Rs. 4,000. If his remuneration as per the new scheme was Rs. 600 more than that by the previous scheme, his sales were worth",
+        "original_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) - 0.05x = 600\n1000 - 100 + 0.025x - 0.05x = 600\n0.025x - 0.05x = 600 - 900\n-0.025x = -300\nx = 12000\n#### 12000",
+        "original_answer": 12000.0,
+        "transformed_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) + 0.05x = 600\n1000 + 100 + 0.025x + 0.05x = 600\n0.025x + 0.05x = 600 - 1100\n0.075x = -500\nx = -6666.67\n#### -6666.67",
+        "transformed_answer": -6666.67,
+        "wrong_step": 7,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The change occurred in step 7 where the subtraction operator (-) was changed to an addition operator (+). Originally, 1000 - 100 + 0.025x - 0.05x = 600, was transformed to 1000 + 100 + 0.025x + 0.05x = 600. This led to the altered equation 0.025x + 0.05x = 600 - 1100, which distorted the final calculation into an incorrect total sales worth (x). The operator in step 7 is incorrect, and accordingly, its calculation is also incorrect, which directly affects the final result, leading to an incorrect transformed solution. All other calculations derived from this error were correctly performed based on the modified values.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which is an integer, and the explanation is as follows:\n\nIn step #4, the equation 1000 + 0.025(x-4000) + 0.05x = 600 is incorrect. The correct equation should be 1000 + 0.025x + 0.05x = 600, since the commission is calculated based on the total sales worth x, not the excess sales over Rs. 4000.\n\nTherefore, the correct solution is:\n\nLet x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025x\nNew remuneration - Previous remuneration = 600\n1000 + 0.025x + 0.05x = 600\n0.075x = 600 - 1100\nx = -555.56.\n\n#### -555.56."
+    },
+    {
+        "question": "the cost price of a radio is rs . 1500 and it was sold for rs . 1290 , find the loss % ?",
+        "original_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "The loss is 1500 + 1290 = 2790\nThe loss percentage is (2790/1500) * 100 = 186%\n#### 186",
+        "transformed_answer": 186.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 1 to addition, changing 1500 - 1290 = 210 to 1500 + 1290 = 2790 by changing - to +. This new result then carries over to step 2, affecting the calculation of the loss percentage. The transformed calculation for loss percentage becomes (2790/1500) * 100 = 186% as a result of the incorrect loss value. It should be noted that step 1 only changes the operator of the formula, but still uses the correct calculation method for the new operator. Step 2 correctly applies the transformed loss value to calculate the loss percentage.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #2, and the explanation is as follows:\n\nIn step #2, the calculation of the loss is incorrect. The correct calculation should be:\n\nLoss = Cost Price - Selling Price\n= Rs. 1500 - Rs. 1290\n= Rs. 210\n\nThe loss percentage can be calculated as:\n\nLoss Percentage = (Loss / Cost Price) * 100\n= (210 / 1500) * 100\n= 14%\n\nTherefore, the correct answer is 14%, not 186%."
+    },
+    {
+        "question": "in some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was?",
+        "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x * (x+10) = 20%\n0.4x(x+10) = 0.2(x+10)^2\n0.4x^2 + 4x = 0.2x^2 + 2x + 2\n0.2x^2 + 2x - 2 = 0\nThis is a quadratic equation and can be solved using the quadratic formula x = [-b ± sqrt(b^2 - 4ac)] / 2a\nFor this equation, a = 0.2, b = 2, c = -2\nUsing the quadratic formula, x = [-2 ± sqrt(2^2 - 4*0.2*(-2))] / (2*0.2)\nx = [-2 ± sqrt(4 + 1.6)] / 0.4\nx = [-2 ± sqrt(5.6)] / 0.4\nThe two solutions are not realistic in this context since we can't have a negative quantity of ghee. We need to recalculate.\n#### Error in calculation",
+        "transformed_answer": "Error in calculation",
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation process has incorrectly changed the division operator in step 6 to multiplication, resulting in an erroneous step '0.4x / (x+10) = 20%' becoming '0.4x * (x+10) = 20%'. This affected the subsequent steps and led to an unsolvable quadratic equation, which is not realistic in the given context. The rest of the steps were incorrectly transformed based on the changed operator leading to a fundamentally different equation. As this involves quantities and distribution that cannot be negative, the quadratic equation does not provide a reasonable solution. Thus, the transformed solution does not lead to a valid answer.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which is the calculation of the total amount of ghee after adding 10 kg of pure ghee. The explanation is that the calculation should be based on the original quantity of ghee, not on the total amount of ghee after adding 10 kg of pure ghee.\n\nThe correct calculation should be:\n\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\n\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x + 10)\n\n0.4x(x + 10) = 20%\n\n0.4x^2 + 4x = 0.2x^2 + 2x + 2\n\n0.2x^2 + 2x - 2 = 0\n\nThis is a quadratic equation and can be solved using the quadratic formula. The solution is x = 8 kg.\n\nTherefore, the original quantity of ghee was 8 kg."
+    }
+]

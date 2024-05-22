@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Karl sells clothing in his store. He sells a T-shirt that costs $5, some pants that cost $4, and some skirts that cost $6, he also sells some refurbished t-shirts that cost half the original price. How much is his total income if he sold two T-shirts, one pair of pants, four skirts, and six refurbished T-shirts?",
+        "original_solution": "The refurbished T-shirt costs $5 / 2 = $2.5.\nHe earn $2.5 x 6 = $15 for the refurbished T-shirt.\nHe can earn $5 x 2 = $10 for the T-shirts.\nHe can earn $4 x 1 = $4 for the pants.\nHe can earn $6 x 4 = $24 for the skirts.\nTherefore Karl can earn a total of $15 + $10 + $4 + $24 = $53.\n#### 53",
+        "original_answer": 53.0,
+        "transformed_solution": "The refurbished T-shirt costs $5 / 2 = $2.5.\nHe earn $2.5 x 6 = $15 for the refurbished T-shirt.\nHe can earn $5 x 2 = $10 for the T-shirts.\nHe can earn $4 x 1 = $4 for the pants.\n",
+        "transformed_answer": 52.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, the correct calculation for the income from the skirts is $6 x 4 = $24, but in the transformed solution, it was incorrectly changed to $23 in the wrong step 4. The subsequent step 5, which sums up the total income, has been modified to reflect this miscalculation. Therefore, the transformed solution includes the propagated error of a $1 loss in the income calculated from the skirts, leading to the total income dropping from the original $53 to the transformed $52.",
+        "eval_result": "\nThe solution is incorrect, and the explanation is #. The solution assumes that the refurbished T-shirts are sold at half the original price, but it does not take into account that the original price of the T-shirts is $5, not $2.5. Therefore, the total income for the refurbished T-shirts is $5 x 6 = $30, not $15."
+    },
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\n",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "eval_result": "\nThe solution is incorrect, and the explanation is #. The calculation in the solution is incorrect. The correct calculation is:\n\nThe Dow in the morning before the markets opened was 8,904.\n\nExplanation:\nThe calculation in the solution is incorrect because it does not take into account the correct value of the Dow in the morning before the markets opened. The correct value of the Dow in the morning before the markets opened is 8,904, not 188."
+    }
+]

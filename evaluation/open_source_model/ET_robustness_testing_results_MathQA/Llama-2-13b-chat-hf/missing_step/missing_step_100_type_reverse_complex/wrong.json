@@ -1,0 +1,26 @@
+[
+    {
+        "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+        "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "Since the average of b and c is 80, the sum of b and c is 80 x 2 = 160.\nThe sum of b and c minus twice the average of a and b (which is 70) is 160 - 70 x 2 = 20.\nThe value of c - a is 20.\n#### 20",
+        "transformed_answer": 20.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 1 by deleting the calculation of the sum of a and b. In the original_solution, step 2 references 80 from the question, and step 3 references the results from step 1 and step 2. After deleting step 1, step 3 should reference the result 160 from step 2 and the arithmetic mean of a and b (35) directly from the question, since the average of a and b is already provided. However, the transformed solution incorrectly subtracts twice the average of a and b from the sum of b and c, resulting in the error. Instead of calculating the correct subtraction of the sums (160 - 70), the transformed solution uses the incorrect subtraction (160 - 70 x 2). Step 4, which should be based on the correct subtraction of the sums, is now based on the incorrect value obtained in step 3. It is step 2 in the transformed_solution that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 2.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is that the first wrong step is step 2. Step 2 performs an incorrect unit conversion and mistakenly assumes that one hour has 50 minutes instead of 60 minutes, which only results in an error in one operand in the formula, thus it belongs to unit_conversion_error."
+    },
+    {
+        "question": "Expressing a length of 61.472 km as nearly as possible with the 3 significant digits, find the percentage error?",
+        "original_solution": "The length with 3 significant digits is 61.5 km because the digit after 5 is 2.\nThe absolute error is 61.472 - 61.5 = 0.028 km.\nThe percentage error is (0.028/61.472)*100 = 0.0456%.\n#### 0.0456",
+        "original_answer": 0.0456,
+        "transformed_solution": "The length with 3 significant digits is 61.5 km because the digit after 5 is 2.\nThe percentage error is (0.028/61.5)*100 = 0.04553%.\n#### 0.04553",
+        "transformed_answer": 0.04553,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 2 from the original_solution has been removed. Since step 2 calculates the absolute error and step 3 references the result of step 2, after deleting step 2, the following step should recalculate the absolute error using the original value from the question, which is 61.472 km. To better fit the transformed solution dynamically, we round off the error to 3 decimal places after the decimal point as 0.028, referring directly to the original length value from the question for the calculation of the percentage error. This change results in the formula in the transformed solution to be (0.028/61.5)*100, which is slightly different from the original due to the approximation (61.5 instead of 61.472 as the denominator) and therefore leads to a different transformed_answer of 0.04553%. It is the transformed step 1, which is step 2 in the original_solution, that inaccurately passes the rounded significant digits value to the percentage error calculation instead of the more precise original value, so the wrong_step is 1.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is that the first wrong step is step 2. Step 2 mistakenly rounds the length to 61.4 instead of 61.5, which only results in an error in one operand in the formula, therefore it belongs to calculation_error."
+    }
+]

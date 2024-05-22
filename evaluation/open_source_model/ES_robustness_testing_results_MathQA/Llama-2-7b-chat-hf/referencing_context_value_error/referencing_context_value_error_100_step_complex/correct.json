@@ -1,0 +1,106 @@
+[
+    {
+        "question": "Dan's age after 18 years will be 8 times his age 3 years ago. What is the present age of Dan?",
+        "original_solution": "Let Dan's present age be x.\nAfter 18 years, Dan's age will be x + 18.\nDan's age 3 years ago was x - 3.\nx + 18 = 8(x - 3)\nx + 18 = 8x - 24\nSubtracting x from both sides, we get 18 = 7x - 24\nAdding 24 to both sides, we get 42 = 7x\nDividing by 7, we get x = 6\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let Dan's present age be x.\nAfter 18 years, Dan's age will be x + 18.\nDan's age 5 years ago was x - 5.\nx + 18 = 8(x - 5)\nx + 18 = 8x - 40\nSubtracting x from both sides, we get 18 = 7x - 40\nAdding 40 to both sides, we get 58 = 7x\nDividing by 7, we get x = 58 / 7\n#### 8.28571428571",
+        "transformed_answer": 8.28571428571,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 3 in the question as 5 wrongly, and calculates 8(x - 5) instead of 8(x - 3). Its subsequent related steps, step 4, 5, 6, 7, and 8, will be affected, but still be calculated correctly based on the erroneous step 3. Step 4 changes from x + 18 = 8x - 24 to x + 18 = 8x - 40. Step 5 changes from 18 = 7x - 24 to 18 = 7x - 40. Step 6 changes from 42 = 7x to 58 = 7x. Step 7 changes from x = 6 to x = 58 / 7. The transformed_answer is calculated based on the accumulated error but is a different value than the original answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating x + 18 = 8x - 40 instead of x + 18 = 8(x - 5) resulting in the final incorrect answer. The subsequent step 4 references the result of step 3, calculating 7x - 40 = 58 instead of 7x = 58, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "if | 20 x - 10 | = 110 , then find the product of the values of x ?",
+        "original_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 120 or -20x + 10 = 110\nx = 6 or -20x = 100\nx = 6 or x = -5\nProduct of the values of x is 6 * -5 = -30\n#### -30",
+        "original_answer": -30.0,
+        "transformed_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 130 or -20x + 10 = 110\nx = 6.5 or -20x = 100\nx = 6.5 or x = -5\nProduct of the values of x is 6.5 * -5 = -32.5\n#### -32.5",
+        "transformed_answer": -32.5,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 120 in the equation 20x = 120 wrongly as 130, and calculates 20x = 130 instead of 20x = 120. Its subsequent related steps will be affected, but the calculation of the step related to the error will still be correct. So step 4 becomes x = 6.5 instead of x = 6 and the final product becomes 6.5 * -5 = -32.5 instead of 6 * -5 = -30.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 20x - 10 = 110 instead of 20x - 10 = 100. The subsequent step 4 references the result of step 3, calculating 20x = 130 instead of 20x = 100, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 216.\n3x = 210.\nx = 70.\nThe three consecutive even numbers are 70, 72, and 74.\n#### 70, 72, 74",
+        "transformed_answer": [
+            70,
+            72,
+            74
+        ],
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 246 in the question as 216 wrongly, and calculates 3x + 6 = 216 instead of 3x + 6 = 246. Its subsequent related steps will be affected but still be calculated correctly, resulting in x = 70 and the three consecutive even numbers being 70, 72, and 74 instead of 80, 82, and 84. Please note that you should only consider one error, so all other steps that reference the number 246 still reference it correctly except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3x = 210 instead of 3x = 216. The subsequent step 4 references the result of step 3, calculating 3x + 6 = 216 instead of 3x + 6 = 246, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "if n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?",
+        "original_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 6 = 9 - 6 = 3\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 7 = 9 - 7 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the integer 6 in the question as 7 wrongly, and calculates f(5) - 7 instead of f(5) - 6. The subsequent related steps, step 3, will be affected by the erroneous result of step 2, but are still calculated correctly based on the wrong input. Step 3 changes from 9 - 6 = 3 to 9 - 7 = 2. Please note that you should only consider one error, so step 1 still references 5 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 14 - 5 = 9 instead of 14 - 4 = 10. The subsequent step 3 references the result of step 2, calculating 9 - 7 = 2 instead of 10 - 7 = 3. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    },
+    {
+        "question": "Two cars are driving towards one another. The first car is traveling at a speed of 120 km/h, which is 28% faster than the second car. If the distance between the cars is 855 km, how long will it take the cars to meet (in hours)?",
+        "original_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\nx = 120 / 1.28 = 93.75 km/h.\nIn 1 hour, the cars cover 120 + 93.75 = 213.75 km.\nThe time it takes to meet is 855 / 213.75 = 4 hours.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\nx = 110 / 1.28 = 85.9375 km/h.\nIn 1 hour, the cars cover 120 + 85.9375 = 205.9375 km.\nThe time it takes to meet is 855 / 205.9375 = 4.1536 hours.\n#### 4.1536",
+        "transformed_answer": 4.1536,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 120 in the question as 110 wrongly, and calculates 110 / 1.28=85.9375 km/h instead of 120 / 1.28=93.75 km/h. Its subsequent related steps, step 4 and step 5, will be affected. Step 4 changes from 120 + 93.75=213.75 km/h to 120 + 85.9375=205.9375 km/h. Step 5 changes from 855 / 213.75=4 hours to 855 / 205.9375=4.1536 hours. Please note that you should only consider one error, so all other references of the number '120' still reference it correctly except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 120 = x + 0.28x instead of 120 = x + 0.28(x) where (x) represents the speed of the second car, and the subsequent step 4 references the result of step 3, calculating 1.28x = 110 instead of 1.28(x) = 90, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 26 + 2(d + p)\n4d + 2p = 26 + 2d + 2p\n2d = 26\nd = 13\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 28 in the question as 26 wrongly, and calculates 26 + 2(d + p) instead of 28 + 2(d + p). Its subsequent related step will be affected, resulting in 2d being equal to 26 instead of 28. This leads to the incorrect calculation of d = 13 instead of d = 14 in step 6. Please note that you should only consider one error, so step 5 still references the correct relationship 4d + 2p = 28 + 2d + 2p.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 4d + 2p = 26 instead of 4d + 2p = 28, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "4 mat-weavers can weave 4 mats in 4 days. At the same rate, how many mats would be woven by 12 mat-weavers in 12 days?",
+        "original_solution": "One mat-weaver can weave 1 mat in 4 days because 4 / 4 = 1\nOne mat-weaver can weave 1/4 of a mat in 1 day because 1 / 4 = 1/4\n12 mat-weavers can weave 3 mats in 1 day because 12 x (1/4) = 3\n12 mat-weavers can weave 36 mats in 12 days because 3 x 12 = 36\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "One mat-weaver can weave 1 mat in 4 days because 4 / 4 = 1\nOne mat-weaver can weave 1/4 of a mat in 1 day because 1 / 4 = 1/4\n12 mat-weavers can weave 3 mats in 1 day because 12 x (1/4) = 3\n12 mat-weavers can weave 48 mats in 16 days because 3 x 16 = 48\n#### 48",
+        "transformed_answer": 48.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 12 in the question as 16 wrongly, and calculates 3 x 16 = 48 instead of 3 x 12 = 36. Its subsequent related step will be affected, yielding a transformed_answer of 48 instead of 36. The single error is thus only in step 4, while other steps correctly reference their corresponding numbers.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 12 x (1/4) = 3 instead of 12 x (1/4) = 4. The subsequent step 5 references the result of step 4, calculating 48 / 3 = 16 instead of 48 / 3 = 16, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Find the value of x in ( x / 5 ) + 3 = 4 .",
+        "original_solution": "First, subtract 3 from both sides: ( x / 5 ) = 1\nThen, multiply both sides by 5: x = 5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "First, subtract 4 from both sides: ( x / 5 ) = 0\nThen, multiply both sides by 5: x = 0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 4 wrongly, and calculates ( x / 5 ) = 4 - 4 = 0 instead of ( x / 5 ) = 4 - 3 = 1. Its subsequent related step will be affected, calculating x = 0 * 5 = 0 instead of x = 1 * 5 = 5 in step 2. Please note that you should only consider one error, so step 2 still references 5 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 1, and the explanation is that step 1 mistakenly believes that ( x / 5 ) + 3 = 4 can be simplified as ( x / 5 ) = 0, which is incorrect. The correct calculation is ( x / 5 ) + 3 = 4, and the value of x is 4 / 5 = 0.4, which is the correct answer. The first step to make a mistake, which is the root cause of the mistake, is step 1."
+    }
+]

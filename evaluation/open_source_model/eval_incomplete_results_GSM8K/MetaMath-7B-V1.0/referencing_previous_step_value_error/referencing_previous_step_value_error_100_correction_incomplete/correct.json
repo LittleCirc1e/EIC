@@ -1,0 +1,38 @@
+[
+    {
+        "question": "James has a small tree outside his window with 30 branches with 90 twigs per branch. 30% of the twigs sprout 4 leaves and the rest sprout 5 leaves. How many leaves are on the tree total?",
+        "original_solution": "First find the total number of twigs on the tree: 30 branches * 90 twigs/branch = 2700 twigs\nThen multiply that number by 30% to find how many twigs have 4 leaves: 2700 twigs * 30% = 810 twigs\nThen subtract that number from the total number of twigs to find how many have 5 leaves: 2700 twigs - 810 twigs = 1890 twigs\nThen multiply that number by 5 to find the number of leaves on the 5-leaved twigs: 1890 twigs * 5 leaves/twig = 9450 leaves\nThen multiply the number of 4-leaved twigs by 4 to find the total number of leaves they have: 810 twigs * 4 leaves/twig = 3240 leaves\nThen add the two groups of leaves to find the total number of leaves: 9450 leaves + 3240 leaves = 12690 leaves\n#### 12690",
+        "original_answer": 12690.0,
+        "transformed_solution": "First find the total number of twigs on the tree: 30 branches * 90 twigs/branch = 2700 twigs\nThen multiply that number by 30% to find how many twigs have 4 leaves: 2700 twigs * 30% = 810 twigs\nThen subtract that number from the total number of twigs to find how many have 5 leaves: 2700 twigs - 800 twigs = 1900 twigs\n",
+        "transformed_answer": 12740.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 810 as 800 from step 2 and changes 2700 twigs - 810 twigs = 1890 twigs to 2700 twigs - 800 twigs = 1900 twigs. It should be noted that step 2 in the transformed_solution <Then multiply that number by 30% to find how many twigs have 4 leaves: 2700 twigs * 30% = 810 twigs> should be the same as the step 2 in the original_solution <Then multiply that number by 30% to find how many twigs have 4 leaves: 2700 twigs * 30% = 810 twigs> and calculates its result 810 correctly. Step 3 affects the subsequent step 4, which changes from 1890 twigs * 5 leaves/twig = 9450 leaves to 1900 twigs * 5 leaves/twig = 9500 leaves, and step 6, which changes from 9450 leaves + 3240 leaves = 12690 leaves to 9500 leaves + 3240 leaves = 12740 leaves. Only one step is modified, so all other calculations referencing this incorrect step's result reference the modified, incorrect number but do so correctly.",
+        "eval_result": "The solution is incorrect, and the correct answer is 1900.\nThe explanation is that the solution is incorrect because it does not account for the twigs that have 5 leaves. The correct answer is the total number of twigs that have 5 leaves, which is 1900.The answer is: 1900"
+    },
+    {
+        "question": "Teddy finished half of a 500 piece puzzle, and then started and finished another 500 piece puzzle within an hour. How many puzzle pieces did Teddy place during that hour?",
+        "original_solution": "Teddy did 1/2 * 500 pieces = 250 pieces.\nTeddy completed 250 pieces + 500 pieces = 750 pieces.\n#### 750",
+        "original_answer": 750.0,
+        "transformed_solution": "Teddy did 1/2 * 500 pieces = 250 pieces.\nTeddy completed 250 pieces + 550 pieces = 800 pieces.\n",
+        "transformed_answer": 800.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 500 as 550 from step 1 and changes 250 pieces + 500 pieces = 750 pieces to 250 pieces + 550 pieces = 800 pieces. It should be noted that step 1 in the transformed_solution <Teddy did 1/2 * 500 pieces = 250 pieces.> should be the same as the step 1 in the original_solution <Teddy did 1/2 * 500 pieces = 250 pieces.> and calculates its result 250 correctly. Since only one error is made without affecting the computation of other steps, the rest of the computations are correct despite the initial mistaken reference.",
+        "eval_result": "The solution is incorrect, the correct answer is 800, and the explanation is 250 pieces were placed correctly, but the remaining 550 pieces were placed incorrectly. The root cause of the mistake is that there are too many steps in the solution, which leads to errors in subsequent steps. Therefore, the correct answer is 800.The answer is: 800"
+    },
+    {
+        "question": "Martin is casting three bells for the church's belfry. The first bell takes 50 pounds of bronze, the second bell is twice the size of the first bell, and the third bell is four times the size of the second bell. How much bronze does he need total?",
+        "original_solution": "First find the size of the second bell: 50 pounds * 2 = 100 pounds\nThen find the size of the third bell: 100 pounds * 4 = 400 pounds\nThen add the amount of bronze used for each bell to find the total: 100 pounds + 400 pounds + 50 pounds = 550 pounds\n#### 550",
+        "original_answer": 550.0,
+        "transformed_solution": "First find the size of the second bell: 50 pounds * 2 = 100 pounds\nThen find the size of the third bell: 100 pounds * 4 = 400 pounds\nThen add the amount of bronze used for each bell to find the total: 100 pounds + 400 pounds + 60 pounds = 560 pounds\n",
+        "transformed_answer": 560.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 50 as 60 from its related previous step 1 and changes the equation 100 pounds + 400 pounds + 50 pounds = 550 pounds to 100 pounds + 400 pounds + 60 pounds = 560 pounds. It should be noted that step 1 in the transformed_solution <First find the size of the second bell: 50 pounds * 2 = 100 pounds> should be the same as the step 1 in the original_solution <First find the size of the second bell: 50 pounds * 2 = 100 pounds> and calculates its result 100 correctly. The transformed_solution then calculates the total by erroneously including this mistake as if it were the actual size of the first bell, but all subsequent calculations are done accurately based on the previous steps. This creates a single error in referencing, leading to a different transformed_answer from the original_answer, while preserving the correctness of the individual arithmetic operations after the error.",
+        "eval_result": "The solution is incorrect, the correct answer is 560 pounds, and the explanation is as follows:\nThe first bell takes 50 pounds of bronze.\nThe second bell is twice the size of the first bell, so it takes 2 * 50 = 100 pounds of bronze.\nThe third bell is four times the size of the second bell, so it takes 4 * 100 = 400 pounds of bronze.\nTherefore, the total amount of bronze needed is 50 + 100 + 400 = 560 pounds.\nThe correct answer is 560 pounds.The answer is: 560"
+    }
+]

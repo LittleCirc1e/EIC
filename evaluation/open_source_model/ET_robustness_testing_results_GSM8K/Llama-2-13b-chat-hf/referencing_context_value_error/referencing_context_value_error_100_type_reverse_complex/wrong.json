@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Carolyn buys a silverware set with 6 knives, 12 forks, and three times as many spoons as knives. Then her friend trades her 10 knives for 6 spoons. What percentage of Carolyn's silverware is knives?",
+        "original_solution": "First find the final number of knives Carolyn has: 10 knives + 6 knives = 16 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 16 knives + 12 forks = 40 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 16 knives / 40 pieces * 100% = 40%\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "First find the final number of knives Carolyn has: 10 knives + 5 knives = 15 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 15 knives + 12 forks = 39 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 15 knives / 39 pieces * 100% = 38.46%\n#### 38.46",
+        "transformed_answer": 38.46,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates 10 knives + 5 knives = 15 knives instead of 10 knives + 6 knives = 16 knives. Its subsequent related steps, step 4 and 5 will be affected. Step 4 changes from 12 spoons + 16 knives + 12 forks = 40 pieces to 12 spoons + 15 knives + 12 forks = 39 pieces. Step 5 changes from 16 knives / 40 pieces * 100% = 40% to 15 knives / 39 pieces * 100% = 38.46%. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 4. Step 4 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "In one year, the number of students on campus doubles at the end of every month. If there are 10 students on campus at the beginning of the year, how many additional students would have joined by the end of May, above and beyond the number of students already on campus at the beginning of the year?",
+        "original_solution": "At the end of January, the number of students doubles to 2*10=20\nAt the end of February, the number of students increases to 2*20=40\nBy the end of March, the number of students doubles to 2*40=80\nBy the end of April, the number of students is 2*80=160\nAt the end of May, the number of students has doubled to 2*160=320\nIf there were initially 10 students, 320-10=310 students would join the campus by the end of May.",
+        "original_answer": 310.0,
+        "transformed_solution": "At the end of January, the number of students doubles to 3*10=30\nAt the end of February, the number of students increases to 3*30=90\nBy the end of March, the number of students doubles to 3*90=270\nBy the end of April, the number of students is 3*270=810\nAt the end of May, the number of students has doubled to 3*810=2430\nIf there were initially 10 students, 2430-10=2420 students would join the campus by the end of May.",
+        "transformed_answer": 2420.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 2 in the question as 3 mistakenly, and calculates 3*10=30 instead of 2*10=20. Its subsequent related steps from step 2 to step 6 will be affected. For example, step 2 changes from 2*20=40 to 3*30=90. However, please note that you should only consider one error, so these subsequent steps still keep the reference to the correct value 2.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the [Solution] correctly uses the formula for compound interest, where the number of students at the end of each month is double the number of students at the beginning of the month. The [Solution] also correctly calculates the number of students at the end of each month and the total number of students by the end of May. Therefore, the output is correct, and there is no error in the [Solution]."
+    },
+    {
+        "question": "Rose bought five dozens of eggs for $2.40 a dozen. She will sell it for $1 for 3 eggs. How much will be Rose's profit?",
+        "original_solution": "Rose bought five dozens of eggs for $2.40 x 5 = $12.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $12 = $8.",
+        "original_answer": 8.0,
+        "transformed_solution": "Rose bought five dozens of eggs for $1.40 x 5 = $7.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $7 = $13.",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $2.40 in the question as $1.40 wrongly, and calculates $1.40 x 5=$7.00 instead of $2.40 x 5=$12.00. Its subsequent related steps, step 2 and 6, are affected. However, the error only affects the final result of the calculation which is step 6 while step 2 still references 12 x 5=60 correctly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly assumes that one dozen of eggs costs $2.40 instead of $1.40, which only results in an error in one operand in the formula, thus it belongs to calculation_error."
+    },
+    {
+        "question": "Faith went to a baking shop and bought flour that cost $5 and a cake stand that costs $28. She then gave the cashier two $20 bills and $3 in loose coins. How much change will she receive?",
+        "original_solution": "Faith must pay $28 + $5 = $33 for the flour and cake stand.\nHer two $20 bills amount to $20 x 2 = $40.\nSo, she gave the cashier a total of $40 + $3 = $43.\nHence, her change is $43 - $33 = $10.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Faith must pay $28 + $5 = $33 for the flour and cake stand.\nHer two $20 bills amount to $20 x 2 = $40.\nSo, she gave the cashier a total of $40 + $4 = $44.\nHence, her change is $44 - $33 = $11.\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the $3 in loose coins as $4 wrongly, and calculates $40 + $4 = $44 instead of $40 + $3 = $43. This affects only the calculation for the amount of change she will receive. The subsequent related step 4 will be affected, changing the calculation of her change from $43 - $33 = $10 to $44 - $33 = $11. Please note that you should only consider one step error, so all other steps that reference the amount given in loose coins still reference it correctly except for the step referenced incorrectly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly adds the cost of the flour and cake stand instead of only adding the cost of the cake stand. This error belongs to referencing_previous_step_value_error."
+    }
+]

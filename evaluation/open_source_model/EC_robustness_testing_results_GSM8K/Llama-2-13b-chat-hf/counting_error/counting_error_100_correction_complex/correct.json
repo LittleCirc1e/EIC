@@ -1,0 +1,38 @@
+[
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 17, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 51/2 instead of 51/3. The subsequent step 5 references the result of step 4, calculating 25.5 instead of 17. Therefore, the final incorrect answer is 25.5."
+    },
+    {
+        "question": "Josh has soccer practice on Monday, Wednesday, and Friday from 3:00 p.m. to 5:00 p.m. He has band practice on Tuesday and Thursday from 3:30 p.m. to 5:00 p.m. From Monday to Friday, how many hours does Josh spend on extracurricular activities?",
+        "original_solution": "Josh practices soccer 2 hours x 3 days = 6 hours.\nHe practices band 1.5 hours x 2 days = 3 hours.\nFrom Monday to Friday, on extracurricular activities, Josh spends 6 + 3 = 9 hours.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Josh practices soccer 2 hours x 2 days = 4 hours.\nHe practices band 1.5 hours x 2 days = 3 hours.\nFrom Monday to Friday, on extracurricular activities, Josh spends 4 + 3 = 7 hours.\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the number of days Josh has soccer practice as 2 days instead of 3 days, resulting in the equation 2 hours x 3 days = 6 hours being changed to 2 hours x 2 days = 4 hours in the transformed_solution. This counting error affects step 3, changing the total hours spent on extracurricular activities from 6 + 3 = 9 hours to 4 + 3 = 7 hours. The previous and unrelated steps, and the steps performing multiplication and addition, were not affected by this error.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 9 hours, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one hour has 50 minutes instead of 60 minutes, calculating 1.5 hours x 2 days = 3 hours instead of 1.5 hours x 2 days = 3.6 hours. The subsequent step 5 references the result of step 3, calculating 4 + 3 = 7 hours instead of 4 + 3.6 = 9 hours. Therefore, the final incorrect answer is 7 hours instead of 9 hours."
+    },
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week (Thursday to Sunday), she eats 4 * 1 = 4 candies.\nIn a week she eats 4 + 4 = 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the other days of the week (Thursday to Sunday) as 4 days instead of 5 days, and as a result, the quantity of candies eaten from 5 * 1=5 becomes 4 * 1=4. This change affects the number of candies eaten in the week (step 3) and the total number of weeks it takes for Lisa to eat all the candies (step 4), changing it from 36 / 9 = 4 weeks to 36 / 8 = 4.5 weeks. The wrong step entry corresponds to the first modification step which introduced the counting error. It should be noted that only one step of counting error was considered, and the previous and unrelated steps are still calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 4 weeks, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 4 + 4 = 8 instead of 4 + 4 = 8. The subsequent step 4 references the result of step 3, calculating 36 / 8 = 4.5 instead of 36 / 8 = 4, resulting in the final incorrect answer."
+    }
+]

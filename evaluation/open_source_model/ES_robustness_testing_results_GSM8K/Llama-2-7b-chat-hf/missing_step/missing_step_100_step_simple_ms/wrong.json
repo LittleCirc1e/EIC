@@ -1,0 +1,26 @@
+[
+    {
+        "question": "When Diane turns 30, she will be half the age of Alex and twice as old as Allison. Diane is 16 years old now. What is the sum of the ages of Alex and Allison now?",
+        "original_solution": "When Dianne turns 30, Alex will be 30 x 2 = 60 years old.\nAllison will be 30/2 = 15 years old then.\nDianne will turn 30 in 30 - 16 = 14 years.\nCurrently, the age of Alex is 60 - 14 = 46.\nCurrently, Allison is 15 - 14 = 1 year old.\nSo, the sum of Alex and Allison's ages now is 46 + 1 = 47 years old.\n#### 47",
+        "original_answer": 47.0,
+        "transformed_solution": "When Dianne turns 30, Alex will be 30 x 2 = 60 years old.\nDianne will turn 30 in 30 - 16 = 14 years.\nCurrently, the age of Alex is 60 - 14 = 46.\nCurrently, Allison is 30 - 14 = 16 years old.\nSo, the sum of Alex and Allison's ages now is 46 + 16 = 62 years old.\n#### 62",
+        "transformed_answer": 62.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2. In the original_solution, step 2 references the result 15 from step 1 and step 5 references the result 15 from step 2. Therefore, after deleting step 2, step 5 should reference result 30 from step 1 instead of 15, changing the formula from 15 - 14 = 1 to 30 - 14 = 16 years old for Allison. Steps 6 and 7, as subsequent related steps, are affected by step 5. Step 6 changes the sum calculation of the ages from 46 + 1 = 47 to 46 + 16 = 62 years old. It is step 4 in the transformed_solution, which is also step 5 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 4.",
+        "eval_result": "\nThe solution is correct. The first wrong step is step #3, where the age of Alex is calculated as 30 x 2 = 60 years old. The correct calculation is 30 x 2 = 60 years old, and the age of Alex is 60 - 16 = 44 years old. Therefore, the sum of the ages of Alex and Allison now is 44 + 16 = 60 years old. #44."
+    },
+    {
+        "question": "Josh works 8 hours a day, 5 days a week, 4 weeks a month. Carl is an intern and works 2 hours less than Josh every day. Josh gets $9 an hour and Carl, half that. How much does the company pay for the 2 together in one month?",
+        "original_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/month = $1440 per month.\nCarl works less because he is an intern: 6 hours/day * 5 days/week * 4 weeks/month = 120 hours per month.\nCarl earns 120 hours * $4.5/hour = $540 per month.\nThe company pays for the 2 together: $1440 + $540 = $1980.\n#### 1980",
+        "original_answer": 1980.0,
+        "transformed_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/hour = $1440 per month.\nCarl earns 160 hours/month * $4.5/hour = $720 per month.\nThe company pays for the 2 together: $1440 + $720 = $2160.\n#### 2160",
+        "transformed_answer": 2160.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 calculates the hours Carl works per month by referencing the hours he works every day (6), which is found by subtracting 2 from the 8 hours Josh works a day in step 1. After deleting step 3, step 4 in the transformed_solution references the 160 hours from step 1 directly when calculating Carl's earnings. This simplifies Carl's monthly earnings calculation to 160 hours/month * $4.5/hour, which results in $720 per month for Carl. The transformed_solution combines steps 1 and 3 of the original_solution, assuming Carl works the same number of hours as Josh. The next step updates step 5 in the original_solution with the new combined total of $2160 instead of $1980. It is step 3 in the transformed_solution that serves as the first step referencing the incorrect number in the transformed_solution, hence the wrong_step is 3.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #2, which is the assumption that Carl earns half of Josh's hourly wage. Carl actually earns $4.5 per hour, not half of $9 per hour. If this mistake is corrected, the calculation for Carl's monthly earnings would be $160 hours/month * $4.5/hour = $720 per month, which is the correct amount. Therefore, the company pays for the two together: $1440 + $720 = $2160."
+    }
+]

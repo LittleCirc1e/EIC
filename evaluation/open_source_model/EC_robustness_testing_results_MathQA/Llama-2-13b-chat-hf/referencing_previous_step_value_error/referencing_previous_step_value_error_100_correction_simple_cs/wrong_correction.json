@@ -1,0 +1,14 @@
+[
+    {
+        "question": "The cost price of a radio is Rs . 1500 and it was sold for Rs . 1290 , find the loss % ?",
+        "original_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1400) * 100 = 15%\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 1500 as 1400 from step 1 and changes the loss percentage calculation from (210/1500) * 100 to (210/1400) * 100. It should be noted that step 1 in the transformed_solution <The loss is 1500 - 1290 = 210> should be the same as the step 1 in the original_solution <The loss is 1500 - 1290 = 210> and calculates its result 210 correctly. Step 2 affects only the subsequent calculation related to it, changing the original loss percentage from 14% to 15%. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 10%, and the explanation is as follows:\n\nIn the first step, there is a referencing error in the operand of the formula when referencing the result of its previous step. Specifically, the formula (210/1400) * 100 is incorrect, and the correct formula should be (210/1500) * 100.\n\nThe correct answer is 10%, and the explanation is as follows:\n\nThe loss is 210, and the cost price is 1500, so the loss percentage is (210/1500) * 100 = 10%."
+    }
+]

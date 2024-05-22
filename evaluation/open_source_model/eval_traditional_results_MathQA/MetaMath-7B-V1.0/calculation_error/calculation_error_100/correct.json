@@ -1,0 +1,496 @@
+[
+    {
+        "index": 2,
+        "gsm8k_data": {
+            "question": "robert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?",
+            "original_solution": "Robert ate 7 - 3 = 4 more chocolates than Nickel.\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "Robert ate 7 - 3 = 5 more chocolates than Nickel.\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The 7 - 3 calculation is incorrectly presented as equaling 5 instead of the correct value of 4, leading to a transformed_answer of 5 which is different from the original_answer of 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nrobert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?\n\n### Response:",
+        "output_str": "Robert ate 7 chocolates and Nickel ate 3 chocolates.\nTo find out how many more chocolates Robert ate than Nickel, we subtract the number of chocolates Nickel ate from the number of chocolates Robert ate.\nSo, Robert ate 7 - 3 = 4 more chocolates than Nickel.\n#### 4\nThe answer is: 4",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 7,
+        "gsm8k_data": {
+            "question": "In an examination, there were 2,000 candidates, out of which 900 candidates were girls and the rest were boys. If 32% of the boys and 32% of the girls passed, then the total percentage of failed candidates is?",
+            "original_solution": "Number of boys = 2000 - 900 = 1100\nNumber of girls passed = 900 x 32% = 900 x 0.32 = 288\nNumber of boys passed = 1100 x 32% = 1100 x 0.32 = 352\nTotal number of candidates passed = 288 + 352 = 640\nTotal number of candidates failed = 2000 - 640 = 1360\nPercentage of failed candidates = (1360 / 2000) x 100 = 68%\n#### 68",
+            "original_answer": 68.0,
+            "transformed_solution": "Number of boys = 2000 - 900 = 1100\nNumber of girls passed = 900 x 32% = 900 x 0.32 = 288\nNumber of boys passed = 1100 x 32% = 1100 x 0.32 = 350\nTotal number of candidates passed = 288 + 350 = 638\nTotal number of candidates failed = 2000 - 638 = 1362\nPercentage of failed candidates = (1362 / 2000) x 100 = 68.1%\n#### 68.1",
+            "transformed_answer": 68.1,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation 1100 x 0.32 is incorrectly transformed to 350 in step 3 instead of the correct calculation, which is 352. The mistake is made without changing any operands or operators in the formula. Subsequently, related steps 4, 5, and 6 inherit the mistake, and the numbers in the formulas inherit the error from step 3. Step 4 is modified to 288 + 350 = 638, step 5 to 2000 - 638 = 1362, and step 6 to (1362 / 2000) x 100 = 68.1%. This results in a transformed answer of 68.1%, which is different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn an examination, there were 2,000 candidates, out of which 900 candidates were girls and the rest were boys. If 32% of the boys and 32% of the girls passed, then the total percentage of failed candidates is?\n\n### Response:",
+        "output_str": "The number of boys is 2,000 - 900 = 1,100.\n32% of the boys passed, so 32/100 * 1,100 = 352 boys passed.\n32% of the girls passed, so 32/100 * 900 = 288 girls passed.\nThe total number of candidates who passed is 352 + 288 = 640.\nThe total number of candidates who failed is 2,000 - 640 = 1,360.\nThe percentage of failed candidates is 1,360/2,000 * 100 = 68%.\n#### 68\nThe answer is: 68",
+        "extract_true_num": 68.0,
+        "extract_pred_num": 68.0,
+        "is_correct": true
+    },
+    {
+        "index": 8,
+        "gsm8k_data": {
+            "question": "the distance from city a to city b is 220 miles. while driving from city a to city b, bob drives at a constant speed of 40 miles per hour. alice leaves city a 30 minutes after bob. what is the minimum constant speed in miles per hour that alice must exceed in order to arrive in city b before bob?",
+            "original_solution": "The time it takes Bob to get to city B is 220/40 = 5.5 hours\nThe time it takes Alice to get to city B is 5.5 - 0.5 = 5 hours.\nAlice must exceed a constant speed of 220/5 = 44 miles per hour to arrive in city B before Bob.\n#### 44",
+            "original_answer": 44.0,
+            "transformed_solution": "The time it takes Bob to get to city B is 220/40 = 5.5 hours\nThe time it takes Alice to get to city B is 5.5 - 0.5 = 4 hours.\nAlice must exceed a constant speed of 220/4 = 55 miles per hour to arrive in city B before Bob.\n#### 55",
+            "transformed_answer": 55.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformed solution contains a miscalculation in step 2 where 5.5 - 0.5 is incorrectly calculated as 4 instead of 5. This error affects the calculation in step 3, where the speed is miscomputed as 220/4 = 55 miles per hour instead of 220/5. The previous step 1 remains unaffected, while steps 2 and 3 inherit the error in calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe distance from city a to city b is 220 miles. while driving from city a to city b, bob drives at a constant speed of 40 miles per hour. alice leaves city a 30 minutes after bob. what is the minimum constant speed in miles per hour that alice must exceed in order to arrive in city b before bob?\n\n### Response:",
+        "output_str": "Bob drives at a constant speed of 40 miles per hour, so it will take him 220 miles / 40 miles per hour = 5.5 hours to drive from city a to city b.\nAlice leaves city a 30 minutes after bob, which is 30 minutes / 60 minutes per hour = 0.5 hours.\nIn order for Alice to arrive in city b before bob, she needs to travel the same distance of 220 miles in less than 5.5 hours - 0.5 hours = 5 hours.\nTherefore, Alice must exceed a minimum constant speed of 220 miles / 5 hours = 44 miles per hour.\n#### 44\nThe answer is: 44",
+        "extract_true_num": 44.0,
+        "extract_pred_num": 44.0,
+        "is_correct": true
+    },
+    {
+        "index": 9,
+        "gsm8k_data": {
+            "question": "solve the equation for x : 8 x - 40 + 2 x = 5 + 10 - x",
+            "original_solution": "Combine like terms: 10x - 40 = 15 - x\nAdd x to both sides: 11x - 40 = 15\nAdd 40 to both sides: 11x = 55\nDivide both sides by 11: x = 5\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "Combine like terms: 10x - 40 = 15 - x\nAdd x to both sides: 11x - 40 = 15\nAdd 40 to both sides: 11x = 45\nDivide both sides by 11: x = 4.09\n#### 4.09",
+            "transformed_answer": 4.09,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example introduces a calculation error in step 3 where the correct calculation of adding 40 to both sides of the equation 11x - 40 = 15 is incorrectly stated as 11x = 45 instead of 11x = 55. The subsequent step 4 then incorrectly derives x = 4.09 from the wrong result of step 3 instead of the correct x = 5. Steps 1 and 2 remain unaffected as they precede the error and are not related to it."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nsolve the equation for x : 8 x - 40 + 2 x = 5 + 10 - x\n\n### Response:",
+        "output_str": "Combining like terms, we have 10x - 40 = 15 - x.\nAdding x to both sides, we have 10x + x - 40 = 15.\nCombining like terms again, we have 11x - 40 = 15.\nAdding 40 to both sides, we have 11x = 55.\nDividing both sides by 11, we have x = 5.\nSo the solution to the equation is x = 5.\nThe answer is: 5",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 5.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "if 45 % of z is 90 % of y and y is 75 % of x , what percent of x is z ?",
+            "original_solution": "0.45z = 0.9y\nz = 0.9y / 0.45 = 2y\ny = 0.75x\nz = 2(0.75x) = 1.5x\nz is 150% of x\n#### 150",
+            "original_answer": 150.0,
+            "transformed_solution": "0.45z = 0.9y\nz = 0.9y / 0.45 = 1.8y\ny = 0.75x\nz = 1.8(0.75x) = 1.35x\nz is 135% of x\n#### 135",
+            "transformed_answer": 135.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example contains a miscalculation in step 2 where 0.9y/0.45 is calculated as 1.8y instead of the correct 2y. Subsequent steps are affected since they use the result of this wrong step. Step 3 remains unchanged because it does not depend on the result from step 2. Step 4, however, uses the wrong result 1.8y instead of 2y, so the equation 2(0.75x) is replaced with 1.8(0.75x), resulting in 1.35x instead of the correct 1.5x. This leads to the final incorrect statement that z is 135% of x instead of 150%. It is important that the formula in step 4 inherits and uses the erroneous result from step 2, yet the process of multiplication is carried out correctly based on the incorrect input."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif 45 % of z is 90 % of y and y is 75 % of x , what percent of x is z ?\n\n### Response:",
+        "output_str": "We are given that $45\\%$ of $z$ is $90\\%$ of $y$, and $y$ is $75\\%$ of $x$.\nTo find the percent of $x$ that $z$ represents, we need to determine the value of $z$.\nFrom the given information, we can set up the following equations:\n$45\\%$ of $z = $90\\%$ of $y$\n$75\\%$ of $x = $y$\nWe can rewrite the first equation as:\n$0.45z = 0.90y$\nAnd the second equation as:\n$0.75x = y$\nTo find the value of $z$, we can solve the first equation for $y$:\n$y = \\frac{0.45z}{0.90}$\nSimplifying, we get:\n$y = \\frac{0.45z}{0.90} = \\frac{45}{90} \\cdot z = \\frac{3}{6} \\cdot z = \\frac{1}{2} \\cdot z$\nNow we can substitute this value of $y$ into the second equation:\n$0.75x = \\frac{1}{2} \\cdot z$\nMultiplying both sides by $2$ to eliminate the fraction, we get:\n$1.5x = z$\nTherefore, $z$ is equal to $1.5x$.\nTo find the percent of $x$ that $z$ represents, we can divide $z$ by $x$ and multiply by $100\\%$:\n$\\frac{z}{x} \\cdot 100\\% = \\frac{1.5x}{x} \\cdot 100\\% = 150\\%$\nSo, $z$ represents $150\\%$ of $x$.\nThe answer is: 150",
+        "extract_true_num": 150.0,
+        "extract_pred_num": 150.0,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+            "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+            "original_answer": 17.0,
+            "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $16.\nHis actual percent profit is (16/100) x 100% = 16%.\n#### 16%",
+            "transformed_answer": 16.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the actual profit as $16 instead of $17 in step 4. The miscalculated profit affects only the calculation in step 5 for determining the actual percent profit, which becomes (16/100) x 100% = 16%. There are no changes to steps 1, 2, and 3 since the error was introduced in step 4. Previous steps remain accurate as they are not affected by the calculation error in step 4. The next step is adapted to reflect the erroneous $16 profit and therefore results in a transformed answer of 16%, which is distinct from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?\n\n### Response:",
+        "output_str": "Let's assume the cost price of the articles is x.\nThe shopkeeper labeled the price of the articles so as to earn a profit of 30% on the cost price, which means the labeled price is 1.3x.\nThe shopkeeper then sold the articles by offering a discount of 10% on the labeled price, which means the selling price is 0.9 * 1.3x = 1.17x.\nThe actual profit earned in the deal is the selling price minus the cost price, which is 1.17x - x = 0.17x.\nTo find the actual percent profit earned, we divide the actual profit by the cost price and multiply by 100: (0.17x / x) * 100 = 17%.\nTherefore, the actual percent profit earned in the deal is 17%.\n#### 17\nThe answer is: 17",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 18,
+        "gsm8k_data": {
+            "question": "Walking at the rate of 8 kmph a man covers a certain distance in 3 hrs. Running at a speed of 16 kmph, the man will cover the same distance in how many hours?",
+            "original_solution": "The distance covered by walking is 8 x 3 = 24 km because distance = speed x time\nThe time taken by running the same distance is 24 / 16 = 1.5 hrs because time = distance / speed\n#### 1.5",
+            "original_answer": 1.5,
+            "transformed_solution": "The distance covered by walking is 8 x 3 = 24 km because distance = speed x time\nThe time taken by running the same distance is 24 / 16 = 2 hrs because time = distance / speed\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The second step wrongly calculates the time taken by running the same distance as 24 / 16 = 2 hrs instead of 24 / 16 = 1.5 hrs. This error only affects the second step and the final answer, while the first step remains correct. The error here is in the calculation itself; there has been no change to the operands (24 and 16) or the operator (/)."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWalking at the rate of 8 kmph a man covers a certain distance in 3 hrs. Running at a speed of 16 kmph, the man will cover the same distance in how many hours?\n\n### Response:",
+        "output_str": "If the man walks at a rate of 8 kmph for 3 hours, then he covers a distance of 8 kmph * 3 hours = 24 km.\nIf the man runs at a speed of 16 kmph, then he will cover the same distance of 24 km in 24 km / 16 kmph = 1.5 hours.\n#### 1.5\nThe answer is: 1.5",
+        "extract_true_num": 1.5,
+        "extract_pred_num": 1.5,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "In a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?",
+            "original_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\n3,000 absentee ballots were cast for candidate B because 6,000 - 3,000 = 3,000\n#### 3,000",
+            "original_answer": 3000.0,
+            "transformed_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\n2,500 absentee ballots were cast for candidate B because 6,000 - 3,000 = 2,500\n#### 2,500",
+            "transformed_answer": 2500.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the final number of votes for candidate B as 2,500 instead of 3,000 in step 4, which does not affect the steps before it. Steps 1, 2, and 3 remain unchanged as they are correct and unrelated to the error introduced in step 4. The calculation error in step 4 modifies the expression \"6,000 - 3,000 = 3,000\" to an incorrect \"6,000 - 3,000 = 2,500\", resulting in a miscalculated answer for the number of absentee votes cast for candidate B."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?\n\n### Response:",
+        "output_str": "1/2 of the 12,000 absentee ballots were thrown out, so 12,000 * 1/2 = 6,000 absentee ballots were thrown out.\nThe remaining number of absentee ballots is 12,000 - 6,000 = 6,000.\n1/2 of the remaining absentee ballots were cast for candidate A, so 6,000 * 1/2 = 3,000 absentee ballots were cast for candidate A.\nTherefore, candidate B received 6,000 - 3,000 = 3,000 absentee votes.\n#### 3000\nThe answer is: 3000",
+        "extract_true_num": 3000.0,
+        "extract_pred_num": 3000.0,
+        "is_correct": true
+    },
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "the average of 10 numbers is 23. if each number is increased by 2, what will the new average be?",
+            "original_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 250\nThe new average is the new sum divided by 10, which is 250 / 10 = 25\n#### 25",
+            "original_answer": 25.0,
+            "transformed_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 240\nThe new average is the new sum divided by 10, which is 240 / 10 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 10 x (23+2) as 240 instead of 250 in step 2. The subsequent step inherits this incorrect result for calculating the new average. Step 3 changes the correct operation 250 / 10 to 240 / 10 due to the error introduced in step 2. The calculation error here does not affect step 1 or any other unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe average of 10 numbers is 23. if each number is increased by 2, what will the new average be?\n\n### Response:",
+        "output_str": "The sum of the 10 numbers is $10 \\times 23 = 230$.\nIf each number is increased by 2, the sum of the 10 numbers becomes $230 + (10 \\times 2) = 250$.\nThe new average is then $\\frac{250}{10} = \\boxed{25}$.\nThe answer is: 25",
+        "extract_true_num": 25.0,
+        "extract_pred_num": 25.0,
+        "is_correct": true
+    },
+    {
+        "index": 23,
+        "gsm8k_data": {
+            "question": "the present ages of abi and suji are in the ratio of 5:4 respectively. 3 years hence, the ratio of their ages will become 11:9 respectively. what is suji's present age in years?",
+            "original_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 24 years.\n#### 24",
+            "original_answer": 24.0,
+            "transformed_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 5.\nHence, suji's present age = 4x = 4 * 5 = 20 years.\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This case mistakenly calculates the variable x as 5 instead of 6 in step 4. This single error affects the subsequent step, which calculates suji's present age. So, step 5 which originally calculated suji's age as 4 * 6 = 24 years now incorrectly calculates it as 4 * 5 = 20 years. Previous steps are unaffected as the error only originates at step 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe present ages of abi and suji are in the ratio of 5:4 respectively. 3 years hence, the ratio of their ages will become 11:9 respectively. what is suji's present age in years?\n\n### Response:",
+        "output_str": "Let's assume Abi's present age is 5x and Suji's present age is 4x.\nThree years hence, Abi's age will be 5x + 3 and Suji's age will be 4x + 3.\nThe ratio of their ages three years hence will be (5x + 3)/(4x + 3) = 11/9.\nCross-multiplying, we get 9(5x + 3) = 11(4x + 3).\nExpanding, we get 45x + 27 = 44x + 33.\nSimplifying, we get 45x - 44x = 33 - 27.\nThis gives us x = 6.\nTherefore, Suji's present age is 4x = 4(6) = 24.\n#### 24\nThe answer is: 24",
+        "extract_true_num": 24.0,
+        "extract_pred_num": 24.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "find 62976 ÷ ? = 123",
+            "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+            "original_answer": 512.0,
+            "transformed_solution": "123 x ? = 62976\n? = 62976 / 120\n#### 524",
+            "transformed_answer": 524.67,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the wrong step is the final division (step 2), where it incorrectly divides 62976 by 120 instead of 123, leading to a transformed answer of approximately 524.67. The original multiplication step (step 1) remains unaffected because it precedes the incorrect division. There is only one error introduced, so it is considered a single error, and the explanation summarizes the error introduced and its impact on the subsequent step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nfind 62976 ÷ ? = 123\n\n### Response:",
+        "output_str": "To solve this problem, we need to determine the value of the unknown variable that makes the division equation true.\nWe are given that 62976 ÷ ? = 123.\nTo find the value of the unknown variable, we can set up the equation as follows:\n62976 ÷ ? = 123\nLet's solve for the unknown variable by multiplying both sides of the equation by ?:\n62976 = 123 * ?\nTo isolate the unknown variable, we divide both sides of the equation by 123:\n62976 ÷ 123 = ?\n512 = ?\nTherefore, the value of the unknown variable is 512.The answer is: 512",
+        "extract_true_num": 512.0,
+        "extract_pred_num": 512.0,
+        "is_correct": true
+    },
+    {
+        "index": 38,
+        "gsm8k_data": {
+            "question": "of the final grades received by the students in a certain math course , 1 / 5 are a ' s , 1 / 4 are b ' s , 1 / 2 are c ' s , and the remaining 40 grades are d ' s . what is the number of students in the course ?",
+            "original_solution": "Let the total number of students be x\nNumber of A's = (1/5)x\nNumber of B's = (1/4)x\nNumber of C's = (1/2)x\nNumber of D's = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n800 = 20x - 19x = x\n#### 800",
+            "original_answer": 800.0,
+            "transformed_solution": "Let the total number of students be x\nNumber of A's = (1/5)x\nNumber of B's = (1/4)x\nNumber of C's = (1/2)x\nNumber of D's = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n850 = 20x - 19x = x\n#### 850",
+            "transformed_answer": 850.0,
+            "wrong_step": 8,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, step 8 originally correctly subtracts 19x from 20x to get x = 800, but here we introduced an error by changing it to 850 = x incorrectly, while all other steps remain the same as in the original_solution. Since the wrong_step is the last step of the solution process, it does not affect any previous step, but only changes the final answer (transformed_answer) to 850, creating a single calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nof the final grades received by the students in a certain math course , 1 / 5 are a ' s , 1 / 4 are b ' s , 1 / 2 are c ' s , and the remaining 40 grades are d ' s . what is the number of students in the course ?\n\n### Response:",
+        "output_str": "Let's assume the total number of students in the course is x.\nThe number of students who received an A grade is 1/5 of x, which is (1/5)x.\nThe number of students who received a B grade is 1/4 of x, which is (1/4)x.\nThe number of students who received a C grade is 1/2 of x, which is (1/2)x.\nThe number of students who received a D grade is 40.\nThe total number of students in the course is the sum of the students who received each grade, so:\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nTo solve for x, we need to find a common denominator for the fractions, which is 20. So:\n(4/20)x + (5/20)x + (10/20)x + 40 = x\n(19/20)x + 40 = x\nTo isolate x, we subtract (19/20)x from both sides:\n(19/20)x - (19/20)x + 40 = x - (19/20)x\n40 = (1/20)x\nTo solve for x, we multiply both sides by 20:\n40 * 20 = (1/20)x * 20\n800 = x\nThe number of students in the course is 800.\n#### 800\nThe answer is: 800",
+        "extract_true_num": 800.0,
+        "extract_pred_num": 800.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "if you multiply all the numbers on your mobile phone except 0 and 9 , what is the answer ?",
+            "original_solution": "The numbers on a mobile phone are 1, 2, 3, 4, 5, 6, 7, and 8.\nMultiplying all these numbers gives 40,320.\n#### 40,320",
+            "original_answer": 40320.0,
+            "transformed_solution": "The numbers on a mobile phone are 1, 2, 3, 4, 5, 6, 7, and 8.\nMultiplying all these numbers gives 40,322.\n#### 40,322",
+            "transformed_answer": 40322.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the transformed_solution has only one incorrect calculation step which arbitrarily changes the product from the correct value 40,320 to an incorrect value 40,322. The correct multiplication of numbers 1 to 8 on a mobile phone keypad excluding 0 and 9 does indeed give 40,320. By changing the result to 40,322, we introduce a calculation error at step 2. The other step which describes the numbers on the phone is unaffected and therefore remains correct and unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif you multiply all the numbers on your mobile phone except 0 and 9 , what is the answer ?\n\n### Response:",
+        "output_str": "If you multiply all the numbers on your mobile phone except 0 and 9, you are essentially multiplying all the numbers from 1 to 8.\nThe product of these numbers is $1 \\times 2 \\times 3 \\times 4 \\times 5 \\times 6 \\times 7 \\times 8 = 40320$.\nTherefore, the answer is $\\boxed{40320}$.The answer is: 40320",
+        "extract_true_num": 40320.0,
+        "extract_pred_num": 40320.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 24 days to complete 3 works because 6 x 3 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 6 x 3 as 24 instead of 6 x 3 = 18 in step 2. The first step, which involves calculating the time it takes for 1 work, remains unchanged. The erroneous calculation is introduced in step 2 by changing the original correct result of 6 x 3 = 18 to a wrong result of 6 x 3 = 24. Since this is the last part of the calculation, no subsequent steps are affected, and thus step 2 is the only step with a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "If aarti can do a piece of work in 6 days, then she can do 1/6 of the work in 1 day.\nTo find out how many days it will take her to complete three times the work, we can multiply the number of days it takes her to complete 1 piece of work by 3.\nSo, 6 days x 3 = 18 days.\nTherefore, it will take aarti 18 days to complete three times the work of the same type.\n#### 18\nThe answer is: 18",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "from January 1, 1991, to January 1, 1993, the number of people enrolled in health maintenance organizations increased by 25 percent. The enrollment on January 1, 1993, was 45 million. How many million people, to the nearest million, were enrolled in health maintenance organizations on January 1, 1991?",
+            "original_solution": "Let x be the enrollment on January 1, 1991.\n1.25x = 45\nx = 45 / 1.25\nx = 36\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "Let x be the enrollment on January 1, 1991.\n1.25x = 45\nx = 45 / 1.25\nx = 40\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 is the calculation error where 45 / 1.25 is incorrectly calculated as 40 instead of the correct 36. This is the only error introduced, and it changes the final answer without affecting the setup of the equation in the previous steps. The transformed answer of 40 is incorrect because it is based on the incorrect calculation in step 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nfrom January 1, 1991, to January 1, 1993, the number of people enrolled in health maintenance organizations increased by 25 percent. The enrollment on January 1, 1993, was 45 million. How many million people, to the nearest million, were enrolled in health maintenance organizations on January 1, 1991?\n\n### Response:",
+        "output_str": "Let $x$ be the number of people enrolled in health maintenance organizations on January 1, 1991.\nFrom January 1, 1991, to January 1, 1993, the number of people enrolled increased by 25 percent, so the number of people enrolled on January 1, 1993, is $x + 0.25x = 1.25x$.\nWe are given that the enrollment on January 1, 1993, was 45 million, so we have the equation $1.25x = 45$.\nDividing both sides by 1.25, we find $x = \\frac{45}{1.25} = 36$.\nTherefore, there were approximately $\\boxed{36}$ million people enrolled in health maintenance organizations on January 1, 1991.\nThe answer is: 36",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "If 13 men do a work in 80 days, in how many days will 20 men do it?",
+            "original_solution": "One man will take 13 x 80 = 1040 days to do the work.\n20 men will take 1040 / 20 = 52 days to do it.\n#### 52",
+            "original_answer": 52.0,
+            "transformed_solution": "One man will take 13 x 80 = 1040 days to do the work.\n20 men will take 1040 / 20 = 50 days to do it.\n#### 50",
+            "transformed_answer": 50.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, step 2, which is 1040 / 20, is incorrectly calculated as 50 instead of 52. The change made to the second step does not have any impact on the calculations of the prior step. The calculation error in transformed_solution is present only in step 2 where the result of dividing 1040 by 20 is mistakenly said to be 50, the actual division carries the correct answer of 52."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf 13 men do a work in 80 days, in how many days will 20 men do it?\n\n### Response:",
+        "output_str": "If 13 men do a work in 80 days, then the number of days it takes for 1 man to do the work is 80 * 13 = 1040 days.\nSo, if 1 man takes 1040 days to do the work, then 20 men will take 1040 / 20 = 52 days to do the work.\n#### 52\nThe answer is: 52",
+        "extract_true_num": 52.0,
+        "extract_pred_num": 52.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "An amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?",
+            "original_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 4000\n#### 4000",
+            "original_answer": 4000.0,
+            "transformed_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 3900\n#### 3900",
+            "transformed_answer": 3900.0,
+            "wrong_step": 8,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example a calculation error is made in step 8. The correct difference between q and r's share should be Rs. 9600 - Rs. 5600 = Rs. 4000, but it is instead calculated as Rs. 9600 - Rs. 5600 = Rs. 3900. This is the modified step with the erroneous calculation, and the transformed solution only changes this particular step, affecting the last calculation which determines the difference between q and r's shares. Previous calculations and logic remain unchanged, and only one single calculation error is present."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?\n\n### Response:",
+        "output_str": "The total ratio is 3 + 7 + 12 = 22\nThe share of p is 3/22 * total amount = 3x\nThe share of q is 7/22 * total amount = 7x\nThe difference between p and q's share is 7x - 3x = 4x\nWe are given that this difference is Rs. 3200, so 4x = 3200\nDividing both sides by 4, we get x = 800\nThe share of r is 12/22 * total amount = 12x\nThe difference between q and r's share is 12x - 7x = 5x\nSubstituting x = 800, we get 5x = 5 * 800 = 4000\nTherefore, the difference between q and r's share is Rs. 4000\n#### 4000\nThe answer is: 4000",
+        "extract_true_num": 4000.0,
+        "extract_pred_num": 4000.0,
+        "is_correct": true
+    },
+    {
+        "index": 61,
+        "gsm8k_data": {
+            "question": "a motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.",
+            "original_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 324 km\n#### 324",
+            "original_answer": 324.0,
+            "transformed_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 314 km\n#### 314",
+            "transformed_answer": 314.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates the total distance as 180 + 144 = 314 km in step 3, which affects only the final sum. The calculation within both travel segments remain correctly calculated at 60 * (6/2) = 180 km and 48 * (6/2) = 144 km respectively. The calculation of the total distance is the only thing that is modified due to the incorrect addition, resulting in a transformed answer that is different from the original."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.\n\n### Response:",
+        "output_str": "The motorist travels for 6 hours, so the first half of the trip is 6/2 = 3 hours.\nIn the first half of the trip, the motorist travels at 60 kmph, so the distance covered is 60 kmph * 3 hours = 180 km.\nThe remaining half of the trip is also 3 hours.\nIn the remaining half of the trip, the motorist travels at 48 kmph, so the distance covered is 48 kmph * 3 hours = 144 km.\nTherefore, the total distance traveled by the motorist is 180 km + 144 km = 324 km.\n#### 324\nThe answer is: 324",
+        "extract_true_num": 324.0,
+        "extract_pred_num": 324.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "A manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?",
+            "original_solution": "The difference in size between the largest and smallest is 17-8 = 9\nThe increase in length is 9 x (1/5) = 9/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 9/5\nSo, 1.2x = x + 9/5\n0.2x = 9/5\nx = (9/5) / 0.2 = 9\nThe length of size 8 is 9 inches, and size 15 is 9 + 7/5 = 10.4 inches\n#### 10.4",
+            "original_answer": 10.4,
+            "transformed_solution": "The difference in size between the largest and smallest is 17-8 = 9\nThe increase in length is 9 x (1/5) = 9/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 9/5\nSo, 1.2x = x + 9/5\n0.2x = 9/5\nx = (9/5) / 0.2 = 45\nThe length of size 8 is 45 inches, and size 15 is 45 + 7/5 = 46.4 inches\n#### 46.4",
+            "transformed_answer": 46.4,
+            "wrong_step": 6,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error is introduced at step 6 where the division (9/5) / 0.2 is incorrectly calculated as 45 instead of 9. All previous operations and logic are correct and unrelated to the error. The wrong result of step 6 leads to a miscalculation in the subsequent step 7, where the length of size 8 is incorrectly stated as 45 inches, and then the length of size 15 will also be wrong, calculated as 45 + 7/5 = 46.4 inches instead of 9 + 7/5 = 10.4 inches."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?\n\n### Response:",
+        "output_str": "Let $x$ be the length of the shoe in size 8.\nSince each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe,\nthe length of the shoe in size 15 is $x + 12 \\cdot \\frac{1}{5} = x + 2.4$.\nWe are given that the largest size of the shoe is 20% longer than the smallest size,\nso the length of the shoe in size 15 is 120% of the length in size 8.\nTherefore, we have the equation $x + 2.4 = 1.2x$.\nSolving for $x$, we find $x = 8$.\nSubstituting this value back into the expression for the length of the shoe in size 15,\nwe find that the length is $8 + 2.4 = \\boxed{10.4}$ inches.\nThe answer is: 10.4",
+        "extract_true_num": 10.4,
+        "extract_pred_num": 10.4,
+        "is_correct": true
+    },
+    {
+        "index": 75,
+        "gsm8k_data": {
+            "question": "A towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?",
+            "original_solution": "The area of the towel is decreased by 36% because 20% + 20% + (20% x 20%) = 36%\n#### 36%",
+            "original_answer": 36.0,
+            "transformed_solution": "The area of the towel is decreased by 44% because 20% + 20% + (20% x 20%) = 44%\n#### 44%",
+            "transformed_answer": 44.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "By randomly changing the calculation result of one step in the original_solution, the percentage decrease of area was incorrectly altered to 44% instead of the correct 36%. This was done by directly changing the total percentage value without modifying the operands or the operators. The subsequent related steps and the final transformed_answer are influenced by this new incorrect percentage."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?\n\n### Response:",
+        "output_str": "Let the original length of the towel be $l$ and the original breadth be $b$.\nAfter bleaching, the length decreases by 20% to $0.8l$ and the breadth decreases by 20% to $0.8b$.\nThe area of the towel is $l \\cdot b$.\nThe area after bleaching is $(0.8l) \\cdot (0.8b) = 0.64l \\cdot b$.\nThe percentage decrease in area is $\\frac{l \\cdot b - 0.64l \\cdot b}{l \\cdot b} \\cdot 100\\% = \\frac{0.36l \\cdot b}{l \\cdot b} \\cdot 100\\% = \\boxed{36\\%}$.\nThe answer is: 36",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 80,
+        "gsm8k_data": {
+            "question": "Jane and Thomas are among the 9 people from which a committee of 4 people is to be selected. How many different possible committees of 4 people can be selected from these 9 people if at least one of either Jane or Thomas is to be selected?",
+            "original_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35\nTotal possible committees of 4 including Jane and Thomas = 126 - 35 = 91\n#### 91",
+            "original_answer": 91.0,
+            "transformed_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35\nTotal possible committees of 4 including Jane and Thomas = 126 - 35 = 95\n#### 95",
+            "transformed_answer": 95.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the mistake occurs in step 3 of the original solution. The correct calculation is 126 - 35 = 91, but it has been incorrectly modified to 126 - 35 = 95. This is a calculation error, and since it’s the last step, only the final answer is affected, and thus previous steps remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJane and Thomas are among the 9 people from which a committee of 4 people is to be selected. How many different possible committees of 4 people can be selected from these 9 people if at least one of either Jane or Thomas is to be selected?\n\n### Response:",
+        "output_str": "We can use complementary counting to solve this problem.\nFirst, we find the total number of ways to select a committee of 4 people from 9 people, which is $\\binom{9}{4}=126$.\nNext, we find the number of ways to select a committee of 4 people with neither Jane nor Thomas selected.\nThere are 7 people remaining, and we need to choose 4 of them, so there are $\\binom{7}{4}=35$ ways to do this.\nTherefore, the number of ways to select a committee of 4 people with at least one of either Jane or Thomas selected is $126-35=91$.\nThe answer is: 91",
+        "extract_true_num": 91.0,
+        "extract_pred_num": 91.0,
+        "is_correct": true
+    },
+    {
+        "index": 82,
+        "gsm8k_data": {
+            "question": "george is 8 years more than christopher and ford is 2 years younger than christopher . the sum of their ages is 60 . find the ages of ford .",
+            "original_solution": "Let's denote Christopher's age as C. George's age is then C + 8.\nFord's age is C - 2.\nWe form the equation C + (C + 8) + (C - 2) = 60 to represent the sum of their ages.\nCombining like terms, we get 3C + 6 = 60.\nSubtracting 6 from both sides, we get 3C = 54.\nDividing by 3, we get C = 18.\nSo, Ford's age is 18 - 2 = 16.\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "Let's denote Christopher's age as C. George's age is then C + 8.\nFord's age is C - 2.\nWe form the equation C + (C + 8) + (C - 2) = 60 to represent the sum of their ages.\nCombining like terms, we get 3C + 6 = 60.\nSubtracting 6 from both sides, we get 3C = 54.\nDividing by 3, we get C = 20.\nSo, Ford's age is 20 - 2 = 18.\n#### 18",
+            "transformed_answer": 18.0,
+            "wrong_step": 7,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, an error was introduced in step 7 by changing the result of the division from C = 18 to C = 20. This error directly impacts the last step where Ford's age is calculated, changing Ford's correct age from 16 (based on C = 18) to 18 (based on the incorrect C = 20). The previous steps are unaffected by this error and thus remain the same as the original solution. It should be noted that step 8 has been updated to reflect the incorrect result from step 7 (18 - 2 = 18 rather than 16), ensuring the transformed solution is self-consistent while the calculation error still stands."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ngeorge is 8 years more than christopher and ford is 2 years younger than christopher . the sum of their ages is 60 . find the ages of ford .\n\n### Response:",
+        "output_str": "Let's assume the age of Christopher is C.\nAccording to the given information, George is 8 years more than Christopher, so George's age is C + 8.\nAnd Ford is 2 years younger than Christopher, so Ford's age is C - 2.\nThe sum of their ages is 60, so C + (C + 8) + (C - 2) = 60.\nCombining like terms, we get 3C + 6 = 60.\nSubtracting 6 from both sides, we get 3C = 54.\nDividing both sides by 3, we get C = 18.\nSo, the age of Christopher is 18.\nThe age of George is 18 + 8 = 26.\nAnd the age of Ford is 18 - 2 = 16.\nTherefore, the ages of Ford are 16.\n#### 16\nThe answer is: 16",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 88,
+        "gsm8k_data": {
+            "question": "a straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?",
+            "original_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 199\n#### 199",
+            "original_answer": 199.0,
+            "transformed_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n800 = 4x\nx = 200\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates 800 - 4 as 800 in step 3 instead of 800 - 4 = 796. Therefore, the x value is incorrectly calculated as 200 rather than 199. The calculation error does not affect previous steps in the solution but changes the final answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?\n\n### Response:",
+        "output_str": "The equation of a line with slope $m$ passing through the point $(x_1, y_1)$ is given by $y - y_1 = m(x - x_1)$.\nIn this case, the equation of the line is $y - 4 = 4(x - 0)$, which simplifies to $y = 4x + 4$.\nTo find the x-coordinate of the point whose y-coordinate is 800, we substitute 800 into the equation and solve for x:\n$800 = 4x + 4$\n$800 - 4 = 4x$\n$796 = 4x$\n$x = \\frac{796}{4}$\n$x = 199$\nTherefore, the x-coordinate of the point whose y-coordinate is 800 is $\\boxed{199}$.The answer is: 199",
+        "extract_true_num": 199.0,
+        "extract_pred_num": 199.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "the sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?",
+            "original_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 16\nSubtract the second discount from the first discounted price: 320 - 16 = 304\n#### 304",
+            "original_answer": 304.0,
+            "transformed_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 15\nSubtract the second discount from the first discounted price: 320 - 15 = 305\n#### 305",
+            "transformed_answer": 305.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 has a calculation error where the original 320 * 0.05 = 16 is modified to 320 * 0.05 = 15. This wrong calculation in step 3 changes the correct amount of the second discount, and consequently, the following step 4 inherits this error, altering the subtraction to 320 - 15 = 305. Steps before the wrong step, such as 1 and 2, remain unaffected. The subsequent steps related to the wrong step have a single calculation error, and the final transformed answer has been revised to 305, differing from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?\n\n### Response:",
+        "output_str": "The first discount is 20%, so the price is reduced by 20/100 * 400 = 80.\nThe new price after the first discount is 400 - 80 = 320.\nThe second discount is 5%, so the price is reduced by 5/100 * 320 = 16.\nThe final price after both discounts is 320 - 16 = 304.\n#### 304\nThe answer is: 304",
+        "extract_true_num": 304.0,
+        "extract_pred_num": 304.0,
+        "is_correct": true
+    },
+    {
+        "index": 95,
+        "gsm8k_data": {
+            "question": "A man is 28 years older than his son. In two years, his age will be twice the age of his son. What is the present age of his son?",
+            "original_solution": "Let the son's present age be x\nThe man's present age is x + 28\nIn two years, the son's age will be x + 2 and the man's age will be x + 28 + 2 = x + 30\nAccording to the given condition, x + 30 = 2(x + 2)\nx + 30 = 2x + 4\n30 - 4 = 2x - x\n26 = x\nThe present age of the son is 26\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "Let the son's present age be x\nThe man's present age is x + 28\nIn two years, the son's age will be x + 2 and the man's age will be x + 28 + 2 = x + 30\nAccording to the given condition, x + 30 = 2(x + 2)\nx + 30 = 2x + 4\n30 - 4 = 2x - x\n25 = x\nThe present age of the son is 25\n#### 25",
+            "transformed_answer": 25.0,
+            "wrong_step": 6,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation 30 - 4 has been incorrectly modified to result 25 instead of 26. This affects the final result, as the error in step 6 changes the subsequent result. Step 6 should correctly be 26 = x, following the steps established in the original solution. However, due to this single calculation error, the wrong answer derived is 25, which only affects the final outcome, without changing any previous or unrelated solution steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA man is 28 years older than his son. In two years, his age will be twice the age of his son. What is the present age of his son?\n\n### Response:",
+        "output_str": "Let's assume the present age of the son is x.\nAccording to the given information, the man is 28 years older than his son, so the man's age is x + 28.\nIn two years, the man's age will be x + 28 + 2 = x + 30.\nAccording to the given information, the man's age in two years will be twice the age of his son, so x + 30 = 2(x + 2).\nSimplifying the equation, we get x + 30 = 2x + 4.\nSubtracting x from both sides, we get 30 = x + 4.\nSubtracting 4 from both sides, we get 26 = x.\nTherefore, the present age of the son is 26.\n#### 26\nThe answer is: 26",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 26.0,
+        "is_correct": true
+    },
+    {
+        "index": 99,
+        "gsm8k_data": {
+            "question": "in 1998 the profits of company n were 10 percent of revenues. in 1999, the revenues of company n fell by 30 percent, but profits were 10 percent of revenues. the profits in 1999 were what percent of the profits in 1998?",
+            "original_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 70 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 70\n#### 70",
+            "original_answer": 70.0,
+            "transformed_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 60 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 60\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The calculation (0.07x / 0.1x) * 100 was incorrectly provided as 60 instead of the correct 70 in the transformed solution. This change only impacts the final step of the calculations (step 5), which is the percentage comparison of 1999's profits to 1998's profits. All other steps remain unchanged because they are independent calculations not affected by this error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nin 1998 the profits of company n were 10 percent of revenues. in 1999, the revenues of company n fell by 30 percent, but profits were 10 percent of revenues. the profits in 1999 were what percent of the profits in 1998?\n\n### Response:",
+        "output_str": "Let's assume the revenue in 1998 is $R$ and the profit in 1998 is $P$.\nAccording to the given information, we have the equation $P = 0.1R$.\nIn 1999, the revenue is $R - 0.3R = 0.7R$ and the profit is $P = 0.1(0.7R) = 0.07R$.\nWe want to find the percentage of the profit in 1999 compared to the profit in 1998, which is $\\frac{0.07R}{P} = \\frac{0.07R}{0.1R} = \\frac{0.07}{0.1} = 0.7$.\nTherefore, the profits in 1999 were $\\boxed{70}$ percent of the profits in 1998.The answer is: 70",
+        "extract_true_num": 70.0,
+        "extract_pred_num": 70.0,
+        "is_correct": true
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "question": "James decides to sell 80% of his toys. He bought them for $20 each and sells them for $30 each. If he had 200 toys how much more money did he have compared to before he bought them?",
+        "original_solution": "He bought all the toys for 20*200=$4000\nHe sold 200*.8=160 toys\nHe made 160*30=$4800 from selling them\nSo he profits 4800-4000=$800 profit\n#### 800",
+        "original_answer": 800.0,
+        "transformed_solution": "He bought all the toys for 20*200=$4000\nHe sold 200*.8=160 toys\nHe made 160*30=$4800 from selling them\nSo he profits 4800/4000=$1.2 profit\n#### 1.2",
+        "transformed_answer": 1.2,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transforms the subtraction in step 4 into division, changing 4800-4000=$800 to 4800/4000=$1.2 by changing - to /. This results in a different outcome for step 4, but all other aspects of the other steps are correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 200 x 80% = 160 instead of 200 x 80% = 1600. The subsequent step 5 references the result of step 4, calculating 160 x 30 = 4800 instead of 1600 x 30 = 48000, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Lucille made an agreement with her mom that she would earn six cents for every weed she pulled in her mom's garden. There are eleven weeds in the flower bed, fourteen in the vegetable patch, and thirty-two in the grass around the fruit trees. Lucille weeded the flower bed, the vegetable patch, and half the grass before she took a break. She bought a soda for 99 cents on her break with some of her earnings. How many cents does Lucille have left?",
+        "original_solution": "Lucille weeded half the grass, so she pulled 32 / 2 = 16 weeds around the fruit frees.\nShe pulled 11 + 14 + 16 = 41 weeds before her break.\nFrom that, she earned 41 * 6 = 246 cents.\nAfter buying her soda, Lucille has 246 - 99 = 147 cents left.\n#### 147",
+        "original_answer": 147.0,
+        "transformed_solution": "Lucille weeded half the grass, so she pulled 32 / 2 = 16 weeds around the fruit frees.\nShe pulled 11 + 14 + 16 = 41 weeds before her break.\nFrom that, she earned 41 * 6 = 246 cents.\nAfter buying her soda, Lucille has 246 / 99 = 2 cents left.\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction operator to division when calculating the remaining money after buying the soda, changing 246 - 99 = 147 to 246 / 99 = 2. The original statement calculates the money left by subtracting the cost of the soda from the total earnings. By using division instead, the process implies dividing the total earnings by the cost of the soda, which generates an incorrect result for this context. The error affects only the final step, and all calculations are performed correctly by applying the changed operator. The rest of the steps before this wrong step are correctly calculated, which means their subsequent reliance on previous steps is fitting. The transformed answer of 2 is incorrect in the context of the question.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 32 / 2 = 16 instead of 32 / 2 = 17. The subsequent step 5 references the result of step 4, calculating 17 + 11 + 14 + 16 = 58 instead of 17 + 11 + 14 + 16 = 54. The subsequent step 6 references the result of step 5, calculating 58 / 99 = 0.59 instead of 54 / 99 = 0.55, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Ravi can jump higher than anyone in the class. In fact, he can jump 1.5 times higher than the average jump of the three next highest jumpers. If the three next highest jumpers can jump 23 inches, 27 inches, and 28 inches, how high can Ravi jump?",
+        "original_solution": "The total height the next three highest can jump is 78 inches because 23 + 27 + 28 = 78\nThe average height they can jump is 26 inches because 78 / 3 = 26\nRavi can jump 39 inches high because 26 x 1.5 = 39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "The total height the next three highest can jump is 78 inches because 23 + 27 + 28 = 78\nThe average height they can jump is 26 inches because 78 / 3 = 26\nRavi can jump 34.5 inches high because 26 / 1.5 = 17.333333333333332\n#### 17.333333333333332",
+        "transformed_answer": 17.333333333333332,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 3 into division, and by changing x to /, 26 x 1.5 = 39 becomes 26 / 1.5 = 17.333333333333332. This affects only the result of step 3, making Ravi's jump height incorrectly calculated as 17.333333333333332 inches. The operator change from multiplication to division is incorrect, but the calculation after changing the operator is performed correctly. The changed operator consequentially leads to a different result from the original, which is the transformed_answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 26 / 1.5 = 17.333333333333332 instead of 26 / 1.5 = 16.666666666666666. The subsequent step 4 references the result of step 3, calculating 17.333333333333332 x 3 = 51.99999999999999 instead of 16.666666666666666 x 3 = 49.99999999999999. The final answer is incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "The American swallow can lift into the air and carry a maximum of 5 pounds of weight, while the European swallow can lift and carry twice the weight as the American swallow. If there was a flock of 90 swallows, containing twice as many American as European swallows, what is the maximum combined weight the flock can carry?",
+        "original_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90-30=60.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n60 American swallows can carry a maximum of 60*5=300 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+300=600 pounds\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90+30=120.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n120 American swallows can carry a maximum of 120*5=600 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+600=900 pounds\n#### 900",
+        "transformed_answer": 900.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation modified step 4 of the original solution, changing the subtraction to addition, converting the number of American swallows from 90-30=60 to 90+30=120. Step 7 incorrectly inherits this result, where it should calculate 60 American swallows carrying 300 pounds, but instead calculates 120 swallows supposedly carrying 600 pounds. This incorrect number of American swallows also affects step 8, erroneously adding a higher carrying capacity for 120 swallows instead of 60, thus giving an incorrect total of 900 pounds. It should be noted that the operator error in step 4 and the miscalculation that follows in steps 7 and 8 lead to the transformed solution being incorrect.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 2x+x=90 instead of 2x+30=120. The subsequent step 5 references the result of step 4, calculating 300+600=900 instead of 420+540=960, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Leo had 400 marbles in a jar. He packed the marbles with ten marbles in each pack, and he gave some of them to his two friends, Manny and Neil. He gave Manny 1/4 of the number of packs of marbles, Neil received 1/8 of the number of packs of marbles, and he kept the rest. How many packs of marbles did Leo keep?",
+        "original_solution": "Leo had 400/10 = 40 packs of marbles.\nHe gave Manny 1/4 x 40 = 10 packs of marbles.\nAnd, Neil received 1/8 x 40 = 5 packs of marbles.\nThus, Leo. gave a total of 10 + 5 = 15 packs of marbles.\nTherefore, Leo kept 40 - 15 = 25 packs of marbles.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Leo had 400/10 = 40 packs of marbles.\nHe gave Manny 1/4 x 40 = 10 packs of marbles.\nAnd, Neil received 1/8 x 40 = 5 packs of marbles.\nThus, Leo. gave a total of 10 - 5 = 5 packs of marbles.\nTherefore, Leo kept 40 - 5 = 35 packs of marbles.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the addition in step 4 is changed to subtraction, converting '10 + 5 = 15' into '10 - 5 = 5'. This affects the related step 5, changing '40 - 15 = 25' to '40 - 5 = 35'. Only the operator in step 4 is incorrect, altering the result of that step, which then affects the subsequent step 5. However, the calculation within all other steps, including the modified step, is correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 400 / 10 = 40 instead of 400 / 10 = 40, resulting in the incorrect answer of 40 - 5 = 35. The correct calculation is 400 / 10 = 40, and the correct answer is 40 - 5 = 35."
+    },
+    {
+        "question": "Kendra tracks the different species of birds they spot on their birdwatching trip. On Monday they visited 5 sites and saw an average of 7 birds at each site. On Tuesday, Kendra visited 5 sites and saw an average of 5 birds at each site. On Wednesday visited 10 sites and saw an average of 8 birds at each site. On average, how many different birds did Kendra see on each site?",
+        "original_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds + 80 birds = 140 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw 140 birds / 20 sites = 7 different birds at each site\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds - 80 birds = -20 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw -20 birds / 20 sites = -1 different birds at each site\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 4 into subtraction, and by changing + to -, 35 birds + 25 birds + 80 birds = 140 birds becomes 35 birds + 25 birds - 80 birds = -20 birds. This affects the subsequent related step 6. Step 6 changes from 140 birds / 20 sites = 7 birds/site to -20 birds / 20 sites = -1 birds/site. It should be noted that only the operator in step 4 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 4 is correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 35 + 25 - 80 = -20 instead of 35 + 25 = 60. The subsequent step 5 references the result of step 4, calculating 60 / 20 = -1 instead of 60 / 3 = 20, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Adam has $100 and wants to spend it to open a rock stand. He can buy rocks for $5 each and sell them for $7 each. If he invests all his money in the rock stand but only sells 60% of his inventory, how much money does he lose?",
+        "original_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 x 7 = 84\nHe lost $16 on his business because 100 - 84 = 16\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 * 7 = 84\nHe lost $16 on his business because 100 * 84 = 8400\n#### -8284",
+        "transformed_answer": -8284.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly transforms the subtraction operator in the original solution's final step into a multiplication operator. By changing '-' to '*', the calculation '100 - 84 = 16' becomes '100 * 84 = 8400', leading to an incorrect step and a vastly incorrect final answer of losing $8,284 instead of $16. This affects only the final step, but all other calculations presented in the transformed solution are performed correctly, maintaining the integrity of the outlined process save for the single error introduced.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 100 * 84 = 8400 instead of 100 * 7 = 700. The subsequent step 5 references the result of step 4, calculating 12 x .6 = 7.2 instead of 12 x .6 = 7.2, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

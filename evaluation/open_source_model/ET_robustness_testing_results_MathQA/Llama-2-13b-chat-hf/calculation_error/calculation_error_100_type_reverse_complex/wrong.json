@@ -1,0 +1,130 @@
+[
+    {
+        "question": "Two trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?",
+        "original_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains) \nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s \nLength of both trains = 140 m + 200 m = 340 m \nTime taken = 340 / (500/18) = (340 * 18) / 500 = 12.24 seconds \n#### 12.24",
+        "original_answer": 12.24,
+        "transformed_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains) \nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s \nLength of both trains = 140 m + 200 m = 340 m \nTime taken = 340 / (500/18) = (340 * 18) / 500 = 11.24 seconds \n#### 11.24",
+        "transformed_answer": 11.24,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation error is introduced in the last step, changing the correct time of 12.24 seconds to an incorrect time of 11.24 seconds. This is done by modifying the final division result without altering the mathematical operation leading up to it. The error is confined to this single operation, ensuring that all previous steps remain unaffected, resulting in a transformed answer that is different from the original one.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3, which mistakenly references the number 20 instead of 18 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "the average salary of all the workers in a workshop is rs. 8000. the average salary of 7 technicians is rs. 12000 and the average salary of the rest is rs. 6000. how many workers are there in the workshop?",
+        "original_solution": "The total salary of all workers is 8000 * n, where n is the number of workers\nThe total salary of the 7 technicians is 12000 * 7 = 84000\nThe total salary of the rest of the workers is 6000 * (n-7)\nSo, 8000 * n = 84000 + 6000 * (n-7)\n2000n = 42000\nn = 21\n#### 21",
+        "original_answer": 21.0,
+        "transformed_solution": "The total salary of all workers is 8000 * n, where n is the number of workers\nThe total salary of the 7 technicians is 12000 * 7 = 84000\nThe total salary of the rest of the workers is 6000 * (n-7)\nSo, 8000 * n = 84000 + 6000 * (n-7)\n2000n = 84000\nn = 42\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The 42000 in step 5 of the original solution has been changed incorrectly to 84000 while converting the equation. The operands or operators of the formulas have not been changed but only the result of the equation. Due to changing the total salary of rest of the workers to 84000 instead of 42000, the answer which was divided by 2000 gave a false amount of 42 workers instead of the correct 21 workers. This error propagated to the final step where n was incorrectly calculated as 42. The steps before the error remained unaffected.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly references the result of step 1 instead of the question statement. This results in an operand error in the formula, and the solution is incorrect. The correct solution is to use the information from the question statement directly, without referencing any previous step values. Therefore, the correct solution is:\n\nThe total salary of all workers is 8000 * n, where n is the number of workers\nThe total salary of the 7 technicians is 12000 * 7 = 84000\nThe total salary of the rest of the workers is 6000 * (n-7)\nSo, 8000 * n = 84000 + 6000 * (n-7)\n2000n = 84000\nn = 42\n#### 42.\n\nPlease let me know if you have any questions or need further clarification."
+    },
+    {
+        "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+        "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+        "original_answer": 50,
+        "transformed_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 47\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+        "transformed_answer": 49,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "To create the transformed_solution, the range for n was incorrectly altered to be from -1 to 47 instead of -1 to 48, leading to a count of 49 integer values instead of the correct count of 50 integer values. This changes the answer at step 8 without affecting the prior unrelated steps.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 4. Step 4 mistakenly uses addition instead of division, and only one operator in the formula is incorrect, so it belongs to operator_error. The correct formula should be 4n + 7 < 200, not > 1."
+    },
+    {
+        "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+        "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+        "original_answer": 17.0,
+        "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $16.\nHis actual percent profit is (16/100) x 100% = 16%.\n#### 16%",
+        "transformed_answer": 16.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the actual profit as $16 instead of $17 in step 4. The miscalculated profit affects only the calculation in step 5 for determining the actual percent profit, which becomes (16/100) x 100% = 16%. There are no changes to steps 1, 2, and 3 since the error was introduced in step 4. Previous steps remain accurate as they are not affected by the calculation error in step 4. The next step is adapted to reflect the erroneous $16 profit and therefore results in a transformed answer of 16%, which is distinct from the original answer.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "Of the total amount that Rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. If Rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?",
+        "original_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.02x + 0.024x = 0.044x\nTotal tax as a percent of the total amount spent = (0.044x / x) * 100\nTotal tax as a percent of the total amount spent = 4.4%\n#### 4.4%",
+        "original_answer": 4.4,
+        "transformed_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.03x\nTotal amount spent on taxes = 0.02x + 0.03x = 0.05x\nTotal tax as a percent of the total amount spent = (0.05x / x) * 100\nTotal tax as a percent of the total amount spent = 5.0%\n#### 5.0%",
+        "transformed_answer": 5.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The original calculation of tax paid on other items was 0.08 * 0.3x = 0.024x, which is correct. However, in the transformed solution, it was changed to 0.08 * 0.3x = 0.03x. This error in step 5 affects the total amount calculated in step 6, converting the correct calculation of 0.02x + 0.024x = 0.044x into the incorrect 0.02x + 0.03x = 0.05x. Consequently, the following steps that rely on the total tax also reflect this calculation error, changing the total tax as a percent of the amount spent from the correct 4.4% to the incorrect 5.0%. Steps 1 through 4 remain unaffected as they do not rely on the miscalculated tax for other items.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the total tax as a percent of the total amount spent is calculated by dividing the total amount spent on taxes by the total amount spent, excluding taxes, and then multiplying by 100. In this case, the total amount spent on taxes is 50% of the total amount spent, excluding taxes, so the total tax as a percent of the total amount spent is 5.0%."
+    },
+    {
+        "question": "a train 630 m long, running with a speed of 63 km / hr will pass a tree in ?",
+        "original_solution": "First convert the speed from km/hr to m/s: 63 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 63000 / 3600 = 175/10 = 17.5 m/s\nCalculate the time it takes to pass the tree using the formula time = distance / speed: 630 m / 17.5 m/s = 36 s\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "First convert the speed from km/hr to m/s: 63 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 63000 / 3600 = 175/10 = 15 m/s\nCalculate the time it takes to pass the tree using the formula time = distance / speed: 630 m / 15 m/s = 42 s\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the conversion from km/hr to m/s as 15 m/s instead of the accurate conversion, which is 17.5 m/s. This error in step 1 affects the step when calculating the time it takes to pass the tree. The original time calculation of 630 m / 17.5 m/s = 36 s is altered to 630 m / 15 m/s = 42 s due to the incorrect conversion rate in step 1.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly converts the speed from km/hr to m/s without considering the conversion factor of 1000 m/1 km, which only results in an error in one operand in the formula, thus it belongs to calculation_error."
+    },
+    {
+        "question": "8 business executives and 7 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place?",
+        "original_solution": "The business executives will have 8C2 = 28 handshakes \nThe chairmen will have 7*8 = 56 handshakes \nSo, the total number of handshakes would be 28 + 56 = 84 \n#### 84",
+        "original_answer": 84.0,
+        "transformed_solution": "The business executives will have 8C2 = 28 handshakes \nThe chairmen will have 7*8 = 54 handshakes \nSo, the total number of handshakes would be 28 + 54 = 82 \n#### 82",
+        "transformed_answer": 82.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates step 2 as 7 * 8 = 54 instead of 7 * 8 = 56. This changes step 3 from the correct computation of 28 + 56 = 84 to an incorrect total of 28 + 54 = 82. The error in step 2 affects step 3, which is the sum of the handshakes, but does not impact the correct calculation performed in step 1.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the business executives will have 8C2 = 28 handshakes, and the chairmen will have 7*8 = 54 handshakes, so the total number of handshakes would be 28 + 54 = 82."
+    },
+    {
+        "question": "A train 440 meters long is running with a speed of 60 kmph . in what time will it pass a man who is running at 6 kmph in the direction opposite to that in which the train is going ?",
+        "original_solution": "The relative speed of the train and the man is 60 + 6 = 66 kmph = 66*(5/18) m/s = 55/3 m/s.\nTime taken to pass the man = Distance/Speed = 440/(55/3) = 440*(3/55) = 24 seconds.\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "The relative speed of the train and the man is 60 + 6 = 66 kmph = 66*(5/18) m/s = 55/3 m/s.\nTime taken to pass the man = Distance/Speed = 440/(55/3) = 440*(3/55) = 30 seconds.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, there's a single calculation error introduced in step 3 where the expression 440*(3/55) is incorrectly calculated as 30 seconds instead of the original correct calculation of 24 seconds. This results in the transformed_answer being different from the original_answer. The steps prior to the error remain unaffected, and this is the only error introduced into the solution process.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the relative speed of the train and the man is calculated correctly, and the time taken to pass the man is calculated correctly using the formula Distance/Speed. Therefore, the solution is correct, and there is no error in the [Solution]."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 246.\nx = 82.\nThe three consecutive even numbers are 82, 84, and 86.\n#### 82, 84, 86",
+        "transformed_answer": [
+            82,
+            84,
+            86
+        ],
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This dictionary shows that in the transformed_solution, the calculation of 3x from the equation 3x + 6 = 246 has not been altered correctly in step 4. Instead of subtracting 6 from both sides to get 3x = 240, it mistakenly keeps the equation as 3x = 246. Therefore, when 3x is divided by 3 to solve for x, the incorrect number 246 is used instead of the correct 240, and the resulting x is incorrectly calculated as 82 instead of the correct value of 80. All the steps that use the value of x, which are steps 5 and 6, will need to use the wrong x value of 82 and output the incorrect sequence of numbers 82, 84, 86.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly assumes that the three consecutive even numbers are x, x+2, and x+4 instead of x, x+2, and x+4, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error."
+    },
+    {
+        "question": "the area of an isosceles trapezoid with sides of length 5 and bases of length 6 and 12 is?",
+        "original_solution": "The area of an isosceles trapezoid is given by the formula A = (1/2) * (a + b) * h, where a and b are the lengths of the bases and h is the height.\nThe height of the trapezoid can be found using the Pythagorean theorem: h = sqrt(5^2 - ((12-6)/2)^2) = sqrt(25 - 9) = sqrt(16) = 4\nPlugging in the values, A = (1/2) * (6 + 12) * 4 = (1/2) * 18 * 4 = 9 * 4 = 36\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "The area of an isosceles trapezoid is given by the formula A = (1/2) * (a + b) * h, where a and b are the lengths of the bases and h is the height.\nThe height of the trapezoid can be found using the Pythagorean theorem: h = sqrt(5^2 - ((12-6)/2)^2) = sqrt(25 - 9) = sqrt(16) = 4\nPlugging in the values, A = (1/2) * (6 + 12) * 4 = (1/2) * 18 * 4 = 9 * 4 = 34\n#### 34",
+        "transformed_answer": 34.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed solution has a calculation error at step 4 where the product of 9 * 4 is incorrectly stated as 34 instead of 36. This is the only step modified, as the error is isolated to this step. Although 9 * 4 equals 36, in the transformed solution we intentionally make a single calculation error, resulting in a transformed answer of 34 which is different from the original answer of 36.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the formula for the area of an isosceles trapezoid is A = (1/2) * (a + b) * h, where a and b are the lengths of the bases and h is the height. In this case, the height of the trapezoid can be found using the Pythagorean theorem, and the area can be calculated by plugging in the values. Therefore, the solution is correct, and the output is #34."
+    }
+]

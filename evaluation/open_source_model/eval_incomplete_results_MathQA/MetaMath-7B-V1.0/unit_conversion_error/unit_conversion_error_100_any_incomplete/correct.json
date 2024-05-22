@@ -1,0 +1,50 @@
+[
+    {
+        "question": "If an object travels 90 feet in 3 seconds, what is the object’s approximate speed in miles per hour? (Note: 1 mile = 5280 feet)",
+        "original_solution": "First, calculate the speed in feet per second: 90 feet / 3 seconds = 30 feet per second.\nNext, convert this speed to miles per hour: 30 feet per second * 3600 seconds per hour / 5280 feet per mile = 20.45 miles per hour.\n#### 20.45",
+        "original_answer": 20.45,
+        "transformed_solution": "First, calculate the speed in feet per second: 90 feet / 3 seconds = 30 feet per second.\nNext, convert this speed to miles per hour: 30 feet per second * 3500 seconds per hour / 5280 feet per mile = 19.89 miles per hour.\n",
+        "transformed_answer": 19.89,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion by using 3500 seconds per hour instead of the correct value of 3600 seconds per hour, resulting in the original calculation rate of 30 feet per second * 3600 seconds per hour / 5280 feet per mile = 20.45 miles per hour becoming 30 feet per second * 3500 seconds per hour / 5280 feet per mile = 19.89 miles per hour in the transformed_solution. This is a single error because it is the first and only modification made to the original solution, and it has a direct impact on the calculation of the transformed answer.",
+        "eval_result": "The solution is incorrect, and the explanation is: The speed of the object is given as 19.89 miles per hour.The answer is: 19.89"
+    },
+    {
+        "question": "A mobile battery in 1 hour charges to 20 percent. How much time (in minutes) will it require more to charge to 60 percent?",
+        "original_solution": "In 1 hour, the battery charges to 20 percent.\nSo, it requires 3 times more charge to reach to 60 percent.\n1 hour * 3 = 3 hours are needed to reach 60 percent.\n3 hours * 60 minutes per hour = 180 minutes are needed to reach 60 percent.\n#### 180",
+        "original_answer": 180.0,
+        "transformed_solution": "In 1 hour, the battery charges to 20 percent.\nSo, it requires 3 times more charge to reach to 60 percent.\n1 hour * 3 = 3 hours are needed to reach 60 percent.\n3 hours * 50 minutes per hour = 150 minutes are needed to reach 60 percent.\n",
+        "transformed_answer": 150.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 3 hours * 60 minutes per hour = 180 minutes in the original_solution becoming 3 hours * 50 minutes per hour = 150 minutes in the transformed_solution. There is only one error introduced in the transformation process, and the previous calculations remain unaffected. The transformed_answer reflects the result of the incorrect unit conversion.",
+        "eval_result": "To determine if the solution is correct, we need to check if the given steps are correct and if the final answer is correct.\nIn this case, the solution states that it takes 150 minutes to charge the battery to 60 percent.\nAccording to the given information, it takes 3 hours to charge the battery to 60 percent, which is equivalent to 3 * 60 = 180 minutes.\nTherefore, the solution is incorrect because it takes 180 minutes, not 150 minutes, to charge the battery to 60 percent.\nThe correct solution would be:\nThe solution is incorrect, and the explanation is: The given solution is incorrect because it takes 150 minutes, not 180 minutes, to charge the battery to 60 percent.\n#### 180\nThe answer is: 180"
+    },
+    {
+        "question": "If the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 60 minutes?",
+        "original_solution": "There are 60 minutes in an hour, so there are 60 minutes * 60 seconds per minute / 15 seconds per person = 240 persons that the population increases by in 60 minutes.\n#### 240",
+        "original_answer": 240.0,
+        "transformed_solution": "There are 60 minutes in an hour, so there are 60 minutes * 50 seconds per minute / 15 seconds per person = 200 persons that the population increases by in 60 minutes.\n",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 minutes * 60 seconds per minute / 15 seconds per person = 240 persons in the original_solution becoming 60 minutes * 50 seconds per minute / 15 seconds per person = 200 persons in the transformed_solution. Since the population increase rate per 15 seconds remains constant, the rest of the calculations need to maintain a logical flow. This unit conversion error improperly reduces the total number of seconds counted in the hour, leading to a decrease in the calculated population increase. It should be noted that you only need to consider one step of unit conversion error, and the calculation of the rate of population increase per time unit is still correctly based on the incorrect conversion.",
+        "eval_result": "The solution is incorrect, and the explanation is: The population increases by 200 persons in 60 minutes. However, the question asks for the number of steps in the solution, not the number of persons. Each step represents a person, so the number of steps in the solution is 200.The answer is: 200"
+    },
+    {
+        "question": "Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 42 kmph. How many minutes does the train stop per hour?",
+        "original_solution": "The difference in speed is 45 - 42 = 3 kmph.\nIn one hour, the train covers 3 km less due to stoppages.\nAs 1 hour = 60 minutes, the train stops for 3 km / 45 kmph * 60 minutes = 4 minutes per hour.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The difference in speed is 45 - 42 = 3 kmph.\nIn one hour, the train covers 3 km less due to stoppages.\nAs 1 hour = 50 minutes, the train stops for 3 km / 45 kmph * 50 minutes = 3.33 minutes per hour.\n",
+        "transformed_answer": 3.33,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of 60 minutes, resulting in the expression 3 km / 45 kmph * 60 minutes = 4 minutes per hour in the original_solution becoming 3 km / 45 kmph * 50 minutes = 3.33 minutes per hour in the transformed_solution. This transformation only introduces one incorrect unit conversion error, affecting only the calculation directly related to the time units, while keeping all other calculations before step 3 correct.",
+        "eval_result": "The solution is incorrect, and the explanation is: The train stops for 3.33 minutes per hour. However, the answer should be a whole number, representing the number of minutes the train stops per hour. Therefore, the train stops for 4 minutes per hour.The answer is: 4"
+    }
+]

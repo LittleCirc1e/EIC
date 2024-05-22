@@ -1,0 +1,211 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "doughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:",
+            "original_solution": "The total parts in the ratio are 5 + 3 + 1 = 9\nEach part is equal to 50 / 5 = 10\nThere are 10 parts of muffins because 10 x 1 = 10\nThere are 10 muffins in the shop because 10 x 10 = 100\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Each part is equal to 50 / 5 = 10\nThere are 10 parts of muffins because 10 x 1 = 10\nThere are 10 muffins in the shop because 10 x 10 = 100\n#### 100",
+            "transformed_answer": 100.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed, which calculates the total parts of the ratio. Consequently, step 2 should reference the result from the question, which is 50 doughnuts equivalent to 5 parts. The reference to each part being equivalent to 10 still holds as the calculation method is correct, but since we consider there to be 10 parts of muffins instead of 1, step 2 should be modified to reflect a 1:1 part ratio between doughnuts and muffins. Given there are 50 doughnuts, the calculation changes to 50 x 1 = 50 for the number of muffins, which should ultimately modify the formula to 50 x 1 = 50. It should be noted that the calculation in step 3 maintains the error and refers incorrectly to '10 parts of muffins', as the initial step that created the incorrect carryover effect from the deletion is step 1, thus it is marked as the wrong_step. The transformed_solution erroneously states that there are 100 muffins due to incorrectly maintaining the original step 4 calculation without adjusting for the altered quantity suggested by the deleted step 1 (10 parts was used instead of the correct 1 part, leading to multiplying by 10 instead of 1)."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ndoughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:\n\n### Response:",
+        "output_str": "\nIf there are 50 doughnuts in the pastry shop, and the ratio of doughnuts, cookies, and muffins is 5:3:1, then we can set up a ratio to find the number of muffins.\n\nLet's say there are x cookies in the shop.\n\nWe know that the ratio of doughnuts to cookies is 5:3, so we can write:\n\n50 / 5 = 3x\n\nNow, we know that the ratio of cookies to muffins is 3:1, so we can write:\n\n3x / 3 = x\n\nSolving for x, we get:\n\nx = 10\n\nTherefore, there are 10 muffins in the pastry shop.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "a man crosses a 600 m long street in 5 minutes. what is his speed in km per hour?",
+            "original_solution": "First, we need to convert 5 minutes to hours, so 5 minutes = 5/60 hours = 1/12 hours.\nThe speed is calculated as distance/time, so the speed is 600 meters / (1/12) hours = 600 x 12 = 7200 meters/hour.\nTo convert meters to kilometers, we divide the speed by 1000, so 7200 meters/hour = 7200/1000 = 7.2 km/hour.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "The speed is calculated as distance/time, so the speed is 600 meters / (1/12) hours = 600 x 12 = 7200 meters/hour.\nTo convert meters to kilometers, we divide the speed by 1000, so 7200 meters/hour = 7200/1000 = 7.2 km/hour.\nSo the speed is 7.2*60/5 = 86.4 km/hour.\n#### 86.4",
+            "transformed_answer": 86.4,
+            "wrong_step": 3,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, step 1 which converts 5 minutes to hours (1/12) is removed. In the original_solution, step 2 references the result (1/12 hours) from step 1, so after deleting step 1, the numbers from step 1 are still used in step 2 of the transformed_solution incorrectly. What should have happened is that instead of referencing (1/12), step 2's calculation should've been adjusted to refer to the original value from the question, which is 5 minutes, but is instead left unchanged which results in an incorrect interpretation of the units and an incorrect answer. Step 3 in the transformed_solution becomes the incorrect step as it attempts to recalculate the speed, multiplying by an incorrect scale factor of 60/5 that doesn't correspond to any conversion process in this context. This extra, unrelated step is what leads to the incorrect answer. Therefore, the wrong_step is 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na man crosses a 600 m long street in 5 minutes. what is his speed in km per hour?\n\n### Response:",
+        "output_str": "\nTo find the man's speed in km per hour, we need to first convert the distance from meters to kilometers. There are 1000 meters in 1 kilometer, so:\n\n600 meters / 1000 meters = 0.6 kilometers\n\nNow, we can use the formula d = rt, where d is the distance (in this case, 0.6 kilometers), r is the rate (in this case, the man's speed), and t is the time (5 minutes):\n\n0.6 kilometers = r x 5 minutes\n\nTo solve for r (the man's speed), we can divide both sides of the equation by 5:\n\nr = 0.6 kilometers / 5 minutes\n\nr = 0.6 / 5\n\nr = 0.12 kilometers per minute\n\nFinally, to convert the speed from kilometers per minute to kilometers per hour, we can multiply by 60 (since there are 60 minutes in an hour):\n\n0.12 kilometers per minute x 60 minutes/hour = 7.2 kilometers per hour\n\nTherefore, the man's speed is 7.2 kilometers per hour.",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 12,
+        "gsm8k_data": {
+            "question": "210 college students were asked in a survey if they preferred windows or mac brand computers. 60 students claimed that they preferred mac to windows brand computers. one third as many of the students who preferred mac to windows, equally preferred both brands. 90 of the students had no preference. how many of the students in the survey preferred windows to mac brand computers?",
+            "original_solution": "60 students preferred mac to windows\n60/3 = 20 students preferred both brands\n90 students had no preference\nTotal students who preferred mac = 60 + 20 = 80\nTotal students who preferred windows = 210 - 90 - 80 = 40\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "60/3 = 20 students preferred both brands\n90 students had no preference\nTotal students who preferred mac = 60 + 20 = 80\nTotal students who preferred windows = 210 - 90 - 60 = 60\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 4,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 60 from the question, and step 4 references the result 80 of step 3, which includes the result of (60+20). So after deleting step 1, the step 4 should not include the count from deleted step 1. Therefore, the formula changes from 210 - 90 - 80 = 40 to 210 - 90 - 60 = 60. Due to this deletion and change, the answer to how many students preferred Windows brand computers is now incorrect, resulting in 60 instead of 40. It is step 4 in the transformed_solution, which is also step 5 in the original_solution, that serves as the first step calculating the number of students preferring Windows incorrectly due to the missing initial step, so the wrong_step is 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n210 college students were asked in a survey if they preferred windows or mac brand computers. 60 students claimed that they preferred mac to windows brand computers. one third as many of the students who preferred mac to windows, equally preferred both brands. 90 of the students had no preference. how many of the students in the survey preferred windows to mac brand computers?\n\n### Response:",
+        "output_str": "\nTo determine how many students preferred windows to mac brand computers, we need to use the information that one third as many of the students who preferred mac to windows equally preferred both brands. This means that if 60 students preferred mac to windows, then 20 students (60 x 1/3) equally preferred both brands.\n\nTherefore, the number of students who preferred windows to mac brand computers is:\n\n60 - 20 = 40\n\nSo, 40 students in the survey preferred windows to mac brand computers.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "In a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?",
+            "original_solution": "One cow will eat 20 bags of husk in 20 days because 20/20 = 1.\nOne cow will eat one bag of husk in 20 days because 20/1 = 20.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "One cow will eat one bag of husk in 20*20 = 400 days because the same amount of food will last one cow 20 times longer than it would for 20 cows.\n#### 400",
+            "transformed_answer": 400.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. The original solution step 1 ('One cow will eat 20 bags of husk in 20 days') is erroneous and misguiding as it misses the logical representation of the sharing principle based on which the 20 bags of husk can feed 20 cows. In the transformed_solution, the unnecessary and confusing step 1 is removed and the correct reasoning is directly applied to establish how long it will take for one cow to eat one bag of husk. The calculation multiplies the total number of days (20) by the number of cows (20) to yield the correct number of days for one cow to eat one bag. Therefore, the transformed solution references the numerical values in the question correctly to arrive at a different (and in this case, correct) transformed answer, which is 400 days for one cow to eat one bag of husk by itself."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?\n\n### Response:",
+        "output_str": "\nTo determine how many days one cow will take to eat one bag of husk, we can use the information provided to find the rate at which the cows eat the husk.\n\nSince there are 20 cows eating 20 bags of husk in 20 days, we can calculate the rate at which each cow eats husk as follows:\n\nRate = (Amount of husk eaten) / (Number of cows x Time taken)\n\nRate = (20 bags) / (20 cows x 20 days)\n\nRate = 1 bag / (20 cows x 1 day)\n\nTherefore, one cow will eat one bag of husk in 20 days.",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+            "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?\n\n### Response:",
+        "output_str": "\nLilly has 10 fish and Rosy has 12 fish, so together they have 10 + 12 = 22 fish in all.",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 22.0,
+        "is_correct": true
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+            "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "Since the average of b and c is 80, the sum of b and c is 80 x 2 = 160.\nThe sum of b and c minus twice the average of a and b (which is 70) is 160 - 70 x 2 = 20.\nThe value of c - a is 20.\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 1 by deleting the calculation of the sum of a and b. In the original_solution, step 2 references 80 from the question, and step 3 references the results from step 1 and step 2. After deleting step 1, step 3 should reference the result 160 from step 2 and the arithmetic mean of a and b (35) directly from the question, since the average of a and b is already provided. However, the transformed solution incorrectly subtracts twice the average of a and b from the sum of b and c, resulting in the error. Instead of calculating the correct subtraction of the sums (160 - 70), the transformed solution uses the incorrect subtraction (160 - 70 x 2). Step 4, which should be based on the correct subtraction of the sums, is now based on the incorrect value obtained in step 3. It is step 2 in the transformed_solution that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?\n\n### Response:",
+        "output_str": "\nTo find the value of c − a, we can use the fact that the average of a and b is 35 and the average of b and c is 80.\n\nFirst, we can find the average of a and b by adding the two numbers and dividing by 2:\n\na + b = 35\n\na + b = 2(35)\n\na + b = 70\n\nNext, we can find the average of b and c by adding the two numbers and dividing by 2:\n\nb + c = 80\n\nb + c = 2(80)\n\nb + c = 160\n\nNow, we can subtract the average of a and b from the average of b and c to find the value of c − a:\n\nc − a = 160 − 70\n\nc − a = 90\n\nTherefore, the value of c − a is 90.",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 90.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 / 1 = 72000\n#### 72000",
+            "transformed_answer": 72000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed in the transformed_solution. The original_solution only had one step, which referenced the number 10 from the question. By removing this step and because the solution involves a simple division, the solution should directly reference the number from the question. Since step 1 in the original_solution references the number 10 and there is no other number to choose from, in the transformed_solution, we directly divide by 1, pretending that a case can hold only 1 bottle, hence the total number of cases required would be 72000. This leads to a calculation of 72000 / 1 = 72000. The number 1 is the smallest default number for division when the actual divisor is omitted. This results in the incorrect conclusion that 72000 cases are required, with the transformation error occurring at the only step in the new solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "\nTo determine how many cases are required by the company to hold its one day production, we need to divide the total number of bottles produced daily by the number of bottles that can be held in a case.\n\n1 day production = 72000 bottles\n\nNumber of bottles per case = 10\n\nTherefore, the number of cases required = 72000 / 10 = 7200 cases.",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "a number is doubled and 5 is added . if the resultant is trebled , it becomes 123 . what is that number ?",
+            "original_solution": "Let the number be x.\n2x + 5 = 123/3\n2x + 5 = 41\n2x = 41 - 5 = 36\nx = 36/2 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "Let the number be x.\n2x + 5 = 41\n2x = 41 - 5 = 36\nx = 36/2 = 18\n#### 18",
+            "transformed_answer": 36.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Step 1 has been removed from the original solution. In the original_solution, step 1 states the equation '2x + 5 = 123/3'. This division operation simplifies the equation, so after deleting step 1, the equation becomes incorrect in step 2 as it should still include the division step. As such, the transformation skips the division step and incorrectly sets '2x + 5 = 41'. The values in the subsequent steps must be adjusted to account for this change, causing each one to inherit the mistake. Since the original equation without the division gives '2x = 36', the transformed answer becomes 36 instead of 18. The wrong_step is 1, as it is the first step that suffers from the incorrect transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na number is doubled and 5 is added . if the resultant is trebled , it becomes 123 . what is that number ?\n\n### Response:",
+        "output_str": "\nTo double a number, we multiply it by 2. So, if we double a number x, we get 2x.\n\nIf we add 5 to 2x, we get 2x + 5.\n\nTo treble a number, we multiply it by 3. So, if we treble 2x + 5, we get 3(2x + 5) = 3(2x) + 3(5) = 6x + 15.\n\nSince the resultant of doubling and adding 5 is 123, we can set up the equation:\n\n6x + 15 = 123\n\nSolving for x, we get:\n\n6x = 123 - 15\n\n6x = 108\n\nx = 108 / 6\n\nx = 18\n\nTherefore, the number that, when doubled and 5 is added, becomes 123 is 18.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 47,
+        "gsm8k_data": {
+            "question": "In a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?",
+            "original_solution": "The total number of players present is 16 + 12 + 18 + 13 = 59.\n#### 59",
+            "original_answer": 59.0,
+            "transformed_solution": "The total number of players present is 18 + 18 + 13 = 49.\n#### 49",
+            "transformed_answer": 49.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed, which eliminates the account for cricket and hockey players. The new calculation mistakenly only includes one account for football and softball, while duplicating the count for the football players instead of adding the hockey players. Thus, the transformation omits cricket and hockey players which should have been 16 and 12 respectively, and incorrectly doubles the count for football players, leading to an incorrect total. The formula changed from 16 + 12 + 18 + 13 = 59 to 18 + 18 + 13 = 49. The calculation now references the largest number of players from the question (which is 18 for football) instead of the original numbers for cricket and hockey, which were 16 and 12. The wrong_step is 1 because it is the first step that references an incorrect number in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?\n\n### Response:",
+        "output_str": "\nThere are a total of 16 + 12 + 18 + 13 = 59 players present in the ground.",
+        "extract_true_num": 59.0,
+        "extract_pred_num": 59.0,
+        "is_correct": true
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+            "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+            "original_answer": 375.0,
+            "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+            "transformed_answer": 25.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?\n\n### Response:",
+        "output_str": "\nThere are 15 small boxes in the large box, and each small box contains 25 chocolate bars. Therefore, the total number of chocolate bars in the large box is 15 x 25 = 375 chocolate bars.",
+        "extract_true_num": 375.0,
+        "extract_pred_num": 375.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The percent decrease is (60/100) x 100 = 60%\n#### 60%",
+            "transformed_answer": 60.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the original step 1 has been removed. The original step 1 calculates the amount of decrease by subtracting the sale price from the original price. Since step 1 has been removed, step 2 in the transformed_solution is now step 1 and incorrectly references 60 from the question as the amount of decrease instead of using the correct decrease value which should be 40, the calculation now incorrectly becomes (60/100) x 100 resulting in an incorrect transformed_answer of 60%. It should note that the correct value for the amount of decrease is the difference between the original price and the sale price (100 - 60 = 40). The transformed_solution should then use this correct decrease amount to calculate the percent decrease. Hence, step 1 in the transformed_solution, which is also the first step referring to the incorrect number, is the wrong_step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "\nTo find the percent decrease, we need to first find the original price of the trouser, which is $ 100 . Then, we can subtract the sale price from the original price to get the difference:\n\n$ 100 - $ 60 = $ 40\n\nNext, we can divide the difference by the original price to get the percent decrease:\n\n($ 40 / $ 100 ) x 100% = 40%\n\nSo, the percent decrease is 40%.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    }
+]

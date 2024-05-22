@@ -1,0 +1,50 @@
+[
+    {
+        "question": "robert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?",
+        "original_solution": "Robert ate 7 - 3 = 4 more chocolates than Nickel.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Robert ate 7 - 3 = 5 more chocolates than Nickel.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The 7 - 3 calculation is incorrectly presented as equaling 5 instead of the correct value of 4, leading to a transformed_answer of 5 which is different from the original_answer of 4.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 7-3=5 instead of 7-3=4. The subsequent step 5 references the result of step 4, calculating 5 instead of 4, resulting in the final incorrect answer."
+    },
+    {
+        "question": "a and b can finish a work in 10 days while a alone can do the same work in 20 days. In how many days b alone will complete the work?",
+        "original_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 20 days.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 40 days.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution modifies step 4 of the original solution, changing the number of days that b alone can finish the work from 20 to 40. This is a calculation error in the last step, and there is only one error introduced, as required. The previous steps remain accurate and are not affected by this change.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 20, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one day has 10 minutes instead of 60 minutes, calculating 1/10 instead of 1/20. The subsequent step 4 reference the result of step 3, calculating 1/10 - 1/20 = 1/20 instead of 1/20 - 1/20 = 0. The subsequent step 5 reference the result of step 4, calculating 1/20 x 40 = 40 instead of 1/20 x 20 = 20, resulting in the final incorrect answer."
+    },
+    {
+        "question": "How is 1 / 2 % expressed as a decimal fraction?",
+        "original_solution": "1 / 2 % = 1 / 2 / 100 = 0.005\n#### 0.005",
+        "original_answer": 0.005,
+        "transformed_solution": "1 / 2 % = 1 / 2 / 100 = 0.0005\n#### 0.0005",
+        "transformed_answer": 0.0005,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation of 1 / 2 / 100 was erroneously transformed to 0.0005 instead of the correct 0.005. There is only one step in the original solution, so changing the calculation result automatically affects the final answer. No previous steps or unrelated calculations are present, so no other changes are needed aside from the incorrect calculation in step 1.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 0.005, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that 1 / 2 is equal to 1 / 2 / 100 instead of 1 / 2 / 10000, calculating 1 / 2 / 100 = 0.0005 instead of 1 / 2 / 10000 = 0.005. The subsequent step 4 references the result of step 3, calculating 0.0005 instead of 0.005, resulting in the final incorrect answer."
+    },
+    {
+        "question": "a 230 m long train running at the speed of 120 km / hr crosses another train running in opposite direction at the speed of 80 km / hr in 9 sec . what is the length of the other train ?",
+        "original_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 500 - 230\nLength of the other train = 270 m\n#### 270",
+        "original_answer": 270.0,
+        "transformed_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 499.95 - 230\nLength of the other train = 269.95 m\n#### 269.95",
+        "transformed_answer": 269.95,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates (55.55 x 9) as 499.95 instead of 500 in step 6, affecting the calculation in step 7 and the resulting Length of the other train. The steps prior to step 6 are unaffected and are correctly calculated. The error is carried through to step 7, adjusting the calculation from (500 - 230) to (499.95 - 230), resulting in the transformed answer of 269.95 m instead of the original answer of 270 m.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 270, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one second has 1000 milliseconds instead of 1000000 milliseconds, calculating 9 x 1000 = 9000 instead of 9 x 1000000 = 9000000. The subsequent step 5 references the result of step 4, calculating 55.55 x 9000 = 499.95 instead of 55.55 x 9000000 = 4999500. The subsequent step 6 references the result of step 5, calculating 499.95 - 230 = 269.95 instead of 4999500 - 230 = 270. Therefore, the final incorrect answer is 269.95 instead of the correct answer 270."
+    }
+]

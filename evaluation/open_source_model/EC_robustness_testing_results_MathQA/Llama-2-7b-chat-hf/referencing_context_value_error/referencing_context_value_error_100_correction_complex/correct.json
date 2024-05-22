@@ -1,0 +1,122 @@
+[
+    {
+        "question": "in 1998 the profits of company n were 10 percent of revenues. in 1999, the revenues of company n fell by 30 percent, but profits were 10 percent of revenues. the profits in 1999 were what percent of the profits in 1998?",
+        "original_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 70 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 70\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.6x because they fell by 40 percent.\nThe profits in 1999 were 0.1 * 0.6x = 0.06x.\nThe profits in 1999 were 60 percent of the profits in 1998 because (0.06x / 0.1x) * 100 = 60\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the percent decrease in revenues as 40 percent instead of 30 percent, and calculates the revenues in 1999 as 0.6x instead of 0.7x. This wrong percentage directly affects the calculation of the profits for 1999 and the final percentage comparison between profits of 1999 and 1998. The correct calculation using 30 percent should yield 70 percent, but because of the incorrect percentage used in step 3, the transformed solution yields 60 percent. Since this is the only error, subsequent steps reflect the results of the change correctly despite the erroneous input in step 3. All other steps that reference the original numbers from the question do so correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 70, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.6x instead of 0.4x, resulting in the final incorrect answer.\n\nPlease provide your response."
+    },
+    {
+        "question": "In the rectangular coordinate system, points (2, 0) and (–2, 0) both lie on circle c. What is the maximum possible value of the radius of c?",
+        "original_solution": "The distance between the two points is 4 because (-2-2)^2 + (0-0)^2 = 4^2\nThe radius of the circle is half the distance between the two points because the circle is centered between the two points.\nThe maximum possible value of the radius of c is 2.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "The distance between the two points is 3 because (-3-2)^2 + (0-0)^2 = 3^2\nThe radius of the circle is half the distance between the two points because the circle is centered between the two points.\nThe maximum possible value of the radius of c is 1.5.\n#### 1.5",
+        "transformed_answer": 1.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the point (2, 0) from the question as (3, 0) wrongly, and calculates the distance as if the points were (-3, 0) and (2, 0), i.e., (-3-2)^2 + (0-0)^2 = 3^2, which incorrectly gives a distance of 3 instead of 4. This affects the calculation of the radius by dividing the erroneous distance in half, yielding 1.5 instead of 2. Please note that you should only consider one error, so the subsequent related step will only inherit its erroneous result (the incorrect radius) and calculate based on it but still correctly apply the idea of the radius being half the distance between two points on a circle.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 2, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3^2 instead of 2^2, resulting in the final incorrect answer."
+    },
+    {
+        "question": "If a train, traveling at a speed of 360 kmph, crosses a pole in 5 sec, then the length of the train is?",
+        "original_solution": "First, convert the speed from km/h to m/s: 360 km/h * (1000 m/1 km) * (1 h/3600 s) = 100 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 100 m/s * 5 s = 500 m\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "First, convert the speed from km/h to m/s: 350 km/h * (1000 m/1 km) * (1 h/3600 s) = 97.22 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 97.22 m/s * 5 s = 486.1 m\n#### 486.1",
+        "transformed_answer": 486.1,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 incorrectly references the speed of the train as 350 km/h instead of 360 km/h and calculates the speed in meters per second incorrectly as 97.22 m/s instead of 100 m/s. The subsequent step, which calculates the distance traveled (length of the train), uses the result from the erroneous step 1 and also calculates it correctly with the wrong input, resulting in 97.22 m/s * 5 s = 486.1 m instead of 100 m/s * 5 s = 500 m. Please note that we should only consider one error, and all other references to the speed should use the correct value of 360 km/h.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 500, and the explanation is that step 1 first makes a mistake in the conversion process, calculating 350 km/h * (1000 m/1 km) = 97.22 m/s instead of 360 km/h * (1000 m/1 km) = 140 m/s. The subsequent step 2 references the result of step 1, calculating 97.22 m/s * 5 s = 486.1 m instead of 140 m/s * 5 s = 700 m. Therefore, the final answer is 500 m."
+    },
+    {
+        "question": "What is the least value of x, so that 2 x 5476 is divisible by 9?",
+        "original_solution": "The sum of the digits in 2x5476 is 2+x+5+4+7+6 = 24+x\nFor 24+x to be divisible by 9, x must equal 3.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "The sum of the digits in 2x5476 is 2+x+5+4+8+6 = 25+x\nFor 25+x to be divisible by 9, x must equal 2.\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 7 in the question as 8 wrongly, and calculates 2+x+5+4+8+6=25+x instead of 2+x+5+4+7+6=24+x. Its subsequent related step will be affected, calculating that x must equal 2 for the sum 25+x to be divisible by 9, instead of x must equal 3 for the sum 24+x to be divisible by 9. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 3, and the explanation is #.\n\nThe mistake in the solution is in step 2, where the sum of the digits in 2x5476 is calculated as 2+x+5+4+8+6 = 25+x instead of 2+x+5+4+8+6 = 30. Therefore, the least value of x that makes 2x5476 divisible by 9 is 3, not 2."
+    },
+    {
+        "question": "If a train, traveling at a speed of 360 kmph, crosses a pole in 5 sec, then the length of the train is?",
+        "original_solution": "First, convert the speed from km/h to m/s: 360 km/h * (1000 m/1 km) * (1 h/3600 s) = 100 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 100 m/s * 5 s = 500 m\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "First, convert the speed from km/h to m/s: 350 km/h * (1000 m/1 km) * (1 h/3600 s) = approximately 97.22 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 97.22 m/s * 5 s = approximately 486.11 m\n#### 486.11",
+        "transformed_answer": 486.11,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 360 km/h in the question as 350 km/h wrongly, and calculates 350 km/h * (1000 m/1 km) * (1 h/3600 s) = approximately 97.22 m/s instead of 360 km/h * (1000 m/1 km) * (1 h/3600 s) = 100 m/s. Its subsequent related step will be affected, calculating 97.22 m/s * 5 s = approximately 486.11 m instead of 100 m/s * 5 s = 500 m in step 2. Please note that you should only consider one error, so step 2 still references the time (5 s) in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 500, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 350 km/h * (1000 m/1 km) * (1 h/3600 s) = approximately 97.22 m/s instead of 360 km/h * (1000 m/1 km) * (1 h/3600 s) = approximately 486.11 m/s. The subsequent step 2 references the result of step 1, calculating 97.22 m/s * 5 s = approximately 486.11 m instead of 486.11 m, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.002^4 = 1.008\n#### 1.008",
+        "transformed_answer": 1.008,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 1.003 in the question as 1.002 wrongly, and calculates 1.002^4=1.008 instead of 1.003^4=1.012. This error changes the final result of the calculation from correct 1.012 to incorrect 1.008 while maintaining the same calculation structure. The error is only related to referencing the base number incorrectly in the first step, while the operation of raising to the power is still performed correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 1.012, and the explanation is that step 1 first makes a mistake in the exponent calculation, calculating 1.003^4 = 1.008 instead of 1.003^4 = 1.012. The subsequent step 2 references the result of step 1, calculating 1.008 x 2 = 2.016 instead of 1.012 x 2 = 2.024, resulting in the final incorrect answer."
+    },
+    {
+        "question": "the difference between c . i . and s . i . on an amount of $ 20,000 for 2 years is $ 72 . what is the rate of interest per annum ?",
+        "original_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72.\nSolving this equation gives x = 0.06.\n#### 6%",
+        "original_answer": 6.0,
+        "transformed_solution": "Let x be the rate of interest per annum.\nThe compound interest is 15000*(1+x)^2 - 15000.\nThe simple interest is 15000*x*2.\nThe difference between c . i . and s . i . is 15000*(1+x)^2 - 15000 - 15000*x*2 = 72.\nSolving this equation won't give an accurate value for x since the original problem statement has been changed.\n#### value_changed",
+        "transformed_answer": "value_changed",
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly references the principal amount as $15,000 instead of the correct $20,000 from the question, and subsequently calculates the compound and simple interest based on the incorrect principal. The subsequent steps carry forward the error from step 1 but still use the correct method as per step in the original solution to calculate the difference based on the incorrect principal values. This leads to an entirely different transformed solution where the rate x cannot be accurately determined. As per instructions, all other steps that reference the correct principal amount of $20,000 do so correctly except for the erroneous step 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 6%, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 15000*(1+x)^2 - 15000 instead of 15000*(1+x) - 15000, resulting in an incorrect value for the rate of interest per annum. The subsequent step 4 references the result of step 3, calculating 15000*x*2 instead of 15000*x, resulting in the final incorrect answer."
+    },
+    {
+        "question": "in some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was ?",
+        "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+        "original_answer": 10,
+        "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.5x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.5x / (x+10) = 20%\n0.5x = 0.2(x+10)\n0.5x = 0.2x + 2\n0.3x = 2\nx = 2 / 0.3\nx = 6.67\nThe original quantity of ghee was approximately 6.67 kg.\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 incorrectly references the percentage of vanaspati ghee as 50% (0.5x) instead of the correct 40% (0.4x) from the question. The subsequent calculations utilize the erroneous value of 0.5x for the amount of vanaspati ghee but correctly apply the subsequent operations based on this error. The incorrect percentage in step 2 affects the equation in step 6 and all subsequent related calculations, leading to a final wrong answer of approximately 6.67 kg instead of the correct 10 kg, but all steps continue to apply mathematical operations correctly, assuming the error introduced in step 2.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.5x = 0.2x + 2 instead of 0.5x = 0.2x + 10, resulting in the final incorrect answer."
+    },
+    {
+        "question": "in a forest 250 deer were caught , tagged with electronic markers , then released . a week later , 50 deer were captured in the same forest . of these 50 deer , it was found that 5 had been tagged with the electronic markers . if the percentage of tagged deer in the second sample approximates the percentage of tagged deer in the forest , and if no deer had either left or entered the forest over the preceding week , what is the approximate number of deer in the forest ?",
+        "original_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 250 / 10 x 100 = 2500\n#### 2500",
+        "original_answer": 2500.0,
+        "transformed_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 200 / 10 x 100 = 2000\n#### 2000",
+        "transformed_answer": 2000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 250 in the question as 200 wrongly, and calculates 200 / 10 x 100 = 2000 instead of 250 / 10 x 100 = 2500. Its subsequent related step will be affected by the erroneous result of this step but still be calculated correctly. Please note that you should only consider one error, so step 1 and step 2 still reference the quantities in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 2500, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 50 / 100 = 0.5 instead of 50 / 100 = 0.05, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Of 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+        "original_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nThe number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) = 56.\n#### 56",
+        "original_answer": 56.0,
+        "transformed_solution": "The number of throwers is 28 and the total number of players is 60, so the number of non-throwers is 60 - 28 = 32.\nThe number of left-handed players is 32 / 3 = 10.67, approximately 11 when rounded to the nearest whole number.\nThe number of right-handed non-throwers is 32 - 11 = 21.\nThe number of right-handed players in the team is 21 (non-throwers) + 28 (throwers) = 49.\n#### 49",
+        "transformed_answer": 49.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 70 in the question as 60 wrongly, and calculates 60 - 28 = 32 instead of 70 - 28 = 42. Its subsequent related steps, step 2, 3, and 4, will be affected. Step 2 changes from 42 / 3 = 14 to 32 / 3 = approximately 11 when rounded to the nearest whole number. Step 3 changes from 42 - 14 = 28 to 32 - 11 = 21. Step 4 changes from 28 (non-throwers) + 28 (throwers) = 56 to 21 (non-throwers) + 28 (throwers) = 49. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 56, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 32 / 3 = 10.67 instead of 32 / 3 = 11. The subsequent step 4 references the result of step 3, calculating 21 + 28 = 49 instead of 21 + 28 = 50, resulting in the final incorrect answer."
+    }
+]

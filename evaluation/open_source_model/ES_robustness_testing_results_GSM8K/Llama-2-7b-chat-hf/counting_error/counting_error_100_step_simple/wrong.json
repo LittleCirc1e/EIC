@@ -1,0 +1,110 @@
+[
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time over 1 day (Sunday), he spends 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4.0,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 in the original solution is changed from splitting the 4 hours of study over 2 days to incorrectly state that all remaining 4 hours are allocated to Saturday, as if the study time is only split over 1 day (implying that Tristan would not study on Sunday). This counting error results in changing the calculation from 4 hours / 2 to 4 hours falsely allocated only to Saturday, without affecting the previous or unrelated steps.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Tristan studies for 4 hours on Saturday because he has 4 hours left to study after using 21 hours on the first 5 days of the week."
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 1 day, he spends 4 hours / 1 = 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 4, the original_solution's even split of remaining hours over 2 days (Saturday and Sunday) has been erroneously changed to be split over 1 day in the transformed_solution, thereby changing 4 hours / 2 = 2 to 4 hours / 1 = 4 for study time on Saturday. This counting error results in a transformed_answer that is different from the original_answer, while the other calculation steps in the transformed_solution remain unaffected by this change.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Tristan studies for 4 hours on Saturday because he has 4 hours left to study after using 21 hours on the first 5 days of the week."
+    },
+    {
+        "question": "Ludwig works 7 days a week and he usually works half of the day during Friday, Saturday, and Sunday. If his daily salary is $10, how much does he earn every week?",
+        "original_solution": "Ludwig earns a total of $10 x 4 = $40 from Monday to Thursday.\nHe earns $10/2= $5 per day on Friday, Saturday, and Sunday.\nSo, his total salary for Friday, Saturday, Sunday is $5 x 3 = $15.\nTherefore, his total weekly salary is $40 + $15 = $55.\n#### 55",
+        "original_answer": 55.0,
+        "transformed_solution": "Ludwig earns a total of $10 x 4 = $40 from Monday to Thursday.\nHe earns $10/2 = $5 per day on Friday, Saturday, and Sunday.\nSo, his total salary for Friday, Saturday, Sunday is $5 x 2 = $10.\nTherefore, his total weekly salary is $40 + $10 = $50.\n#### 50",
+        "transformed_answer": 50.0,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously counts Friday, Saturday, and Sunday as 2 days instead of 3 days. This changes the total salary calculation for these days from $5 x 3 = $15 to $5 x 2 = $10 in the transformed_solution. And it affects step 4, the final weekly salary calculation changes from $40 + $15 = $55 to $40 + $10 = $50. It should be noted that you only need to consider this one step of counting error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Ludwig works half of the day on Friday, Saturday, and Sunday, so his total weekly salary is $40 + ($10/2) = $50."
+    },
+    {
+        "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+        "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+        "original_answer": 272.0,
+        "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+        "transformed_answer": 208.0,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day each instead of 2 days each, transforming the original 'Each week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.' into 'Each week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.' And it affects the subsequent related step, with the original 'In one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.' changing into 'In one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.' The final sum in step 7 changes accordingly from 144 + 128 = 272 hours to 144 + 64 = 208 hours. The transformed answer should be different from the original answer, and no previous or unrelated steps are affected.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is the assumption that Kimo has three 1-hour classes each day on Monday, Wednesday, and Friday. In reality, Kimo has two 2-hour classes each day on Tuesday and Thursday, which affects the total number of hours he spends attending classes in one semester."
+    },
+    {
+        "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+        "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+        "original_answer": 272,
+        "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+        "transformed_answer": 208,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day instead of 2 days each week, resulting in 4 x 2 = 8 becoming 4 x 1 = 4. And it affects the subsequent related step 6, changing from 8 x 16 = 128 to 4 x 16 = 64, and step 7, changing from 144 + 128 = 272 to 144 + 64 = 208. It should be noted that only this step of counting error needs to be considered; the other calculation processes are correct and follow the structure of the original solution.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is the assumption that Kimo has three 1-hour classes each day on Monday, Wednesday, and Friday. In reality, Kimo has two 2-hour classes each day on Tuesday and Thursday, which affects the total number of hours he spends attending classes in one semester."
+    },
+    {
+        "question": "Ludwig works 7 days a week and he usually works half of the day during Friday, Saturday, and Sunday. If his daily salary is $10, how much does he earn every week?",
+        "original_solution": "Ludwig earns a total of $10 x 4 = $40 from Monday to Thursday.\nHe earns $10/2= $5 per day on Friday, Saturday, and Sunday.\nSo, his total salary for Friday, Saturday, Sunday is $5 x 3 = $15.\nTherefore, his total weekly salary is $40 + $15 = $55.\n#### 55",
+        "original_answer": 55,
+        "transformed_solution": "Ludwig earns a total of $10 x 4 = $40 from Monday to Thursday.\nHe earns $10/2= $5 per day on Friday, Saturday, and Sunday.\nSo, his total salary for Friday, Saturday, Sunday is $5 x 2 = $10.\nTherefore, his total weekly salary is $40 + $10 = $50.\n#### 50",
+        "transformed_answer": 50,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously counts Friday, Saturday, and Sunday as 2 days instead of 3 days, resulting in the correct $5 x 3 = $15 becoming an incorrect $5 x 2 = $10. This affects step 4, changing the total weekly salary from $40 + $15 = $55 to $40 + $10 = $50. It should be noted that only this step contains a counting error, and the rest of the calculation processes remain correct. This altered step results in a transformed_answer that is different from the original_answer.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Ludwig works half of the day on Friday, Saturday, and Sunday, so he earns $5 per day on those days. Therefore, his total weekly salary is $40 + $5 = $45. #."
+    },
+    {
+        "question": "A baker bakes 5 loaves of bread an hour in one oven. He has 4 ovens. From Monday to Friday, he bakes for 5 hours, but on Saturday and Sunday, he only bakes for 2 hours. How many loaves of bread does the baker bake in 3 weeks?",
+        "original_solution": "In an hour, the baker bakes 5 x 4 = 20 loaves of bread.\nFrom Monday to Friday, he bakes 5 x 20 = 100 loaves of bread per day.\nFrom Monday to Friday, he bakes a total of 100 x 5 = 500 loaves of bread.\nOn Saturday and Sunday, he bakes 2 x 20 = 40 loaves of bread per day.\nOn Saturday and Sunday, he bakes a total of 40 x 2 = 80 loaves of bread.\nIn a week, he bakes 500 + 80 = 580 loaves of bread.\nIn 3 weeks, he bakes 580 x 3 = 1740 loaves of bread.\n#### 1740",
+        "original_answer": 1740,
+        "transformed_solution": "In an hour, the baker bakes 5 x 4 = 20 loaves of bread.\nFrom Monday to Friday, he bakes 5 x 20 = 100 loaves of bread per day.\nFrom Monday to Friday, he bakes a total of 100 x 5 = 500 loaves of bread.\nOn Saturday and Sunday, he bakes 2 x 20 = 40 loaves of bread per day.\nOn Saturday and Sunday, he bakes a total of 40 x 1 = 40 loaves of bread.\nIn a week, he bakes 500 + 40 = 540 loaves of bread.\nIn 3 weeks, he bakes 540 x 3 = 1620 loaves of bread.\n#### 1620",
+        "transformed_answer": 1620,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 erroneously counts Saturday and Sunday as 1 day instead of 2 days, changing the original '40 x 2 = 80 loaves of bread' to '40 x 1 = 40 loaves of bread'. This in turn affects step 6, changing the weekly total from '500 + 80 = 580 loaves of bread' to '500 + 40 = 540 loaves of bread', and step 7, changing the 3-week total from '580 x 3 = 1740 loaves of bread' to '540 x 3 = 1620 loaves of bread'. It should be noted that only one counting error is considered, and the previous steps where the counting was correct remain unchanged.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The explanation is that the baker bakes 5 loaves of bread per hour, and he has 4 ovens, so he can bake 5 x 4 = 20 loaves of bread per hour. From Monday to Friday, he bakes for 5 hours, so he bakes a total of 20 x 5 = 100 loaves of bread per day. On Saturday and Sunday, he bakes for 2 hours, so he bakes a total of 20 x 2 = 40 loaves of bread per day. In a week, he bakes a total of 100 + 40 = 140 loaves of bread. In 3 weeks, he bakes a total of 140 x 3 = 420 loaves of bread. Therefore, the answer is 1620 loaves of bread."
+    },
+    {
+        "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+        "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+        "original_answer": 272,
+        "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+        "transformed_answer": 208,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution introduces a counting error by changing the number of days in which Kimo attends 2-hour classes. Instead of two days (Tuesday and Thursday), step 5 mistakenly counts only one day for 2-hour classes. This alters the subsequent calculations — instead of attending class for 8 hours each week on Tuesday and Thursday, the transformed_solution suggests he only attends 4 hours. In one semester, this changes from 8 x 16 = 128 hours to 4 x 16 = 64 hours, altering the total hours Kimo spends attending classes for the semester.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is the assumption that Kimo has three 1-hour classes each day on Monday, Wednesday, and Friday. In reality, Kimo has two 2-hour classes each day on Tuesday and Thursday, which affects the total number of hours he spends attending classes in one semester."
+    },
+    {
+        "question": "Mitch is a freelancer, she works 5 hours every day from Monday to Friday and 3 hours every Saturday and Sunday. If she earns $3 per hour and earns double on weekends, how much does she earn every week?",
+        "original_solution": "Mitch earns 5 x $3 = $15 every weekday.\nSo, she earns $15 x 5 = $75 from Monday to Friday.\nAnd she earns $3 x 2 = $6 per hour every weekend.\nHence, the total amount she earns every weekend is $6 x 3= $18.\nSo, she earns $18 x 2 = $36 every Saturday and Sunday.\nTherefore, the total amount she earns every week is $75 + $36= $111.\n#### 111",
+        "original_answer": 111.0,
+        "transformed_solution": "Mitch earns 5 x $3 = $15 every weekday.\nSo, she earns $15 x 5 = $75 from Monday to Friday.\nAnd she earns $3 x 2 = $6 per hour every weekend.\nHence, the total amount she earns every weekend is $6 x 3= $18.\nSo, she earns $18 x 1 = $18 every Saturday and Sunday.\nTherefore, the total amount she earns every week is $75 + $18= $93.\n#### 93",
+        "transformed_answer": 93.0,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 erroneously counts Saturday and Sunday as 1 day instead of 2 days in the transformed_solution, resulting in $18 x 2= $36 becoming $18 x 1= $18. And it affects the last step, changing it from $75 + $36= $111 to $75 + $18= $93. It should be noted that you only need to consider one step of counting error, and the previous or unrelated steps should remain correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #2, which is the calculation of Mitch's weekend earnings. The calculation should be $3 x 2 = $6 per hour, not $3 x 3 = $9. Therefore, the total amount Mitch earns every weekend is $6 x 2 = $12, not $18. This mistake affects the final answer, which is $93 instead of $105."
+    }
+]

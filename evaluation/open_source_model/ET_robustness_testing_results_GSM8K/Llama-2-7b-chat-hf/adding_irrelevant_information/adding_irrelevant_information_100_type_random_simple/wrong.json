@@ -1,0 +1,38 @@
+[
+    {
+        "question": "A luxury bag costs $3000. A reseller wants to get a 15% profit. How much should she sell the bag?",
+        "original_solution": "The reseller wants to get $3000 x 15/100 = $450 profit.\nThus, she needs to sell it for $3000 + $450 = $3450.\n#### 3450",
+        "original_answer": 3450.0,
+        "transformed_solution": "The reseller wants to get $3000 x 15/100 = $450 profit.\nAdditionally, the reseller wants to include her commission fee which is 5% of the bag's cost, so commission fee is $3000 x 5/100 = $150.\nThus, she needs to sell it for $3000 + $450 + $150 = $3600.\n#### 3600",
+        "transformed_answer": 3600.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Additionally, the reseller wants to include her commission fee which is 5% of the bag's cost>, resulting in step 2 changing from $3000 + $450 = $3450 in the original_solution to $3000 + $450 + $150 = $3600 in the transformed_solution. The additional information about the commission fee directly affects the final selling price calculation, thus changing the transformed_answer to $3600.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The reseller wants to get a 15% profit, so she needs to sell the bag for $3000 x 15/100 = $450, which is the profit. Additionally, she wants to include her commission fee, which is 5% of the bag's cost, so the total amount she needs to sell the bag for is $3000 + $450 + $150 = $3600."
+    },
+    {
+        "question": "Linda is painting her bedroom. Her bedroom has 4 walls, with the room being 20 feet wide by 20 feet long by 8 feet tall. One wall has a 3-foot by 7-foot doorway. A second wall has a 6-foot by 4-foot window. A third wall has a 5-foot by 7-foot doorway to a walk-in-closet. And the fourth wall is completely solid. What is the total area of wall space that Linda will have to paint?",
+        "original_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nThe total area of the doors and windows is 21 sq. ft + 24 sq. ft. + 35 sq. ft. = 80 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors and window are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors and window, the total wall area Linda will have to paint is 640 sq. ft. - 80 sq. ft. = 560 sq. ft.\n#### 560",
+        "original_answer": 560.0,
+        "transformed_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nBecause there is also a 2-foot by 2-foot painting on the second wall that does not need painting, the total area of the doors, windows, and the painting is 21 sq. ft + 24 sq. ft. + 35 sq. ft. + 4 sq. ft. = 84 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors, window, and painting are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors, window, and the painting, the total wall area Linda will have to paint is 640 sq. ft. - 84 sq. ft. = 556 sq. ft.\n#### 556",
+        "transformed_answer": 556.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because there is also a 2-foot by 2-foot painting on the second wall that does not need painting>, resulting in step 4 changing from a total area of 80 sq. ft. of doors and windows to 84 sq. ft., including the painting. This additional irrelevant detail modifies the total wall area to be painted from 560 sq. ft. in the original solution to 556 sq. ft. in the transformed solution. The error has been integrated into an existing step where it affects the final calculation.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "Elmer has a pond that initially contained 2400 pollywogs, but these pollywogs matured into toads and left the pond at a constant rate of 50 pollywogs per day. In addition, Elmer has a son named Melvin, who loves to catch pollywogs, remove them from the pond, and release them into a nearby stream. For the first 20 days, Melvin caught 10 pollywogs per day and released them into the stream. How many days did it take for all of the pollywogs to disappear from the pond?",
+        "original_solution": "For the first 20 days, the combined rate of disappearance of pollywogs from the pond is 50+10=60 pollywogs per day.\nDuring these first 20 days, the total number of pollywogs removed was 60*20=1200 pollywogs.\nThis means after 20 days there were 2400-1200=1200 pollywogs left in the pond.\nAt a disappearance rate of rate 50 pollywogs per day, it will take an additional 1200/50=24 days for the rest of the pollywogs to disappear from the pond.\nThus, overall, it will take 20+24=44 days for all of the pollywogs to disappear from the pond.\n#### 44",
+        "original_answer": 44.0,
+        "transformed_solution": "For the first 20 days, the combined rate of disappearance of pollywogs from the pond is 50+10=60 pollywogs per day.\nDuring these first 20 days, the total number of pollywogs removed was 60*20=1200 pollywogs.\nThis means after 20 days there were 2400-1200=1200 pollywogs left in the pond.\nAssuming Elmer also started catching an additional 5 pollywogs per day from the pond starting from day 21, the new daily disappearance rate would be 50+5=55 pollywogs per day.\nAt this new disappearance rate of 55 pollywogs per day, it will take an additional 1200/55=21.82 days, which rounds up to 22 days for the rest of the pollywogs to disappear from the pond.\nThus, overall, it will take 20+22=42 days for all of the pollywogs to disappear from the pond.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming Elmer also started catching an additional 5 pollywogs per day from the pond starting from day 21>, resulting in step 4 changing from a rate of 50 pollywogs per day to a new daily disappearance rate of 55 pollywogs per day. This changes the time calculation from 1200/50=24 to 1200/55=21.82 days which rounds up to 22 days. The final step changes from 20+24=44 days to 20+22=42 days. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "question": "On Friday, Hank opened his used-bicycle store with a stock of bicycles, all fixed-up and ready to ride. Over the course of the day, he sold 10 bicycles and bought an additional 15 to fix up. On Saturday, he sold 12 bicycles and bought 8 more. And on Sunday, he sold 9 bicycles and bought 11 more. What was the net increase in the number of bicycles in stock in Hank's store over the three days?",
+        "original_solution": "He sold 10+12+9=31 bicycles.\nHe bought 15+8+11=34 bicycles.\nHe now has 34-31=3 more than at Friday's opening.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He sold 10+12+9=31 bicycles.\nHe bought 15+8+11=34 bicycles.\nHe now has 30-31=-1 more than at Friday's opening.\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 34 as 30 from step 2 and changes 34-31=3 to 30-31=-1. It should be noted that step 2 in the transformed_solution <He bought 15+8+11=34 bicycles.> should be the same as the step 2 in the original_solution <He bought 15+8+11=34 bicycles.> and calculates its result 34 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct. In addition, the transformed_answer should be different from the original_answer, which is why it is now -1 instead of 3.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 30-31=-1 instead of 30-34=-4. The subsequent step 4 references the result of step 3, calculating -1 instead of -4. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nTherefore, the correct answer is -4."
+    }
+]

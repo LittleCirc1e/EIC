@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Cole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?",
+        "original_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 - $2 = $4 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $4 = $32.\nTherefore, jogger jeans originally cost $32 - $24 = $8 more than the tattered jeans.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 + $2 = $8 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $8 = $36.\nTherefore, jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 2 to an addition, transforming $6 - $2 = $4 into $6 + $2 = $8. This affects subsequent related step 4 and step 5. Step 4 remains unchanged because no other steps affected the purchase price of the tattered jeans. However, the revised savings calculation in step 5, $28 + $8 = $36, leads to the changed conclusion in step 6, stating that jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans instead of $8. Only the operator in step 2 is incorrect to induce the wrong conclusion, but its calculation is correct, as are the calculations of subsequent affected steps.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating $28 + $8 = $36 instead of $28 + $2 = $30. The subsequent step 5 references the result of step 4, calculating $36 / 3 = $12 instead of $30 / 3 = $10, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

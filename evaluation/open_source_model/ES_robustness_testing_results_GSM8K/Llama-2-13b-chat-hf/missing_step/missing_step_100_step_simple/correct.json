@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Michael has $42. Michael gives away half the money to his brother. His brother then buys 3 dollars worth of candy. If his brother has $35 left, how much money, in dollars, did his brother have at first?",
+        "original_solution": "Michael gives away 42/2=21 dollars.\nBefore buying candy, his brother has 35+3=38 dollars.\nHis brother had 38-21=17 dollars at first.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "Michael gives away 42/2=21 dollars.\nHis brother had 35+3+21=59 dollars at first.\n#### 59",
+        "transformed_answer": 59.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed_solution deletes intermediate step 2 from the original_solution. The deleted step 2 references the result 3 from the question, and step 3 references both the result 38 from step 2 and the result 21 from step 1. After deletion of step 2, the new step 2 should now reference the results 35 and 3 from the question, as well as the result 21 from the original step 1, changing the equation to 35+3+21=59 dollars, combining the original steps 2 and 3 into a single new step 2. The wrong_step is 2 in the transformed_solution because it is the first step referencing the result of the deleted step. The transformed_answer (59) should be different from the original_answer (17) since an intermediate step was removed from the calculation.",
+        "eval_result": "\n\nPlease provide your response here.\n\nPlease note that the [Solution] is incorrect, and the first wrong step is step #2, which is the calculation of 42/2. The correct calculation should be 42/2=21, not 42/2=2. Therefore, the explanation is that the first wrong step is step #2, and the final answer is not 59, but 21.\n\nThe solution is incorrect, the first wrong step is step #2, and the explanation is that the first wrong step is step #2, and the final answer is not 59, but 21."
+    }
+]

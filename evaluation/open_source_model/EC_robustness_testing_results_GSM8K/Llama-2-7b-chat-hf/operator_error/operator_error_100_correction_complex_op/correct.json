@@ -1,0 +1,50 @@
+[
+    {
+        "question": "In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?",
+        "original_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 + 9 = 24 green cards.\nYellow cards make up to 15 + 24 = 39 cards.\nSo in total, there are 39 + 39 = 78 cards of different colors.\n#### 78",
+        "original_answer": 78.0,
+        "transformed_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 - 9 = 6 green cards.\nYellow cards make up to 15 + 6 = 21 cards.\nSo in total, there are 21 + 21 = 42 cards of different colors.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The example changes the addition in the second step of the calculation to subtraction by turning the correct form '15 + 9 = 24' into '15 - 9 = 6', thus showing an incorrect number of green cards. This logically affects the related subsequent steps. The next step incorrectly calculates the number of yellow cards (now the sum is 15 + 6 = 21), and the final total is incorrectly calculated as 21 + 21 = 42 cards. It should be noted that the operator is only incorrect in the second step with the calculation correctly made based on the incorrect operator, leading to incorrect results for the subsequent figures that rely on it.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 78, and the explanation is that the operator in step 3 encounters an error, division should be used instead of subtraction. It miscalculates 60% of 60 = 36 instead of 60/100 = 9, resulting in the final erroneous result."
+    },
+    {
+        "question": "At a convention, 16 of 36 delegates arrived with pre-printed name badges. Half of the remaining delegates made their own, hand-written name badges. How many delegates were not wearing name badges?",
+        "original_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20/2=10 made hand-written badges\nThere were 20-10=10 with no name badge.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20*2=40 made hand-written badges\nThere were 20-40=-20 with no name badge.\n#### -20",
+        "transformed_answer": -20.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 2 into multiplication, turning 20/2=10 into 20*2=40. This results in an incorrect number of delegates making hand-written badges, which further affects step 3, changing 20-10=10 to 20-40=-20 for the number of delegates with no name badge. The operator change leads to an incorrect result for step 2, which then causes the subsequent step to be affected, although the calculations in step 3 are technically correct given the incorrect information from step 2.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that the operator in step 3 encounters an error and should use multiplication instead of subtraction. It miscalculates 20 x 2 = 40 instead of 20 - 40 = -20, resulting in the final erroneous result."
+    },
+    {
+        "question": "Anakin and Locsin went to the beach today. Anakin caught 10 starfish, 6 sea horses, and 3 clownfish. While Locsin caught 5 fewer starfish than Anakin, 3 fewer sea horses than Anakin, and 2 more clownfish than Anakin. How many fish were they able to catch?",
+        "original_solution": "Locsin caught 10 - 5 = 5 starfishes.\nThey caught 10 + 5 = 15 starfishes.\nLocsin caught 6 - 3 = 3 seahorses\nThey caught 6 + 3 = 9 seahorses\nLocsin caught 3 + 2 = 5 clownfish.\nSo, they caught 3 + 5 = 8 clownfish.\nTherefore, Anakin and Locsin were able to catch a total of 15 + 9 + 8 = 32 fish.\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "Locsin caught 10 - 5 = 5 starfishes.\nThey caught 10 + 5 = 15 starfishes.\nLocsin caught 6 * 3 = 18 seahorses\nThey caught 6 + 18 = 24 seahorses\nLocsin caught 3 + 2 = 5 clownfish.\nSo, they caught 3 + 5 = 8 clownfish.\nTherefore, Anakin and Locsin were able to catch a total of 15 + 24 + 8 = 47 fish.\n#### 47",
+        "transformed_answer": 47.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the subtraction in step 3 into multiplication, and by changing - to *, it turns 6 - 3 = 3 into 6 * 3 = 18, altering the number of seahorses that Locsin caught. This affects the subsequent related step 4, where the combined number of seahorses turns from 6 + 3 = 9 into 6 + 18 = 24. The final step which sums up all the fish changes accordingly from 15 + 9 + 8 = 32 into 15 + 24 + 8 = 47, leading to a different total number of caught fish. It should be noted that only the operator in step 3 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 3 is correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 32, and the explanation is that the operator in step 6 encounters an error and should use multiplication instead of addition. It miscalculates 6 x 3 = 18 instead of 6 x 5 = 30, resulting in the final erroneous result."
+    },
+    {
+        "question": "Cilia wants to buy a multi-level dumbbell system. The first pair of dumbbells are 3 lb weights, the second pair is 5 lb weights and the third is 8 lb pounds. How much does the entire system weigh?",
+        "original_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2*5 = 10 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+10+16 = 32 lbs\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2+5 = 7 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+7+16 = 29 lbs\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the operator change occurs at the second step. By incorrectly changing the multiplication operator to an addition operator (* to +), the calculation for the weight of the second pair of dumbbells changes from 2*5 = 10 lbs to 2+5 = 7 lbs, and the resulting total system weight is affected, changing from 6+10+16 = 32 lbs to 6+7+16 = 29 lbs. This alters the sum at the final step, yielding an incorrect total weight of 29 lbs instead of the original 32 lbs. The calculation after the change at step 2 is performed correctly, but introduces an error inherited by subsequent steps related to the incorrect weight of the second pair of dumbbells.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 32, and the explanation is that the operator in step 3 encounters an error, multiplication should be used instead of addition. It miscalculates 2*8=16 instead of 8*2=16. This affects the final answer."
+    }
+]

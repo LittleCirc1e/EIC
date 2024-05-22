@@ -1,0 +1,62 @@
+[
+    {
+        "question": "The total number of plums that grow during each year on a certain plum tree is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). During its 5th year, the plum tree grew 50 plums. If this trend continues, how many plums will it grow during its 6th year?",
+        "original_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nIt will grow 5 plums during its 6th year because 50 - 5 = 45\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nAssuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%, it will grow 10% fewer plums during its 6th year, so 50 - 5 - (10% of 50) = 45 - 5 = 40\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%>, resulting in step 3 changing from 50 - 5 = 45 in the original_solution to 50 - 5 - (10% of 50) = 45 - 5 = 40 in the transformed_solution. The natural conditions affecting the plum production are not specified in the question, thus the introduction of the frost condition adds irrelevant information and changes the outcome erroneously.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #45.\n\nExplanation:\nThe solution assumes that the tree will grow 50 plums during its 6th year, which is incorrect. According to the question, the number of plums that grow during each year is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). In this case, the tree grew 50 plums during its 5th year, which means that it will grow 50 - 4 = 46 plums during its 6th year.\n\nThe solution also assumes that the tree will be 5 years old during its 6th year, which is incorrect. According to the question, the tree was 4 years old during its 5th year, which means that it will be 5 - 1 = 4 years old during its 6th year.\n\nFinally, the solution assumes that the tree will grow 10% fewer plums during its 6th year, which is incorrect. According to the question, the tree will grow 10% fewer plums during its 6th year, which means that it will grow 46 - 10% of 46 = 40 plums during its 6th year.\n\nTherefore, the correct answer is #45."
+    },
+    {
+        "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+        "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "Considering that Lilly gave away 3 fish, they now have 10 - 3 + 12 = 19 fish in all.\n#### 19",
+        "transformed_answer": 19.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <Considering that Lilly gave away 3 fish>, resulting in step 1 changing from 10 + 12 = 22 fish in the original_solution to 10 - 3 + 12 = 19 fish in the transformed_solution. The transformation introduces a scenario that was not provided in the question, thus affecting the final total count of the fish and changing the correct answer. It should be noted that there should only be one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #22.\n\nExplanation: The solution assumes that Lilly gave away 3 fish, and then Rosy gave away 3 fish as well. However, the question only asks about the total number of fish Lilly and Rosy have in all, not the number of fish each of them has separately. Therefore, the correct answer is 10 + 12 = 22 fish in all."
+    },
+    {
+        "question": "a trader sells 85 meters of cloth for rs . 8925 at the profit of rs . 35 per metre of cloth . what is the cost price of one metre of cloth ?",
+        "original_solution": "The total profit is 8925 - 85 * (cost price + 35) = 8925 - 85 * cost price - 85 * 35\nThe total profit is 8925 - 85 * cost price - 2975\nThe total profit is 5950 = 85 * cost price\nThe cost price is 5950 / 85 = 70\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "The total profit is 8925 - 85 * (cost price + 35) - 85 additional expenses due to transportation = 8925 - 85 * cost price - 85 * 35 - 85*2\nThe total profit is 8925 - 85 * cost price - 2975 - 170\nThe total profit is 5780 = 85 * cost price\nThe cost price is 5780 / 85 = 68\n#### 68",
+        "transformed_answer": 68.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <85 additional expenses due to transportation>, resulting in step 1 changing from 8925 - 85 * (cost price + 35) = 8925 - 85 * cost price - 85 * 35 in the original_solution to 8925 - 85 * (cost price + 35) - 85 additional expenses due to transportation= 8925 - 85 * cost price - 85 * 35 - 85*2 in the transformed_solution. The additional term of -85*2 represents the arbitrary expenses added which affects the subsequent calculations and the final result from 70 to 68. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #70.\n\nExplanation: The solution is incorrect because it adds irrelevant information. The cost price of one meter of cloth is not included in the question. Therefore, the calculation of the total profit is incorrect, and the final answer is also incorrect. To get the correct answer, we need to calculate the cost price of one meter of cloth first, which is 68."
+    },
+    {
+        "question": "p is 40 % more efficient than q . p can complete a work in 24 days . if p and q work together , how many days will it take to complete the same work ?",
+        "original_solution": "If q is 100, p is 140 because 100 + (40% * 100) = 100 + 40 = 140\nIf p can complete the work in 24 days, q can complete the work in 24 x (140/100) = 33.6 days\nWorking together, they can complete the work in 1 / (1/24 + 1/33.6) = 1 / (0.04166667 + 0.0297619) = 1 / 0.07142857 = 14 days\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "If q is 100, p is 140 because 100 + (40% * 100) = 100 + 40 = 140\nIf p can complete the work in 24 days, q can complete the work in 24 x (140/100) = 33.6 days\nAssuming on one of the days there is a required break for maintenance taking half a day, working together without the break, they would complete the work in 1 / (1/24 + 1/33.6) days, but with the break, it will take additional 0.5 day. So the total days are 1 / (0.04166667 + 0.0297619) + 0.5 = 1 / 0.07142857 + 0.5 = 14 + 0.5 = 14.5 days\n#### 14.5",
+        "transformed_answer": 14.5,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming on one of the days there is a required break for maintenance taking half a day>, resulting in step 3 changing from 1 / (1/24 + 1/33.6) = 14 days in the original_solution to 1 / (0.04166667 + 0.0297619) + 0.5 = 14.5 days in the transformed_solution. The additional break time was not provided in the question and directly affects the final calculation of the answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #14 days.\n\nExplanation: The solution is incorrect because it assumes that the efficiency of p and q is the same, which is not the case. According to the question, p is 40% more efficient than q, which means that p can complete the work in 40% less time than q. Therefore, the total time it will take for p and q to complete the work together is the time it takes for q to complete the work, which is 33.6 days, multiplied by the efficiency ratio of p to q, which is 1 / (1 / 24 + 1 / 33.6) = 1 / 0.07142857 = 14.5 days."
+    },
+    {
+        "question": "At a garage sale, all of the items were sold at different prices. If the price of a radio sold at the garage sale was both the 17th highest price and the 24th lowest price among the prices of the items sold, how many items were sold at the garage sale?",
+        "original_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nThe radio was the 24th lowest price, so there were 23 items priced lower than the radio.\nThere were 16 + 1 + 23 = 40 items sold at the garage sale.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nConsidering a mistake where an item was double-counted because it was initially misplaced, the radio was actually the 23rd lowest price instead of the 24th, so there were 23 - 1 = 22 items priced lower than the radio.\nThere were 16 + 1 + 22 = 39 items sold at the garage sale.\n#### 39",
+        "transformed_answer": 39.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Considering a mistake where an item was double-counted because it was initially misplaced>, resulting in step 2 changing from the radio being the 24th lowest price to the radio being the 23rd lowest price, by subtracting one for the mistake. This change leads to a recalculation of the items priced lower than the radio from 23 to 22 and ultimately affects the total number of items sold, changing from 40 items in the original_solution to 39 items in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in a single step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #40.\n\nExplanation: The solution assumes that the radio was the 17th highest price, so there were 16 items priced higher than the radio. However, this calculation assumes that there were only 16 items sold at the garage sale, which is incorrect. Since the radio was both the 17th highest price and the 24th lowest price, there must be 25 items sold at the garage sale. Therefore, the correct answer is #40."
+    }
+]

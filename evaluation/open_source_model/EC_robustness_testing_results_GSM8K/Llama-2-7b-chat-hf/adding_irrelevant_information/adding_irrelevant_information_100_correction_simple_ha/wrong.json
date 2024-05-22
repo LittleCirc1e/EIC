@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Irene earns $500 if she works for 40 hours a week and gets an extra $20 for every hour of overtime. If she worked 50 hours last week, calculate her total income.",
+        "original_solution": "If Irene worked 50 hours last week, the total number of hours counting as overtime is 50-40 = 10 hours.\nSince she's given $20 for every hour of overtime, she earned 10*$20 = $200 in overtime.\nHer total income, including the overtime, is $500+$200= $700\n#### 700",
+        "original_answer": 700.0,
+        "transformed_solution": "If Irene worked 50 hours last week, the total number of hours counting as overtime is 50-40 = 10 hours.\nSince she's given $20 for every hour of overtime, she earned 10*$20 = $200 in overtime.\nAdditionally, Irene received a bonus for perfect attendance amounting to $50, so her total income, including the overtime and bonus, is $500 + $200 + $50 = $750\n#### 750",
+        "transformed_answer": 750.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Additionally, Irene received a bonus for perfect attendance amounting to $50>, resulting in step 3 changing from $500 + $200 = $700 in the original_solution to $500 + $200 + $50 = $750 in the transformed_solution. This addition of a bonus affects the calculation of the total income, thereby changing the final result. The rest of the calculation processes are correct and only the addition of the bonus is the single error made in the transformed_solution.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the total number of hours worked, including overtime hours, and adds the bonus for perfect attendance to arrive at the total income.\n\nThe solution is incorrect, and the correct answer is #. The solution mistakenly adds $20 for every hour of overtime, resulting in an incorrect total of $750. The correct total income should be $650, calculated as follows: 50 hours worked at $500 per hour = $25,000 + $20 for every hour of overtime = $25,200."
+    },
+    {
+        "question": "Patrick has 4 hours less than twice the amount of time that Greg has left to finish his homework. Greg has six hours less than Jacob left to finish his homework. If Jacob has 18 hours left to finish his homework, calculate the total number of hours they all have left to finish their homework?",
+        "original_solution": "If Jacob has 18 hours left to finish his homework, Greg has 18-6 = 12 hours left to finish his homework.\nThe total number of hours Jacob and Greg have left to finish their homework is 12+18 = 30 hours.\nPatrick has 4 hours less than twice Greg has left to finish his homework, meaning Patrick has 4 hours less than 12*2 = 24 hours left to finish his homework.\nPatrick has 24-4 = 20 hours left to finish his homework.\nAltogether, the three have 30+20 = 50 hours left to finish their homework.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If Jacob has 18 hours left to finish his homework, and he needs to spend 2 extra hours helping Greg, Greg has 18 - 6 - 2 = 10 hours left to finish his homework.\nThe total number of hours Jacob and Greg have left to finish their homework is 10+18 = 28 hours.\nPatrick has 4 hours less than twice Greg has left to finish his homework, meaning Patrick has 4 hours less than 10*2 = 20 hours left to finish his homework.\nPatrick has 20-4 = 16 hours left to finish his homework.\nAltogether, the three have 28+16 = 44 hours left to finish their homework.\n#### 44",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and he needs to spend 2 extra hours helping Greg>, resulting in step 1 changing from 18-6 = 12 hours left to finish his homework in the original_solution to 18 - 6 - 2 = 10 hours left to finish his homework in the transformed_solution. Its subsequent related steps (2, 3, and 4) are affected, changing the final total from 50 hours to 44 hours. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the number of hours each person has left to finish their homework, taking into account the information provided in the question and the errors in the solution. By adding the number of hours each person has left to finish their homework, we get the total number of hours they all have left to finish their homework, which is 44 hours."
+    }
+]

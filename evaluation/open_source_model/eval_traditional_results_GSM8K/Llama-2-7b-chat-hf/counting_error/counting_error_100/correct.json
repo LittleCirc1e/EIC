@@ -1,0 +1,97 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+            "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+            "original_answer": 17.0,
+            "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nThe average distance traveled per day is counted as 51/2 = 25.5 miles because Wednesday is mistakenly excluded.\n#### 25.5",
+            "transformed_answer": 25.5,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 erroneously assumes the total distance covered should be divided by 2 days instead of 3, which means Wednesday is mistakenly excluded. Hence the average 51/3=17 changes to 51/2=25.5. The error is isolated to the counting of the number of days, and the previous step regarding the calculation of total distance remains unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?\n\n### Response:",
+        "output_str": "\nTo find the average distance traveled per day, we need to add the total distance traveled on each day and divide the result by the number of days driven. In this case, the total distance traveled is 12 + 18 + 21 = 51 miles. Dividing this total by the number of days driven (3 days) gives us an average distance traveled per day of 17 miles.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+            "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+            "original_answer": 17.0,
+            "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+            "transformed_answer": 25.5,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?\n\n### Response:",
+        "output_str": "\nTo find the average distance traveled per day, we need to add the total distance traveled on each day and divide the result by the number of days driven. In this case, the total distance traveled is 12 + 18 + 21 = 51 miles. Dividing this total by the number of days driven (3 days) gives us an average distance traveled per day of 17 miles.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 80,
+        "gsm8k_data": {
+            "question": "Steve decides to read a new book.  He reads 100 pages Monday, Wed, and Friday.  The book is 2100 pages long.  How many weeks does it take to read them all?",
+            "original_solution": "He reads 100*3=300 pages a week\nSo it would take 2100/300=7 weeks to read the book\n#### 7",
+            "original_answer": 7.0,
+            "transformed_solution": "He reads 100*2=200 pages a week\nSo it would take 2100/200=10.5 weeks to read the book\n#### 10.5",
+            "transformed_answer": 10.5,
+            "wrong_step": 1,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 wrongly counts the number of days Steve reads 100 pages as 2 days instead of 3 days (Monday, Wednesday, and Friday), changing the correct calculation of 100*3=300 pages a week to an incorrect 100*2=200 pages a week. It affects the subsequent step, changing the calculation of the number of weeks from 2100/300=7 to 2100/200=10.5. All prior steps remain unaffected, and the calculation processes after correcting the counting error are correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSteve decides to read a new book.  He reads 100 pages Monday, Wed, and Friday.  The book is 2100 pages long.  How many weeks does it take to read them all?\n\n### Response:",
+        "output_str": "\nTo determine how many weeks it will take Steve to read the entire book, we need to divide the total number of pages by the number of pages he reads each day. Since Steve reads 100 pages on Monday, Wednesday, and Friday, we can calculate the total number of pages he reads in a week as follows:\n\n100 pages/day x 3 days/week = 300 pages/week\n\nNow, let's divide the total number of pages in the book (2100 pages) by the number of pages Steve reads in a week (300 pages/week):\n\n2100 pages / 300 pages/week = 7 weeks\n\nTherefore, it will take Steve 7 weeks to read the entire book.",
+        "extract_true_num": 7.0,
+        "extract_pred_num": 7.0,
+        "is_correct": true
+    },
+    {
+        "index": 82,
+        "gsm8k_data": {
+            "question": "Steve has decided to become a baker. On Mondays, Wednesdays and Fridays, he bakes apple pies. On Tuesdays and Thursdays, he bakes cherry pies. If he bakes 12 pies per day, how many more apple pies does he bake than cherry pies in one week?",
+            "original_solution": "In one week, he bakes 3 * 12 = 36 apple pies.\nIn one week, he bakes 2 * 12 = 24 cherry pies.\nHe bakes 36 - 24 = 12 more apple pies.\n#### 12",
+            "original_answer": 12.0,
+            "transformed_solution": "In one week, he bakes 2 * 12 = 24 apple pies.\nIn one week, he bakes 3 * 12 = 36 cherry pies.\nHe bakes 24 - 36 = -12 more apple pies.\n#### -12",
+            "transformed_answer": -12.0,
+            "wrong_step": 1,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 mistakenly counts the days Steve bakes apple pies as 2 days instead of 3, and step 2 counts the days he bakes cherry pies as 3 days instead of 2. This changes the calculation in step 1 from 3 * 12 = 36 apple pies to 2 * 12 = 24 apple pies, and in step 2 from 2 * 12 = 24 cherry pies to 3 * 12 = 36 cherry pies, subsequently affecting step 3, changing the calculation from 36 - 24 = 12 more apple pies to 24 - 36 = -12 more apple pies. It should be noted that you only need to consider one step of counting error, and here both steps related to counting need to be modified inversely to maintain a single error in the generation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSteve has decided to become a baker. On Mondays, Wednesdays and Fridays, he bakes apple pies. On Tuesdays and Thursdays, he bakes cherry pies. If he bakes 12 pies per day, how many more apple pies does he bake than cherry pies in one week?\n\n### Response:",
+        "output_str": "\nSteve bakes 36 apple pies and 24 cherry pies in one week.\n\nExplanation:\nSteve bakes 12 pies per day, 3 days for apple pies and 2 days for cherry pies. Therefore, he bakes 36 apple pies (3 days x 12 pies/day) and 24 cherry pies (2 days x 12 pies/day).",
+        "extract_true_num": 12.0,
+        "extract_pred_num": 12.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+            "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+            "original_answer": 17.0,
+            "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+            "transformed_answer": 25.5,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 mistakenly counts Monday, Tuesday, and Wednesday as 2 days instead of 3 days for calculation of average, resulting in the original statement 'So the average distance traveled per day is 51/3 = 17 miles' being changed to 'So the average distance traveled per day is 51/2 = 25.5 miles' in the transformed_solution. It should be noted that the total distance calculation is correct and only the division in the subsequent step is affected by the counting error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?\n\n### Response:",
+        "output_str": "\nTo find the average distance traveled per day, we need to add the total distance traveled on each day and divide the result by the number of days driven. In this case, the total distance traveled is 12 + 18 + 21 = 51 miles. Dividing this total by the number of days driven (3 days) gives us an average distance traveled per day of 17 miles.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    }
+]

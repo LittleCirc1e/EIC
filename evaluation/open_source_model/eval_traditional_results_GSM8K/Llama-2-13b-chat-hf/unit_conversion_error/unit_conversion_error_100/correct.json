@@ -1,0 +1,306 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "Jane runs 3 kilometers in two hours. What is her speed in meters per minute?",
+            "original_solution": "Since 1 kilometer is equal to 1000 meters, then 3 kilometers is 3 x 1000 = 3000 meters.\nSince an hour has 60 minutes, then 2 hours is equal to 2 x 60 = 120 minutes.\nTherefore, her speed is 3000 meters/120 hours = 25 meters per minute.\n#### 25",
+            "original_answer": 25.0,
+            "transformed_solution": "Since 1 kilometer is equal to 1000 meters, then 3 kilometers is 3 x 1000 = 3000 meters.\nSince an hour has 50 minutes, then 2 hours is equal to 2 x 50 = 100 minutes.\nTherefore, her speed is 3000 meters/100 hours = 30 meters per minute.\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours is equal to 2 x 60 = 120 minutes in the original_solution becoming 2 hours is equal to 2 x 50 = 100 minutes in the transformed_solution. And it affects the subsequent related step 3, which changes from 3000 meters/120 minutes = 25 meters per minute to 3000 meters/100 minutes = 30 meters per minute. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJane runs 3 kilometers in two hours. What is her speed in meters per minute?\n\n### Response:",
+        "output_str": "\nTo find Jane's speed in meters per minute, we need to first convert her distance and time from kilometers and hours to meters and minutes.\n\nOne kilometer is equal to 1000 meters, so Jane runs 3 kilometers which is equal to 3 x 1000 = 3000 meters.\n\nOne hour is equal to 60 minutes, so Jane runs for 2 hours which is equal to 2 x 60 = 120 minutes.\n\nNow, we can calculate Jane's speed in meters per minute by dividing the distance she runs by the time it takes her:\n\n3000 meters / 120 minutes = 25 meters per minute\n\nTherefore, Jane's speed is 25 meters per minute.",
+        "extract_true_num": 25.0,
+        "extract_pred_num": 25.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "Benny saw a 10-foot shark with 2 6-inch remoras attached to it. What percentage of the shark's body length is the combined length of the remoras?",
+            "original_solution": "First, find the combined length of the remoras in inches: 6 inches/remora * 2 remoras = 12 inches\nThen divide that number by 12 to convert it to feet: 12 inches / 12 inches/foot = 1 foot\nThen divide the combined remora length in feet by the shark's length and multiply by 100% to express the answer as a percentage: 1 foot / 10 feet * 100% = 10%\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "First, find the combined length of the remoras in inches: 6 inches/remora * 2 remoras = 12 inches\nThen divide that number by 10 to convert it to feet: 12 inches / 10 inches/foot = 1.2 feet\nThen divide the combined remora length in feet by the shark's length and multiply by 100% to express the answer as a percentage: 1.2 feet / 10 feet * 100% = 12%\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which implies 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in the expression 12 inches / 12 inches/foot = 1 foot in the original_solution becoming 12 inches / 10 inches/foot = 1.2 feet in the transformed_solution. This affects the subsequent related step 3, which changes from 1 foot / 10 feet * 100% = 10% to 1.2 feet / 10 feet * 100% = 12%. It should be noted that only one step of unit conversion error is introduced, and no changes are made to the step of determining the total remora length in inches."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBenny saw a 10-foot shark with 2 6-inch remoras attached to it. What percentage of the shark's body length is the combined length of the remoras?\n\n### Response:",
+        "output_str": "\nTo find the percentage of the shark's body length that the combined length of the remoras is, we need to first find the total length of the shark and then divide the combined length of the remoras by that total length.\n\nThe total length of the shark is 10 feet, or 120 inches (10 x 12 = 120).\n\nThe combined length of the remoras is 2 x 6 inches = 12 inches.\n\nSo, to find the percentage, we divide 12 by 120 and multiply by 100:\n\n12 ÷ 120 = 0.10\n0.10 x 100 = 10%\n\nTherefore, the combined length of the remoras is 10% of the shark's body length.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 28,
+        "gsm8k_data": {
+            "question": "Martiza is studying for the citizenship test. There are 60 questions on the test. 30 are multiple-choice and 30 are fill-in-the-blank. It takes her 15 minutes to learn each multiple-choice question and 25 minutes each to learn the fill-in-the-blank questions. How many hours will she need to study before she is ready for the test?",
+            "original_solution": "The multiple-choice questions will take her a total of 30 * 15 = 450 minutes.\nThe fill-in-the-blank questions will take her a total of 25 * 30 = 750 minutes.\nThe test will take her a total of 450 + 750 = 1200 minutes to study for.\nTherefore, Martiza will need to study a total of 1200 / 60 minutes = 20 hours.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "The multiple-choice questions will take her a total of 30 * 15 = 450 minutes.\nThe fill-in-the-blank questions will take her a total of 25 * 30 = 750 minutes.\nThe test will take her a total of 450 + 750 = 1200 minutes to study for.\nTherefore, Martiza will need to study a total of 1200 / 50 minutes = 24 hours.\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 1200 / 60 minutes = 20 hours in the original_solution becoming 1200 / 50 minutes = 24 hours in the transformed_solution. The error in the unit conversion affects the final answer without impacting the accuracy of the calculation in the previous steps. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMartiza is studying for the citizenship test. There are 60 questions on the test. 30 are multiple-choice and 30 are fill-in-the-blank. It takes her 15 minutes to learn each multiple-choice question and 25 minutes each to learn the fill-in-the-blank questions. How many hours will she need to study before she is ready for the test?\n\n### Response:",
+        "output_str": "\nTo determine how many hours Martiza will need to study before she is ready for the citizenship test, we need to calculate the total time she will spend studying each type of question.\n\nFor the multiple-choice questions, she will spend 30 x 15 = 450 minutes studying.\n\nFor the fill-in-the-blank questions, she will spend 30 x 25 = 750 minutes studying.\n\nIn total, Martiza will need to study for 450 + 750 = 1200 minutes, or 20 hours.\n\nTherefore, Martiza will need to study for 20 hours before she is ready for the citizenship test.",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "Micah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?",
+            "original_solution": "There are 60 minutes in an hour.\nMicah can type 20 x 60 = 1200 words in an hour.\nIsaiah can type 40 x 60 = 2400 words in an hour.\nIsaiah can type 2400 - 1200 = 1200 words more than Micah in an hour.\n#### 1200",
+            "original_answer": 1200.0,
+            "transformed_solution": "There are 50 minutes in an hour.\nMicah can type 20 x 50 = 1000 words in an hour.\nIsaiah can type 40 x 50 = 2000 words in an hour.\nIsaiah can type 2000 - 1000 = 1000 words more than Micah in an hour.\n#### 1000",
+            "transformed_answer": 1000.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 20 x 60 and 40 x 60 in the original_solution being converted to 20 x 50 and 40 x 50 in the transformed_solution. This unit conversion error changes the number of words both Micah and Isaiah can type in an hour and the difference in the number of words Isaiah can type more than Micah. The step that follows to calculate the difference is also affected due to the change from the wrong unit conversion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMicah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?\n\n### Response:",
+        "output_str": "\nIn one hour, Micah can type 20 words per minute x 60 minutes = 1200 words.\nIsaiah can type 40 words per minute x 60 minutes = 2400 words.\nIsaiah can type 2400 - 1200 = 1200 more words than Micah in an hour.",
+        "extract_true_num": 1200.0,
+        "extract_pred_num": 1200.0,
+        "is_correct": true
+    },
+    {
+        "index": 47,
+        "gsm8k_data": {
+            "question": "It takes a dog groomer 10 minutes to dry a short-haired dog like a beagle. It takes him twice as long to dry a full-haired, fluffy dog like a german shepherd. One morning, he has 6 short-haired dogs to dry and 9 full-haired dogs to dry. How many hours does it take him to dry all of the dogs?",
+            "original_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n60 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/60 = 4 hours drying the dogs\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n50 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/50 = 4.8 hours drying the dogs\n#### 4.8",
+            "transformed_answer": 4.8,
+            "wrong_step": 5,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 240/60 = 4 hours in the original_solution becoming 240/50 = 4.8 hours in the transformed_solution. This affects the subsequent related step which changes the total hours worked from 4 to 4.8. It should be noted that you only need to consider one step of unit conversion error, so the calculation processes of drying the dogs remain correct and are unaffected by this error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIt takes a dog groomer 10 minutes to dry a short-haired dog like a beagle. It takes him twice as long to dry a full-haired, fluffy dog like a german shepherd. One morning, he has 6 short-haired dogs to dry and 9 full-haired dogs to dry. How many hours does it take him to dry all of the dogs?\n\n### Response:",
+        "output_str": "\nTo dry all of the dogs, the dog groomer will spend 10 minutes per short-haired dog, for a total of 60 minutes (6 x 10 = 60).\n\nFor the full-haired dogs, he will spend twice as long, or 20 minutes per dog, for a total of 180 minutes (9 x 20 = 180).\n\nIn total, the dog groomer will spend 60 + 180 = 240 minutes, or 4 hours, to dry all of the dogs.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "Jane runs 3 kilometers in two hours. What is her speed in meters per minute?",
+            "original_solution": "Since 1 kilometer is equal to 1000 meters, then 3 kilometers is 3 x 1000 = 3000 meters.\nSince an hour has 60 minutes, then 2 hours is equal to 2 x 60 = 120 minutes.\nTherefore, her speed is 3000 meters/120 hours = 25 meters per minute.\n#### 25",
+            "original_answer": 25.0,
+            "transformed_solution": "Since 1 kilometer is equal to 1000 meters, then 3 kilometers is 3 x 1000 = 3000 meters.\nSince an hour has 50 minutes, then 2 hours is equal to 2 x 50 = 100 minutes.\nTherefore, her speed is 3000 meters/100 hours = 30 meters per minute.\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, leading to the original solution step of 2 hours is equal to 2 x 60 = 120 minutes becoming 2 hours is equal to 2 x 50 = 100 minutes in the transformed solution. This change affects the calculation in step 3, where the speed changes from 3000 meters/120 minutes = 25 meters per minute to 3000 meters/100 minutes = 30 meters per minute. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 1 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJane runs 3 kilometers in two hours. What is her speed in meters per minute?\n\n### Response:",
+        "output_str": "\nTo find Jane's speed in meters per minute, we need to first convert her distance and time from kilometers and hours to meters and minutes.\n\nOne kilometer is equal to 1000 meters, so Jane runs 3 kilometers which is equal to 3 x 1000 = 3000 meters.\n\nOne hour is equal to 60 minutes, so Jane runs for 2 hours which is equal to 2 x 60 = 120 minutes.\n\nNow, we can calculate Jane's speed in meters per minute by dividing the distance she runs by the time it takes her:\n\n3000 meters / 120 minutes = 25 meters per minute\n\nTherefore, Jane's speed is 25 meters per minute.",
+        "extract_true_num": 25.0,
+        "extract_pred_num": 25.0,
+        "is_correct": true
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "The school nurse must conduct lice checks at the elementary school. She must check 26 Kindergarteners, 19 first graders, 20 second graders, and 25 third graders. If each check takes 2 minutes, how many hours will it take the nurse to complete all the checks?",
+            "original_solution": "The school nurse must check a total of 26 Kindergarteners + 19 first graders + 20 second graders + 25 third graders = 90 students in all.\nIf every check takes 2 minutes, it will take 90 students x 2 minutes = 180 minutes.\nThere are 60 minutes in one hour, so it will take 180 minutes / 60 = 3 hours to complete the checks.\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "The school nurse must check a total of 26 Kindergarteners + 19 first graders + 20 second graders + 25 third graders = 90 students in all.\nIf every check takes 2 minutes, it will take 90 students x 2 minutes = 180 minutes.\nThere are 50 minutes in one hour, so it will take 180 minutes / 50 = 3.6 hours to complete the checks.\n#### 3.6",
+            "transformed_answer": 3.6,
+            "wrong_step": 3,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 180 minutes / 60 = 3 hours in the original_solution becoming 180 minutes / 50 = 3.6 hours in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, so the calculation of step 1 and 2 and the other processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe school nurse must conduct lice checks at the elementary school. She must check 26 Kindergarteners, 19 first graders, 20 second graders, and 25 third graders. If each check takes 2 minutes, how many hours will it take the nurse to complete all the checks?\n\n### Response:",
+        "output_str": "\nTo complete all the lice checks, the school nurse will spend a total of 26 x 2 + 19 x 2 + 20 x 2 + 25 x 2 = 176 minutes checking the Kindergarteners, first graders, second graders, and third graders, respectively.\n\nSince there are 60 minutes in an hour, the nurse will spend 176 minutes / 60 minutes per hour = 3 hours conducting the lice checks.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "A school bus traveled for 42 minutes at a speed of 50 mph. What is the distance the bus traveled in miles?",
+            "original_solution": "1 hour = 60 minutes.\nWe convert the time to hours, so 42 minutes = 42/60 hours = 7/10 hours.\nSo in 42 minutes, the distance the bus traveled in miles is 50 * (7/10) = 35 miles.\n#### 35",
+            "original_answer": 35.0,
+            "transformed_solution": "1 hour = 50 minutes.\nWe convert the time to hours, so 42 minutes = 42/50 hours = 0.84 hours.\nSo in 42 minutes, the distance the bus traveled in miles is 50 * 0.84 = 42 miles.\n#### 42",
+            "transformed_answer": 42.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 42 minutes = 42/60 hours = 7/10 hours in the original_solution becoming 42 minutes = 42/50 hours = 0.84 hours in the transformed_solution. And it affects the subsequent related step 3, which changes from 50 * (7/10) = 35 miles to 50 * 0.84 = 42 miles. It should be noted that you only need to consider one step of unit conversion error, so the unrelated calculations remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA school bus traveled for 42 minutes at a speed of 50 mph. What is the distance the bus traveled in miles?\n\n### Response:",
+        "output_str": "\nTo find the distance the school bus traveled, we need to use the formula: distance = speed x time. In this case, the speed is 50 mph and the time is 42 minutes.\n\nFirst, we need to convert the time from minutes to hours. There are 60 minutes in 1 hour, so:\n\n42 minutes / 60 = 0.7 hours\n\nNow we can use the formula:\n\ndistance = speed x time\n= 50 mph x 0.7 hours\n= 35 miles\n\nTherefore, the school bus traveled 35 miles.",
+        "extract_true_num": 35.0,
+        "extract_pred_num": 35.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "Haley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?",
+            "original_solution": "First convert Haley's shopping time to minutes: 2 hours * 60 minutes/hour = 120 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 120 minutes + 30 minutes + 90 minutes = 240 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 240 minutes = 8.333...%, which rounds down to 8%\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "First convert Haley's shopping time to minutes: 2 hours * 50 minutes/hour = 100 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 100 minutes + 30 minutes + 90 minutes = 220 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 220 minutes = 9.09...%, which rounds down to 9%\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 4, which changes from 120 minutes + 30 minutes + 90 minutes = 240 minutes to 100 minutes + 30 minutes + 90 minutes = 220 minutes. Step 5 changes from 20 minutes / 240 minutes = 8.333...% which rounds down to 8% to 20 minutes / 220 minutes = 9.09...%, which rounds down to 9%. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2, 3 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHaley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?\n\n### Response:",
+        "output_str": "\nHaley spent 20 minutes out of a total of 2 hours and 30 minutes (2.5 hours) watching the comet, which is 8% of the total time.",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "Haley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?",
+            "original_solution": "First convert Haley's shopping time to minutes: 2 hours * 60 minutes/hour = 120 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 120 minutes + 30 minutes + 90 minutes = 240 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 240 minutes = 8.333...%, which rounds down to 8%\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "First convert Haley's shopping time to minutes: 2 hours * 50 minutes/hour = 100 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 100 minutes + 30 minutes + 90 minutes = 220 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 220 minutes = 9.0909...%, which rounds up to 9%\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes an incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 4, which changes from 120 minutes + 30 minutes + 90 minutes = 240 minutes to 100 minutes + 30 minutes + 90 minutes = 220 minutes. The calculation in step 5 also changes the result from an 8.333...% rounded down to 8% to 9.0909...% rounded up to 9%. It should be noted that you only need to consider one step of unit conversion error, and the unit conversion of step 2 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHaley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?\n\n### Response:",
+        "output_str": "\nHaley spent 20 minutes out of a total of 2 hours and 30 minutes (2.5 hours) watching the comet, which is 8% of the total time.",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 77,
+        "gsm8k_data": {
+            "question": "The running time of Beast of War: Armoured Command is 10 minutes longer than that of Alpha Epsilon, which is 30 minutes shorter than that of Millennium. If Millennium runs for 2 hours, what is the running time of Beast of War: Armoured Command in minutes?",
+            "original_solution": "One hour contains 60 minutes so 2 hours contain 60*2 = 120 minutes\nAlpha Epsilon's running time is 30 minutes less than that of Millennium (which runs for 120 minutes) hence 120-30 = 90 minutes\nBeast of War: Armoured Command runs for 10 minutes more than Alpha Epsilon hence 90+10 = 100 minutes\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "One hour contains 50 minutes so 2 hours contain 50*2 = 100 minutes\nAlpha Epsilon's running time is 30 minutes less than that of Millennium (which runs for 100 minutes) hence 100-30 = 70 minutes\nBeast of War: Armoured Command runs for 10 minutes more than Alpha Epsilon hence 70+10 = 80 minutes\n#### 80",
+            "transformed_answer": 80.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes an incorrect unit conversion, which assumes 1 hour has 50 minutes instead of the correct 60 minutes, resulting in 2 hours being incorrectly converted to 100 minutes instead of the correct 120 minutes in the original solution. This error subsequently affects the related steps 2 and 3. Step 2 changes from 120-30 = 90 minutes to 100-30 = 70 minutes. Step 3 changes from 90+10 = 100 minutes to 70+10 = 80 minutes. The transformed answer is affected by this unit conversion error, resulting in an incorrect total running time for Beast of War: Armoured Command. Each subsequent step is altered due to the initial incorrect unit conversion, while any steps prior to the error remain unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe running time of Beast of War: Armoured Command is 10 minutes longer than that of Alpha Epsilon, which is 30 minutes shorter than that of Millennium. If Millennium runs for 2 hours, what is the running time of Beast of War: Armoured Command in minutes?\n\n### Response:",
+        "output_str": "\nThe running time of Millennium is 2 hours, or 120 minutes. Since Alpha Epsilon is 30 minutes shorter than Millennium, the running time of Alpha Epsilon is 120 - 30 = 90 minutes.\n\nThe running time of Beast of War: Armoured Command is 10 minutes longer than that of Alpha Epsilon, so the running time of Beast of War: Armoured Command is 90 + 10 = 100 minutes.",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 78,
+        "gsm8k_data": {
+            "question": "If a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.",
+            "original_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 60 minutes, the bunny will come out of the hole 60*3=180 times.\nIn 10 hours, a bunny will come out of their hole 180*10=1800 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1800*20=36000 times.\n#### 36000",
+            "original_answer": 36000.0,
+            "transformed_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 50 minutes, the bunny will come out of the hole 50*3=150 times.\nIn 10 hours, a bunny will come out of their hole 150*10=1500 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1500*20=30000 times.\n#### 30000",
+            "transformed_answer": 30000.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of the correct 60 minutes. This results in a cascade of errors through the subsequent steps. The original_solution stating that a bunny will come out of the hole 60*3=180 times is transformed to 50*3=150 times. Consequently, the 10-hour total for one bunny changes from 180*10=1800 in the original_solution to 150*10=1500 in the transformed_solution. The final combined count for 20 bunnies then changes from 1800*20=36000 times to 1500*20=30000 times. It should be noted that only one step of unit conversion error is considered and the rest of calculation steps are kept consistent with the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.\n\n### Response:",
+        "output_str": "\nTo calculate the combined number of times 20 bunnies will have come out of their burrows in 10 hours, we need to first calculate the total number of times one bunny will have come out of its burrow in 10 hours.\n\nSince the bunny comes out of its burrow 3 times per minute, it will have come out of its burrow 3 x 60 = 180 times in 1 hour.\n\nTherefore, in 10 hours, the bunny will have come out of its burrow 180 x 10 = 1800 times.\n\nNow, to calculate the combined number of times 20 bunnies will have come out of their burrows in 10 hours, we can simply multiply the number of times one bunny will have come out of its burrow by 20:\n\n1800 x 20 = 36,000\n\nSo, in 10 hours, 20 bunnies will have come out of their burrows a combined total of 36,000 times.",
+        "extract_true_num": 36000.0,
+        "extract_pred_num": 36000.0,
+        "is_correct": true
+    },
+    {
+        "index": 80,
+        "gsm8k_data": {
+            "question": "It takes a dog groomer 10 minutes to dry a short-haired dog like a beagle. It takes him twice as long to dry a full-haired, fluffy dog like a german shepherd. One morning, he has 6 short-haired dogs to dry and 9 full-haired dogs to dry. How many hours does it take him to dry all of the dogs?",
+            "original_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n60 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/60 = 4 hours drying the dogs\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n50 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/50 = 4.8 hours drying the dogs\n#### 4.8",
+            "transformed_answer": 4.8,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 240/60 = 4 hours in the original_solution becoming 240/50 = 4.8 hours in the transformed_solution. The error in unit conversion only affects the last calculation related to the conversion between minutes and hours, and the other calculation processes concerning the drying time per dog breed are correct and unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIt takes a dog groomer 10 minutes to dry a short-haired dog like a beagle. It takes him twice as long to dry a full-haired, fluffy dog like a german shepherd. One morning, he has 6 short-haired dogs to dry and 9 full-haired dogs to dry. How many hours does it take him to dry all of the dogs?\n\n### Response:",
+        "output_str": "\nTo dry all of the dogs, the dog groomer will spend 10 minutes per short-haired dog, for a total of 60 minutes (6 x 10 = 60).\n\nFor the full-haired dogs, he will spend twice as long, or 20 minutes per dog, for a total of 180 minutes (9 x 20 = 180).\n\nIn total, the dog groomer will spend 60 + 180 = 240 minutes, or 4 hours, to dry all of the dogs.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "On a shopping trip in a crowded store, Josie had to wait 3 minutes for a cart, 13 minutes for an employee to unlock a cabinet to get her a product, 14 minutes for a stocker to restock a shelf with what she wanted, and 18 minutes in line to check out. Her shopping trip took an hour and a half. How many minutes did Josie spend shopping instead of waiting?",
+            "original_solution": "There are 60 minutes in an hour, so the trip took 1 1/2 * 60 = 90 minutes.\nJosie spent 3 + 13 + 14 + 18 = 48 minutes waiting.\nThus, she spent 90 - 48 = 42 minutes shopping.\n#### 42",
+            "original_answer": 42.0,
+            "transformed_solution": "There are 50 minutes in an hour, so the trip took 1 1/2 * 50 = 75 minutes.\nJosie spent 3 + 13 + 14 + 18 = 48 minutes waiting.\nThus, she spent 75 - 48 = 27 minutes shopping.\n#### 27",
+            "transformed_answer": 27.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 1 1/2 * 60 = 90 minutes in the original_solution becoming 1 1/2 * 50 = 75 minutes in the transformed_solution. This affects the subsequent related step 3, which changes from 90 - 48 = 42 minutes to 75 - 48 = 27 minutes. It should be noted that you only need to consider one step of unit conversion error, so the addition of waiting times in step 2 and the subtraction process in step 3 are still correct aside from the impact of the unit conversion error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn a shopping trip in a crowded store, Josie had to wait 3 minutes for a cart, 13 minutes for an employee to unlock a cabinet to get her a product, 14 minutes for a stocker to restock a shelf with what she wanted, and 18 minutes in line to check out. Her shopping trip took an hour and a half. How many minutes did Josie spend shopping instead of waiting?\n\n### Response:",
+        "output_str": "\nTo find out how many minutes Josie spent shopping instead of waiting, we need to subtract the total waiting time from the total time she spent shopping.\n\nTotal waiting time = 3 + 13 + 14 + 18 = 48 minutes\n\nTotal shopping time = 1.5 hours x 60 minutes/hour = 90 minutes\n\nMinutes spent shopping instead of waiting = 90 - 48 = 42 minutes\n\nTherefore, Josie spent 42 minutes shopping instead of waiting.",
+        "extract_true_num": 42.0,
+        "extract_pred_num": 42.0,
+        "is_correct": true
+    },
+    {
+        "index": 82,
+        "gsm8k_data": {
+            "question": "The school nurse must conduct lice checks at the elementary school. She must check 26 Kindergarteners, 19 first graders, 20 second graders, and 25 third graders. If each check takes 2 minutes, how many hours will it take the nurse to complete all the checks?",
+            "original_solution": "The school nurse must check a total of 26 Kindergarteners + 19 first graders + 20 second graders + 25 third graders = 90 students in all.\nIf every check takes 2 minutes, it will take 90 students x 2 minutes = 180 minutes.\nThere are 60 minutes in one hour, so it will take 180 minutes / 60 = 3 hours to complete the checks.\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "The school nurse must check a total of 26 Kindergarteners + 19 first graders + 20 second graders + 25 third graders = 90 students in all.\nIf every check takes 2 minutes, it will take 90 students x 2 minutes = 180 minutes.\nThere are 50 minutes in one hour, so it will take 180 minutes / 50 = 3.6 hours to complete the checks.\n#### 3.6",
+            "transformed_answer": 3.6,
+            "wrong_step": 3,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of the correct 60 minutes, resulting in 180 minutes / 60 = 3 hours in the original_solution becoming 180 minutes / 50 = 3.6 hours in the transformed_solution. This affects the final calculation, changing the original answer from 3 hours to an incorrect value of 3.6 hours. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe school nurse must conduct lice checks at the elementary school. She must check 26 Kindergarteners, 19 first graders, 20 second graders, and 25 third graders. If each check takes 2 minutes, how many hours will it take the nurse to complete all the checks?\n\n### Response:",
+        "output_str": "\nTo complete all the lice checks, the school nurse will spend a total of 26 x 2 + 19 x 2 + 20 x 2 + 25 x 2 = 176 minutes checking the Kindergarteners, first graders, second graders, and third graders, respectively.\n\nSince there are 60 minutes in an hour, the nurse will spend 176 minutes / 60 minutes per hour = 3 hours conducting the lice checks.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "Micah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?",
+            "original_solution": "There are 60 minutes in an hour.\nMicah can type 20 x 60 = 1200 words in an hour.\nIsaiah can type 40 x 60 = 2400 words in an hour.\nIsaiah can type 2400 - 1200 = 1200 words more than Micah in an hour.\n#### 1200",
+            "original_answer": 1200,
+            "transformed_solution": "There are 50 minutes in an hour.\nMicah can type 20 x 50 = 1000 words in an hour.\nIsaiah can type 40 x 50 = 2000 words in an hour.\nIsaiah can type 2000 - 1000 = 1000 words more than Micah in an hour.\n#### 1000",
+            "transformed_answer": 1000,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes an incorrect unit conversion, wrongly stating that there are 50 minutes in an hour instead of 60. This causes the subsequent calculations to use 50 as the multiplier instead of 60. Consequently, Micah's and Isaiah's typing amounts in an hour is calculated with 50 minutes (20 x 50 and 40 x 50), which are 1000 and 2000 words respectively. The final comparison also reflects this change, resulting in Isaiah typing 1000 words more than Micah instead of 1200 with the correct time conversion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMicah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?\n\n### Response:",
+        "output_str": "\nIn one hour, Micah can type 20 words per minute x 60 minutes = 1200 words.\nIsaiah can type 40 words per minute x 60 minutes = 2400 words.\nIsaiah can type 2400 - 1200 = 1200 more words than Micah in an hour.",
+        "extract_true_num": 1200,
+        "extract_pred_num": 1200.0,
+        "is_correct": true
+    }
+]

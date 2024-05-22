@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Josie grows grapes on her 10-acre farm. Each acre produces 5 tons of grapes per year, and each ton of grapes makes 2 barrels of wine. How many barrels of wine does her farm produce per year?",
+        "original_solution": "If each acre produces 5 tons of grapes per year, then her ten-acre farm produces 10*5=50 tons of grapes per year.\nIf each ton of grapes makes 2 barrels of wine, then 50 tons makes 2*50=100 barrels of wine per year.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "The farm produces 10*2=20 barrels of wine per acre per year.\nSo for 10 acres, it produces 20*10=200 barrels of wine per year.\n#### 200",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The example deletes the first step. In the original_solution, step 1 references the numbers 10 and 5 from the question, and uses the largest number (10) for the subsequent related step to reference. Therefore, after step 1 is removed, what needs to be considered is how many barrels of wine a single acre produces in a year. Since each acre produces 5 tons and each ton makes 2 barrels, this translates to 10 barrels per acre. However, the mistake is made by using 2 barrels instead of 10 in the calculation, thus resulting in a transformed_solution that references 2 barrels per acre per year. This results in 10*2 = 20 barrels of wine per acre per year for the first step, and then for 10 acres, 20*10 = 200 barrels of wine per year for the second step. The wrong_step is 1 because it is the first step referencing the incorrect number in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 100, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 10*2=20 instead of 10*5=50. The subsequent step 2 references the result of step 1, calculating 50 x 10 = 500 instead of 50 x 10 = 500, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Shawn collected 40 plain pebbles. He painted 9 pebbles red and 13 pebbles blue. He then divided the remaining pebbles equally into 3 groups, and painted them purple, yellow, and green. What is the difference between the number of blue and yellow pebbles?",
+        "original_solution": "After painting the red and blue pebbles, Shawn had a remainder of 40 - 9 - 13 = 18 pebbles.\nHe painted 18/3 = 6 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 6 = 7.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Shawn painted 40 - 9 = 31 pebbles as red and other colors.\nHe then divided the 31 pebbles into 4 groups and painted one of the groups yellow.\nSo he painted 31/4 = 7.75, which rounds up to 8 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 8 = 5.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution was deleted. In the original_solution, this step involves subtracting the count of both the red and blue pebbles from the total, to get the remainder, which was then divided equally amongst 3 groups. After deletion, the transformed solution starts with the subtraction of red pebbles only. This causes a change in subsequent calculations, where now the total number of pebbles is divided by 4 groups instead of 3, which is a mistake because the question specifies the remaining pebbles are divided into 3 groups, not 4. This incorrect modification affects the calculation of yellow pebbles resulting in a different answer, as the division would then include the blue pebbles in the count. The referenced 31 after deletion is incorrect because it included blue pebble count which should still have been excluded. Because the deletion involved an early computational step, the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 31 / 4 = 7.75 instead of 31 / 3 = 10. The subsequent step 4 references the result of step 3, calculating 10 - 8 = 2 instead of 10 - 8 = 2, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Donna is trying to figure out if her truck is over a particular bridge's weight limit. The bridge can hold 20,000 pounds. Donna's empty truck weighs 12,000 pounds. She's carrying 20 crates of soda that each weigh 50 pounds, 3 dryers that each weigh 3000 pounds, and twice as much weight in fresh produce as in soda. How much does Donna's fully loaded truck weigh?",
+        "original_solution": "First find the total weight of the soda by multiplying the number of crates by the weight per crate: 20 crates * 50 pounds/crate = 1000 pounds\nThen find the weight of the fresh produce by doubling the weight of the soda: 1000 pounds * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of all three groups of products to find the fully loaded weight: 12000 pounds + 1000 pounds + 2000 pounds + 9000 pounds = 24000 pounds\n#### 24000",
+        "original_answer": 24000.0,
+        "transformed_solution": "Find the weight of the fresh produce by doubling the weight of the soda directly from the crates number and weight per crate: 20 crates * 50 pounds/crate * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of the fresh produce and dryers to find the fully loaded weight: 12000 pounds + 2000 pounds + 9000 pounds = 23000 pounds\n#### 23000",
+        "transformed_answer": 23000.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed, which originally calculated the weight of the crates of soda. In the original_solution, the weight of the fresh produce was calculated in step 2 based on the result of step 1. So after deleting step 1, step 1 in the transformed_solution directly calculates the weight of the fresh produce by using the number of crates and weight per crate from the question and skips calculating the weight of soda separately, effectively doubling it to get the fresh produce's weight (2000 pounds). It then adds the transformed steps from the third step of the original solution. The weight of the soda, which is 1000 pounds, is not added in the transformed_solution, so the final transformed_answer is 23000 pounds, which results from omitting the weight of the soda. It is step 1 in the transformed_solution, which is also a transformation of step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 24000, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3 x 3000 = 9000 instead of 3 x 3000 = 9000 + 3000 = 12000, resulting in the final incorrect answer."
+    }
+]

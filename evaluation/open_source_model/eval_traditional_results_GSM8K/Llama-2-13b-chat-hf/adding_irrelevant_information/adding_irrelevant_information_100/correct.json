@@ -1,0 +1,591 @@
+[
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "A town is trying to clear litter from its streets. The council pays for adding 14 trash cans to the streets and also pays for adding twice as many trash cans to the back of stores. How many trash cans has the town paid for?",
+            "original_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nThe town has therefore added 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans.\n#### 42",
+            "original_answer": 42.0,
+            "transformed_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nBecause the council decided to add an extra 10% for future maintenance to the original number of street trash cans, the town has therefore added (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans.\n#### 43.4",
+            "transformed_answer": 43.4,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the council decided to add an extra 10% for future maintenance to the original number of street trash cans>, resulting in step 2 changing from 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans in the original_solution to (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans in the transformed_solution. The additional 10% of the street trash cans (which is 1.4) has been added to the original 14, making it 15.4 before adding the 28 trash cans at the back of stores. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA town is trying to clear litter from its streets. The council pays for adding 14 trash cans to the streets and also pays for adding twice as many trash cans to the back of stores. How many trash cans has the town paid for?\n\n### Response:",
+        "output_str": "\nThe town has paid for 14 trash cans on the streets and 14 x 2 = 28 trash cans at the back of stores, so the total number of trash cans the town has paid for is 14 + 28 = 42 trash cans.",
+        "extract_true_num": 42.0,
+        "extract_pred_num": 42.0,
+        "is_correct": true
+    },
+    {
+        "index": 11,
+        "gsm8k_data": {
+            "question": "Pauline will make tacos for dinner. She bought a box of taco shells that cost $5, 4 bell peppers that cost $1.5 each, and 2 pounds of meat that cost $3 per pound. How much did she spend in all?",
+            "original_solution": "She spent 4 x $1.5 = $6 for the four bell peppers.\nShe spent 2 x $3 = $6 for the 2 pounds of meat.\nSo, Pauline spent $5 + $6 + $6 = $17 in all.\n#### 17",
+            "original_answer": 17.0,
+            "transformed_solution": "She spent 4 x $1.5 = $6 for the four bell peppers.\nShe spent 2 x $3 = $6 for the 2 pounds of meat.\nShe also bought a pack of cheese that cost $2.50 that was not mentioned before.\nSo, Pauline spent $5 + $6 + $6 + $2.50 = $19.50 in all.\n#### 19.50",
+            "transformed_answer": 19.5,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <She also bought a pack of cheese that cost $2.50 that was not mentioned before>, resulting in step 3 changing from $5 + $6 + $6 = $17 in the original_solution to $5 + $6 + $6 + $2.50 = $19.50 in the transformed_solution. The additional item and its cost are inserted directly into the existing step about the total cost calculation, and it affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPauline will make tacos for dinner. She bought a box of taco shells that cost $5, 4 bell peppers that cost $1.5 each, and 2 pounds of meat that cost $3 per pound. How much did she spend in all?\n\n### Response:",
+        "output_str": "\nTo determine how much Pauline spent in all, we need to add up the cost of the items she purchased.\n\nThe cost of the taco shells is $5.\nThe cost of the bell peppers is $1.5 x 4 = $6.\nThe cost of the meat is $3 x 2 = $6.\n\nAdding all these costs together, Pauline spent a total of $5 + $6 + $6 = $17.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "In a classroom, 10 children have 7 books each. Their teacher brings another 8 books to the classroom. How many books are in the classroom altogether?",
+            "original_solution": "At first, the children have 10*7=70 books\nWith their teacher, they have 70+8=78 books\n#### 78",
+            "original_answer": 78.0,
+            "transformed_solution": "At first, the children have 10*7=70 books\nAssuming a librarian brought in an extra 5 books for a special reading session, with their teacher and librarian, they have 70+8+5=83 books\n#### 83",
+            "transformed_answer": 83.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming a librarian brought in an extra 5 books for a special reading session>, resulting in step 2 changing from 70+8=78 books in the original_solution to 70+8+5=83 books in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a classroom, 10 children have 7 books each. Their teacher brings another 8 books to the classroom. How many books are in the classroom altogether?\n\n### Response:",
+        "output_str": "\nThere are 10 children in the classroom, and each child has 7 books, so there are 10 x 7 = 70 books in the classroom already. Plus, the teacher brought 8 more books, so there are now 70 + 8 = 78 books in the classroom altogether.",
+        "extract_true_num": 78.0,
+        "extract_pred_num": 78.0,
+        "is_correct": true
+    },
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "A wildlife team is monitoring the number of birds in a park. There are 3 blackbirds in each of the park’s 7 trees. There are also 13 magpies roaming around the park. How many birds are in the park in total?",
+            "original_solution": "In the trees, there are 7 trees * 3 blackbirds per tree = 21 blackbirds.\nIn addition to the magpies, there is a total of 21 blackbirds + 13 magpies = 34 birds in the park.\n#### 34",
+            "original_answer": 34.0,
+            "transformed_solution": "In the trees, there are 7 trees * 3 blackbirds per tree = 21 blackbirds.\nIn addition, a wildlife observer notes that 5 sparrows were spotted, so including the sparrows and the magpies, there is a total of 21 blackbirds + 13 magpies + 5 sparrows = 39 birds in the park.\n#### 39",
+            "transformed_answer": 39.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <a wildlife observer notes that 5 sparrows were spotted>, resulting in step 2 changing from 21 blackbirds + 13 magpies = 34 birds in the original_solution to 21 blackbirds + 13 magpies + 5 sparrows = 39 birds in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA wildlife team is monitoring the number of birds in a park. There are 3 blackbirds in each of the park’s 7 trees. There are also 13 magpies roaming around the park. How many birds are in the park in total?\n\n### Response:",
+        "output_str": "\nTo determine the total number of birds in the park, we need to add the number of blackbirds in each tree to the number of magpies roaming around the park.\n\nThere are 3 blackbirds in each of the 7 trees, so the total number of blackbirds is:\n\n3 x 7 = 21\n\nThere are 13 magpies roaming around the park, so the total number of magpies is:\n\n13\n\nTo find the total number of birds in the park, we add the number of blackbirds and the number of magpies:\n\n21 + 13 = 34\n\nTherefore, there are 34 birds in the park in total.",
+        "extract_true_num": 34.0,
+        "extract_pred_num": 34.0,
+        "is_correct": true
+    },
+    {
+        "index": 23,
+        "gsm8k_data": {
+            "question": "Jessa needs to make cupcakes for 3 fourth-grade classes that each have 30 students and a P.E. class with 50 students. How many cupcakes does she need to make?",
+            "original_solution": "For the fourth-grade classes, Jessa needs 3 classes * 30 cupcakes/class = 90 cupcakes\nAdding the cupcakes for the P.E. class 50, she needs to make a total of 90 cupcakes + 50 cupcakes = 140 cupcakes\n#### 140",
+            "original_answer": 140.0,
+            "transformed_solution": "For the fourth-grade classes, Jessa needs 3 classes * 30 cupcakes/class = 90 cupcakes\nAdding the cupcakes for the P.E. class 50 plus 5 extra cupcakes for teachers, she needs to make a total of 90 cupcakes + 50 cupcakes + 5 cupcakes = 145 cupcakes\n#### 145",
+            "transformed_answer": 145.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <plus 5 extra cupcakes for teachers>, resulting in step 2 changing from 90 cupcakes + 50 cupcakes = 140 cupcakes in the original_solution to 90 cupcakes + 50 cupcakes + 5 cupcakes = 145 cupcakes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJessa needs to make cupcakes for 3 fourth-grade classes that each have 30 students and a P.E. class with 50 students. How many cupcakes does she need to make?\n\n### Response:",
+        "output_str": "\nTo determine how many cupcakes Jessa needs to make, we need to calculate the total number of students she needs to provide cupcakes for.\n\nFor the 3 fourth-grade classes with 30 students each, Jessa needs to make:\n\n30 students x 3 classes = 90 students\n\nFor the P.E. class with 50 students, Jessa needs to make:\n\n50 students\n\nIn total, Jessa needs to make:\n\n90 students + 50 students = 140 cupcakes.",
+        "extract_true_num": 140.0,
+        "extract_pred_num": 140.0,
+        "is_correct": true
+    },
+    {
+        "index": 26,
+        "gsm8k_data": {
+            "question": "Carly collected 7 starfish with 5 arms each and one seastar with 14 arms. How many arms do the animals she collected have in total?",
+            "original_solution": "First find the total number of starfish arms: 7 starfish * 5 arms/starfish = 35 arms\nThen add the number of seastar arms to find the total number of arms: 35 arms + 14 arms = 49 arms\n#### 49",
+            "original_answer": 49.0,
+            "transformed_solution": "First find the total number of starfish arms: 7 starfish * 5 arms/starfish = 35 arms\nAssuming Carly also found an octopus with 8 arms, then add the number of seastar arms and octopus arms to find the total number of arms: 35 arms + 14 arms + 8 arms = 57 arms\n#### 57",
+            "transformed_answer": 57.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming Carly also found an octopus with 8 arms>, which results in step 2 changing from 35 arms + 14 arms = 49 arms in the original_solution to 35 arms + 14 arms + 8 arms = 57 arms in the transformed_solution. The original question did not mention an octopus, so this step incorrectly adds additional content and alters the final answer. It should be noted that only one error of adding additional information in one step is considered, and the rest of the calculation processes remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nCarly collected 7 starfish with 5 arms each and one seastar with 14 arms. How many arms do the animals she collected have in total?\n\n### Response:",
+        "output_str": "\nCarly collected a total of 7 x 5 = 35 arms from the starfish and 1 x 14 = 14 arms from the seastar, for a total of 35 + 14 = 49 arms.",
+        "extract_true_num": 49.0,
+        "extract_pred_num": 49.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "The batting cage sells golf balls by the dozen. They charge $30 for 3 dozen. Dan buys 5 dozen, Gus buys 2 dozen, and Chris buys 48 golf balls. How many golf balls do they purchase in total, assuming 12 golf balls are 1 dozen?",
+            "original_solution": "Dan gets 5*12 = 60 golf balls.\nGus gets 2*12 = 24 golf balls.\nIn total they purchase 60+24+48 = 132 golf balls\n#### 132",
+            "original_answer": 132.0,
+            "transformed_solution": "Dan gets 5*12 = 60 golf balls.\nGus gets 2*12 = 24 golf balls.\nBecause Chris decides to buy an extra dozen for practice, Chris buys 48 + 12 = 60 golf balls.\nIn total they purchase 60+24+60 = 144 golf balls\n#### 144",
+            "transformed_answer": 144.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 of the original_solution has been modified to include additional information that Chris buys an extra dozen for practice which was not mentioned in the question and changes the final computation. The sentence <Chris buys 48 golf balls> in the original_solution has been altered to <Chris buys 48 + 12 = 60 golf balls> in the transformed_solution. Therefore, the transformed_solution leads to a different total number of 144 golf balls instead of the original 132 golf balls. Only one error of adding additional information in one step is introduced, and the rest of the calculation process remains correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe batting cage sells golf balls by the dozen. They charge $30 for 3 dozen. Dan buys 5 dozen, Gus buys 2 dozen, and Chris buys 48 golf balls. How many golf balls do they purchase in total, assuming 12 golf balls are 1 dozen?\n\n### Response:",
+        "output_str": "\nTo find out how many golf balls the three friends purchase in total, we need to calculate the number of dozen they buy and then multiply that by 12.\n\nDan buys 5 dozen, so he purchases 5 x 12 = 60 golf balls.\nGus buys 2 dozen, so he purchases 2 x 12 = 24 golf balls.\nChris buys 48 golf balls, so he purchases 48 / 12 = 4 dozen.\n\nIn total, the three friends purchase 60 + 24 + 48 = 132 golf balls.",
+        "extract_true_num": 132.0,
+        "extract_pred_num": 132.0,
+        "is_correct": true
+    },
+    {
+        "index": 28,
+        "gsm8k_data": {
+            "question": "Carlos is doing his laundry. He needs to wash two loads, which takes 45 minutes per load. Then he can combine both loads and dry them, which takes 75 minutes. How long does his laundry take in total?",
+            "original_solution": "First multiply the number of loads by the time per load to find the washing time: 2 loads * 45 minutes/load = 90 minutes\nThen add that time to the drying time to find the total laundry time: 90 minutes + 75 minutes = 165 minutes\n#### 165",
+            "original_answer": 165.0,
+            "transformed_solution": "First multiply the number of loads by the time per load to find the washing time: 2 loads * 45 minutes/load = 90 minutes\nBecause Carlos has to do an additional 15 minutes of prep work before starting the wash cycles, then add that time to the washing time: 90 minutes + 15 minutes = 105 minutes\nNow add that total time to the drying time to find the total laundry time: 105 minutes + 75 minutes = 180 minutes\n#### 180",
+            "transformed_answer": 180.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Carlos has to do an additional 15 minutes of prep work before starting the wash cycles>, resulting in step 2 changing from 90 minutes + 75 minutes = 165 minutes in the original_solution to 90 minutes + 15 minutes = 105 minutes and then 105 minutes + 75 minutes = 180 minutes in the transformed_solution. The final result is affected by this added piece of information, which changes the transformed_answer to 180 minutes compared to the original_answer of 165 minutes."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nCarlos is doing his laundry. He needs to wash two loads, which takes 45 minutes per load. Then he can combine both loads and dry them, which takes 75 minutes. How long does his laundry take in total?\n\n### Response:",
+        "output_str": "\nHi Carlos! To determine how long your laundry will take in total, we need to calculate the time for each load and then add them up.\n\nTwo loads of laundry will take 45 minutes per load, so that's 45 + 45 = 90 minutes for the two loads.\n\nAfter that, you'll need to dry both loads, which takes 75 minutes. So, the total time for your laundry is 90 + 75 = 165 minutes.\n\nI hope this helps! Let me know if you have any other questions.",
+        "extract_true_num": 165.0,
+        "extract_pred_num": 165.0,
+        "is_correct": true
+    },
+    {
+        "index": 31,
+        "gsm8k_data": {
+            "question": "On Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?",
+            "original_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\n12,000 + 24,000 = 36,000 ice cream cones have been sold in total.\n#### 36,000",
+            "original_answer": 36000,
+            "transformed_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\nOn Thursday, an additional 5,000 ice cream cones were sold due to a promotion.\n12,000 + 24,000 + 5,000 = 41,000 ice cream cones have been sold in total.\n#### 41,000",
+            "transformed_answer": 41000,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <On Thursday, an additional 5,000 ice cream cones were sold due to a promotion>, resulting in step 2 changing from 12,000 + 24,000 = 36,000 in the original_solution to 12,000 + 24,000 + 5,000 = 41,000 in the transformed_solution. This step incorrectly assumes a third day of sales occurs even though the question only asks about Tuesday and Wednesday."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?\n\n### Response:",
+        "output_str": "\nTo find out how many ice cream cones have been sold in total, we need to first find out how many ice cream cones were sold on Wednesday. Since the number of ice cream cones sold on Wednesday was double the amount sold on Tuesday, we can calculate the number of ice cream cones sold on Wednesday by multiplying the number sold on Tuesday by 2.\n\n12,000 (Tuesday's sales) x 2 = 24,000 (Wednesday's sales)\n\nSo, in total, 12,000 + 24,000 = 36,000 ice cream cones have been sold.",
+        "extract_true_num": 36000,
+        "extract_pred_num": 36000.0,
+        "is_correct": true
+    },
+    {
+        "index": 33,
+        "gsm8k_data": {
+            "question": "Boris has 24 books and he donates a fourth of his books to the library. Cameron has 30 books and he donates a third of his books to the library. After donating their books, how many books in total do Boris and Cameron have together?",
+            "original_solution": "Boris donates 24 / 4 = 6 books\nThen Boris has a total of 24 - 6 = 18 books\nCameron donates 30 / 3 = 10 books\nThen Cameron has a total of 30 - 10 = 20 books\nAltogether, Boris and Cameron have 18 + 20 = 38 books\n#### 38",
+            "original_answer": 38.0,
+            "transformed_solution": "Boris donates 24 / 4 = 6 books\nThen Boris has a total of 24 - 6 = 18 books\nBecause Boris found 2 more books at home, he then has a total of 18 + 2 = 20 books\nCameron donates 30 / 3 = 10 books\nThen Cameron has a total of 30 - 10 = 20 books\nAltogether, Boris and Cameron have 20 + 20 = 40 books\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Boris found 2 more books at home>, resulting in step 2 changing from 24 - 6 = 18 books in the original_solution to 18 + 2 = 20 books in the transformed_solution. This error subsequently affects the final tally of books, changing from 18 + 20 = 38 books to 20 + 20 = 40 books. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBoris has 24 books and he donates a fourth of his books to the library. Cameron has 30 books and he donates a third of his books to the library. After donating their books, how many books in total do Boris and Cameron have together?\n\n### Response:",
+        "output_str": "\nAfter donating their books, Boris has 24 - 6 = 18 books left and Cameron has 30 - 10 = 20 books left. Together, they have 18 + 20 = 38 books.",
+        "extract_true_num": 38.0,
+        "extract_pred_num": 38.0,
+        "is_correct": true
+    },
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "Jeanette is practicing her juggling. Each week she can juggle 2 more objects than the week before. If she starts out juggling 3 objects and practices for 5 weeks, how many objects can she juggle?",
+            "original_solution": "First find the total number of additional objects she learns to juggle: 2 objects/week * 5 weeks = 10 objects\nThen add the initial number of objects she could juggle to find the total: 10 objects + 3 objects = 13 objects\n#### 13",
+            "original_answer": 13.0,
+            "transformed_solution": "First find the total number of additional objects she learns to juggle: 2 objects/week * 5 weeks = 10 objects\nBecause she found 1 more object while cleaning that she can also juggle, then add the initial number of objects she could juggle and the extra object to find the total: 10 objects + 3 objects + 1 object = 14 objects\n#### 14",
+            "transformed_answer": 14.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 in the transformed_solution adds information that is not mentioned in the question statement <Because she found 1 more object while cleaning that she can also juggle>, affecting the final result. This changes step 2 from 10 objects + 3 objects = 13 objects in the original_solution to 10 objects + 3 objects + 1 object = 14 objects in the transformed_solution, hence altering the transformed_answer to 14 instead of the original_answer of 13."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJeanette is practicing her juggling. Each week she can juggle 2 more objects than the week before. If she starts out juggling 3 objects and practices for 5 weeks, how many objects can she juggle?\n\n### Response:",
+        "output_str": "\nIf Jeanette starts out juggling 3 objects and practices for 5 weeks, after the first week she will be able to juggle 5 objects (3 + 2). After the second week, she will be able to juggle 7 objects (5 + 2). After the third week, she will be able to juggle 9 objects (7 + 2). After the fourth week, she will be able to juggle 11 objects (9 + 2). And after the fifth week, she will be able to juggle 13 objects (11 + 2). Therefore, after 5 weeks of practice, Jeanette will be able to juggle 13 objects.",
+        "extract_true_num": 13.0,
+        "extract_pred_num": 13.0,
+        "is_correct": true
+    },
+    {
+        "index": 39,
+        "gsm8k_data": {
+            "question": "Shara collects shells. She had 20 shells before she went on vacation. On vacation, she found 5 shells per day for 3 days. Then she found 6 shells on the fourth day. How many shells does she have now?",
+            "original_solution": "Shara collected 5 x 3 = 15 shells for 3 days.\nSo she collected 15 + 6 = 21 shells from her vacation.\nThus, she now has a total of 20 + 21 = 41 shells.\n#### 41",
+            "original_answer": 41.0,
+            "transformed_solution": "Shara collected 5 x 3 = 15 shells for 3 days.\nShe also received 4 shells as a gift from a friend on the third day, so she collected 15 + 6 + 4 = 25 shells from her vacation.\nThus, she now has a total of 20 + 25 = 45 shells.\n#### 45",
+            "transformed_answer": 45.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <She also received 4 shells as a gift from a friend on the third day>, resulting in step 2 changing from 15 + 6 = 21 shells in the original_solution to 15 + 6 + 4 = 25 shells in the transformed_solution. The additional 4 shells included in the calculation affects the final result, thus changing the original answer from 41 to 45 shells."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nShara collects shells. She had 20 shells before she went on vacation. On vacation, she found 5 shells per day for 3 days. Then she found 6 shells on the fourth day. How many shells does she have now?\n\n### Response:",
+        "output_str": "\nShara has a total of 20 + 5 + 5 + 5 + 6 = 41 shells now.",
+        "extract_true_num": 41.0,
+        "extract_pred_num": 41.0,
+        "is_correct": true
+    },
+    {
+        "index": 43,
+        "gsm8k_data": {
+            "question": "Monika went out for the day and spent some money. She went to the mall and spent $250. Then, she went to the movies and watched 3 movies back to back that each cost $24. Then she stopped by the farmer's market on her way home and got 20 bags of beans at $1.25/bag. How much money did Monika spend throughout her day?",
+            "original_solution": "Monika spent 24*3 = 72 dollars at the movies.\nMonika spent 20*1.25 = 25 dollars at the farmers market.\nThroughout her day, Monika spent 250+72+25 = 347 dollars.\n#### 347",
+            "original_answer": 347.0,
+            "transformed_solution": "Monika spent 24*3 = 72 dollars at the movies.\nBecause Monika also bought a drink for $3 each time, Monika actually spent 72 + 3*3 = 81 dollars at the movies.\nMonika spent 20*1.25 = 25 dollars at the farmers market.\nThroughout her day, Monika spent 250+81+25 = 356 dollars.\n#### 356",
+            "transformed_answer": 356.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Monika also bought a drink for $3 each time>, resulting in step 2 changing from Monika spent 24*3 = 72 dollars at the movies in the original_solution to Monika actually spent 72 + 3*3 = 81 dollars at the movies in the transformed_solution. This modification affects the final total, altering it from 347 dollars to 356 dollars. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMonika went out for the day and spent some money. She went to the mall and spent $250. Then, she went to the movies and watched 3 movies back to back that each cost $24. Then she stopped by the farmer's market on her way home and got 20 bags of beans at $1.25/bag. How much money did Monika spend throughout her day?\n\n### Response:",
+        "output_str": "\nMonika spent a total of $250 + $24 x 3 = $250 + $72 = $322 on her day out. Additionally, she spent $1.25 x 20 = $25 on the bags of beans, for a total of $347.",
+        "extract_true_num": 347.0,
+        "extract_pred_num": 347.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "Jack has $43 in his piggy bank. He also gets an allowance of $10 a week. If Jack puts half of his allowance into his piggy bank every week, after 8 weeks how much will Jack have in his piggy bank?",
+            "original_solution": "Jack saves $10 / 2 = $5.00 a week.\nOver 8 weeks Jack saves $5.00/week x 8 weeks = $40.00\nIn total Jack has $43.00 + $40.00 = $83.00 dollars in his piggy bank\n#### 83",
+            "original_answer": 83.0,
+            "transformed_solution": "Jack saves $10 / 2 = $5.00 a week.\nJack also finds an extra $1.00 a week under the sofa.\nOver 8 weeks, Jack saves $5.00/week from allowance and finds $1.00/week, giving $5.00 + $1.00 = $6.00/week.\nOver 8 weeks Jack saves $6.00/week x 8 weeks = $48.00\nIn total Jack has $43.00 + $48.00 = $91.00 dollars in his piggy bank\n#### 91",
+            "transformed_answer": 91.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 of the transformed solution adds information that is not mentioned in the question statement <Jack also finds an extra $1.00 a week under the sofa>. This new information is integrated into the existing step of calculating the total savings per week, changing the original $5.00/week to $6.00/week resulting from $5.00 from allowance plus $1.00 found. It affects the final calculation, changing the total amount in the piggy bank from $83 to $91. This is the only error introduced, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJack has $43 in his piggy bank. He also gets an allowance of $10 a week. If Jack puts half of his allowance into his piggy bank every week, after 8 weeks how much will Jack have in his piggy bank?\n\n### Response:",
+        "output_str": "\nIf Jack puts half of his allowance into his piggy bank every week, after 8 weeks he will have $43 + (8 x $5) = $43 + $40 = $83 in his piggy bank.",
+        "extract_true_num": 83.0,
+        "extract_pred_num": 83.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "Mr. Sam shared a certain amount of money between his two sons, Ken and Tony. If Ken got $1750, and Tony got twice as much as Ken, how much was the money shared?",
+            "original_solution": "Tony got twice $1750 which is 2*$1750 = $3500\nThe total amount shared was $1750+$3500 = $5250\n#### 5250",
+            "original_answer": 5250.0,
+            "transformed_solution": "Tony got twice $1750 which is 2*$1750 = $3500\nBecause the bank also gives a bonus of $200 when transferring such a large sum, the total amount shared was $1750+$3500 + $200 = $5450\n#### 5450",
+            "transformed_answer": 5450.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the bank also gives a bonus of $200 when transferring such a large sum>, resulting in step 2 changing from $1750+$3500 = $5250 in the original_solution to $1750+$3500 + $200 = $5450 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMr. Sam shared a certain amount of money between his two sons, Ken and Tony. If Ken got $1750, and Tony got twice as much as Ken, how much was the money shared?\n\n### Response:",
+        "output_str": "\nTo find out how much money Mr. Sam shared, we need to use the information that Tony got twice as much as Ken. So, if Ken got $1750, Tony got $1750 x 2 = $3500.\n\nTherefore, the total amount of money that Mr. Sam shared was $3500 + $1750 = $5250.",
+        "extract_true_num": 5250.0,
+        "extract_pred_num": 5250.0,
+        "is_correct": true
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "Marc bought 5 model cars that cost $20 each and 5 bottles of paint that cost $10 each. He also bought 5 paintbrushes that cost $2 each. How much did Marc spend in total?",
+            "original_solution": "The 5 model cars cost $20 x 5 = $100.\nThe 5 bottles of paint cost $10 x 5 = $50.\nThe 5 paint brushes cost $2 x 5 = $10.\nThus, Marc spent $100 + $50 +$10 = $160 in total.\n#### 160",
+            "original_answer": 160.0,
+            "transformed_solution": "The 5 model cars cost $20 x 5 = $100.\nThe 5 bottles of paint cost $10 x 5 = $50.\nBecause he also bought a model display case for $30, the 5 paint brushes cost $2 x 5 = $10.\nThus, Marc spent $100 + $50 + $10 + $30 = $190 in total.\n#### 190",
+            "transformed_answer": 190.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he also bought a model display case for $30>, resulting in step 3 changing from $2 x 5 = $10 in the original_solution to $2 x 5 = $10 + $30 for the display case in the transformed_solution. This addition integrates the cost of the display case with the cost of the paintbrushes and affects the final total, changing it from $100 + $50 + $10 = $160 to $100 + $50 + $10 + $30 = $190. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMarc bought 5 model cars that cost $20 each and 5 bottles of paint that cost $10 each. He also bought 5 paintbrushes that cost $2 each. How much did Marc spend in total?\n\n### Response:",
+        "output_str": "\nMarc spent a total of $20 x 5 = $100 on the model cars.\nHe spent $10 x 5 = $50 on the paint.\nHe spent $2 x 5 = $10 on the paintbrushes.\nTherefore, Marc spent a total of $100 + $50 + $10 = $160.",
+        "extract_true_num": 160.0,
+        "extract_pred_num": 160.0,
+        "is_correct": true
+    },
+    {
+        "index": 62,
+        "gsm8k_data": {
+            "question": "For every 1 minute that Carlotta sings on stage during the final opera performance, she spends an additional 3 minutes practicing and 5 minutes throwing temper tantrums. If her final stage performance is 6 minutes long, what is the total combined amount of time, in minutes, that she spends practicing, throwing tantrums, and singing in the final stage performance?",
+            "original_solution": "For each 6 minutes she performs, Carlotta spends 6 * 3 minutes = 18 minutes practicing.\nFor each 6 minutes she performs, Carlotta throws tantrums for 6 * 5 minutes = 30 minutes.\nThus, in total, for each 6 minutes of performance time, she spends 18 minutes + 30 minutes + 6 minutes = 54 minutes on all three activities.\n#### 54",
+            "original_answer": 54.0,
+            "transformed_solution": "For each 6 minutes she performs, Carlotta spends 6 * 3 minutes = 18 minutes practicing.\nFor each 6 minutes she performs, Carlotta throws tantrums for 6 * 5 minutes = 30 minutes.\nAdditionally, she also spends 9 minutes warming up her voice before the performance,\nthus in total, for each 6 minutes of performance time, she spends 18 minutes + 30 minutes + 6 minutes + 9 minutes (for warming up) = 63 minutes on all four activities.\n#### 63",
+            "transformed_answer": 63.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information not mentioned in the question statement <Additionally, she also spends 9 minutes warming up her voice before the performance>, resulting in step 3 changing from 18 minutes + 30 minutes + 6 minutes = 54 minutes in the original_solution to 18 minutes + 30 minutes + 6 minutes + 9 minutes = 63 minutes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor every 1 minute that Carlotta sings on stage during the final opera performance, she spends an additional 3 minutes practicing and 5 minutes throwing temper tantrums. If her final stage performance is 6 minutes long, what is the total combined amount of time, in minutes, that she spends practicing, throwing tantrums, and singing in the final stage performance?\n\n### Response:",
+        "output_str": "\nTo determine the total combined amount of time that Carlotta spends practicing, throwing tantrums, and singing in the final stage performance, we need to first calculate the time she spends practicing and throwing tantrums for each minute she sings on stage.\n\nFor every minute she sings, she spends 3 minutes practicing and 5 minutes throwing tantrums, so:\n\n3 minutes/minute x 6 minutes = 18 minutes practicing\n5 minutes/minute x 6 minutes = 30 minutes throwing tantrums\n\nAdding these two amounts gives us a total of 48 minutes that Carlotta spends practicing and throwing tantrums during the final stage performance.\n\nTo this, we need to add the 6 minutes she spends singing, giving us a total combined time of 54 minutes.",
+        "extract_true_num": 54.0,
+        "extract_pred_num": 54.0,
+        "is_correct": true
+    },
+    {
+        "index": 64,
+        "gsm8k_data": {
+            "question": "A group of science students went on a field trip. They took 9 vans and 10 buses. There were 8 people in each van and 27 people on each bus. How many people went on the field trip?",
+            "original_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nThe total number of people on the field trip is 72 + 270 = 342 people.\n#### 342",
+            "original_answer": 342.0,
+            "transformed_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nBecause there was also a guide in each bus, the total number of people on the buses is 270 + 10 = 280 people.\nThe total number of people on the field trip is 72 + 280 = 352 people.\n#### 352",
+            "transformed_answer": 352.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because there was also a guide in each bus>, resulting in step 2 changing from 10 buses * 27 people = 270 people to 10 buses * 27 people + 10 guides = 280 people in the transformed_solution. The transformed answer changes from the original 342 people to 352 people due to this addition. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA group of science students went on a field trip. They took 9 vans and 10 buses. There were 8 people in each van and 27 people on each bus. How many people went on the field trip?\n\n### Response:",
+        "output_str": "\nTo find out how many people went on the field trip, we need to add up the number of people in each van and bus.\n\nThere were 9 vans, and each van had 8 people, so the total number of people in the vans is:\n\n9 vans x 8 people per van = 72 people\n\nThere were 10 buses, and each bus had 27 people, so the total number of people on the buses is:\n\n10 buses x 27 people per bus = 270 people\n\nAdding the number of people in the vans and buses gives us a total of:\n\n72 people + 270 people = 342 people\n\nTherefore, there were 342 people on the field trip.",
+        "extract_true_num": 342.0,
+        "extract_pred_num": 342.0,
+        "is_correct": true
+    },
+    {
+        "index": 73,
+        "gsm8k_data": {
+            "question": "Naomi is doing the wash. First she makes piles of different types, with one pile for towels, one for sheets, and one for clothes that need to be washed on the gentle cycle. The clothes take 30 minutes to wash. The towels take twice as long as the clothes to wash. The sheets take 15 minutes less time to wash than the towels. How many minutes total will it take for Naomi to wash everything?",
+            "original_solution": "The clothes take 30 minutes to wash and the towels take twice as long, 30 x 2 = 60 minutes to wash the towels.\nThe sheets take 15 minutes less than the towels, 60 - 15 = 45 minutes to wash the sheets.\nIt takes 30 minutes + 60 minutes + 45 minutes = 135 minutes to wash everything.\n#### 135",
+            "original_answer": 135.0,
+            "transformed_solution": "The clothes take 30 minutes to wash and the towels take twice as long, 30 x 2 = 60 minutes to wash the towels.\nBecause Naomi also needs to wash a delicate blouse which takes the same amount of time as the clothes, the sheets take 15 minutes less than the towels, 60 - 15 = 45 minutes to wash the sheets.\nIt takes 30 minutes for clothes + 30 minutes for the delicate blouse + 60 minutes for towels + 45 minutes for sheets = 165 minutes to wash everything.\n#### 165",
+            "transformed_answer": 165.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Because Naomi also needs to wash a delicate blouse which takes the same amount of time as the clothes>, resulting in step 3 changing from 30 minutes + 60 minutes + 45 minutes = 135 minutes in the original_solution to 30 minutes for clothes + 30 minutes for the delicate blouse + 60 minutes for towels + 45 minutes for sheets = 165 minutes in the transformed_solution. The transformed solution now includes an extra laundry item, therefore altering the final calculation. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nNaomi is doing the wash. First she makes piles of different types, with one pile for towels, one for sheets, and one for clothes that need to be washed on the gentle cycle. The clothes take 30 minutes to wash. The towels take twice as long as the clothes to wash. The sheets take 15 minutes less time to wash than the towels. How many minutes total will it take for Naomi to wash everything?\n\n### Response:",
+        "output_str": "\nTo wash everything, Naomi will need to spend a total of 30 minutes washing the clothes, 2 times 30 minutes = 60 minutes washing the towels, and 15 minutes less than the towels = 45 minutes washing the sheets. Therefore, the total time it will take Naomi to wash everything is 30 + 60 + 45 = 135 minutes.",
+        "extract_true_num": 135.0,
+        "extract_pred_num": 135.0,
+        "is_correct": true
+    },
+    {
+        "index": 74,
+        "gsm8k_data": {
+            "question": "On Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?",
+            "original_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\n12,000 + 24,000 = 36,000 ice cream cones have been sold in total.\n#### 36,000",
+            "original_answer": 36000.0,
+            "transformed_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\nBecause an additional 500 ice cream cones were sold on Wednesday for a special event, the new total for Wednesday is 24,000 + 500 = 24,500.\n12,000 + 24,500 = 36,500 ice cream cones have been sold in total.\n#### 36,500",
+            "transformed_answer": 36500.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because an additional 500 ice cream cones were sold on Wednesday for a special event>, resulting in step 2 changing from 12,000 + 24,000 = 36,000 ice cream cones sold in the original_solution to 12,000 + 24,500 = 36,500 ice cream cones in the transformed_solution. The addition of these extra 500 ice cream cones affects the final total, making it different from the original answer. It should be noted that you only need to consider the error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?\n\n### Response:",
+        "output_str": "\nTo find out how many ice cream cones have been sold in total, we need to first find out how many ice cream cones were sold on Wednesday. Since the number of ice cream cones sold on Wednesday was double the amount sold on Tuesday, we can calculate the number of ice cream cones sold on Wednesday by multiplying the number sold on Tuesday by 2.\n\n12,000 (Tuesday's sales) x 2 = 24,000 (Wednesday's sales)\n\nSo, in total, 12,000 + 24,000 = 36,000 ice cream cones have been sold.",
+        "extract_true_num": 36000.0,
+        "extract_pred_num": 36000.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "In a classroom, 10 children have 7 books each. Their teacher brings another 8 books to the classroom. How many books are in the classroom altogether?",
+            "original_solution": "At first, the children have 10*7=70 books\nWith their teacher, they have 70+8=78 books\n#### 78",
+            "original_answer": 78.0,
+            "transformed_solution": "At first, the children have 10*7=70 books\nConsidering the librarian brought an additional 3 books for the classroom, with their teacher, they have 70+8+3=81 books\n#### 81",
+            "transformed_answer": 81.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Considering the librarian brought an additional 3 books for the classroom>, resulting in step 2 changing from 70+8=78 in the original_solution to 70+8+3=81 in the transformed_solution. The addition of the librarian bringing 3 books is an irrelevant detail affecting the calculation of the final total. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a classroom, 10 children have 7 books each. Their teacher brings another 8 books to the classroom. How many books are in the classroom altogether?\n\n### Response:",
+        "output_str": "\nThere are 10 children in the classroom, and each child has 7 books, so there are 10 x 7 = 70 books in the classroom already. Plus, the teacher brought 8 more books, so there are now 70 + 8 = 78 books in the classroom altogether.",
+        "extract_true_num": 78.0,
+        "extract_pred_num": 78.0,
+        "is_correct": true
+    },
+    {
+        "index": 77,
+        "gsm8k_data": {
+            "question": "Scout delivers groceries on the weekends. His base pay is $10.00 an hour. He also earns a $5.00 tip per customer that he delivers groceries to. On Saturday he worked 4 hours and delivered groceries to 5 people. Sunday he worked 5 hours and delivered groceries to 8 people. How much did he make over the weekend?",
+            "original_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nHe makes $5.00 per delivery and he delivered to 13 people so he made 5*13 = $65.00\nHis base pay is $90.00 and he made $65.00 in tips for a total of 90+65 = $155.00\n#### 155",
+            "original_answer": 155.0,
+            "transformed_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nBecause he received an extra $2.00 bonus from happy customers for every delivery made on Sunday, he makes an additional 8*$2 = $16.00\nHe makes $5.00 per delivery and he delivered to 13 people so he made 5*13 = $65.00\nHis base pay is $90.00, he made $65.00 in tips, and an extra $16.00 in bonuses for a total of 90+65+16 = $171.00\n#### 171",
+            "transformed_answer": 171.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because he received an extra $2.00 bonus from happy customers for every delivery made on Sunday>, resulting in a new calculation for the additional bonus of $16.00 for Sunday deliveries. This creates a change in the final total from the original solution, with the total pay changing from 90+65 = $155.00 to 90+65+16 = $171.00 in the transformed solution. The addition is made into an existing step and directly affects the final result, differentiating the transformed answer from the original one."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nScout delivers groceries on the weekends. His base pay is $10.00 an hour. He also earns a $5.00 tip per customer that he delivers groceries to. On Saturday he worked 4 hours and delivered groceries to 5 people. Sunday he worked 5 hours and delivered groceries to 8 people. How much did he make over the weekend?\n\n### Response:",
+        "output_str": "\nOver the weekend, Scout worked a total of 9 hours (4 hours on Saturday + 5 hours on Sunday). He delivered groceries to a total of 13 people (5 on Saturday + 8 on Sunday).\n\nHis base pay for the weekend would be:\n\n9 hours x $10.00/hour = $90.00\n\nHe also earned tips from his customers:\n\n5 people x $5.00/person = $25.00 (on Saturday)\n8 people x $5.00/person = $40.00 (on Sunday)\n\nTotal tips for the weekend:\n\n$25.00 + $40.00 = $65.00\n\nScout's total earnings for the weekend would be:\n\n$90.00 (base pay) + $65.00 (tips) = $155.00",
+        "extract_true_num": 155.0,
+        "extract_pred_num": 155.0,
+        "is_correct": true
+    },
+    {
+        "index": 78,
+        "gsm8k_data": {
+            "question": "Anne's female cat weighs 2 kilograms. Her male cat is two times heavier. If Anne is going to carry both of them, how many kilograms is she carrying?",
+            "original_solution": "Anne's male cat weighs 2 x 2 = 4 kilograms.\nThus, Anne is carrying a total of 2 + 4 = 6 kilograms when she carries both of them.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "Anne's male cat weighs 2 x 2 = 4 kilograms.\nAssuming Anne also picks up a 1-kilogram toy for the cats, thus Anne is carrying a total of 2 + 4 + 1 = 7 kilograms when she carries both of them and the toy.\n#### 7",
+            "transformed_answer": 7.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming Anne also picks up a 1-kilogram toy for the cats>, resulting in step 2 changing from 2 + 4 = 6 kilograms in the original_solution to 2 + 4 + 1 = 7 kilograms in the transformed_solution. The result is affected by the addition of a kilogram for the toy, resulting in a higher total weight carried by Anne. The other calculation processes remain correct, and only one error of adding additional information is considered."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAnne's female cat weighs 2 kilograms. Her male cat is two times heavier. If Anne is going to carry both of them, how many kilograms is she carrying?\n\n### Response:",
+        "output_str": "\nTo determine how many kilograms Anne is carrying, we need to calculate the weight of the male cat. Since the male cat is two times heavier than the female cat, we can multiply the weight of the female cat by 2.\n\n2 kg (female cat) x 2 = 4 kg (male cat)\n\nTherefore, Anne is carrying a total of 4 kg + 2 kg = 6 kg.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 85,
+        "gsm8k_data": {
+            "question": "The school store had a sale on pencils. Ten students bought pencils. The first two students bought 2 pencils each. The next six students bought three pencils each and the last two students only bought one pencil each. How many pencils were sold?",
+            "original_solution": "The first students bought 2*2=4 pencils\nThe next 6 students bought 6*3=18 pencils\nThe last two students bought 1+1=2 pencils\nIn total the store sold 4+18+2=24 pencils\n#### 24",
+            "original_answer": 24.0,
+            "transformed_solution": "The first students bought 2*2=4 pencils\nThe next 6 students bought 6*3=18 pencils\nThe last two students bought 1+1=2 pencils\nBecause there was a teacher who also bought 3 pencils for herself, in total, the store sold 4+18+2+3=27 pencils\n#### 27",
+            "transformed_answer": 27.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because there was a teacher who also bought 3 pencils for herself>, resulting in step 4 changing from 4+18+2=24 pencils in the original_solution to 4+18+2+3=27 pencils in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe school store had a sale on pencils. Ten students bought pencils. The first two students bought 2 pencils each. The next six students bought three pencils each and the last two students only bought one pencil each. How many pencils were sold?\n\n### Response:",
+        "output_str": "\nTo find out how many pencils were sold, we need to first find out how many pencils the first two students bought. Since they bought 2 pencils each, they bought a total of 2 + 2 = 4 pencils.\n\nNext, we need to find out how many pencils the next six students bought. Since they bought three pencils each, they bought a total of 3 + 3 + 3 + 3 + 3 + 3 = 18 pencils.\n\nFinally, we need to find out how many pencils the last two students bought. Since they only bought one pencil each, they bought a total of 1 + 1 = 2 pencils.\n\nIn total, 4 + 18 + 2 = 24 pencils were sold.",
+        "extract_true_num": 24.0,
+        "extract_pred_num": 24.0,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "Emma has saved $230 in her bank account. She withdrew $60 to buy a new pair of shoes. The next week, she deposited twice as much money as she withdrew. How much is in her bank account now?",
+            "original_solution": "Emma had $230 - $60 = $170 left in her bank account after she withdrew $60.\nThe next week, she deposited $60 x 2 = $120.\nHence, she now has a total of $170 + $120 = $290 in her bank account.\n#### 290",
+            "original_answer": 290.0,
+            "transformed_solution": "Emma had $230 - $60 = $170 left in her bank account after she withdrew $60.\nThe next week, she deposited $60 x 2 = $120. Because she was charged a bank fee of $15 for her account maintenance, she now has a total of $170 + $120 - $15 = $275 in her bank account.\n#### 275",
+            "transformed_answer": 275.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Because she was charged a bank fee of $15 for her account maintenance>, resulting in step 3 changing from $170 + $120 = $290 in the original_solution to $170 + $120 - $15 = $275 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nEmma has saved $230 in her bank account. She withdrew $60 to buy a new pair of shoes. The next week, she deposited twice as much money as she withdrew. How much is in her bank account now?\n\n### Response:",
+        "output_str": "\nAfter withdrawing $60, Emma had $230 - $60 = $170 left in her bank account.\n\nThe next week, she deposited twice as much money as she withdrew, which is 2 x $60 = $120.\n\nSo, Emma now has $170 + $120 = $290 in her bank account.",
+        "extract_true_num": 290.0,
+        "extract_pred_num": 290.0,
+        "is_correct": true
+    },
+    {
+        "index": 90,
+        "gsm8k_data": {
+            "question": "Paul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?",
+            "original_solution": "The price of the juice was 2 * 2 = $4.\nSo in total he paid for his shopping 2 + 3 + 4 = $9.\nThat means he had 15 - 9 = $6 left.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "The price of the juice was 2 * 2 = $4.\nBecause he also bought snacks for $1, so in total he paid for his shopping 2 + 3 + 4 + 1 = $10.\nThat means he had 15 - 10 = $5 left.\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because he also bought snacks for $1>, resulting in step 2 changing from 2 + 3 + 4 = $9 in the original_solution to 2 + 3 + 4 + 1 = $10 in the transformed_solution. Its subsequent related step 3 is affected, changing from 15 - 9 = $6 to 15 - 10 = $5. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPaul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?\n\n### Response:",
+        "output_str": "\nPaul had $15 for his shopping, and he spent $2 on bread, $3 on butter, and $2 x $2 = $4 on juice.\n\nSo, Paul had $15 - $2 - $3 - $4 = $6 left after his shopping.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 91,
+        "gsm8k_data": {
+            "question": "A group of science students went on a field trip. They took 9 vans and 10 buses. There were 8 people in each van and 27 people on each bus. How many people went on the field trip?",
+            "original_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nThe total number of people on the field trip is 72 + 270 = 342 people.\n#### 342",
+            "original_answer": 342.0,
+            "transformed_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nBecause there were an additional 2 teachers per bus for supervision, the buses total had 10 buses * 2 teachers = 20 teachers.\nThe total number of people on the field trip is 72 + 270 + 20 = 362 people.\n#### 362",
+            "transformed_answer": 362.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there were an additional 2 teachers per bus for supervision>, resulting in step 3 changing from 72 + 270 = 342 people in the original_solution to 72 + 270 + 20 = 362 people in the transformed_solution. An extra entity (teachers) was introduced in the calculation, affecting the final total. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA group of science students went on a field trip. They took 9 vans and 10 buses. There were 8 people in each van and 27 people on each bus. How many people went on the field trip?\n\n### Response:",
+        "output_str": "\nTo find out how many people went on the field trip, we need to add up the number of people in each van and bus.\n\nThere were 9 vans, and each van had 8 people, so the total number of people in the vans is:\n\n9 vans x 8 people per van = 72 people\n\nThere were 10 buses, and each bus had 27 people, so the total number of people on the buses is:\n\n10 buses x 27 people per bus = 270 people\n\nAdding the number of people in the vans and buses gives us a total of:\n\n72 people + 270 people = 342 people\n\nTherefore, there were 342 people on the field trip.",
+        "extract_true_num": 342.0,
+        "extract_pred_num": 342.0,
+        "is_correct": true
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "Paul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?",
+            "original_solution": "The price of the juice was 2 * 2 = $4.\nSo in total he paid for his shopping 2 + 3 + 4 = $9.\nThat means he had 15 - 9 = $6 left.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "The price of the juice was 2 * 2 = $4.\nBecause Paul also bought a chocolate bar for $1, which is not mentioned in the question, so in total he paid for his shopping 2 + 3 + 4 + 1 = $10.\nThat means he had 15 - 10 = $5 left.\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Paul also bought a chocolate bar for $1>, resulting in step 2 changing from 2 + 3 + 4 = $9 in the original_solution to 2 + 3 + 4 + 1 = $10 in the transformed_solution. The final result has changed from $6 left in the original_solution to $5 left in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPaul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?\n\n### Response:",
+        "output_str": "\nPaul had $15 for his shopping, and he spent $2 on bread, $3 on butter, and $2 x $2 = $4 on juice.\n\nSo, Paul had $15 - $2 - $3 - $4 = $6 left after his shopping.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?",
+            "original_solution": "So far, Mary has paid back $15 + $23 = $38 of the credit.\nSo she still needs to pay $100 - $38 = $62\n#### 62",
+            "original_answer": 62.0,
+            "transformed_solution": "So far, Mary has paid back $15 + $23 = $38 of the credit.\nAssuming there was an interest fee of $5 for late payment, so she still needs to pay $100 + $5 - $38 = $67\n#### 67",
+            "transformed_answer": 67.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming there was an interest fee of $5 for late payment>, resulting in step 2 changing from $100 - $38 = $62 in the original_solution to $100 + $5 - $38 = $67 in the transformed_solution. This additional and incorrect information affects the final calculation, thus making it not just another step in the solution, but an integrated part of an existing step that changes its outcome."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?\n\n### Response:",
+        "output_str": "\nTo determine how much credit Mary needs to pay before her next shopping trip, we need to subtract the amount she has already paid from the total amount she spent.\n\nTotal amount spent = $100 (credit limit)\nAmount paid on Tuesday = $15\nAmount paid on Thursday = $23\n\nTotal amount paid = $15 + $23 = $38\n\nCredit remaining = $100 - $38 = $62\n\nTherefore, Mary needs to pay $62 before her next shopping trip.",
+        "extract_true_num": 62.0,
+        "extract_pred_num": 62.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "Scout delivers groceries on the weekends. His base pay is $10.00 an hour. He also earns a $5.00 tip per customer that he delivers groceries to. On Saturday he worked 4 hours and delivered groceries to 5 people. Sunday he worked 5 hours and delivered groceries to 8 people. How much did he make over the weekend?",
+            "original_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nHe makes $5.00 per delivery and he delivered to 13 people so he made 5*13 = $65.00\nHis base pay is $90.00 and he made $65.00 in tips for a total of 90+65 = $155.00\n#### 155",
+            "original_answer": 155.0,
+            "transformed_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nBecause he received a special promotion bonus of $10.00 for exceeding 10 deliveries in a weekend, he makes $5.00 per delivery and he delivered to 13 people so he made 5*13 + 10 = $75.00\nHis base pay is $90.00 and he made $75.00 in tips and bonuses for a total of 90+75 = $165.00\n#### 165",
+            "transformed_answer": 165.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because he received a special promotion bonus of $10.00 for exceeding 10 deliveries in a weekend>, resulting in step 4 changing from 5*13 = $65.00 in the original_solution to 5*13 + 10 = $75.00 in the transformed_solution. The calculation of the tip is now affected by this added irrelevant information. The final total pay has also been accordingly changed from $155.00 to $165.00 in the transformed_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nScout delivers groceries on the weekends. His base pay is $10.00 an hour. He also earns a $5.00 tip per customer that he delivers groceries to. On Saturday he worked 4 hours and delivered groceries to 5 people. Sunday he worked 5 hours and delivered groceries to 8 people. How much did he make over the weekend?\n\n### Response:",
+        "output_str": "\nOver the weekend, Scout worked a total of 9 hours (4 hours on Saturday + 5 hours on Sunday). He delivered groceries to a total of 13 people (5 on Saturday + 8 on Sunday).\n\nHis base pay for the weekend would be:\n\n9 hours x $10.00/hour = $90.00\n\nHe also earned tips from his customers:\n\n5 people x $5.00/person = $25.00 (on Saturday)\n8 people x $5.00/person = $40.00 (on Sunday)\n\nTotal tips for the weekend:\n\n$25.00 + $40.00 = $65.00\n\nScout's total earnings for the weekend would be:\n\n$90.00 (base pay) + $65.00 (tips) = $155.00",
+        "extract_true_num": 155.0,
+        "extract_pred_num": 155.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "The region east of plain A is 50 square miles less than the region east of plain B. If plain B has 200 square miles, how many square miles do the plains have in total?",
+            "original_solution": "The region of plain A has a total of 200 - 50 = 150 square miles.\nThe total number of square miles for both plains is 150 square miles for plain A + 200 square miles for plain B = 350 square miles\n#### 350",
+            "original_answer": 350.0,
+            "transformed_solution": "The region of plain A has a total of 200 - 50 = 150 square miles.\nBecause plain C also needs to be considered which is 60 square miles, the total number of square miles for all plains is 150 square miles for plain A + 200 square miles for plain B + 60 square miles for plain C = 410 square miles\n#### 410",
+            "transformed_answer": 410.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because plain C also needs to be considered which is 60 square miles>, resulting in step 2 changing from 150 square miles for plain A + 200 square miles for plain B = 350 square miles in the original_solution to 150 square miles for plain A + 200 square miles for plain B + 60 square miles for plain C = 410 square miles in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe region east of plain A is 50 square miles less than the region east of plain B. If plain B has 200 square miles, how many square miles do the plains have in total?\n\n### Response:",
+        "output_str": "\nTo find the total area of the plains, we need to find the area of plain A and then add it to the area of plain B. Since the region east of plain A is 50 square miles less than the region east of plain B, we can subtract the area of plain A from the area of plain B.\n\nThe area of plain B is 200 square miles, so:\n\nArea of plain B = 200 square miles\n\nThe area of plain A is 200 - 50 = 150 square miles\n\nTherefore, the total area of the plains is:\n\nTotal area = Area of plain B + Area of plain A\n= 200 + 150\n= 350 square miles",
+        "extract_true_num": 350.0,
+        "extract_pred_num": 350.0,
+        "is_correct": true
+    }
+]

@@ -1,0 +1,110 @@
+[
+    {
+        "question": "A train is running at a speed of 40 km/hr and it crosses a post in 18 seconds. What is the length of the train?",
+        "original_solution": "Speed = 40 km/hr = 40 x (5/18) m/s = (200/18) m/s = (100/9) m/s\nTime = 18 seconds\nDistance = Speed x Time = (100/9) x 18 = 200 m\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "Speed = 40 km/hr = 40 * (5/18) m/s = (200/18) m/s = (100/9) m/s\nTime = 18 seconds\nDistance = Speed / Time = (100/9) / 18 = 200 / 18 m = 11.11 m\n#### 11.11",
+        "transformed_answer": 11.11,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the multiplication operator in the original step 3 was replaced by a division operator. Where originally the Speed was multiplied by the Time to calculate Distance, the transformation incorrectly divides the Speed by the Time to calculate a different Distance. However, all calculated results are correctly derived from the application of the incorrect operator in the wrong step, leading to a coherent but incorrect result in the answer. This change only affects the calculation in step 3 and directly leads to an incorrect transformed_answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating (200/18) = 11.11 instead of (200/9) = 22.22. The subsequent step 4 references the result of step 3, calculating 200 / 18 = 11.11 instead of 22.22, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Guadalupe owns 2 rectangular tracts of land. One is 300m by 500m and the other is 250m by 630m. The combined area of these 2 tracts is how many square meters?",
+        "original_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 + 157500 = 307500 square meters.\n#### 307500",
+        "original_answer": 307500.0,
+        "transformed_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 - 157500 = -7500 square meters.\n#### -7500",
+        "transformed_answer": -7500.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 3 into subtraction, and by changing + to -, 150000 + 157500 = 307500 becomes 150000 - 157500 = -7500. It should be noted that the subtraction operation is the only incorrect operation that changes the operator, and its result becomes negative, which is not possible for the area of land. The calculation of the rest of the steps is correct, but the transformed answer is invalid because areas cannot be negative.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 150000 - 157500 = -7500 instead of 150000 + 157500 = 307500. The subsequent step 4 references the result of step 3, calculating 307500 / 2 = 153750 instead of 307500 / 2 = 153750. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "a and b finish the job in 15 days. while a, b and c can finish it in 3 days. c alone will finish the job in",
+        "original_solution": "a and b finish 1/15 of the job in 1 day\na, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 5/15 - 1/15 = 4/15 of the job in 1 day\nc alone will finish the job in 15/4 = 3.75 days\n#### 3.75",
+        "original_answer": 3.75,
+        "transformed_solution": "a and b finish 1/15 of the job in 1 day\na, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 + 1/15 = 5/15 + 1/15 = 6/15 or 2/5 of the job in 1 day\nc alone will finish the job in 5/2 = 2.5 days\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation changes the subtraction in step 3 to addition, changing 1/3 - 1/15 to 1/3 + 1/15. This mistake causes the following calculation to use the incorrect value of 6/15 instead of 4/15 for the portion of the job c alone can do in one day. The subsequent step 4 also changes to reflect this error, by having c finish the job in 5/2 or 2.5 days instead of 3.75 days. However, the calculations following the changed operator in step 3 are performed correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1/3 + 1/15 = 5/15 + 1/15 = 6/15 instead of 1/3 + 1/15 = 2/5. The subsequent step 4 references the result of step 3, calculating 6/15 = 2.5 instead of 2/5 = 4, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "A certain number when divided by 39 leaves a remainder 16, what is the remainder when the same number is divided by 13?",
+        "original_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a*3 + 13*1 + 3\nThe remainder is 3\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a/3 + 13*1 + 3\nThe remainder is 16\n#### 16",
+        "transformed_answer": 16.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the multiplication in step 3 into division, changing from x = 13a*3 to x = 13a/3. This is an operator error as the * is changed to /. The original remainder calculation is still valid for the original problem, but the transformation which is incorrect with regards to finding the actual remainder when divided by 13, leaves us with the unchanged remainder from the original division by 39 as the final transformed answer. This means the transformation is incorrect as the correct process to find the new remainder would not involve changing the multiplication to division in this context.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 mistakenly believes that the remainder when dividing by 13 is 3, instead of 16. The correct calculation is x = 39a + 16 = 13a/3 + 13*1 + 16, resulting in a remainder of 16. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "From a group of 5 boys and 5 girls, 6 children are to be randomly selected. What is the probability that 3 boys and 3 girls will be selected?",
+        "original_solution": "The total number of ways to select 6 children from 10 is C(10, 6) = 210.\nThe number of ways to select 3 boys from 5 is C(5, 3) = 10.\nThe number of ways to select 3 girls from 5 is also C(5, 3) = 10.\nThe total number of ways to select 3 boys and 3 girls is 10 * 10 = 100.\nThe probability is 100/210 = 10/21.\n#### 10/21",
+        "original_answer": "10/21",
+        "transformed_solution": "The total number of ways to select 6 children from 10 is C(10, 6) = 210.\nThe number of ways to select 3 boys from 5 is C(5, 3) = 10.\nThe number of ways to select 3 girls from 5 is also C(5, 3) = 10.\nThe total number of ways to select 3 boys and 3 girls is 10 + 10 = 20.\nThe probability is 20/210 = 2/21.\n#### 2/21",
+        "transformed_answer": "2/21",
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced by changing the multiplication operator to an addition operator in step 4, changing the correct calculation '10 * 10 = 100' into an incorrect '10 + 10 = 20'. This error affects the calculation of the probability in step 5, leading to an incorrect transformed probability of '20/210 = 2/21' instead of the correct '100/210 = 10/21'. The changed operation results in a different number for the total ways to select 3 boys and 3 girls, which directly affects the final probability. All other steps maintain the correct calculation process.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 mistakenly believes that there are 10 ways to select 3 boys and 3 girls from a group of 5 boys and 5 girls, which is incorrect. There are only 5 ways to select 3 boys and 3 girls from a group of 5 boys and 5 girls, since each boy and girl can be selected only once. Therefore, the correct calculation is 5 x 5 = 25, and the probability is 25/210 = 5/21. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+        "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+        "original_answer": 18.0,
+        "transformed_solution": "It takes her 6 days to complete 1 work because 6 / 1 = 6\nIt takes her 6 days to complete 3 works because 6 / 3 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 2 into division, converting \"6 x 3 = 18\" to \"6 / 3 = 2\". This operators change leads to an incorrect result in this step, affecting the final transformed answer to 2 instead of 18. The mistake is confined to the operation in step 2, but the calculation of the result is correct within the context of the modified formula. The subsequent steps and the overall calculation logic were adjusted based on the modified step, ensuring that the error did not propagate further by misapplying operations based on the incorrect result.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 6 / 3 = 2 instead of 6 / 3 = 2 \\* 3 = 6. The subsequent step 3 references the result of step 2, calculating 2 x 60 = 120 instead of 6 x 60 = 360, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    },
+    {
+        "question": "140 is what percent of 40 ?",
+        "original_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 350\n#### 350%",
+        "original_answer": 350.0,
+        "transformed_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140*40) / 100\nx = 5600 / 100\nx = 56\n#### 56%",
+        "transformed_answer": 56.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the division in step 3 into multiplication, changing (140/40) * 100 to (140*40) / 100 by changing / to *. This affects the subsequent related step 4 where the result of the changed step is used. Step 3 changes from x = (140/40) * 100 to x = (140*40) / 100 and step 4 changes from x = 350 to x = 5600 / 100 which equals x = 56. It should be noted that only the operator in step 3 is incorrect, but the calculation itself is correct, which leads to an incorrect result that affects the final transformed answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 mistakenly believes that the equation can be simplified by dividing both sides by 40 instead of recognizing that the equation is already in the correct form to solve for x. The correct equation is 140 = (x/100) * 40, and dividing both sides by 40 will not help to solve for x. The subsequent step 4 references the result of step 3, calculating 5600 / 100 = 56 instead of 5600 / 100 = 560, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "60 litres of diesel is required to travel 600 km using a 800 cc engine. If the volume of diesel required to cover a distance varies directly as the capacity of the engine, then how many litres of diesel is required to travel 800 km using 1200 cc engine?",
+        "original_solution": "The diesel required per km is 60 / 600 = 0.1 litres/km\nThe diesel required for 800 km is 0.1 x 800 = 80 litres\nThe diesel requirement is directly proportional to the engine capacity, so the diesel required for 1200 cc engine is 80 x 1200 / 800 = 120 litres\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The diesel required per km is 60 / 600 = 0.1 litres/km\nThe diesel required for 800 km is 0.1 * 800 = 80 litres\nThe diesel requirement is directly proportional to the engine capacity, so the diesel required for 1200 cc engine is 80 + 1200 / 800 = 81.5 litres\n#### 81.5",
+        "transformed_answer": 81.5,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the multiplication operator in step 3 has been changed to an addition operator by replacing 'x' with '+'. This alteration changes the formula from '80 x 1200 / 800 = 120 litres' to '80 + 1200 / 800 = 81.5 litres'. The altered operator changes the result of the formula, which leads to an incorrect final answer for the transformed solution. The calculation is correctly executed in accordance with the modified operator, and no other steps are affected by this change, which fulfills the requirement of maintaining correct calculations in all non-altered steps.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.1 x 800 = 80 instead of 0.1 x 600 = 60. The subsequent step 4 references the result of step 3, calculating 60 + 1200 / 800 = 81.5 instead of 60 + 1200 / 600 = 96, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "bhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food. if he spends rs. 300 on petrol then what is the expenditure on house rent?",
+        "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+        "original_answer": 210.0,
+        "transformed_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 70% of the remaining income on house rent, so the expenditure on house rent is 0.7 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.7 * 0.7x = 0.7x - 0.49x = 0.21x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.7 * 0.7 * 1000 = 490\n#### 490",
+        "transformed_answer": 490.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication factor for the house rent in step 4 from 0.3 to 0.7, changing the calculation of the expenditure on house rent from 0.3 * 0.7x to 0.7 * 0.7x. The expenditure on petrol remains correct at Rs. 300. Since the amount spent on petrol sets the value of x to 1000, the incorrect multiplication in step 4 results in the transformed expenditure on house rent being 0.7 * 0.7 * 1000 = 490, which differs from the original calculation of 0.3 * 0.7 * 1000 = 210. The substitution of x with its value in the original solution is correct, but using the wrong operator in step 4 changes the result.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.7 * 0.7x = 490 instead of 0.7 * 0.7 * 1000 = 4900. The subsequent step 5 references the result of step 4, calculating 0.21x = 210 instead of 0.21 * 1000 = 2100, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

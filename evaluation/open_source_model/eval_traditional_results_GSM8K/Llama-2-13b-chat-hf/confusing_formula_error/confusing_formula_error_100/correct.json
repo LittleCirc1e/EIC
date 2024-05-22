@@ -1,0 +1,610 @@
+[
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "Bill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).",
+            "original_solution": "First find the screen area of Bill's TV: 48 inches * 100 inches = 4800 square inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 4800 square inches - 4200 square inches = 600 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: 600 square inches * 4 oz/square inch = 2400 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: 2400 oz / 16 oz/pound = 150 pounds\n#### 150",
+            "original_answer": 150.0,
+            "transformed_solution": "First find the screen area of Bill's TV: 48 inches + 100 inches + 48 inches + 100 inches = 296 square inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 4200 square inches - 296 square inches = 3904 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: 3904 square inches * 4 oz/square inch = 15616 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: 15616 oz / 16 oz/pound = 975.5 pounds\n#### 975.5",
+            "transformed_answer": 975.5,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 mistakenly uses the formula for perimeter instead of area. The original solution correctly calculated the area of Bill’s TV as 48 inches * 100 inches = 4800 square inches, but the transformed solution incorrectly uses the formula for perimeter of a rectangle, shown as 48 inches + 100 inches + 48 inches + 100 inches = 296 square inches. This wrong calculation of area for Bill’s TV impacts step 3, leading to an incorrect size difference calculation of 4200 square inches - 296 square inches = 3904 square inches. The same error cascades to step 4 and ultimately changes the final weight difference in pounds from the correct answer of 150 pounds to an incorrect answer of 975.5 pounds. Each other step is based on the respective areas, but since Bob's TV is the larger TV, we actually subtract the incorrect area for Bill's TV from the correct area of Bob's TV to find the size difference. The other steps correctly use the area to find the weight and then convert ounces to pounds. Also, note that the language of each step is unchanged, retaining the formula error only in step 1 where the perimeter is confused with the area."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).\n\n### Response:",
+        "output_str": "\nTo find out how much more the heavier TV weighs in pounds, we need to first find the area of each TV screen. For Bill's TV, the area is 48 inches x 100 inches = 4800 square inches. For Bob's TV, the area is 70 inches x 60 inches = 4200 square inches.\n\nNext, we can calculate the weight of each TV by multiplying the area by the weight per square inch. For Bill's TV, the weight is 4800 square inches x 4 oz/square inch = 19,200 ounces. For Bob's TV, the weight is 4200 square inches x 4 oz/square inch = 16,800 ounces.\n\nFinally, we can find the difference in weight by subtracting the weight of Bill's TV from the weight of Bob's TV:\n\n16,800 - 19,200 = 2,400 ounces\n\nThere are 16 ounces in a pound, so we can convert the weight difference to pounds by dividing by 16:\n\n2,400 ÷ 16 = 150 pounds\n\nTherefore, the heavier TV weighs 150 pounds more than the smaller TV.",
+        "extract_true_num": 150.0,
+        "extract_pred_num": 150.0,
+        "is_correct": true
+    },
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the perimeter and area of a rectangle. The question requires calculating the area by multiplying the length by the width, not by adding the lengths and widths, which would give the perimeter of the rectangle. As a result, '7 inches * 28 inches = 196 square inches' in the original_solution is changed to '7 inches + 7 inches + 28 inches + 28 inches = 70 inches' in the transformed_solution. The subsequent step affected is the final answer, changing from 196 square inches in the original_solution to 70 inches in the transformed_solution. The language description 'The area of the rectangle is' in the original_solution remains the same in the transformed_solution. The confused formula appears in step 2, where the formula for calculating area is mistakenly replaced with the formula for calculating the perimeter."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 21,
+        "gsm8k_data": {
+            "question": "John carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?",
+            "original_solution": "The marble statue has a volume of 2*2*8=32 cubic meters\nSo that means it has a weight of 2700*32=86,400 kg\n#### 86,400",
+            "original_answer": 86400.0,
+            "transformed_solution": "The marble statue has a volume of 2+2+2+2=8 cubic meters\nSo that means it has a weight of 2700*8=21600 kg\n#### 21600",
+            "transformed_answer": 21600.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the volume and perimeter of a rectangular base. The question requires that the volume of the rectangular prism to be solved be equal to the base area multiplied by the height, rather than the base perimeter plus four times the height, which is incorrect. In reality, calculating the base perimeter does not contribute to volume calculation. Therefore, the calculation 2*2*8=32 cubic meters in the original_solution is mistakenly replaced with 2+2+2+2=8 cubic meters in the transformed_solution, which affects step 2, changing the weight calculation from 2700*32=86,400 kg to 2700*8=21,600 kg. Note that the language description of step 1 < The marble statue has a volume of > in the original_solution remains unchanged in the transformed_solution. In this example, only step 1 uses the incorrect formula, while the multiplication for weight calculation in step 2 is still performed correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?\n\n### Response:",
+        "output_str": "\nTo find the weight of the marble prism, we need to multiply the volume of the prism by its density. The volume of the prism can be found by multiplying the length, width, and height of the prism.\n\nThe length, width, and height of the prism are 2 meters, 2 meters, and 8 meters, respectively. Therefore, the volume of the prism is:\n\nVolume = length x width x height = 2 x 2 x 8 = 32 cubic meters\n\nSince the density of the marble is 2700 kg per cubic meter, the weight of the prism is:\n\nWeight = volume x density = 32 x 2700 = 86,400 kg\n\nTherefore, the marble prism weighs 86,400 kg.",
+        "extract_true_num": 86400.0,
+        "extract_pred_num": 86400.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 square inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area and perimeter of a rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than adding all sides together, which is equivalent to the perimeter of the rectangle. The original_solution calculates the area correctly by multiplying the length and width resulting in 7 inches * 28 inches = 196 square inches. The transformation mistakenly calculates the perimeter instead of the area, changing the original area calculation to a perimeter calculation, with 7 inches + 7 inches + 28 inches + 28 inches = 70 square inches. Note that only step 2 is affected and the description in the transformed_solution remains unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 28,
+        "gsm8k_data": {
+            "question": "John carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?",
+            "original_solution": "The marble statue has a volume of 2*2*8=32 cubic meters\nSo that means it has a weight of 2700*32=86,400 kg\n#### 86,400",
+            "original_answer": 86400.0,
+            "transformed_solution": "The marble statue has a volume of 2+2+2+2*8=128 cubic meters\nSo that means it has a weight of 2700*128=345,600 kg\n#### 345,600",
+            "transformed_answer": 345600.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter of a square with the area of a square. The question requires that the volume of the rectangular prism to be solved be equal to the length of the base multiplied by width of the base multiplied by height, rather than the perimeter of the base multiplied by height, which is not a valid formula for volume, resulting in 2*2*8=32 in the original_solution becoming 2+2+2+2*8=128 in the transformed_solution. This affects the subsequent step 2, changing from 2700*32=86,400 to 2700*128=345,600. Note that the language description of step 1 < The marble statue has a volume of > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes should remain correct and consistent with the original solution. In this example, only step 1 mistakenly uses the calculation for the perimeter of the base in place of finding the area of the base for calculating volume, while step 2 correctly calculates the weight based on the mistaken volume."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?\n\n### Response:",
+        "output_str": "\nTo find the weight of the marble prism, we need to multiply the volume of the prism by its density. The volume of the prism can be found by multiplying the length, width, and height of the prism.\n\nThe length, width, and height of the prism are 2 meters, 2 meters, and 8 meters, respectively. Therefore, the volume of the prism is:\n\nVolume = length x width x height = 2 x 2 x 8 = 32 cubic meters\n\nSince the density of the marble is 2700 kg per cubic meter, the weight of the prism is:\n\nWeight = volume x density = 32 x 2700 = 86,400 kg\n\nTherefore, the marble prism weighs 86,400 kg.",
+        "extract_true_num": 86400.0,
+        "extract_pred_num": 86400.0,
+        "is_correct": true
+    },
+    {
+        "index": 29,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 square inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area and perimeter of rectangle. The question requires that the area of the rectangle to be solved be equal to the width multiplied by length, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 7 inches * 28 inches = 196 square inches in the original_solution being changed to 7 inches + 7 inches + 28 inches + 28 inches = 70 square inches in the transformed_solution. This alteration only affects step 2, changing from the correct area calculation to an incorrect one representing the perimeter. Note that the language description of step 2 < The area of the rectangle is > in the original_solution remains unchanged in the transformed_solution. Only step 2 contains the intentional confusing formula error, and it is the only step altered for the transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 31,
+        "gsm8k_data": {
+            "question": "Bill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).",
+            "original_solution": "First find the screen area of Bill's TV: 48 inches * 100 inches = 4800 square inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 4800 square inches - 4200 square inches = 600 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: 600 square inches * 4 oz/square inch = 2400 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: 2400 oz / 16 oz/pound = 150 pounds\n#### 150",
+            "original_answer": 150.0,
+            "transformed_solution": "First find the screen area of Bill's TV: 48 inches + 100 inches = 148 inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 148 inches - 4200 square inches = -4052 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: -4052 square inches * 4 oz/square inch = -16208 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: -16208 oz / 16 oz/pound = -1013 pounds\n#### -1013",
+            "transformed_answer": -1013.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "In step 1, the formula for calculating the rectangular area is confused with the formula for calculating the perimeter. Instead of multiplying the length by the width to find the area, the length is erroneously added to the width. This results in the area calculation for Bill's TV changing from 48 inches * 100 inches = 4800 square inches to 48 inches + 100 inches = 148 inches in the transformed_solution. This mistake affects the subsequent steps, as the size difference is calculated based on the incorrect area, and leads to incorrect weight difference calculations. Note that the language description in step 1 remains unchanged; 'First find the screen area of Bill's TV' is still used even though the formula applied is for the perimeter. All other steps retain the correct formulas, ensuring there is only a single error in the transformation process."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).\n\n### Response:",
+        "output_str": "\nTo find out how much more the heavier TV weighs in pounds, we need to first find the area of each TV screen. For Bill's TV, the area is 48 inches x 100 inches = 4800 square inches. For Bob's TV, the area is 70 inches x 60 inches = 4200 square inches.\n\nNext, we can calculate the weight of each TV by multiplying the area by the weight per square inch. For Bill's TV, the weight is 4800 square inches x 4 oz/square inch = 19,200 ounces. For Bob's TV, the weight is 4200 square inches x 4 oz/square inch = 16,800 ounces.\n\nFinally, we can find the difference in weight by subtracting the weight of Bill's TV from the weight of Bob's TV:\n\n16,800 - 19,200 = 2,400 ounces\n\nThere are 16 ounces in a pound, so we can convert the weight difference to pounds by dividing by 16:\n\n2,400 ÷ 16 = 150 pounds\n\nTherefore, the heavier TV weighs 150 pounds more than the smaller TV.",
+        "extract_true_num": 150.0,
+        "extract_pred_num": 150.0,
+        "is_correct": true
+    },
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "Nancy replaced all of the old vinyl tiles in her bathroom with new hardwood flooring.  She replaced flooring in two areas of the bathroom: a 10 foot by 10 foot central area, and a 6 foot by 4 foot hallway.  How many square feet of hardwood flooring did Nancy install in her bathroom?",
+            "original_solution": "10 feet by 10 feet central area is 10*10=100 square feet of space.\n6 feet by 4 feet hallway is 4*6=24 square feet of space.\nCombined, the two areas where she replaced flooring contain 100+24=124 square feet of space.\n#### 124",
+            "original_answer": 124.0,
+            "transformed_solution": "10 feet by 10 feet central area is 10+10+10+10=40 square feet of space.\n6 feet by 4 feet hallway is 4*6=24 square feet of space.\nCombined, the two areas where she replaced flooring contain 40+24=64 square feet of space.\n#### 64",
+            "transformed_answer": 64.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of square. The question requires that the area of the square to be solved be equal to side length multiplied by side length, rather than the side length added together four times, which is equivalent to the perimeter of the square, resulting in 10*10=100 square feet in the original_solution being changed to 10+10+10+10=40 square feet in the transformed_solution. This affects the subsequent step 3, changing from 100+24=124 square feet to 40+24=64 square feet. Note that the language description of step 1 < 10 feet by 10 feet central area is > in the original_solution remains unchanged in the transformed_solution. Also, only step 1 mistakenly uses the formula of square area, while step 2 correctly uses the formula of rectangular area, and other steps are correctly calculated based on the modified step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nNancy replaced all of the old vinyl tiles in her bathroom with new hardwood flooring.  She replaced flooring in two areas of the bathroom: a 10 foot by 10 foot central area, and a 6 foot by 4 foot hallway.  How many square feet of hardwood flooring did Nancy install in her bathroom?\n\n### Response:",
+        "output_str": "\nTo find the total square feet of hardwood flooring that Nancy installed in her bathroom, we need to calculate the area of each section and add them together.\n\nThe central area is 10 feet by 10 feet, so its area is 100 square feet.\nThe hallway is 6 feet by 4 feet, so its area is 24 square feet.\n\nAdding these two areas together gives us a total of 124 square feet of hardwood flooring that Nancy installed in her bathroom.",
+        "extract_true_num": 124.0,
+        "extract_pred_num": 124.0,
+        "is_correct": true
+    },
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "How many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides?",
+            "original_solution": "A triangle with a height of 2 inches and width of 2 inches has an area of 2 square inches because (1/2) x 2 x 2 = 2\nThe square has an area of 4 square inches because 2 x 2 = 4\n2 triangles would fit because 4 / 2 = 2\n#### 2",
+            "original_answer": 2.0,
+            "transformed_solution": "A triangle with a height of 2 inches and width of 2 inches has an area of 2 square inches because (1/2) x 2 + 2 = 3\nThe square has an area of 4 square inches because 2 x 2 = 4\n2 triangles would fit because 4 / 3 = 1.3333\n#### 1.3333",
+            "transformed_answer": 1.3333,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 incorrectly calculates the area of a triangle by adding rather than multiplying the base and height and then dividing by 2. The correct formula for the area of a triangle is (1/2) * base * height, which would result in (1/2) * 2 * 2 = 2 square inches. However, the transformed_solution changes this to (1/2) * 2 + 2 = 3, which is a misunderstanding of the formula for the area of a triangle, resulting in an incorrect area calculation. This incorrect area affects the subsequent step, changing the calculation of how many triangles would fit from 4 / 2 = 2 to 4 / 3 ≈ 1.3333. It is important to note that the transformed_solution only alters the formula application in step 1, while the other steps remain correct in their calculations, although they use the incorrect value from the first step to carry out the division."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHow many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides?\n\n### Response:",
+        "output_str": "\nTo determine how many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides, we need to first find the area of the square. The area of the square is equal to the length of the side squared, which in this case is 2 inches x 2 inches = 4 square inches.\n\nNext, we need to find the area of each right triangle. The area of a right triangle is equal to half the base times the height. In this case, the base of each right triangle is 2 inches and the height is also 2 inches, so the area of each right triangle is (2 inches x 2 inches) / 2 = 2 square inches.\n\nNow, we can divide the total area of the square (4 square inches) by the area of each right triangle (2 square inches) to find out how many right triangles can fit inside the square:\n\n4 square inches / 2 square inches = 2\n\nTherefore, two right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides.",
+        "extract_true_num": 2.0,
+        "extract_pred_num": 2.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe perimeter of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "In step 2, the calculation confuses the perimeter of the rectangle with its area. The question asks for the area, which should be calculated by multiplying the length by the width (original_solution step 2: 7 inches * 28 inches = 196 square inches). Instead, the formula used in the transformed_solution is for the perimeter, summing up all four sides of the rectangle (transformed_solution step 2: 7 inches + 7 inches + 28 inches + 28 inches = 70 inches), which results in a different calculation. The description of the process in step 2 remains language-wise identical to the original_solution, but the mathematical formula has been altered incorrectly. The subsequent answer in transformed_solution is affected by this error (70 instead of 196), while keeping earlier steps correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + width + length + width which is 120 + 120 + 120 + 120 = 480 square inches.\n#### 480",
+            "transformed_answer": 480.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area of a square with its perimeter. The original solution properly calculates the area by using length * width. In the transformed solution, the formula for perimeter is mistakenly used instead, which is adding up all the sides of the square (length + width + length + width), leading to an incorrect calculation of 120 + 120 + 120 + 120 = 480 square inches for the room area. The first step of converting feet to inches is correct and therefore remains unchanged. The subsequent step is affected by the change in formula, while the initial step is not affected since it deals with unit conversion, not area calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room by its width. Since the room is 10 feet long in each direction, the length is 10 feet x 12 inches/foot = 120 inches. The width is also 10 feet x 12 inches/foot = 120 inches. Therefore, the area of Blossom's room is 120 inches x 120 inches = 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + length + width + width which is 120 + 120 + 120 + 120 = 480 square inches.\n#### 480",
+            "transformed_answer": 480.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area and the perimeter of a square. The original question requires calculating the area by multiplying the length by the width, which in this case are the same since it is a square, resulting in 120 * 120 = 14400 square inches in the original_solution. The transformation changes the area calculation into a perimeter calculation by adding the length four times instead of multiplying the length by itself once, resulting in 120 + 120 + 120 + 120 = 480 square inches in the transformed_solution. This alters the area result without affecting the conversion from feet to inches in step 1. Note that the language description \"<Then use length * width>\" in the original_solution remains unchanged in the transformed_solution, which now incorrectly reflects the mathematical operation performed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room by its width. Since the room is 10 feet long in each direction, the length is 10 feet x 12 inches/foot = 120 inches. The width is also 10 feet x 12 inches/foot = 120 inches. Therefore, the area of Blossom's room is 120 inches x 120 inches = 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe perimeter of the rectangle is 7 inches + 28 inches + 7 inches + 28 inches = 70 inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses perimeter and area of the rectangle. The question requires finding the area of the rectangle which should be length multiplied by width, but instead, the formula for perimeter is used in step 2, which is computed by adding the lengths of all sides, resulting in 7 inches * 28 inches = 196 square inches in the original_solution changing to 7 inches + 28 inches + 7 inches + 28 inches = 70 inches in the transformed_solution. This error impacts only the affected step without modifying the language description of step 2 \"The area of the rectangle is\" remaining unchanged in the transformed_solution. All other steps remain correct, and the transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "The area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.",
+            "original_solution": "Since the area of a square is sides squared, the area of the square-shaped street is 100*100 = 10000 square meters.\nThe area of the forest is three times the area of the square-shaped street, a total of 3*10000 = 30000 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*30000 = 120000 trees in the forest.\n#### 120000",
+            "original_answer": 120000.0,
+            "transformed_solution": "Since the perimeter of a square is all sides added, the perimeter of the square-shaped street is 100+100+100+100 = 400 meters.\nThe area of the forest is three times the perimeter of the square-shaped street, a total of 3*400 = 1200 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*1200 = 4800 trees in the forest.\n#### 4800",
+            "transformed_answer": 4800.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "In this case, I have used the formula for calculating the perimeter of a square (sum of all sides) instead of the area of a square (side squared) in the transformed solution. The original solution correctly uses the formula for the area of a square but by changing it to the perimeter formula, I have altered the second step which refers back to the first step. Consequently, the entire calculation becomes incorrect and leads to a different transformed answer. All the steps after the error carry forward the misused formula, while the previous steps or descriptions remain unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.\n\n### Response:",
+        "output_str": "\nTo calculate the total number of trees in the forest, we need to first find the area of the square-shaped street. Since the length of one side is 100 meters, the area of the street is:\n\nArea of street = length x width = 100 x 100 = 10,000 square meters\n\nNext, we know that the area of the forest is three times the area of the street, so the area of the forest is:\n\nArea of forest = 3 x Area of street = 3 x 10,000 = 30,000 square meters\n\nFinally, we know that the number of trees per square meter in the forest is 4, so to find the total number of trees in the forest, we can multiply the area of the forest by the number of trees per square meter:\n\nTotal number of trees = Area of forest x Number of trees per square meter = 30,000 x 4 = 120,000 trees\n\nTherefore, there are 120,000 trees in the forest.",
+        "extract_true_num": 120000.0,
+        "extract_pred_num": 120000.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "John carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?",
+            "original_solution": "The marble statue has a volume of 2*2*8=32 cubic meters\nSo that means it has a weight of 2700*32=86,400 kg\n#### 86,400",
+            "original_answer": 86400.0,
+            "transformed_solution": "The marble statue has a volume of 2+2+2+2=8 cubic meters\nSo that means it has a weight of 2700*8=21,600 kg\n#### 21,600",
+            "transformed_answer": 21600.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter of the square base with its area. The question requires that the volume of the rectangular prism be calculated using the area of the base multiplied by the height, not the perimeter of the base plus the height. This resulted in 2*2*8=32 in the original_solution being changed to 2+2+2+2=8 in the transformed_solution. This directly affects the calculation of weight in step 2, changing from 2700*32=86,400 kg to 2700*8=21,600 kg. Note that the language description of step 1 < The marble statue has a volume of > in the original_solution remains unchanged in the transformed_solution. It should also be noted that the error is introduced only in the formula for calculating volume in step 1, while the calculation for the weight in step 2 correctly applies the density to the mistaken volume."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?\n\n### Response:",
+        "output_str": "\nTo find the weight of the marble prism, we need to multiply the volume of the prism by its density. The volume of the prism can be found by multiplying the length, width, and height of the prism.\n\nThe length, width, and height of the prism are 2 meters, 2 meters, and 8 meters, respectively. Therefore, the volume of the prism is:\n\nVolume = length x width x height = 2 x 2 x 8 = 32 cubic meters\n\nSince the density of the marble is 2700 kg per cubic meter, the weight of the prism is:\n\nWeight = volume x density = 32 x 2700 = 86,400 kg\n\nTherefore, the marble prism weighs 86,400 kg.",
+        "extract_true_num": 86400.0,
+        "extract_pred_num": 86400.0,
+        "is_correct": true
+    },
+    {
+        "index": 64,
+        "gsm8k_data": {
+            "question": "How many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides?",
+            "original_solution": "A triangle with a height of 2 inches and width of 2 inches has an area of 2 square inches because (1/2) x 2 x 2 = 2\nThe square has an area of 4 square inches because 2 x 2 = 4\n2 triangles would fit because 4 / 2 = 2\n#### 2",
+            "original_answer": 2.0,
+            "transformed_solution": "A triangle with a height of 2 inches and width of 2 inches has an area of 8 square inches because 2 + 2 + 2 + 2 = 8\nThe square has an area of 4 square inches because 2 x 2 = 4\n0.5 triangles would fit because 4 / 8 = 0.5\n#### 0.5",
+            "transformed_answer": 0.5,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the area of a triangle with the perimeter of a square. The question requires calculating the triangle's area which should be (1/2) multiplied by height multiplied by width; instead, it incorrectly sums the sides as if finding the perimeter, using 2 + 2 + 2 + 2 = 8 in the transformed_solution. This affects step 3, changing the division from 4 / 2 = 2 to 4 / 8 = 0.5. The language description of step 1 < A triangle with a height of 2 inches and width of 2 inches has an area of > in the original_solution remains unchanged in the transformed_solution. It should be noted that only step 1 is chosen to contain the confusing formula error, while the formula used in step 2 to calculate the square's area is still correct, following the guidelines to only modify one step with a formula error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHow many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides?\n\n### Response:",
+        "output_str": "\nTo determine how many right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides, we need to first find the area of the square. The area of the square is equal to the length of the side squared, which in this case is 2 inches x 2 inches = 4 square inches.\n\nNext, we need to find the area of each right triangle. The area of a right triangle is equal to half the base times the height. In this case, the base of each right triangle is 2 inches and the height is also 2 inches, so the area of each right triangle is (2 inches x 2 inches) / 2 = 2 square inches.\n\nNow, we can divide the total area of the square (4 square inches) by the area of each right triangle (2 square inches) to find out how many right triangles can fit inside the square:\n\n4 square inches / 2 square inches = 2\n\nTherefore, two right triangles with a height of 2 inches and a width of two inches could fit inside a square with 2-inch sides.",
+        "extract_true_num": 2.0,
+        "extract_pred_num": 2.0,
+        "is_correct": true
+    },
+    {
+        "index": 65,
+        "gsm8k_data": {
+            "question": "A rectangle has a length of 40 meters and a width of 20 meters. A similar smaller rectangle has half the length and width of the big rectangle. What's the area of the smaller rectangle?",
+            "original_solution": "The length of the smaller rectangle is 1/2*40 = 20 meters.\nThe width of the smaller rectangle is 1/2*20 = 10 meters.\nSince the area of a rectangle is found by multiplying the length times the width, the total area of the smaller rectangle is 20*10 = 200 meters square.\n#### 200",
+            "original_answer": 200.0,
+            "transformed_solution": "The length of the smaller rectangle is 1/2*40 = 20 meters.\nThe width of the smaller rectangle is 1/2*20 = 10 meters.\nSince the area of a rectangle is found by multiplying the length times the width, the total area of the smaller rectangle is 20+10+20+10 = 60 meters square.\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the formula for the area of a rectangle with the formula for the perimeter. The original solution correctly states that the area of a rectangle is determined by multiplying the length by the width. However, in the transformed solution, the length and width of the smaller rectangle are added to themselves, imitating the calculation for the perimeter, which should only be affected at one step resulting in the total area of the smaller rectangle changing from 20*10 = 200 meters square to 20+10+20+10 = 60 meters square."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA rectangle has a length of 40 meters and a width of 20 meters. A similar smaller rectangle has half the length and width of the big rectangle. What's the area of the smaller rectangle?\n\n### Response:",
+        "output_str": "\nThe area of the smaller rectangle can be found by first finding the area of the big rectangle, which is:\n\nArea of big rectangle = length x width = 40 x 20 = 800 square meters\n\nSince the smaller rectangle has half the length and width of the big rectangle, its length is half of 40, which is 20, and its width is half of 20, which is 10.\n\nArea of smaller rectangle = length x width = 20 x 10 = 200 square meters",
+        "extract_true_num": 200.0,
+        "extract_pred_num": 200.0,
+        "is_correct": true
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 correctly calculates the length of the rectangle using the ratio given. However, step 2 mistakenly uses the formula for calculating the perimeter of the rectangle instead of the area, which should be the width multiplied by the length. The sum of the sides is incorrectly used to calculate the area, resulting in 7 inches + 7 inches + 28 inches + 28 inches = 70 inches in the transformed_solution, while the correct formula should have remained 7 inches * 28 inches to calculate the area. This results in a transformed_answer of 70 inches, which is incorrect and different from the original_answer of 196 square inches. The language description of step 2 <The area of the rectangle is> remains unchanged from the original_solution. Note that only step 2 contains an error while other steps are correct, and the subsequent step is affected by this error, leading to an incorrect transformed_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "A window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?",
+            "original_solution": "The area of a glass pane is 8 x 12 = 96 sq in\nThe area of the window is 96 x 8 = 768 sq in\n#### 768",
+            "original_answer": 768.0,
+            "transformed_solution": "The area of a glass pane is 8 + 12 + 8 + 12 = 40 sq in\nThe area of the window is 40 x 8 = 320 sq in\n#### 320",
+            "transformed_answer": 320.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of a rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 8 x 12 = 96 in the original_solution being changed to 8 + 12 + 8 + 12 = 40 in the transformed_solution. This affects the subsequent step 2, changing from 96 x 8 = 768 to 40 x 8 = 320. Note that the language description of step 1 < The area of a glass pane is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula for the rectangular perimeter, while the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?\n\n### Response:",
+        "output_str": "\nTo find the area of the window, we need to multiply the length and width of each pane. Therefore, the area of one pane is 12 inches x 8 inches = 96 square inches. Since there are 8 panes, the total area of the window is 96 square inches x 8 panes = 768 square inches.",
+        "extract_true_num": 768.0,
+        "extract_pred_num": 768.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "The area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.",
+            "original_solution": "Since the area of a square is sides squared, the area of the square-shaped street is 100*100 = 10000 square meters.\nThe area of the forest is three times the area of the square-shaped street, a total of 3*10000 = 30000 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*30000 = 120000 trees in the forest.\n#### 120000",
+            "original_answer": 120000.0,
+            "transformed_solution": "Since the perimeter of a square is sides times four, the perimeter of the square-shaped street is 100*4 = 400 meters.\nThe area of the forest is three times the perimeter of the square-shaped street, a total of 3*400 = 1200 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*1200 = 4800 trees in the forest.\n#### 4800",
+            "transformed_answer": 4800.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "The error was introduced in step 2 where the formula for calculating the area of a square (side length squared) was incorrectly changed to the formula for calculating the perimeter of a square (side length times four). As a result, the calculation that follows in the original solution, which correctly multiplies the square area by three to find the forest area, is also affected by the prior step’s error in the transformed solution. Instead of multiplying the area, the mistaken perimeter is multiplied. Subsequently, the calculation for the number of trees takes the incorrect smaller area and multiplies it by the number of trees per square meter, resulting in a reduced total number of trees. Note that the explanation of steps in the language description remains unchanged from the original solution while the formula used is modified."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.\n\n### Response:",
+        "output_str": "\nTo calculate the total number of trees in the forest, we need to first find the area of the square-shaped street. Since the length of one side is 100 meters, the area of the street is:\n\nArea of street = length x width = 100 x 100 = 10,000 square meters\n\nNext, we know that the area of the forest is three times the area of the street, so the area of the forest is:\n\nArea of forest = 3 x Area of street = 3 x 10,000 = 30,000 square meters\n\nFinally, we know that the number of trees per square meter in the forest is 4, so to find the total number of trees in the forest, we can multiply the area of the forest by the number of trees per square meter:\n\nTotal number of trees = Area of forest x Number of trees per square meter = 30,000 x 4 = 120,000 trees\n\nTherefore, there are 120,000 trees in the forest.",
+        "extract_true_num": 120000.0,
+        "extract_pred_num": 120000.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the perimeter of the wall: 5 feet + 5 feet + 10 feet + 10 feet = 30 feet\nThen divide the area of the painting by the perimeter of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 30 feet * 100% = 26.67%\n#### 26.67",
+            "transformed_answer": 26.67,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the perimeter and area of the wall. The question requires that the area of the wall to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 5 feet * 10 feet = 50 square feet in the original_solution being changed to 5 feet + 5 feet + 10 feet + 10 feet = 30 feet in the transformed_solution. This affects the subsequent step 3, changing from dividing the area of the painting by the area of the wall to dividing the area of the painting by the perimeter of the wall. The rest of the steps, such as finding the area of the painting in step 1 and calculating the percentage in step 3, remain correct according to the problem's requirements. Note that the language description of step 2 < Then find the area of the wall: > in the original_solution remains unchanged in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nTo find the percentage of the wall taken up by the painting, we need to divide the area of the painting by the area of the wall.\n\nThe area of the painting is 2 feet x 4 feet = 8 square feet.\n\nThe area of the wall is 5 feet x 10 feet = 50 square feet.\n\nSo, the percentage of the wall taken up by the painting is:\n\n8 square feet / 50 square feet = 0.16 (or 16%)\n\nTherefore, the painting takes up 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 79,
+        "gsm8k_data": {
+            "question": "You draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?",
+            "original_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches * 28 inches = 196 square inches.\n#### 196",
+            "original_answer": 196.0,
+            "transformed_solution": "The length of the rectangle is 4 * 7 inches = 28 inches.\nThe area of the rectangle is 7 inches + 7 inches + 28 inches + 28 inches = 70 inches.\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area of a rectangle with the perimeter. The question asks for the area which is length multiplied by width, but in the transformed_solution, it is mistakenly calculated as the perimeter which is the sum of all sides of the rectangle (7 inches + 7 inches + 28 inches + 28 inches). This results in a change from the correct formula 7 inches * 28 inches = 196 square inches to the incorrect formula for perimeter in the transformed_solution, thus affecting the correctness of step 2 and ultimately leading to a wrong answer. The language description of step 2 < The area of the rectangle is > in the original_solution remains unchanged in the transformed_solution, maintaining the error in the formula used."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou draw a rectangle that is 7 inches wide. It is 4 times as long as it is wide. What is the area of the rectangle?\n\n### Response:",
+        "output_str": "\nTo find the area of the rectangle, we need to multiply the length by the width. Since the rectangle is 4 times as long as it is wide, we can say that the length is 4 times 7, which is 28 inches. Therefore, the area of the rectangle is 28 inches x 7 inches = 196 square inches.",
+        "extract_true_num": 196.0,
+        "extract_pred_num": 196.0,
+        "is_correct": true
+    },
+    {
+        "index": 80,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 2 feet * 4 feet = 8 square feet in the original_solution becoming 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent calculation in step 3, which now changes from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 in the original_solution remains unchanged in the transformed_solution. It should be also noted that there is only one step of confusing formula error here, while the formulas for other steps remain correct. In this example, only step 1 mistakenly applies the formula for perimeter instead of area."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nTo find the percentage of the wall taken up by the painting, we need to divide the area of the painting by the area of the wall.\n\nThe area of the painting is 2 feet x 4 feet = 8 square feet.\n\nThe area of the wall is 5 feet x 10 feet = 50 square feet.\n\nSo, the percentage of the wall taken up by the painting is:\n\n8 square feet / 50 square feet = 0.16 (or 16%)\n\nTherefore, the painting takes up 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "A window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?",
+            "original_solution": "The area of a glass pane is 8 x 12 = 96 sq in\nThe area of the window is 96 x 8 = 768 sq in\n#### 768",
+            "original_answer": 768.0,
+            "transformed_solution": "The area of a glass pane is 8 + 12 + 8 + 12 = 40 sq in\nThe area of the window is 40 x 8 = 320 sq in\n#### 320",
+            "transformed_answer": 320.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all four sides, which is equivalent to the perimeter of the rectangle, resulting in 8 x 12 = 96 in the original_solution becoming 8 + 12 + 8 + 12 = 40 in the transformed_solution. This affects the subsequent step 2, changing from 96 x 8 = 768 to 40 x 8 = 320. Note that the language description of step 1 < The area of a glass pane is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangular area, while step 2 still correctly uses the formula of multiplication for the number of panes, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?\n\n### Response:",
+        "output_str": "\nTo find the area of the window, we need to multiply the length and width of each pane. Therefore, the area of one pane is 12 inches x 8 inches = 96 square inches. Since there are 8 panes, the total area of the window is 96 square inches x 8 panes = 768 square inches.",
+        "extract_true_num": 768.0,
+        "extract_pred_num": 768.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "Jason is making sand art. He wants to fill a rectangular patch 6 inches by 7 inches with blue sand, and a square path 5 inches by 5 inches with red sand. If it takes 3 grams of sand to fill one square inch, how many grams of sand does Jason need?",
+            "original_solution": "First find the area of the first patch: 6 inches * 7 inches = 42 inches\nThen find the area of the second patch: 5 inches * 5 inches = 25 inches\nThen add those two amounts to find the total area Jason needs to cover: 42 inches + 25 inches = 67 inches\nThen multiply that area by the number of grams per square inch to find the total amount of sand needed: 67 inches * 3 grams/square inch = 201 grams\n#### 201",
+            "original_answer": 201.0,
+            "transformed_solution": "First find the perimeter of the first patch: 6 inches + 6 inches + 7 inches + 7 inches = 26 inches\nThen find the area of the second patch: 5 inches * 5 inches = 25 inches\nThen add those two amounts to find the total area Jason needs to cover: 26 inches + 25 inches = 51 inches\nThen multiply that figure by the number of grams per square inch to find the total amount of sand needed: 51 inches * 3 grams/square inch = 153 grams\n#### 153",
+            "transformed_answer": 153.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 6 inches * 7 inches = 42 inches in the original_solution changing to 6 inches + 6 inches + 7 inches + 7 inches = 26 inches in the transformed_solution. This affects the subsequent step 3, changing from 42 inches + 25 inches = 67 inches to 26 inches + 25 inches = 51 inches. The calculation process is correctly continued in the transformed_solution, with 51 inches * 3 grams/square inch = 153 grams. Note that the language description of step 1 < First find the area of the first patch > in the original_solution remains unchanged in the transformed_solution. The only step where a formula is confused is step 1, and all other steps correctly follow the intended calculations."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJason is making sand art. He wants to fill a rectangular patch 6 inches by 7 inches with blue sand, and a square path 5 inches by 5 inches with red sand. If it takes 3 grams of sand to fill one square inch, how many grams of sand does Jason need?\n\n### Response:",
+        "output_str": "\nTo fill the rectangular patch 6 inches by 7 inches with blue sand, Jason needs to multiply the length and width of the patch to get the area:\n\nArea = length x width = 6 x 7 = 42 square inches\n\nSince it takes 3 grams of sand to fill one square inch, Jason needs:\n\n42 square inches x 3 grams/square inch = 126 grams of blue sand\n\nTo fill the square path 5 inches by 5 inches with red sand, Jason needs to multiply the length and width of the path to get the area:\n\nArea = length x width = 5 x 5 = 25 square inches\n\nSince it takes 3 grams of sand to fill one square inch, Jason needs:\n\n25 square inches x 3 grams/square inch = 75 grams of red sand\n\nTherefore, Jason needs a total of 126 + 75 = 201 grams of sand to complete his sand art.",
+        "extract_true_num": 201.0,
+        "extract_pred_num": 201.0,
+        "is_correct": true
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "A window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?",
+            "original_solution": "The area of a glass pane is 8 x 12 = 96 sq in\nThe area of the window is 96 x 8 = 768 sq in\n#### 768",
+            "original_answer": 768.0,
+            "transformed_solution": "The area of a glass pane is 8 + 8 + 12 + 12 = 40 sq in\nThe area of the window is 40 x 8 = 320 sq in\n#### 320",
+            "transformed_answer": 320.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of a rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by the width. Instead, 8 + 8 + 12 + 12 has been calculated, which is equivalent to the perimeter of the rectangle, resulting in 8 x 12 = 96 in the original_solution being changed to 8 + 8 + 12 + 12 = 40 in the transformed_solution. This affects the subsequent step 2, changing from 96 x 8 = 768 to 40 x 8 = 320. Note that the language description of step 1 < The area of a glass pane is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangle perimeter, while the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?\n\n### Response:",
+        "output_str": "\nTo find the area of the window, we need to multiply the length and width of each pane. Therefore, the area of one pane is 12 inches x 8 inches = 96 square inches. Since there are 8 panes, the total area of the window is 96 square inches x 8 panes = 768 square inches.",
+        "extract_true_num": 768.0,
+        "extract_pred_num": 768.0,
+        "is_correct": true
+    },
+    {
+        "index": 90,
+        "gsm8k_data": {
+            "question": "John decided to start rowing around a square lake.  Each side of the lake is 15 miles.  Jake can row at twice the speed he can swim.  It takes him 20 minutes to swim 1 mile.  How long, in hours, does it take to row the lake?",
+            "original_solution": "The perimeter of the lake is 4*15=60 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 60/6=10 hours to row around the lake\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "The area of the lake is 15*15=225 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 225/6=37.5 hours to row around the lake\n#### 37.5",
+            "transformed_answer": 37.5,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of the square. The question requires that the perimeter of the square to be solved be equal to the side length multiplied by 4, rather than the side length multiplied by itself, which is equivalent to the area of the square, resulting in 4*15=60 in the original_solution becoming 15*15=225 in the transformed_solution. This affects the subsequent step 4, changing from 60/6=10 hours to 225/6=37.5 hours to row around the lake. Note that the language description of step 1 < The perimeter of the lake is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 1 mistakenly uses the formula for square area, while the other calculation processes related to the speed and time are still correct in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn decided to start rowing around a square lake.  Each side of the lake is 15 miles.  Jake can row at twice the speed he can swim.  It takes him 20 minutes to swim 1 mile.  How long, in hours, does it take to row the lake?\n\n### Response:",
+        "output_str": "\nTo row the lake, John will row at twice the speed he can swim, so he will row at 2x 20 minutes/mile = 40 minutes/mile. Since each side of the lake is 15 miles, it will take him 40 minutes/mile x 15 miles = 600 minutes to row the lake.\n\nTherefore, it will take John 600 minutes / 60 minutes/hour = 10 hours to row the lake.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 91,
+        "gsm8k_data": {
+            "question": "A window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?",
+            "original_solution": "The area of a glass pane is 8 x 12 = 96 sq in\nThe area of the window is 96 x 8 = 768 sq in\n#### 768",
+            "original_answer": 768.0,
+            "transformed_solution": "The area of a glass pane is 8 + 12 + 8 + 12 = 40 sq in\nThe area of the window is 40 x 8 = 320 sq in\n#### 320",
+            "transformed_answer": 320.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to finding the perimeter of the rectangle, resulting in the correct formula 8 x 12 = 96 in the original_solution being changed to 8 + 12 + 8 + 12 = 40 in the transformed_solution. This affects the subsequent step 2, changing from 96 x 8 = 768 to 40 x 8 = 320. Note that the language description of step 1 < The area of a glass pane is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangular area, while the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA window is made up of 8 glass panes. Each pane has a length of 12 inches and a width of 8 inches. What is the area of the window?\n\n### Response:",
+        "output_str": "\nTo find the area of the window, we need to multiply the length and width of each pane. Therefore, the area of one pane is 12 inches x 8 inches = 96 square inches. Since there are 8 panes, the total area of the window is 96 square inches x 8 panes = 768 square inches.",
+        "extract_true_num": 768.0,
+        "extract_pred_num": 768.0,
+        "is_correct": true
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "Bill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).",
+            "original_solution": "First find the screen area of Bill's TV: 48 inches * 100 inches = 4800 square inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 4800 square inches - 4200 square inches = 600 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: 600 square inches * 4 oz/square inch = 2400 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: 2400 oz / 16 oz/pound = 150 pounds\n#### 150",
+            "original_answer": 150.0,
+            "transformed_solution": "First find the perimeter of Bill's TV: 48 inches + 48 inches + 100 inches + 100 inches = 296 inches\nThen find the screen area of Bob's TV: 70 inches * 60 inches = 4200 square inches\nThen subtract the size of the smaller TV from the size of the bigger TV to find the size difference: 296 inches - 4200 square inches = -3904 square inches\nThen multiply the size difference by the weight per square inch to find the weight difference: -3904 square inches * 4 oz/square inch = -15616 oz\nThen divide the weight difference in ounces by the number of ounces per pound to find the weight difference in pounds: -15616 oz / 16 oz/pound = -976 pounds\n#### -976",
+            "transformed_answer": -976.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 mistakenly uses the perimeter formula instead of the area formula for Bill’s TV. The question requires finding the area (length multiplied by width), but the step has been modified to calculate the perimeter (sum of all sides), leading to 48 inches * 100 inches = 4800 square inches in the original_solution becoming 48 inches + 48 inches + 100 inches + 100 inches = 296 inches in the transformed_solution. This error changes the values in the subsequent calculation steps, as the subtraction is now incorrect and thus affects the calculation of the weight difference in both ounces and pounds. All other calculation processes are correct, with only step 1 containing the error. The wording of the step remains as <First find the screen area of Bill's TV:>, but the calculation thereafter is altered to fit the error introduced."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBill gets a flat-screen TV that measures 48 inches by 100 inches. His brother Bob gets a TV that measures 70 inches by 60 inches. If the TVs weigh 4 oz per square inch of screen space, how much more does the heavier TV weigh in pounds? (There are 16 ounces per pound).\n\n### Response:",
+        "output_str": "\nTo find out how much more the heavier TV weighs in pounds, we need to first find the area of each TV screen. For Bill's TV, the area is 48 inches x 100 inches = 4800 square inches. For Bob's TV, the area is 70 inches x 60 inches = 4200 square inches.\n\nNext, we can calculate the weight of each TV by multiplying the area by the weight per square inch. For Bill's TV, the weight is 4800 square inches x 4 oz/square inch = 19,200 ounces. For Bob's TV, the weight is 4200 square inches x 4 oz/square inch = 16,800 ounces.\n\nFinally, we can find the difference in weight by subtracting the weight of Bill's TV from the weight of Bob's TV:\n\n16,800 - 19,200 = 2,400 ounces\n\nThere are 16 ounces in a pound, so we can convert the weight difference to pounds by dividing by 16:\n\n2,400 ÷ 16 = 150 pounds\n\nTherefore, the heavier TV weighs 150 pounds more than the smaller TV.",
+        "extract_true_num": 150.0,
+        "extract_pred_num": 150.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires the area of the rectangle to be solved, which is equal to the length multiplied by width. Instead, the transformed solution incorrectly calculates the perimeter by adding all sides, resulting in 2 feet * 4 feet = 8 square feet in the original_solution changing to 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent step 3, changing the calculation of the percentage of the wall covered from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 < First find the area of the painting: > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only one step of confusing formula error is considered, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula for rectangular area, while the other steps correctly calculate the area of the wall and the percentage."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nTo find the percentage of the wall taken up by the painting, we need to divide the area of the painting by the area of the wall.\n\nThe area of the painting is 2 feet x 4 feet = 8 square feet.\n\nThe area of the wall is 5 feet x 10 feet = 50 square feet.\n\nSo, the percentage of the wall taken up by the painting is:\n\n8 square feet / 50 square feet = 0.16 (or 16%)\n\nTherefore, the painting takes up 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + width which is 120 + 120 = 240 square inches.\n#### 240",
+            "transformed_answer": 240.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area calculation with the perimeter calculation for a square. The original solution correctly uses the formula for area by multiplying the length by the width. In the transformed solution, the formula is mistakenly changed to a perimeter calculation by adding the length and width, resulting in 120 * 120 = 14400 square inches in the original_solution becoming 120 + 120 = 240 square inches in the transformed_solution. This affects the transformed_answer while other steps remain correct and unaltered, maintaining the description language of step 2 without changing any words, consistent with the given directive that language descriptions should not be altered. The transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room by its width. Since the room is 10 feet long in each direction, the length is 10 feet x 12 inches/foot = 120 inches. The width is also 10 feet x 12 inches/foot = 120 inches. Therefore, the area of Blossom's room is 120 inches x 120 inches = 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    },
+    {
+        "index": 99,
+        "gsm8k_data": {
+            "question": "John carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?",
+            "original_solution": "The marble statue has a volume of 2*2*8=32 cubic meters\nSo that means it has a weight of 2700*32=86,400 kg\n#### 86,400",
+            "original_answer": 86400.0,
+            "transformed_solution": "The marble statue has a volume of 2+2+2+2=8 cubic meters\nSo that means it has a weight of 2700*8=21,600 kg\n#### 21,600",
+            "transformed_answer": 21600.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and volume calculations. The original_solution properly calculates the volume of the rectangular prism by multiplying the side of the square base with itself and then by the height (2*2*8), but the transformed_solution incorrectly treats the calculation as if finding the perimeter of the base (2+2+2+2). By changing the formula from volume to perimeter, the result is an incorrect volume calculation, influencing the subsequent weight calculation in step 2. As a result, the original_solution's correct volume of 32 cubic meters used to find the weight (2700*32) is erroneously transformed to an incorrect volume of 8 cubic meters (2+2+2+2) and the subsequent incorrect weight (2700*8). It's important to note that only step 1 has been modified to introduce the confusing formula error, affecting the related step 2, while no language description has been changed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn carves a giant marble rectangular prism 8 meters tall with a 2-meter square base. It has a density of 2700 kg per cubic meter. How much does it weigh?\n\n### Response:",
+        "output_str": "\nTo find the weight of the marble prism, we need to multiply the volume of the prism by its density. The volume of the prism can be found by multiplying the length, width, and height of the prism.\n\nThe length, width, and height of the prism are 2 meters, 2 meters, and 8 meters, respectively. Therefore, the volume of the prism is:\n\nVolume = length x width x height = 2 x 2 x 8 = 32 cubic meters\n\nSince the density of the marble is 2700 kg per cubic meter, the weight of the prism is:\n\nWeight = volume x density = 32 x 2700 = 86,400 kg\n\nTherefore, the marble prism weighs 86,400 kg.",
+        "extract_true_num": 86400.0,
+        "extract_pred_num": 86400.0,
+        "is_correct": true
+    }
+]

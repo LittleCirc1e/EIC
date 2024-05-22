@@ -1,0 +1,117 @@
+[
+    {
+        "question": "If 40% of a number is equal to 2/3 of another number, what is the ratio of the first number to the second number?",
+        "original_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 100 to get rid of the decimal: 40x = 200/3y\nDivide both sides by 40: x = (200/3*1)/40y\nx = 5/3y\nThe ratio of the first number to the second number is 5:3\n#### 5:3",
+        "original_answer": "5:3",
+        "transformed_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 3 to get rid of the fraction: 0.40x*3 = 2/3y*3\n0.40x*3 = 2y\nDivide both sides by 0.40: (0.40x*3)/0.40 = 2y/0.40\nx*3 = 5y\nThe ratio of the first number to the second number is 3:5\n#### 3:5",
+        "transformed_answer": "3:5",
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the intermediate step 'Divide both sides by 40: x = (200/3*1)/40y' has been removed. Because the subsequent related step 'x = 5/3y' was originally referring to the result of the removed step, the subsequent steps need to refer to the result of the previous step 'Multiply both sides by 100 to get rid of the decimal: 40x = 200/3y.' However, instead of correcting the process to reflect the impact of this deletion, a wrong manipulation has been performed by multiplying both sides by 3, leading to the incorrect transformed_solution 'x*3=5y.' Consequently, the previous step's result has been misused, and a new error has been introduced, leading to the incorrect conclusion that 'The ratio of the first number to the second number is 3:5' instead of the correct '5:3.' The wrong_step is 3 since it is the first step referencing the result of the deleted step and introducing the incorrect calculation.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, multiplying both sides by 3 instead of dividing both sides by 3, resulting in the incorrect calculation 0.40x*3 = 2y instead of 0.40x/3 = 2y. The subsequent step 4 references the result of step 3, calculating x*3 = 5y instead of x/3 = 5y, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 1, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 450 km / 90 kmh = 10 hours instead of 450 km / 90 km/h = 5 hours. The subsequent step 2 references the result of step 1, calculating 5 hours x 60 minutes = 300 minutes instead of 10 hours x 60 minutes = 600 minutes, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1."
+    },
+    {
+        "question": "a car traveled 462 miles per tankful of gasoline on the highway and 336 miles per tankful of gasoline in the city. if the car traveled 15 fewer miles per gallon in the city than on the highway, how many miles per gallon did the car travel in the city?",
+        "original_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\nSo, 336 =  x * y\n462 = (x + 15) * y\nWe can divide the second equation by the first equation to get:\n462 / 336 = (x + 15) * y / (x * y)\n1.375 = (x + 15) / x\n0.375 = 15 / x\n15 / 0.375 = x\n40 = x\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\n462 = (x + 15) * y\nWe can solve for y in terms of x using the highway mileage:\ny = 462 / (x + 15)\nUsing the city mileage equation, we substitute y:\n336 = x * (462 / (x + 15))\n1.375 = 462 / (x + 15)\n1.375x + 20.625 = 462\n1.375x = 462 - 20.625\n1.375x = 441.375\nx = 441.375 / 1.375\nx = 321\n#### 321",
+        "transformed_answer": 321.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the intermediate step 4 '462 / 336 = (x + 15) * y / (x * y)' has been removed. The subsequent steps that originally referred to the result of step 4 now reference x and x + 15, from the equations established in steps 2 and 3. We first solve for y directly from the highway equation: 'y = 462 / (x + 15)'. Then we substitute y into the city equation '336 = x * y' and rearrange the equation to solve for x. Each step thereafter has been changed to reflect this new approach. The transformed solution has a logical error introduced by incorrectly simplifying and manipulating the equation, which results in an incorrect transformed answer of 321 miles per gallon instead of the correct 40 miles per gallon. Since the error first occurs at the now incorrect step 4 (originally step 5), the wrong_step is 4.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 462 / (x + 15) = 1.375 instead of 462 / (x + 15) = 1.375x, where x is the number of miles per gallon in the city. The subsequent step 5 references the result of step 4, calculating 1.375x = 441.375 instead of 1.375x = 321, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "a, b and c enter into partnership. a invests 3 times as much as b and b invests two-third of what c invests. at the end of the year, the profit earned is rs. 5500. what is the share of b?",
+        "original_solution": "Let the capital invested by c be x\nThen the capital invested by b = 2/3*x\nAnd the capital invested by a = 3*(2/3*x) = 2x\nTotal capital = x + 2/3*x + 2x = 11/3*x\nProfit of b = (2/11)*(5500) = 1000\n#### 1000",
+        "original_answer": 1000.0,
+        "transformed_solution": "Let the capital invested by c be x\nThen the capital invested by b = 2/3*x\nThe capital invested by a = 3*(2/3*x) = 2x\nTotal capital = x + 2/3*x + 2x = 11/3*x\nSince profit is divided based on capital, b's share of the profit = (2/3*x) / (11/3*x) * 5500 = 1000/11 * 5500 = 500\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example deletes the intermediate step 4 from the original_solution which calculates the total capital. After deletion, step 5 is the first step that references the result of the deleted step, so we modify step 5 to perform the calculation using the capital shares instead. Specifically, the ratio of b's investment (2/3x) to the total capital is used directly to calculate b's profit share from the total profit of 5500. The calculation changes from (2/11)*(5500) = 1000 in the original_solution to profit for b being calculated as (2/3*x) / (11/3*x) * 5500 which simplifies to 1000/11 * 5500 = 500. It is step 4 in the transformed_solution, which is also step 5 in the original_solution, that serves as the first step referencing incorrect ratio in the transformed_solution, so the wrong_step is 4.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 11/3*x = 11/3 x 1000 = 3333 instead of 11/3 x 1000 = 3333.33, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "fresh grapes contain 85 % water by weight and raisins obtained by drying fresh grapes contain 25 % water by weight . how many kgs of fresh grapes are needed to get 20 kgs of raisins ?",
+        "original_solution": "Let x be the weight of fresh grapes needed to get 20 kgs of raisins\nThe weight of water in x kgs of fresh grapes is 0.85x\nThe weight of dry grapes in x kgs of fresh grapes is x - 0.85x = 0.15x\nThe weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs\nThe weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs\n0.15x = 15\nx = 15 / 0.15\nx = 100\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": " Let x be the weight of fresh grapes needed to get 20 kgs of raisins\nThe weight of water in 20 kgs of raisins is 0.25 x 20 = 5 kgs\nThe weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs\n0.15x = 15\nx = 15 / 0.15\nx = 100\n#### 100",
+        "transformed_answer": 133.33333333333334,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original solution, step 2 (which references the result 0.85x from step 1) is removed. As a result, the solution should have used the result of step 2 in the subsequent steps. However, in the transformed_solution step 3 incorrectly refers to the amount from the question (20 kgs) and references 0.25 directly from the question instead of the correct 0.15 resulting from the step 1 formula (0.15x for the amount of dry grapes in x kgs of fresh grapes) which should be 0.15x = 15, not 0.25x = 15 as the transformed_solution suggests. This results in the transformed_answer being 15 / 0.15 + 5 (weight of water in raisins) = 133.33, a different value from the original_answer 100, due to an incorrect removal of step 2 and incorrect reference in step 3.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.25 x 20 = 5 instead of 0.25 x 20 = 50. The subsequent step 4 references the result of step 3, calculating 15 - 5 = 10 instead of 15 - 5 = 10, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "the ratio of three numbers is 3 : 4 : 7 and their product is 18144 . the numbers are",
+        "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+        "original_answer": [
+            18,
+            24,
+            42
+        ],
+        "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18 and 7x = 42\n#### 18, 42",
+        "transformed_answer": [
+            18,
+            42
+        ],
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 4 is an intermediate step that calculates x^3 from the equation 84x^3 = 18144, resulting in x^3 = 216. After deleting this intermediate step, step 3, which originally referenced step 2, must directly reference the result from step 1 (which is the equation 3x * 4x * 7x = 18144). The subsequent steps, which refer to the result of step 4, also have to be updated. Step 5 originally referencing x^3 = 216 now directly references the product 18144, continuing with the calculation that finds x = 6 based on the cube root of 216. The last steps calculate the individual numbers based on this newly solved x, however, the calculation for 4x = 24 has been omitted. The transformed solution no longer includes the number 24, reflecting the product of 4x, hence the transformed answer is [18, 42] which is different from the original answer. The first step that references the result of the incorrect or missing step is step 3 of the transformed_solution (which was originally step 4), and therefore, wrong_step is 3.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3x * 4x * 7x = 18144 instead of 3x * 4x * 7x = 18144 / 3 = 6048. The subsequent step 4 references the result of step 3, calculating 6048 / 3 = 2016 instead of 6048 / 3 = 2016. The final answer is incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Bhanu spends 30% of his income on petrol on scooter, 30% of the remaining on house rent and the balance on food. If he spends Rs. 300 on petrol then what is the expenditure on house rent?",
+        "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+        "original_answer": 210.0,
+        "transformed_solution": "He spends 30% of his income on petrol, so the expenditure on petrol is 300.\nTherefore, the remaining income is 300 / 0.3 = 1000.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 1000 = 300.\nHe spends the balance on food, which is 1000 - 300 = 700.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2 that calculates the remaining income after spending on petrol. In the original_solution, step 3 references the result of step 2, and steps 4 and 5 reference the result of step 3. Therefore, after deleting step 2, step 3 should reference the Rs. 300 spent on petrol from the question and change the calculated method for the remaining income to the inverse of petrol's percentage, which is 300 / 0.3 = 1000. Step 4 and 5, as subsequent related steps, are affected by the modification in step 3. In the transformed_solution, step 4 (previously step 5 in original_solution) now calculates the incorrect house rent expenditure by directly using the total income (1000) instead of the remaining income after spending on petrol, and step 5 calculates the balance on food. The first wrong step referencing an incorrect number in the transformed_solution is step 3, as it should reference the remaining income after petrol, not the full income.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1000 / 0.3 = 300 instead of 1000 / 0.3 = 333.33. The subsequent step 4 references the result of step 3, calculating 300 + 300 = 600 instead of 333.33 + 300 = 633.33, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nThe total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n2p = 28 + 2p\nThen, after simplifying we have 0 = 28, which is not possible.\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 4. In the original_solution, step 4 references the total number of legs and heads, and the relationship between them stated in the question, setting up the equation 4d + 2p = 28 + 2(d + p). Step 5 references the result of step 4 and simplifies the equation. Therefore, after deleting step 4, step 5 directly attempts to use the elimination method incorrectly without establishing the proper equation from the relationship of legs and heads; it incorrectly concludes that 2p can be canceled out from both sides without considering the dogs' count, leading us to a nonsensical simplification 0 = 28, which implies that the system of equations has no solution. This step also incorrectly references numbers from the question itself. Since this is nonsense and does not provide a solution, the transformed_answer is set to -1 to indicate an error in the process. It is step 3 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step removed in the transformed_solution, so the wrong_step is 3.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 2p = 28 instead of 2p = 26, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "each of the products produced yesterday was checked by worker x or worker y . 0.5 % of the products checked by worker x are defective and 0.8 % of the products checked by worker y are defective . if the total defective rate of all the products checked by worker x and worker y is 0.7 % , what fraction of the products was checked by worker y ?",
+        "original_solution": "Let the fraction of products checked by worker y be y\nLet the fraction of products checked by worker x be 1 - y\nThe defective rate for worker x is 0.5 / 100 = 0.005\nThe defective rate for worker y is 0.8 / 100 = 0.008\nThe total defective rate is (0.005 * (1 - y)) + (0.008 * y) = 0.007\nSolving the equation: 0.005 - 0.005y + 0.008y = 0.007\n0.008y - 0.005y = 0.007 - 0.005\n0.003y = 0.002\ny = 0.002 / 0.003 = 2/3\n#### 2/3",
+        "original_answer": "2/3",
+        "transformed_solution": "Let the fraction of products checked by worker y be y\nThe defective rate for worker x is 0.5 / 100 = 0.005\nThe total defective rate is 0.005 + (0.008 * y) = 0.007\nSolving the equation: 0.005 + 0.008y = 0.007\n0.008y = 0.007 - 0.005\n0.008y = 0.002\ny = 0.002 / 0.008 = 1/4\n#### 1/4",
+        "transformed_answer": "1/4",
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The example removes intermediate step 2. In the original_solution, step 3 references result (1 - y) from step 2, and step 4 references the result of step 3. Therefore, after deleting step 2, step 4 should reference the result 0.005 from step 3 only. However, the number 0.007 was incorrectly subtracted by the value 0.005 - instead of subtracting the expression (0.005*(1-y)), leading to the incorrect solution. Steps 5, 6, and 7, as subsequent related steps, are affected by this wrong calculation. Step 5 will change 0.008y - 0.005y = 0.007 - 0.005 to 0.008y = 0.007 - 0.005, step 6 will change 0.003y = 0.002 to 0.008y = 0.002, and step 7 will change y = 0.002 / 0.003 to y = 0.002 / 0.008. It is step 3 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 3.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.008y = 0.007 - 0.005 instead of 0.008y = 0.007 - 0.005 = 0.002. The subsequent step 4 references the result of step 3, calculating y = 1/4 instead of y = 1/8. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

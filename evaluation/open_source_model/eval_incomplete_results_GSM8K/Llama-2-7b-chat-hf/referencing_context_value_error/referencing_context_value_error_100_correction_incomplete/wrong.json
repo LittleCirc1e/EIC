@@ -1,0 +1,122 @@
+[
+    {
+        "question": "To celebrate a recent promotion, Arthur decided to treat himself to dinner at a nice restaurant. He ordered a nice appetizer for $8, a delicious ribeye steak for his entrée at $20, had two glasses of nice red wine with dinner for $3 each, and a slice of caramel cheesecake for dessert for $6. He used a voucher for half off the price of his entrée, but he very thoughtfully tipped his waitress a full 20% of what the full cost of his meal would have been without the discount. How much, including the tip, did Arthur spend on dinner?",
+        "original_solution": "The cost of his food, before the voucher, was $8 + $20 + $3 + $3 + $6 = $40.\nThe tip was $40 * .20 = $8.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $40 - $10 + 8 = $38.\n#### 38",
+        "original_answer": 38.0,
+        "transformed_solution": "The cost of his food, before the voucher, was $8 + $20 + $5 + $5 + $6 = $44.\n",
+        "transformed_answer": 42.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $3 in the question as $5 wrongly for the cost of one glass of wine, and calculates $8 + $20 + $5 + $5 + $6 = $44 instead of $8 + $20 + $3 + $3 + $6 = $40. Its subsequent related steps will be affected. Step 2 will change from $40 * .20 = $8 to $44 * .20 = $8.8 as it uses the incorrect total. Step 4 changes from $40 - $10 + $8 = $38 to $44 - $10 + $8.8 = $42.8. Please note that you should only consider one error, so step 3 still references the price of the entrée as $20 correctly.",
+        "eval_result": "\nThe solution is correct. The explanation is:\n\nThe cost of the food before the voucher is $8 + $20 + $5 + $5 + $6 = $44. The voucher reduced the cost of the entrée by $10, so the total cost of the food after the voucher is $44 - $10 = $34. The tip of 20% of the full cost of the meal without the voucher is $34 x 0.20 = $6.80, so the total cost of dinner including the tip is $34 + $6.80 = $40.80."
+    },
+    {
+        "question": "Ella earned $33 for 3 hours of dog walking. If she continues to walk dogs at the same rate, how much would she earn after 12 hours?",
+        "original_solution": "Ella earned $33 / 3 hours of dog walking = $11 per hour.\nSo for 12 hours of dog walking, Ella would earn $11 x 12 = $132.\n#### 132",
+        "original_answer": 132.0,
+        "transformed_solution": "Ella earned $30 / 3 hours of dog walking = $10 per hour.\n",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $33 in the question as $30 wrongly, and calculates $30 / 3 hours of dog walking = $10 per hour instead of $33 / 3 = $11 per hour. Its subsequent related step will be affected, calculating $10 x 12 = $120 instead of $11 x 12 = $132 in step 2. Please note that you should only consider one error, so step 2 still references 12 in the question correctly.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The explanation is that Ella earned $10 per hour for dog walking, so after 12 hours, she would earn $10 x 12 = $120."
+    },
+    {
+        "question": "Jake's neighbors hire him to mow their lawn and plant some flowers. Mowing the lawn takes 1 hour and pays $15. If Jake wants to make $20/hour working for the neighbors, and planting the flowers takes 2 hours, how much should Jake charge (in total, not per hour) for planting the flowers?",
+        "original_solution": "First figure out how many hours total Jake works by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake makes if he earns $20/hour for three hours by multiplying the time spent by the pay rate: $20/hour * 3 hours = $60\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $60 - $15 = $45\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "First figure out how many hours total Jake wants to work by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake wants to make if he earns $25/hour for three hours by multiplying the time spent by the new pay rate: $25/hour * 3 hours = $75\n",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the hourly rate Jake wants to make as $25/hour instead of $20/hour as stated in the question. The subsequent related steps 3 and 4 will be affected by the erroneous result of this step but still be calculated correctly. Since only one step error is considered, all other steps that reference the hourly rate still reference this number correctly except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is correct. The explanation is:\n\nJake wants to work 3 hours in total, so he should charge $75 for planting the flowers. This is calculated by multiplying the time spent by the new pay rate of $25/hour."
+    },
+    {
+        "question": "Farmer Randy has 1700 acres of cotton he needs to have planted in 5 days. With a crew of 2 tractors working for 2 days and then a crew of 7 tractors working for another 3 days, how many acres of cotton per day does each tractor need to plant to meet their planting deadline?",
+        "original_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 7 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1700 acres with their 25 tractor days, then each tractor team needs to plant 1700/25 = 68 acres of cotton per day.\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 5 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1600 acres with their 25 tractor days, then each tractor team needs to plant 1600/25 = 64 acres of cotton per day.\n",
+        "transformed_answer": 64.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 1700 in the question as 1600 wrongly, and calculates 1600/25=64 instead of 1700/25=68. Its subsequent related step will be affected, producing a different result of 1600/25=64 instead of the correct 1700/25=68. Please note that you should only consider one error, so all other steps that reference the number of acres still reference 1700 correctly, except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is correct. The explanation is: The solution is correct because it takes into account the total number of tractor days available and the number of acres of cotton that need to be planted. By dividing the total number of acres by the number of tractor days, the solution arrives at the correct answer of 64 acres of cotton per day that each tractor team needs to plant to meet the planting deadline."
+    },
+    {
+        "question": "Nick is asking all his co-workers to chip in for a birthday gift for Sandra that costs $100. The boss agrees to contribute $15, and Todd volunteers to contribute twice as much since he always has to one-up everyone. If the remaining 5 employees (counting Nick) each pay an equal amount, how much do they each pay?",
+        "original_solution": "First find Todd's contribution by doubling the boss's contribution: $15 * 2 = $30\nNow subtract Todd and the boss's contributions to find out how much still needs to be paid: $100 - $30 - $15 = $55\nNow divide the remaining cost by the number of employees to find the cost per employee: $55 / 5 employees = $11/employee\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "First find Todd's contribution by doubling the boss's contribution: $20 * 2 = $40\n",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $15 in the question as $20 wrongly, and calculates $20 * 2 = $40 instead of $15 * 2 = $30. Its subsequent related steps will be affected by the incorrect amounts. Step 2 calculates the remaining cost based on the altered contributions, calculating $100 - $40 - $20 = $40 instead of $100 - $30 - $15 = $55. Step 3 is then impacted by the error from step 2, dividing $40 by 5 employees resulting in $8/employee instead of dividing $55 by 5 employees to get $11/employee. Note that other steps still reference the correct value from the question except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is correct, and the explanation is:\nThe solution is correct because it follows the instructions provided in the instruction. The response correctly identifies the step where the mistake occurs and provides the correct answer.\n\nThe mistake occurs in the second step, where Todd's contribution is doubled to $40 instead of being doubled to $30. Therefore, the correct answer is:\n\nEach of the remaining 5 employees pays $25.\n\nExplanation:\nTodd volunteered to contribute twice as much as the boss, so he contributes $20 \\* 2 = $40. Since there are 5 remaining employees, each of them pays $25 to make the total amount of $100."
+    },
+    {
+        "question": "Every day Janet spends 8 minutes looking for her keys and another 3 minutes complaining after she finds them. If Janet stops losing her keys, how many minutes will she save every week?",
+        "original_solution": "First find the total time Janet spends looking for her key and complaining each day: 8 minutes/day + 3 minutes/day = 11 minutes/day\nThen multiply that number by the number of days in a week to find the weekly time spent: 11 minutes/day * 7 days/week = 77 minutes\n#### 77",
+        "original_answer": 77.0,
+        "transformed_solution": "First find the total time Janet spends looking for her key and complaining each day: 6 minutes/day + 3 minutes/day = 9 minutes/day\n",
+        "transformed_answer": 63.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the question as 6 wrongly, and calculates 6+3=9 instead of 8+3=11. Its subsequent related step will be affected, calculating 9*7=63 instead of 11*7=77 in step 2.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the total time Janet spends looking for her keys and complaining each day, and then correctly applies that total time to determine the weekly savings.\n\nAlternatively, if the solution is incorrect, the correct answer could be #, and the explanation could be #. For example, if the solution incorrectly calculated the total time spent looking for keys and complaining each day, the correct answer could be 9 minutes/day + 3 minutes/day = 12 minutes/day, and the explanation could be #."
+    },
+    {
+        "question": "A family of 6 (2 adults and 4 kids) are to divide a watermelon such that each adult gets a slice that is twice as big as that of each kid. What percentage of the watermelon does each adult get?",
+        "original_solution": "Let x be the percentage of watermelon that each adult gets.\nSince each kid gets half of what each adult gets, each kid gets x/2 percent of the watermelon\nSo the watermelon gets split into 2*x and 4*(x/2) parts by percentage\nThe percentages have to sum up to 100 so 2x+2x = 100 (after simplification)\nx = 100/4 = 25, which means each adult gets 25% of the watermelon.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Let x be the percentage of watermelon that each adult gets.\nSince each kid gets half of what each adult gets, each kid gets x/2 percent of the watermelon\nSo the watermelon gets split into 2*x and 4*(x/2) parts by percentage\nThe percentages have to sum up to 100 so 2x+4x = 100 (after simplification)\n",
+        "transformed_answer": 16.67,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 incorrectly references the denominator needed to split the parts by percentage. The original correct calculation is 2x+2x (2 adults times the adult percentage plus 4 kids times the half percentage of adults which simplifies to 2x), but in the transformed solution, it becomes 2x+4x (mistakenly doubling the adult factor instead of considering the correct 4 kids times half portion). This error affected the final calculation: x = 100/4 = 25 changes to x = 100/6 ≈ 16.67. However, the mistake is only applied once and all other steps correctly reference the numbers as indicated in the original_solution except for the step with the error.",
+        "eval_result": "\nThe solution is correct. The explanation is: The solution is correct because it takes into account the fact that each adult gets a slice that is twice as big as that of each kid, and it uses the correct formula to calculate the percentage of watermelon that each adult and each kid gets. The solution also correctly simplifies the equation to ensure that the percentages add up to 100."
+    },
+    {
+        "question": "Sally is saving up for a trip to Sea World. She already has $28 saved. It costs her $10 to park, $55 to get into the park and $25 for a meal pass. Sea World is 165 miles away and her car gets 30 miles per gallon of gas. If gas costs $3 a gallon, how much more will she have to save up?",
+        "original_solution": "She will be driving 330 miles for her trip because 2 x 165 = 330\nThey will need 11 gallons of gas because 330 / 30 =11\nThe gas will cost $33 because 11 x 3 = 33\nHer total cost is $123 because 10 + 55 + 25 + 33 = 123\nShe needs to save $95 more because 123 - 28 = 95\n#### 95",
+        "original_answer": 95.0,
+        "transformed_solution": "She will be driving 330 miles for her trip because 2 x 165 = 330\nThey will need 11 gallons of gas because 330 / 30 = 11\nThe gas will cost $33 because 11 x 3 = 33\nHer total cost is $118 because 10 + 50 + 25 + 33 = 118\n",
+        "transformed_answer": 90.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 55 in the question as 50 wrongly, and calculates 10 + 50 + 25 + 33 = 118 instead of 10 + 55 + 25 + 33 = 123. Its subsequent related step will be affected, calculating 118 - 28 = 90 instead of 123 - 28 = 95 in step 5.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the total distance of the trip (330 miles) and the amount of gas needed (11 gallons) based on Sally's car's fuel efficiency and the distance of the trip. The solution also correctly calculates the cost of gas ($33) and the total cost of the trip ($118).\n\nThe root cause of the mistake in the solution is the assumption that Sally's car will use 30 miles per gallon of gas for the entire trip, when in fact it will use 30 miles per gallon for each leg of the trip, resulting in a total distance of 330 miles."
+    },
+    {
+        "question": "Josh had 100 gummy bear candies. He decided to give his 3 siblings 10 candies each. Then he gave half of the remaining candies to his best friend. If he only wants to eat 16 gummy bear candies, how many candies are left to be shared with others?",
+        "original_solution": "Josh gave a total of 3 x 10 = 30 candies to his siblings.\nHe was then left with 100 - 30 = 70 candies.\nHe gave 70/2 = 35 candies to his best friend.\nSo he had 70 - 35 = 35 candies left.\nSince he only wants to eat 16 candies, there are still 35 - 16 = 19 candies left to be shared with others.\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Josh gave a total of 3 x 10 = 30 candies to his siblings.\nHe was then left with 110 - 30 = 80 candies.\n",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 incorrectly references 100 gummy bears as 110, and calculates 110 - 30 = 80 instead of 100 - 30 = 70. This error affects subsequent related steps, changing the calculations in steps 3, 4, and 5 based on the erroneous value of 80 candies remaining. Step 3 changes from 70/2 = 35 to 80/2 = 40, step 4 changes from 70 - 35 = 35 to 80 - 40 = 40, and step 5 changes from 35 - 16 = 19 to 40 - 16 = 24. The error is only in the referencing of the number within step 2, therefore only one step contains an error. All other steps correctly reference their respective numbers.",
+        "eval_result": "\nThe solution is correct. The explanation is: Josh gave a total of 3 x 10 = 30 candies to his siblings, which means he has 110 - 30 = 80 candies left to share with others."
+    },
+    {
+        "question": "Carolyn works for a delivery service company that hires on a contract basis. In May, they hired 40 employees, paying each employee $15 per hour for a 40-hour workweek. In June, 1/4 of the employees' contracts expired. Calculate the total amount of money the company paid to the employees in the two months.",
+        "original_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 40 employees, the company paid 40*$2400= $96000 to all of its contract employees in May.\nIn June, 1/4 of the employees' contracts expired, that is 1/4*40 = 10 employees.\nThe total number of employees whose contracts were valid in June was 40-10 = 30 employees.\nThe total amount of money paid to the contracted employees in June is 30*$2400 = $72000\nIn the two months, the company paid a total of $72000+$96000 = $168000\n#### 168000",
+        "original_answer": 168000.0,
+        "transformed_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 35 employees, the company paid 35*$2400= $84000 to all of its contract employees in May.\n",
+        "transformed_answer": 156000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 40 in the question as 35 wrongly, and as a result calculates 35*$2400 = $84000 instead of 40*$2400 = $96000. This affects the final calculation where the total paid over two months is now $72000+$84000 = $156000 instead of $72000+$96000 = $168000. The number 35 erroneously used in this step does not occur in the question; however, for the purpose of this case transformation, it was assumed to be a referencing error. Please note that all other steps reference the original number 40 correctly, except for the step where the error is introduced.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculates the total amount of money the company paid to the employees in May by multiplying the number of employees by the weekly earnings and then multiplying that result by the number of weeks in the month.\n\nHowever, in June, only 1/4 of the employees' contracts expired, so the number of employees paid in June is 40/4 = 10. The total amount of money the company paid to the employees in June is 10*$2400 = $24,000.\n\nTherefore, the total amount of money the company paid to the employees in the two months is $84,000 in May and $24,000 in June, for a total of $108,000."
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "question": "Frank picked 36 apples. Susan picked 3 times as many apples as Frank. If Susan gave out half of her apples, and Frank sold a third of his, how many in total do they have left?",
+        "original_solution": "Susan picked 3 times as much as 36 which is 3*36 = 108 apples\nShe gave out half which is 108*(1/2) = 54 apples\nShe now has 108-54 = 54 apples\nFrank sold a third of 36 which is 36*(1/3) = 12 apples\nFrank now has 36-12 = 24 apples\nAltogether they now have 54+24 = 78 apples\n#### 78",
+        "original_answer": 78.0,
+        "transformed_solution": "Susan picked 3 times as much as 36 which is 3*36 = 108 apples\nShe gave out half which is 108/(1/2) = 216 apples\nShe now has 108-216 = -108 apples\nFrank sold a third of 36 which is 36*(1/3) = 12 apples\nFrank now has 36-12 = 24 apples\nAltogether they now have -108+24 = -84 apples\n#### -84",
+        "transformed_answer": -84.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformation, step 2 of the original solution mistakenly changes the multiplication operator to division, altering the original procedure of dividing Susan's apples by 2. Instead of correctly calculating the half as 108*(1/2), the erroneous step applies division as 108/(1/2), which mathematically results in doubling the number of apples. This leads to a negative count of apples since Susan cannot have fewer apples than she gives away. Consequently, all subsequent steps that depend on the result of this step are affected, although the arithmetic within those steps remains accurate.",
+        "label": "no",
+        "eval_result": "The [Solution] is incorrect, as it leads to an inconsistent state. It is not possible to have a negative number of apples. Therefore, the [Solution] is incorrect, and the string of 'no' should be output as the response.The answer is: 84"
+    },
+    {
+        "question": "Maiya has two sisters. The first sister is twice as old as Maiya. The first sister is 1 year younger than Maiya. Their average age is 5. How old is Maiya?",
+        "original_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X - (X-1) is equivalent to 16 = 4X\nMaiya is 4 years old because 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X + (X-1) is equivalent to 16 = 2X\nMaiya is 8 years old because 16 / 2 = 8\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The error is introduced by changing the subtraction of (X - 1) to addition in the second step. This turns the equation 15 - X - 2X - (X-1) = 16 = 4X into 15 - X - 2X + (X-1) = 16 = 2X, incorrectly simplifying the ages. All other aspects of the solution are correct, including the arithmetic in the transformed steps. This leads to a different incorrect result for Maiya's age.",
+        "label": "no",
+        "eval_result": "To determine if the solution is correct, we need to check if the equation is true.\nThe equation given is:\n16 = 2X\nTo solve for X, we divide both sides of the equation by 2:\n16 / 2 = X\n8 = X\nTherefore, the value of the unknown variable X is 8.The answer is: 8"
+    },
+    {
+        "question": "Gerald spends $100 a month on baseball supplies. His season is 4 months long. He wants to use the months he's not playing baseball to save up by raking, shoveling, and mowing lawns. He charges $10 for each. How many chores does he need to average a month to save up for his supplies?",
+        "transformed_solution": "He needs to save up $400 because 4 x 100 = 400\nHe has 8 months to earn this money because 12 - 4 = 8\nHe needs to earn $50 a month because 400 / 8 = 50\nHe needs to do 5 tasks a month because 50 / 10 = 5\n#### 5",
+        "label": "yes",
+        "eval_result": "The [Solution] is correct because Gerald needs to earn $50 a month and do 5 tasks a month to save up for his baseball supplies.\nTherefore, the string of 'yes' represents the correct answer.\n#### 5\nThe answer is: 5"
+    }
+]

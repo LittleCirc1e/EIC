@@ -1,0 +1,154 @@
+[
+    {
+        "question": "how many positive integers less than 50 are there such that they are multiples of 9 ?",
+        "original_solution": "The multiples of 9 less than 50 are 9, 18, 27, 36, 45.\nThere are 5 positive integers less than 50 that are multiples of 9.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "The multiples of 9 less than 50 are 9, 18, 27, 36, 45, and 54.\nThere are 6 positive integers less than 50 that are multiples of 9.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "logical_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, a logical error has been introduced in step 1 where an additional number, 54, which is not less than 50, was included in the list of multiples of 9. This error consequently led to an incorrect count of multiples of 9, making it 6 instead of the correct answer, 5. The count of multiples directly translates to the final numerical answer, while the calculation of the number of items in the list itself is correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #4, because 45 is not a multiple of 9. Therefore, there are only 5 positive integers less than 50 that are multiples of 9, which are 9, 18, 27, 36, and 54."
+    },
+    {
+        "question": "The product of three consecutive numbers is 990. Then the sum of the smallest two numbers is?",
+        "original_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\n(n-9)(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nn=9 or n=(-12±√356i)/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n/(n+1)/(n+2) = 990\nn/(n^2+2n+n+2) = 990\nn/(n^3+3n^2+2n) = 990\nn/(n^3+3n^2+2n-990) = 0\n(n-9)/(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution used multiplication to find the product of three consecutive numbers, which accurately forms a cubic equation. However, the transformed solution incorrectly replaces the multiplication with division in step 2, which fundamentally changes the nature of the problem to an impossible division scenario that doesn’t produce a meaningful result (dividing zero or attempting to plot an impossible function). This cascades through to step 3, resulting in a division equation that incorrectly suggests n divided by a cubic function equals zero. As a consequence, the final solution is nonsensical, yielding zero for the sum of the numbers. The only operator change—the division instead of multiplication—causes a fundamental error so early in the solution process that no meaningful problem exists.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is the step where the expression n/(n+1)/(n+2) = 990 is incorrect. The correct expression is n/(n+1) + (n+1)/(n+2) = 990. Therefore, the sum of the smallest two numbers is 9 + (9+1) = 19."
+    },
+    {
+        "question": "The product of 3 consecutive numbers is 210 . Then the sum of the smallest two numbers is ?",
+        "original_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x^2 + 3x + 2) = 210\nx^3 + 3x^2 + 2x = 210\nx^3 + 3x^2 + 2x - 210 = 0\n(x-5)(x^2 + 8x + 42) = 0\nThe solutions for x are 5, -4+/-sqrt(4-4(1)(42)) / (2(1)) = 5, -4+/-sqrt(-164) / 2\nThe two solutions are x = 5 and x = -4+/-4.472/2\nThe sum of the smallest two numbers is 5 + 6 = 11\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x+1)+x+2 = 210\nx^2 + x + x + 2 = 210\nx^2 + 2x + 2 = 210\nx^2 + 2x + 2 - 210 = 0\nx^2 + 2x - 208 = 0\nUsing the quadratic formula x = [-2 +/- sqrt(2^2 - 4(1)(-208))] / (2(1)) = [-2 +/- sqrt(4 + 832)] / 2 = [-2 +/- sqrt(836)] / 2\nx = [-2 +/- 28.92] / 2\nThe two solutions are x = [-2 + 28.92] / 2 = 13.46 and x = [-2 - 28.92] / 2 = -15.46\nThe sum of the smallest two numbers is 13.46 + 14.46 = 27.92\n#### 27.92",
+        "transformed_answer": 27.92,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This case changes the multiplication operator in the original solution to addition. In step 2, instead of x(x+1)(x+2) = 210, it is changed to x(x+1)+x+2 = 210. This leads to a different equation and therefore to different solutions for x. Since the next steps depend on the value of x obtained in step 2, all of them are affected and therefore changed, yet the calculations are performed correctly based on the altered equation. The final answer for the sum of the smallest two numbers is consequently different from the original one.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the product of the three consecutive numbers is indeed 210, and the sum of the smallest two numbers can be calculated using the formula provided in the solution. The value of the sum is 27.92, which is the correct answer."
+    },
+    {
+        "question": "An amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?",
+        "original_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 4000\n#### 4000",
+        "original_answer": 4000.0,
+        "transformed_solution": "The total number of parts is 3 * 7 * 12 = 252\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x * 3x = Rs. 3200\n21x^2 = 3200\nx^2 = 152.38\nx = 12.34\nThe share of q is 7x = 7*12.34 = Rs. 86.38\nThe share of r is 12x = 12*12.34 = Rs. 148.08\nThe difference between q and r's share is 148.08 - 86.38 = Rs. 61.70\n#### 61.70",
+        "transformed_answer": 61.7,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in the formula for the total number of parts has been changed from addition to multiplication (change \"+\" to \"*\") in step 1, which drastically affects the outcome of the entire problem. As such, the resulting share calculations and differences are based on that incorrect understanding of the total parts and are thus incorrect compared to the original solution. However, despite this error, each calculation after the change is performed correctly.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The explanation is that the difference between the shares of p and q is Rs. 3200, which is equal to the square of the common multiple x, which is 152.38. Therefore, the difference between q and r's share is Rs. 61.70, which is the square of the common multiple minus the share of q."
+    },
+    {
+        "question": "the average (arithmetic mean) of 20, 40, and 60 is 9 more than the average of 10, 70, and what number?",
+        "original_solution": "The average of 20, 40, and 60 is (20 + 40 + 60) / 3 = 120 / 3 = 40\nThe average of 10, 70, and x is (10 + 70 + x) / 3\nThe equation is (10 + 70 + x) / 3 + 9 = 40\n(80 + x) / 3 + 9 = 40\n(80 + x) / 3 = 31\n80 + x = 93\nx = 13\n#### 13",
+        "original_answer": 13.0,
+        "transformed_solution": "The average of 20, 40, and 60 is (20 * 40 * 60) / 3 = 48000 / 3 = 16000\nThe average of 10, 70, and x is (10 + 70 + x) / 3\nThe equation is (10 + 70 + x) / 3 + 9 = 16000\n(80 + x) / 3 + 9 = 16000\n(80 + x) / 3 = 15991\n80 + x = 47973\nx = 47893\n#### 47893",
+        "transformed_answer": 47893.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly converts the addition operation to multiplication in the calculation of the average of 20, 40, and 60, changing (20 + 40 + 60) / 3 to (20 * 40 * 60) / 3. The calculation of the new average (16000) is done correctly based on the changed operation, which leads to a different equation in the following steps. The transformed_solution involves correctly applying the changed equation to determine the unknown number x, which leads to a different result (47893) from the original answer (13). Only the operator in the first step was changed, while the calculations of all other steps are correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly determines that the average of 20, 40, and 60 is 16000, and then uses this value to find the average of 10, 70, and x. The solution then correctly solves for x by adding 9 to the equation and simplifying. Therefore, the answer is 47893."
+    },
+    {
+        "question": "p is 40% more efficient than q. p can complete a work in 24 days. If p and q work together, how many days will it take to complete the same work?",
+        "original_solution": "If q is 100, p is 140 because 100 + (40% * 100) = 100 + 40 = 140\nIf p can complete the work in 24 days, q can complete the work in 24 x (140/100) = 33.6 days\nWorking together, they can complete the work in 1 / (1/24 + 1/33.6) = 1 / (0.04166667 + 0.0297619) = 1 / 0.07142857 = 14 days\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "If q is 100, p is 140 because 100 - (40% * 100) = 100 - 40 = 60\nIf p can complete the work in 24 days, q can complete the work in 24 x (60/100) = 14.4 days\nWorking together, they can complete the work in 1 / (1/24 + 1/14.4) = 1 / (0.04166667 + 0.06944444) = 1 / 0.11111111 = 9 days\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution's step 1 had an addition operation to calculate p's efficiency as 140%. This was transformed by changing addition to subtraction, incorrectly asserting p's efficiency at 60% instead. Consequently, q would be calculated to finish the work in 14.4 days instead of 33.6 days. Subsequent steps affected by this error calculate the days taken for p and q to complete the work together, turning 14 days into 9 days. Each of these steps uses the incorrect efficiency but correctly follows the operational method. Therefore, only the operator in step 1 was altered, but all the calculations are done correctly based on the modified operator.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is 60/100. The explanation is that 60/100 is not the correct calculation for the time it takes for q to complete the work, as it does not take into account the 40% efficiency advantage of p. Therefore, the correct calculation is 24 x (60/100) = 14.4 days."
+    },
+    {
+        "question": "In what time will a railway train 30 m long moving at the rate of 36 kmph pass a telegraph post on its way?",
+        "original_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) / (3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 10 m/s = 3 s\n#### 3 seconds",
+        "original_answer": 3.0,
+        "transformed_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) * (3600 s/h) = 129600 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 129600 m/s = 0.000231 s\n#### 0.000231 seconds",
+        "transformed_answer": 0.000231,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in step 1 was changed from division to multiplication which should convert speed from km/h to m/s but instead gave an implausible speed of 129600 m/s due to multiplying where you should divide. This resulted in an incorrect calculation of the duration it would take the train to pass the telegraph post: instead of dividing the length of the train by a reasonable speed in m/s, it's divided by an excessively large incorrect value of speed. All other steps are correctly calculated based on the transformed values, but the outcome of the wrong step leads to an incorrect result that is significantly different from the original result.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #0, which is the conversion of the speed from km/h to m/s. The conversion is incorrect, as 1000 m/km is not equal to 3600 s/h. Therefore, the time it takes for the train to pass the telegraph post is actually #0.000231 seconds."
+    },
+    {
+        "question": "In what time will a railway train 30 m long moving at the rate of 36 kmph pass a telegraph post on its way?",
+        "original_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) / (3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 10 m/s = 3 s\n#### 3 seconds",
+        "original_answer": 3.0,
+        "transformed_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) * (1/3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m * 10 m/s = 300 s\n#### 300 seconds",
+        "transformed_answer": 300.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution changes the division operator to a multiplication operator in the second step of the calculation process. Specifically, it incorrectly represents the time it takes for the train to pass the telegraph post by changing 30 m / 10 m/s to 30 m * 10 m/s. This leads to a mathematically incorrect formula and an incorrect result of 300 seconds instead of the correct result of 3 seconds. The conversion from km/h to m/s in the first step remains correct, but the subsequent step of calculating time, which was affected by changing the division operator to multiplication, is erroneous. This is the only step where an error occurs in the transformation, and all other calculations are carried out correctly according to the wrong operator used.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly calculated the time it takes for the train to pass the telegraph post by dividing the length of the train by its speed."
+    },
+    {
+        "question": "evaluate : | 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = ?",
+        "original_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 * -9 = -72\nSo, the expression becomes |7 - (-72)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-72) = 79\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |79| - |-6| = 79 - 6 = 73\n#### 73",
+        "original_answer": 73.0,
+        "transformed_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 / -9 = -0.88888888889 (approx -0.89)\nSo, the expression becomes |7 - (-0.89)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-0.89) = 7.89\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |7.89| - |-6| = 7.89 - 6 = 1.89\n#### 1.89",
+        "transformed_answer": 1.89,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 2 to division, altering 8 * -9 = -72 to 8 / -9 = -0.88888888889 (rounded to -0.89). The subsequent steps inherit the altered value from step 2. The calculation within the absolute value expressions in step 4 and 5 is adjusted to the new values. Then the final evaluation computes the expression |7.89| - |-6| to be 7.89 - 6, resulting in 1.89. All the calculations after the operator change are correct, but the result is changed due to the modification in step 2.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly solves the expression by first solving the inner parentheses, then simplifying the result, and finally evaluating the expression. The explanation is that the first step to make a mistake is the step where the solution divides 8 by -9, which results in an incorrect answer of -0.88888888889. If this step is corrected, the solution will give the correct answer of 1.89."
+    },
+    {
+        "question": "what is the positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square?",
+        "original_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 - 14 = 27.\n#### 27",
+        "original_answer": 27,
+        "transformed_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 + 14 = 55.\n#### 55",
+        "transformed_answer": 55,
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 6 to addition, hence changing '41 - 14 = 27' to '41 + 14 = 55'. This affects the final answer, but all previous calculations remain correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first step to make a mistake is step 3, where the sum of the squares of the first 3 positive integers is calculated as 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14, instead of 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14. This mistake leads to the final incorrect result of 41 + 14 = 55."
+    },
+    {
+        "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+        "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "The sum of a and b is 35 * 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 + 2 = 82 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 82 - 70 = 12.\nThe value of c - a is 12.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the multiplication operator in the original step 2 is wrongly changed to the addition operator, turning 80 x 2 = 160 into 80 + 2 = 82. This error in the operator leads to an incorrect sum for b and c, which cascades down to the subsequent calculations. Steps 3 and 4 use the incorrect value from the modified step 2, thus leading to the incorrect transformed answer of 12 instead of the original answer of 90. The calculation in the modified step 2 is correct, but the result is incorrect due to using the wrong operation. All other steps correctly calculate based on the values they are given.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #2, because the average of b and c is not equal to the average of b and a. The correct calculation is:\n\nThe sum of a and b is 35 * 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 + 2 = 82 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 82 - 70 = 12.\nThe value of c - a is 12. #12."
+    },
+    {
+        "question": "The ratio of three numbers is 3 : 4 : 7 and their product is 18144. The numbers are",
+        "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+        "original_answer": [
+            18,
+            24,
+            42
+        ],
+        "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x / 7x = 18144\n12x^2 = 18144\nx^2 = 1512\nx = sqrt(1512)\nThe numbers are 3x = 3*sqrt(1512), 4x = 4*sqrt(1512), and 7x = 7*sqrt(1512)\n#### 3*sqrt(1512), 4*sqrt(1512), 7*sqrt(1512)",
+        "transformed_answer": [
+            117,
+            156,
+            273
+        ],
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in step 2 of the original solution, which is a multiplication '*', has been incorrectly changed to a division '/'. This changed the original equation '3x * 4x * 7x = 18144' to the incorrect '3x * 4x / 7x = 18144'. The steps following the modified step are executed correctly using the incorrect step 2 result, but with the altered operator, the final answer changes from the correct numbers 18, 24, and 42 to the incorrect values 3*sqrt(1512), 4*sqrt(1512), and 7*sqrt(1512), which when calculated further result in approximately 117, 156, 273. This transformation leads to a single error in the second step, which then affects all subsequent steps that rely on the result of that erroneous step.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the product of the three numbers is indeed 18144, and the ratio of the three numbers is 3:4:7. Moreover, the solution correctly identifies that the numbers are 3x, 4x, and 7x, and their product is 3x * 4x / 7x = 18144. Therefore, the solution is correct."
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "question": "The length of a rectangle is four times its width. If the area is 100 m2. what is the length of the rectangle?",
+        "original_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4* W\nWe now use the area to write 100 = L * W\nSubstitute L by 4 W in the equation above 100 = 4*W × W = 4 W^2\nSolve for W and find L\nW^2 = 25, W = 5\nL = 4*5 = 20 m\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4* W\nWe now use the area to write 100 = L + W\nSubstitute L by 4 W in the equation above 100 = 4*W + W = 5 W\nSolve for W and find L\n5 W = 100\nW = 20\nL = 4*20 = 80 m\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the formula for the area of a rectangle with the formula for its perimeter. The question asked for the area, which should be found by multiplying the length (L) by the width (W), but instead, the perimeter formula (L + W) was mistakenly used in the transformed_solution, which is typically the sum of all sides of the rectangle. As a result, the original solution's equation '100 = L * W' turned into '100 = L + W' in the transformed solution. This causes a chain reaction affecting the subsequent calculations. W is incorrectly found to be 20 instead of 5, and L is calculated as being 80 instead of 20. The previous steps and language remain unaltered, and the error results in a different final answer in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe solution mistakenly substitutes L by 4W in step #3, instead of using the equation 100 = L + W. This leads to the incorrect calculation of W and ultimately the length of the rectangle. The correct calculation is W = 20 and L = 80."
+    },
+    {
+        "question": "The length of a rectangle is four times its width. If the area is 100 m2. what is the length of the rectangle?",
+        "original_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4* W\nWe now use the area to write 80 = L * W\nSubstitute L by 4 W in the equation above 80 = 4*W × W = 4 W^2\nSolve for W and find L\n4 W^2 = 100\nW^2 = 25, W = 5 and\nL = 4*5 = 20 m\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4*W\nWe now use the area to write 100 = L + W\nSubstitute L by 4 W in the equation above 100 = 4*W + W = 5 W\nSolve for W and find L\n5 W = 100\nW = 20 and\nL = 4*20 = 80 m\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In this case, the confusing_formula_error occurred at step 3 where the original solution correctly uses the formula for area of a rectangle (L * W) to find the width and length (80 = L * W). The transformation incorrectly uses the perimeter formula (L + W) instead of the area formula, modifying the equation to 100 = L + W. The following steps are updated based on this error, leading to the incorrect calculation of width and length. The perimeter formula is incorrect in this context since the question specifies the area of the rectangle. The rest of the solution correctly follows the erroneous formula, resulting in the final transformed answer of 80 m for the length of the rectangle, which is different from the original answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe solution mistakenly substitutes L by 4W in step #3, instead of using the equation 100 = L + W. This leads to the incorrect calculation of W and ultimately the length of the rectangle. The correct calculation is W = 20 and L = 4*20 = 80 m."
+    },
+    {
+        "question": "A rectangle has a length of 40 meters and a width of 20 meters. A similar smaller rectangle has half the length and width of the big rectangle. What's the area of the smaller rectangle?",
+        "original_solution": "The length of the smaller rectangle is 1/2*40 = 20 meters.\nThe width of the smaller rectangle is 1/2*20 = 10 meters.\nSince the area of a rectangle is found by multiplying the length times the width, the total area of the smaller rectangle is 20*10 = 200 meters square.\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "The length of the smaller rectangle is 1/2*40 = 20 meters.\nThe width of the smaller rectangle is 1/2*20 = 10 meters.\nSince the area of a rectangle is found by multiplying the length times the width, the total area of the smaller rectangle is 20+10+20+10 = 60 meters square.\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the formula for the area of a rectangle with the formula for the perimeter. The original solution correctly states that the area of a rectangle is determined by multiplying the length by the width. However, in the transformed solution, the length and width of the smaller rectangle are added to themselves, imitating the calculation for the perimeter, which should only be affected at one step resulting in the total area of the smaller rectangle changing from 20*10 = 200 meters square to 20+10+20+10 = 60 meters square.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe area of the smaller rectangle is not 60 meters square. The correct answer is 40 meters square."
+    },
+    {
+        "question": "The area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.",
+        "original_solution": "Since the area of a square is sides squared, the area of the square-shaped street is 100*100 = 10000 square meters.\nThe area of the forest is three times the area of the square-shaped street, a total of 3*10000 = 30000 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*30000 = 120000 trees in the forest.\n#### 120000",
+        "original_answer": 120000.0,
+        "transformed_solution": "Since the perimeter of a square is sides times four, the perimeter of the square-shaped street is 100*4 = 400 meters.\nThe area of the forest is three times the perimeter of the square-shaped street, a total of 3*400 = 1200 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*1200 = 4800 trees in the forest.\n#### 4800",
+        "transformed_answer": 4800.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 2 where the formula for calculating the area of a square (side length squared) was incorrectly changed to the formula for calculating the perimeter of a square (side length times four). As a result, the calculation that follows in the original solution, which correctly multiplies the square area by three to find the forest area, is also affected by the prior step’s error in the transformed solution. Instead of multiplying the area, the mistaken perimeter is multiplied. Subsequently, the calculation for the number of trees takes the incorrect smaller area and multiplies it by the number of trees per square meter, resulting in a reduced total number of trees. Note that the explanation of steps in the language description remains unchanged from the original solution while the formula used is modified.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2, which must be an integer. The explanation is # The perimeter of a square is sides times four, not sides times 4. Therefore, the perimeter of the square-shaped street is 100*4 = 400 meters.\n\nTherefore, the total number of trees in the forest is #4000."
+    },
+    {
+        "question": "The length of a rectangle is four times its width. If the area is 100 m2. what is the length of the rectangle?",
+        "original_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4* W\nWe now use the area to write 80 = L * W\nSubstitute L by 4 W in the equation above 80 = 4*W × W = 4 W^2\nSolve for W and find L\n4 W^2 = 100\nW^2 = 25, W = 5 and\nL = 4*5 = 20 m\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let L be the length and W be the width of the rectangle.\nHence L = 4* W\nWe now use the area to write 100 = L + W\nSubstitute L by 4 W in the equation above 100 = 4*W + W = 5 W\nSolve for W and find L\n5 W = 100\nW = 20, and\nL = 4*20 = 80 m\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the formula for the area of a rectangle with that for the perimeter. Instead of correctly using the area formula A = L * W, it mistakenly uses a formula resembling the perimeter, P = L + W. As a result, the original equation 100 = L * W is transformed to 100 = L + W. This leads to the incorrect solution that W = 20 and L = 4*20 = 80 m, making the transformed answer (L) 80 m instead of the correct 20 m.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe solution mistakenly substitutes L by 4W in step #3, instead of using the equation 100 = L + W. This leads to the incorrect calculation of W and ultimately the length of the rectangle. The correct calculation is W = 20 and L = 80."
+    },
+    {
+        "question": "Doris works at the Widget Factory in the packing department. She puts 3 widgets in each carton, which are 4 inches wide, 4 inches long, and 5 inches tall. She then packs those cartons into a shipping box before sending it to the loading bay. The shipping boxes are 20 inches wide, 20 inches long, and 20 inches high. How many widgets get shipped in each shipping box?",
+        "original_solution": "Each carton has an area of 4*4*5 = 80 square inches.\nEach shipping box has an area of 20*20*20 = 8000 square inches\nThe total number of cartons that will fit into each box is 8000/80 = 100\nSince there are 3 widgets in each carton, the total number of cartons in each box will be 3*100 = 300\n#### 300",
+        "original_answer": 300.0,
+        "transformed_solution": "Each carton has an area of 4*4*5 = 80 cubic inches.\nEach shipping box has an area of 20+20+20+20+20+20 = 120 square inches\nThe total number of cartons that will fit into each box is 120/80 = 1.5\nSince there are 3 widgets in each carton, the total number of widgets in each box will be 3*1.5 = 4.5\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, the second step confuses the volume and perimeter of a cube. The total area should be the volume of a cube (length * width * height), not the sum of the edges which constitutes the perimeter. In this case, the edge lengths should be multiplied as length * width * height for volume. But instead, the sum of the lengths of all edges has been calculated as if it were a perimeter. This results in 20*20*20 being transformed to 20+20+20+20+20+20, which affects the subsequent step 3, changing from 8000/80=100 to 120/80=1.5. The language description remains unchanged despite the incorrect transformation in step 2. It is important to note that this transformation introduces only one step of a confusing formula error (volume vs. perimeter confusion), and the other calculation processes remain correct. The final answer differs from the original, illustrating the impact of using an incorrect formula.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2. The area of each shipping box is not 120 square inches, it is actually 200 square inches. Therefore, the total number of cartons that will fit into each box is 120/80 = 1.5, which is the same as the solution."
+    }
+]

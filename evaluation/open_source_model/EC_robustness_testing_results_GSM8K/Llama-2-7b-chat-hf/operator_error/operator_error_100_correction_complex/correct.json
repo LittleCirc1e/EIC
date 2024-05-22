@@ -1,0 +1,50 @@
+[
+    {
+        "question": "The journey from Abel's house to Alice's house is 35 miles and is divided into 5 equal portions. Abel is driving at a speed of 40 miles per hour. After traveling for 0.7 hours, how many portions of the journey has he covered?",
+        "original_solution": "35 miles into 5 equal portions will be 35/5 = 7 miles each\nAbel traveled at a speed of 40 miles per hour for 0.7 hours so he will cover 40*0.7 = 28 miles\n7 miles make a portion so 28 miles is equivalent to 28/7 = 4 portions\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "35 miles into 5 equal portions will be 35+5 = 40 miles each\nAbel traveled at a speed of 40 miles per hour for 0.7 hours so he will cover 40*0.7 = 28 miles\n40 miles make a portion so 28 miles is equivalent to 28/40 = 0.7 portions\n#### 0.7",
+        "transformed_answer": 0.7,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 1 into addition, converting 35/5 = 7 to 35+5 = 40 by changing / to +. The subsequent step 3 related to it reflects this change, modifying 28/7 = 4 portions to 28/40 = 0.7 portions. It should be noted that step 1 has an incorrect operator change but still calculates its result correctly according to the new operation. Step 3 takes this new result but calculates correctly based on the output of step 1. The wrong operator change in step 1 leads to the wrong result in step 3, but the arithmetic on those wrong values is itself correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 4, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 28 miles instead of 35 miles, resulting in the final incorrect answer."
+    },
+    {
+        "question": "At a convention, 16 of 36 delegates arrived with pre-printed name badges. Half of the remaining delegates made their own, hand-written name badges. How many delegates were not wearing name badges?",
+        "original_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20/2=10 made hand-written badges\nThere were 20-10=10 with no name badge.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20*2=40 made hand-written badges\nThere were 20-40=-20 with no name badge.\n#### -20",
+        "transformed_answer": -20.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 2 into multiplication, turning 20/2=10 into 20*2=40. This results in an incorrect number of delegates making hand-written badges, which further affects step 3, changing 20-10=10 to 20-40=-20 for the number of delegates with no name badge. The operator change leads to an incorrect result for step 2, which then causes the subsequent step to be affected, although the calculations in step 3 are technically correct given the incorrect information from step 2.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 first makes a mistake in the calculation process, calculating -20 instead of -10. The subsequent step 4 references the result of step 3, calculating 40 instead of 30, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Ravi can jump higher than anyone in the class. In fact, he can jump 1.5 times higher than the average jump of the three next highest jumpers. If the three next highest jumpers can jump 23 inches, 27 inches, and 28 inches, how high can Ravi jump?",
+        "original_solution": "The total height the next three highest can jump is 78 inches because 23 + 27 + 28 = 78\nThe average height they can jump is 26 inches because 78 / 3 = 26\nRavi can jump 39 inches high because 26 x 1.5 = 39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "The total height the next three highest can jump is 78 inches because 23 + 27 + 28 = 78\nThe average height they can jump is 26 inches because 78 / 3 = 26\nRavi can jump 34.5 inches high because 26 / 1.5 = 17.333333333333332\n#### 17.333333333333332",
+        "transformed_answer": 17.333333333333332,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 3 into division, and by changing x to /, 26 x 1.5 = 39 becomes 26 / 1.5 = 17.333333333333332. This affects only the result of step 3, making Ravi's jump height incorrectly calculated as 17.333333333333332 inches. The operator change from multiplication to division is incorrect, but the calculation after changing the operator is performed correctly. The changed operator consequentially leads to a different result from the original, which is the transformed_answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 39, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 26 / 1.5 = 17.333333333333332 instead of 26 / 1.5 = 17.5. The subsequent step 4 references the result of step 3, calculating 17.5 x 3 = 52.5 instead of 17.5 x 3 = 50, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Cilia wants to buy a multi-level dumbbell system. The first pair of dumbbells are 3 lb weights, the second pair is 5 lb weights and the third is 8 lb pounds. How much does the entire system weigh?",
+        "original_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2*5 = 10 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+10+16 = 32 lbs\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2+5 = 7 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+7+16 = 29 lbs\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the operator change occurs at the second step. By incorrectly changing the multiplication operator to an addition operator (* to +), the calculation for the weight of the second pair of dumbbells changes from 2*5 = 10 lbs to 2+5 = 7 lbs, and the resulting total system weight is affected, changing from 6+10+16 = 32 lbs to 6+7+16 = 29 lbs. This alters the sum at the final step, yielding an incorrect total weight of 29 lbs instead of the original 32 lbs. The calculation after the change at step 2 is performed correctly, but introduces an error inherited by subsequent steps related to the incorrect weight of the second pair of dumbbells.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 32, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 2 x 3 = 6 instead of 2 x 3 = 6 lbs. The subsequent step 2 references the result of step 1, calculating 2 x 5 = 7 instead of 2 x 5 = 10 lbs. The subsequent step 3 references the result of step 2, calculating 2 x 8 = 16 instead of 2 x 8 = 16 lbs. In total, the entire system of weights weighs 6 + 7 + 16 = 32 lbs."
+    }
+]

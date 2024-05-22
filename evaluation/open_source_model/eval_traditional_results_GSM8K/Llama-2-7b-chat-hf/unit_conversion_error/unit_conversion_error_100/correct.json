@@ -1,0 +1,154 @@
+[
+    {
+        "index": 23,
+        "gsm8k_data": {
+            "question": "William left Missouri by 7:00 AM and arrived at his hometown by 8:00 PM. He had 3 stops of 25, 10 and 25 minutes respectively during the journey. How many hours did he spend on the road?",
+            "original_solution": "8:00 PM is equivalent to 20:00 hrs so he spent a total of 20-7 = 13 hours on the journey\nHe spent 25+10+25 = 60 minutes on stops\nThere are 60 minutes in an hour so he spent (60/60) = 1 hour on stops\nTherefore, he spent 13-1 = 12 hours on the road.\n#### 12",
+            "original_answer": 12.0,
+            "transformed_solution": "8:00 PM is equivalent to 20:00 hrs so he spent a total of 20-7 = 13 hours on the journey\nHe spent 25+10+25 = 60 minutes on stops\nThere are 50 minutes in an hour so he spent (60/50) = 1.2 hours on stops\nTherefore, he spent 13-1.2 = 11.8 hours on the road.\n#### 11.8",
+            "transformed_answer": 11.8,
+            "wrong_step": 3,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly considered to have 50 minutes instead of 60 minutes, resulting in (60/60) = 1 hour in the original_solution becoming (60/50) = 1.2 hours in the transformed_solution. The incorrect conversion affects the subsequent related step 4, which changes from 13-1 = 12 hours to 13-1.2 = 11.8 hours on the road. It should be noted that you only need to consider one step of unit conversion error, and the previous steps 1 and 2 are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWilliam left Missouri by 7:00 AM and arrived at his hometown by 8:00 PM. He had 3 stops of 25, 10 and 25 minutes respectively during the journey. How many hours did he spend on the road?\n\n### Response:",
+        "output_str": "\nWilliam spent 5 hours on the road during his journey from Missouri to his hometown. This is calculated by adding up the time he spent at each stop (25 + 10 + 25 = 60 minutes) and subtracting the total time he spent at each stop from the total time he was on the road (8:00 PM - 7:00 AM = 12 hours).",
+        "extract_true_num": 12.0,
+        "extract_pred_num": 12.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "Christina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?",
+            "original_solution": "The first snake is 24 inches because there are 12 inches in a foot.\nThe snakes are 24+16+10= 50 inches long.\n#### 50",
+            "original_answer": 50.0,
+            "transformed_solution": "The first snake is 20 inches because there are 10 inches in a foot.\nThe snakes are 20+16+10= 46 inches long.\n#### 46",
+            "transformed_answer": 46.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 2 feet being converted to 20 inches instead of the correct 24 inches. This affects the calculation in step 2, where the total length of the snakes changes from 24+16+10= 50 inches to 20+16+10= 46 inches in the transformed_solution. The purpose is to illustrate the effect of an incorrect unit conversion on subsequent calculations, while prior steps and unrelated calculations in the original solution remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nChristina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?\n\n### Response:",
+        "output_str": "\nTo find the total length of Christina's snakes, we need to add the length of each snake.\n\n1 snake is 2 feet long, which is equal to 24 inches.\nAnother snake is 16 inches long.\nThe last snake is 10 inches long.\n\nAdding these lengths together, we get:\n24 + 16 + 10 = 50 inches.\n\nSo, all of Christina's snakes combined are 50 inches long.",
+        "extract_true_num": 50.0,
+        "extract_pred_num": 50.0,
+        "is_correct": true
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "Micah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?",
+            "original_solution": "There are 60 minutes in an hour.\nMicah can type 20 x 60 = 1200 words in an hour.\nIsaiah can type 40 x 60 = 2400 words in an hour.\nIsaiah can type 2400 - 1200 = 1200 words more than Micah in an hour.\n#### 1200",
+            "original_answer": 1200.0,
+            "transformed_solution": "There are 50 minutes in an hour.\nMicah can type 20 x 50 = 1000 words in an hour.\nIsaiah can type 40 x 50 = 2000 words in an hour.\nIsaiah can type 2000 - 1000 = 1000 words more than Micah in an hour.\n#### 1000",
+            "transformed_answer": 1000.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 20 x 60 and 40 x 60 in the original_solution being converted to 20 x 50 and 40 x 50 in the transformed_solution. This unit conversion error changes the number of words both Micah and Isaiah can type in an hour and the difference in the number of words Isaiah can type more than Micah. The step that follows to calculate the difference is also affected due to the change from the wrong unit conversion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMicah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?\n\n### Response:",
+        "output_str": "\nIsaiah can type 40 words per minute, which means he can type 40 x 60 = 2400 words in an hour. Micah can type 20 words per minute, which means he can type 20 x 60 = 1200 words in an hour. Therefore, Isaiah can type 2400 - 1200 = 1200 more words than Micah in an hour.",
+        "extract_true_num": 1200.0,
+        "extract_pred_num": 1200.0,
+        "is_correct": true
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "Christina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?",
+            "original_solution": "The first snake is 24 inches because there are 12 inches in a foot.\nThe snakes are 24+16+10= 50 inches long.\n#### 50",
+            "original_answer": 50.0,
+            "transformed_solution": "The first snake is 20 inches because there are 10 inches in a foot.\nThe snakes are 20+16+10= 46 inches long.\n#### 46",
+            "transformed_answer": 46.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of the correct 12 inches, resulting in 2 feet being equal to 20 inches instead of 24 inches in the original_solution. This affects the subsequent related step 2, which changes from 24 + 16 + 10 = 50 inches to 20 + 16 + 10 = 46 inches. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nChristina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?\n\n### Response:",
+        "output_str": "\nTo find the total length of Christina's snakes, we need to add the length of each snake.\n\n1 snake is 2 feet long, which is equal to 24 inches.\nAnother snake is 16 inches long.\nThe last snake is 10 inches long.\n\nAdding these lengths together, we get:\n24 + 16 + 10 = 50 inches.\n\nSo, all of Christina's snakes combined are 50 inches long.",
+        "extract_true_num": 50.0,
+        "extract_pred_num": 50.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "Haley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?",
+            "original_solution": "First convert Haley's shopping time to minutes: 2 hours * 60 minutes/hour = 120 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 120 minutes + 30 minutes + 90 minutes = 240 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 240 minutes = 8.333...%, which rounds down to 8%\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "First convert Haley's shopping time to minutes: 2 hours * 50 minutes/hour = 100 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 100 minutes + 30 minutes + 90 minutes = 220 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 220 minutes = 9.09...%, which rounds down to 9%\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 4, which changes from 120 minutes + 30 minutes + 90 minutes = 240 minutes to 100 minutes + 30 minutes + 90 minutes = 220 minutes. Step 5 changes from 20 minutes / 240 minutes = 8.333...% which rounds down to 8% to 20 minutes / 220 minutes = 9.09...%, which rounds down to 9%. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2, 3 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHaley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?\n\n### Response:",
+        "output_str": "\nHaley spent 20 minutes watching the comet out of a total time of 2 hours and 30 minutes (2.5 hours). To find the percentage of time spent watching the comet, divide the time spent watching the comet by the total time spent on all activities: 20 minutes / 2.5 hours = 8% (rounded to the nearest percent).",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "Haley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?",
+            "original_solution": "First convert Haley's shopping time to minutes: 2 hours * 60 minutes/hour = 120 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 120 minutes + 30 minutes + 90 minutes = 240 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 240 minutes = 8.333...%, which rounds down to 8%\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "First convert Haley's shopping time to minutes: 2 hours * 50 minutes/hour = 100 minutes\nThen convert Haley's setup time to minutes: .5 hours * 60 minutes/hour = 30 minutes\nThen find the total time she spends making a snack: 3 * 30 minutes = 90 minutes\nThen add the time she spends on each activity to find the total time: 100 minutes + 30 minutes + 90 minutes = 220 minutes\nThen divide the time she spends watching the comet by the total time and multiply by 100% to express the answer as a percentage: 20 minutes / 220 minutes = 9.0909...%, which rounds up to 9%\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes an incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 4, which changes from 120 minutes + 30 minutes + 90 minutes = 240 minutes to 100 minutes + 30 minutes + 90 minutes = 220 minutes. The calculation in step 5 also changes the result from an 8.333...% rounded down to 8% to 9.0909...% rounded up to 9%. It should be noted that you only need to consider one step of unit conversion error, and the unit conversion of step 2 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHaley is getting ready to watch a comet fly over her house. She spends two hours shopping for a telescope, half an hour getting everything set up in the backyard, three times the setup time making snacks, and 20 minutes watching the comet. What percentage of the total time she spent on all those activities was spent watching the comet, rounded to the nearest percent?\n\n### Response:",
+        "output_str": "\nHaley spent 20 minutes watching the comet out of a total time of 2 hours and 30 minutes (2.5 hours). To find the percentage of time spent watching the comet, divide the time spent watching the comet by the total time spent on all activities: 20 minutes / 2.5 hours = 8% (rounded to the nearest percent).",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 88,
+        "gsm8k_data": {
+            "question": "Manex is a tour bus driver. He has to drive 55 miles to the destination and drive going back to the starting point on a different way that is 10 miles farther. If he can drive 1 mile for 2 minutes and stayed 2 hours at the destination, how long will it take the bus driver to do the entire tour in hours?",
+            "original_solution": "The bus traveled 55 + 10 = 65 miles going back to the starting point.\nSo, the bus traveled a total of 55 + 65 = 120 miles.\nIt took 120 x 2 = 240 minutes to travel.\nSince there are 60 minutes in 1 hour, then the bus traveled for 240/60 = 4 hours.\nTherefore, the entire tour took 4 + 2 = 6 hours.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "The bus traveled 55 + 10 = 65 miles going back to the starting point.\nSo, the bus traveled a total of 55 + 65 = 120 miles.\nIt took 120 x 2 = 240 minutes to travel.\nSince there are 50 minutes in 1 hour, then the bus traveled for 240/50 = 4.8 hours.\nTherefore, the entire tour took 4.8 + 2 = 6.8 hours.\n#### 6.8",
+            "transformed_answer": 6.8,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 240/60 = 4 hours in the original_solution becoming 240/50 = 4.8 hours in the transformed_solution. And it affects the subsequent related step 5, which changes from 4 + 2 = 6 hours to 4.8 + 2 = 6.8 hours. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nManex is a tour bus driver. He has to drive 55 miles to the destination and drive going back to the starting point on a different way that is 10 miles farther. If he can drive 1 mile for 2 minutes and stayed 2 hours at the destination, how long will it take the bus driver to do the entire tour in hours?\n\n### Response:",
+        "output_str": "\nTo determine how long it will take Manex to complete the entire tour, we need to calculate the time it will take him to drive to the destination and back.\n\nSince Manex can drive 1 mile for 2 minutes, he can cover 2 miles in 4 minutes (1 mile/2 minutes = 0.5 miles/minute x 4 minutes = 2 miles). Therefore, it will take him 2 hours to drive 55 miles to the destination, since he can cover 25 miles in 2 hours (55 miles / 2 hours = 25 miles/hour).\n\nTo calculate the time it will take him to drive back, we need to know the distance he will be driving. Since he will be driving 10 miles farther than he drove to the destination, the distance he will be driving back is 65 miles (55 miles to the destination + 10 miles farther = 65 miles).\n\nSince Manex can drive 1 mile for 2 minutes, he can cover 6.5 miles in 4 minutes (65 miles / 4 minutes = 6.5 miles/minute). Therefore, it will take him 4 hours to drive back (6.5 miles/minute x 4 minutes = 26 miles/hour).\n\nTo calculate the total time it will take Manex to complete the entire tour, we need to add the time it will take him to drive to the destination and back:\n\nTotal time = Time to drive to destination + Time to drive back\n= 2 hours + 4 hours\n= 6 hours\n\nTherefore, it will take Manex 6 hours to complete the entire tour.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "Micah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?",
+            "original_solution": "There are 60 minutes in an hour.\nMicah can type 20 x 60 = 1200 words in an hour.\nIsaiah can type 40 x 60 = 2400 words in an hour.\nIsaiah can type 2400 - 1200 = 1200 words more than Micah in an hour.\n#### 1200",
+            "original_answer": 1200,
+            "transformed_solution": "There are 50 minutes in an hour.\nMicah can type 20 x 50 = 1000 words in an hour.\nIsaiah can type 40 x 50 = 2000 words in an hour.\nIsaiah can type 2000 - 1000 = 1000 words more than Micah in an hour.\n#### 1000",
+            "transformed_answer": 1000,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes an incorrect unit conversion, wrongly stating that there are 50 minutes in an hour instead of 60. This causes the subsequent calculations to use 50 as the multiplier instead of 60. Consequently, Micah's and Isaiah's typing amounts in an hour is calculated with 50 minutes (20 x 50 and 40 x 50), which are 1000 and 2000 words respectively. The final comparison also reflects this change, resulting in Isaiah typing 1000 words more than Micah instead of 1200 with the correct time conversion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMicah can type 20 words per minute and Isaiah can type 40 words per minute. How many more words can Isaiah type than Micah in an hour?\n\n### Response:",
+        "output_str": "\nIsaiah can type 40 words per minute, which means he can type 40 x 60 = 2400 words in an hour. Micah can type 20 words per minute, which means he can type 20 x 60 = 1200 words in an hour. Therefore, Isaiah can type 2400 - 1200 = 1200 more words than Micah in an hour.",
+        "extract_true_num": 1200,
+        "extract_pred_num": 1200.0,
+        "is_correct": true
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "question": "If 853845 bars of chocolate need to be placed in little boxes and each box can contain at most 9 bars of chocolate, how many bars of chocolate will be in the last unfilled box?",
+        "original_solution": "The number of bars of chocolate in the last unfilled box is the remainder after dividing 853845 by 9.\nSo, the number of bars of chocolate in the last unfilled box is 6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "To find the number of bars in the last box, calculate 853845 modulo 9.\n853845 modulo 9 equals 6.\n#### 6",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 which describes the process is removed. Instead, step 1 directly calculates the modulo operation (which is the remainder of 853845 divided by 9). However, an intentional calculation error is introduced in step 2 where the result should remain as 6 which is the actual remainder of 853845 divided by 9, but it is inaccurately changed to 5. The wrong_step is 2 since that's where the incorrect number is first introduced in the transformed_solution. The wrong_type is 'calculation_error' because the changed answer is the result of such an error. The error is a single error within the process.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is calculation_error, and the explanation is that the first wrong step is step 2. Step 2 calculates the number of bars in the last box as 853845 modulo 9, which is 6, but only 6 is the number of bars that can be placed in one box, not the number of bars in the last unfilled box. Therefore, it belongs to calculation_error."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is calculation_error, and the explanation is that the first wrong step is step 6. The operands and operators of the formula in step 6 are completely correct, but only the result is incorrectly calculated as 10 instead of 10.5, so it belongs to calculation_error."
+    },
+    {
+        "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+        "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is missing_step, and the explanation is that the first wrong step is step 4. Step 4 does not convert the total number of fish from 10 + 12 = 22 into a single number, but directly adds up the number of fish Lilly and Rosy have separately, which only results in an operand error in the formula, so it belongs to missing_step."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is calculation_error, and the explanation is that the first wrong step is step 2. Step 2 calculates the number of small boxes as 15, but only counts the number of small boxes, not the number of chocolate bars in each small box, so it belongs to calculation_error."
+    },
+    {
+        "question": "a and b finish the job in 15 days. while a, b and c can finish it in 3 days. c alone will finish the job in",
+        "original_solution": "a and b finish 1/15 of the job in 1 day\na, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 5/15 - 1/15 = 4/15 of the job in 1 day\nc alone will finish the job in 15/4 = 3.75 days\n#### 3.75",
+        "original_answer": 3.75,
+        "transformed_solution": "a, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 2/15 of the job in 1 day\nc alone will finish the job in 15/2 = 7.5 days\n#### 7.5",
+        "transformed_answer": 7.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution has been removed, assuming that it referenced directly from the question that a and b together finish the job in 15 days. After deleting the first step, the immediate next step becomes step 1 (previously step 2) and references directly the efficiency of a and b from the question. However, a mistake occurred in the calculation in the new step 2 (previously step 3) where 1/3 - 1/15 was incorrectly simplified as 2/15 instead of 4/15. This is an intentional calculation error. The final step is then adjusted to reflect this error, with the number of days c needs to finish the job alone being recalculated to 15/2 days, which results in a transformed answer of 7.5 days. The first step in the transformed solution that references the result of the deleted step is step 2, so the wrong_step is 2.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is calculation_error, and the explanation is that the first wrong step is step 3. The operands and operators of the formula in step 3 are completely correct, but only the result is incorrectly calculated as 7.5 instead of 15/2, so it belongs to calculation_error."
+    },
+    {
+        "question": "Two trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?",
+        "original_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)\nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (500/18) = (340 * 18) / 500 = 12.24 seconds\n#### 12.24",
+        "original_answer": 12.24,
+        "transformed_solution": "Relative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (500/18) = (340 * 18) / 500 = 11.544 seconds\n#### 11.544",
+        "transformed_answer": 11.544,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. Since step 1 included the expression “Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)” which is the overall formula for calculating time, removing it does not impact the calculation itself. Since this is a simple process and there is no other intermediate step that references the result from step 1, the only change is in the calculation on step 3 due to a math error introduced when computing 340 * 18 / 500, incorrectly generating a different answer, 11.544 seconds. The wrong_step is 3 as this is the first occurrence where an error is introduced in the process of altering the original solution. The process of alteration was to skip the general formula which was described in step 1, and proceed directly to calculating the specific values needed for this problem.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is calculation_error, and the explanation is that the first wrong step is step 4. Step 4 calculates the relative speed as (60 + 40) km/hr = 100 km/hr, which is incorrect because the sum of the speeds is 100 km/hr, not 100 km/hr. Therefore, the result of step 4 is overestimated by 100 km/hr, which belongs to calculation_error."
+    }
+]

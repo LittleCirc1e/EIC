@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+        "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 22, and the explanation is that the first erroneous step is step 2, which directly adds up the number of fish that Lilly and Rosy have without considering the total number of fish they have. There is a necessary step missing here to add the number of fish that Lilly and Rosy have, which is 10 + 12 = 22. This also affects the subsequent step 3, where 12 is directly calculated as the total number of fish instead of 22. Therefore, the final incorrect result is obtained."
+    }
+]

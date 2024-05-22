@@ -1,0 +1,26 @@
+[
+    {
+        "question": "The volume of a cube is 3375 cc. Find its surface area.",
+        "original_solution": "To find the surface area of the cube, we first need to find the length of each side. The formula for the volume of a cube is V = s^3, where s is the length of a side. So to find s, we take the cube root of the volume: s = 3375^(1/3) = 15.\nNow that we know the length of each side is 15, we can use the formula for the surface area of a cube: SA = 6s^2. Plugging in our value of s, we get SA = 6*15^2 = 6*225 = 1350 square units.\n#### 1350",
+        "original_answer": 1350.0,
+        "transformed_solution": "To find the surface area of the cube, we first need to find the length of each side. The formula for the volume of a cube is V = s^3, where s is the length of a side. So to find s, we take the cube root of the volume: s = 3375^(1/3) = 15.\nNow that we know the length of each side is 15, we can find the perimeter of one face of the cube: P = 4s. Plugging in our value of s, we get P = 4*15 = 60 units.\n",
+        "transformed_answer": 720.0,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 2 mistakenly uses the formula for finding the perimeter of one face of the cube instead of the surface area. The original step uses the correct formula SA = 6s^2, where s is the side length of the cube. The transformed step incorrectly calculates the perimeter P = 4s and mistakenly multiplies this by 12, which would imply the total edge length instead of the surface area. This results in an incorrect answer and a confusing formula error, as the formula for perimeter is being applied rather than the area.",
+        "eval_result": "The solution is incorrect, the correct answer is 60, and the explanation is 15.The answer is: 15"
+    },
+    {
+        "question": "A volume of 10976 l water is in a container of sphere. How many hemisphere of volume 4 l each will be required to transfer all the water into the small hemispheres?",
+        "original_solution": "First, we need to find the radius of the large sphere using the formula V = (4/3) * pi * r^3\nTherefore, r = (3V / (4pi))^(1/3) = (3*10976 / (4*3.14))^(1/3)\nAfter calculation, we find r = 22 feet\nNext, we find the volume of a hemisphere using the formula V = (2/3) * pi * r^3\nV = (2/3) * 3.14 * 22^3 = (2/3) * 3.14 * 10648\nEach hemisphere has a volume of 707.72 l\nTherefore, the number of hemisphere required is 10976 / 4 = 2744\n#### 2744",
+        "original_answer": 2744.0,
+        "transformed_solution": "First, we need to find the radius of the large sphere using the formula V = (4/3) * pi * r^3\nTherefore, r = (3V / (4pi))^(1/3) = (3*10976 / (4*3.14))^(1/3)\nAfter calculation, we find r = 22 feet\nNext, we find the volume of a hemisphere using the formula V = 4 * pi * r^2\n",
+        "transformed_answer": 6075.36,
+        "wrong_step": 4,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 confuses the volume and surface area of a hemisphere. The question requires that the volume of the hemisphere to be solved be equal to (2/3) * pi * r^3, rather than 4 * pi * r^2, which is equivalent to the surface area of a sphere, resulting in V = (2/3) * pi * r^3 in the original_solution becoming V = 4 * pi * r^2 in the transformed_solution. This leads to subsequent step 5 calculating the number of hemispheres required still using the original volume of 4 l for each hemisphere, although the calculated volume of a hemisphere has changed in step 4. As a result, the final answer changes, and the language descriptions remain unchanged. Only step 4 is using the wrong formula, while other steps maintain the correct calculations as per instructions.",
+        "eval_result": "The solution is incorrect, and the correct answer is 1.\nThe volume of the large sphere is 10976 l.\nTo transfer all the water into the small hemispheres, we need to divide the volume of the large sphere by the volume of each small hemisphere.\nThe volume of each small hemisphere is 4 l.\nTherefore, the number of small hemispheres required is 10976 l / 4 l = 2741.\nHowever, we are given that the correct answer is 1.\nThis means that the solution is incorrect and there is no value of x that satisfies the given conditions.\nTherefore, the value of the unknown variable x is undefined.The answer is: 1"
+    }
+]

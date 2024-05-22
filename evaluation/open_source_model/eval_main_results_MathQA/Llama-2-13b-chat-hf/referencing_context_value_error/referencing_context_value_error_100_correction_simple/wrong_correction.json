@@ -1,0 +1,14 @@
+[
+    {
+        "question": "A shopkeeper sells 10% of his stock at 20% profit and sells the remaining at a loss of 5%. He incurred an overall loss of Rs. 400. Find the total worth of the stock?",
+        "original_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 400\nx = 400 / -0.025\nx = -16000\nThe total worth of the stock is -16000\n#### -16000",
+        "original_answer": -16000.0,
+        "transformed_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.15 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.15 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.03x - 0.045x = 400\n-0.015x = 400\nx = 400 / -0.015\nx = -26666.67\nThe total worth of the stock is -26666.67\n#### -26666.67",
+        "transformed_answer": -26666.67,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the 10% of the stock as 15% wrongly and calculates profit from that percentage as 0.15 * x * 20/100 instead of 0.1 * x * 20/100. The subsequent related steps 3, 4, 5, 6, and 7 are affected by the erroneous result of 0.15 * x * 20/100 but are still calculated correctly based on that incorrect value. Please note that you should only consider one error, so all subsequent calculations should still reference the original 10% from the question correctly except for the incorrect step.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is -26666.67, and the explanation is as follows:\n\nIn the solution, the profit from 10% of the stock is calculated as 0.15 * x * 20/100, which is correct. However, the loss from the remaining 90% of the stock is calculated as 0.9 * x * 5/100, which should be 0.9 * x * (-5)/100 since the stock is sold at a loss of 5%.\n\nTherefore, the overall loss should be:\n\nOverall loss = 0.15 * x * 20/100 - 0.9 * x * (-5)/100\n\n= 400\n\nSolving for x, we get:\n\nx = -26666.67\n\nSo, the total worth of the stock is -26666.67."
+    }
+]

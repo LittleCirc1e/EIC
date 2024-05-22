@@ -1,0 +1,38 @@
+[
+    {
+        "question": "What is x if x + 2 y = 20 and y = 5 ?",
+        "original_solution": "2y = 10\nx = 20 - 10 = 10\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "2y = 10\nx = 20 - 8 = 12\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references the correct value of 2y as 8 instead of 10 from step 1, incorrectly changing the equation from x = 20 - 10 = 10 to x = 20 - 8 = 12. It should be noted that step 1 in the transformed_solution <2y = 10> should be the same as step 1 in the original_solution <2y = 10> and calculates its result 10 correctly. The error is only in step 2, where a different value is substituted for 2y. Since only one step error is considered, all other calculations remain correct based on the erroneous step 2 reference, making the transformed_answer different from the original_answer.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 2 first erroneously references the result 8 instead of 10 from step 1, resulting in the calculation of 10 - 8 = 2 instead of 10 - 10 = 0. This affects the calculation of 2 / 2 = 1 instead of 0 / 2 = 0 in step 3, resulting in an error in the final result.\n\nTherefore, the correct answer is 10, and the explanation is that step 2 first erroneously references the result 8 instead of 10 from step 1, resulting in the calculation of 10 - 8 = 2 instead of 10 - 10 = 0."
+    },
+    {
+        "question": "the present ages of abi and suji are in the ratio of 5:4 respectively. 3 years hence, the ratio of their ages will become 11:9 respectively. what is suji's present age in years?",
+        "original_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 24 years.\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 30 years.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references the value of x as 6 from step 4 and changes 4x = 4 * 6 to equal 30 instead of the correct 24. It should be noted that step 4 in the transformed_solution <Solving the above equation, we get x = 6.> should be the same as the step 4 in the original_solution <Solving the above equation, we get x = 6.> and calculates its result 6 correctly. The error in step 5 is the only one to consider, and it changes 4 * 6 = 24 to 4 * 6 = 30, resulting in an incorrect transformed answer. All other steps that reference the result number still reference this number correctly and are thereby calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 24, and the explanation is that step 4 first erroneously references the result 5x + 3 instead of 4x + 3 from step 3, resulting in the calculation of 5x + 3 / 4x + 3 = 11/9 instead of 4x + 3 / 4x + 3 = 1/3. This affects the calculation of 5x + 3 / 4x + 3 = 11/9 instead of 4x + 3 / 4x + 3 = 1/3 in step 5, resulting in an error in the final result.\n\nTherefore, the correct answer is 24, and the explanation is that step 4 first erroneously references the result 5x + 3 instead of 4x + 3 from step 3, resulting in the calculation of 5x + 3 / 4x + 3 = 11/9 instead of 4x + 3 / 4x + 3 = 1/3. This affects the calculation of 5x + 3 / 4x + 3 = 11/9 instead of 4x + 3 / 4x + 3 = 1/3 in step 5, resulting in an error in the final result."
+    },
+    {
+        "question": "the distance from city a to city b is 60 miles . while driving from city a to city b , bob drives at a constant speed of 40 miles per hour . alice leaves city a 30 minutes after bob . what is the minimum constant speed in miles per hour that alice must exceed in order to arrive in city b before bob ?",
+        "original_solution": "The time it takes for Bob to travel from city a to city b is 60 / 40 = 1.5 hours.\nAlice leaves 30 / 60 = 0.5 hours after Bob, so she needs to arrive in less than 1 hour in order to beat Bob.\nTo arrive in 1 hour, Alice needs to drive at a minimum speed of 60 miles / 1 hour = 60 miles per hour.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "The time it takes for Bob to travel from city a to city b is 60 / 40 = 1.5 hours.\nAlice leaves 30 / 60 = 0.5 hours after Bob, so she needs to arrive in less than 1 hour in order to beat Bob.\nTo arrive in 1 hour, Alice needs to drive at a minimum speed of 60 miles / 0.9 hours = 66.7 miles per hour.\n#### 66.7",
+        "transformed_answer": 66.7,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 1 as 0.9 from step 2 and changes 60 miles / 1 hour = 60 miles per hour to 60 miles / 0.9 hours = 66.7 miles per hour. It should be noted that step 2 in the transformed_solution <Alice leaves 30 / 60 = 0.5 hours after Bob, so she needs to arrive in less than 1 hour in order to beat Bob.> should be the same as the step 2 in the original_solution <Alice leaves 30 / 60 = 0.5 hours after Bob, so she needs to arrive in less than 1 hour in order to beat Bob.> and calculates its result 0.5 hours correctly. The incorrect referencing at step 3 directly affects the transformed_answer, but does not affect the calculations of any other steps. You need to only consider one error of referencing, so the calculation of all other steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 60, and the explanation is that step 3 first erroneously references the result 0.5 instead of 0.9 from step 2, resulting in the calculation of 0.5 x 60 = 30 instead of 0.9 x 60 = 54. This affects the calculation of 30 / 40 = 0.75 instead of 54 / 40 = 1.375 in step 4, resulting in an error in the final result."
+    }
+]

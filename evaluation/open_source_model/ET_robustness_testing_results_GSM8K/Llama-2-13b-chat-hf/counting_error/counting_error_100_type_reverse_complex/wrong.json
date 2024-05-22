@@ -1,0 +1,98 @@
+[
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 1 day, he spends 4 hours / 1 = 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 4, the original_solution's even split of remaining hours over 2 days (Saturday and Sunday) has been erroneously changed to be split over 1 day in the transformed_solution, thereby changing 4 hours / 2 = 2 to 4 hours / 1 = 4 for study time on Saturday. This counting error results in a transformed_answer that is different from the original_answer, while the other calculation steps in the transformed_solution remain unaffected by this change.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 confuses the perimeter and area formulas of rectangle and it should calculate the area of the rectangle which is equal to the length multiplied by width, rather than the length plus length plus width plus width, equivalent to the perimeter of the rectangle. So it belongs to confusing_formula_error."
+    },
+    {
+        "question": "Jason sent 220 text messages on Monday, half as many text messages on Tuesday, and 50 text messages each day Wednesday through Friday. How many text messages did he send on average during those five days?",
+        "original_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 3 days = 150 messages\nThen add up all the messages he sent to find the total: 110 messages + 150 messages + 220 messages = 480 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 480 messages / 5 days = 96 messages/day\n#### 96",
+        "original_answer": 96,
+        "transformed_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 2 days = 100 messages\nThen add up all the messages he sent to find the total: 110 messages + 100 messages + 220 messages = 430 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 430 messages / 5 days = 86 messages/day\n#### 86",
+        "transformed_answer": 86,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 in the original solution incorrectly counts the days from Wednesday to Friday as 2 days instead of 3 days, it should be 50 messages/day * 3 days = 150 messages but was changed to 50 messages/day * 2 days = 100 messages in the transformed_solution. This error impacts the addition in step 3, changing 110 messages + 150 messages + 220 messages = 480 messages to 110 messages + 100 messages + 220 messages = 430 messages. Subsequently, it impacts the division in step 4, altering the division from 480 messages / 5 days = 96 messages/day to 430 messages / 5 days = 86 messages/day. It should be noted that only one step, which is the counting of days from Wednesday to Friday, contains the counting error, and the previous and unrelated steps were not affected.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly divides the number of text messages sent on Monday by 2 instead of half, resulting in an error in the operand of the formula. Therefore, the correct answer is 86 messages per day."
+    },
+    {
+        "question": "Jason sent 220 text messages on Monday, half as many text messages on Tuesday, and 50 text messages each day Wednesday through Friday. How many text messages did he send on average during those five days?",
+        "original_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 3 days = 150 messages\nThen add up all the messages he sent to find the total: 110 messages + 150 messages + 220 messages = 480 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 480 messages / 5 days = 96 messages/day\n#### 96",
+        "original_answer": 96.0,
+        "transformed_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 2 days = 100 messages\nThen add up all the messages he sent to find the total: 110 messages + 100 messages + 220 messages = 430 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 430 messages / 5 days = 86 messages/day\n#### 86",
+        "transformed_answer": 86.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts Wednesday to Friday as 2 days instead of 3 days, resulting in 50 messages/day * 3 days = 150 messages becoming 50 messages/day * 2 days = 100 messages. And it affects the subsequent related steps, step 3 changes from 110 messages + 150 messages + 220 messages = 480 messages to 110 messages + 100 messages + 220 messages = 430 messages, and step 4 changes from 480 messages / 5 days = 96 messages/day to 430 messages / 5 days = 86 messages/day. It should be noted that you only need to consider one step of counting error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly divides the number of text messages sent on Monday by 2 instead of half, resulting in an error in the operand of the formula. Therefore, the correct answer is 86 messages per day."
+    },
+    {
+        "question": "Jason sent 220 text messages on Monday, half as many text messages on Tuesday, and 50 text messages each day Wednesday through Friday. How many text messages did he send on average during those five days?",
+        "original_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 3 days = 150 messages\nThen add up all the messages he sent to find the total: 110 messages + 150 messages + 220 messages = 480 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 480 messages / 5 days = 96 messages/day\n#### 96",
+        "original_answer": 96.0,
+        "transformed_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 2 days = 100 messages\nThen add up all the messages he sent to find the total: 110 messages + 100 messages + 220 messages = 430 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 430 messages / 5 days = 86 messages/day\n#### 86",
+        "transformed_answer": 86.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In this case, step 2 of the original_solution erroneously counts Wednesday through Friday as 2 days instead of 3 days in the transformed_solution. This changes the calculation from 50 messages/day * 3 days = 150 messages to 50 messages/day * 2 days = 100 messages. This counting error affects the sum in step 3, adjusting the total number of messages from 480 to 430. The final step divides 430 messages by the correct count of 5 days, yielding an average of 86 messages/day in contrast to the original average of 96 messages/day.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly divides the number of text messages sent on Monday by 2 instead of half, resulting in an error in the operand of the formula. Therefore, the correct answer is 86 messages per day."
+    },
+    {
+        "question": "A driver travels 30 miles per hour for 3 hours and 25 miles per hour for 4 hours to deliver goods to a town every day from Monday to Saturday. How many miles does the driver travel in a week?",
+        "original_solution": "The driver travels (3 hours * 30 mph) + (25 mph * 4 hours) = 190 miles per day\nFrom Monday to Saturday he travels in total 190 miles/day * 6 days = 1,140 miles in a week\n#### 1140",
+        "original_answer": 1140,
+        "transformed_solution": "The driver travels (3 hours * 30 mph) + (25 mph * 4 hours) = 190 miles per day\nFrom Monday to Saturday he travels in total 190 miles/day * 5 days = 950 miles in a week\n#### 950",
+        "transformed_answer": 950,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts Monday to Saturday as 5 days instead of 6 days, which changes the original multiplication of 190 miles/day * 6 days to 190 miles/day * 5 days. The counting error affects the subsequent calculation and the final answer, changing it from 1,140 miles to 950 miles. It should be noted that only the counting error is introduced in the transformed_solution affecting one step, and the rest of the steps involving calculations are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly performs an incorrect unit conversion and assumes that one hour has 50 minutes instead of 60 minutes, which only results in an error in one operand in the formula, thus it belongs to unit_conversion_error."
+    },
+    {
+        "question": "Jason sent 220 text messages on Monday, half as many text messages on Tuesday, and 50 text messages each day Wednesday through Friday. How many text messages did he send on average during those five days?",
+        "original_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 3 days = 150 messages\nThen add up all the messages he sent to find the total: 110 messages + 150 messages + 220 messages = 480 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 480 messages / 5 days = 96 messages/day\n#### 96",
+        "original_answer": 96,
+        "transformed_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 2 days = 100 messages\nThen add up all the messages he sent to find the total: 110 messages + 100 messages + 220 messages = 430 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 430 messages / 5 days = 86 messages/day\n#### 86",
+        "transformed_answer": 86,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts Wednesday to Friday as 2 days instead of 3 days, resulting in 50 messages/day * 3 days = 150 messages becoming 50 messages/day * 2 days = 100 messages. And it affects the subsequent related steps, step 3 changes from 110 messages + 150 messages + 220 messages = 480 messages to 110 messages + 100 messages + 220 messages = 430 messages, and step 4 changes from 480 messages / 5 days = 96 messages/day to 430 messages / 5 days = 86 messages/day. It should be noted that you only need to consider one step of counting error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly divides the number of text messages sent on Monday by 2 instead of half, resulting in an error in the operand of the formula. Therefore, the correct answer is 86 messages per day."
+    },
+    {
+        "question": "A driver travels 30 miles per hour for 3 hours and 25 miles per hour for 4 hours to deliver goods to a town every day from Monday to Saturday. How many miles does the driver travel in a week?",
+        "original_solution": "The driver travels (3 hours * 30 mph) + (25 mph * 4 hours) = 190 miles per day\nFrom Monday to Saturday he travels in total 190 miles/day * 6 days = 1,140 miles in a week\n#### 1140",
+        "original_answer": 1140.0,
+        "transformed_solution": "The driver travels (3 hours * 30 mph) + (25 mph * 4 hours) = 190 miles per day\nFrom Monday to Saturday he travels in total 190 miles/day * 5 days = 950 miles in a week\n#### 950",
+        "transformed_answer": 950.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the error is introduced in step 2 by counting Monday to Saturday as 5 days instead of 6 days, thereby affecting the final computed total distance covered in a week. The 190 miles/day is erroneously multiplied by 5 days to get 950 miles instead of the correct value of 1,140 miles from the original solution. The mistake doesn't affect the previous step of calculating the daily miles or unrelated steps.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly performs an incorrect unit conversion and assumes that one hour has 50 minutes instead of 60 minutes, which only results in an error in one operand in the formula, thus it belongs to unit_conversion_error."
+    },
+    {
+        "question": "Jason sent 220 text messages on Monday, half as many text messages on Tuesday, and 50 text messages each day Wednesday through Friday. How many text messages did he send on average during those five days?",
+        "original_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 3 days = 150 messages\nThen add up all the messages he sent to find the total: 110 messages + 150 messages + 220 messages = 480 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 480 messages / 5 days = 96 messages/day\n#### 96",
+        "original_answer": 96,
+        "transformed_solution": "First find how many text messages he sent on Tuesday: 220 messages / 2 = 110 messages\nThen find how many text messages he sent Wednesday-Friday: 50 messages/day * 2 days = 100 messages\nThen add up all the messages he sent to find the total: 110 messages + 100 messages + 220 messages = 430 messages\nThen divide that number by the number of days to find the average number of messages he sent per day: 430 messages / 5 days = 86 messages/day\n#### 86",
+        "transformed_answer": 86,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 incorrectly counts Wednesday through Friday as 2 days instead of 3 days to find the number of messages sent on those days (changing from '50 messages/day * 3 days = 150 messages' to '50 messages/day * 2 days = 100 messages'), which also affects the total messages count in step 3 (from 480 to 430 messages) and the calculated average number of messages in step 4 (from 96 messages/day to 86 messages/day). It is ensured that only the counting error is introduced and the division calculation is performed correctly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly divides the number of text messages sent on Monday by 2 instead of half, resulting in an error in the operand of the formula. Therefore, the correct answer is 86 messages per day."
+    }
+]

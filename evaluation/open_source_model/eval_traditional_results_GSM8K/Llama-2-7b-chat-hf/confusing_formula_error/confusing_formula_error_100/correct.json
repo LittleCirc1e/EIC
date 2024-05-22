@@ -1,0 +1,135 @@
+[
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "Nancy replaced all of the old vinyl tiles in her bathroom with new hardwood flooring.  She replaced flooring in two areas of the bathroom: a 10 foot by 10 foot central area, and a 6 foot by 4 foot hallway.  How many square feet of hardwood flooring did Nancy install in her bathroom?",
+            "original_solution": "10 feet by 10 feet central area is 10*10=100 square feet of space.\n6 feet by 4 feet hallway is 4*6=24 square feet of space.\nCombined, the two areas where she replaced flooring contain 100+24=124 square feet of space.\n#### 124",
+            "original_answer": 124.0,
+            "transformed_solution": "10 feet by 10 feet central area is 10+10+10+10=40 square feet of space.\n6 feet by 4 feet hallway is 4*6=24 square feet of space.\nCombined, the two areas where she replaced flooring contain 40+24=64 square feet of space.\n#### 64",
+            "transformed_answer": 64.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of square. The question requires that the area of the square to be solved be equal to side length multiplied by side length, rather than the side length added together four times, which is equivalent to the perimeter of the square, resulting in 10*10=100 square feet in the original_solution being changed to 10+10+10+10=40 square feet in the transformed_solution. This affects the subsequent step 3, changing from 100+24=124 square feet to 40+24=64 square feet. Note that the language description of step 1 < 10 feet by 10 feet central area is > in the original_solution remains unchanged in the transformed_solution. Also, only step 1 mistakenly uses the formula of square area, while step 2 correctly uses the formula of rectangular area, and other steps are correctly calculated based on the modified step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nNancy replaced all of the old vinyl tiles in her bathroom with new hardwood flooring.  She replaced flooring in two areas of the bathroom: a 10 foot by 10 foot central area, and a 6 foot by 4 foot hallway.  How many square feet of hardwood flooring did Nancy install in her bathroom?\n\n### Response:",
+        "output_str": "\nTo determine the total square footage of hardwood flooring Nancy installed in her bathroom, we need to calculate the area of each area she replaced. The central area is 10 feet by 10 feet, which equals 100 square feet. The hallway is 6 feet by 4 feet, which equals 24 square feet. Therefore, Nancy installed 100 + 24 = 124 square feet of hardwood flooring in her bathroom.",
+        "extract_true_num": 124.0,
+        "extract_pred_num": 124.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + width + length + width which is 120 + 120 + 120 + 120 = 480 square inches.\n#### 480",
+            "transformed_answer": 480.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area of a square with its perimeter. The original solution properly calculates the area by using length * width. In the transformed solution, the formula for perimeter is mistakenly used instead, which is adding up all the sides of the square (length + width + length + width), leading to an incorrect calculation of 120 + 120 + 120 + 120 = 480 square inches for the room area. The first step of converting feet to inches is correct and therefore remains unchanged. The subsequent step is affected by the change in formula, while the initial step is not affected since it deals with unit conversion, not area calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room in feet by the width of the room in feet. Since there are 12 inches in a foot, we can convert the length and width of the room from feet to inches as follows:\n\nLength of room in inches = 10 feet x 12 inches/foot = 120 inches\nWidth of room in inches = 10 feet x 12 inches/foot = 120 inches\n\nNow, we can multiply the length and width of the room in inches to find the area of the room in square inches:\n\nArea of room in square inches = length x width = 120 inches x 120 inches = 14,400 square inches\n\nTherefore, the area of Blossom's room is 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + length + width + width which is 120 + 120 + 120 + 120 = 480 square inches.\n#### 480",
+            "transformed_answer": 480.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area and the perimeter of a square. The original question requires calculating the area by multiplying the length by the width, which in this case are the same since it is a square, resulting in 120 * 120 = 14400 square inches in the original_solution. The transformation changes the area calculation into a perimeter calculation by adding the length four times instead of multiplying the length by itself once, resulting in 120 + 120 + 120 + 120 = 480 square inches in the transformed_solution. This alters the area result without affecting the conversion from feet to inches in step 1. Note that the language description \"<Then use length * width>\" in the original_solution remains unchanged in the transformed_solution, which now incorrectly reflects the mathematical operation performed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room in feet by the width of the room in feet. Since there are 12 inches in a foot, we can convert the length and width of the room from feet to inches as follows:\n\nLength of room in inches = 10 feet x 12 inches/foot = 120 inches\nWidth of room in inches = 10 feet x 12 inches/foot = 120 inches\n\nNow, we can multiply the length and width of the room in inches to find the area of the room in square inches:\n\nArea of room in square inches = length x width = 120 inches x 120 inches = 14,400 square inches\n\nTherefore, the area of Blossom's room is 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the perimeter of the wall: 5 feet + 5 feet + 10 feet + 10 feet = 30 feet\nThen divide the area of the painting by the perimeter of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 30 feet * 100% = 26.67%\n#### 26.67",
+            "transformed_answer": 26.67,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the perimeter and area of the wall. The question requires that the area of the wall to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 5 feet * 10 feet = 50 square feet in the original_solution being changed to 5 feet + 5 feet + 10 feet + 10 feet = 30 feet in the transformed_solution. This affects the subsequent step 3, changing from dividing the area of the painting by the area of the wall to dividing the area of the painting by the perimeter of the wall. The rest of the steps, such as finding the area of the painting in step 1 and calculating the percentage in step 3, remain correct according to the problem's requirements. Note that the language description of step 2 < Then find the area of the wall: > in the original_solution remains unchanged in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nThe painting is 2 feet by 4 feet, which is equal to 8 square feet. The wall is 5 feet by 10 feet, which is equal to 50 square feet. Therefore, the painting takes up 8/50 or 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 80,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all sides, which is equivalent to the perimeter of the rectangle, resulting in 2 feet * 4 feet = 8 square feet in the original_solution becoming 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent calculation in step 3, which now changes from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 in the original_solution remains unchanged in the transformed_solution. It should be also noted that there is only one step of confusing formula error here, while the formulas for other steps remain correct. In this example, only step 1 mistakenly applies the formula for perimeter instead of area."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nThe painting is 2 feet by 4 feet, which is equal to 8 square feet. The wall is 5 feet by 10 feet, which is equal to 50 square feet. Therefore, the painting takes up 8/50 or 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "Hannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?",
+            "original_solution": "First find the area of the painting: 2 feet * 4 feet = 8 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 8 square feet / 50 square feet * 100% = 16%\n#### 16",
+            "original_answer": 16.0,
+            "transformed_solution": "First find the area of the painting: 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet\nThen find the area of the wall: 5 feet * 10 feet = 50 square feet\nThen divide the area of the painting by the area of the wall and multiply by 100% to express the answer as a percentage: 12 square feet / 50 square feet * 100% = 24%\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires the area of the rectangle to be solved, which is equal to the length multiplied by width. Instead, the transformed solution incorrectly calculates the perimeter by adding all sides, resulting in 2 feet * 4 feet = 8 square feet in the original_solution changing to 2 feet + 4 feet + 2 feet + 4 feet = 12 square feet in the transformed_solution. This affects the subsequent step 3, changing the calculation of the percentage of the wall covered from 8 square feet / 50 square feet * 100% = 16% to 12 square feet / 50 square feet * 100% = 24%. Note that the language description of step 1 < First find the area of the painting: > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only one step of confusing formula error is considered, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula for rectangular area, while the other steps correctly calculate the area of the wall and the percentage."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHannah hangs a 2 foot by 4 foot painting on a 5 foot by 10 foot wall. What percentage of the wall is taken up by the painting?\n\n### Response:",
+        "output_str": "\nThe painting is 2 feet by 4 feet, which is equal to 8 square feet. The wall is 5 feet by 10 feet, which is equal to 50 square feet. Therefore, the painting takes up 8/50 or 16% of the wall.",
+        "extract_true_num": 16.0,
+        "extract_pred_num": 16.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "There are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?",
+            "original_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length * width which is 120 * 120 = 14400 square inches.\n#### 14400",
+            "original_answer": 14400.0,
+            "transformed_solution": "First translate the feet to inches or 10 feet * 12 inches per foot = 120 inches.\nThen use length + width which is 120 + 120 = 240 square inches.\n#### 240",
+            "transformed_answer": 240.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the area calculation with the perimeter calculation for a square. The original solution correctly uses the formula for area by multiplying the length by the width. In the transformed solution, the formula is mistakenly changed to a perimeter calculation by adding the length and width, resulting in 120 * 120 = 14400 square inches in the original_solution becoming 120 + 120 = 240 square inches in the transformed_solution. This affects the transformed_answer while other steps remain correct and unaltered, maintaining the description language of step 2 without changing any words, consistent with the given directive that language descriptions should not be altered. The transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 12 inches to a foot. Blossom measures her room and finds that it is exactly 10 feet long in each direction. In square inches, what is the area of her room?\n\n### Response:",
+        "output_str": "\nTo find the area of Blossom's room in square inches, we need to multiply the length of the room in feet by the width of the room in feet. Since there are 12 inches in a foot, we can convert the length and width of the room from feet to inches as follows:\n\nLength of room in inches = 10 feet x 12 inches/foot = 120 inches\nWidth of room in inches = 10 feet x 12 inches/foot = 120 inches\n\nNow, we can multiply the length and width of the room in inches to find the area of the room in square inches:\n\nArea of room in square inches = length x width = 120 inches x 120 inches = 14,400 square inches\n\nTherefore, the area of Blossom's room is 14,400 square inches.",
+        "extract_true_num": 14400.0,
+        "extract_pred_num": 14400.0,
+        "is_correct": true
+    }
+]

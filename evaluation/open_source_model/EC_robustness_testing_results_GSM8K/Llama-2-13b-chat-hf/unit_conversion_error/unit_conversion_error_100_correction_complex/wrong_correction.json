@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Carson is going to spend 4 hours at a carnival. The wait for the roller coaster is 30 minutes, the wait for the tilt-a-whirl is 60 minutes, and the wait for the giant slide is 15 minutes. If Carson rides the roller coaster 4 times and the tilt-a-whirl once, how many times can he ride the giant slide? (Wait times include the time actually spent on the ride.)",
+        "original_solution": "First figure out how many minutes Carson spends at the carnival by multiplying the number of hours he's there by the number of minutes per hour: 4 hours * 60 minutes/hour = 240 minutes\nThen figure out how long Carson spends waiting for the roller coaster by multiplying the wait time per ride by the number of rides: 4 rides * 30 minutes/ride = 120 minutes\nNow subtract the time Carson spends on the roller coaster and tilt-a-whirl from the total time he spends at the park to find out how much time he has left: 240 minutes - 120 minutes - 60 minutes = 60 minutes\nNow divide the time Carson has left by the wait time for the giant slide to see how many times he can ride it: 60 minutes / 15 minutes/ride = 4 rides\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "First figure out how many minutes Carson spends at the carnival by multiplying the number of hours he's there by the number of minutes per hour: 4 hours * 50 minutes/hour = 200 minutes\nThen figure out how long Carson spends waiting for the roller coaster by multiplying the wait time per ride by the number of rides: 4 rides * 30 minutes/ride = 120 minutes\nNow subtract the time Carson spends on the roller coaster and tilt-a-whirl from the total time he spends at the park to find out how much time he has left: 200 minutes - 120 minutes - 60 minutes = 20 minutes\nNow divide the time Carson has left by the wait time for the giant slide to see how many times he can ride it: 20 minutes / 15 minutes/ride = 1.33 rides\n#### 1.33",
+        "transformed_answer": 1.33,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 4 hours * 60 minutes/hour = 240 minutes in the original_solution becoming 4 hours * 50 minutes/hour = 200 minutes in the transformed_solution. And it affects the subsequent related step 3 and 4. Step 3 changes from 240 minutes - 120 minutes - 60 minutes = 60 minutes to 200 minutes - 120 minutes - 60 minutes = 20 minutes. Step 4 changes from 60 minutes / 15 minutes/ride = 4 rides to 20 minutes / 15 minutes/ride = 1.33 rides. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion and calculation of the other steps are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 2, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 200-120-60=20 instead of 200-120-60=140. The subsequent step 5 references the result of step 4, calculating 20/15=1.33 instead of 140/15=9. The final incorrect answer is 1.33."
+    },
+    {
+        "question": "Malcolm brushes his teeth for 2 minutes after breakfast, lunch and dinner. After 30 days, how many hours does he spend brushing his teeth?",
+        "original_solution": "He brushes his teeth 3 times a day, after breakfast, lunch and dinner. He brushes for 2 minutes so that’s 3*2 = 6 minutes per day.\nHe brushes 6 minutes per day so after 30 days he has brushed 6*30 = 180 minutes\nThere are 60 minutes in 1 hour and he brushes for 180 minutes so that’s 180/60 = 3 hours\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He brushes his teeth 3 times a day, after breakfast, lunch and dinner. He brushes for 2 minutes so that’s 3*2 = 6 minutes per day.\nHe brushes 6 minutes per day so after 30 days he has brushed 6*30 = 180 minutes\nThere are 50 minutes in 1 hour and he brushes for 180 minutes so that’s 180/50 = 3.6 hours\n#### 3.6",
+        "transformed_answer": 3.6,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of the correct 60 minutes, resulting in 180/60 = 3 hours in the original_solution becoming 180/50 = 3.6 hours in the transformed_solution. The error affects only this specific unit conversion relating to the number of hours, without influencing the initial calculation of minutes spent brushing teeth each day and the total minutes over 30 days.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 36, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one hour has 50 minutes instead of 60 minutes, calculating 180/50 = 3.6 instead of 180/60 = 3.\n\nThe subsequent step 4 references the result of step 3, calculating 3.6 x 30 = 108 instead of 3 x 30 = 90.\n\nTherefore, the final incorrect answer is 108."
+    },
+    {
+        "question": "The running time of Beast of War: Armoured Command is 10 minutes longer than that of Alpha Epsilon, which is 30 minutes shorter than that of Millennium. If Millennium runs for 2 hours, what is the running time of Beast of War: Armoured Command in minutes?",
+        "original_solution": "One hour contains 60 minutes so 2 hours contain 60*2 = 120 minutes\nAlpha Epsilon's running time is 30 minutes less than that of Millennium (which runs for 120 minutes) hence 120-30 = 90 minutes\nBeast of War: Armoured Command runs for 10 minutes more than Alpha Epsilon hence 90+10 = 100 minutes\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "One hour contains 50 minutes so 2 hours contain 50*2 = 100 minutes\nAlpha Epsilon's running time is 30 minutes less than that of Millennium (which runs for 100 minutes) hence 100-30 = 70 minutes\nBeast of War: Armoured Command runs for 10 minutes more than Alpha Epsilon hence 70+10 = 80 minutes\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, which assumes 1 hour has 50 minutes instead of the correct 60 minutes, resulting in 2 hours being incorrectly converted to 100 minutes instead of the correct 120 minutes in the original solution. This error subsequently affects the related steps 2 and 3. Step 2 changes from 120-30 = 90 minutes to 100-30 = 70 minutes. Step 3 changes from 90+10 = 100 minutes to 70+10 = 80 minutes. The transformed answer is affected by this unit conversion error, resulting in an incorrect total running time for Beast of War: Armoured Command. Each subsequent step is altered due to the initial incorrect unit conversion, while any steps prior to the error remain unaffected.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 88 minutes, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one hour has 50 minutes instead of 60 minutes, calculating 2 hours contain 50*2 = 100 minutes instead of 2 hours contain 60*2 = 120 minutes. The subsequent step 5 references the result of step 2, calculating 100 - 30 = 70 minutes instead of 120 - 30 = 90 minutes. The subsequent step 6 references the result of step 5, calculating 70 + 10 = 80 minutes instead of 90 + 10 = 100 minutes. Therefore, the final incorrect answer is 80 minutes."
+    }
+]

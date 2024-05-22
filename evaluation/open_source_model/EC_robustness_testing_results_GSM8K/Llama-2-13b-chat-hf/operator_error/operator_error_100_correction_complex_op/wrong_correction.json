@@ -1,0 +1,86 @@
+[
+    {
+        "question": "There are 6 girls and 8 boys in the school play. If both parents of each kid attend the premiere, how many parents will be in the auditorium?",
+        "original_solution": "There are 6 + 8 = 14 kids in the school play.\nEach child has 2 parents attending the play and therefore there are 14 x 2 = 28 parents in the auditorium.\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "There are 6 / 8 = 0.75 kids in the school play.\nEach child has 2 parents attending the play and therefore there are 0.75 x 2 = 1.5 parents in the auditorium.\n#### 1.5",
+        "transformed_answer": 1.5,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition operator in step 1 to a division operator, altering the expression from 6 + 8 = 14 to 6 / 8 = 0.75. The correct calculation is then performed using the transformed expression, resulting in 0.75 kids in the play. This incorrect number of kids then affects the calculation in the subsequent step, changing the number of parents from 14 x 2 = 28 to 0.75 x 2 = 1.5. All other aspects of each step are correct except for the erroneous operator change in step 1.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12, and the explanation is that the operator in step 2 encounters an error, division should be used instead of multiplication. It miscalculates 6/8=0.75 instead of 6/8=1/2. This affects step 3. Step 3 incorrectly calculates 0.75x2=1.5 instead of 1/2x2=1. This leads to the final incorrect result.\n\nThe correct solution is:\nThere are 6 girls and 8 boys in the school play. If both parents of each kid attend the premiere, how many parents will be in the auditorium?\n\nAnswer: 6 x 2 + 8 x 2 = 12 + 16 = 28\n\nExplanation:\nThere are 6 girls and 8 boys in the school play, and each child has 2 parents attending the play. Therefore, the total number of parents attending the play is 6 x 2 + 8 x 2 = 12 + 16 = 28."
+    },
+    {
+        "question": "Willow’s daughter had a slumber party with 3 of her friends. For breakfast, they wanted pancakes. Willow’s pancake recipe makes 1 serving of 4 pancakes. Each of the girls wanted a serving and a half of pancakes. Willow’s son wanted 3 servings of pancakes. How many single pancakes will Willow make for the girls and her son?",
+        "original_solution": "The daughter and her 3 friends each want 1.5 servings of pancakes so that’s 4*1.5 = 6 servings of pancakes\nWillow’s son wants 3 servings of pancakes and the girls want 6 so that’s 3+6 = 9 servings of pancakes\nEach serving makes 4 pancakes and Willow needs to make 9 servings for a total of 4*9 = 36 pancakes\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "The daughter and her 3 friends each want 1.5 servings of pancakes so that’s 4*1.5 = 6 servings of pancakes\nWillow’s son wants 3 servings of pancakes and the girls want 6 so that’s 3-6 = -3 servings of pancakes\nEach serving makes 4 pancakes and Willow needs to make -3 servings for a total of 4*-3 = -12 pancakes\n#### -12",
+        "transformed_answer": -12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 2 into subtraction by changing + to -, making 3+6 become 3-6. The subsequent step 3 then inherits the incorrect result, changing the calculation from 4*9 to 4*-3. It should be noted that the wrong operator used in step 2 affects the result but its calculation is correct, leading to an incorrect result. This incorrect result then propagates to step 3, affecting the final number of pancakes, but again, the calculation step itself is performed correctly based on the incorrect value provided.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12, and the explanation is that the operator in step 3 encounters an error, division should be used instead of subtraction. It miscalculates 3-6= -3 instead of 3/6=12, resulting in the final erroneous result."
+    },
+    {
+        "question": "Ellen is on a diet. She eats two carrots, a salad, and a yogurt every day. The salad costs her $6, while the yogurt is half the price. How much does Ellen pay for one carrot every day when in total she pays $11 for her goods?",
+        "original_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nFor the two carrots Ellen needs to pay $11 - $6 - $3 = $2.\nSo one carrot costs $2 / $2 = $1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nInstead of subtracting, we add the prices Ellen needs to pay $11 + $6 + $3 = $20 for the two carrots and the carrots.\nSo one carrot would incorrectly be calculated as $20 / 2 = $10.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly changes the subtraction in step 2 into addition, and by changing - to +, the calculation of $11 - $6 - $3 = $2 becomes $11 + $6 + $3 = $20. This only affects step 2 directly. Step 3 then inherits the incorrect total from step 2 but performs the division correctly, so the error does not compound further. As a result, only step 2 is incorrect, but its calculation, given the wrong operator, is correct. This leads to an incorrect result for the cost of one carrot.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 5, and the explanation is that the operator in step 3 encounters an error and should use division instead of addition. It miscalculates $11 + $6 + $3 = $20 instead of $11 / 3 = $5, resulting in the final erroneous result."
+    },
+    {
+        "question": "During the most recent voyage of the Starship Conundrum, the spacecraft traveled from Planet X to Planet Y in eight hours less than twice the number of hours in a typical earth day. If the distance between these two planets is 4,000 parsecs, what was the average speed, in parsecs per hour, of the Starship Conundrum during this most recent voyage?",
+        "original_solution": "Twice the number of hours in a typical earth day is 24*2=48 hours.\nEight hours less than twice the number of hours in a typical earth day is 48-8=40 hours.\nIf the distance between these two planets is 4,000 parsecs, then the average speed on this voyage was 4000/40=100 parsecs per hour.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Twice the number of hours in a typical earth day is 24*2=48 hours.\nEight hours less than twice the number of hours in a typical earth day is 48+8=56 hours.\nIf the distance between these two planets is 4,000 parsecs, then the average speed on this voyage was 4000/56=71.43 parsecs per hour.\n#### 71.43",
+        "transformed_answer": 71.43,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 2 into addition, and by changing - to +, 48-8=40 hours becomes 48+8=56 hours. This impacts the subsequent related step 3. Step 3 changes from 4000/40=100 parsecs per hour to 4000/56=71.43 parsecs per hour. It should be noted that only the operator in step 2 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent step of using its results, but all the calculation in step 3 that is affected by step 2 is correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 71.43, and the explanation is that the operator in step 2 encounters an error, multiplication should be used instead of addition. It miscalculates 4000+8=4008 instead of 4000*8=32,000. This affects steps 3 and 4. Step 3 incorrectly calculates 4008/56=71.43 instead of 32,000/56=576.92. Step 4 miscalculates 71.43+576.92=648.35 instead of 576.92+576.92=1153.84."
+    },
+    {
+        "question": "Janet goes to the gym for 5 hours a week. She goes Monday, Tuesday, Wednesday, and Friday. She spends an hour and a half each day on Monday and Wednesday. If she spends the same amount of time at the gym on Tuesday and Friday how many hours is she at the gym on Friday?",
+        "original_solution": "Between Monday and Wednesday, she spends 1.5 hours + 1.5 hours = 3 hours.\nThat means she has 5 hours - 3 hours = 2 hours left for Tuesday and Wednesday\nShe spends 2 hours / 2=1 hour on Friday\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Between Monday and Wednesday, she spends 1.5 hours * 1.5 hours = 2.25 hours.\nThat means she has 5 hours - 2.25 hours = 2.75 hours left for Tuesday and Friday\nShe spends 2.75 hours / 2 = 1.375 hours on Friday\n#### 1.375",
+        "transformed_answer": 1.375,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 1 into multiplication, and by changing + to *, 1.5 hours + 1.5 hours = 3 hours becomes 1.5 hours * 1.5 hours = 2.25 hours. This affects the subsequent related step 2 and 3. Step 2 changes from 5 hours - 3 hours = 2 hours to 5 hours - 2.25 hours = 2.75 hours, and step 3 changes from 2 hours / 2 = 1 hour to 2.75 hours / 2 = 1.375 hours. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 2.75, and the explanation is that the operator in step 4 encounters an error, division should be used instead of multiplication. It miscalculates 5-2.25=2.75 instead of 5/2=2.75, resulting in the final erroneous result."
+    },
+    {
+        "question": "Cole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?",
+        "original_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 - $2 = $4 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $4 = $32.\nTherefore, jogger jeans originally cost $32 - $24 = $8 more than the tattered jeans.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 + $2 = $8 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $8 = $36.\nTherefore, jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 2 to an addition, transforming $6 - $2 = $4 into $6 + $2 = $8. This affects subsequent related step 4 and step 5. Step 4 remains unchanged because no other steps affected the purchase price of the tattered jeans. However, the revised savings calculation in step 5, $28 + $8 = $36, leads to the changed conclusion in step 6, stating that jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans instead of $8. Only the operator in step 2 is incorrect to induce the wrong conclusion, but its calculation is correct, as are the calculations of subsequent affected steps.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12, and the explanation is that the operator in step 4 encounters an error, division should be used instead of addition. It miscalculates $6 x 1/3 = $2 instead of $6 / 3 = $2, resulting in the final erroneous result."
+    },
+    {
+        "question": "Adam goes to school every day. On Monday he had 6 lessons of 30 minutes each, and on Tuesday he had 3 lessons of 1 hour each. On Wednesday, Adam spent twice as much time at school as on Tuesday. How much time in total did Adam spend at school during these 3 days, in hours?",
+        "original_solution": "On Monday Adam had 6 * 30 = 180 minutes of lessons, which is 3 hours.\nOn Wednesday Adam spent twice as much time at school as on Tuesday, so he spent 2 * 3 = 6 hours at school.\nThis means that during these three days Adam spent at school 3 + 3 + 6 = 12 hours.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "On Monday Adam had 6 * 30 = 180 minutes of lessons, which is 3 hours.\nOn Wednesday Adam spent twice as much time at school as on Tuesday, so he spent 3 / 2 = 1.5 hours at school.\nThis means that during these three days Adam spent at school 3 + 3 + 1.5 = 7.5 hours.\n#### 7.5",
+        "transformed_answer": 7.5,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example alters the operator in step 2 from multiplication to division, converting '2 * 3 = 6' into '3 / 2 = 1.5'. This erroneous change affects the following step. All other steps are correctly calculated based on the incorrect transformation. This leads to a transformed_answer of 7.5 hours, which is different from the original_answer of 12 hours.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 7 hours, and the explanation is that the operator in step 2 encounters an error, multiplication should be used instead of addition. It miscalculates 6*30=180 instead of 6*30=180. This affects step 4. Step 4 incorrectly calculates 180+3+3=183 instead of 180+3+1.5=183.5."
+    }
+]

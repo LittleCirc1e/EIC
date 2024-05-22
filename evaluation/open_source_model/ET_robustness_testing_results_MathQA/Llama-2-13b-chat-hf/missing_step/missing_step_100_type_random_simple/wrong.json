@@ -1,0 +1,38 @@
+[
+    {
+        "question": "an engineer undertakes a project to build a road 10 km long in 60 days and employs 30 men for the purpose . after 20 days , he finds only 2 km of the road has been completed . find the ( approximate ) number of extra men he must employ to finish the work in time .",
+        "original_solution": "In 20 days, 2 km of the road have been completed, so the rate is 2/20 = 0.1 km/day.\nTo finish the remaining 8 km in 40 days, the rate required is 8/40 = 0.2 km/day.\nThe current rate of each man is 0.1 km/day, so the number of men required to achieve the desired rate is 0.2/0.1 x 30 = 60.\nExtra men he must employ is 60 - 30 = 30.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "To finish the remaining 8 km in 40 days, the rate required is 8/40 = 0.2 km/day.\nThe current rate of each man is 2 km / (30 men * 20 days) = 0.0033 km/day/man approximately.\nSo the number of men required to achieve the desired rate is 0.2 / 0.0033 = 60.6060 approximately, rounded to 61 men.\nExtra men he must employ is 61 - 30 = 31.\n#### 31",
+        "transformed_answer": 31.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The original step 1 has been deleted, and the transformed_solution starts with the original step 2 which references the 8 km to be finished and the 40 remaining days from the question. The original step 3 calculates the rate per man as 0.1 km/day, but this erroneous result is changed in the transformed_solution to calculate the rate per man using the given data directly, which is 2 km / (30 men * 20 days), and is used to find the new estimate of men needed. Subsequent steps calculate the new number of men and extra men needed accordingly, resulting in a first erroneous step that has no references to the deleted step 1. The new transformed_solution has one less step, a different outcome of 31 extra men instead of 30, and the first reference to the erroneous calculation is the transformed step 1.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is the correct calculation of the number of extra men required to finish the work in time. The [Solution] correctly identifies the rate required to finish the remaining 8 km in 40 days and calculates the number of men required to achieve that rate. The [Solution] also correctly rounds the result to the nearest whole number, which is 61 men."
+    },
+    {
+        "question": "a car traveled 462 miles per tankful of gasoline on the highway and 336 miles per tankful of gasoline in the city. if the car traveled 15 fewer miles per gallon in the city than on the highway, how many miles per gallon did the car travel in the city?",
+        "original_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\nSo, 336 =  x * y\n462 = (x + 15) * y\nWe can divide the second equation by the first equation to get:\n462 / 336 = (x + 15) * y / (x * y)\n1.375 = (x + 15) / x\n0.375 = 15 / x\n15 / 0.375 = x\n40 = x\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\n462 = (x + 15) * y\nWe can solve for y in terms of x using the highway mileage:\ny = 462 / (x + 15)\nUsing the city mileage equation, we substitute y:\n336 = x * (462 / (x + 15))\n1.375 = 462 / (x + 15)\n1.375x + 20.625 = 462\n1.375x = 462 - 20.625\n1.375x = 441.375\nx = 441.375 / 1.375\nx = 321\n#### 321",
+        "transformed_answer": 321.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the intermediate step 4 '462 / 336 = (x + 15) * y / (x * y)' has been removed. The subsequent steps that originally referred to the result of step 4 now reference x and x + 15, from the equations established in steps 2 and 3. We first solve for y directly from the highway equation: 'y = 462 / (x + 15)'. Then we substitute y into the city equation '336 = x * y' and rearrange the equation to solve for x. Each step thereafter has been changed to reflect this new approach. The transformed solution has a logical error introduced by incorrectly simplifying and manipulating the equation, which results in an incorrect transformed answer of 321 miles per gallon instead of the correct 40 miles per gallon. Since the error first occurs at the now incorrect step 4 (originally step 5), the wrong_step is 4.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is that the [Solution] correctly identifies the correct type of error as 'adding_irrelevant_information'."
+    },
+    {
+        "question": "a person deposits 1 / 16 of his income as provident fund and 1 / 15 of the remaining as insurance premium. if he spends 5 / 7 of the balance on domestic needs and deposits an amount of rs. 50 in the bank, his total income would be",
+        "original_solution": "Let x be the total income.\nIncome deposited as provident fund = x * 1/16\nIncome remaining after provident fund deposit = x - x * 1/16 = x * 15/16\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x * 15/16 - x/16 = x * 14/16\nAmount spent on domestic needs = x * 14/16 * 5/7 = x * 10/16\nBalance after domestic needs = x * 14/16 - x * 10/16 = x * 4/16\nAmount deposited in the bank = x * 4/16 = 50\nx = 200\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "Let x be the total income.\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x - x/16 = x * 15/16\nAmount spent on domestic needs = x * 15/16 * 5/7 = x * 75/112\nBalance after domestic needs = x * 15/16 - x * 75/112 = x * (105/112 - 75/112)\nAmount deposited in the bank = x * 30/112\nx = (112/30) * 50\nx = 186.67\n#### 186.67",
+        "transformed_answer": 186.67,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step (provident fund calculation) has been removed. The subsequent steps that originally referred to the result of the first step now directly reference the largest related number from the question (for step 1: x * 15/16). In steps 2 and 3, the calculation that was originally applied to adjust for the provident fund deposit is no longer necessary, as it has been factored out. The following steps were updated to still mathematically make sense and maintain the transformation's integrity. As a consequence of the changes, the final answer has changed, and since wrong_step references the first modified step, the wrong_step is given as 1.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'missing_step'. The correct reasoning should be: Income deposited as insurance premium = (x * 15/16) * 1/15 = x/16, and then Balance after insurance premium = x"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Katie has 13 pink marbles. She has 9 fewer orange marbles than pink marbles. She has 4 times as many purple marbles as orange marbles. How many marbles does Katie have in all?",
+        "original_solution": "Find the number of orange marbles. 13 marbles - 9 marbles = 4 marbles\nFind the number of purple marbles. 4 marbles x 4 = 16 marbles\nFind the total amount of pink, orange, and purple marbles. 13 marbles + 4 marbles + 16 marbles = 33 marbles\n#### 33",
+        "original_answer": 33.0,
+        "transformed_solution": "Find the number of purple marbles. 13 marbles - 9 marbles x 4 = 16 marbles\nFind the total amount of pink and purple marbles. 13 marbles + 16 marbles = 29 marbles\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of orange marbles, and step 2 calculates the number of purple marbles using the result of step 1. After deleting step 1, the calculation of the number of purple marbles directly references the number of pink marbles subtracting the 9 marbles. However, the correct process is to find the number of orange marbles first before calculating the number of purple marbles as 4 times the orange marbles. The subsequent step also changes: it no longer includes orange marbles in the total count, making the formula change from 13+4+16=33 to 13+16=29. Despite the incorrect process, the math in step 2 is internally consistent, but it fails to account for the orange marbles due to the omission of the first step. It is the first step that is referencing the incorrect process, so the wrong_step is 1.",
+        "eval_result": "To determine if the solution is correct, we need to check if the given answer of 29 is correct.\nAccording to the given information, Katie has 13 pink marbles and 9 fewer orange marbles than pink marbles. Therefore, Katie has 13 - 9 = 4 orange marbles.\nKatie also has 4 times as many purple marbles as orange marbles. Therefore, Katie has 4 * 4 = 16 purple marbles.\nTo find the total number of marbles Katie has, we add the number of pink, orange, and purple marbles: 13 + 4 + 16 = 33 marbles.\nSince the given answer is 29, the solution is incorrect.\nThe correct solution would be:\nThe solution is incorrect, and the explanation is: The given answer of 29 is incorrect. The total number of marbles Katie has is 33, not 29.The answer is: 29"
+    }
+]

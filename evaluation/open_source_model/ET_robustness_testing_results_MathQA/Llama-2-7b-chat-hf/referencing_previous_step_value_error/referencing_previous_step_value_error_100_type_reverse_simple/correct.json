@@ -1,0 +1,38 @@
+[
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 0.5 miles\n#### 0.5",
+        "transformed_answer": 0.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 2 in the transformed_solution incorrectly calculates the distance by referencing the correct speed from step 1 but then dividing by 60 incorrectly as 12 * (5 / 60) = 0.5 miles instead of the correct 12 * (5 / 60) = 1 mile. The incorrect division leads to a halved answer even though the previous step calculated the interval speed correctly. All other steps that should reference the correct result of the third interval speed, continue to reference the figure correctly.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'calculation_error'. The explanation is that the formula used to calculate the distance traveled in the third interval is incorrect. The correct formula is: distance = speed * time, where time is the duration of the interval in hours. In this case, the time in the third interval is 5 minutes, which is equal to 0.083 hours. Therefore, the distance traveled in the third interval is: distance = 2 + (5 * 2) = 12 miles per hour x 0.083 hours = 0.994 miles."
+    },
+    {
+        "question": "0.014 × 0.014 = ?",
+        "original_solution": "0.014 × 0.014 = 0.000196\n#### 0.000196",
+        "original_answer": 0.000196,
+        "transformed_solution": "0.014 × 0.014 = 0.00196\n#### 0.00196",
+        "transformed_answer": 0.00196,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed_solution incorrectly calculates 0.014 × 0.014 as 0.00196 instead of 0.000196. It should be noted that this mistake is a calculation error, not a referencing error, as it incorrectly multiplies the numbers giving an erroneous result. Since this is the only intended error, all steps that would have followed from the correct result still assume that the mistaken result (0.00196) is the basis for subsequent steps, even though in this case, no such steps exist beyond the initial calculation.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The calculation error occurs in the second step, the multiplication operation is incorrect, the correct result should be 0.00196, not 0.0019."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.003^4 = 1.009\n#### 1.009",
+        "transformed_answer": 1.009,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly calculates the power 1.003^4 as 1.009 instead of 1.012. This is a calculation error, as the power was incorrectly calculated. The exponentiation should be computed correctly using proper arithmetic to ensure accuracy. As 1.003 raised to the power of 4 more accurately equals 1.012015, when rounded to 3 decimal places the result should be 1.012. The step has been intentionally modified to introduce a single wrong calculation.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The formula 1.003^4 = 1.009 is incorrect because the calculation of the exponentiation is not correct. The correct calculation is 1.003^4 = 1.003^4 \\* 1.003 = 1.003^4 \\* 1.003 = 1.009."
+    }
+]

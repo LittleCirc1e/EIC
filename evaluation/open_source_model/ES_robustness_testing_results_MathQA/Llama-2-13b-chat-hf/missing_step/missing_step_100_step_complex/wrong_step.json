@@ -1,0 +1,38 @@
+[
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "eval_result": "\n\nPlease provide the correct answer and the explanation.\n\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one hour has 60 minutes instead of 3600 seconds, calculating 450 km / 90 kmh = 10 hours instead of 450 km / 90 kmh = 5 hours. The subsequent step 3 references the result of step 2, calculating 10 hours x 60 minutes = 600 minutes instead of 10 hours x 60 seconds = 600 seconds. The subsequent step 4 references the result of step 3, calculating 600 minutes / 60 minutes = 10 instead of 600 seconds / 60 seconds = 10. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    },
+    {
+        "question": "if 0.75 : x : : 5 : 7 , then x is equal to :",
+        "original_solution": "0.75 * 7 / 5 = 1.05\n#### 1.05",
+        "original_answer": 1.05,
+        "transformed_solution": "0.75 * 7 = 5.25\n#### 5.25",
+        "transformed_answer": 5.25,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the division by 5 (second part of step 1 in the original solution) is missing. This step is important for finding the value of x in the ratio. By removing the division and only calculating 0.75 * 7, the solution doesn't take into account the comparison to the other part of the ratio (5:7). As a result, the calculation gives the product of 0.75 and 7 without considering the full ratio, leading to the incorrect answer of 5.25. The first step in the original_solution makes reference to both the number 0.75 from the question and the result of the ratio operation but only the multiplication part (0.75 * 7) is used in the transformed_solution, which is incorrect. Therefore, the wrong_step is 1.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 0.75 * 7 = 5.25 instead of 0.75 * 7 = 5.5. The subsequent step 4 references the result of step 3, calculating 5.25 / 7 = 0.75 instead of 5.5 / 7 = 0.8. The final incorrect answer is 0.75 instead of 0.8. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "According to these definitions, the value of o(3.2) + e(–1.7) + o(–3.3) + e(4.7) is:",
+        "original_solution": "o(3.2) = 5\ne(–1.7) = -2\no(–3.3) = -5\ne(4.7) = 6\n5 + (-2) + (-5) + 6 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "e(–1.7) = -2\no(–3.3) = -5\ne(4.7) = 6\n-2 + (-5) + 6 = -1\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 3.2 from the question, and step 4 references the result 5 from step 1. So after deleting step 1, steps that reference the result of step 1 are affected directly. Step 4 should be modified to eliminate the use of the result from the deleted step 1. Since the calculation in all the steps is correct after removing step 1 and the summation in the final step no longer includes the deleted value from step 1, the wrong_step is 1.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating -2 + (-5) + 6 = -1 instead of -2 + (-5) + 6 = -8. The subsequent step 5 references the result of step 4, calculating -1 instead of -8, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

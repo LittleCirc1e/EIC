@@ -1,0 +1,86 @@
+[
+    {
+        "question": "in 1998 the profits of company n were 10 percent of revenues. in 1999, the revenues of company n fell by 30 percent, but profits were 10 percent of revenues. the profits in 1999 were what percent of the profits in 1998?",
+        "original_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 70 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 70\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.6x because they fell by 40 percent.\nThe profits in 1999 were 0.1 * 0.6x = 0.06x.\nThe profits in 1999 were 60 percent of the profits in 1998 because (0.06x / 0.1x) * 100 = 60\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the percent decrease in revenues as 40 percent instead of 30 percent, and calculates the revenues in 1999 as 0.6x instead of 0.7x. This wrong percentage directly affects the calculation of the profits for 1999 and the final percentage comparison between profits of 1999 and 1998. The correct calculation using 30 percent should yield 70 percent, but because of the incorrect percentage used in step 3, the transformed solution yields 60 percent. Since this is the only error, subsequent steps reflect the results of the change correctly despite the erroneous input in step 3. All other steps that reference the original numbers from the question do so correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #70.\n\nThe error occurs in the second step, where the revenues in 1999 are calculated as 0.6x instead of 0.5x. This leads to a 20% error in the calculation of the profits in 1999, resulting in a final answer of 70% instead of 60%.\n\nExplanation:\nThe correct calculation for the revenues in 1999 is:\n\nRevenues in 1999 = (1 - 0.3) * Revenues in 1998 = 0.5 * 100 = 50\n\nTherefore, the profits in 1999 are:\n\nProfits in 1999 = 0.1 * 50 = 0.05\n\nThe final answer is 70% instead of 60% because (0.05 / 0.1x) * 100 = 70."
+    },
+    {
+        "question": "What is the smallest integer y for which 27 ^ y > 3 ^ 24 ?",
+        "original_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^8\nThis simplifies to 3^(3y) > 3^24\nTherefore, 3y > 24\nSo, y > 8\nThe smallest integer y for which 27^y > 3^24 is 9.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^7\nThis simplifies to 3^(3y) > 3^21\nTherefore, 3y > 21\nSo, y > 7\nThe smallest integer y for which 27^y > 3^24 is 8.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the original solution but was modified to 7 incorrectly, leading to the comparison (3^3)^y > (3^3)^7 instead of (3^3)^y > (3^3)^8. This error cascades through the subsequent steps; however, only the originally incorrect step is modified while the subsequent steps still perform the correct calculations based on the result of the first erroneous step. The solution should end with y being greater than 7 for 27^y > 3^21, which is incorrect since the original condition was 27^y > 3^24. The smallest integer y that satisfies 27^y > 3^24 is actually 9.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #9.\n\nExplanation: The error occurs in the second step of the solution, where the expression 3^(3y) > 3^21 is simplified. The correct simplification is 3^(3y) > 3^(21 + 3y), not 3^21. Therefore, the final answer is 9, not 8."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 wrongly references the power of 2 as 3 instead of 2, and calculates 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2 instead of 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4. All other steps that reference power of 2 correctly remain unaffected by this mistake.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #4.\n\nThe error occurs in the first step, when the value of 3 ø 1 is calculated as 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4. The correct calculation should be 2 ^ 3 = 8, and then 8 / 2 = 4.\n\nTherefore, the final answer for ( 3 ø 1 ) ø 2 is #4."
+    },
+    {
+        "question": "Fresh grapes contain 85% water by weight, and raisins obtained by drying fresh grapes contain 25% water by weight. How many kgs of fresh grapes are needed to get 20 kgs of raisins?",
+        "original_solution": "Let x be the weight of fresh grapes needed to get 20 kgs of raisins.\nThe weight of water in x kgs of fresh grapes is 0.85x.\nThe weight of dry grapes in x kgs of fresh grapes is x - 0.85x = 0.15x.\nThe weight of water in 20 kgs of raisins is 0.25 * 20 = 5 kgs.\nThe weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs.\n0.15x = 15.\nx = 15 / 0.15.\nx = 100.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Let x be the weight of fresh grapes needed to get 20 kgs of raisins.\nThe weight of water in x kgs of fresh grapes is 0.90x.\nThe weight of dry grapes in x kgs of fresh grapes is x - 0.90x = 0.10x.\nThe weight of water in 20 kgs of raisins is 0.25 * 20 = 5 kgs.\nThe weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs.\n0.10x = 15.\nx = 15 / 0.10.\nx = 150.\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 85% in the question as 90% wrongly, and calculates the weight of dry grapes in fresh grapes as x - 0.90x = 0.10x instead of x - 0.85x = 0.15x. Its subsequent related step will be affected, changing the equation from 0.15x = 15 to 0.10x = 15 in step 6, and the solution from x = 100 to x = 150 in step 7. Please note that you should only consider one error, so step 4 is still referencing the correct percentage for raisins and calculates it correctly as 0.25 * 20 = 5 kgs.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #100.\n\nExplanation:\nThe solution is incorrect because there is a calculation error in step 3. The weight of water in 20 kgs of raisins is actually 5 kg, not 5 kg. Therefore, the weight of dry grapes in 20 kgs of raisins is 20 - 5 = 15 kgs, not 150 kgs.\n\nTo correct the solution, we need to multiply the weight of fresh grapes by 0.10, which gives us the weight of dry grapes in 20 kgs of raisins, which is 15 kgs. Therefore, the final answer is 100 kgs of fresh grapes needed to get 20 kgs of raisins."
+    },
+    {
+        "question": "What is the least value of x, so that 2 x 5476 is divisible by 9?",
+        "original_solution": "The sum of the digits in 2x5476 is 2+x+5+4+7+6 = 24+x\nFor 24+x to be divisible by 9, x must equal 3.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "The sum of the digits in 2x5476 is 2+x+5+4+8+6 = 25+x\nFor 25+x to be divisible by 9, x must equal 2.\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 7 in the question as 8 wrongly, and calculates 2+x+5+4+8+6=25+x instead of 2+x+5+4+7+6=24+x. Its subsequent related step will be affected, calculating that x must equal 2 for the sum 25+x to be divisible by 9, instead of x must equal 3 for the sum 24+x to be divisible by 9. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #3.\n\nExplanation: The error in the solution occurs in the second step, where the sum of the digits in 2x5476 is calculated as 2+x+5+4+8+6 instead of 2+x+5+4+8+6. This leads to an incorrect calculation of the remainder when divided by 9, resulting in the incorrect answer of x=2. The correct answer is x=3."
+    },
+    {
+        "question": "A man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?",
+        "original_solution": "Let the speed of the man in still water be x kmph.\nThen, speed downstream = (x + 20) kmph\nSpeed upstream = (x - 20) kmph\nAccording to the given data, x + 20 = 60 and x - 20 = 20\nSolving the equations we get, x = 40 kmph\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Let the speed of the man in still water be x kmph.\nThen, speed downstream = (x + 30) kmph\nSpeed upstream = (x - 30) kmph\nAccording to the given data, x + 30 = 60 and x - 30 = 20\nSolving the equations we get, x = 35 kmph\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the speeds incorrectly by adding and subtracting 30 instead of 20 to the speed of the man in still water, resulting in speed downstream = (x + 30) kmph and speed upstream = (x - 30) kmph. It should be x + 20 and x - 20 respectively to match the question’s given downstream and upstream speeds. The subsequent related equations and calculations will be affected by this erroneous step (steps 3 and 4), but these steps will still utilize the wrong values from step 2 to produce subsequent correct calculations based on the erroneous step, leading to x = 35 kmph instead of the correct x = 40 kmph. All other steps that reference the correct speed in the question still do so correctly except for the erroneous Step 2. The transformed answer is different from the original answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #40 kmph.\n\nExplanation: The error occurs in the second step, where the speed upstream is calculated as (x - 30) kmph. The correct calculation should be (x + 30) kmph, which leads to the final answer of 40 kmph."
+    },
+    {
+        "question": "in a forest 250 deer were caught , tagged with electronic markers , then released . a week later , 50 deer were captured in the same forest . of these 50 deer , it was found that 5 had been tagged with the electronic markers . if the percentage of tagged deer in the second sample approximates the percentage of tagged deer in the forest , and if no deer had either left or entered the forest over the preceding week , what is the approximate number of deer in the forest ?",
+        "original_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 250 / 10 x 100 = 2500\n#### 2500",
+        "original_answer": 2500.0,
+        "transformed_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 200 / 10 x 100 = 2000\n#### 2000",
+        "transformed_answer": 2000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 250 in the question as 200 wrongly, and calculates 200 / 10 x 100 = 2000 instead of 250 / 10 x 100 = 2500. Its subsequent related step will be affected by the erroneous result of this step but still be calculated correctly. Please note that you should only consider one error, so step 1 and step 2 still reference the quantities in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #2500.\n\nExplanation:\nThe solution assumes that the number of deer in the forest is 2000, which is the total number of deer in the second sample. However, this number is not correct because the first sample had 250 deer, and only 50 deer were captured in the second sample. Therefore, the total number of deer in the forest is actually 2500."
+    }
+]

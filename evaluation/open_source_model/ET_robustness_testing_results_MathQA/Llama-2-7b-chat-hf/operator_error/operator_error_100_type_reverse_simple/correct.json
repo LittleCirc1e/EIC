@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Suppose 8 monkeys take 8 minutes to eat 8 bananas. How many minutes would it take 3 monkeys to eat 3 bananas?",
+        "original_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 * 3 = 24 minutes for 3 monkeys to eat 3 bananas because we incorrectly change the constant rate to be multiplied.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the correct assumption \"the rate of eating remains the same\" by incorrectly introducing multiplication to the duration in step 2, changing \"8 minutes\" to \"8 * 3 = 24 minutes\" for 3 monkeys to eat 3 bananas. This is a misguided application of the original principle that the number of monkeys and bananas doesn't change the rate of consumption per monkey. Only step 2 contains the introduced error, but its result is calculated correctly based on the incorrect operation. This doesn't affect the subsequent steps because there are no other computations dependent on step 2 in this simplified problem.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'operator_error'. The solution mistakenly changes the constant rate to be multiplied, which results in the incorrect calculation. The correct calculation is 3 * 8 = 24 minutes, not 8 * 3 = 24 minutes."
+    }
+]

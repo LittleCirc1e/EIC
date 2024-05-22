@@ -1,0 +1,26 @@
+[
+    {
+        "question": "bhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food. if he spends rs. 300 on petrol then what is the expenditure on house rent?",
+        "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+        "original_answer": 210.0,
+        "transformed_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 70% of the remaining income on house rent, so the expenditure on house rent is 0.7 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.7 * 0.7x = 0.7x - 0.49x = 0.21x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.7 * 0.7 * 1000 = 490\n#### 490",
+        "transformed_answer": 490.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication factor for the house rent in step 4 from 0.3 to 0.7, changing the calculation of the expenditure on house rent from 0.3 * 0.7x to 0.7 * 0.7x. The expenditure on petrol remains correct at Rs. 300. Since the amount spent on petrol sets the value of x to 1000, the incorrect multiplication in step 4 results in the transformed expenditure on house rent being 0.7 * 0.7 * 1000 = 490, which differs from the original calculation of 0.3 * 0.7 * 1000 = 210. The substitution of x with its value in the original solution is correct, but using the wrong operator in step 4 changes the result.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that the operator in step 4 encounters an error and should use division instead of subtraction. It miscalculates 0.7x - 0.49x = 0.21x instead of 0.7x / 0.49x = 1.43x, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "if 0.25 of a number is equal to 0.05 of another number, the ratio of the numbers is:",
+        "original_solution": "Let x be the first number and y be the second number.\n0.25x = 0.05y\nx = 0.05y / 0.25\nx = 0.2y\nThe ratio of the numbers is 1:5\n#### 1:5",
+        "original_answer": "1:5",
+        "transformed_solution": "Let x be the first number and y be the second number.\n0.25x = 0.05y\nx = 0.05y * 0.25\nx = 0.0125y\nThe ratio of the numbers is 1:80\n#### 1:80",
+        "transformed_answer": "1:80",
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division operator to multiplication in step 3. By changing / to *, 0.05y / 0.25 becomes 0.05y * 0.25, leading to 0.0125y instead of 0.2y. Therefore, the ratio of x to y changes to 1:80, which affects the ratio calculated in the final step while other steps are calculated correctly.",
+        "eval_result": "\n\nPlease provide your response here.\n\nPlease note that the [Solution] provided is incorrect. The first wrong step is step 3, and the explanation is that the operator in step 3 encounters an error and should use division instead of multiplication. It miscalculates 0.05y*0.25=0.0125y instead of 0.05y/0.25=80. This affects step 4 and leads to the final wrong result. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nThe correct solution is:\nLet x be the first number and y be the second number.\n0.25x = 0.05y\nx = 0.05y / 0.25\nx = 80y / 0.25\nx = 320y\nThe ratio of the numbers is 1:320.\n\nThe correct answer is:\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that the operator in step 3 encounters an error and should use division instead of multiplication. It miscalculates 0.05y*0.25=0.0125y instead of 0.05y/0.25=80. This affects step 4 and leads to the final wrong result. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

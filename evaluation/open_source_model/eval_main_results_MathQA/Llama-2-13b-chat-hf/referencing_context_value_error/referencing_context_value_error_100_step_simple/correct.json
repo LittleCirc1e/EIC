@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = Distance / Speed\nTime = 400 km / 90 kmh = 4.44 hours\n#### 4.44",
+        "transformed_answer": 4.44,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 450 km in the question as 400 km wrongly, and calculates 400 km / 90 kmh = 4.44 hours instead of 450 km / 90 kmh = 5 hours. The error impacts only the calculation of the time required. All the other references have to maintain their original values, and steps associated with the wrong step should still use the updated wrong result for subsequent calculations.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #2, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe correct solution is:\n\nTime = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n\nThe mistake in the [Solution] is that the calculation for the time is incorrect. The correct calculation is 450 km / 90 kmh = 5 hours, not 4.44 hours. The first step that makes a mistake is step #2, where the calculation for the time is incorrect. This mistake affects the subsequent steps that reference the results of this step, leading to the final wrong answer."
+    }
+]

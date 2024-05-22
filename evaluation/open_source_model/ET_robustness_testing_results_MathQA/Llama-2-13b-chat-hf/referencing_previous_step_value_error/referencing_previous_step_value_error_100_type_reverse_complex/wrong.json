@@ -1,0 +1,50 @@
+[
+    {
+        "question": "8 business executives and 7 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place?",
+        "original_solution": "The business executives will have 8C2 = 28 handshakes\nThe chairmen will have 7*8 = 56 handshakes\nSo, the total number of handshakes would be 28 + 56 = 84\n#### 84",
+        "original_answer": 84.0,
+        "transformed_solution": "The business executives will have 8C2 = 28 handshakes\nThe chairmen will have 7*8 = 52 handshakes\nSo, the total number of handshakes would be 28 + 52 = 80\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 56 as 52 from the original step 2 calculation, altering 7*8=56 to 7*8=52. It should be noted that step 2 in the transformed_solution <The chairmen will have 7*8 = 56 handshakes> should be the same as the step 2 in the original_solution <The chairmen will have 7*8 = 56 handshakes> and calculate its result 56 correctly. The subsequent step 3 is affected by step 2 and incorrectly calculates the total sum to 28 + 52 = 80 instead of 28 + 56 = 84. We only consider the error in referencing, therefore all other steps that reference this number still do so correctly and subsequent calculations are performed correctly based on the erroneous step.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the business executives will have 8C2 = 28 handshakes, and the chairmen will have 7*8 = 52 handshakes, so the total number of handshakes would be 28 + 52 = 80."
+    },
+    {
+        "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30% on the cost price. he then sold the articles by offering a discount of 10% on the labeled price. what is the actual percent profit earned in the deal?",
+        "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+        "original_answer": 17.0,
+        "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (20/100) x 100% = 20%.\n#### 20%",
+        "transformed_answer": 20.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references the actual profit as 20 instead of 17 from step 4 and changes the calculation of (17/100) x 100% = 17% to (20/100) x 100% = 20%. It should be noted that step 4 in the transformed_solution <His actual profit is 117 - 100 = $17.> should be the same as the step 4 in the original_solution <His actual profit is 117 - 100 = $17.> and calculates its result $17 correctly. The subsequent step related to the incorrect profit value still calculates the percentage correctly based on the erroneous value. Even though step 5 contains an incorrect reference, all other steps should still be calculated correctly based on the numbers provided in the transformed_solution.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 30, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "A train 360 m long is running at a speed of 72 km/hr. In what time will it pass a bridge 140 m long?",
+        "original_solution": "First, convert the speed from km/hr to m/s: 72 km/hr x (1000 m/km) x (1 hr/3600 s) = 20 m/s\nTotal distance to cover = length of the train + length of the bridge = 360 m + 140 m = 500 m\nTime = Distance / Speed = 500 m / 20 m/s = 25 s\n#### 25 seconds",
+        "original_answer": 25.0,
+        "transformed_solution": "First, convert the speed from km/hr to m/s: 72 km/hr x (1000 m/km) x (1 hr/3600 s) = 20 m/s\nTotal distance to cover = length of the train + length of the bridge = 360 m + 140 m = 500 m\nTime = Distance / Speed = 480 m / 20 m/s = 24 s\n#### 24 seconds",
+        "transformed_answer": 24.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references the correct total distance of 500 m as 480 m from step 2 and changes the calculation from 500 m / 20 m/s = 25 s to 480 m / 20 m/s = 24 s. It should be noted that step 2 in the transformed_solution <Total distance to cover = length of the train + length of the bridge = 360 m + 140 m = 500 m> should be the same as step 2 in the original_solution and calculates its result 500 m correctly. The transformed_solution incorrectly uses 480 m for the distance in the calculation of step 3, leading to a transformed_answer of 24 seconds instead of the original 25 seconds. You need to only consider one error of referencing, so the calculation of all steps is still correct except for the error introduced in step 3.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly converts the speed from km/hr to m/s without considering the conversion factor of 1000 m/km. Therefore, the solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is that the first wrong step is step 2. Step 2 performs an incorrect unit conversion and mistakenly assumes that one meter has 1000 kilometers instead of 1 kilometer, which only results in an error in one operand in the formula, thus it belongs to unit_conversion_error."
+    },
+    {
+        "question": "The product of three consecutive numbers is 990. Then the sum of the smallest two numbers is?",
+        "original_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\n(n-9)(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nn=9 or n=(-12±√356i)/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 19",
+        "original_answer": 19,
+        "transformed_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\nWe are looking for real integers that satisfy the equation\nTesting through integers, n=9 works since 9(10)(11) = 990\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 18\n#### 18",
+        "transformed_answer": 18,
+        "wrong_step": 6,
+        "wrong_type": "calculation_simple_arithmetic_error",
+        "is_single_error": true,
+        "explanation": "A simple arithmetic error occurred in the sixth step of the transformed_solution where the sum of the smallest two consecutive numbers was incorrectly reported as 18 due to a basic addition mistake (9 + (9+1) = 18 instead of 19). The correct sum 19 was replaced by the incorrect sum 18 in step 6. All other steps correctly reference the results of previous steps as required, and only one error was introduced in this transformation process, thus adhering to the requirement of a single error.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the correct [Solution] is obtained by carefully reading the [Question] and using the formula for the product of three consecutive numbers. The wrong types that can be selected are 'adding_irrelevant_information', 'confusing_formula_error', 'missing_step', 'operator_error', 'unit_conversion_error', 'referencing_previous_step_value_error', 'referencing_context_value_error', 'counting_error', and 'calculation_error'."
+    }
+]

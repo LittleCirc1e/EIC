@@ -1,0 +1,38 @@
+[
+    {
+        "question": "One week, a certain truck rental lot had a total of 24 trucks, all of which were on the lot Monday morning. If 50% of the trucks that were rented out during the week were returned to the lot on or before Saturday morning of that week, and if there were at least 12 trucks on the lot that Saturday morning, what is the greatest number of different trucks that could have been rented out during the week?",
+        "original_solution": "The number of trucks on the lot on Monday is 24\nIf at least 12 trucks were on the lot on Saturday, then at most 12 trucks were rented out.\nIf 50% of the trucks rented out were returned by Saturday, then at most 12 * 2 = 24 trucks were rented out\nSo, the greatest number of different trucks that could have been rented out during the week is 24\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "The number of trucks on the lot on Monday is 24\nIf at least 14 trucks were on the lot on Saturday, then at most 10 trucks were rented out.\nIf 50% of the trucks rented out were returned by Saturday, then at most 10 * 2 = 20 trucks were rented out\nSo, the greatest number of different trucks that could have been rented out during the week is 20\n#### 20",
+        "transformed_answer": 20.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 has a counting error, assuming that if at least 14 trucks were on the lot on Saturday (instead of at least 12), then at most 10 trucks could have been rented out (since 24 - 14 = 10). This change affects the calculation in step 3, resulting in the number of trucks that could have been rented out and returned by Saturday being calculated as 10 * 2 = 20. Subsequently, step 4 incorrectly concludes that at most 20 different trucks could have been rented out over the week, rather than the original 24. The modification maintains the logic of 50% of the trucks being returned, but the initial condition about the number of trucks on the lot on Saturday has been incorrectly altered.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 24, and the explanation is that step 6 first erroneously calculates the number of trucks on the lot on Saturday as at least 14 instead of 12, resulting in an error in the calculation of the maximum number of trucks rented out. And step 6 calculates 20 instead of 24, resulting in the final incorrect answer."
+    },
+    {
+        "question": "on sunday , bill ran 4 more miles than he ran on saturday . julia did not run on saturday , but she ran twice the number of miles on sunday that bill ran on sunday . if bill and julia ran a total of 28 miles on saturday and sunday , how many miles did bill run on sunday ?",
+        "original_solution": "Let x be the number of miles Bill ran on Saturday\nTherefore, Bill ran x + 4 miles on Sunday\nJulia ran 2(x+4) = 2x + 8 miles on Sunday\nThe total number of miles Bill and Julia ran is x + x + 4 + 2x + 8 = 28\n4x + 12 = 28\n4x = 16\nx = 4\nTherefore, Bill ran x + 4 = 4 + 4 = 8 miles on Sunday\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let x be the number of miles Bill ran on Saturday\nTherefore, Bill ran x + 4 miles on Sunday\nJulia ran 1(x+4) = x + 4 miles on Sunday\nThe total number of miles Bill and Julia ran is x + x + 4 + x + 4 = 28\n3x + 8 = 28\n3x = 20\nx = 6.6667\nTherefore, Bill ran x + 4 = 6.6667 + 4 = 10.6667 miles on Sunday\n#### 10.6667",
+        "transformed_answer": 10.6667,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously counts the number of miles Julia ran as equal to the number of miles Bill ran on Sunday instead of twice. This causes step 3 to change from 2(x+4)=2x+8 to 1(x+4)=x+4, a counting error of the miles Julia ran. And it affects the subsequent related steps: step 4 is changed from 4x + 12 = 28 to 3x + 8 = 28, step 5 is changed from 4x = 16 to 3x = 20, step 6 is changed from x = 4 to x = 6.6667, and step 7, the conclusion, is changed from Bill ran 8 miles to Bill ran 10.6667 miles on Sunday. The error is isolated to this multiplication factor, and all other arithmetic steps are correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 8, and the explanation is that step 6 first erroneously calculates 3x = 20, resulting in an error in the calculation of x. And step 6 calculates 10.6667 instead of 8, resulting in the final incorrect answer."
+    },
+    {
+        "question": "on sunday , bill ran 4 more miles than he ran on saturday . julia did not run on saturday , but she ran twice the number of miles on sunday that bill ran on sunday . if bill and julia ran a total of 20 miles on saturday and sunday , how many miles did bill run on sunday ?",
+        "original_solution": "Let x be the number of miles bill ran on Saturday\nOn Sunday, Bill ran x + 4 miles\nJulia ran 2*(x+4) = 2x + 8 miles on Sunday\nThe total number of miles ran on Saturday and Sunday is x + (x+4) + (2x+8) = 20\nCombining like terms, 4x + 12 = 20\nSubtracting 12 from both sides gives 4x = 8\nDividing both sides by 4 gives x = 2\nSo, Bill ran x + 4 = 2 + 4 = 6 miles on Sunday\n#### 6",
+        "original_answer": 6,
+        "transformed_solution": "Let x be the number of miles bill ran on Saturday\nOn Sunday, Bill ran x + 4 miles\nJulia ran 2*(x+4) = 2x + 8 miles on Sunday\nThe total number of miles ran on Saturday and Sunday is x + (x+4) + (2x+8) = 20\nCombining like terms, 4x + 12 = 20\nSubtracting 12 from both sides gives 4x = 8\nDividing both sides by 2 gives x = 4\nSo, Bill ran x + 4 = 4 + 4 = 8 miles on Sunday\n#### 8",
+        "transformed_answer": 8,
+        "wrong_step": 7,
+        "wrong_type": "arithmetic_error",
+        "is_single_error": true,
+        "explanation": "Here, a single arithmetic error is introduced in step 7 of the original_solution with the incorrect division by 2, giving x = 4. This error wrongly changes the conclusion that Bill ran 6 miles on Sunday to claiming he ran 8 miles on Sunday in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 6, and the explanation is that step 6 first erroneously counts Saturday as 4 miles instead of 0 miles, resulting in an error in the formula. And step 6 calculates 16 + 4 = 20 instead of 16 + 4 = 18, resulting in the final incorrect answer."
+    }
+]

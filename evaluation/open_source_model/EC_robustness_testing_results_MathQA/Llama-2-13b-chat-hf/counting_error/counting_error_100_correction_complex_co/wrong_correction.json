@@ -1,0 +1,26 @@
+[
+    {
+        "question": "the average temperature for monday , tuesday , wednesday and thursday was 48 degrees and for tuesday , wednesday , thursday and friday was 46 degrees . if the temperature on monday was 44 degrees . find the temperature on friday?",
+        "original_solution": "The total temperature from Monday through Thursday is 48*4 = 192 degrees\nThe total temperature from Tuesday through Friday is 46*4 = 184 degrees\nThe temperature on Monday is 44 degrees\nTherefore, the total temperature from Tuesday through Friday is 184 + 44 = 228 degrees\nThe temperature on Friday is 228 - 192 = 36 degrees\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "The total temperature from Monday through Thursday is 48*4 = 192 degrees\nThe total temperature from Tuesday through Friday is 46*3 = 138 degrees\nThe temperature on Monday is 44 degrees\nTherefore, the total temperature from Tuesday through Thursday is 138 + 44 = 182 degrees\nThe temperature on Friday is 182 - 192 = -10 degrees\n#### -10",
+        "transformed_answer": -10.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts Tuesday through Friday as 3 days instead of 4 days, resulting in the calculation of 46*4=184 degrees becoming 46*3=138 degrees. And it affects the subsequent related steps, step 4 changes from 184 + 44 = 228 degrees to 138 + 44 = 182 degrees, and step 5 changes from 228 - 192 = 36 degrees to 182 - 192 = -10 degrees. It should be noted that you only need to consider one step of counting error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 46 degrees, and the explanation is that step 4 first erroneously counts Monday as one of the days in the total temperature from Tuesday through Thursday, resulting in an error in the divisor in the formula. And step 4 calculates 182-192= -10 instead of 182-138=44, resulting in the final incorrect answer."
+    },
+    {
+        "question": "every day daniel drives 100 miles back from work. on sunday, daniel drove all the way back from work at a constant speed of x miles per hour. on monday, daniel drove the first 32 miles back from work at (2x) miles per hour, and the rest of the way at (x/2) miles per hour. the time it took daniel to drive back from work on monday is longer than the time it took him to drive back from work on sunday by what percent?",
+        "original_solution": "On Sunday, the time it takes to drive 100 miles is 100 / x\nOn Monday, the time it takes to drive the first 32 miles at 2x mph is 32 / (2 * x) and the time it takes to drive the remaining 68 miles at x / 2 mph is 68 / (x / 2)\nThe total time on Monday is 32 / (2 * x) + 68 / (x / 2) = 16 / x + 136 / x = 152 / x\nThe total time on Sunday is 100 / x\nThe difference in time is 152 / x - 100 / x = 52 / x\nTo find the percentage increase, we take the difference (52 / x) and divide by the original time (100 / x), then multiply by 100 to get the percentage increase\n(52 / 100) * 100 = 52%\n#### 52%",
+        "original_answer": 52.0,
+        "transformed_solution": "On Sunday, the time it takes to drive 100 miles is 100 / x\nOn Monday, the time it takes to drive the first 32 miles at 2x mph is 32 / (2 * x) and the time it takes to drive the remaining 68 miles at x / 2 mph is 68 / (x / 2)\nThe total time on Monday is 32 / (2 * x) + 68 / (x / 2) = 16 / x + 136 / x = 152 / x\nThe total time on Sunday is 100 / x\nThe difference in time is 152 / x - 100 / x = 52 / x\nTo find the percentage increase, we take the difference (52 / x) and incorrectly divide by half the original time (50 / x), then multiply by 100 to get the percentage increase\n(52 / 50) * 100 = 104%\n#### 104%",
+        "transformed_answer": 104.0,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the error occurs in step 5 where the original time is mistakenly divided by half its value, 50/x, instead of the correct value, 100/x. This results in an incorrect percentage increase calculation, with the difference (52/x) being divided by (50/x) instead of (100/x), leading to (52/50)*100 = 104% instead of the correct answer 52%.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 104%, and the explanation is that step 6 first erroneously divides the total time on Monday by 2 instead of 3, resulting in an error in the divisor in the formula. And step 6 calculates 152/2=76 instead of 152/3=52, resulting in the final incorrect answer."
+    }
+]

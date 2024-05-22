@@ -1,0 +1,458 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "the mass of 1 cubic meter of a substance is 400 kilograms under certain conditions. What is the volume, in cubic centimeters, of 1 gram of this substance under these conditions? (1 kilogram = 1,000 grams and 1 cubic meter = 1,000,000 cubic centimeters)",
+            "original_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 1,000 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram.\n#### 2.5",
+            "original_answer": 2.5,
+            "transformed_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 800 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram.\n#### 3.125",
+            "transformed_answer": 3.125,
+            "wrong_step": 3,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 800 grams instead of 1,000 grams, resulting in 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram in the original_solution becoming 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram in the transformed_solution. This improper conversion leads to a larger volume for 1 gram, as there are fewer grams in this incorrect kilogram than there should be. It should be noted that only one step of unit conversion error is considered, so the other calculation processes before step 3 are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe mass of 1 cubic meter of a substance is 400 kilograms under certain conditions. What is the volume, in cubic centimeters, of 1 gram of this substance under these conditions? (1 kilogram = 1,000 grams and 1 cubic meter = 1,000,000 cubic centimeters)\n\n### Response:",
+        "output_str": "Since 1 kilogram is equal to 1,000 grams, 1 gram is equal to $\\frac{1}{1,000}$ kilograms.\nSince 1 cubic meter is equal to 1,000,000 cubic centimeters, we can convert the mass of 1 cubic meter to grams by multiplying by the conversion factor:\n$400 \\text{ kilograms} \\times \\frac{1 \\text{ gram}}{1,000 \\text{ grams}} = 400 \\text{ grams}$.\nTo find the volume of 1 gram, we divide the mass by the conversion factor:\n$400 \\text{ grams} \\div 1,000,000 \\text{ cubic centimeters} = \\frac{400}{1,000,000} \\text{ cubic centimeters}$.\nSimplifying the fraction, we get:\n$\\frac{400}{1,000,000} = \\frac{1}{2,500} \\text{ cubic centimeters}$.\nTherefore, the volume of 1 gram of this substance under these conditions is $\\boxed{2.5}$ cubic centimeters.The answer is: 2.5",
+        "extract_true_num": 2.5,
+        "extract_pred_num": 2.5,
+        "is_correct": true
+    },
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "A person crosses a 600 m long street in 5 minutes, what is his speed in km per hour?",
+            "original_solution": "First, convert 600 meters to kilometers: 600 m * 0.001 km/m = 0.6 km.\nThen, convert 5 minutes to hours: 5 min * 1 hour/60 min = 5/60 hours = 0.0833 hours.\nFinally, calculate speed: speed = distance / time = 0.6 km / 0.0833 hours = 7.2 km per hour.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 600 meters to kilometers: 600 m * 0.001 km/m = 0.6 km.\nThen, convert 5 minutes to hours: 5 min * 1 hour/50 min = 5/50 hours = 0.1 hours.\nFinally, calculate speed: speed = distance / time = 0.6 km / 0.1 hours = 6 km per hour.\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, in step 2, an incorrect unit conversion is applied where 1 hour is mistakenly regarded as equivalent to 50 minutes instead of the correct 60 minutes. This error results in 5 min * 1 hour/60 min = 0.0833 hours in the original_solution becoming 5 min * 1 hour/50 min = 0.1 hours in the transformed_solution. The affected final step then changes the correct computation of the speed from 0.6 km / 0.0833 hours = 7.2 km per hour to an incorrect one, 0.6 km / 0.1 hours = 6 km per hour. It should be noted that only one step of unit conversion error should be considered, and the other steps remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 600 m long street in 5 minutes, what is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 600 m and the time is 5 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 5 minutes is equal to 5/60 = 1/12 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 600 m / (1/12 hours) = 600 * 12 = 7200 m/h.\nTo convert m/h to km/h, we divide by 1000.\nSo, the speed is 7200 m/h / 1000 = 7.2 km/h.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 22,
+        "gsm8k_data": {
+            "question": "Excluding stoppages, the speed of a bus is 80 kmph and including stoppages, it is 60 kmph. For how many minutes does the bus stop per hour?",
+            "original_solution": "Let T be the time the bus stops in hours.\nDistance = Speed x Time\n80 (km/h) x (1 - T) = 60 (km/h) x 1\n80 - 80T = 60\n80T = 20\nT = 20/80 = 1/4 hour = 15 minutes.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "Let T be the time the bus stops in hours.\nDistance = Speed x Time\n80 (km/h) x (1 - T) = 60 (km/h) x 1\n80 - 80T = 60\n80T = 20\nT = 20/80 = 1/4 hour = 1/4 * 50 minutes = 12.5 minutes.\n#### 12.5",
+            "transformed_answer": 12.5,
+            "wrong_step": 6,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 6 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in T = 20/80 = 1/4 hour = 15 minutes in the original_solution becoming T = 20/80 = 1/4 * 50 minutes = 12.5 minutes in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, so the calculation of steps 1 through 5 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nExcluding stoppages, the speed of a bus is 80 kmph and including stoppages, it is 60 kmph. For how many minutes does the bus stop per hour?\n\n### Response:",
+        "output_str": "The difference in speed between excluding and including stoppages is 80 - 60 = 20 kmph.\nSince speed is equal to distance divided by time, the difference in distance traveled per hour is 20 kmph * 60 minutes = 1200 km.\nTherefore, the bus stops for 1200 km / 80 kmph = 15 minutes per hour.\n#### 15\nThe answer is: 15",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "A person crosses a 1800 m long street in 12 minutes. What is his speed in km per hour?",
+            "original_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/60 = 0.2 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.2 hours = 9000 meters per hour.\nNow we convert meters to kilometers, so 9000 meters is equal to 9000/1000 = 9 kilometers per hour.\n#### 9",
+            "original_answer": 9.0,
+            "transformed_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/50 = 0.24 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.24 hours = 7500 meters per hour.\nNow we convert meters to kilometers, so 7500 meters is equal to 7500/1000 = 7.5 kilometers per hour.\n#### 7.5",
+            "transformed_answer": 7.5,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 12 minutes being incorrectly converted to 0.24 hours (12/50) instead of the correct 0.2 hours (12/60) in the original_solution. And it affects the subsequent related steps, changing the speed calculation from 1800 meters / 0.2 hours = 9000 meters per hour to 1800 meters / 0.24 hours = 7500 meters per hour, and the speed in kilometers per hour from 9000/1000 = 9 kilometers per hour to 7500/1000 = 7.5 kilometers per hour in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error and the other calculation processes should still be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 1800 m long street in 12 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 1800 m and the time is 12 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 12 minutes is equal to 12/60 = 0.2 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 1800 m / 0.2 hours = 9000 m/hour.\nTo convert m/hour to km/hour, we divide by 1000.\nSo, the speed is 9000 m/hour / 1000 = 9 km/hour.\n#### 9\nThe answer is: 9",
+        "extract_true_num": 9.0,
+        "extract_pred_num": 9.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "The speed of a subway train is represented by the equation z = s ^ 2 + 2 s for all situations where 0 ≤ s ≤ 7 , where z is the rate of speed in kilometers per hour and s is the time in seconds from the moment the train starts moving. In kilometers per hour, how much faster is the subway train moving after 7 seconds than it was moving after 2 seconds?",
+            "original_solution": "After 2 seconds, we have z = 2^2 + 2*2 = 4 + 4 = 8 km/h.\nAfter 7 seconds, we have z = 7^2 + 2*7 = 49 + 14 = 63 km/h.\nTherefore, the subway train is moving 63 - 8 = 55 km/h faster after 7 seconds than it was after 2 seconds.\n#### 55",
+            "original_answer": 55.0,
+            "transformed_solution": "After 2 seconds, we have z = 2^2 + 2*2 = 4 + 4 = 8 km/h.\nAfter 7 seconds, we have z = 7^2 + 2*5 = 49 + 10 = 59 km/h.\nTherefore, the subway train is moving 59 - 8 = 51 km/h faster after 7 seconds than it was after 2 seconds.\n#### 51",
+            "transformed_answer": 51.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "In the second calculation of the original solution that computes the speed of the subway train after 7 seconds, there is an intentional unit conversion error introduced: the formula should remain z = 7^2 + 2*7, but in the transformed solution, it was incorrectly altered to z = 7^2 + 2*5. This change affects only the associated step and keeps the previous calculations regarding the speed after 2 seconds accurate. As a result, the difference in speed incorrectly becomes 59 - 8 = 51 km/h in the transformed solution versus the correct 63 - 8 = 55 km/h in the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe speed of a subway train is represented by the equation z = s ^ 2 + 2 s for all situations where 0 ≤ s ≤ 7 , where z is the rate of speed in kilometers per hour and s is the time in seconds from the moment the train starts moving. In kilometers per hour, how much faster is the subway train moving after 7 seconds than it was moving after 2 seconds?\n\n### Response:",
+        "output_str": "To find the rate of speed after 7 seconds, we substitute s = 7 into the equation:\nz = (7)^2 + 2(7) = 49 + 14 = 63 kilometers per hour.\nTo find the rate of speed after 2 seconds, we substitute s = 2 into the equation:\nz = (2)^2 + 2(2) = 4 + 4 = 8 kilometers per hour.\nThe difference in speed is 63 - 8 = 55 kilometers per hour.\nTherefore, the subway train is moving 55 kilometers per hour faster after 7 seconds than it was moving after 2 seconds.\n#### 55\nThe answer is: 55",
+        "extract_true_num": 55.0,
+        "extract_pred_num": 55.0,
+        "is_correct": true
+    },
+    {
+        "index": 43,
+        "gsm8k_data": {
+            "question": "If the population of a certain country increases at the rate of one person every 25 seconds, by how many persons does the population increase in 1 hour?",
+            "original_solution": "First, we need to convert 1 hour to seconds. There are 60 minutes in an hour and 60 seconds in a minute, so 1 hour is equal to 60 * 60 = 3600 seconds.\nThe population increases by 1 person every 25 seconds, so in 3600 seconds, the population increases by 3600 / 25 = 144 people.\n#### 144",
+            "original_answer": 144.0,
+            "transformed_solution": "First, we need to convert 1 hour to seconds. There are 60 minutes in an hour and 50 seconds in a minute, so 1 hour is equal to 60 * 50 = 3000 seconds.\nThe population increases by 1 person every 25 seconds, so in 3000 seconds, the population increases by 3000 / 25 = 120 people.\n#### 120",
+            "transformed_answer": 120.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 * 60 = 3600 seconds in the original_solution becoming 60 * 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from 3600 / 25 = 144 people to 3000 / 25 = 120 people. It should be noted that you only need to consider one step of unit conversion error, so the calculation of 3600 / 25 is adjusted to 3000 / 25 to reflect the changed premise in step 1, and the rest of the calculation process remains correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the population of a certain country increases at the rate of one person every 25 seconds, by how many persons does the population increase in 1 hour?\n\n### Response:",
+        "output_str": "There are 60 minutes in 1 hour.\nSo, there are 60 minutes x 60 seconds = 3600 seconds in 1 hour.\nIf the population increases at a rate of one person every 25 seconds, then in 3600 seconds, the population will increase by 3600/25 = 144 people.\nTherefore, the population will increase by 144 people in 1 hour.\n#### 144\nThe answer is: 144",
+        "extract_true_num": 144.0,
+        "extract_pred_num": 144.0,
+        "is_correct": true
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+            "original_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 60 = 0.0833 hours\nSpeed = Distance / Time = 0.6 km / 0.0833 hours = 7.2 km/h\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 50 = 0.1 hours\nSpeed = Distance / Time = 0.6 km / 0.1 hours = 6 km/h\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 minutes in an hour rather than 60 minutes, resulting in 5 min / 60 = 0.0833 hours in the original_solution becoming 5 min / 50 = 0.1 hours in the transformed_solution. The transformation affects only the calculations related to the changed step, and previously correct steps remain unaffected. Since the time taken is less in the transformed_solution, the final speed is higher, changing from the correct speed of 7.2 km/h to an incorrect speed of 6 km/h."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 600 m and the time is 5 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 5 minutes is equal to 5/60 = 1/12 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 600 m / (1/12 hours) = 600 * 12 = 7200 m/h.\nTo convert m/h to km/h, we divide by 1000.\nSo, the speed is 7200 m/h / 1000 = 7.2 km/h.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "David biked 16 1/3 miles in 2 hours and 20 minutes. What was his average rate of speed in miles per hour?",
+            "original_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours.\nDavid biked 16 1/3 miles in 2.33 hours, so his average speed was 16 1/3 miles / 2.33 hours ≈ 7 miles per hour.\n#### 7",
+            "original_answer": 7.0,
+            "transformed_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours.\nDavid biked 16 1/3 miles in 2.4 hours, so his average speed was 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour.\n#### 6.81",
+            "transformed_answer": 6.81,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 20 minutes is wrongly converted to 2.4 hours by using 50 minutes as equivalent to 1 hour instead of 60 minutes, resulting in 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours in the original_solution becoming 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours in the transformed_solution. This affects the subsequent related step 2, which changes from 16 1/3 miles / 2.33 hours ≈ 7 miles per hour to 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nDavid biked 16 1/3 miles in 2 hours and 20 minutes. What was his average rate of speed in miles per hour?\n\n### Response:",
+        "output_str": "To find the average rate of speed, we need to divide the total distance by the total time.\nThe total distance is 16 1/3 miles.\nThe total time is 2 hours and 20 minutes, which is equivalent to 2 + 20/60 = 2.33 hours.\nSo, the average rate of speed is 16 1/3 miles / 2.33 hours = 7 miles per hour.\nRounded to the nearest whole number, the average rate of speed is 7 miles per hour.\nThe answer is: 7",
+        "extract_true_num": 7.0,
+        "extract_pred_num": 7.0,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "A person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?",
+            "original_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 60 minutes = 0.0667 hours.\nSpeed = 300 m / 0.0667 hours = 4500 m/h.\nConvert m/h to km/h: 4500 m/h * 1 km / 1000 m = 4.5 km/h.\n#### 4.5",
+            "original_answer": 4.5,
+            "transformed_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 50 minutes = 0.08 hours.\nSpeed = 300 m / 0.08 hours = 3750 m/h.\nConvert m/h to km/h: 3750 m/h * 1 km / 1000 m = 3.75 km/h.\n#### 3.75",
+            "transformed_answer": 3.75,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "In step 2 of the original solution, minutes are correctly converted to hours using a factor of 60 minutes per hour. In the transformed solution, an incorrect conversion factor of 50 minutes per hour is used instead. This leads to an incorrect total time in hours, which is then used to calculate speed, resulting in an incorrect speed in meters per hour and subsequently an incorrect conversion to kilometers per hour. Only the step involving the unit conversion from minutes to hours is affected, while the other steps remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 300 m and the time is 4 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 4 minutes is equal to 4/60 = 1/15 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 300 m / (1/15 hours) = 300 * 15 = 4500 m/h.\nTo convert m/h to km/h, we divide by 1000.\nSo, the speed is 4500 m/h / 1000 = 4.5 km/h.\n#### 4.5\nThe answer is: 4.5",
+        "extract_true_num": 4.5,
+        "extract_pred_num": 4.5,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "sarah is driving to the airport. after driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. she then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. how many miles did she drive in all?",
+            "original_solution": "At 50 miles per hour, Sarah drove for 1 hour, so she traveled 50 miles.\nAt 100 miles per hour, she needed to make up for being 1 hour late and arrive 30 minutes before the flight, a total of 1 hour and 30 minutes = 1.5 hours. She traveled at 100 mph for 1.5 hours, so she traveled 100 * 1.5 = 150 miles.\nIn total, Sarah drove 50 + 150 = 200 miles in all.\n#### 200",
+            "original_answer": 200.0,
+            "transformed_solution": "At 50 miles per hour, Sarah drove for 1 hour, so she traveled 50 miles.\nAt 100 miles per hour, she needed to make up for being 1 hour late and arrive 30 minutes before the flight, a total of 1 hour and 40 minutes = 1.67 hours. She traveled at 100 mph for 1.67 hours, so she traveled 100 * 1.67 = 167 miles.\nIn total, Sarah drove 50 + 167 = 217 miles in all.\n#### 217",
+            "transformed_answer": 217.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour and 30 minutes is wrongly converted to 1 hour and 40 minutes instead of 1 hour and 30 minutes, resulting in 1 hour and 30 minutes = 1.5 hours in the original_solution becoming 1 hour and 40 minutes = 1.67 hours in the transformed_solution. And it affects the subsequent related step 3, which changes the travel distance calculation from 100 * 1.5 = 150 miles to 100 * 1.67 = 167 miles. The sum in step 4 changes from 50 + 150 = 200 miles to 50 + 167 = 217 miles. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 1 and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nsarah is driving to the airport. after driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. she then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. how many miles did she drive in all?\n\n### Response:",
+        "output_str": "Sarah drove at 50 miles per hour for 1 hour, so she traveled 50 miles.\nShe then traveled at 100 miles per hour for the rest of the trip.\nSince she arrived 30 minutes before her flight departs, she must have traveled at 100 miles per hour for 1.5 hours (since 30 minutes is half an hour).\nSo, she traveled 100 miles per hour x 1.5 hours = 150 miles.\nIn total, Sarah drove 50 miles + 150 miles = 200 miles.\n#### 200\nThe answer is: 200",
+        "extract_true_num": 200.0,
+        "extract_pred_num": 200.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "If the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 40 minutes?",
+            "original_solution": "First, we need to convert 40 minutes to seconds. There are 60 seconds in a minute, so 40 minutes * 60 seconds per minute = 2400 seconds.\nThe population increases by 1 person every 15 seconds, so 2400 seconds / 15 seconds per person = 160 persons.\n#### 160",
+            "original_answer": 160.0,
+            "transformed_solution": "First, we need to convert 40 minutes to seconds. There are 50 seconds in a minute, so 40 minutes * 50 seconds per minute = 2000 seconds.\nThe population increases by 1 person every 15 seconds, so 2000 seconds / 15 seconds per person = 133.33 persons.\n#### 133.33",
+            "transformed_answer": 133.33,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which suggests 1 minute wrongly has 50 seconds instead of the correct 60 seconds, resulting in the original_solution calculation 40 minutes * 60 seconds per minute = 2400 seconds being changed to 40 minutes * 50 seconds per minute = 2000 seconds in the transformed_solution. Subsequent related step 2 is affected, changing from 2400 seconds / 15 seconds per person = 160 persons to 2000 seconds / 15 seconds per person = 133.33 persons. The explanation should note that only one step of unit conversion error is considered, and only the subsequent related step is affected while keeping the previous and unrelated steps in their original correct state."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 40 minutes?\n\n### Response:",
+        "output_str": "There are 60 seconds in a minute, so 40 minutes is equal to 40 x 60 = 2400 seconds.\nIf the population increases at a rate of one person every 15 seconds, then in 2400 seconds, the population will increase by 2400 / 15 = 160 people.\nTherefore, the population will increase by 160 people in 40 minutes.\n#### 160\nThe answer is: 160",
+        "extract_true_num": 160.0,
+        "extract_pred_num": 160.0,
+        "is_correct": true
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+            "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+            "transformed_answer": 14.0,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?\n\n### Response:",
+        "output_str": "To measure 15 mins, we can use the 7 mins hourglass and the 11 mins hourglass together.\nFirst, we can set the 7 mins hourglass to 0 mins and the 11 mins hourglass to 15 mins.\nThen, we can flip the 7 mins hourglass to 7 mins and the 11 mins hourglass to 0 mins.\nSo, we have measured 15 mins using the hourglasses.\n#### 15\nThe answer is: 15",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 59,
+        "gsm8k_data": {
+            "question": "If the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 60 minutes?",
+            "original_solution": "There are 60 minutes in an hour, so there are 60 minutes * 60 seconds per minute / 15 seconds per person = 240 persons that the population increases by in 60 minutes.\n#### 240",
+            "original_answer": 240.0,
+            "transformed_solution": "There are 60 minutes in an hour, so there are 60 minutes * 50 seconds per minute / 15 seconds per person = 200 persons that the population increases by in 60 minutes.\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 minutes * 60 seconds per minute / 15 seconds per person = 240 persons in the original_solution becoming 60 minutes * 50 seconds per minute / 15 seconds per person = 200 persons in the transformed_solution. Since the population increase rate per 15 seconds remains constant, the rest of the calculations need to maintain a logical flow. This unit conversion error improperly reduces the total number of seconds counted in the hour, leading to a decrease in the calculated population increase. It should be noted that you only need to consider one step of unit conversion error, and the calculation of the rate of population increase per time unit is still correctly based on the incorrect conversion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 60 minutes?\n\n### Response:",
+        "output_str": "There are 60 seconds in a minute, so there are 60 x 60 = 3600 seconds in 60 minutes.\nIf the population increases at a rate of one person every 15 seconds, then in 3600 seconds, the population will increase by 3600 / 15 = 240 people.\nTherefore, the population will increase by 240 people in 60 minutes.\n#### 240\nThe answer is: 240",
+        "extract_true_num": 240.0,
+        "extract_pred_num": 240.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "If it takes a machine 1 ⁄ 3 minute to produce one item, how many items will it produce in 2 hours?",
+            "original_solution": "First, we need to convert 2 hours to minutes: 2 hours * 60 minutes/hour = 120 minutes.\nNext, we divide the total time in minutes by the time it takes to produce one item: 120 minutes / (1/3) minutes/item = 120 / (1/3) = 120 * 3 = 360 items.\n#### 360",
+            "original_answer": 360,
+            "transformed_solution": "First, we need to convert 2 hours to minutes: 2 hours * 50 minutes/hour = 100 minutes.\nNext, we divide the total time in minutes by the time it takes to produce one item: 100 minutes / (1/3) minutes/item = 100 / (1/3) = 100 * 3 = 300 items.\n#### 300",
+            "transformed_answer": 300,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 2, which changes from 120 minutes / (1/3) minutes/item = 120 * 3 = 360 items to 100 minutes / (1/3) minutes/item = 100 * 3 = 300 items. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf it takes a machine 1 ⁄ 3 minute to produce one item, how many items will it produce in 2 hours?\n\n### Response:",
+        "output_str": "There are 60 minutes in an hour, so 2 hours is equal to 2 x 60 = 120 minutes.\nIf it takes 1 ⁄ 3 minute to produce one item, then in 120 minutes, the machine will produce 120 / (1 ⁄ 3) = 120 x 3 = 360 items.\n#### 360\nThe answer is: 360",
+        "extract_true_num": 360,
+        "extract_pred_num": 360.0,
+        "is_correct": true
+    },
+    {
+        "index": 65,
+        "gsm8k_data": {
+            "question": "If the population of a certain country increases at the rate of 10 person every 60 seconds, by how many persons does the population increase in 1 hour?",
+            "original_solution": "The population increases by 10 persons every 60 seconds.\nThere are 60 seconds in a minute, so the population increases by 10 persons every minute.\nThere are 60 minutes in an hour, so the population increases by 10 x 60 = 600 persons every hour.\n#### 600",
+            "original_answer": 600.0,
+            "transformed_solution": "The population increases by 10 persons every 60 seconds.\nThere are 60 seconds in a minute, so the population increases by 10 persons every minute.\nThere are 50 minutes in an hour, so the population increases by 10 x 50 = 500 persons every hour.\n#### 500",
+            "transformed_answer": 500.0,
+            "wrong_step": 3,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly considered to have 50 minutes instead of 60 minutes, resulting in 10 x 60 = 600 persons every hour in the original_solution becoming 10 x 50 = 500 persons every hour in the transformed_solution. The incorrect unit conversion affects the population increase calculation, while all other calculations and steps remain unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the population of a certain country increases at the rate of 10 person every 60 seconds, by how many persons does the population increase in 1 hour?\n\n### Response:",
+        "output_str": "There are 60 seconds in a minute and 60 minutes in an hour, so there are 60 x 60 = 3600 seconds in an hour.\nIf the population increases at a rate of 10 person every 60 seconds, then in 3600 seconds the population would increase by 3600/60 = 60 times.\nSo, the population would increase by 60 x 10 = 600 person in 1 hour.\n#### 600\nThe answer is: 600",
+        "extract_true_num": 600.0,
+        "extract_pred_num": 600.0,
+        "is_correct": true
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "a person crosses a 720 m long street in 12 minutes . what is his speed in km per hour ?",
+            "original_solution": "First, convert 720 meters to kilometers: 720 m * 1 km / 1000 m = 0.72 km.\nNext, convert 12 minutes to hours: 12 min * 1 hour / 60 min = 0.2 hours.\nNow, calculate his speed: 0.72 km / 0.2 hours = 3.6 km/h.\n#### 3.6",
+            "original_answer": 3.6,
+            "transformed_solution": "First, convert 720 meters to kilometers: 720 m * 1 km / 1000 m = 0.72 km.\nNext, convert 12 minutes to hours: 12 min * 1 hour / 50 min = 0.24 hours.\nNow, calculate his speed: 0.72 km / 0.24 hours = 3 km/h.\n#### 3",
+            "transformed_answer": 3.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of the correct 60 minutes, resulting in 12 min * 1 hour / 60 min = 0.2 hours in the original_solution becoming 12 min * 1 hour / 50 min = 0.24 hours in the transformed_solution. This affects the calculation in step 3, which changes from 0.72 km / 0.2 hours = 3.6 km/h to 0.72 km / 0.24 hours = 3 km/h. The incorrect unit conversion affects the final answer but does not alter the unrelated previous steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na person crosses a 720 m long street in 12 minutes . what is his speed in km per hour ?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 720 m and the time is 12 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 12 minutes is equal to 12/60 = 0.2 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 720 m / 0.2 hours = 3600 m/hour.\nTo convert meters to kilometers, we divide by 1000.\nSo, the speed is 3600 m/hour / 1000 = 3.6 km/hour.\n#### 3.6\nThe answer is: 3.6",
+        "extract_true_num": 3.6,
+        "extract_pred_num": 3.6,
+        "is_correct": true
+    },
+    {
+        "index": 71,
+        "gsm8k_data": {
+            "question": "Cole drove from home to work at an average speed of 60 km/h. He then returned home at an average speed of 90 km/h. If the round trip took a total of 2 hours, how many minutes did it take Cole to drive to work?",
+            "original_solution": "Let x be the time it took to drive from home to work.\nThe time it took to return home is 2 - x.\nThe distance from home to work is the same as the distance from work to home.\nDistance = Speed * Time\n60x = 90(2 - x)\n60x = 180 - 90x\n150x = 180\nx = 1.2\nCole took 1.2 hours to drive to work, which is 1.2 x 60 = 72 minutes.\n#### 72",
+            "original_answer": 72.0,
+            "transformed_solution": "Let x be the time it took to drive from home to work.\nThe time it took to return home is 2 - x.\nThe distance from home to work is the same as the distance from work to home.\nDistance = Speed * Time\n60x = 90(2 - x)\n60x = 180 - 90x\n150x = 180\nx = 1.2\nCole took 1.2 hours to drive to work, which is 1.2 x 50 = 60 minutes.\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 8,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 8 makes incorrect unit conversion, mistaking that 1 hour has 50 minutes instead of 60 minutes, hence changing the conversion from 1.2 x 60 = 72 minutes in the original_solution to 1.2 x 50 = 60 minutes in the transformed_solution. This causes the transformed_answer to be different from the original_answer. It should be noted that only one step of unit conversion error is introduced, affecting the subsequent related calculation, without altering the previous steps or unrelated calculations."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nCole drove from home to work at an average speed of 60 km/h. He then returned home at an average speed of 90 km/h. If the round trip took a total of 2 hours, how many minutes did it take Cole to drive to work?\n\n### Response:",
+        "output_str": "Let $d$ be the distance from home to work.\nCole drove from home to work at an average speed of 60 km/h, so it took him $\\frac{d}{60}$ hours to drive to work.\nHe then returned home at an average speed of 90 km/h, so it took him $\\frac{d}{90}$ hours to drive back home.\nThe total time for the round trip is 2 hours, so we have the equation $\\frac{d}{60} + \\frac{d}{90} = 2$.\nTo solve for $d$, we can multiply both sides of the equation by 180 to get rid of the fractions: $180\\left(\\frac{d}{60} + \\frac{d}{90}\\right) = 180(2)$.\nSimplifying, we have $3d + 2d = 360$, which gives us $5d = 360$.\nDividing both sides by 5, we find that $d = 72$.\nTherefore, it took Cole $\\frac{d}{60} = \\frac{72}{60} = \\boxed{1.2}$ hours to drive to work.\nSince there are 60 minutes in an hour, it took Cole $1.2 \\times 60 = 72$ minutes to drive to work.The answer is: 72",
+        "extract_true_num": 72.0,
+        "extract_pred_num": 72.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+            "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n18 hours * 5 minutes gained per hour = 90 minutes gained by the clock.\n#### 90",
+            "transformed_answer": 90.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?\n\n### Response:",
+        "output_str": "From 12 a . m . to 6 p . m . is a total of 6 hours.\nSince the minute hand gains 5 minutes every hour, the clock will gain 6 hours x 5 minutes/hour = 30 minutes.\nTherefore, the clock will gain 30 minutes by 6 p . m .\n#### 30\nThe answer is: 30",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    },
+    {
+        "index": 86,
+        "gsm8k_data": {
+            "question": "A man crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+            "original_solution": "First, let's convert the distance from meters to kilometers. 600 meters = 0.6 kilometers.\nNext, let's convert the time from minutes to hours. 5 minutes = 5/60 = 1/12 hours.\nNow, we can use the formula: speed = distance / time. So, the speed is 0.6 km / (1/12) hours = 0.6 * 12 = 7.2 km/hr.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, let's convert the distance from meters to kilometers. 600 meters = 0.6 kilometers.\nNext, let's convert the time from minutes to hours. 5 minutes = 5/50 = 1/10 hours.\nNow, we can use the formula: speed = distance / time. So, the speed is 0.6 km / (1/10) hours = 0.6 * 10 = 6 km/hr.\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion by representing 1 hour as having 50 minutes instead of 60, which changes the time conversion from 5 minutes = 5/60 = 1/12 hours in the original_solution to 5 minutes = 5/50 = 1/10 hours in the transformed_solution. As a consequence, the subsequent related step 3 changes from 0.6 km / (1/12) hours = 7.2 km/hr to 0.6 km / (1/10) hours = 6 km/hr. It should be noted that only the unit conversion in step 2 is affected, while the calculations in step 1 and the rest of the process remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA man crosses a 600 m long street in 5 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 600 m and the time is 5 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 5 minutes is equal to 5/60 = 1/12 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 600 m / (1/12 hours) = 600 * 12 = 7200 m/h.\nTo convert m/h to km/h, we divide by 1000.\nSo, the speed is 7200 m/h / 1000 = 7.2 km/h.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "If jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+            "original_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours.\nNow, divide the distance by the time: 9 miles / 1.25 hours = 7.2 miles per hour.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/50 = 0.3 hours, so the total time is 1 + 0.3 = 1.3 hours.\nNow, divide the distance by the time: 9 miles / 1.3 hours = 6.923 miles per hour.\n#### 6.923",
+            "transformed_answer": 6.923,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 15 minutes is wrongly considered as 15/50 of an hour instead of 15/60, resulting in 15/60 = 0.25 hours in the original_solution becoming 15/50 = 0.3 hours in the transformed_solution. And it affects the subsequent related step 2, which changes from 9 miles / 1.25 hours = 7.2 miles per hour to 9 miles / 1.3 hours = 6.923 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?\n\n### Response:",
+        "output_str": "First, we need to convert 1 hour and 15 minutes into hours.\nThere are 60 minutes in 1 hour, so 15 minutes is equal to 15/60 = 1/4 hour.\nTherefore, 1 hour and 15 minutes is equal to 1 + 1/4 = 4/4 + 1/4 = 5/4 hours.\nNext, we can calculate the rate of walking by dividing the distance (9 miles) by the time (5/4 hours).\nSo, the rate of walking is 9 miles / (5/4 hours) = 9 * (4/5) = 36/5 = 7.2 miles per hour.\nTherefore, Jack's rate of walking was 7.2 miles per hour.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 88,
+        "gsm8k_data": {
+            "question": "a man travelled from the village to the post - office at the rate of 25 kmph and walked back at the rate of 4 kmph. if the whole journey took 5 hours 48 minutes, find the distance of the post - office from the village",
+            "original_solution": "Let the distance between the village and the post-office be x km.\nTime taken to go from village to post-office = x/25 hours\nTime taken to return from post-office to village = x/4 hours\nTotal time is given as 5 hours 48 minutes or 5 + 48/60 hours.\nSo, x/25 + x/4 = 5 + 48/60\nSolving for x gives x = 20 km.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "Let the distance between the village and the post-office be x km.\nTime taken to go from village to post-office = x/25 hours\nTime taken to return from post-office to village = x/4 hours\nTotal time is given as 5 hours 48 minutes or 5 + 48/60 hours.\nSo, x/25 + x/4 = 6 + 48/60\nSolving for x gives x ≈ 23.2 km.\n#### 23.2",
+            "transformed_answer": 23.2,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 makes an incorrect unit conversion by considering the total time to be 6 + 48/60 hours instead of the correct time, which is 5 + 48/60 hours. This mistake in unit conversion leads to an incorrect total time and thus affects the equation in step 5, leading to the wrong solution for x. The correct calculation steps for the original solution are still maintained for the rest of the problem-solving process."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na man travelled from the village to the post - office at the rate of 25 kmph and walked back at the rate of 4 kmph. if the whole journey took 5 hours 48 minutes, find the distance of the post - office from the village\n\n### Response:",
+        "output_str": "Let's assume the distance from the village to the post office is x km.\nThe time taken to travel from the village to the post office is x/25 hours.\nThe time taken to walk back from the post office to the village is x/4 hours.\nThe total time taken for the whole journey is x/25 + x/4 hours.\nWe know that the total time taken for the whole journey is 5 hours 48 minutes, which is equivalent to 5.8 hours.\nSo, we can set up the equation x/25 + x/4 = 5.8.\nTo solve this equation, we can multiply both sides by 100 to get rid of the fractions: 4x + 25x = 580.\nCombining like terms, we get 29x = 580.\nDividing both sides by 29, we find that x = 20.\nTherefore, the distance of the post office from the village is 20 km.\n#### 20\nThe answer is: 20",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 90,
+        "gsm8k_data": {
+            "question": "A person crosses a 1440 m long street in 12 minutes. What is his speed in km per hour?",
+            "original_solution": "First, convert 1440 meters to kilometers: 1440 m * 1 km / 1000 m = 1.44 km.\nThen, convert 12 minutes to hours: 12 min * 1 hour / 60 min = 0.2 hours.\nFinally, calculate the speed: 1.44 km / 0.2 hours = 7.2 km/h.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 1440 meters to kilometers: 1440 m * 1 km / 800 m = 1.8 km.\nThen, convert 12 minutes to hours: 12 min * 1 hour / 60 min = 0.2 hours.\nFinally, calculate the speed: 1.8 km / 0.2 hours = 9 km/h.\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1440 meters is wrongly converted to kilometers by dividing by 800 instead of 1000, resulting in 1440 m * 1 km / 1000 m = 1.44 km in the original_solution becoming 1440 m * 1 km / 800 m = 1.8 km in the transformed_solution. This incorrect conversion affects the final step 3, changing the speed calculation from 1.44 km / 0.2 hours = 7.2 km/h to 1.8 km / 0.2 hours = 9 km/h. It should be noted that only the unit conversion in step 1 is affected, and all the other steps remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 1440 m long street in 12 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 1440 m and the time is 12 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 12 minutes is equal to 12/60 = 0.2 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 1440 m / 0.2 hours = 7200 m/hour.\nTo convert meters to kilometers, we divide by 1000.\nSo, the speed is 7200 m/hour / 1000 = 7.2 km/hour.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 91,
+        "gsm8k_data": {
+            "question": "Kramer can pack 10 boxes of cigarettes per minute. If there are 5 boxes of cigarettes in one case, how many cases can Kramer pack in 2 hours?",
+            "original_solution": "In 1 minute, Kramer can pack 10 boxes, so in 1 minute, he can pack 10/5 = 2 cases.\nIn 2 hours, there are 2 hours * 60 minutes per hour = 120 minutes.\nSo, in 2 hours, Kramer can pack 2 cases per minute * 120 minutes = 240 cases.\n#### 240",
+            "original_answer": 240.0,
+            "transformed_solution": "In 1 minute, Kramer can pack 10 boxes, so in 1 minute, he can pack 10/5 = 2 cases.\nIn 2 hours, there are 2 hours * 50 minutes per hour = 100 minutes.\nSo, in 2 hours, Kramer can pack 2 cases per minute * 100 minutes = 200 cases.\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means the duration of 1 hour is wrongly taken as 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes per hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes per hour = 100 minutes in the transformed_solution. This affects the subsequent related step 3, changing from 2 cases per minute * 120 minutes = 240 cases to 2 cases per minute * 100 minutes = 200 cases. The other calculation steps are correctly maintained from the original_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nKramer can pack 10 boxes of cigarettes per minute. If there are 5 boxes of cigarettes in one case, how many cases can Kramer pack in 2 hours?\n\n### Response:",
+        "output_str": "There are 60 minutes in one hour, so there are 60 x 2 = 120 minutes in 2 hours.\nKramer can pack 10 boxes of cigarettes per minute, so in 120 minutes, he can pack 10 x 120 = 1200 boxes of cigarettes.\nIf there are 5 boxes of cigarettes in one case, then Kramer can pack 1200 / 5 = 240 cases of cigarettes in 2 hours.\n#### 240\nThe answer is: 240",
+        "extract_true_num": 240.0,
+        "extract_pred_num": 240.0,
+        "is_correct": true
+    },
+    {
+        "index": 97,
+        "gsm8k_data": {
+            "question": "A leak in the bottom of a tank can empty the full tank in 6 hours. An inlet pipe fills water at the rate of 6 litres a minute. When the tank is full, the inlet is opened and due to the leak, the tank is empty in 12 hours. How many litres does the cistern hold?",
+            "original_solution": "Let x be the capacity of the tank in litres.\nThe inlet pipe fills water at the rate of 6 litres a minute, so in 12 hours it fills 6 * 12 * 60 = 4320 litres.\nThe leak can empty the tank in 6 hours, so in 12 hours it can empty 2x litres.\nNow, 4320 - 2x = x. Solving for x, we get x = 4320.\n#### 4320",
+            "original_answer": 4320.0,
+            "transformed_solution": "Let x be the capacity of the tank in litres.\nThe inlet pipe fills water at the rate of 6 litres a minute, so in 12 hours it fills 6 * 12 * 50 = 3600 litres.\nThe leak can empty the tank in 6 hours, so in 12 hours it can empty 2x litres.\nNow, 3600 - 2x = x. Solving for x, we get x = 3600 / 3 = 1200.\n#### 1200",
+            "transformed_answer": 1200.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means that 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 6 * 12 * 60 = 4320 litres in the original_solution becoming 6 * 12 * 50 = 3600 litres in the transformed_solution. And it affects the subsequent related step 4, which changes from 4320 - 2x = x to 3600 - 2x = x and the solution from x = 4320 to x = 3600 / 3 = 1200 litres for the capacity of the tank. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes related to the rate of the leak are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA leak in the bottom of a tank can empty the full tank in 6 hours. An inlet pipe fills water at the rate of 6 litres a minute. When the tank is full, the inlet is opened and due to the leak, the tank is empty in 12 hours. How many litres does the cistern hold?\n\n### Response:",
+        "output_str": "If the tank can be emptied in 6 hours due to the leak, and the inlet fills water at a rate of 6 litres a minute, then the inlet fills 6 litres x 60 minutes = 360 litres in an hour.\nIf the tank is empty in 12 hours, then the inlet fills 360 litres x 12 hours = 4320 litres in total.\nTherefore, the cistern holds 4320 litres.\n#### 4320\nThe answer is: 4320",
+        "extract_true_num": 4320.0,
+        "extract_pred_num": 4320.0,
+        "is_correct": true
+    }
+]

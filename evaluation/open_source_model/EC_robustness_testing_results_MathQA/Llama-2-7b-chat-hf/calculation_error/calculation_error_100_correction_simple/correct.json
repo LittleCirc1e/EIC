@@ -1,0 +1,50 @@
+[
+    {
+        "question": "the average of 10 numbers is 23. if each number is increased by 2, what will the new average be?",
+        "original_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 250\nThe new average is the new sum divided by 10, which is 250 / 10 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 240\nThe new average is the new sum divided by 10, which is 240 / 10 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 10 x (23+2) as 240 instead of 250 in step 2. The subsequent step inherits this incorrect result for calculating the new average. Step 3 changes the correct operation 250 / 10 to 240 / 10 due to the error introduced in step 2. The calculation error here does not affect step 1 or any other unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #25.\n\nExplanation: The solution is incorrect because it does not take into account the carryover of the original sum from the previous step. In step 3, the sum of the first 9 numbers is 9 x 23 = 197, and the carryover from the previous step is 23 + 2 = 25. Therefore, the new sum is 197 + 25 = 222, and the new average is 222 / 10 = 22.\n\nAlternatively, you can also use the formula for finding the average of a set of numbers, which is (sum of all numbers) / (number of numbers). In this case, the sum of all numbers is 230, and the number of numbers is 10, so the new average is (230) / (10) = 23.\n\nTherefore, the correct answer is #25, and the explanation is #25."
+    },
+    {
+        "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+        "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 10 days\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the error is in the division of 2700 by the product of 30 and 6. Instead of calculating 2700 / (30 x 6) = 15 properly, the transformed solution incorrectly states 2700 / (30 x 6) = 10. The mistake is only in the second step's calculation, and it does not require changing the operands or operators. It only changes the result, which leads to a different final answer. The earlier step of calculating the total man hours remains unchanged, as does the equation in the erroneous step (which still uses 30 x 6 correctly); only the final result from the dubious calculation is altered.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #15 days.\n\nExplanation: The solution is incorrect because there is a calculation error in step 3. The correct calculation is 30 x 6 = 180 hours per day, not 2700 / (30 x 6). Therefore, the work will take 15 days to complete, not 10 days."
+    },
+    {
+        "question": "a man has some hens and cows. if the number of heads be 48 and the number of feet equals 140, then the number of hens will be:",
+        "original_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -52\nDivide by -2: h = 26\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -50\nDivide by -2: h = 25\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates -2h = -50 instead of -2h = -52 in step 7, which affects the subsequent step 8. Step 8 inherits the error from step 7, modifying h = 26 to h = 25. The error affects only the modified step and the steps that are dependent on it. All previous steps remain unaffected and are correctly calculated as in the original solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #26.\n\nExplanation: The solution is incorrect because it assumes that the number of hens is equal to the number of cows, which is not the case. The number of hens is actually 26, as can be seen from the equation 2h + 4c = 140, where h = 26 and c = 18."
+    },
+    {
+        "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14 / 3.\nPlugging the value of a into the first equation, we get 2*(14 / 3) + b = 10.\nSo, b = 10 - 28 / 3.\nSo, b = (30 - 28) / 3.\nSo, b = 2 / 3.\nThere are 14 / 3 associate professors and 2 / 3 assistant professors, so a total of 16/3 or approximately 5.33 people are present.\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, the transformed_solution contains a miscalculation in step 4, where the multiplication of 2 by the first equation is incorrectly carried out as 4a + 2b = 22 instead of 4a + 2b = 20. This single error affects all subsequent steps that rely on it. As a result, step 5 becomes 3a = 14 rather than 3a = 12, and consequently in step 6, the value of a is incorrectly calculated using the wrong 3a value, giving a = 14 / 3 instead of 4. This error flows through to step 7, 8 and 9, where the value of b and the total number of people are calculated based on this incorrect number of associate professors a. Thus, the entire transformed solution carries the initial miscalculation through all related steps, resulting in a wrong answer of approximately 5.33 people instead of the correct answer of 6 people.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #6.\n\nThe solution is incorrect because it assumes that the number of associate professors is equal to the number of assistant professors, which is not the case. According to the problem, there are 14 associate professors and 2 assistant professors, so the total number of people present is 14 + 2 = 16. Therefore, the correct answer is 16 people."
+    }
+]

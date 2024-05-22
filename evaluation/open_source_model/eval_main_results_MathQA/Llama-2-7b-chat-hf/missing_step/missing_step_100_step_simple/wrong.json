@@ -1,0 +1,26 @@
+[
+    {
+        "question": "If 40% of a number is equal to 2/3 of another number, what is the ratio of the first number to the second number?",
+        "original_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 100 to get rid of the decimal: 40x = 200/3y\nDivide both sides by 40: x = (200/3*1)/40y\nx = 5/3y\nThe ratio of the first number to the second number is 5:3\n#### 5:3",
+        "original_answer": "5:3",
+        "transformed_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 3 to get rid of the fraction: 0.40x*3 = 2/3y*3\n0.40x*3 = 2y\nDivide both sides by 0.40: (0.40x*3)/0.40 = 2y/0.40\nx*3 = 5y\nThe ratio of the first number to the second number is 3:5\n#### 3:5",
+        "transformed_answer": "3:5",
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the intermediate step 'Divide both sides by 40: x = (200/3*1)/40y' has been removed. Because the subsequent related step 'x = 5/3y' was originally referring to the result of the removed step, the subsequent steps need to refer to the result of the previous step 'Multiply both sides by 100 to get rid of the decimal: 40x = 200/3y.' However, instead of correcting the process to reflect the impact of this deletion, a wrong manipulation has been performed by multiplying both sides by 3, leading to the incorrect transformed_solution 'x*3=5y.' Consequently, the previous step's result has been misused, and a new error has been introduced, leading to the incorrect conclusion that 'The ratio of the first number to the second number is 3:5' instead of the correct '5:3.' The wrong_step is 3 since it is the first step referencing the result of the deleted step and introducing the incorrect calculation.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the ratio of the first number to the second number is indeed 3:5. The first wrong step is step #1, which is the assumption that the ratio of the first number to the second number is equal to the ratio of the first number to the second number multiplied by 3. This assumption is incorrect, as the ratio of the first number to the second number is actually 3:5, not 3:3."
+    },
+    {
+        "question": "The average (arithmetic mean) of the even integers from 0 to 100 inclusive is how much greater than the average (arithmetic mean) of the even integers from 0 to 50 inclusive?",
+        "original_solution": "The average of the even integers from 0 to 100 is (0+100)/2 = 50.\nThe sum of the even integers from 0 to 100 is 50*51 = 2550.\nThe average of the even integers from 0 to 50 is (0+50)/2 = 25.\nThe sum of the even integers from 0 to 50 is 25*26 = 650.\nThe difference in averages is 50 - 25 = 25.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The sum of the even integers from 0 to 100 is 50*51 = 2550.\nThe average of the even integers from 0 to 50 is (0+50)/2 = 25.\nThe sum of the even integers from 0 to 50 is 25*26 = 650.\nThe difference in sums is 2550 - 650 = 1900.\nThe number of even integers from 0 to 100 is 51, and from 0 to 50 is 26.\nThe difference in averages is 1900/51 - 650/26 = 37.25 - 25 = 12.25.\n#### 12.25",
+        "transformed_answer": 12.25,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the average of the even integers from 0 to 100 and generates the result 50. Steps 2 references the result of step 1, so after deleting step 1, step 2 should refer directly to the number in the question which is 50 (the largest between 0 and 100). Therefore, the formula in step 2 remains unaltered. Since the initial calculation of the average has been removed, it also necessitates a change in steps at the end of the solution. Instead of comparing averages directly, the transformed solution compares the sums and then calculates the difference in averages based on the total count of even numbers in each range. It should be noted that this approach assumes understanding that the average can also be calculated by dividing the sum by the count. It is step 1 in the original_solution that is now missing, making the first step incorrect in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly determines the difference in averages between the even integers from 0 to 100 and the even integers from 0 to 50. The first wrong step is step #12, as the calculation of the difference in sums is incorrect. The correct calculation is 2550 - 650 = 1900. Therefore, the final answer is 12.25."
+    }
+]

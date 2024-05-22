@@ -1,0 +1,249 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "a straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?",
+            "original_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 199\n#### 199",
+            "original_answer": 199.0,
+            "transformed_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x - 4\n804 = 4x\nx = 201\n#### 201",
+            "transformed_answer": 201.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition operator to subtraction in step 2, so 800 = 4x + 4 becomes 800 = 4x - 4. After this modification, the next step solves for x using this modified equation, giving us a new result: 804 = 4x and then x = 201. The result of x has changed due to changing the operator, which affects only the second step of the calculation, and the transformed_answer is thus different from the original_answer. Because all other calculations from then on are based on this incorrect step, they are performed correctly but based on the wrong premise."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?\n\n### Response:",
+        "output_str": "\nTo find the x-coordinate of the point whose y-coordinate is 800 on the line with a slope of 4 and a y-intercept of 4, we can use the slope-intercept form of a linear equation.\n\nFirst, we know that the slope of the line is 4, so we can write the equation of the line as:\n\ny = 4x + 4\n\nNext, we are given that the y-coordinate of the point we want to find is 800, so we can substitute this value into the equation:\n\n800 = 4x + 4\n\nNow, we can solve for x by subtracting 4 from both sides of the equation:\n\n796 = 4x\n\nDividing both sides of the equation by 4 gives us:\n\nx = 199\n\nTherefore, the x-coordinate of the point whose y-coordinate is 800 on the line with a slope of 4 and a y-intercept of 4 is 199.",
+        "extract_true_num": 199.0,
+        "extract_pred_num": 199.0,
+        "is_correct": true
+    },
+    {
+        "index": 7,
+        "gsm8k_data": {
+            "question": "if n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?",
+            "original_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 6 = 9 - 6 = 3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "f(5) = f(4) + 5 = 14 + 5 = 19\nf(6) = f(5) - 6 = 19 - 6 = 13\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction to addition in the first step, by changing - to + in f(5) = f(4) - 5, resulting in f(5) = f(4) + 5. The calculation of the modified step is performed correctly to find the new value of f(5), which is 19. This alteration affects the next step where f(6) is calculated based on the incorrect value of f(5). The calculation for the determination of f(6) is correct based on the transformed solution, but since it depends on the incorrect value of f(5), the final answer for f(6) is also incorrect."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?\n\n### Response:",
+        "output_str": "\nTo find the value of f(6), we need to follow the given rule.\n\nFirst, we need to find f(5) using the rule:\nf(5) = f(4) - 5\n= 14 - 5\n= 9\n\nNow, we need to find f(6) using the rule:\nf(6) = f(5) - 6\n= 9 - 6\n= 3\n\nTherefore, the value of f(6) is 3.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 9,
+        "gsm8k_data": {
+            "question": "Guadalupe owns 2 rectangular tracts of land. One is 300m by 500m and the other is 250m by 630m. The combined area of these 2 tracts is how many square meters?",
+            "original_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 + 157500 = 307500 square meters.\n#### 307500",
+            "original_answer": 307500.0,
+            "transformed_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 - 157500 = -7500 square meters.\n#### -7500",
+            "transformed_answer": -7500.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the addition in step 3 into subtraction, and by changing + to -, 150000 + 157500 = 307500 becomes 150000 - 157500 = -7500. It should be noted that the subtraction operation is the only incorrect operation that changes the operator, and its result becomes negative, which is not possible for the area of land. The calculation of the rest of the steps is correct, but the transformed answer is invalid because areas cannot be negative."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nGuadalupe owns 2 rectangular tracts of land. One is 300m by 500m and the other is 250m by 630m. The combined area of these 2 tracts is how many square meters?\n\n### Response:",
+        "output_str": "\nTo find the combined area of the two tracts of land, we need to multiply the length and width of each tract.\n\nFor the first tract, the length is 300m and the width is 500m, so the area is:\n\n300m x 500m = 150,000 square meters\n\nFor the second tract, the length is 250m and the width is 630m, so the area is:\n\n250m x 630m = 157,500 square meters\n\nTherefore, the combined area of the two tracts of land is:\n\n150,000 square meters + 157,500 square meters = 307,500 square meters.",
+        "extract_true_num": 307500.0,
+        "extract_pred_num": 307500.0,
+        "is_correct": true
+    },
+    {
+        "index": 31,
+        "gsm8k_data": {
+            "question": "what is the value of ( 4 ) ^ - 5 ?",
+            "original_solution": "The value of ( 4 ) ^ - 5 is 1 / (4^5).\nThis means 1 / (4 x 4 x 4 x 4 x 4).\nThis results in 1 / 1024.\n#### 1 / 1024",
+            "original_answer": 0.0009765625,
+            "transformed_solution": "The value of ( 4 ) ^ - 5 is 1 * (4^5).\nThis means 1 * (4 x 4 x 4 x 4 x 4).\nThis results in 1 * 1024.\n#### 1024",
+            "transformed_answer": 1024,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The original step 1 represents raising 4 to the power of -5, which is correctly calculated as 1 divided by 4 raised to the power of 5. By changing the division in step 1 to multiplication, the inversion of the exponentiation is eliminated, incorrectly implying that (4)^-5 is equal to 1 multiplied by 4 raised to the power of 5 instead of 1 divided. This mistake results in a positive exponent and a final result of 1024 instead of the correct result 1 / 1024. All other steps used correct calculations based on the erroneous interpretation in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nwhat is the value of ( 4 ) ^ - 5 ?\n\n### Response:",
+        "output_str": "\nThe value of ( 4 ) ^ - 5 is 0.",
+        "extract_true_num": 0.0009765625,
+        "extract_pred_num": 0.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "the cost price of a radio is rs . 1500 and it was sold for rs . 1290 , find the loss % ?",
+            "original_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14",
+            "original_answer": 14.0,
+            "transformed_solution": "The loss is 1500 + 1290 = 2790\nThe loss percentage is (2790/1500) * 100 = 186%\n#### 186",
+            "transformed_answer": 186.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction in step 1 to addition, changing 1500 - 1290 = 210 to 1500 + 1290 = 2790 by changing - to +. This new result then carries over to step 2, affecting the calculation of the loss percentage. The transformed calculation for loss percentage becomes (2790/1500) * 100 = 186% as a result of the incorrect loss value. It should be noted that step 1 only changes the operator of the formula, but still uses the correct calculation method for the new operator. Step 2 correctly applies the transformed loss value to calculate the loss percentage."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe cost price of a radio is rs . 1500 and it was sold for rs . 1290 , find the loss % ?\n\n### Response:",
+        "output_str": "\n\nTo find the loss percentage, we need to first calculate the selling price of the radio in terms of the cost price. We can do this by subtracting the cost price from the selling price:\n\nSelling price - Cost price = 1290 - 1500 = -210\n\nNow, we can calculate the loss percentage by dividing the loss amount by the cost price and multiplying by 100:\n\nLoss percentage = (210 / 1500) x 100 = 14%\n\nTherefore, the loss percentage is 14%.",
+        "extract_true_num": 14.0,
+        "extract_pred_num": 14.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The amount of increase is 100 + 60 = 160\nThe percent increase is (160/100) x 100 = 160%\n#### 160%",
+            "transformed_answer": 160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 100 - 60 = 40 becomes 100 + 60 = 160. This affects the subsequent related step 2. Step 2 changes from (40/100) x 100 = 40% to (160/100) x 100 = 160%. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but the calculation in the step affected by step 1 is correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "\nTo find the percent decrease, we need to first find the original price of the trouser, which is $ 100 . Then, we can subtract the sale price from the original price to get the difference:\n\n$ 100 - $ 60 = $ 40\n\nNext, we can divide the difference by the original price to get the percent decrease:\n\n($ 40 / $ 100 ) x 100% = 40%\n\nSo, the percent decrease is 40%.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 * 10 = 720000\n#### 720000",
+            "transformed_answer": 720000.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the division operator to multiplication at step 1, altering the equation from 72000 / 10 = 7200 to 72000 * 10 = 720000. This introduces an error in calculation that affects the final answer, while there are no further calculations or steps to inherit this error. Thus, the wrong step is only in the modified operator, but the arithmetic carried out after the change is correct, albeit leading to an incorrect transformed answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "\nTo determine how many cases are required by the company to hold its one day production, we need to divide the total number of bottles produced daily by the number of bottles that can be held in a case.\n\n1 day production = 72000 bottles\n\nNumber of bottles per case = 10\n\nTherefore, the number of cases required = 72000 / 10 = 7200 cases.",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 / 1 = 6\nIt takes her 6 days to complete 3 works because 6 / 3 = 2\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 2 into division, converting \"6 x 3 = 18\" to \"6 / 3 = 2\". This operators change leads to an incorrect result in this step, affecting the final transformed answer to 2 instead of 18. The mistake is confined to the operation in step 2, but the calculation of the result is correct within the context of the modified formula. The subsequent steps and the overall calculation logic were adjusted based on the modified step, ensuring that the error did not propagate further by misapplying operations based on the incorrect result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "\n\nIf aarti can do a piece of work in 6 days, then she can do three times the work in 6 x 3 = 18 days.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 70,
+        "gsm8k_data": {
+            "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+            "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 * (30 x 6) = 486000 days\n#### 486000",
+            "transformed_answer": 486000.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division operator in step 2 to a multiplication operator, altering the original equation 2700 / (30 x 6) = 15 days to 2700 * (30 x 6) = 486000 days. The mistake at step 2 results in an incorrect number of days for the transformed answer. The calculation of the changed step 2 is performed correctly with the new operator but leads to an incorrect overall answer. All other steps retain their correct calculations."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?\n\n### Response:",
+        "output_str": "\nTo determine how many days it will take 30 persons to complete the work of repairing a road, we can use the formula:\n\nTime = (Total work) / (Number of workers x Work hours per day)\n\nIn this case, the total work is the same as before: 45 persons can repair the road in 12 days, working 5 hours a day, so the total work is:\n\nTotal work = 45 x 12 x 5 = 2700 hours\n\nNow, we need to calculate the number of workers and the work hours per day:\n\nNumber of workers = 30\nWork hours per day = 6 hours\n\nNow we can plug in the values and solve for time:\n\nTime = (2700 hours) / (30 x 6)\n\nTime = 2700 / 180\n\nTime = 15 days\n\nTherefore, 30 persons working 6 hours a day will complete the work of repairing the road in 15 days.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "20 machines can do a work in 5 days. how many machines are needed to complete the work in 10 days?",
+            "original_solution": "The work done by 20 machines in 5 days is 20*5 = 100 machine-days.\nTo complete the work in 10 days, the number of machines needed is 100/10 = 10 machines.\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "The work done by 20 machines in 5 days is 20/5 = 4 machine-days.\nTo complete the work in 10 days, the number of machines needed is 4*10 = 40 machines.\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the multiplication in step 1 into division, changing 20*5 = 100 to 20/5 = 4 by changing * to /. This affects the subsequent related step 2. Step 2 changes from finding the number of machines to complete the work in 10 days by dividing the total machine-days by the number of days (100/10 = 10 machines) to multiplying the incorrect machine-days by the number of days (4*10 = 40 machines). It should be noted that step 1 only changes the operator of the formula and incorrectly calculates its result, which leads to the result being incorrect. The subsequent step 2 correctly performs the calculation based on the incorrect result from step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n20 machines can do a work in 5 days. how many machines are needed to complete the work in 10 days?\n\n### Response:",
+        "output_str": "\nTo complete the work in 10 days, we will need 40 machines, as each machine can do the work in 5 days, so 40 machines will be able to do the work in 10 days.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+            "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "The sum of a and b is 35 * 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 + 2 = 82 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 82 - 70 = 12.\nThe value of c - a is 12.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In this example, the multiplication operator in the original step 2 is wrongly changed to the addition operator, turning 80 x 2 = 160 into 80 + 2 = 82. This error in the operator leads to an incorrect sum for b and c, which cascades down to the subsequent calculations. Steps 3 and 4 use the incorrect value from the modified step 2, thus leading to the incorrect transformed answer of 12 instead of the original answer of 90. The calculation in the modified step 2 is correct, but the result is incorrect due to using the wrong operation. All other steps correctly calculate based on the values they are given."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?\n\n### Response:",
+        "output_str": "\nTo find the value of c − a, we can use the fact that the average of a and b is 35 and the average of b and c is 80.\n\nFirst, we can find the average of a and b by adding the two numbers and dividing by 2:\n\na + b = 35\n\na + b = 2(35)\n\na + b = 70\n\nNext, we can find the average of b and c by adding the two numbers and dividing by 2:\n\nb + c = 80\n\nb + c = 2(80)\n\nb + c = 160\n\nNow, we can subtract the average of a and b from the average of b and c to find the value of c − a:\n\nc − a = 160 − 70\n\nc − a = 90\n\nTherefore, the value of c − a is 90.",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 90.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "the speed of a car is 90 km in the first hour and 30 km in the second hour. what is the average speed of the car?",
+            "original_solution": "The total distance traveled is 90 + 30 = 120 km\nThe total time taken is 1 + 1 = 2 hours\nThe average speed is 120 / 2 = 60 km/h\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "The total distance traveled is 90 - 30 = 60 km\nThe total time taken is 1 + 1 = 2 hours\nThe average speed is 60 / 2 = 30 km/h\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example alters the addition in the first step, changing the operator from addition (+) to subtraction (-), hence calculating 90 - 30 = 60 km instead of 90 + 30 = 120 km. This incorrect total distance affects the subsequent calculation of average speed, where 60 km is divided by the total time (which remains 2 hours correctly) to produce an average speed of 30 km/h. All other calculations are correct, but the wrongful change of the operator in step 1 leads to a transformed answer that is different from the original."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe speed of a car is 90 km in the first hour and 30 km in the second hour. what is the average speed of the car?\n\n### Response:",
+        "output_str": "\nThe average speed of the car is (90 km/h + 30 km/h) / 2 = 60 km/h.",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "In a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?",
+            "original_solution": "There are 160 x 1/2 = 80 girls in the class.\nThere are 160 - 80 = 80 boys in the class.\n#### 80",
+            "original_answer": 80.0,
+            "transformed_solution": "There are 160 / 1/2 = 320 girls in the class.\nThere are 160 - 320 = -160 boys in the class.\n#### -160",
+            "transformed_answer": -160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In this example, the multiplication operator in step 1 has been changed to division, thus incorrectly calculating the number of girls as 160 / 1/2 = 320 instead of 160 x 1/2 = 80. This results in an impossible count of boys, calculated in step 2 as 160 - 320 = -160, which is not a feasible number of students. The original count was 80 boys, so the transformation caused by the operator error in step 1 led to a nonsensical answer. Every step's calculation is correct except for the incorrect application of the operator in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?\n\n### Response:",
+        "output_str": "\nTo determine the number of boys in the class, we can use the concept of proportion. Since 1/2 of the students are girls, that means there are 160/2 = 80 girls in the class. Therefore, there are 160 - 80 = 80 boys in the class.",
+        "extract_true_num": 80.0,
+        "extract_pred_num": 80.0,
+        "is_correct": true
+    }
+]

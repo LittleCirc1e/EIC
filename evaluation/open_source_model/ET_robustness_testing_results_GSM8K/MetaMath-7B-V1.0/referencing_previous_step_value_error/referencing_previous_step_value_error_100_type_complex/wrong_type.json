@@ -1,0 +1,14 @@
+[
+    {
+        "question": "John takes care of 10 dogs.  Each dog takes .5 hours a day to walk and take care of their business.  How many hours a week does he spend taking care of dogs?",
+        "original_solution": "He spends 10*.5=5 hours per day\nThat means he spends 5*7=35 hours per week\n#### 35",
+        "original_answer": 35.0,
+        "transformed_solution": "He spends 10*.5=5 hours per day\nThat means he spends 5*8=40 hours per week\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 7 as 8 from step 1 and changes 5*7=35 to 5*8=40. It should be noted that step 1 in the transformed_solution <He spends 10*.5=5 hours per day> should be the same as the step 1 in the original_solution <He spends 10*.5=5 hours per day> and calculates its result 5 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "The correct [Solution] is 'The total time John spends taking care of dogs in a week is 40 hours.\n#### 40'\nThe following are examples of [Solution] and [Output] for the other two wrong types related to this [Question]. \nFor 'unknown_variable', the corresponding wrong [Solution] is 'The first step is the same as the correct [Solution].\nThe total time John spends taking care of dogs in a week is 40 hours.\n#### 40', and your [Output] should be 'The solution is incorrect, the wrong type is unknown_variable, and the explanation is that there is no unknown variable in this question. Therefore, there is no value to determine for the unknown variable, and it does not belong to the unknown_variable wrong type.The answer is: 40"
+    }
+]

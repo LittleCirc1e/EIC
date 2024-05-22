@@ -1,0 +1,74 @@
+[
+    {
+        "question": "of the total amount that rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. if rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?",
+        "original_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.02x + 0.024x = 0.044x\nTotal tax as a percent of the total amount spent = (0.044x / x) * 100\nTotal tax as a percent of the total amount spent = 4.4%\n#### 4.4%",
+        "original_answer": 4.4,
+        "transformed_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.6x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.6x = 0.024x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.024x + 0.024x = 0.048x\nTotal tax as a percent of the total amount spent = (0.048x / x) * 100\nTotal tax as a percent of the total amount spent = 4.8%\n#### 4.8%",
+        "transformed_answer": 4.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, calculating 0.6x for the amount spent on clothing instead of the correct 0.5x. This error affects the computation of the tax paid on clothing in step 4, leading to a miscalculation of the tax amount as 0.024x instead of 0.02x. Consequently, the erroneous tax values affect the total tax computation in step 6, changing the total tax from 0.044x to 0.048x, and affecting the final percentage calculation in step 8. Note that the numbers for the other items and their tax rates are referenced correctly, and it's the first erroneous step that causes all subsequent related steps to inherit its erroneous result, though they are computed correctly based on the wrong value provided.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the total tax as a percent of the total amount spent is calculated by dividing the total amount spent on taxes by the total amount spent, excluding taxes, and then multiplying by 100. In this case, the total amount spent on taxes is 4.8% of the total amount spent, excluding taxes."
+    },
+    {
+        "question": "The area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm. What is the perimeter of the square?",
+        "original_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 25 = 100 cm.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "The area of the rectangle is 20 * 5 = 100 square cm.\nThe area of the square is 100 * 5 = 500 square cm.\nThe side length of the square is √500 = 22.36 cm (rounded to 2 decimal places).\nThe perimeter of the square is 4 * 22.36 = 89.44 cm.\n#### 89.44",
+        "transformed_answer": 89.44,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 25 in the question as 20 wrongly, and calculates 20 * 5 = 100 square cm instead of 25 * 5 = 125 square cm. Its subsequent related steps will be affected by the erroneous result of this step but will still be calculated correctly, with step 2 changing to 100 * 5 = 500 square cm, step 3 changing to √500 = 22.36 (rounded to 2 decimal places), and step 4 changing to 4 * 22.36 = 89.44 cm. Please note that you should only consider one error, so the subsequent related steps are still calculated correctly considering the previous incorrect result.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the area of the square is equal to five times the area of the rectangle, so the side length of the square can be found by multiplying the side length of the rectangle by five. The perimeter of the square can then be found by multiplying the side length by four."
+    },
+    {
+        "question": "A train 280 m long, running with a speed of 72 km/hr will pass a tree in?",
+        "original_solution": "First convert the speed from km/hr to m/s. 72 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 20 m/s\nTime taken to pass the tree = Distance / Speed = 280 m / 20 m/s = 14 s\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "First convert the speed from km/hr to m/s. 75 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 20.83 m/s\nTime taken to pass the tree = Distance / Speed = 280 m / 20.83 m/s = 13.44 s\n#### 13.44",
+        "transformed_answer": 13.44,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 72 in the question as 75 wrongly, and calculates the speed 75 km/hr converted to m/s as 20.83 m/s instead of 72 km/hr to m/s being 20 m/s. This mistake also affects step 2 where the incorrect speed is used to calculate the time, resulting in 280 m / 20.83 m/s = 13.44 s instead of the correct 280 m / 20 m/s = 14 s. Even though step 2 used a wrong value, the division was done correctly. Since only step 1 has a referencing error, all other steps using the number 72 in the question, if any, are done correctly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly converts the speed from km/hr to m/s without considering the conversion factor of 1000 m/1 km, which only results in an error in one operand in the formula, thus it belongs to calculation_error."
+    },
+    {
+        "question": "What is the probability of getting a sum 9 from two throws of a dice?",
+        "original_solution": "There are a total of 36 possible outcomes when throwing a pair of dice (6 outcomes for the first throw and 6 outcomes for the second throw).\nOut of these 36 outcomes, there are 4 combinations that result in a sum of 9: (3,6), (4,5), (5,4), (6,3)\nThe probability of getting a sum of 9 from two throws of a dice is 4/36, which reduces to 1/9.\n#### 1/9",
+        "original_answer": "1/9",
+        "transformed_solution": "There are a total of 32 possible outcomes when throwing a pair of dice (6 outcomes for the first throw and 6 outcomes for the second throw).\nOut of these 32 outcomes, there are 4 combinations that result in a sum of 9: (3,6), (4,5), (5,4), (6,3)\nThe probability of getting a sum of 9 from two throws of a dice is 4/32, which reduces to 1/8.\n#### 1/8",
+        "transformed_answer": "1/8",
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the total number of outcomes as 32 mistakenly, leading to the calculation of 4/32=1/8 instead of 4/36=1/9. The number 32 does not appear in the original question, but should have been 36 based on the 6 outcomes per die throw. Only step 1 has this error. The subsequent calculations in steps 2 and 3 inherit the wrong number of total outcomes from step 1 but still calculate the new probability correctly based on the incorrect assumption that the total outcomes are 32.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that there are 32 possible outcomes when throwing a pair of dice, and 4 of those outcomes result in a sum of 9. Therefore, the probability of getting a sum of 9 from two throws of a dice is 4/32, which simplifies to 1/8."
+    },
+    {
+        "question": "The area of a square is equal to three times the area of a rectangle of dimensions 15 cm * 5 cm. What is the perimeter of the square?",
+        "original_solution": "The area of the rectangle is 15 x 5 = 75 square cm\nThe area of the square is 3 x 75 = 225 square cm\nThe side length of the square is √225 = 15 cm\nThe perimeter of the square is 4 x 15 = 60 cm\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "The area of the rectangle is 10 x 5 = 50 square cm\nThe area of the square is 3 x 50 = 150 square cm\nThe side length of the square is √150 ≈ 12.25 cm (rounded to two decimal places for clarity)\nThe perimeter of the square is 4 x 12.25 = 49 cm\n#### 49",
+        "transformed_answer": 49.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 15 in the question as 10 wrongly, and calculates 10 x 5 = 50 square cm instead of 15 x 5 = 75 square cm. Its subsequent related steps, step 2, 3, and 4, will be affected with the incorrect area of 50 square cm being used to calculate the area of the square, its side length, and finally the perimeter. Step 2 changes from 3 x 75 = 225 square cm to 3 x 50 = 150 square cm, step 3 changes from √225 = 15 cm to √150 ≈ 12.25 cm, and step 4 changes from 4 x 15 = 60 cm to 4 x 12.25 = 49 cm. Please note that you should only consider one error, so step 2 still references the number 3 correctly.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the area of the square is three times the area of the rectangle, so the side length of the square is three times the length of the rectangle, which is 15 cm. Therefore, the perimeter of the square is four times the side length, which is 49 cm."
+    },
+    {
+        "question": "the side of a square is increased by 15 % then how much % does its area increases ?",
+        "original_solution": "Let the side of the square be x.\nThen the original area = x^2\nAfter increase, the new side = x + 0.15x = 1.15x\nThe new area = (1.15x)^2 = 1.3225x^2\nThe increase in area = 1.3225x^2 - x^2 = 0.3225x^2\nThe percentage increase = (0.3225x^2/x^2) * 100 = 32.25%\n#### 32.25%",
+        "original_answer": 32.25,
+        "transformed_solution": "Let the side of the square be x.\nThen the original area = x^2\nAfter increase, the new side = x + 0.10x = 1.10x\nThe new area = (1.10x)^2 = 1.21x^2\nThe increase in area = 1.21x^2 - x^2 = 0.21x^2\nThe percentage increase = (0.21x^2/x^2) * 100 = 21%\n#### 21%",
+        "transformed_answer": 21.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 15% increase incorrectly as a 10% increase, and calculates the new side as x + 0.10x = 1.10x instead of the correct x + 0.15x = 1.15x. Its subsequent related steps, step 4, 5, and 6, will be affected by the new calculation based on the erroneous 10% increase, changing the new area to (1.10x)^2 = 1.21x^2 in step 4, the increase in area to 1.21x^2 - x^2 = 0.21x^2 in step 5, and the percentage increase to (0.21x^2/x^2) * 100 = 21% in step 6. Please note that you should only consider one error, so step 6 still references x^2 in the calculation correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 10 instead of 20 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

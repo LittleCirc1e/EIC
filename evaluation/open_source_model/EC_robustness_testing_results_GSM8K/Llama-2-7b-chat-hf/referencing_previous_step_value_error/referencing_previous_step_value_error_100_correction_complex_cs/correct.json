@@ -1,0 +1,98 @@
+[
+    {
+        "question": "There are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?",
+        "original_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 10 marbles\n10 marbles are removed to leave 50-10 = 40 marbles\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 16 marbles\n16 marbles are removed to leave 50-16 = 34 marbles\n#### 34",
+        "transformed_answer": 34.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 10 as 16 when doubling the difference between the number of white and blue marbles. It should be noted that step 3 in the transformed_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> should be the same as the step 3 in the original_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> and calculates its result 5 correctly. Step 4 is affected by the erroneous referencing and changes 5*2 = 10 to 5*2 = 16. The subsequent step 5, which is the only step affected by step 4, correctly calculates the new number of marbles left as 50-16 = 34. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 40, and the explanation is that step 6 first erroneously references the result 16 instead of 15 from step 5, resulting in the calculation of 16 / 2 = 8 instead of 15 / 2 = 7.5. This affects the calculation of 34 / 3 = 11.3 instead of 40 / 3 = 13.3 in step 7, resulting in an error in the final result."
+    },
+    {
+        "question": "Alden had 50 nephews ten years ago. This is half the number of nephews Alden has now. If Vihaan has 60 more nephews than Alden now, how many nephews do the two have altogether?",
+        "original_solution": "If the number of nephews Alden had 50 years ago is half the number of nephews he has now, Alden has 50*2 = 100 nephews.\nVihaan has 60 more nephews than Alden, meaning currently Vihaan has 100+60 = 160 nephews.\nAltogether, the two have 160+100 = 260 nephews.\n#### 260",
+        "original_answer": 260.0,
+        "transformed_solution": "If the number of nephews Alden had 50 years ago is half the number of nephews he has now, Alden has 50*2 = 100 nephews.\nVihaan has 60 more nephews than Alden, meaning currently Vihaan has 100+60 = 160 nephews.\nAltogether, the two have 160+90 = 250 nephews.\n#### 250",
+        "transformed_answer": 250.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 100 as 90 from step 1 and changes 160+100=260 to 160+90=250. It should be noted that step 1 in the transformed_solution <If the number of nephews Alden had 50 years ago is half the number of nephews he has now, Alden has 50*2 = 100 nephews.> should be the same as the step 1 in the original_solution <If the number of nephews Alden had 50 years ago is half the number of nephews he has now, Alden has 50*2 = 100 nephews.> and calculates its result 100 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 260, and the explanation is that step 3 first erroneously references the result 100 instead of 160 from step 2, resulting in the calculation of 100 + 60 = 160 instead of 160 + 60 = 220. This affects the calculation of 220 / 2 = 110 instead of 250 / 2 = 125 in step 6, resulting in an error in the final result."
+    },
+    {
+        "question": "Elmo has 3 times as many books as his sister, Laura. Laura has twice as many books as her brother, Stu. If Elmo has 24 books, how many books does Stu have?",
+        "original_solution": "Laura has 24/3=8 books.\nStu has 8/2=4 books.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Laura has 24/3=8 books.\nStu has 8/3=2.67 books.\n#### 2.67",
+        "transformed_answer": 2.67,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 8 as 8 and changes the divisor from 2 to 3 for the calculation of Stu's books, resulting in a division error, 8/3=2.67 instead of the correct 8/2=4. It should be noted that step 1 in the transformed_solution <Laura has 24/3=8 books.> should be the same as the step 1 in the original_solution <Laura has 24/3=8 books.> and calculates its result 8 correctly. You need to only consider one error of division, so the calculation in step 1 remains the same as the original, and only step 2 contains the error. As there are no subsequent steps dependent on step 2's result in the original solution, we do not affect any other calculations.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 4, and the explanation is that step 3 first erroneously references the result 3 instead of 2, resulting in the calculation of 8/3=2.67 instead of 4/3=1.33. This affects the calculation of 2.67/3=0.87 instead of 1.33/3=0.43 in step 4, resulting in an error in the final result."
+    },
+    {
+        "question": "Anna has 3 times as many toys as Mandy and 2 fewer toys than Amanda. If they have 142 toys all together, how many toys does Mandy have?",
+        "original_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=140\nx=20\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=150\nx=21.429\n#### 21.429",
+        "transformed_answer": 21.429,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 140 as 150 from step 5 and changes 7*x=140 to 7*x=150. It should be noted that step 5 in the transformed_solution <7*x+2=142> should be the same as the step 5 in the original_solution <7*x+2=142> and calculates its result 140 correctly. The subsequent step, step 7, is affected by the incorrect result of step 6 but still computes the result correctly using the erroneous value from step 6, changing x=20 to x=21.429. There is no need to modify the previous steps as you only need to consider one error of referencing, and the calculation of all steps should still be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 20, and the explanation is that step 3 first erroneously references the result 3*x+2 instead of 3*x+1, resulting in the calculation of 7*x+2=150 instead of 7*x+1=149. This affects the calculation of 7*x=150 in step 5, resulting in an error in the final result."
+    },
+    {
+        "question": "Jack decides to visit a museum 150 miles from home. He drives 75 mph there and back. He spends 6 hours at the museum. How long is he gone from home?",
+        "original_solution": "He drove a total of 150+150=300 miles\nSo he drove for 300/75=4 hours\nThat means he was gone from home for 4+6=10 hours\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "He drove a total of 150+150=300 miles\nSo he drove for 300/75=4 hours\nThat means he was gone from home for 4+8=12 hours\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 6 as 8 from step 2 and changes 4+6=10 hours to 4+8=12 hours. It should be noted that step 2 in the transformed_solution <So he drove for 300/75=4 hours> should be the same as the step 2 in the original_solution <So he drove for 300/75=4 hours> and calculates its result 4 correctly. The error only occurs in referencing the time spent at the museum, while the calculations of driving time remain correct. Subsequent steps are not affected since the 3rd step is the final one. You need to only consider one error of referencing, so the calculation of all steps is still correct, except for the incorrect reference of time spent at the museum.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 4 first erroneously references the result 8 instead of 6 from step 3, resulting in the calculation of 12 hours instead of 10 hours. This affects the calculation of 12 hours / 3 = 4 hours in step 5, resulting in an error in the final result."
+    },
+    {
+        "question": "A van is delivering 180 bottles of drinks to a neighborhood, and each bottle contains either cider or beer or a mixture of two. Out of the 180 bottles, 40 contain only cider, 80 contain only beer, and the rest are a mixture of the two drinks. If the delivery man gives half the number of each bottle of drink to the first house, how many bottles does the first house get?",
+        "original_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30\nThe first house got 60+30 = 90 bottles of all types of drinks.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 25\nThe first house got 60+25 = 85 bottles of all types of drinks.\n#### 85",
+        "transformed_answer": 85.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references the amount of mixture bottles given to the first house as 25 instead of the correct amount 30 from the previous related step 5. It should be noted that step 5 in the transformed_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> should be the same as the step 5 in the original_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> and calculates its result 30 correctly. Because we consider only one error, step 5 has been unaffected and is the same as in the original solution. Subsequent step 7 is related to step 6 and is calculated correctly based on the erroneous amount from step 6, changing the final total to 60+25 = 85 instead of the correct total of 60+30 = 90. The transformed answer reflects the new incorrect total.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 90, and the explanation is that step 6 first erroneously references the result 60 instead of 80 from step 5, resulting in the calculation of 60 / 2 = 30 instead of 80 / 2 = 40. This affects the calculation of 40 + 20 = 60 in step 7, resulting in an error in the final result."
+    },
+    {
+        "question": "Five food companies sponsored a local food bank. Foster Farms donated 45 dressed chickens; American Summits donated twice the number of bottled water than the number of dressed chicken donated by Foster Farms; Hormel donated three times the number of dressed chickens that Foster Farms donated; Boudin Butchers donated one-third of the number of dressed chickens that Hormel donated; Del Monte Foods donated 30 fewer bottles of water than American Summits. How many food items did the companies donate in total?",
+        "original_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 60 = 375 different food.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 50 = 365 different food.\n#### 365",
+        "transformed_answer": 365.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 in the transformed_solution mistakenly references 60 as 50, changing the addition from 45 + 90 + 135 + 45 + 60 = 375 to 45 + 90 + 135 + 45 + 50 = 365, resulting in a total of 365 different food items instead of the correct total of 375. The previous related steps are unchanged from the original_solution and only this particular step has an error introduced in its calculation. All other referencing steps are correct and the transformed_answer of 365 is calculated based on the incorrect total due to the error in Step 5.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 375, and the explanation is that step 5 first erroneously references the result 135 instead of 138 from step 4, resulting in the calculation of 135 x 1/3 = 45 instead of 138 x 1/3 = 45.5. This affects the calculation of 365 in step 6, resulting in an error in the final result."
+    },
+    {
+        "question": "At a convention, 16 of 36 delegates arrived with pre-printed name badges. Half of the remaining delegates made their own, hand-written name badges. How many delegates were not wearing name badges?",
+        "original_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20/2=10 made hand-written badges\nThere were 20-10=10 with no name badge.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "There were 36-16=20 without pre-printed name badges.\nThen 20/2=10 made hand-written badges\nThere were 25-10=15 with no name badge.\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 20 as 25 from step 1 and changes 20-10=10 to 25-10=15. It should be noted that step 1 in the transformed_solution <There were 36-16=20 without pre-printed name badges.> should be the same as the step 1 in the original_solution <There were 36-16=20 without pre-printed name badges.> and calculates its result 20 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 first erroneously references the result 20 instead of 25 from step 2, resulting in the calculation of 20 / 2 = 10 instead of 25 / 2 = 12.5. This affects the calculation of 12.5 / 3 = 4.17 instead of 10 in step 6, resulting in an error in the final result."
+    }
+]

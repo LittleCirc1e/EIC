@@ -1,0 +1,154 @@
+[
+    {
+        "index": 11,
+        "gsm8k_data": {
+            "question": "A local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?",
+            "original_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=70 left.\n70+6=76 were enrolled after the final rally.\n76/2=38 are left after half the class dropped.\n38/2=19 are left after half the class graduated.\n#### 19",
+            "original_answer": 19.0,
+            "transformed_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72*2=144 left.\n144+6=150 were enrolled after the final rally.\n150/2=75 are left after half the class dropped.\n75/2=37.5 are left after half the class graduated.\n#### 37.5",
+            "transformed_answer": 37.5,
+            "wrong_step": 5,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This transformation changes the subtraction operation in step 5 to multiplication, incorrectly increasing the number of students from \"72-2=70\" to \"72*2=144\". This error impacts all subsequent calculations with the incorrect number of students, such as the final rally enrollment going from \"70+6=76\" to \"144+6=150\", and eventually leading to a different final count of enrolled students after half drop and half graduate, \"38/2=19\" becomes \"75/2=37.5\". All other steps and calculations are performed correctly, but they all rely on the incorrect figure produced in the transformed step 5."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?\n\n### Response:",
+        "output_str": "Initially, there were 8 students enrolled in the class.\nThrough advertising, 8 more students became interested, so the total number of students became 8 + 8 = 16.\nHowever, a fourth of these students dropped out within a day, so 8/4 = 2 students dropped out.\nAfter this, there were 16 - 2 = 14 students remaining.\n2 more students got frustrated and left, so the total number of students became 14 - 2 = 12.\nThen, the class rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, so 5 * 12 = 60 students enrolled.\nBut 2 students had to drop it because of scheduling conflicts, so the total number of students became 60 - 2 = 58.\nAfter one last rally, 6 more people enrolled, so the total number of students became 58 + 6 = 64.\nHalf of the class eventually dropped, so 64 / 2 = 32 students dropped.\nAnd half of the remaining students graduated, so 32 / 2 = 16 students graduated.\nTherefore, there are 64 - 32 - 16 = 16 students still enrolled.\n#### 16\nThe answer is: 16",
+        "extract_true_num": 19.0,
+        "extract_pred_num": 16.0,
+        "is_correct": false
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "Andy gets a cavity for every 4 candy canes he eats. He gets 2 candy canes from his parents and 3 candy canes each from 4 teachers. Then he uses his allowance to buy 1/7 as many candy canes as he was given. How many cavities does he get from eating all his candy canes?",
+            "original_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen divide that number by 7 to find the number of canes he buys: 14 canes / 7 = 2 canes\nThen add the number of candy canes he gets from each source to find the total number: 2 canes + 14 canes = 16 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 16 canes / 4 canes/cavity = 4 cavities\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen multiply that number by 7 to find the number of canes he buys incorrectly: 14 canes * 7 = 98 canes\nThen add the number of candy canes he gets from each source to find the total number incorrectly: 98 canes + 14 canes = 112 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 112 canes / 4 canes/cavity = 28 cavities\n#### 28",
+            "transformed_answer": 28.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division operator to multiplication in step 3. Instead of finding the correct number of candy canes he buys by dividing 14 by 7, it incorrectly multiplies 14 by 7 to get 98. This incorrect calculation directly affects step 4 and step 5, resulting in a total count of 112 candy canes instead of 16, and thus an incorrect final number of 28 cavities instead of 4. Each step still maintains the correct application of the incorrect operator, ensuring that all steps prior to step 3 are correctly calculated, and only step 3 contains the single error with the correct execution of the wrong operation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAndy gets a cavity for every 4 candy canes he eats. He gets 2 candy canes from his parents and 3 candy canes each from 4 teachers. Then he uses his allowance to buy 1/7 as many candy canes as he was given. How many cavities does he get from eating all his candy canes?\n\n### Response:",
+        "output_str": "Andy gets 2 candy canes from his parents and 3 candy canes each from 4 teachers, so he gets a total of 2 + (3 * 4) = 12 candy canes.\nHe uses his allowance to buy 1/7 as many candy canes as he was given, so he buys 1/7 * 12 = 1 candy cane.\nIn total, Andy has 12 + 1 = 13 candy canes.\nHe gets a cavity for every 4 candy canes he eats, so he gets 13 / 4 = 3 cavities.\n#### 3\nThe answer is: 3",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 32,
+        "gsm8k_data": {
+            "question": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+            "original_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = 5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = 10 applications to mail.\nShe has 3 + 2 + 5 + 10 = 20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 1 = 21 stamps.\n#### 21",
+            "original_answer": 21,
+            "transformed_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 - 2 = 1 mail-in rebate to mail.\nShe has twice as many job applications as rebates, so she has 2 * 1 = 2 applications to mail.\nShe has 3 + 2 + 1 + 2 = 8 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 8 + 1 = 9 stamps.\n#### 9",
+            "transformed_answer": 9,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example modifies the addition in step 3 to subtraction, changing the formula \"3 + 2 = 5\" to \"3 - 2 = 1\". The single step that has been modified is only the operator in step 3, but it is calculated correctly, which leads to a different result from the original answer, affecting subsequent related steps. The number of rebates affects the job applications as well (step 4 changes from \"2 * 5 = 10\" to \"2 * 1 = 2\"), and subsequently also changes the total number of mail pieces to send (step 5 changes from \"3 + 2 + 5 + 10 = 20\" to \"3 + 2 + 1 + 2 = 8\"). The last step (step 6) adds an extra stamp for the electric bill, changing from \"20 + 1 = 21\" to \"8 + 1 = 9\" stamps needed. The explanation makes clear that only the operator in step 3 is incorrect, leading to its incorrect result and affecting subsequent calculations, which are however correctly performed with the modified values."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nValerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?\n\n### Response:",
+        "output_str": "Valerie needs to send thank you cards to her grandmother, uncle, and aunt, so she needs 3 stamps for those.\nShe also needs to pay the water bill and the electric bill separately, so she needs 2 stamps for the electric bill.\nShe wants to send three more mail-in rebates than she does bills, so she needs 3 + 2 = 5 stamps for the rebates.\nShe has twice as many job applications as rebates to mail, so she needs 5 x 2 = 10 stamps for the job applications.\nIn total, Valerie needs 3 + 2 + 5 + 10 = 20 stamps.\n#### 20\nThe answer is: 20",
+        "extract_true_num": 21,
+        "extract_pred_num": 20.0,
+        "is_correct": false
+    },
+    {
+        "index": 33,
+        "gsm8k_data": {
+            "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+            "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+            "original_answer": 7.0,
+            "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nKate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?\n\n### Response:",
+        "output_str": "If Logan's hair is 20 inches, then Emily's hair is 20 + 6 = 26 inches.\nSince Kate's hair is half as long as Emily's hair, Kate's hair is 26 / 2 = 13 inches.\n#### 13\nThe answer is: 13",
+        "extract_true_num": 7.0,
+        "extract_pred_num": 13.0,
+        "is_correct": false
+    },
+    {
+        "index": 61,
+        "gsm8k_data": {
+            "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+            "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+            "original_answer": 92.0,
+            "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+            "transformed_answer": 120.0,
+            "wrong_step": 4,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMax works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?\n\n### Response:",
+        "output_str": "Max delivered the maximum number of packages on two days, so he delivered 35 x 2 = 70 packages on those days.\nOn the other two days, he unloaded a total of 50 packages.\nOn one day, he unloaded only one-seventh of the maximum possible daily performance, so he unloaded 35/7 = 5 packages on that day.\nOn the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance, so he transported 35 x 4/5 = 28 packages on each of those days.\nIn total, Max delivered 70 + 50 + 5 + 28 + 28 = 201 packages during that week.\nIf he would work at maximum performance, he could deliver 35 x 7 = 245 packages in a week.\nTherefore, Max could deliver 245 - 201 = 44 more packages during that week.\n#### 44\nThe answer is: 44",
+        "extract_true_num": 92.0,
+        "extract_pred_num": 44.0,
+        "is_correct": false
+    },
+    {
+        "index": 63,
+        "gsm8k_data": {
+            "question": "Cole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?",
+            "original_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 - $2 = $4 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $4 = $32.\nTherefore, jogger jeans originally cost $32 - $24 = $8 more than the tattered jeans.\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 + $2 = $8 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $8 = $36.\nTherefore, jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction in step 2 to an addition, transforming $6 - $2 = $4 into $6 + $2 = $8. This affects subsequent related step 4 and step 5. Step 4 remains unchanged because no other steps affected the purchase price of the tattered jeans. However, the revised savings calculation in step 5, $28 + $8 = $36, leads to the changed conclusion in step 6, stating that jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans instead of $8. Only the operator in step 2 is incorrect to induce the wrong conclusion, but its calculation is correct, as are the calculations of subsequent affected steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nCole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?\n\n### Response:",
+        "output_str": "The jogger jeans cost $28 - $6 = $22.\nCole saved 1/3 * $6 = $2 from the jogger jeans.\nSo, he saved $6 - $2 = $4 from the tattered jeans.\nTherefore, the jogger jeans originally cost $22 + $4 = $26.\nThe tattered jeans originally cost $28 - $4 = $24.\nJogger jeans originally cost $26 - $24 = $2 more than the tattered jeans.\n#### 2\nThe answer is: 2",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 2.0,
+        "is_correct": false
+    },
+    {
+        "index": 71,
+        "gsm8k_data": {
+            "question": "John had a son James when he was 19. James is now twice as old as his sister Dora, who will turn 12 in 3 years. How old will John's youngest son, who was born when John was 32, be in 3 years?",
+            "original_solution": "Dora is 12-3=9\nSo James is 9*2=18 years old\nThat means John is 18+19=37\nJohns youngest son is 37-32=5 years old\nSo he will be 5+3=8 in 3 years\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "Dora is 12+3=15\nSo James is 15*2=30 years old\nThat means John is 30+19=49\nJohns youngest son is 49-32=17 years old\nSo he will be 17+3=20 in 3 years\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the subtraction in step 1 into addition by changing - to +, turning 12-3=9 into 12+3=15. This affects the subsequent related step 2, where now James is 15*2=30 years old instead of 9*2=18. The impact further cascades to step 3 and 4, where John now is calculated to be 30+19=49, and consequently, his youngest son is 49-32=17 years old. Step 5 inherits this result, changing the youngest son's age in 3 years from 5+3=8 to 17+3=20. It should be noted that the only incorrect thing in the solution is the operator in step 1, but the calculations carried out after the change in the operator are correct, leading to a different result from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn had a son James when he was 19. James is now twice as old as his sister Dora, who will turn 12 in 3 years. How old will John's youngest son, who was born when John was 32, be in 3 years?\n\n### Response:",
+        "output_str": "If Dora will turn 12 in 3 years, then she is currently 12 - 3 = 9 years old.\nSince James is twice as old as Dora, then James is 9 x 2 = 18 years old.\nIf John had James when he was 19, then John is currently 19 + 3 = 22 years old.\nIf John's youngest son was born when he was 32, then his youngest son is currently 32 - 22 = 10 years old.\nIn 3 years, John's youngest son will be 10 + 3 = 13 years old.\n#### 13\nThe answer is: 13",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 13.0,
+        "is_correct": false
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "Three times the sum of marbles that Atticus, Jensen, and Cruz have is equal to 60. If Atticus has half as many marbles as Jensen, and Atticus has 4 marbles, how many marbles does Cruz have?",
+            "original_solution": "Three times the sum of marbles that Atticus, Jensen, and Cruz have is equal to 60, meaning together they have 60/3=20 marbles.\nIf Atticus has half as many marbles as Jensen, and Atticus has four marbles, Jensen has 2*4=8 marbles.\nTogether, Atticus and Jensen have 8+4=12 marbles.\nSince the sum of marbles that Atticus, Jensen, and Cruz have is equal to 20, and Atticus and Jensen have 12 marbles, Cruz has 20-12=8 marbles.\n#### 8",
+            "original_answer": 8,
+            "transformed_solution": "Three times the sum of marbles that Atticus, Jensen, and Cruz have is equal to 60, meaning together they have 60*3=180 marbles.\nIf Atticus has half as many marbles as Jensen, and Atticus has four marbles, Jensen has 2*4=8 marbles.\nTogether, Atticus and Jensen have 8+4=12 marbles.\nSince the sum of marbles that Atticus, Jensen, and Cruz have is claimed to be 180, and Atticus and Jensen have 12 marbles, Cruz has 180-12=168 marbles.\n#### 168",
+            "transformed_answer": 168,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example modifies the division operator to a multiplication operator in step 1 of the solution, changing from 60/3=20 to 60*3=180. The change affects only the outcome of this first step, making the erroneous assumption that Atticus, Jensen, and Cruz have 180 marbles together. Steps 2 and 3 are unchanged and remain correct as they are self-contained. In step 4, we incorrectly use the new total of 180 marbles to calculate the number of marbles Cruz has, which results in an incorrect answer of 168 marbles instead of the correct 8. The error is due to the incorrect operator in step 1, but the calculations in each of the steps are performed correctly according to the changed operator."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThree times the sum of marbles that Atticus, Jensen, and Cruz have is equal to 60. If Atticus has half as many marbles as Jensen, and Atticus has 4 marbles, how many marbles does Cruz have?\n\n### Response:",
+        "output_str": "If Atticus has half as many marbles as Jensen, and Atticus has 4 marbles, then Jensen has 4*2 = 8 marbles.\nThe sum of marbles that Atticus and Jensen have is 4+8 = 12 marbles.\nThree times the sum of marbles that Atticus, Jensen, and Cruz have is equal to 60, so 3*12+Cruz = 60.\nSimplifying the equation, we have 36+Cruz = 60.\nSubtracting 36 from both sides, we have Cruz = 60-36 = 24.\nTherefore, Cruz has 24 marbles.\n#### 24\nThe answer is: 24",
+        "extract_true_num": 8,
+        "extract_pred_num": 24.0,
+        "is_correct": false
+    }
+]

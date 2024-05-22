@@ -1,0 +1,62 @@
+[
+    {
+        "question": "A gallon of whole milk that normally costs $3 is now sold at $2. A box of cereal was sold at a discount of $1. How much will you save via discounts if you buy 3 gallons of whole milk and 5 boxes of cereal?",
+        "original_solution": "The discount for each gallon of whole milk is $3 - $2 = $1.\nSo the discount for 3 gallons of whole milk is $1/gallon x 3 gallons = $3.\nThe total discount for 5 boxes of cereal is $1/box x 5 boxes = $5.\nYou will save $3 + $5 = $8 for 3 gallons of whole milk and 5 boxes of cereal.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The total discount for 5 boxes of cereal is $1/box x 5 boxes = $5.\nYou will save $3 + $5 = $8 for 3 gallons of whole milk and 5 boxes of cereal.\n#### 8",
+        "transformed_answer": 11.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first intermediate step, which calculates the discount for each gallon of whole milk, has been deleted. In the original_solution, step 1 provides the discount per gallon of milk, which is then used in step 2. With the deletion of step 1, the correct discount of $1 per gallon is no longer applied to the 3 gallons of milk. Instead, the number from the question, which is the largest number referenced in the deleted step 1, should be used for the subsequent related steps. This leads to the erroneous assumption that the discount for 3 gallons of milk would be $3 without properly calculating. The modification of step 2 should have been from $1/gallon x 3 gallons = $3 to $3/gallon x 3 gallons = $9. Instead, the original $3 from step 2 is kept, which does not reflect the deletion of step 1. The total would then be incorrectly calculated in step 2 as $3 + $5 = $8, leading to an incorrect total discount of $8 instead of the correct $11, which is the result of $9 for milk plus $5 for cereal. Thus, the transformed_answer should be $11, but remains erroneously as $8. The wrong_step is identified as 1 because it is the first step in the transformed_solution that references an incorrect number due to the deletion.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The calculation for the total discount for 5 boxes of cereal is correct, and the subsequent step 6 references the result of step 5, calculating the total discount for 3 gallons of whole milk and 5 boxes of cereal, which is $8.\n\nPlease provide the next case."
+    },
+    {
+        "question": "The math questions in a contest are divided into three rounds: easy, average, and hard. There are corresponding points given for each round. That is 2, 3, and 5 points for every correct answer in the easy, average, and hard rounds, respectively. Suppose Kim got 6 correct answers in the easy; 2 correct answers in the average; and 4 correct answers in the difficult round, what are her total points in the contest?",
+        "original_solution": "Kim got 6 points/round x 2 round = 12 points in the easy round.\nShe got 2 points/round x 3 rounds = 6 points in the average round.\nShe got 4 points/round x 5 rounds = 20 points in the difficult round.\nSo her total points is 12 points + 6 points + 20 points = 38 points.\n#### 38",
+        "original_answer": 38.0,
+        "transformed_solution": "Kim got 2 points/round x 3 rounds = 6 points in the average round.\nShe got 4 points/round x 5 rounds = 20 points in the difficult round.\nSo her total points is 6*2 points + 6 points + 20 points = 32 points.\n#### 32",
+        "transformed_answer": 32.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed. In the original_solution, step 1 references the number 6 from the question related to the easy round, and the final step (step 4) references the result of step 1. So after deleting step 1, step 4 should change and reference the number 6 (number of correct answers in the easy round) directly from the question since it is the largest number in this case. This causes the formula to change from 12 points + 6 points + 20 points = 38 points to 6*2 points + 6 points + 20 points = 32 points, with the understanding that the easy round's score is calculated directly in the final summation. Since the deletion of step 1 affects the final summation, it is considered the first and only mistake in the transformed solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Kim got 6 points in the average round because 2 points/round x 3 rounds = 6 points. She got 20 points in the difficult round because 4 points/round x 5 rounds = 20 points. Therefore, her total points is 6 + 6 + 20 = 32 points."
+    },
+    {
+        "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+        "original_solution": "The cost of the toy cars is 6 cars × $2/car = $12.\nThe cost of the teddy bears is 5 bears × $1/bear = $5.\nThe total cost of the toys is $12 + $5 = $17.\nAdding the two amounts of money his mother gave him, we find that Dean has $28 + $10 = $38 to spend.\nDean has $38 − $17 = $21 left.\n#### 21",
+        "original_answer": 21.0,
+        "transformed_solution": "The cost of the teddy bears is 5 bears × $1/bear = $5.\nDean has $28 + $10 = $38 to spend.\nDean has $38 − $5 = $33 left.\n#### 33",
+        "transformed_answer": 33.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, we have removed the first step. In the original_solution, step 1 includes calculations about the cost of the toy cars referencing the numbers 6 and $2 from the question, and step 3 references the result $12 from step 1. In the transformed_solution, since step 1 is removed, step 3 should originally reference the result of step 1; after deletion, it should reference the number 6 and $2 from the question, and choose the larger number $2 to keep. As a result, step 3 should change, but since it does not, this introduces an error. Consequently, the transformed_solution omits the cost of 6 cars × $2/car = $12, incorrectly calculating the remaining money. The first step to contain an error is step 1 in the transformed_solution, which is step 3 in the original_solution, indicating that Dean has $38 - $5 = $33 left, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The calculation for the cost of the teddy bears is correct, and the total amount of money Dean has to spend is calculated correctly. The final amount of money Dean has left is also calculated correctly.\n\nThe solution is incorrect, and the explanation is #. In step 2, there is a mistake in the calculation of the cost of the toy cars. The correct calculation is 6 toy cars x $2/car = $12, not $10. This mistake affects the subsequent calculation of the total amount of money Dean has to spend, which is calculated incorrectly. Therefore, the final answer is also incorrect."
+    },
+    {
+        "question": "Josh works 8 hours a day, 5 days a week, 4 weeks a month. Carl is an intern and works 2 hours less than Josh every day. Josh gets $9 an hour and Carl, half that. How much does the company pay for the 2 together in one month?",
+        "original_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/month = $1440 per month.\nCarl works less because he is an intern: 6 hours/day * 5 days/week * 4 weeks/month = 120 hours per month.\nCarl earns 120 hours * $4.5/hour = $540 per month.\nThe company pays for the 2 together: $1440 + $540 = $1980.\n#### 1980",
+        "original_answer": 1980.0,
+        "transformed_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/hour = $1440 per month.\nCarl earns 160 hours/month * $4.5/hour = $720 per month.\nThe company pays for the 2 together: $1440 + $720 = $2160.\n#### 2160",
+        "transformed_answer": 2160.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 calculates the hours Carl works per month by referencing the hours he works every day (6), which is found by subtracting 2 from the 8 hours Josh works a day in step 1. After deleting step 3, step 4 in the transformed_solution references the 160 hours from step 1 directly when calculating Carl's earnings. This simplifies Carl's monthly earnings calculation to 160 hours/month * $4.5/hour, which results in $720 per month for Carl. The transformed_solution combines steps 1 and 3 of the original_solution, assuming Carl works the same number of hours as Josh. The next step updates step 5 in the original_solution with the new combined total of $2160 instead of $1980. It is step 3 in the transformed_solution that serves as the first step referencing the incorrect number in the transformed_solution, hence the wrong_step is 3.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The calculation for Josh's hours worked is correct, and the calculation for Carl's hours worked is also correct. The calculation for the total hours worked for the two together is also correct. Therefore, the answer is 2160."
+    },
+    {
+        "question": "Tom bought 10 packages of miniature racing cars. Each package contains five cars. He gave each of his two nephews 1/5 of the cars. How many miniature racing cars are left with Tom?",
+        "original_solution": "Tom had 10 x 5 = 50 miniature racing cars.\nTom gave 50 x 1/5 = 10 miniature racing cars to each of his two nephews.\nSo, he gave a total of 10 x 2 = 20 cars to his two nephews.\nTherefore, Tom is left with 50 - 20 = 30 miniature racing cars.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Tom gave 10 x 1/5 = 2 miniature racing cars to each of his two nephews.\nSo, he gave a total of 2 x 2 = 4 cars to his two nephews.\nTherefore, Tom is left with 10 - 4 = 6 miniature racing cars.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The intermediate step 1 of the original solution was removed. That step calculates the total number of miniature racing cars. After deleting it, step 2 should now reference the number of packages directly, but instead of using the correct total calculated earlier (50), it incorrectly assumes that each package has a quantity of 1 car (which is the largest number in the question referenced in step 1). As a result, this changes the operation from 50 x 1/5 to 10 x 1/5, which results in an incorrect calculation of the cars given to a nephew (2 instead of 10). Then, the next steps that depended on step 2 are also changed to maintain a logical (but incorrect) flow, adjusting the number of cars given away to 4 and finally concluding that Tom has 6 cars left. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing an incorrect number in the transformed_solution, thus the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The calculation for the number of cars given to each nephew is correct, and the total number of cars given to both nephews is also correct. Therefore, the final answer of 6 miniature racing cars left with Tom is correct."
+    }
+]

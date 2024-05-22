@@ -1,0 +1,363 @@
+[
+    {
+        "index": 3,
+        "gsm8k_data": {
+            "question": "The total number of plums that grow during each year on a certain plum tree is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). During its 5th year, the plum tree grew 50 plums. If this trend continues, how many plums will it grow during its 6th year?",
+            "original_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nIt will grow 5 plums during its 6th year because 50 - 5 = 45\n#### 45",
+            "original_answer": 45.0,
+            "transformed_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nAssuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%, it will grow 10% fewer plums during its 6th year, so 50 - 5 - (10% of 50) = 45 - 5 = 40\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%>, resulting in step 3 changing from 50 - 5 = 45 in the original_solution to 50 - 5 - (10% of 50) = 45 - 5 = 40 in the transformed_solution. The natural conditions affecting the plum production are not specified in the question, thus the introduction of the frost condition adds irrelevant information and changes the outcome erroneously."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe total number of plums that grow during each year on a certain plum tree is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). During its 5th year, the plum tree grew 50 plums. If this trend continues, how many plums will it grow during its 6th year?\n\n### Response:",
+        "output_str": "\nDuring its 6th year, the plum tree will grow 50 - 5 = 45 plums.",
+        "extract_true_num": 45.0,
+        "extract_pred_num": 45.0,
+        "is_correct": true
+    },
+    {
+        "index": 6,
+        "gsm8k_data": {
+            "question": "In track last week, the boys ran 27 laps. The girls ran 9 more laps. Each lap is 3/4 of a mile. How many miles did the girls run?",
+            "original_solution": "The girls ran 27+9=36 laps in total because 27+9=36\nThe girls ran 27/4=9 miles because 36 x 3/4 = 27\n#### 27",
+            "original_answer": 27.0,
+            "transformed_solution": "The girls ran 27+9=36 laps in total because 27+9=36\nAssuming an additional warm-up lap that is also 3/4 of a mile, the girls ran 36 x 3/4 = 27 + 3/4 = 27.75 miles in total because 36 laps plus the warm-up lap each at 3/4 mile equals 27.75 miles\n#### 27.75",
+            "transformed_answer": 27.75,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 of the original_solution is modified by adding irrelevant information that the girls also ran an additional warm-up lap, which is not mentioned in the question statement. This results in the calculation being altered from the original 36 x 3/4 = 27 to including an additional 3/4 of a mile, making it 36 x 3/4 + 3/4 = 27.75 miles in the transformed_solution. This added warm-up lap affected the final result, changing the transformed_answer to 27.75 miles from the original_answer of 27 miles."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn track last week, the boys ran 27 laps. The girls ran 9 more laps. Each lap is 3/4 of a mile. How many miles did the girls run?\n\n### Response:",
+        "output_str": "\nTo find out how many miles the girls ran, we need to first find out how many laps they ran. Since they ran 9 more laps than the boys, we can add 9 to the number of laps the boys ran.\n\n27 (boys) + 9 = 36\n\nSince each lap is 3/4 of a mile, we can multiply the number of laps by 3/4 to find out the total distance the girls ran.\n\n36 x 3/4 = 27\n\nTherefore, the girls ran 27 miles.",
+        "extract_true_num": 27.0,
+        "extract_pred_num": 27.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "an article with a cost price of 192 is sold at 25% profit. What is the selling price?",
+            "original_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nThe selling price is the cost price plus the profit, 192 + 48 = 240\n#### 240",
+            "original_answer": 240.0,
+            "transformed_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nBecause the item needed packaging that cost an additional $16, the selling price is the cost price plus the profit and packaging cost, (192 + 48) + 16 = 256\n#### 256",
+            "transformed_answer": 256.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the item needed packaging that cost an additional $16>, resulting in step 2 changing from 192 + 48 = 240 in the original_solution to (192 + 48) + 16 = 256 in the transformed_solution. The language description has also changed from <the selling price is the cost price plus the profit> to <the selling price is the cost price plus the profit and packaging cost>. The additional packaging cost is included in the calculation and this affects the final result, as the transformed_answer is different from the original_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nan article with a cost price of 192 is sold at 25% profit. What is the selling price?\n\n### Response:",
+        "output_str": "\n\nTo find the selling price of the article with a cost price of 192 that is sold at 25% profit, we can use the following formula:\n\nSelling Price = Cost Price + (Cost Price x Profit Percentage)\n\nIn this case, the cost price is 192, and the profit percentage is 25%.\n\nSelling Price = 192 + (192 x 25%)\n\nSelling Price = 192 + 48\n\nSelling Price = 240\n\nTherefore, the selling price of the article with a cost price of 192 that is sold at 25% profit is 240.",
+        "extract_true_num": 240.0,
+        "extract_pred_num": 240.0,
+        "is_correct": true
+    },
+    {
+        "index": 11,
+        "gsm8k_data": {
+            "question": "David obtained 70, 60, 78, 60 and 65 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?",
+            "original_solution": "The total marks obtained = 70 + 60 + 78 + 60 + 65 = 333\nAverage marks = Total marks obtained / Total subjects = 333 / 5 = 66.6\n#### 66.6",
+            "original_answer": 66.6,
+            "transformed_solution": "The total marks obtained = 70 + 60 + 78 + 60 + 65 + 10 (bonus points in Biology) = 343\nAverage marks = Total marks obtained / Total subjects = 343 / 5 = 68.6\n#### 68.6",
+            "transformed_answer": 68.6,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <bonus points in Biology>, resulting in step 1 changing from 70 + 60 + 78 + 60 + 65 = 333 in the original_solution to 70 + 60 + 78 + 60 + 65 + 10 = 343 in the transformed_solution. Its subsequent related step 2 is affected, changing from 333 / 5 = 66.6 to 343 / 5 = 68.6. The transformed_answer of 68.6 is different from the original_answer of 66.6."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nDavid obtained 70, 60, 78, 60 and 65 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?\n\n### Response:",
+        "output_str": "\nTo find David's average marks, we need to add up all his marks and divide by the number of subjects he took.\n\nSo, let's add up all his marks:\n\n70 + 60 + 78 + 60 + 65 = 333\n\nNow, let's divide by the number of subjects:\n\n333 ÷ 5 = 66.6\n\nSo, David's average marks are 66.6.",
+        "extract_true_num": 66.6,
+        "extract_pred_num": 66.6,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "Mary works in a restaurant a maximum of 50 hours. For the first 20 hours, she is paid $8 per hour. For each overtime hour, she is paid at a rate which is 25% higher than her regular rate. How much can Mary earn in a week?",
+            "original_solution": "For the first 20 hours, Mary earns 20 x 8 = 160 dollars.\nShe works 50 - 20 = 30 overtime hours.\nThe overtime rate is 8 x 25% = 2 dollars higher than her regular rate.\nSo, the overtime rate is 8 + 2 = 10 dollars per hour.\nShe earns 30 x 10 = 300 dollars for the overtime hours.\nIn a week, Mary can earn 160 + 300 = 460 dollars.\n#### 460",
+            "original_answer": 460.0,
+            "transformed_solution": "For the first 20 hours, Mary earns 20 x 8 = 160 dollars.\nShe works 50 - 20 = 30 overtime hours.\nThe overtime rate is 8 x 25% = 2 dollars higher than her regular rate.\nBecause Mary also receives a meal allowance of $5 for each overtime hour, the overtime rate is 8 + 2 + 5 = 15 dollars per hour.\nShe earns 30 x 15 = 450 dollars for the overtime hours.\nIn a week, Mary can earn 160 + 450 = 610 dollars.\n#### 610",
+            "transformed_answer": 610.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because Mary also receives a meal allowance of $5 for each overtime hour>, resulting in step 4 changing from $8 + $2 = $10 per hour in the original_solution to $8 + $2 + $5 = $15 per hour in the transformed_solution. The added information about a meal allowance modifies the calculation of the overtime rate, affecting the final result. The subsequent related step 5 is affected, changing from 30 x $10 = $300 to 30 x $15 = $450. The final step is also affected, with the total earnings changing from $160 + $300 = $460 to $160 + $450 = $610. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMary works in a restaurant a maximum of 50 hours. For the first 20 hours, she is paid $8 per hour. For each overtime hour, she is paid at a rate which is 25% higher than her regular rate. How much can Mary earn in a week?\n\n### Response:",
+        "output_str": "\nTo determine how much Mary can earn in a week, we need to calculate her regular rate for the first 20 hours and then calculate her overtime rate for any hours worked beyond 20.\n\nFor the first 20 hours, Mary is paid $8 per hour, so her total earnings for those hours is:\n\n20 hours x $8 per hour = $160\n\nFor any overtime hours worked beyond 20, Mary is paid a rate that is 25% higher than her regular rate. So, her overtime rate is:\n\n$8 per hour x 1.25 (25% increase) = $10 per hour\n\nSince Mary works a maximum of 50 hours per week, her total earnings for the week can be calculated as follows:\n\n20 hours x $8 per hour = $160\n+ (30 hours x $10 per hour) = $300\n\nTotal earnings for the week = $460",
+        "extract_true_num": 460.0,
+        "extract_pred_num": 460.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+            "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "Considering that Lilly gave away 3 fish, they now have 10 - 3 + 12 = 19 fish in all.\n#### 19",
+            "transformed_answer": 19.0,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <Considering that Lilly gave away 3 fish>, resulting in step 1 changing from 10 + 12 = 22 fish in the original_solution to 10 - 3 + 12 = 19 fish in the transformed_solution. The transformation introduces a scenario that was not provided in the question, thus affecting the final total count of the fish and changing the correct answer. It should be noted that there should only be one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?\n\n### Response:",
+        "output_str": "\nLilly has 10 fish and Rosy has 12 fish, so together they have 10 + 12 = 22 fish in all.",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 22.0,
+        "is_correct": true
+    },
+    {
+        "index": 28,
+        "gsm8k_data": {
+            "question": "The sale price sarees listed for Rs. 400 after successive discount is 30% and 20%",
+            "original_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\n#### 224",
+            "original_answer": 224.0,
+            "transformed_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\nBecause there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244\n#### 244",
+            "transformed_answer": 244.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement by inserting a packaging fee of Rs. 20. The error occurs when transforming the statement 'Then, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224' from the original_solution into the transformed_solution, where it states 'Because there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244'. This introduces an additional cost that changes the final answer, despite not being part of the original question. Other calculations in step 1 and 2 are unaffected and are carried out correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe sale price sarees listed for Rs. 400 after successive discount is 30% and 20%\n\n### Response:",
+        "output_str": "\nThe sale price of the sarees after the successive discounts of 30% and 20% would be:\n\nRs. 400 x 0.70 = Rs. 280 (30% discount)\nRs. 280 x 0.80 = Rs. 224 (20% discount)\n\nTherefore, the final sale price of the sarees would be Rs. 224.",
+        "extract_true_num": 224.0,
+        "extract_pred_num": 224.0,
+        "is_correct": true
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "In a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?",
+            "original_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\n3,000 absentee ballots were cast for candidate B because 6,000 - 3,000 = 3,000\n#### 3,000",
+            "original_answer": 3000.0,
+            "transformed_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\nDue to an error in ballot counting, an additional 200 ballots for candidate B were missed, so 3,000 absentee ballots were cast for candidate B because 6,000 - 3,000 + 200 = 3,200\n#### 3,200",
+            "transformed_answer": 3200.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Due to an error in ballot counting, an additional 200 ballots for candidate B were missed>, resulting in step 4 changing from 6,000 - 3,000 = 3,000 in the original_solution to 6,000 - 3,000 + 200 = 3,200 in the transformed_solution. The transformed_answer differs from the original_answer due to the added information. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?\n\n### Response:",
+        "output_str": "\nTo determine how many absentee votes candidate B received, we need to first calculate the number of valid absentee ballots. Since 1/2 of the absentee ballots were thrown out, we can calculate the number of valid absentee ballots as follows:\n\n12,000 - (1/2 x 12,000) = 12,000 - 6,000 = 6,000\n\nSince 1/2 of the remaining absentee ballots were cast for candidate A, we can calculate the number of absentee votes candidate B received as follows:\n\n6,000 x (1/2) = 3,000\n\nTherefore, candidate B received 3,000 absentee votes.",
+        "extract_true_num": 3000.0,
+        "extract_pred_num": 3000.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "if the selling price of 50 articles is equal to the cost price of 30 articles, then the loss or gain percent is:",
+            "original_solution": "Let the cost price of each article be $1.\nThen, cost price of 50 articles = 50 x 1 = $50\nSelling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30\nLoss = Cost price - Selling price = 50 - 30 = $20\nLoss percent = (Loss / Cost price) x 100 = (20 / 50) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "Let the cost price of each article be $1.\nThen, cost price of 50 articles = 50 x 1 = $50\nAfter a shop discount of $10, Selling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30\nLoss = Cost price - Selling price = 50 - (30 + 10) = $10\nLoss percent = (Loss / Cost price) x 100 = (10 / 50) x 100 = 20%\n#### 20%",
+            "transformed_answer": 20.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <After a shop discount of $10>, resulting in step 3 changing from Selling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30 in the original_solution to Selling price of 50 articles = Cost price of 30 articles + shop discount = 30 x 1 +10 = $40 in the transformed_solution. Consequently, the error affects the calculation of loss, reducing it from $20 to $10, and the loss percent from 40% to 20%. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif the selling price of 50 articles is equal to the cost price of 30 articles, then the loss or gain percent is:\n\n### Response:",
+        "output_str": "\nIf the selling price of 50 articles is equal to the cost price of 30 articles, then the loss or gain percent is 40%.\n\nTo calculate this, we can use the following formula:\n\nLoss or Gain Percent = (Selling Price of 50 articles - Cost Price of 30 articles) / Cost Price of 30 articles\n\nIn this case, the selling price of 50 articles is equal to the cost price of 30 articles, so the formula becomes:\n\nLoss or Gain Percent = (50 x Cost Price of 30 articles) / Cost Price of 30 articles\n\nSubstituting the values, we get:\n\nLoss or Gain Percent = (50 x 30) / 30\n\nLoss or Gain Percent = 40\n\nTherefore, the loss or gain percent is 40%.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "In an election between two candidates, the winner has a margin of 10% of the votes polled. If 2000 people change their mind and vote for the loser, the loser would have won by a margin of 10% of the votes polled. Find the total number of votes polled in the election?",
+            "original_solution": "Let the total number of votes polled be x\nThe winner got 0.1x more votes than the loser, so the winner got 0.5x + 0.05x = 0.55x votes\nThe loser got 0.45x votes\nIf 2000 people change their mind and vote for the loser, the loser would have 0.55x - 2000 votes\n0.55x - 2000 = 0.45x\n0.1x = 2000\nx = 20000\n#### 20000",
+            "original_answer": 20000.0,
+            "transformed_solution": "Let the total number of votes polled be x\nThe winner got 0.1x more votes than the loser, so the winner got 0.5x + 0.05x = 0.55x votes\nThe loser got 0.45x votes\nIf 2000 people change their mind and vote for the loser also there was a counting error that added an extra 1000 votes to the winner, the loser would have 0.55x - 2000 - 1000 votes\n0.55x - 2000 - 1000 = 0.45x\n0.1x = 3000\nx = 30000\n#### 30000",
+            "transformed_answer": 30000.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <also there was a counting error that added an extra 1000 votes to the winner>, resulting in step 4 changing from 0.55x - 2000 = 0.45x in the original_solution to 0.55x - 2000 - 1000 = 0.45x in the transformed_solution. The subsequent arithmetic also changes accordingly, and now the equation to solve changes from 0.1x = 2000 to 0.1x = 3000, leading to a different final answer of x = 30000 instead of x = 20000. It should be noted that the error is made by adding additional information in one step, and all other calculation processes remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn an election between two candidates, the winner has a margin of 10% of the votes polled. If 2000 people change their mind and vote for the loser, the loser would have won by a margin of 10% of the votes polled. Find the total number of votes polled in the election?\n\n### Response:",
+        "output_str": "\nTo find the total number of votes polled in the election, we need to first determine the total number of votes that the winner received. Let's assume that the winner received x votes.\n\nSince the winner has a margin of 10% of the votes polled, we can calculate the total number of votes polled as follows:\n\nTotal number of votes polled = x + (2000 / 0.10)\n\nwhere 0.10 represents the 10% margin of victory.\n\nSubstituting the values given in the problem, we get:\n\nTotal number of votes polled = x + (2000 / 0.10)\n= x + 20,000\n\nTherefore, the total number of votes polled in the election is 20,000 + x.",
+        "extract_true_num": 20000.0,
+        "extract_pred_num": 20000.0,
+        "is_correct": true
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+            "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+            "original_answer": 17.0,
+            "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, but added an extra $5 for packaging costs, so the labeled price is 100 + 30% of 100 + 5 = 100 + 30 + 5 = $135.\nHe offered a 10% discount on the labeled price, so the selling price is 135 - 10% of 135 = 135 - 13.5 = $121.5.\nHis actual profit is 121.5 - 100 = $21.5.\nHis actual percent profit is (21.5/100) x 100% = 21.5%.\n#### 21.5%",
+            "transformed_answer": 21.5,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement, which is <but added an extra $5 for packaging costs>, resulting in step 2 changing from 100 + 30% of 100 = 130 in the original_solution to 100 + 30% of 100 + 5 = 135 in the transformed_solution. This affects the final selling price and thus the actual profit and actual percent profit figures."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?\n\n### Response:",
+        "output_str": "\n\nTo find the actual percent profit earned in the deal, we need to first calculate the cost price of the articles. Let's say the cost price of one article is Rs. 100.\n\nThe shopkeeper labeled the price of the articles at Rs. 130 (30% more than the cost price).\n\nSo, the labeled price of one article is:\n\nRs. 130 = Rs. 100 + (Rs. 100 x 30%)\n\nNow, the shopkeeper offered a discount of 10% on the labeled price. So, the actual selling price of one article is:\n\nRs. 130 - (10% of Rs. 130) = Rs. 130 - Rs. 13\n\nRs. 117\n\nSo, the actual percent profit earned in the deal is:\n\n(Rs. 117 - Rs. 100) / Rs. 100 x 100%\n\n= 17%\n\nTherefore, the actual percent profit earned in the deal is 17%.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 56,
+        "gsm8k_data": {
+            "question": "you collect pens . suppose you start out with 25 . mike gives you another 22 pens . since her father makes pens , cindy decides to double your pens . since you 're nice , you give sharon 19 pens . how many pens do you have at the end ?",
+            "original_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, you have 94-19 = 75 pens at the end.\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, then you find 5 more pens on the street, you have 94-19+5 = 80 pens at the end.\n#### 80",
+            "transformed_answer": 80.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <then you find 5 more pens on the street>, resulting in step 4 changing from 94-19 = 75 pens in the original_solution to 94-19+5 = 80 pens in the transformed_solution. This additional information increases the number of pens you have at the end, which affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nyou collect pens . suppose you start out with 25 . mike gives you another 22 pens . since her father makes pens , cindy decides to double your pens . since you 're nice , you give sharon 19 pens . how many pens do you have at the end ?\n\n### Response:",
+        "output_str": "\n\nAt the beginning, I have 25 pens.\nMike gives me 22 more pens, so now I have 25 + 22 = 47 pens.\nCindy decides to double my pens, so now I have 47 x 2 = 94 pens.\nSince I'm nice, I give Sharon 19 pens, so now I have 94 - 19 = 75 pens at the end.",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 75.0,
+        "is_correct": true
+    },
+    {
+        "index": 70,
+        "gsm8k_data": {
+            "question": "In a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?",
+            "original_solution": "The total number of players present is 16 + 12 + 18 + 13 = 59.\n#### 59",
+            "original_answer": 59.0,
+            "transformed_solution": "The total number of players present is 16 cricket players + 12 hockey players + 18 football players + 13 softball players. However, there were also 3 volleyball players who arrived late. So the new total is 16 + 12 + 18 + 13 + 3 = 62.\n#### 62",
+            "transformed_answer": 62.0,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <However, there were also 3 volleyball players who arrived late>, resulting in the addition of 3 to the previous sum of 16 + 12 + 18 + 13, changing the final result from 59 to 62 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?\n\n### Response:",
+        "output_str": "\nThere are a total of 16 + 12 + 18 + 13 = 59 players present in the ground.",
+        "extract_true_num": 59.0,
+        "extract_pred_num": 59.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "Joe needs to paint all the airplane hangars at the airport, so he buys 360 gallons of paint to do the job. During the first week, he uses 1/9 of all the paint. During the second week, he uses 1/5 of the remaining paint. How many gallons of paint has Joe used?",
+            "original_solution": "Joe used 360 / 9 = 40 gallons of paint in the first week.\nHe had 360 - 40 = 320 gallons of paint remaining.\nJoe used 320 / 5 = 64 gallons of paint in the second week.\nJoe has used 40 + 64 = 104 gallons of paint.\n#### 104",
+            "original_answer": 104.0,
+            "transformed_solution": "Joe used 360 / 9 = 40 gallons of paint in the first week.\nHe had 360 - 40 = 320 gallons of paint remaining. Because there was an accidental spill, Joe lost an additional 10 gallons of paint.\nJoe used (320 - 10) / 5 = 62 gallons of paint in the second week.\nJoe has used 40 + 62 = 102 gallons of paint.\n#### 102",
+            "transformed_answer": 102.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 in the transformed_solution adds information that is not mentioned in the question statement <Because there was an accidental spill, Joe lost an additional 10 gallons of paint.>, resulting in the calculation changing from 320 gallons remaining to (320 - 10) gallons remaining before he uses 1/5 of it in the second week. This affects the result of step 2, which changes from 320 / 5 = 64 in the original_solution to (320 - 10) / 5 = 62 in the transformed_solution. As a result, the transformed_answer changes to 40 + 62 = 102, which is different from the original_answer of 104."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJoe needs to paint all the airplane hangars at the airport, so he buys 360 gallons of paint to do the job. During the first week, he uses 1/9 of all the paint. During the second week, he uses 1/5 of the remaining paint. How many gallons of paint has Joe used?\n\n### Response:",
+        "output_str": "\nTo find out how many gallons of paint Joe has used, we need to calculate the amount of paint he used in each week and then add them up.\n\nIn the first week, Joe used 1/9 of all the paint, which is:\n\n1/9 x 360 gallons = 40 gallons\n\nIn the second week, Joe used 1/5 of the remaining paint, which is:\n\n1/5 x (360 gallons - 40 gallons) = 1/5 x 320 gallons = 64 gallons\n\nTherefore, Joe has used a total of 40 + 64 = 104 gallons of paint.",
+        "extract_true_num": 104.0,
+        "extract_pred_num": 104.0,
+        "is_correct": true
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "In one alloy there is 12% chromium while in another alloy it is 8%. 15 kg of the first alloy was melted together with 35 kg of the second one to form a third alloy. Find the percentage of chromium in the new alloy.",
+            "original_solution": "Total weight of the new alloy is 15 + 35 = 50 kg.\nTotal amount of chromium in the new alloy is 0.12 x 15 + 0.08 x 35 = 1.8 + 2.8 = 4.6 kg.\nThe percentage of chromium in the new alloy is (4.6 / 50) x 100 = 9.2%.\n#### 9.2",
+            "original_answer": 9.2,
+            "transformed_solution": "Total weight of the new alloy is 15 + 35 + 5 (assuming 5 kg of a non-cited pure chromium is added) = 55 kg.\nTotal amount of chromium in the new alloy is 0.12 x 15 + 0.08 x 35 + 5 (pure chromium addition) = 1.8 + 2.8 + 5 = 9.6 kg.\nThe percentage of chromium in the new alloy is (9.6 / 55) x 100 = 17.4545... which rounds to 17.5%.\n#### 17.5",
+            "transformed_answer": 17.5,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 has been modified with additional content that is not provided in the question statement by introducing <assuming 5 kg of a non-cited pure chromium is added>, which causes the total weight to calculate from 50 kg to 55 kg. As a result of the added pure chromium, the transformed_solution integrates this additional weight when calculating the total amount of chromium and its percentage in the new alloy, leading to a transformed_answer that differs from the original_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn one alloy there is 12% chromium while in another alloy it is 8%. 15 kg of the first alloy was melted together with 35 kg of the second one to form a third alloy. Find the percentage of chromium in the new alloy.\n\n### Response:",
+        "output_str": "\nTo find the percentage of chromium in the new alloy, we need to first calculate the total weight of the new alloy. Since 15 kg of the first alloy was melted together with 35 kg of the second alloy, the total weight of the new alloy is:\n\n15 kg + 35 kg = 50 kg\n\nNext, we need to calculate the weight of chromium in the new alloy. Since the first alloy contains 12% chromium, the weight of chromium in 15 kg of the first alloy is:\n\n15 kg x 12% = 1.8 kg\n\nSimilarly, since the second alloy contains 8% chromium, the weight of chromium in 35 kg of the second alloy is:\n\n35 kg x 8% = 2.8 kg\n\nNow, we add the weight of chromium in both alloys to find the total weight of chromium in the new alloy:\n\n1.8 kg + 2.8 kg = 4.6 kg\n\nFinally, we divide the total weight of chromium in the new alloy by the total weight of the new alloy to find the percentage of chromium in the new alloy:\n\n4.6 kg / 50 kg = 9.2%\n\nTherefore, the percentage of chromium in the new alloy is 9.2%.",
+        "extract_true_num": 9.2,
+        "extract_pred_num": 9.2,
+        "is_correct": true
+    },
+    {
+        "index": 86,
+        "gsm8k_data": {
+            "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+            "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "Assuming the work pace slows down by 10% with fewer workers, one person can complete the work in 45 x 12 x 5 = 2700 hours\nConsidering the slower pace, it takes one person 2700 x 1.1 = 2970 hours to complete the work\n30 persons working 6 hours a day will complete the work in 2970 / (30 x 6) = 16.5 days\n#### 16.5",
+            "transformed_answer": 16.5,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming the work pace slows down by 10% with fewer workers>, resulting in step 2 changing from 45 x 12 x 5 = 2700 hours in the original_solution to 2700 x 1.1 = 2970 hours in the transformed_solution, and consequently affecting the subsequent calculation in step 3, changing from 2700 / (30 x 6) = 15 days to 2970 / (30 x 6) = 16.5 days. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?\n\n### Response:",
+        "output_str": "\nTo determine how many days it will take 30 persons to complete the work of repairing a road, we can use the formula:\n\nTime = (Total work) / (Number of workers x Work hours per day)\n\nIn this case, the total work is the same as before: 45 persons can repair the road in 12 days, working 5 hours a day, so the total work is:\n\nTotal work = 45 x 12 x 5 = 2700 hours\n\nNow, we need to calculate the number of workers and the work hours per day:\n\nNumber of workers = 30\nWork hours per day = 6 hours\n\nNow we can plug in the values and solve for time:\n\nTime = (2700 hours) / (30 x 6)\n\nTime = 2700 / 180\n\nTime = 15 days\n\nTherefore, 30 persons working 6 hours a day will complete the work of repairing the road in 15 days.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "210 college students were asked in a survey if they preferred windows or mac brand computers. 60 students claimed that they preferred mac to windows brand computers. one third as many of the students who preferred mac to windows, equally preferred both brands. 90 of the students had no preference. how many of the students in the survey preferred windows to mac brand computers?",
+            "original_solution": "60 students preferred mac to windows\n60/3 = 20 students preferred both brands\n90 students had no preference\nTotal students who preferred mac = 60 + 20 = 80\nTotal students who preferred windows = 210 - 90 - 80 = 40\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "60 students preferred mac to windows\nAssuming that 10 additional students from a sports club also preferred mac and this was not originally counted, 60+10 = 70 students preferred mac to windows\n70/3 = About 23 students preferred both brands\n90 students had no preference\nTotal students who preferred mac = 70 + 23 = 93\nTotal students who preferred windows = 210 - 90 - 93 = 27\n#### 27",
+            "transformed_answer": 27.0,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <Assuming that 10 additional students from a sports club also preferred mac and this was not originally counted>, resulting in step 1 changing from 60 students in the original_solution to 60+10 = 70 students in the transformed_solution. This additional information affects the subsequent calculations starting with the number of students who prefer both brands, as well as the final number of students who prefer windows to mac. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n210 college students were asked in a survey if they preferred windows or mac brand computers. 60 students claimed that they preferred mac to windows brand computers. one third as many of the students who preferred mac to windows, equally preferred both brands. 90 of the students had no preference. how many of the students in the survey preferred windows to mac brand computers?\n\n### Response:",
+        "output_str": "\nTo determine how many students preferred windows to mac brand computers, we need to use the information that one third as many of the students who preferred mac to windows equally preferred both brands. This means that if 60 students preferred mac to windows, then 20 students (60 x 1/3) equally preferred both brands.\n\nTherefore, the number of students who preferred windows to mac brand computers is:\n\n60 - 20 = 40\n\nSo, 40 students in the survey preferred windows to mac brand computers.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 96,
+        "gsm8k_data": {
+            "question": "doughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:",
+            "original_solution": "The total parts in the ratio are 5 + 3 + 1 = 9\nEach part is equal to 50 / 5 = 10\nThere are 10 parts of muffins because 10 x 1 = 10\nThere are 10 muffins in the shop because 10 x 10 = 100\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "The total parts in the ratio are 5 + 3 + 1 = 9\nBecause 5 extra doughnuts were found, each part after recalculating is equal to (50 + 5) / 5 = 11\nThere are 11 parts of muffins because 11 x 1 = 11\nThere are actually 11 muffins in the shop because 11 x 1 = 11\n#### 11",
+            "transformed_answer": 11.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because 5 extra doughnuts were found>, which changes the value of each part in the ratio from 10 to 11, thereby affecting the calculation of the number of muffins in the shop. The transformed_solution includes this irrelevant additional information, changing the number of muffins from 10 in the original_solution to 11 in the transformed_solution. The wrong step in transforming the original_solution is the addition of extra doughnuts that were not accounted for in the problem statement."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ndoughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:\n\n### Response:",
+        "output_str": "\nIf there are 50 doughnuts in the pastry shop, and the ratio of doughnuts, cookies, and muffins is 5:3:1, then we can set up a ratio to find the number of muffins.\n\nLet's say there are x cookies in the shop.\n\nWe know that the ratio of doughnuts to cookies is 5:3, so we can write:\n\n50 / 5 = 3x\n\nNow, we know that the ratio of cookies to muffins is 3:1, so we can write:\n\n3x / 3 = x\n\nSolving for x, we get:\n\nx = 10\n\nTherefore, there are 10 muffins in the pastry shop.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "A number when divided by 6 leaves a remainder 3. When the square of the same number is divided by 6, the remainder is what?",
+            "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+            "original_answer": 3,
+            "transformed_solution": "Let the number be x, and it's given that x when divided by 6 leaves a remainder 3 and there is a penalty of 2 units for drawing numbers on the board.\nTherefore, x = 6a + 3 - 2, where a is the quotient.\nThen x^2 = (6a + 1)^2 = 36a^2 + 12a + 1 = 6(6a^2 + 2a) + 1, which means when the square of the number is divided by 6, the remainder is 1.\n#### 1",
+            "transformed_answer": 1,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <and there is a penalty of 2 units for drawing numbers on the board>, resulting in step 1 changing from x = 6a + 3 in the original_solution to x = 6a + 3 - 2 in the transformed_solution. This change affects the calculation of the square of the number and thus the wrong remainder is obtained when divided by 6. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA number when divided by 6 leaves a remainder 3. When the square of the same number is divided by 6, the remainder is what?\n\n### Response:",
+        "output_str": "\nWhen a number n is divided by 6, the remainder is 3. To find the remainder when the square of n is divided by 6, we need to find the square of n first.\n\nLet n = x, then n^2 = x^2.\n\nWhen x^2 is divided by 6, the remainder is 3, as required.\n\nTherefore, the remainder when the square of n is divided by 6 is 3.",
+        "extract_true_num": 3,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    }
+]

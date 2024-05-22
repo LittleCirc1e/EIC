@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Dexter has five pigs. Each one eats 4 pounds of feed, twice a day. If Dexter ordered 300 pounds of feed, how many pounds of feed is left after a week?",
+        "original_solution": "In a day, one pig consumes 4 x 2 = 8 pounds of feed.\nIn a day, five pigs consume 8 x 5 = 40 pounds.\nIn a week, five pigs consume 40 x 7 = 280 pounds.\nSo, there are 300 - 280 = 20 pounds of feed left.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "In a day, one pig consumes 4 + 2 = 6 pounds of feed.\nIn a day, five pigs consume 6 x 5 = 30 pounds.\nIn a week, five pigs consume 30 x 7 = 210 pounds.\nSo, there are 300 - 210 = 90 pounds of feed left.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 1 to addition, turning 4 x 2 = 8 pounds into 4 + 2 = 6 pounds of feed consumed by one pig a day. This affects the subsequent related step 2, step 3, and step 4. Step 2 changes from 8 x 5 = 40 pounds to 6 x 5 = 30 pounds, step 3 changes from 40 x 7 = 280 pounds to 30 x 7 = 210 pounds, and step 4 changes from 300 - 280 = 20 pounds to 300 - 210 = 90 pounds of feed left. It should be noted that only the operator in step 1 is incorrect, and its calculation after the operator change is correct. This leads to a different result in step 1, which affects the subsequent steps that use the result of step 1, but all calculations in the affected steps are correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "At a gathering, it was reported that 26 people took wine, 22 people took soda, and 17 people took both drinks. If each person could have taken one or more drinks regardless of what was reported, how many people altogether were at the gathering?",
+        "original_solution": "The number of people who took only wine is the difference between the number of people who took wine and those who took wine and soda which is 26 - 17 = 9 people\nIn the same manner, the number of people who took only soda is 22 - 17 = 5 people\nTherefore the total number present is the sum of those who took wine only, those who took soda only and those who took both which is 9 + 5 + 17 = 31 people\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "The number of people who took only wine is the sum of the number of people who took wine and those who took wine and soda which is 26 + 17 = 43 people\nIn the same manner, the number of people who took only soda is 22 + 17 = 39 people\nTherefore the total number present is the sum of those who took wine only, those who took soda only and those who took both which is 43 + 39 + 17 = 99 people\n#### 99",
+        "transformed_answer": 99.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition, changing '26 - 17' to '26 + 17', resulting in an incorrect count of 43 people who took only wine. Similarly, the subtraction in step 2 was changed from '22 - 17' to '22 + 17', leading to an incorrect count of 39 people who took only soda. These incorrect numbers are then incorrectly added together in step 3 with the count of those who took both drinks, which results in a total of 99 people. Only the operators in steps 1 and 2 are incorrect, leading to incorrect results from these steps. All other calculations are correctly performed based on these incorrect results.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3, which mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "Julia collects old watches. She owns 20 silver watches, and three times as many bronze watches. She decided to buy gold watches to add to her collection, a number that represents 10% of all the watches she owns. How many watches does Julia own after this purchase?",
+        "original_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60+20 = 80 total silver and bronze watches\n10% of all Julia's watches is 80 * 10/100 = 8 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 8 = 88 watches.\n#### 88",
+        "original_answer": 88.0,
+        "transformed_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60-20 = 40 total silver and bronze watches\n10% of all Julia's watches is 40 * 10/100 = 4 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 4 = 84 watches.\n#### 84",
+        "transformed_answer": 84.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example transforms the addition in step 2 to subtraction, altering 60+20 = 80 to 60-20 = 40 by changing + to -. This impacts the following step 3, as the calculation of 10% of Julia's watches is based on the modified total number of watches, changing 80 * 10/100 = 8 to 40 * 10/100 = 4. The final step 4 also inherits this change, adjusting from 20 + 60 + 8 = 88 to 20 + 60 + 4 = 84. It should be noted that in step 2, only the operator of the formula is incorrect, but the step still performs the correct mathematical operation accordingly, resulting in an incorrect outcome for that step. The subsequent steps that rely on the outcome of step 2 correctly perform their calculations based on the erroneous value provided.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 30 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

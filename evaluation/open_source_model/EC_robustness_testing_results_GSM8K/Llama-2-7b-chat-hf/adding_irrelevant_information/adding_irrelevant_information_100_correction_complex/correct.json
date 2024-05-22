@@ -1,0 +1,50 @@
+[
+    {
+        "question": "My 2 cats had 3 female kittens and 2 male kittens. How many cats do I have in total?",
+        "original_solution": "There are 3+2 = 5 kittens\nIf you originally had 2 cats then you now have 2+5 = 7 cats in total\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "There are 3+2 = 5 kittens\nIf you originally had 2 cats and you recently adopted 1 more cat, then you now have 2+5+1 = 8 cats in total\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <and you recently adopted 1 more cat>, resulting in step 2 changing from 2+5 = 7 cats in total in the original_solution to 2+5+1 = 8 cats in total in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is #. The mistake in the solution is in step 2, where the number of female kittens is calculated as 3+2 = 5 instead of 3+2 = 7. Therefore, the total number of cats is 2+7 = 9, not 8."
+    },
+    {
+        "question": "John eats a bag of chips for dinner and then eats twice as many after dinner. How many bags of chips did he eat?",
+        "original_solution": "He ate 2 * 1 = 2 bags after dinner\nSo he ate 2 + 1 = 3 bags of chips\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He ate 2 * 1 = 2 bags after dinner\nBecause he also shared 1 bag with a friend, so he ate 2 + 1 + 1 = 4 bags of chips\n#### 4",
+        "transformed_answer": 4.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because he also shared 1 bag with a friend>, resulting in step 2 changing from 2 + 1 = 3 bags of chips in the original_solution to 2 + 1 + 1 = 4 bags of chips in the transformed_solution. The final result is affected and the transformed_answer is different from the original_answer, which is the desired outcome. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 3, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 2 x 1 = 2 instead of 2 x 2 = 4. The subsequent step 3 references the result of step 2, calculating 4 + 1 + 1 = 6 instead of 4 + 1 + 1 = 4, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Robin likes to bake cupcakes for friends and to make her puppy North happy. Once Robin ate four cupcakes with chocolate sauce and twice as many cupcakes with buttercream frosting on her own. How many cupcakes did Robin eat?",
+        "original_solution": "Robin ate twice as many buttercream cupcakes as chocolate sauce cupcakes, or 2 * 4 = 8.\nSo in total she ate 4 + 8 = 12 cupcakes.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "Robin ate twice as many buttercream cupcakes as chocolate sauce cupcakes, or 2 * 4 = 8.\nBecause Robin also tried three more cupcakes with vanilla frosting, in total she ate 4 + 8 + 3 = 15 cupcakes.\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Robin also tried three more cupcakes with vanilla frosting>, resulting in step 2 changing from 4 + 8 = 12 cupcakes in the original_solution to 4 + 8 + 3 = 15 cupcakes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 4 + 8 + 3 = 15 instead of 4 + 8 = 12. The subsequent step 4 references the result of step 3, calculating 12 + 3 = 15 instead of 12 + 3 = 15, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Grace baked 4 whole pumpkin pies. She sold 1 whole pumpkin pie and gave 1 whole pumpkin pie to her friend. The remaining whole pumpkin pies were each sliced into 6 pieces. Her family ate 2/3 pieces. How many pieces of pumpkin pie were left?",
+        "original_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nThere were a total of 2 x 6 = 12 pieces made from the 2 whole pumpkin pie.\nHer family ate 12 x 2/3 = 8 pieces.\nTherefore, 12 - 8 = 4 pieces of pumpkin pie were left.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nThere were a total of 2 x 6 = 12 pieces made from the 2 whole pumpkin pie.\nBecause the dog secretly ate 1 piece, her family ate 12 x 2/3 = 8 pieces.\nTherefore, 12 - 8 - 1 = 3 pieces of pumpkin pie were left.\n#### 3",
+        "transformed_answer": 3.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because the dog secretly ate 1 piece>, resulting in step 4 changing from 12 x 2/3 = 8 pieces in the original_solution to having an additional piece eaten by the dog. The final calculation changes from 12 - 8 = 4 pieces to 12 - 8 - 1 = 3 pieces of pumpkin pie left in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 4, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 12 x 2/3 = 8 instead of 12 x 2 = 24. The subsequent step 5 references the result of step 3, calculating 24 - 8 = 16 instead of 24 - 8 = 16, resulting in the final incorrect answer."
+    }
+]

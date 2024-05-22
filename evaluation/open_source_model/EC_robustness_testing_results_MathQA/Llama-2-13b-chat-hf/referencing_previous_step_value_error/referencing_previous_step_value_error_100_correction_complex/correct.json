@@ -1,0 +1,26 @@
+[
+    {
+        "question": "What is x if x + 2 y = 20 and y = 5 ?",
+        "original_solution": "2y = 10\nx = 20 - 10 = 10\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "2y = 10\nx = 20 - 8 = 12\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references the correct value of 2y as 8 instead of 10 from step 1, incorrectly changing the equation from x = 20 - 10 = 10 to x = 20 - 8 = 12. It should be noted that step 1 in the transformed_solution <2y = 10> should be the same as step 1 in the original_solution <2y = 10> and calculates its result 10 correctly. The error is only in step 2, where a different value is substituted for 2y. Since only one step error is considered, all other calculations remain correct based on the erroneous step 2 reference, making the transformed_answer different from the original_answer.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that 2y is 10 instead of 20, calculating 2y = 10 instead of 2y = 20. The subsequent step 4 references the result of step 3, calculating 10 + 2(5) = 12 instead of 20 + 2(5) = 24. The subsequent step 5 references the result of step 4, calculating 12 / 2 = 6 instead of 24 / 2 = 12, resulting in the final incorrect answer."
+    },
+    {
+        "question": "the present ages of abi and suji are in the ratio of 5:4 respectively. 3 years hence, the ratio of their ages will become 11:9 respectively. what is suji's present age in years?",
+        "original_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 24 years.\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 30 years.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references the value of x as 6 from step 4 and changes 4x = 4 * 6 to equal 30 instead of the correct 24. It should be noted that step 4 in the transformed_solution <Solving the above equation, we get x = 6.> should be the same as the step 4 in the original_solution <Solving the above equation, we get x = 6.> and calculates its result 6 correctly. The error in step 5 is the only one to consider, and it changes 4 * 6 = 24 to 4 * 6 = 30, resulting in an incorrect transformed answer. All other steps that reference the result number still reference this number correctly and are thereby calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 24, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one year has 12 months instead of 13 months, calculating 3 * 12 = 36 instead of 3 * 13 = 39. The subsequent step 4 references the result of step 3, calculating 36 + 3 = 42 instead of 39 + 3 = 42. The subsequent step 5 references the result of step 4, calculating 42 / 3 = 24 instead of 42 / 4 = 24, resulting in the final incorrect answer."
+    }
+]

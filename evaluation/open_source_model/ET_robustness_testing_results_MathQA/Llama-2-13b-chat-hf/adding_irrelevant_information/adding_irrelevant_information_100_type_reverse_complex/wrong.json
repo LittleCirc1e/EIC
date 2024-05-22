@@ -1,0 +1,26 @@
+[
+    {
+        "question": "A train 360 m long is running at a speed of 45 km/hr. In what time will it pass a bridge 240 m long?",
+        "original_solution": "First convert the speed from km/hr to m/s: 45 km/hr x (1000 m/1 km) x (1 hr/3600 s) = 12.5 m/s\nTotal distance to be covered = length of train + length of bridge = 360 m + 240 m = 600 m\nTime = Distance/Speed = 600 m / 12.5 m/s = 48 s\n#### 48 s",
+        "original_answer": 48.0,
+        "transformed_solution": "First convert the speed from km/hr to m/s: 45 km/hr x (1000 m/1 km) x (1 hr/3600 s) = 12.5 m/s\nTotal distance to be covered = length of train + length of bridge + an additional length of 60 m maintenance work on the bridge = 360 m + 240 m + 60 m = 660 m\nTime = Distance/Speed = 660 m / 12.5 m/s = 52.8 s\n#### 52.8 s",
+        "transformed_answer": 52.8,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <an additional length of 60 m maintenance work on the bridge>, resulting in step 2 changing from length of train + length of bridge = 360 m + 240 m = 600 m in the original_solution to length of train + length of bridge + an additional length of 60 m maintenance work on the bridge = 360 m + 240 m + 60 m = 660 m in the transformed_solution. The final calculation has thus been affected, altering the total distance and corresponding time required to pass the bridge and leading to a different result.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly converts the speed from km/hr to m/s without considering the conversion factor of 1000 m/1 km, which only results in an error in one operand in the formula, thus it belongs to calculation_error."
+    },
+    {
+        "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+        "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+        "original_answer": 17.0,
+        "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, but added an extra $5 for packaging costs, so the labeled price is 100 + 30% of 100 + 5 = 100 + 30 + 5 = $135.\nHe offered a 10% discount on the labeled price, so the selling price is 135 - 10% of 135 = 135 - 13.5 = $121.5.\nHis actual profit is 121.5 - 100 = $21.5.\nHis actual percent profit is (21.5/100) x 100% = 21.5%.\n#### 21.5%",
+        "transformed_answer": 21.5,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, which is <but added an extra $5 for packaging costs>, resulting in step 2 changing from 100 + 30% of 100 = 130 in the original_solution to 100 + 30% of 100 + 5 = 135 in the transformed_solution. This affects the final selling price and thus the actual profit and actual percent profit figures.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, where the extra $5 for packaging costs is added to the labeled price instead of being added to the cost price before calculating the marked-up price. This results in an error in the operand of the formula, and the correct solution is to add the packaging costs to the cost price before calculating the marked-up price."
+    }
+]

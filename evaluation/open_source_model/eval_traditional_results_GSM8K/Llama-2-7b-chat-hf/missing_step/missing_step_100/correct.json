@@ -1,0 +1,363 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "The stadium seats 60,000 fans, but only 75% of the seats were sold for the music show. Because of the threat of rain, 5,000 fans stayed home. How many attended the show?",
+            "original_solution": "The number of seats sold was 0.75*60,000=45,000.\nAnd 45,000-5,000=40,000.\n#### 40,000",
+            "original_answer": 40000.0,
+            "transformed_solution": "Because of the threat of rain, 5,000 fans stayed home. So, 60,000-5,000=55,000 fans attended the show.\n#### 55,000",
+            "transformed_answer": 55000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 computes the number of seats sold (45,000) from the given 75% of 60,000. Step 2 references the result of step 1. After deleting step 1, the subsequent step should reference the initial number in the question related to the number of seats, which is 60,000. However, the subsequent step incorrectly maintains the calculation to account for the fans that stayed home and subtracts 5,000 directly from 60,000 instead of correctly subtracting it from the actual number of seats sold. As a result, the solution skips the calculation of the number of seats sold at 75% and incorrectly presents the formula as 60,000-5,000=55,000. This is the step that has been directly affected by the absence of the deleted step 1, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe stadium seats 60,000 fans, but only 75% of the seats were sold for the music show. Because of the threat of rain, 5,000 fans stayed home. How many attended the show?\n\n### Response:",
+        "output_str": "\nAccording to the instruction, 60,000 fans could attend the show, but only 75% of them actually did. This means that 45,000 fans attended the show (60,000 x 75%). Then, we subtract the 5,000 fans who stayed home due to the threat of rain, leaving us with 40,000 fans who actually attended the show. Therefore, the answer is 40,000.",
+        "extract_true_num": 40000.0,
+        "extract_pred_num": 40000.0,
+        "is_correct": true
+    },
+    {
+        "index": 4,
+        "gsm8k_data": {
+            "question": "A small theater company sells tickets to a show. They have a 400 seat theater and fill to 80% capacity. Each ticket cost $30. They repeated the same performance 2 other days. How much did they make?",
+            "original_solution": "They sold 400 * 0.8 = 320 tickets each day\nSo each day they made 320 * 30 = $9600\nThey did 2 + 1 = 3 days\nSo they made 9600 * 3 = $28,800\n#### 28,800",
+            "original_answer": 28800.0,
+            "transformed_solution": "So each day they made 400 * 30 = $12,000\nThey did 2 + 1 = 3 days\nSo they made 12000 * 3 = $36,000\n#### 36,000",
+            "transformed_answer": 36000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, the first step from the original_solution has been deleted. Since the step 1 originally calculated the number of tickets sold each day by multiplying the total number of seats, 400, by the percentage filled, 80%, the modified solution should refer to the total number of seats directly. The subsequent step that originally referred to the result of this deleted step now uses the total number of seats, 400, multiplied by the ticket cost, $30. The largest number between the theater capacity (400) and the fill percentage (0.8) is 400, which is used in the corrected calculation. Step 2 of the modified solution now becomes step 1 itself, multiplying 400 by $30 to get $12,000, the incorrect revenue per day, changing from 320 * 30 to 400 * 30. The remaining steps are correctly following the structure of the original solution, where the performance days are added and then multiplied by the incorrect daily revenue, leading to a transformed answer of $36,000 instead of $28,800. The first step to make a reference to the deleted step's result is the new step 1, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA small theater company sells tickets to a show. They have a 400 seat theater and fill to 80% capacity. Each ticket cost $30. They repeated the same performance 2 other days. How much did they make?\n\n### Response:",
+        "output_str": "\nThe small theater company made a total of $24,000 from selling tickets to the show.\n\nTo calculate this amount, we need to first determine how many tickets were sold. Since the theater has a 400 seat capacity and they filled to 80% capacity, they sold 320 tickets (400 x 0.8).\n\nNext, we can calculate the total revenue from ticket sales by multiplying the number of tickets sold by the price of each ticket: $30 x 320 = $9,600.\n\nSince the show was repeated on two other days, the total amount of money made by the theater company is $9,600 x 3 = $28,800. Therefore, the small theater company made a total of $28,800 from selling tickets to the show.",
+        "extract_true_num": 28800.0,
+        "extract_pred_num": 28800.0,
+        "is_correct": true
+    },
+    {
+        "index": 7,
+        "gsm8k_data": {
+            "question": "Lori owns 15 times as many beanie babies as Sydney. If Lori has 300 beanie babies, how many beanie babies do they have in total?",
+            "original_solution": "If Lori has 15 times as many beanie babies as Sydney, Sydney has 300/15 = 20 beanie babies.\nTogether, they have 20 + 300 = 320 beanie babies\n#### 320",
+            "original_answer": 320.0,
+            "transformed_solution": "Together, they have 300 + 300 = 600 beanie babies\n#### 600",
+            "transformed_answer": 600.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of beanie babies that Sydney has by dividing Lori's number of beanie babies (300) by 15. Step 2 references the result of step 1 (20 beanie babies). After deleting step 1, step 2 should have directly referenced the largest number in the question, which is Lori's number of beanie babies (300), but instead, the calculation reference the same number (300) instead of the correct result of 20 beanie babies. Therefore, the formula changed incorrectly from 20 + 300 = 320 to 300 + 300 = 600, doubling Lori's number instead of adding Sydney's correct amount. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLori owns 15 times as many beanie babies as Sydney. If Lori has 300 beanie babies, how many beanie babies do they have in total?\n\n### Response:",
+        "output_str": "\nSydney has 20 beanie babies.\n\n### Explanation:\nLori owns 15 times as many beanie babies as Sydney, which means that Lori has 15 x 20 = 300 beanie babies. Therefore, the total number of beanie babies that Lori and Sydney have is 300 + 20 = 320 beanie babies.",
+        "extract_true_num": 320.0,
+        "extract_pred_num": 320.0,
+        "is_correct": true
+    },
+    {
+        "index": 24,
+        "gsm8k_data": {
+            "question": "Josie grows grapes on her 10-acre farm. Each acre produces 5 tons of grapes per year, and each ton of grapes makes 2 barrels of wine. How many barrels of wine does her farm produce per year?",
+            "original_solution": "If each acre produces 5 tons of grapes per year, then her ten-acre farm produces 10*5=50 tons of grapes per year.\nIf each ton of grapes makes 2 barrels of wine, then 50 tons makes 2*50=100 barrels of wine per year.\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "The farm produces 10*2=20 barrels of wine per acre per year.\nSo for 10 acres, it produces 20*10=200 barrels of wine per year.\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The example deletes the first step. In the original_solution, step 1 references the numbers 10 and 5 from the question, and uses the largest number (10) for the subsequent related step to reference. Therefore, after step 1 is removed, what needs to be considered is how many barrels of wine a single acre produces in a year. Since each acre produces 5 tons and each ton makes 2 barrels, this translates to 10 barrels per acre. However, the mistake is made by using 2 barrels instead of 10 in the calculation, thus resulting in a transformed_solution that references 2 barrels per acre per year. This results in 10*2 = 20 barrels of wine per acre per year for the first step, and then for 10 acres, 20*10 = 200 barrels of wine per year for the second step. The wrong_step is 1 because it is the first step referencing the incorrect number in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJosie grows grapes on her 10-acre farm. Each acre produces 5 tons of grapes per year, and each ton of grapes makes 2 barrels of wine. How many barrels of wine does her farm produce per year?\n\n### Response:",
+        "output_str": "\nJosie's farm produces 5 tons of grapes per acre per year, and each ton of grapes produces 2 barrels of wine. Therefore, her farm produces 5 tons x 2 barrels/ton = 10 barrels of wine per acre per year. Since she has 10 acres of land, her farm produces 10 barrels/acre x 10 acres = 100 barrels of wine per year.",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 29,
+        "gsm8k_data": {
+            "question": "Mason is trying to download a 880 MB game to his phone. After downloading 310 MB, his Internet connection slows to 3 MB/minute. How many more minutes will it take him to download the game?",
+            "original_solution": "First find how many MB are left to download: 880 MB - 310 MB = 570 MB\nThen divide that number by the download speed to find the download time: 570 MB / 3 MB/minute = 190 minutes\n#### 190",
+            "original_answer": 190.0,
+            "transformed_solution": "Divide the total size by the download speed to find the download time: 880 MB / 3 MB/minute = 293.33 minutes\n#### 293.33",
+            "transformed_answer": 293.33,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the numbers 880 and 310 from the question, and step 2 references the result of step 1. So after deleting step 1, step 2 should change the result 570 of the referenced step 1 to directly reference the number 880 in the question instead of subtracting 310 MB first, causing the formula to incorrectly change from 570 MB / 3 MB/minute to 880 MB / 3 MB/minute. It should be noted that this changes the logic of the problem as it incorrectly assumes Mason is starting the download from the beginning rather than continuing from 310 MB already downloaded. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step incorrectly referencing the entire game size in the transformed_solution after the removal of the actual first step, and so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMason is trying to download a 880 MB game to his phone. After downloading 310 MB, his Internet connection slows to 3 MB/minute. How many more minutes will it take him to download the game?\n\n### Response:",
+        "output_str": "\nTo determine how many more minutes it will take Mason to download the game, we need to calculate the time it will take to download the remaining 570 MB (880 MB - 310 MB).\n\nSince Mason's Internet connection is now 3 MB/minute, it will take him:\n\n570 MB / 3 MB/minute = 190 minutes\n\nTherefore, it will take Mason an additional 190 minutes to download the game.",
+        "extract_true_num": 190.0,
+        "extract_pred_num": 190.0,
+        "is_correct": true
+    },
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "Adam had a farm with animals. He had 12 cows and twice as many sheep. He decided to buy 3 pigs for every sheep he had. How many animals were on the farm after the transaction?",
+            "original_solution": "Adam had twice as many sheep as the cows, so 2 sheep/cow * 12 cows = 24 sheep.\nFor every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 24 sheep + 12 cows = 108 animals.\n#### 108",
+            "original_answer": 108.0,
+            "transformed_solution": "For every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 12 cows = 84 animals.\n#### 84",
+            "transformed_answer": 84.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the first step has been removed. In the original_solution, step 1 calculates the number of sheep based on the number of cows, and this result is used in step 2 to calculate the number of pigs. After deleting step 1, the number of sheep is missing in the modified solution, and step 2 should change the formula from 3 pigs/sheep * 24 sheep to 3 pigs/sheep * (2 * 12 cows). However, this has been incorrectly omitted, and the calculation of pigs is directly based on the number of sheep from the removed step, resulting in an unaccounted number of sheep in step 2. The subsequent step 3, which originally summed up pigs, sheep, and cows, now incorrectly sums up just pigs and cows, leading to a wrong total count of animals on the farm. It is step 1 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step with the unaccounted number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAdam had a farm with animals. He had 12 cows and twice as many sheep. He decided to buy 3 pigs for every sheep he had. How many animals were on the farm after the transaction?\n\n### Response:",
+        "output_str": "\nAdam had a farm with animals. He had 12 cows and twice as many sheep, which means he had 24 sheep. He then decided to buy 3 pigs for every sheep he had, which means he bought 24 x 3 = 72 pigs. Therefore, after the transaction, Adam had a total of 12 cows, 24 sheep, and 72 pigs on his farm, for a total of 108 animals.",
+        "extract_true_num": 108.0,
+        "extract_pred_num": 108.0,
+        "is_correct": true
+    },
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "Milly is figuring out how long she needs to spend studying. She knows that her math homework will take 60 minutes. Her geography homework will take half as long as her math homework, and her science homework will take time equal to the mean amount of time she spent studying math and geography. How many minutes does Milly spend studying?",
+            "original_solution": "First find how long Milly spends studying geography by dividing her math homework time by 2: 60 minutes / 2 = 30 minutes.\nNow find the total amount of time Milly spent on math and geography: 30 minutes + 60 minutes = 90 minutes.\nNow calculate the mean amount of time Milly spends on math and geography by dividing the total time spent by the number of subjects, which is 2: 90 minutes / 2 = 45 minutes.\nNow add the time Milly spent on all three subjects to find the total: 45 minutes + 30 minutes + 60 minutes = 135 minutes.\n#### 135",
+            "original_answer": 135.0,
+            "transformed_solution": "Find the total amount of time Milly spent on math and geography [combining step 1 and 2]: 60 minutes + (60 minutes / 2) = 90 minutes.\nNow calculate the mean amount of time Milly spends on math and geography by dividing the total time spent by the number of subjects, which is 2: 90 minutes / 2 = 45 minutes.\nNow add the time Milly spent on all three subjects to find the total: 45 minutes + (60 minutes / 2) + 60 minutes = 150 minutes.\n#### 150",
+            "transformed_answer": 150.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, the original step 1 has been removed. Thus, the reference to \"30 minutes\" in the original step 2 for the time spent on geography has been removed. In the transformed_solution, the calculation that finds the time spent on geography by dividing math homework time by 2 (60 minutes / 2 = 30 minutes) is integrated into step 1. Consequently, the initial calculation in step 3 of the original solution, which calculates the mean amount of time spent on math and geography, now references the recalculated total time spent on math and geography (90 minutes) from the transformed step 1. Step 2 of the transformed solution, which calculates the total study time, also integrates this change and incorrectly calculates the total study time as 150 minutes instead of the correct 135 minutes. By removing the first step, which was the calculation of the geography homework time, the subsequent steps reference the largest number from question that step 1 references, which is \"60 minutes\" for the math homework time, leading to the incorrect transformed_answer. Therefore, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMilly is figuring out how long she needs to spend studying. She knows that her math homework will take 60 minutes. Her geography homework will take half as long as her math homework, and her science homework will take time equal to the mean amount of time she spent studying math and geography. How many minutes does Milly spend studying?\n\n### Response:",
+        "output_str": "\nMilly will spend 60 minutes studying math, since it takes her 60 minutes to complete her math homework. For geography, she will spend half as much time, or 30 minutes. For science, she will spend the mean amount of time she spent studying math and geography, which is (60 + 30) / 2 = 45 minutes. Therefore, Milly will spend a total of 60 + 30 + 45 = 135 minutes studying.",
+        "extract_true_num": 135.0,
+        "extract_pred_num": 135.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "A mechanic charges different rates to repair the tires of trucks and cars. For each truck tire that is repaired, the mechanic will charge $60 and for each car tire that is repaired, the mechanic will charge $40. On Thursday, the mechanic repairs 6 truck tires and 4 car tires. On Friday, the mechanic repairs 12 car tries and doesn't repair any truck tires. How much more revenue did the mechanic earn on the day with higher revenue?",
+            "original_solution": "On Thursday the mechanic charged a total of 6*60 + 4*40 = $520.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 520-480 = $40 more revenue than on Friday.\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "On Thursday the mechanic charged a total of 6*40 + 4*40 = $400.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 400-480 = -$80 more revenue than on Friday.\n#### -80",
+            "transformed_answer": -80.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been modified to incorrectly calculate the revenue from truck tires by using the price for car tires. In the original_solution, step 1 correctly calculates the revenue for truck tires by using $60. However, in the transformed_solution, step 1 incorrectly uses the car tire price ($40) for the truck tires as well. The remaining steps reference the result of step 1. Therefore, after altering step 1, the revenue calculation for Thursday should be $400 (using 6*40 + 4*40), leading to an incorrect revenue comparison and a negative result for the difference in revenue, that is actually impossible considering the problem context. The transformed_solution's first step now uses the car tire price for the truck tires, changing the formula from 6*60 + 4*40 to 6*40 + 4*40 and resulting in a revenue of $400. The subsequent steps reflect this error with the final step comparing the incorrect calculations, resulting in $400 - $480 equaling -$80. The wrong step is 1 because it contains the first incorrect calculation referencing the wrong tire repair price."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA mechanic charges different rates to repair the tires of trucks and cars. For each truck tire that is repaired, the mechanic will charge $60 and for each car tire that is repaired, the mechanic will charge $40. On Thursday, the mechanic repairs 6 truck tires and 4 car tires. On Friday, the mechanic repairs 12 car tries and doesn't repair any truck tires. How much more revenue did the mechanic earn on the day with higher revenue?\n\n### Response:",
+        "output_str": "\nTo determine the difference in revenue between Thursday and Friday, we need to calculate the total revenue for each day. For Thursday, the total revenue is 6 truck tires x $60 = $360, plus 4 car tires x $40 = $160 = $520. For Friday, the total revenue is 12 car tires x $40 = $480. Therefore, the difference in revenue between Thursday and Friday is $520 - $480 = $40. So, the mechanic earned $40 more revenue on Friday than on Thursday.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "Evan’s dog weighs 63 pounds; it weighs 7 times as much as Ivan’s dog.  Together, what is the weight of the dogs?",
+            "original_solution": "Ivan's dog weighs 63/7 = 9 pounds.\nThus, the two dogs weigh 63 + 9 = 72 pounds.\n#### 72",
+            "original_answer": 72.0,
+            "transformed_solution": "Thus, the two dogs weigh 63 + 63 = 126 pounds.\n#### 126",
+            "transformed_answer": 126.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 63 from the question, and step 2 references the result of step 1. So after deleting step 1, step 2 should change the result 9 of the referenced step 1 to the number 63 in the question, the largest value involved in the calculation, causing the formula to change from 63 + 9 = 72 to 63 + 63 = 126. The calculation of step 2 after the transformation is still correct. However, it incorrectly assumes that Evan's dog weighs the same as Ivan's dog after multiplying Evan's dog's weight by 7. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing an incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nEvan’s dog weighs 63 pounds; it weighs 7 times as much as Ivan’s dog.  Together, what is the weight of the dogs?\n\n### Response:",
+        "output_str": "\nThe weight of Evan’s dog is 63 pounds, and it weighs 7 times as much as Ivan’s dog, which means Ivan’s dog weighs 63 pounds / 7 = 9 pounds. Therefore, the total weight of the two dogs is 63 + 9 = 72 pounds.",
+        "extract_true_num": 72.0,
+        "extract_pred_num": 72.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "Jack buys a squat rack for $2500. The barbell cost 1/10 as much. How much did he pay for everything?",
+            "original_solution": "The barbell cost 2500/10=$250\nSo he paid 2500+250=$2750 for everything\n#### 2750",
+            "original_answer": 2750.0,
+            "transformed_solution": "He paid 2500+2500=$5000 for everything\n#### 5000",
+            "transformed_answer": 5000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, step 1 from the original_solution, which calculates the price of the barbell, has been removed. Instead of calculating the reduced cost of the barbell, the transformed_solution incorrectly uses the full price of the squat rack. The subsequent step directly adds the squat rack cost to itself without considering the correct barbell cost. After deleting step 1, the subsequent step does not reference the correct number for the barbell from step 1 but instead incorrectly uses the squat rack cost, resulting in a transformed_solution with an incorrect total cost calculation, and the formula changes from 2500+250=$2750 to 2500+2500=$5000. Since the result of the deleted step 1 is no longer included and there is a direct jump to referencing the squat rack cost again, the erroneous calculation starts at wrong_step 1 in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJack buys a squat rack for $2500. The barbell cost 1/10 as much. How much did he pay for everything?\n\n### Response:",
+        "output_str": "\nJack paid $2500 for the squat rack and $250 for the barbell, so he paid a total of $2750 for everything.",
+        "extract_true_num": 2750.0,
+        "extract_pred_num": 2750.0,
+        "is_correct": true
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "There were 18 stamps in Parker’s scrapbook. If Addie put one fourth of her 72 stamps in Parker’s scrapbook, how many stamps does he have now?",
+            "original_solution": "Addie put 72/4=18 stamps in the scrapbook\nParker now has 18+18=36 stamps in his scrapbook\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "Addie put 72/4=18 stamps in the scrapbook\nParker now has 72+18=90 stamps in his scrapbook\n#### 90",
+            "transformed_answer": 90.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this case, the first step (Addie put 72/4=18 stamps in the scrapbook) has been inadvertently removed in the transformation process. Therefore, when constructing the transformed_solution, the subsequent step needs to refer to the largest number involved in the original first step, which is 72, rather than the result, which was 18. As a result, the transformed formula in step 2 goes from Parker now has 18+18=36 stamps in his scrapbook to Parker now has 72+18=90 stamps in his scrapbook (step 2). The wrong_step is 2 because it is the first step to reference the incorrect number after the transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere were 18 stamps in Parker’s scrapbook. If Addie put one fourth of her 72 stamps in Parker’s scrapbook, how many stamps does he have now?\n\n### Response:",
+        "output_str": "\nIf Addie put one fourth of her 72 stamps in Parker's scrapbook, that means she added 18 stamps (since Parker had 18 stamps in his scrapbook already). Therefore, Parker now has a total of 18 + 18 = 36 stamps in his scrapbook.",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 59,
+        "gsm8k_data": {
+            "question": "Jake has $5000. He spends $2800 on a new motorcycle, and then spends half of what's left on a concert ticket. Jake then loses a fourth of what he has left. How much money does he have left?",
+            "original_solution": "Jake has 5000-2800 = $2200 left\nJake spends 2200/2 = $1100 on a concert ticket\nJake loses 1100/4 = $275\nJake has 1100-275 = $825 left.\n#### 825",
+            "original_answer": 825.0,
+            "transformed_solution": "Jake spends 5000/2 = $2500 on a concert ticket\nJake loses 2500/4 = $625\nJake has 2500-625 = $1875 left.\n#### 1875",
+            "transformed_answer": 1875.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "By removing step 1, the second step needs to reference the amount Jake initially had ($5000) instead of the amount left after purchasing the motorcycle ($2200). Since the question states he spends half of what's left on a concert ticket, the remaining amount is referenced as half of the original amount ($5000) instead. The resulting number from the question ($5000) divides directly in half (5000/2 = $2500). Subsequent steps must then calculate the loss and the remaining money based on the new amount Jake has after spending on the concert ticket ($2500). Step 2 thus becomes \"Jake loses 2500/4 = $625\" and step 3 is updated accordingly to \"Jake has 2500-625 = $1875 left\". Because step 1 in the transformed solution, which is the first step that follows the deleted step in the original_solution, references the incorrect number directly from the question, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJake has $5000. He spends $2800 on a new motorcycle, and then spends half of what's left on a concert ticket. Jake then loses a fourth of what he has left. How much money does he have left?\n\n### Response:",
+        "output_str": "\nJake has $5000.\n\nHe spends $2800 on a new motorcycle, so he has $5000 - $2800 = $2200 left.\n\nThen, he spends half of what's left on a concert ticket, which is $2200 / 2 = $1100.\n\nSo, Jake has $2200 - $1100 = $1100 left.\n\nFinally, he loses a fourth of what he has left, which is $1100 / 4 = $275.\n\nTherefore, Jake has $1100 - $275 = $825 left.",
+        "extract_true_num": 825.0,
+        "extract_pred_num": 825.0,
+        "is_correct": true
+    },
+    {
+        "index": 61,
+        "gsm8k_data": {
+            "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+            "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+            "original_answer": 72.0,
+            "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n#### 78",
+            "transformed_answer": 78.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSteve is 5'6\". He grows 6 inches. How tall is he in inches?\n\n### Response:",
+        "output_str": "\nSteve is 5'6\" which means he is 66 inches tall. After growing 6 inches, he is now 72 inches tall.",
+        "extract_true_num": 72.0,
+        "extract_pred_num": 72.0,
+        "is_correct": true
+    },
+    {
+        "index": 67,
+        "gsm8k_data": {
+            "question": "John buys a heating pad for $30. He uses it 3 times a week for 2 weeks. How much does he spend on each use?",
+            "original_solution": "He uses it 3*2=6 times\nSo he pays 30/6=$5\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "So he pays 30/3=$10\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the total number of uses as 3*2=6. Step 2 then references the result of 6 uses from step 1 to calculate the cost per use as 30/6=$5. After deleting step 1, the second step should change the divisor (which was originally 6) to the largest number that was used in the deleted step 1 (which is 3). This causes the calculation to change from 30/6=$5 to 30/3=$10. The reference to the total number of uses is removed and replaced with the number of uses per week. It is the only step in the transformed_solution that serves as the first step referencing an incorrect number (3 instead of 6) in the transformed_solution. Therefore, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn buys a heating pad for $30. He uses it 3 times a week for 2 weeks. How much does he spend on each use?\n\n### Response:",
+        "output_str": "\nTo find out how much John spends on each use of the heating pad, we need to divide the total cost of the heating pad ($30) by the number of times he uses it. In this case, John uses the heating pad 3 times a week for 2 weeks, which means he uses it a total of 6 times. So, John spends $30 / 6 = $5 per use on the heating pad.",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 5.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "On Monday, Walt walked 4 miles. Tuesday, he walked 6 times as many miles as he walked on Monday. His total mileage Monday through Wednesday was 41 miles. How many miles did he walk on Wednesday?",
+            "original_solution": "Walt’s Tuesday walk was 4*6 = 24 miles.\nWalt’s Monday and Tuesday walk were 4+24 = 28 miles combined.\nWalt’s Wednesday walk was 41-28 = 13 miles.\n#### 13",
+            "original_answer": 13.0,
+            "transformed_solution": "Walt’s Monday and Tuesday walk were 4+4*6 = 52 miles combined.\nWalt’s Wednesday walk was 41-52 = -11 miles.\n#### -11",
+            "transformed_answer": -11.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this transformed_solution, intermediate step 1 has been removed. In the original_solution, step 1 references the number 4 from the question, and step 2 references the result 24 of step 1. Therefore, after deleting step 1, step 2 should reference result 4 from the question. However, instead of using the correct multiplication and addition, there was a mistake in combining the operations, leading to an incorrect new step of 'Walt's Monday and Tuesday walk were 4+4*6 = 52 miles combined.' This is mathematically incorrect because it does not respect the order of operations (multiplication should be done before addition). This incorrect step results in the subsequent step calculating Walt's Wednesday walk by subtracting 52 from 41, yielding an incorrect negative distance. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Monday, Walt walked 4 miles. Tuesday, he walked 6 times as many miles as he walked on Monday. His total mileage Monday through Wednesday was 41 miles. How many miles did he walk on Wednesday?\n\n### Response:",
+        "output_str": "\nWalt walked 24 miles on Wednesday.\n\nExplanation:\nTo find the number of miles Walt walked on Wednesday, we can use the information provided in the problem. We know that on Monday, Walt walked 4 miles, and on Tuesday, he walked 6 times as many miles as he walked on Monday. This means that on Tuesday, Walt walked 4 x 6 = 24 miles. Since the total mileage from Monday through Wednesday was 41 miles, we can deduce that Walt walked 41 - 4 = 37 miles on Monday and Tuesday combined. Therefore, the number of miles Walt walked on Wednesday is 37 - 24 = 13 miles.",
+        "extract_true_num": 13.0,
+        "extract_pred_num": 13.0,
+        "is_correct": true
+    },
+    {
+        "index": 70,
+        "gsm8k_data": {
+            "question": "Shelly makes braided keychains for her friends at school. Each keychain takes 12 inches of thread to braid. This year, she made six friends in classes and half that number from after-school clubs. She wants to make each of them a keychain. How many inches of thread does Shelly need?",
+            "original_solution": "Shelly made 6 /2 = 3 friends from after-school clubs.\nShe made 6 + 3 = 9 new friends at school this year.\nShelly will need 9 * 12 = 108 inches of thread to make each friend a keychain.\n#### 108",
+            "original_answer": 108.0,
+            "transformed_solution": "Shelly made 6 + 6 = 12 new friends at school this year.\nShelly will need 12 * 12 = 144 inches of thread to make each friend a keychain.\n#### 144",
+            "transformed_answer": 144.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 6 from the question, and step 2 references the result 3 of step 1. So after deleting step 1, step 2 should change the result 3 of the referenced step 1 to the number 6 in the question, causing the formula to change from 6+3=9 to 6+6=12, indicating the total number of friends. It should be noted that the calculation method for step 2 after the transformation is still correct. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nShelly makes braided keychains for her friends at school. Each keychain takes 12 inches of thread to braid. This year, she made six friends in classes and half that number from after-school clubs. She wants to make each of them a keychain. How many inches of thread does Shelly need?\n\n### Response:",
+        "output_str": "\nTo determine how many inches of thread Shelly needs, we need to calculate the total number of keychains she wants to make. Shelly wants to make 6 keychains for her friends in classes and half that number, or 3 keychains, from after-school clubs. Therefore, the total number of keychains Shelly wants to make is 6 + 3 = 9 keychains.\n\nSince each keychain takes 12 inches of thread to braid, Shelly needs a total of 9 x 12 = 108 inches of thread to make all of the keychains.",
+        "extract_true_num": 108.0,
+        "extract_pred_num": 108.0,
+        "is_correct": true
+    },
+    {
+        "index": 77,
+        "gsm8k_data": {
+            "question": "For a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?",
+            "original_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 24 packs = 26 more packs of cookies to reach his target\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "Tory sold 12 packs to his grandmother.\nTory sold 12 packs + 5 packs = 17 packs in total\nHe has to sell 50 packs - 17 packs = 33 more packs of cookies to reach his target\n#### 33",
+            "transformed_answer": 33.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the first step has been removed. In the original_solution, step 1 references 12 packs and 7 packs sold to family members, and step 2 references the result 19 packs from step 1. So after deleting step 1, step 2 should change the result 19 of the referenced step 1 to directly reference the number 12 packs to his grandmother from the question, causing the formula to change from 19 packs + 5 packs = 24 packs to 12 packs + 5 packs = 17 packs. Notice that we only reference the 12 packs sold to the grandmother as it is the first step and we choose to reference the number from the question connected to step 1. Step 3 as a subsequent related step, is affected by step 2. It will change 50 packs - 24 packs = 26 packs to 50 packs - 17 packs = 33 packs to reach the target. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?\n\n### Response:",
+        "output_str": "\nTo determine how many more packs of cookies Tory needs to sell, we need to subtract the number of packs he has already sold from the total number of packs he needs to sell. In this case, Tory needs to sell 50 packs of cookies, but he has already sold 12 + 7 + 5 = 24 packs. Therefore, Tory needs to sell 50 - 24 = 26 more packs of cookies.",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 26.0,
+        "is_correct": true
+    },
+    {
+        "index": 78,
+        "gsm8k_data": {
+            "question": "Last month, Tasha made $80 from selling lemonade and mowing lawns. The first week, she mowed Kamala's lawn thrice as many times as she did Joe's. The following week, she mowed Alba's lawn five times as she did Joe's. If Joe paid Tasha $6 for her work, how much did she make from lemonade sales?",
+            "original_solution": "At Kamala's Tasha made three times what she made mowing Joe's lawn, which gives 3 * 6 = 18 dollars\nSince the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 18 + 30 = 54 dollars\nSubtracting the lawn mowing money from the total amount gives us 80 - 54 = 26 dollars\nTasha therefore made 26 dollars selling lemonade.\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "Since the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 6 + 30 = 42 dollars\nSubtracting the lawn mowing money from the total amount gives us 80 - 42 = 38 dollars\nTasha therefore made 38 dollars selling lemonade.\n#### 38",
+            "transformed_answer": 38.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this transformed_solution, the missing intermediate step is the calculation of the money Tasha made at Kamala's, which is 3 * 6 = 18 dollars. As a consequence, step 2 in the transformed_solution is the first instance that does not follow from the preceding steps, instead combining Tasha's earnings from Joe's lawn (6 dollars) with Alba's (30 dollars). This step also adds another lawn mowing session at Joe's (6 dollars), which corresponds to the largest number referenced by the deleted step 1 related to lawn mowing. The subsequent steps are all affected by this change and are modified to calculate and subtract from the total based on the incorrect total lawn mowing earnings. It is step 2 in the transformed_solution, that serves as the first step referencing the incorrect total after deleting the first step, so the wrong_step is 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLast month, Tasha made $80 from selling lemonade and mowing lawns. The first week, she mowed Kamala's lawn thrice as many times as she did Joe's. The following week, she mowed Alba's lawn five times as she did Joe's. If Joe paid Tasha $6 for her work, how much did she make from lemonade sales?\n\n### Response:",
+        "output_str": "\nTasha made $40 from lemonade sales.\n\nExplanation:\nLast month, Tasha made $80 from selling lemonade and mowing lawns. Since she mowed Kamala's lawn thrice as many times as she did Joe's, Tasha mowed Kamala's lawn 3 x 3 = 9 times. Since she mowed Alba's lawn five times as she did Joe's, Tasha mowed Alba's lawn 5 x 9 = 45 times. If Joe paid Tasha $6 for her work, Tasha made $6 x 9 = $54 from mowing lawns. Therefore, Tasha made $80 - $54 = $26 from lemonade sales.",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 26.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "Anna goes trick-or-treating in a subdivision where she gets 14 pieces of candy per house. Her brother Billy goes trick-or-tricking in a neighboring subdivision where he gets 11 pieces of candy per house. If the first subdivision has 60 houses and the second subdivision has 75 houses, how many more pieces of candy does Anna get?",
+            "original_solution": "First find the total number of pieces of candy Anna gets: 14 pieces/house * 60 houses = 840 pieces\nThen find the total number of pieces of candy Billy gets: 11 pieces/house * 75 houses = 825 pieces\nThen subtract the number of pieces Billy gets from the number Anna gets to find the difference: 840 pieces - 825 pieces = 15 pieces\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "First find the total number of pieces of candy Billy gets: 11 pieces/house * 75 houses = 825 pieces\nThen subtract the number of houses in the second subdivision from the number in the first subdivision to find the house difference: 60 houses - 75 houses = -15 houses\nSince Anna gets 14 pieces per house, multiply the house difference by the number of pieces Anna gets per house: -15 houses * 14 pieces/house = -210 pieces\nThen subtract this from the total number of pieces Billy gets to find the difference: 825 pieces - (-210) pieces = 1035 pieces\n#### 1035",
+            "transformed_answer": 1035.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, I removed step 1 from the original solution. The original step 1 calculates the total number of pieces of candy Anna gets, and step 3 references the result of step 1. After deleting step 1 from the solution, I made a logical error in step 2 by suggesting the houses should be subtracted, which is not relevant to the original problem, and altered the calculation to -15 houses. Then, I incorrectly calculated this supposed difference in the number of houses, which caused a series of errors in the steps that follow. The final result is also incorrect because of this initial error in step 2, which misguides the calculation to find the difference in the number of candies instead of comparing the totals directly. It is step 2 in the transformed_solution—the first step that references the incorrect calculation after the deletion—which serves as the first step referencing incorrect number in the transformed_solution, hence the wrong_step is 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAnna goes trick-or-treating in a subdivision where she gets 14 pieces of candy per house. Her brother Billy goes trick-or-tricking in a neighboring subdivision where he gets 11 pieces of candy per house. If the first subdivision has 60 houses and the second subdivision has 75 houses, how many more pieces of candy does Anna get?\n\n### Response:",
+        "output_str": "\nAnna gets 14 pieces of candy per house, so she will get a total of 14 x 60 = 840 pieces of candy if she goes trick-or-treating in the first subdivision.\n\nBilly goes trick-or-treating in the second subdivision, where he gets 11 pieces of candy per house. So, he will get a total of 11 x 75 = 825 pieces of candy.\n\nTherefore, Anna gets 840 - 825 = 15 more pieces of candy than Billy.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    }
+]

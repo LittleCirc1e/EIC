@@ -1,0 +1,74 @@
+[
+    {
+        "question": "the average of 10 numbers is 23. if each number is increased by 2, what will the new average be?",
+        "original_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 250\nThe new average is the new sum divided by 10, which is 250 / 10 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 240\nThe new average is the new sum divided by 10, which is 240 / 10 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 10 x (23+2) as 240 instead of 250 in step 2. The subsequent step inherits this incorrect result for calculating the new average. Step 3 changes the correct operation 250 / 10 to 240 / 10 due to the error introduced in step 2. The calculation error here does not affect step 1 or any other unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #25.\n\nExplanation: The solution is incorrect because it does not take into account the carryover of the calculation from the previous step. In step 3, the calculation is 10 x (23+2) = 240, but the carryover from step 2 is 2, which should be added to the result of step 3, giving a total of 242. Therefore, the new average is 242 / 10 = 24.2."
+    },
+    {
+        "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+        "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 10 days\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the error is in the division of 2700 by the product of 30 and 6. Instead of calculating 2700 / (30 x 6) = 15 properly, the transformed solution incorrectly states 2700 / (30 x 6) = 10. The mistake is only in the second step's calculation, and it does not require changing the operands or operators. It only changes the result, which leads to a different final answer. The earlier step of calculating the total man hours remains unchanged, as does the equation in the erroneous step (which still uses 30 x 6 correctly); only the final result from the dubious calculation is altered.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #15 days.\n\nExplanation: The calculation error occurs in the first step, where the number of hours worked by one person is calculated as 45 x 12 x 5 = 2700 hours. The correct calculation is 45 x 12 x 6 = 2160 hours, so the total number of hours worked by 30 persons is 2160 / (30 x 6) = 15 days."
+    },
+    {
+        "question": "a man has some hens and cows. if the number of heads be 48 and the number of feet equals 140, then the number of hens will be:",
+        "original_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -52\nDivide by -2: h = 26\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -50\nDivide by -2: h = 25\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates -2h = -50 instead of -2h = -52 in step 7, which affects the subsequent step 8. Step 8 inherits the error from step 7, modifying h = 26 to h = 25. The error affects only the modified step and the steps that are dependent on it. All previous steps remain unaffected and are correctly calculated as in the original solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #26.\n\nThe error occurs in step 3, where the equation 2h + 4c = 140 is not correct. The correct equation is 2h + 4(c - h) = 140, where c - h is the number of cows minus the number of hens. Substituting c = 48 - h into this equation, we get 2h + 4(48 - h) = 140, which simplifies to 2h + 192 - 4h = 140, which combines like terms to -2h + 192 = 140, which subtracting 192 from both sides gives -2h = -50, which dividing by -2 gives h = 26."
+    },
+    {
+        "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14 / 3.\nPlugging the value of a into the first equation, we get 2*(14 / 3) + b = 10.\nSo, b = 10 - 28 / 3.\nSo, b = (30 - 28) / 3.\nSo, b = 2 / 3.\nThere are 14 / 3 associate professors and 2 / 3 assistant professors, so a total of 16/3 or approximately 5.33 people are present.\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, the transformed_solution contains a miscalculation in step 4, where the multiplication of 2 by the first equation is incorrectly carried out as 4a + 2b = 22 instead of 4a + 2b = 20. This single error affects all subsequent steps that rely on it. As a result, step 5 becomes 3a = 14 rather than 3a = 12, and consequently in step 6, the value of a is incorrectly calculated using the wrong 3a value, giving a = 14 / 3 instead of 4. This error flows through to step 7, 8 and 9, where the value of b and the total number of people are calculated based on this incorrect number of associate professors a. Thus, the entire transformed solution carries the initial miscalculation through all related steps, resulting in a wrong answer of approximately 5.33 people instead of the correct answer of 6 people.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #6.\n\nExplanation:\nThe solution is incorrect because it assumes that the number of associate professors is equal to the number of assistant professors, which is not the case. According to the problem, there are 14 associate professors and 2 assistant professors, so the total number of people present is 14 + 2 = 16. Therefore, the correct answer is 16."
+    },
+    {
+        "question": "a 230 m long train running at the speed of 120 km / hr crosses another train running in opposite direction at the speed of 80 km / hr in 9 sec . what is the length of the other train ?",
+        "original_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 500 - 230\nLength of the other train = 270 m\n#### 270",
+        "original_answer": 270.0,
+        "transformed_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 499.95 - 230\nLength of the other train = 269.95 m\n#### 269.95",
+        "transformed_answer": 269.95,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates (55.55 x 9) as 499.95 instead of 500 in step 6, affecting the calculation in step 7 and the resulting Length of the other train. The steps prior to step 6 are unaffected and are correctly calculated. The error is carried through to step 7, adjusting the calculation from (500 - 230) to (499.95 - 230), resulting in the transformed answer of 269.95 m instead of the original answer of 270 m.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #270 m.\n\nExplanation: The error occurs in step 3, where the relative speed of the two trains is calculated as 55.55 m/s instead of 55.55 km/hr. This leads to a calculation error in the formula, resulting in a final answer that is 10 m shorter than the correct answer."
+    },
+    {
+        "question": "in 1998 the profits of company n were 10 percent of revenues. in 1999, the revenues of company n fell by 30 percent, but profits were 10 percent of revenues. the profits in 1999 were what percent of the profits in 1998?",
+        "original_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 70 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 70\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Let x be the revenues in 1998.\nThe profits in 1998 were 0.1x.\nThe revenues in 1999 were 0.7x because they fell by 30 percent.\nThe profits in 1999 were 0.1 * 0.7x = 0.07x.\nThe profits in 1999 were 60 percent of the profits in 1998 because (0.07x / 0.1x) * 100 = 60\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The calculation (0.07x / 0.1x) * 100 was incorrectly provided as 60 instead of the correct 70 in the transformed solution. This change only impacts the final step of the calculations (step 5), which is the percentage comparison of 1999's profits to 1998's profits. All other steps remain unchanged because they are independent calculations not affected by this error.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #70.\n\nExplanation:\nThe solution is incorrect because there is a calculation error in step 3. The correct calculation is:\n\nProfits in 1999 = (Revenues in 1999 / Revenues in 1998) * Profits in 1998\n\nUsing the given values, we get:\n\nProfits in 1999 = (0.7x / 1x) * 0.1x = 0.7x\n\nSo, the profits in 1999 were 70 percent of the profits in 1998."
+    }
+]

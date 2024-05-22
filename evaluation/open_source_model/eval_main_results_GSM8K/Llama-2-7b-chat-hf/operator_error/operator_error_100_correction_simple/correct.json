@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Julia collects old watches. She owns 20 silver watches, and three times as many bronze watches. She decided to buy gold watches to add to her collection, a number that represents 10% of all the watches she owns. How many watches does Julia own after this purchase?",
+        "original_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60+20 = 80 total silver and bronze watches\n10% of all Julia's watches is 80 * 10/100 = 8 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 8 = 88 watches.\n#### 88",
+        "original_answer": 88.0,
+        "transformed_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60-20 = 40 total silver and bronze watches\n10% of all Julia's watches is 40 * 10/100 = 4 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 4 = 84 watches.\n#### 84",
+        "transformed_answer": 84.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example transforms the addition in step 2 to subtraction, altering 60+20 = 80 to 60-20 = 40 by changing + to -. This impacts the following step 3, as the calculation of 10% of Julia's watches is based on the modified total number of watches, changing 80 * 10/100 = 8 to 40 * 10/100 = 4. The final step 4 also inherits this change, adjusting from 20 + 60 + 8 = 88 to 20 + 60 + 4 = 84. It should be noted that in step 2, only the operator of the formula is incorrect, but the step still performs the correct mathematical operation accordingly, resulting in an incorrect outcome for that step. The subsequent steps that rely on the outcome of step 2 correctly perform their calculations based on the erroneous value provided.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #88.\n\nExplanation:\nThe solution is incorrect because it does not take into account the total number of watches Julia owns before buying the gold watches. According to the question, Julia owns 20 silver watches and 3 times as many bronze watches, which means she owns 20 + 3 \\* 20 = 80 bronze watches before buying the gold watches. Therefore, the total number of watches Julia owns after buying 10% of all her watches is 80 + 4 = 84 watches."
+    }
+]

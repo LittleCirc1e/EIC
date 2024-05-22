@@ -1,0 +1,86 @@
+[
+    {
+        "question": "Find the probability that a leap year chosen at random will have 53 Sundays.",
+        "original_solution": "In a leap year, there are 366 days\nThere are 52 weeks in a year, so 52 * 7 = 364 days\nSo, there are 366 - 364 = 2 extra days in a leap year\nThus, a leap year will have 53 Sundays if one of the extra days is a Sunday or both are Sunday.\nIn a leap year, there are 52 Sundays\nSo, the probability that a leap year chosen at random will have 53 Sundays is 2 / 7\n#### 2/7",
+        "original_answer": "2/7",
+        "transformed_solution": "In a leap year, there are 366 days\nThere are 52 weeks in a year, so 52 * 7 = 364 days\nSo, there are 366 - 364 = 2 extra days in a leap year\nThus, a leap year will have 53 Sundays if both of the extra days are Sunday.\nIn a leap year, there are 52 Sundays\nSo, the probability that a leap year chosen at random will have 53 Sundays is 1 / 7\n#### 1/7",
+        "transformed_answer": "1/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 is modified to assume that a leap year will have 53 Sundays only if both extra days are Sunday, which changes the correct perspective of having at least one Sunday in the two extra days. This results in the probability calculation changing from 2 / 7 to 1 / 7, and therefore affects the probability mentioned in step 6. This is a counting error as it miscounts the conditions under which there can be 53 Sundays. The other steps and calculations are unaffected and remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 1/53, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 364 instead of 365. The subsequent step 5 references the result of step 4, calculating 2 instead of 1. The final incorrect answer is obtained by dividing 2 by 7 instead of 53."
+    },
+    {
+        "question": "if w is the set of all the integers between 69 and 99, inclusive, that are either multiples of 3 or multiples of 2 or multiples of both, then w contains how many numbers?",
+        "original_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98\nNow find the common multiples of 2 and 3:\n72, 78, 84, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 20 numbers.\n#### 20",
+        "original_answer": 20,
+        "transformed_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96\nNow find the common multiples of 2 and 3:\n72, 78, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 19 numbers.\n#### 19",
+        "transformed_answer": 19,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously omits counting the number 84 as a common multiple of 2 and 3, which is present in both the list of multiples of 2 and 3. This results in the list of common multiples being 72, 78, 90, 96 instead of 72, 78, 84, 90, 96. Consequently, the final count is one less than what it should be, so the original count of 20 is incorrectly transformed to 19.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 21, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 72+78+90+96=286 instead of 72+78+90+96=344. The subsequent step 5 references the result of step 4, calculating 286/3=95 instead of 344/3=114. Therefore, the final incorrect answer is 95."
+    },
+    {
+        "question": "gary’s gas station serves an average of 14 cars per hour on Saturdays, 10 cars per hour on Sundays, and 9 cars per hour on all other days of the week. if the station is open from 6 a.m. to 10 p.m. every day, how many cars does gary’s station serve over the course of a typical week?",
+        "original_solution": "On Saturdays, the station serves cars for 16 hours (10 pm - 6 am + 1). So the total number of cars served on Saturdays is 14 cars/hour * 16 hours = 224 cars\nOn Sundays, the station serves cars for 16 hours. So the total number of cars served on Sundays is 10 cars/hour * 16 hours = 160 cars\nFrom Monday to Friday, the station serves cars for 16 hours/day * 5 days = 80 hours. So the total number of cars served from Monday to Friday is 9 cars/hour * 80 hours = 720 cars\nThe total number of cars served over a typical week is 224 + 160 + 720 = 1104 cars\n#### 1104",
+        "original_answer": 1104,
+        "transformed_solution": "On Saturdays, the station serves cars for 16 hours (10 pm - 6 am + 1). So the total number of cars served on Saturdays is 14 cars/hour * 16 hours = 224 cars\nOn Sundays, the station serves cars for 16 hours. So the total number of cars served on Sundays is 10 cars/hour * 16 hours = 160 cars\nFrom Monday to Friday, the station serves cars for 16 hours/day * 5 days = 80 hours. But a counting mistake makes it 16 hours/day * 4 days = 64 hours. So the total number of cars served from Monday to Friday due to the incorrect count is 9 cars/hour * 64 hours = 576 cars\nThe total number of cars served over a typical week with the mistaken count is 224 + 160 + 576 = 960 cars\n#### 960",
+        "transformed_answer": 960,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 incorrectly counts the weekdays as 4 days instead of 5, changing the multiplication from 16 hours/day * 5 days to 16 hours/day * 4 days. This leads to the total hours served from Monday to Friday being 64 instead of 80, and the total number of cars served from Monday to Friday is calculated incorrectly as 9 cars/hour * 64 hours = 576 cars. This changes the overall total in step 4 from 224 + 160 + 720 = 1104 to 224 + 160 + 576 = 960. The counting error only affects the step it is introduced in and any subsequent steps that depend on the miscalculation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 960, and the explanation is that step 3 first makes a mistake in the counting process, counting 5 days instead of 4 days, resulting in the total number of cars served from Monday to Friday being overcounted by 24 hours. The subsequent step 5 references the result of step 3, calculating 64 hours instead of 80 hours, and the subsequent step 6 references the result of step 5, calculating 576 cars instead of 640 cars. Therefore, the final incorrect answer is 960 instead of 960."
+    },
+    {
+        "question": "every day daniel drives 100 miles back from work. on sunday, daniel drove all the way back from work at a constant speed of x miles per hour. on monday, daniel drove the first 32 miles back from work at (2x) miles per hour, and the rest of the way at (x/2) miles per hour. the time it took daniel to drive back from work on monday is longer than the time it took him to drive back from work on sunday by what percent?",
+        "original_solution": "On Sunday, the time it takes to drive 100 miles is 100 / x\nOn Monday, the time it takes to drive the first 32 miles at 2x mph is 32 / (2 * x) and the time it takes to drive the remaining 68 miles at x / 2 mph is 68 / (x / 2)\nThe total time on Monday is 32 / (2 * x) + 68 / (x / 2) = 16 / x + 136 / x = 152 / x\nThe total time on Sunday is 100 / x\nThe difference in time is 152 / x - 100 / x = 52 / x\nTo find the percentage increase, we take the difference (52 / x) and divide by the original time (100 / x), then multiply by 100 to get the percentage increase\n(52 / 100) * 100 = 52%\n#### 52%",
+        "original_answer": 52.0,
+        "transformed_solution": "On Sunday, the time it takes to drive 100 miles is 100 / x\nOn Monday, the time it takes to drive the first 32 miles at 2x mph is 32 / (2 * x) and the time it takes to drive the remaining 68 miles at x / 2 mph is 68 / (x / 2)\nThe total time on Monday is 32 / (2 * x) + 68 / (x / 2) = 16 / x + 136 / x = 152 / x\nThe total time on Sunday is 100 / x\nThe difference in time is 152 / x - 100 / x = 52 / x\nTo find the percentage increase, we take the difference (52 / x) and incorrectly divide by half the original time (50 / x), then multiply by 100 to get the percentage increase\n(52 / 50) * 100 = 104%\n#### 104%",
+        "transformed_answer": 104.0,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the error occurs in step 5 where the original time is mistakenly divided by half its value, 50/x, instead of the correct value, 100/x. This results in an incorrect percentage increase calculation, with the difference (52/x) being divided by (50/x) instead of (100/x), leading to (52/50)*100 = 104% instead of the correct answer 52%.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 100%, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one mile has 50 minutes instead of 60 minutes, calculating 32 / (2 * x) = 16 / x instead of 32 / (2 * 60) = 16. The subsequent step 5 reference the result of step 4, calculating 152 / x = 104 instead of 168 / x = 100. The subsequent step 6 reference the result of step 5, calculating 104% instead of 100%."
+    },
+    {
+        "question": "Gary’s gas station serves an average of 13 cars per hour on Saturdays, 10 cars per hour on Sundays, and 9 cars per hour on all other days of the week. If the station is open from 6 a.m. to 10 p.m. every day, how many cars does Gary’s station serve over the course of a typical week?",
+        "original_solution": "The station is open for 16 hours on Saturday and Sunday, and 16 * 5 = 80 hours on all other days\nOn Saturday, the station serves 13 * 16 = 208 cars\nOn Sunday, the station serves 10 * 16 = 160 cars\nOn all other days, the station serves 9 * 80 = 720 cars\nThe total number of cars served in a typical week is 208 + 160 + 720 = 1088 cars\n#### 1088",
+        "original_answer": 1088.0,
+        "transformed_solution": "The station is open for 16 hours on Saturday and Sunday, and 16 * 4 = 64 hours on all other days\nOn Saturday, the station serves 13 * 16 = 208 cars\nOn Sunday, the station serves 10 * 16 = 160 cars\nOn all other days, the station serves 9 * 64 = 576 cars\nThe total number of cars served in a typical week is 208 + 160 + 576 = 944 cars\n#### 944",
+        "transformed_answer": 944.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts the other days as 4 days instead of 5 days, resulting in '16 * 5 = 80 hours' becoming '16 * 4 = 64 hours'. Therefore the calculation in step 3 changes from '9 * 80 = 720 cars' to '9 * 64 = 576 cars', affecting the final result in step 4 where the total cars served becomes 208 + 160 + 576 = 944 instead of 208 + 160 + 720 = 1088. It should be noted that only one step of counting error is considered, and the other calculation processes in the transformed_solution remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 944, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 16 * 4 = 64 instead of 16 * 7 = 112. The subsequent step 5 references the result of step 4, calculating 64 + 160 + 576 = 944 instead of 112 + 160 + 576 = 1248. The subsequent step 6 references the result of step 5, calculating 944 / 7 = 135 instead of 1248 / 7 = 178, resulting in the final incorrect answer."
+    },
+    {
+        "question": "reeya obtained 55, 67, 76, 82 and 55 out of 100 in different subjects, what will be the average?",
+        "original_solution": "The total of marks obtained by reeya is 55 + 67 + 76 + 82 + 55 = 335\nThe total number of subjects is 5\nThe average marks obtained by reeya is 335 / 5 = 67\n#### 67",
+        "original_answer": 67.0,
+        "transformed_solution": "The total of marks obtained by reeya is 55 + 67 + 76 + 82 + 55 = 335\nThe total number of subjects is 4\nThe average marks obtained by reeya is 335 / 4 = 83.75\n#### 83.75",
+        "transformed_answer": 83.75,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the number of subjects as 4 instead of 5. This counting error results in the incorrect calculation of the average in step 3, which changes from 335 / 5 = 67 to 335 / 4 = 83.75. The rest of the steps in the transformed_solution and the calculations done before the wrong step in the original_solution are correct, which keeps the error isolated to a single instance.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 80.5, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 335/4=83.75 instead of 335/4=80.5. The subsequent step 5 references the result of step 4, calculating 83.75 instead of 80.5, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Gary’s gas station serves an average of 16 cars per hour on Saturdays, 10 cars per hour on Sundays, and 9 cars per hour on all other days of the week. If the station is open from 6 a.m. to 10 p.m. every day, how many cars does Gary’s station serve over the course of a typical week?",
+        "original_solution": "On Saturdays, the station is open for 16 hours, so it serves 16 * 16 = 256 cars\nOn Sundays, the station is open for 16 hours, so it serves 16 * 10 = 160 cars\nFrom Monday to Friday, the station is open for (16 * 5) = 80 hours, so it serves 80 * 9 = 720 cars\nThe total number of cars served over the course of a typical week is 256 + 160 + 720 = 1136 cars\n#### 1136",
+        "original_answer": 1136,
+        "transformed_solution": "On Saturdays, the station is open for 16 hours, so it serves 16 * 16 = 256 cars\nOn Sundays, the station is open for 16 hours, so it serves 16 * 10 = 160 cars\nFrom Monday to Friday, the station is open for (15 * 5) = 75 hours, so it serves 75 * 9 = 675 cars\nThe total number of cars served over the course of a typical week is 256 + 160 + 675 = 1091 cars\n#### 1091",
+        "transformed_answer": 1091,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously counts the number of hours the station is open from Monday to Friday as 15 hours per day instead of the correct 16 hours. This changes the calculation from (16 * 5) = 80 hours to (15 * 5) = 75 hours, and subsequently, the total number of cars served from Monday to Friday changes from 80 * 9 = 720 cars to 75 * 9 = 675 cars. The final step summing up the total number of cars served during the week is then affected, with the original 256 + 160 + 720 changing to 256 + 160 + 675, resulting in a different total of 1091 cars. The previous and unrelated steps remain unaffected and correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 1091, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 16 * 16 = 256 instead of 16 * 10 = 160. The subsequent step 4 references the result of step 3, calculating 256 + 160 + 675 = 1091 instead of 160 + 160 + 675 = 1091. Therefore, the final incorrect answer is 1091."
+    }
+]

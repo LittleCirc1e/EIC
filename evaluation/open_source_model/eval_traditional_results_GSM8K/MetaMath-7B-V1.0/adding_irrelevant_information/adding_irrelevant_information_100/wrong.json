@@ -1,0 +1,59 @@
+[
+    {
+        "index": 18,
+        "gsm8k_data": {
+            "question": "Jim decides to open up a bike shop.  The most common repair he does is fixing bike tires.  He charges $20 for this and it cost him $5 in parts.  In one month Jim does 300 of these repairs.  He also does 2 more complex repairs for $300 each and cost $50 in parts.  He also sells $2000 profit worth of things from his retail shop.  If rent and other fixed expense for the shop is $4000 a month how much profit did the shop make?",
+            "original_solution": "From each tire repair, he made 20-5=$15 profit\nSo repairs made him a profit of 15*300=$4500\nThe two complex repairs each made him 300-50=$250 profit\nSo those added 250*2=$500\nSo his total profit from everything was 4500+500+2000=$7000\nSo he made a profit of 7000-4000=$3000\n#### 3000",
+            "original_answer": 3000.0,
+            "transformed_solution": "From each tire repair, he made 20-5=$15 profit\nSo repairs made him a profit of 15*300=$4500\nThe two complex repairs each made him 300-50=$250 profit\nSo those added 250*2=$500\nBecause Jim had to pay a $300 fine for a parking violation related to his shop, his total profit from everything was 4500+500+2000-300=$6700\nSo he made a profit of 6700-4000=$2700\n#### 2700",
+            "transformed_answer": 2700.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because Jim had to pay a $300 fine for a parking violation related to his shop>, resulting in step 4 changing from 4500+500+2000=$7000 in the original_solution to 4500+500+2000-300=$6700 in the transformed_solution. This change also affected step 5, where the new profit calculation is 6700-4000=$2700 instead of the original $3000. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJim decides to open up a bike shop.  The most common repair he does is fixing bike tires.  He charges $20 for this and it cost him $5 in parts.  In one month Jim does 300 of these repairs.  He also does 2 more complex repairs for $300 each and cost $50 in parts.  He also sells $2000 profit worth of things from his retail shop.  If rent and other fixed expense for the shop is $4000 a month how much profit did the shop make?\n\n### Response:",
+        "output_str": "For the bike tire repairs, Jim charges $20 per repair and does 300 repairs, so he earns 20*300 = $6000\nThe cost of parts for each bike tire repair is $5, so the total cost of parts for 300 repairs is 5*300 = $1500\nThe total revenue from the bike tire repairs is $6000 + $1500 = $7500\nFor the more complex repairs, Jim charges $300 per repair and does 2 repairs, so he earns 300*2 = $600\nThe cost of parts for each complex repair is $50, so the total cost of parts for 2 repairs is 50*2 = $100\nThe total revenue from the complex repairs is $600 + $100 = $700\nThe profit from the bike tire repairs is $7500 - $1500 = $6000\nThe profit from the complex repairs is $700 - $100 = $600\nThe profit from the retail shop is $2000\nThe total profit for the shop is $6000 + $600 + $2000 = $8600\nThe total expenses for the shop, including rent and other fixed expenses, is $4000\nThe net profit for the shop is $8600 - $",
+        "extract_true_num": 3000.0,
+        "extract_pred_num": 8600.0,
+        "is_correct": false
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "An organization trying to save endangered species of turtles has taken twice more hawksbill turtles than the number of green turtles into a conservation center. If the number of green turtles is 800, calculate the number of turtles that have been taken into the conservation center.",
+            "original_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800 = 3200 turtles.\n#### 3200",
+            "original_answer": 3200.0,
+            "transformed_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nAdditional loggerhead turtles equal to half the number of green turtles were also taken in, so there are 800/2 = 400 loggerhead turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800+400 = 3600 turtles.\n#### 3600",
+            "transformed_answer": 3600.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Additional loggerhead turtles equal to half the number of green turtles were also taken in>, resulting in step 2 changing from calculating only hawksbill and green turtles to also including loggerhead turtles in the transformed_solution. The new step integrated is 800/2 = 400 loggerhead turtles, which is then added to the total count, changing the answer from 3200 turtles to 3600 turtles."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn organization trying to save endangered species of turtles has taken twice more hawksbill turtles than the number of green turtles into a conservation center. If the number of green turtles is 800, calculate the number of turtles that have been taken into the conservation center.\n\n### Response:",
+        "output_str": "If the number of green turtles is 800, then the number of hawksbill turtles is 2 * 800 = 1600.\nThe total number of turtles taken into the conservation center is 800 + 1600 = 2400.\n#### 2400\nThe answer is: 2400",
+        "extract_true_num": 3200.0,
+        "extract_pred_num": 2400.0,
+        "is_correct": false
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "Linda is painting her bedroom. Her bedroom has 4 walls, with the room being 20 feet wide by 20 feet long by 8 feet tall. One wall has a 3-foot by 7-foot doorway. A second wall has a 6-foot by 4-foot window. A third wall has a 5-foot by 7-foot doorway to a walk-in-closet. And the fourth wall is completely solid. What is the total area of wall space that Linda will have to paint?",
+            "original_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nThe total area of the doors and windows is 21 sq. ft + 24 sq. ft. + 35 sq. ft. = 80 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors and window are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors and window, the total wall area Linda will have to paint is 640 sq. ft. - 80 sq. ft. = 560 sq. ft.\n#### 560",
+            "original_answer": 560.0,
+            "transformed_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nBecause there is also a 2-foot by 2-foot painting on the second wall that does not need painting, the total area of the doors, windows, and the painting is 21 sq. ft + 24 sq. ft. + 35 sq. ft. + 4 sq. ft. = 84 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors, window, and painting are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors, window, and the painting, the total wall area Linda will have to paint is 640 sq. ft. - 84 sq. ft. = 556 sq. ft.\n#### 556",
+            "transformed_answer": 556.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Because there is also a 2-foot by 2-foot painting on the second wall that does not need painting>, resulting in step 4 changing from a total area of 80 sq. ft. of doors and windows to 84 sq. ft., including the painting. This additional irrelevant detail modifies the total wall area to be painted from 560 sq. ft. in the original solution to 556 sq. ft. in the transformed solution. The error has been integrated into an existing step where it affects the final calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLinda is painting her bedroom. Her bedroom has 4 walls, with the room being 20 feet wide by 20 feet long by 8 feet tall. One wall has a 3-foot by 7-foot doorway. A second wall has a 6-foot by 4-foot window. A third wall has a 5-foot by 7-foot doorway to a walk-in-closet. And the fourth wall is completely solid. What is the total area of wall space that Linda will have to paint?\n\n### Response:",
+        "output_str": "The total area of the walls can be calculated by finding the area of each individual wall and then adding them together.\nThe area of the first wall is 20 feet wide by 8 feet tall, so the area is 20 * 8 = 160 square feet.\nHowever, this wall has a 3-foot by 7-foot doorway, so the area of the doorway is 3 * 7 = 21 square feet.\nTherefore, the area of the first wall after subtracting the doorway is 160 - 21 = 139 square feet.\nThe area of the second wall is 20 feet long by 8 feet tall, so the area is 20 * 8 = 160 square feet.\nHowever, this wall has a 6-foot by 4-foot window, so the area of the window is 6 * 4 = 24 square feet.\nTherefore, the area of the second wall after subtracting the window is 160 - 24 = 136 square feet.\nThe area of the third wall is 20 feet wide by 8 feet tall, so the area is 20 * 8 = 160 square feet.\nHowever, this wall has a 5-foot by 7-foot doorway to a walk-in-closet, so the area of the doorway is 5 * 7 = 35 square feet.\nTherefore, the area of the third wall after subtracting the doorway is 160 - 35 = 125 square feet.\nThe fourth wall",
+        "extract_true_num": 560.0,
+        "extract_pred_num": 125.0,
+        "is_correct": false
+    }
+]

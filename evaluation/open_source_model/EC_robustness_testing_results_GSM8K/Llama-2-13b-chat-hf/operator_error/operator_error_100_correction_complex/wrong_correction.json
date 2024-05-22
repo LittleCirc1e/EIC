@@ -1,0 +1,50 @@
+[
+    {
+        "question": "There are 6 girls and 8 boys in the school play. If both parents of each kid attend the premiere, how many parents will be in the auditorium?",
+        "original_solution": "There are 6 + 8 = 14 kids in the school play.\nEach child has 2 parents attending the play and therefore there are 14 x 2 = 28 parents in the auditorium.\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "There are 6 / 8 = 0.75 kids in the school play.\nEach child has 2 parents attending the play and therefore there are 0.75 x 2 = 1.5 parents in the auditorium.\n#### 1.5",
+        "transformed_answer": 1.5,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition operator in step 1 to a division operator, altering the expression from 6 + 8 = 14 to 6 / 8 = 0.75. The correct calculation is then performed using the transformed expression, resulting in 0.75 kids in the play. This incorrect number of kids then affects the calculation in the subsequent step, changing the number of parents from 14 x 2 = 28 to 0.75 x 2 = 1.5. All other aspects of each step are correct except for the erroneous operator change in step 1.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one child has 0.75 parents instead of 2 parents, calculating 0.75 x 2 = 1.5 instead of 6 x 2 = 12. The subsequent step 3 references the result of step 2, calculating 1.5 x 2 = 3 instead of 12 x 2 = 24. The subsequent step 4 references the result of step 3, calculating 3 + 3 = 6 instead of 24 + 24 = 48. The final incorrect answer is 6 instead of 48."
+    },
+    {
+        "question": "Cole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?",
+        "original_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 - $2 = $4 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $4 = $32.\nTherefore, jogger jeans originally cost $32 - $24 = $8 more than the tattered jeans.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 + $2 = $8 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $8 = $36.\nTherefore, jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 2 to an addition, transforming $6 - $2 = $4 into $6 + $2 = $8. This affects subsequent related step 4 and step 5. Step 4 remains unchanged because no other steps affected the purchase price of the tattered jeans. However, the revised savings calculation in step 5, $28 + $8 = $36, leads to the changed conclusion in step 6, stating that jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans instead of $8. Only the operator in step 2 is incorrect to induce the wrong conclusion, but its calculation is correct, as are the calculations of subsequent affected steps.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one dollar has 36 cents instead of 60 cents, calculating $6 x 1/3 = $2 instead of $6 x 1/3 = $4. The subsequent step 5 references the result of step 4, calculating $2 + $4 = $6 instead of $2 + $4 = $8. The subsequent step 6 references the result of step 5, calculating $6 + $2 = $8 instead of $8 + $2 = $10. Therefore, the final incorrect answer is $12 instead of $10."
+    },
+    {
+        "question": "Ali had a stock of 800 books in his Room. He sold 60 on Monday, 10 on Tuesday, 20 on Wednesday, 44 on Thursday and 66 on Friday. How many books were not sold?",
+        "original_solution": "We look first for the total number of books that were sold: 60 + 10 + 20 + 44 + 66 = 200 books.\nSo the total number of books that were not sold is: 800 – 200 = 600 books.\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "We look first for the total number of books that were sold: 60 + 10 + 20 + 44 * 66 = 2940 books.\nSo the total number of books that were not sold is: 800 - 2940 = -2140 books.\n#### -2140",
+        "transformed_answer": -2140.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition of 44 + 66 to multiplication, 44 * 66, in step 1. As a result, the total number of books that were sold is incorrectly increased from 200 to 2940 books, affecting the calculation in the subsequent step. The calculation for the total number of unsold books then becomes 800 - 2940 = -2140, which is an incorrect number because you cannot have a negative number of books unsold. It should be noted that the error is only in the operator changed in step 1, but the calculations for step 1 and step 2 are done correctly based on the erroneous operation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 560, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 60 + 10 + 20 + 44 = 294 instead of 60 + 10 + 20 + 44 = 2940. The subsequent step 5 references the result of step 4, calculating 294 - 800 = -214 instead of 2940 - 800 = 560. The final incorrect answer is -214."
+    },
+    {
+        "question": "Kendra tracks the different species of birds they spot on their birdwatching trip. On Monday they visited 5 sites and saw an average of 7 birds at each site. On Tuesday, Kendra visited 5 sites and saw an average of 5 birds at each site. On Wednesday visited 10 sites and saw an average of 8 birds at each site. On average, how many different birds did Kendra see on each site?",
+        "original_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds + 80 birds = 140 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw 140 birds / 20 sites = 7 different birds at each site\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds - 80 birds = -20 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw -20 birds / 20 sites = -1 different birds at each site\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 4 into subtraction, and by changing + to -, 35 birds + 25 birds + 80 birds = 140 birds becomes 35 birds + 25 birds - 80 birds = -20 birds. This affects the subsequent related step 6. Step 6 changes from 140 birds / 20 sites = 7 birds/site to -20 birds / 20 sites = -1 birds/site. It should be noted that only the operator in step 4 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 4 is correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 8, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 5 sites x 8 birds/site = 40 instead of 5 sites x 8 birds/site = 40. The subsequent step 4 references the result of step 3, calculating 40 - 20 = -20 instead of 40 - 20 = 20. The subsequent step 5 references the result of step 4, calculating -20 / 20 = -1 instead of -20 / 20 = 1.\n\nThe correct solution is:\n\nOn Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds + 80 birds = 130 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites\nOn average Kendra saw 130 birds / 20 sites = 6.5 different birds at each site\n\nTherefore, the correct answer is 8, and the explanation is that the mistake in the solution is in step 3, where the calculation of 5 sites x 8 birds/site is incorrect, leading to a series of subsequent errors."
+    }
+]

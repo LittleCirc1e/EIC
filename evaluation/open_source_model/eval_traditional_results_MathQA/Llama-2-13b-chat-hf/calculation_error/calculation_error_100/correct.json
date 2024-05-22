@@ -1,0 +1,268 @@
+[
+    {
+        "index": 2,
+        "gsm8k_data": {
+            "question": "robert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?",
+            "original_solution": "Robert ate 7 - 3 = 4 more chocolates than Nickel.\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "Robert ate 7 - 3 = 5 more chocolates than Nickel.\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The 7 - 3 calculation is incorrectly presented as equaling 5 instead of the correct value of 4, leading to a transformed_answer of 5 which is different from the original_answer of 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nrobert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?\n\n### Response:",
+        "output_str": "\nRobert ate 7 chocolates and Nickel ate 3 chocolates. To find out how many more chocolates Robert ate than Nickel, we need to subtract the number of chocolates Nickel ate from the number of chocolates Robert ate.\n\n7 (Robert) - 3 (Nickel) = 4\n\nSo, Robert ate 4 more chocolates than Nickel.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 11,
+        "gsm8k_data": {
+            "question": "Factory x's bulbs work for over 5000 hours in 75% of cases, whereas factory y's bulbs work for over 5000 hours in 65% of cases. It is known that factory x supplies 70% of the total bulbs available. What is the chance that a purchased bulb will work for longer than 5000 hours?",
+            "original_solution": "The chance of getting a bulb from factory x is 70% because factory x supplies 70% of the total bulbs available.\nThe chance of getting a working bulb from factory x is 75% because factory x's bulbs work for over 5000 hours in 75% of cases.\nThe chance of getting a bulb from factory y is 30% because 100% - 70% = 30%.\nThe chance of getting a working bulb from factory y is 65% because factory y's bulbs work for over 5000 hours in 65% of cases.\nThe overall chance of getting a working bulb is 70% x 75% + 30% x 65% = 52.5% + 19.5% = 72%.\n#### 72%",
+            "original_answer": 72.0,
+            "transformed_solution": "The chance of getting a bulb from factory x is 70% because factory x supplies 70% of the total bulbs available.\nThe chance of getting a working bulb from factory x is 75% because factory x's bulbs work for over 5000 hours in 75% of cases.\nThe chance of getting a bulb from factory y is 30% because 100% - 70% = 30%.\nThe chance of getting a working bulb from factory y is 65% because factory y's bulbs work for over 5000 hours in 65% of cases.\nThe overall chance of getting a working bulb is 70% x 75% + 30% x 65% = 52.5% + 19.0% = 71.5%.\n#### 71.5%",
+            "transformed_answer": 71.5,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, in step 4, the calculation of 30% x 65% is incorrectly transformed to 19.0% instead of 19.5%. This results in a change in the overall chance calculation in the final step to 71.5% instead of 72%, affecting only the last two steps while the previous steps remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFactory x's bulbs work for over 5000 hours in 75% of cases, whereas factory y's bulbs work for over 5000 hours in 65% of cases. It is known that factory x supplies 70% of the total bulbs available. What is the chance that a purchased bulb will work for longer than 5000 hours?\n\n### Response:",
+        "output_str": "\nTo determine the chance that a purchased bulb will work for longer than 5000 hours, we need to calculate the probability of a bulb from factory x and factory y working for longer than 5000 hours.\n\nThe probability of a bulb from factory x working for longer than 5000 hours is 75% (since 75% of bulbs from factory x work for over 5000 hours).\n\nThe probability of a bulb from factory y working for longer than 5000 hours is 65% (since 65% of bulbs from factory y work for over 5000 hours).\n\nSince factory x supplies 70% of the total bulbs available, the probability of a purchased bulb being from factory x is 70%.\n\nTherefore, the probability of a purchased bulb working for longer than 5000 hours is:\n\n(0.70 x 0.75) + (0.30 x 0.65) = 0.525 + 0.195 = 0.72\n\nSo, the chance that a purchased bulb will work for longer than 5000 hours is 72%.",
+        "extract_true_num": 72.0,
+        "extract_pred_num": 72.0,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+            "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+            "original_answer": 17.0,
+            "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $16.\nHis actual percent profit is (16/100) x 100% = 16%.\n#### 16%",
+            "transformed_answer": 16.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the actual profit as $16 instead of $17 in step 4. The miscalculated profit affects only the calculation in step 5 for determining the actual percent profit, which becomes (16/100) x 100% = 16%. There are no changes to steps 1, 2, and 3 since the error was introduced in step 4. Previous steps remain accurate as they are not affected by the calculation error in step 4. The next step is adapted to reflect the erroneous $16 profit and therefore results in a transformed answer of 16%, which is distinct from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?\n\n### Response:",
+        "output_str": "\n\nTo find the actual percent profit earned in the deal, we need to first calculate the cost price of the articles. Let's say the cost price of one article is Rs. 100.\n\nThe shopkeeper labeled the price of the articles at Rs. 130 (30% more than the cost price).\n\nSo, the labeled price of one article is:\n\nRs. 130 = Rs. 100 + (Rs. 100 x 30%)\n\nNow, the shopkeeper offered a discount of 10% on the labeled price. So, the actual selling price of one article is:\n\nRs. 130 - (10% of Rs. 130) = Rs. 130 - Rs. 13\n\nRs. 117\n\nSo, the actual percent profit earned in the deal is:\n\n(Rs. 117 - Rs. 100) / Rs. 100 x 100%\n\n= 17%\n\nTherefore, the actual percent profit earned in the deal is 17%.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "In a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?",
+            "original_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\n3,000 absentee ballots were cast for candidate B because 6,000 - 3,000 = 3,000\n#### 3,000",
+            "original_answer": 3000.0,
+            "transformed_solution": "6,000 absentee ballots were thrown out because 12,000 x 1/2 = 6,000\n6,000 absentee ballots remained because 12,000 - 6,000 = 6,000\n3,000 absentee ballots were cast for candidate A because 6,000 x 1/2 = 3,000\n2,500 absentee ballots were cast for candidate B because 6,000 - 3,000 = 2,500\n#### 2,500",
+            "transformed_answer": 2500.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the final number of votes for candidate B as 2,500 instead of 3,000 in step 4, which does not affect the steps before it. Steps 1, 2, and 3 remain unchanged as they are correct and unrelated to the error introduced in step 4. The calculation error in step 4 modifies the expression \"6,000 - 3,000 = 3,000\" to an incorrect \"6,000 - 3,000 = 2,500\", resulting in a miscalculated answer for the number of absentee votes cast for candidate B."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a recent head-to-head runoff election, 12,000 absentee ballots were cast. 1/2 of the absentee ballots were thrown out and 1/2 of the remaining absentee ballots were cast for candidate A. How many absentee votes did candidate B receive?\n\n### Response:",
+        "output_str": "\nTo determine how many absentee votes candidate B received, we need to first calculate the number of valid absentee ballots. Since 1/2 of the absentee ballots were thrown out, we can calculate the number of valid absentee ballots as follows:\n\n12,000 - (1/2 x 12,000) = 12,000 - 6,000 = 6,000\n\nSince 1/2 of the remaining absentee ballots were cast for candidate A, we can calculate the number of absentee votes candidate B received as follows:\n\n6,000 x (1/2) = 3,000\n\nTherefore, candidate B received 3,000 absentee votes.",
+        "extract_true_num": 3000.0,
+        "extract_pred_num": 3000.0,
+        "is_correct": true
+    },
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "the average of 10 numbers is 23. if each number is increased by 2, what will the new average be?",
+            "original_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 250\nThe new average is the new sum divided by 10, which is 250 / 10 = 25\n#### 25",
+            "original_answer": 25.0,
+            "transformed_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 240\nThe new average is the new sum divided by 10, which is 240 / 10 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 10 x (23+2) as 240 instead of 250 in step 2. The subsequent step inherits this incorrect result for calculating the new average. Step 3 changes the correct operation 250 / 10 to 240 / 10 due to the error introduced in step 2. The calculation error here does not affect step 1 or any other unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe average of 10 numbers is 23. if each number is increased by 2, what will the new average be?\n\n### Response:",
+        "output_str": "\nTo find the new average, we need to add 2 to each of the 10 numbers and then calculate the average of the resulting numbers.\n\nSo, the first number becomes:\n23 + 2 = 25\n\nThe second number becomes:\n23 + 2 = 25\n\nThe third number becomes:\n23 + 2 = 25\n\n...\n\nThe tenth number becomes:\n23 + 2 = 25\n\nThen, we add up all these numbers and divide by 10 to get the new average:\n\n25 + 25 + ... + 25 = 250\n\n250 / 10 = 25\n\nSo, the new average after increasing each number by 2 is 25.",
+        "extract_true_num": 25.0,
+        "extract_pred_num": 25.0,
+        "is_correct": true
+    },
+    {
+        "index": 22,
+        "gsm8k_data": {
+            "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+            "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 10 days\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the error is in the division of 2700 by the product of 30 and 6. Instead of calculating 2700 / (30 x 6) = 15 properly, the transformed solution incorrectly states 2700 / (30 x 6) = 10. The mistake is only in the second step's calculation, and it does not require changing the operands or operators. It only changes the result, which leads to a different final answer. The earlier step of calculating the total man hours remains unchanged, as does the equation in the erroneous step (which still uses 30 x 6 correctly); only the final result from the dubious calculation is altered."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?\n\n### Response:",
+        "output_str": "\nTo determine how many days it will take 30 persons to complete the work of repairing a road, we can use the formula:\n\nTime = (Total work) / (Number of workers x Work hours per day)\n\nIn this case, the total work is the same as before: 45 persons can repair the road in 12 days, working 5 hours a day, so the total work is:\n\nTotal work = 45 x 12 x 5 = 2700 hours\n\nNow, we need to calculate the number of workers and the work hours per day:\n\nNumber of workers = 30\nWork hours per day = 6 hours\n\nNow we can plug in the values and solve for time:\n\nTime = (2700 hours) / (30 x 6)\n\nTime = 2700 / 180\n\nTime = 15 days\n\nTherefore, 30 persons working 6 hours a day will complete the work of repairing the road in 15 days.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 40,
+        "gsm8k_data": {
+            "question": "A boat having a length of 3 m and breadth of 2 m is floating on a lake. The boat sinks by 1 cm when a man gets on it. What is the mass of the man?",
+            "original_solution": "Volume of water displaced = length x breadth x change in depth\n= 3 x 2 x 0.01 = 0.06 cubic meters\nWeight of water displaced = 0.06 x 1000 = 60 kg (as 1 cubic meter of water weighs 1000 kg)\nTherefore, the mass of the man is 60 kg\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "Volume of water displaced = length x breadth x change in depth\n= 3 x 2 x 0.01 = 0.06 cubic meters\nWeight of water displaced = 0.06 x 1000 = 70 kg (as 1 cubic meter of water weighs 1000 kg)\nTherefore, the mass of the man is 70 kg\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformation process incorrectly changes the weight of water displaced from 60 kg to 70 kg in step 2. This error then carries through to step 3, affecting the final statement about the mass of the man, which becomes 70 kg instead of the correct 60 kg. The calculation in step 2 is the only error introduced, and the subsequent affected step (step 3) mirrors this incorrect result. There is only one error in the transformed solution, and the numbers in the formula and language description inherit the error, although the calculation process to get the incorrect number is not shown."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA boat having a length of 3 m and breadth of 2 m is floating on a lake. The boat sinks by 1 cm when a man gets on it. What is the mass of the man?\n\n### Response:",
+        "output_str": "\nTo determine the mass of the man, we need to calculate the volume of water displaced by the boat when the man gets on it.\n\nThe volume of the boat is given by:\n\nV = length x breadth x height\n\nwhere height is the depth of the boat below the water line, which is 1 cm in this case.\n\nSo, V = 3 x 2 x 0.01 = 0.06 cubic meters\n\nThe density of water is approximately 1000 kg/cubic meter. Therefore, the mass of water displaced by the boat is:\n\nm = V x density\n\nm = 0.06 x 1000 = 60 kg\n\nSince the boat sinks by 1 cm when the man gets on it, the mass of the man is equal to the mass of water displaced by the boat. Therefore, the mass of the man is:\n\nm = 60 kg\n\nSo, the mass of the man is 60 kg.",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 24 days to complete 3 works because 6 x 3 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 6 x 3 as 24 instead of 6 x 3 = 18 in step 2. The first step, which involves calculating the time it takes for 1 work, remains unchanged. The erroneous calculation is introduced in step 2 by changing the original correct result of 6 x 3 = 18 to a wrong result of 6 x 3 = 24. Since this is the last part of the calculation, no subsequent steps are affected, and thus step 2 is the only step with a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "\n\nIf aarti can do a piece of work in 6 days, then she can do three times the work in 6 x 3 = 18 days.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 61,
+        "gsm8k_data": {
+            "question": "a motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.",
+            "original_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 324 km\n#### 324",
+            "original_answer": 324.0,
+            "transformed_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 314 km\n#### 314",
+            "transformed_answer": 314.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates the total distance as 180 + 144 = 314 km in step 3, which affects only the final sum. The calculation within both travel segments remain correctly calculated at 60 * (6/2) = 180 km and 48 * (6/2) = 144 km respectively. The calculation of the total distance is the only thing that is modified due to the incorrect addition, resulting in a transformed answer that is different from the original."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.\n\n### Response:",
+        "output_str": "\n\nTo find the distance traveled by the motorist, we need to use the concept of average speed. The average speed of the motorist can be calculated by taking the sum of the speeds for the two halves of the journey and dividing it by 2.\n\nLet's first calculate the distance traveled during the first half of the journey:\n\nDistance = Speed x Time\nDistance = 60 kmph x 3 hours\nDistance = 180 km\n\nNow, let's calculate the distance traveled during the second half of the journey:\n\nDistance = Speed x Time\nDistance = 48 kmph x 3 hours\nDistance = 144 km\n\nNow, let's calculate the total distance traveled by the motorist:\n\nTotal Distance = Distance1 + Distance2\nTotal Distance = 180 km + 144 km\nTotal Distance = 324 km\n\nTherefore, the motorist traveled a total distance of 324 km.",
+        "extract_true_num": 324.0,
+        "extract_pred_num": 324.0,
+        "is_correct": true
+    },
+    {
+        "index": 77,
+        "gsm8k_data": {
+            "question": "In a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?",
+            "original_solution": "The total number of players present is 16 + 12 + 18 + 13 = 59.\n#### 59",
+            "original_answer": 59.0,
+            "transformed_solution": "The total number of players present is 16 + 12 + 18 + 10 = 56.\n#### 56",
+            "transformed_answer": 56.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example change the number of softball players from 13 to 10 in step 1 without justification, which impacts the total calculated in the same step. The remaining part of the solution inherits this error without other changes. All original operands and operators remain the same, and the only change is to the result of the addition, making the end result different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?\n\n### Response:",
+        "output_str": "\nThere are a total of 16 + 12 + 18 + 13 = 59 players present in the ground.",
+        "extract_true_num": 59.0,
+        "extract_pred_num": 59.0,
+        "is_correct": true
+    },
+    {
+        "index": 88,
+        "gsm8k_data": {
+            "question": "a straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?",
+            "original_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 199\n#### 199",
+            "original_answer": 199.0,
+            "transformed_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n800 = 4x\nx = 200\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates 800 - 4 as 800 in step 3 instead of 800 - 4 = 796. Therefore, the x value is incorrectly calculated as 200 rather than 199. The calculation error does not affect previous steps in the solution but changes the final answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?\n\n### Response:",
+        "output_str": "\nTo find the x-coordinate of the point whose y-coordinate is 800 on the line with a slope of 4 and a y-intercept of 4, we can use the slope-intercept form of a linear equation.\n\nFirst, we know that the slope of the line is 4, so we can write the equation of the line as:\n\ny = 4x + 4\n\nNext, we are given that the y-coordinate of the point we want to find is 800, so we can substitute this value into the equation:\n\n800 = 4x + 4\n\nNow, we can solve for x by subtracting 4 from both sides of the equation:\n\n796 = 4x\n\nDividing both sides of the equation by 4 gives us:\n\nx = 199\n\nTherefore, the x-coordinate of the point whose y-coordinate is 800 on the line with a slope of 4 and a y-intercept of 4 is 199.",
+        "extract_true_num": 199.0,
+        "extract_pred_num": 199.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "circular gears l and r start to rotate at the same time at the same rate. gear l makes 20 complete revolutions per minute and gear r makes 40 revolutions per minute. how many seconds after the gears start to rotate will gear r have made exactly 6 more revolutions than gear l?",
+            "original_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 60 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 60/10 = 6 seconds\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 50 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 50/10 = 5 seconds\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example shows an incorrect calculation in step 4 with 1200/20 being miscalculated as 50 instead of 60. The subsequent step 5, which depends on the result of step 4, now uses the incorrect value to determine the time it takes for gear r to make 6 more revolutions than gear l as 5 seconds instead of 6 seconds. Steps 1, 2, and 3 are correct and remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ncircular gears l and r start to rotate at the same time at the same rate. gear l makes 20 complete revolutions per minute and gear r makes 40 revolutions per minute. how many seconds after the gears start to rotate will gear r have made exactly 6 more revolutions than gear l?\n\n### Response:",
+        "output_str": "\nTo find out how many seconds it will take for gear R to make exactly 6 more revolutions than gear L, we need to first find out how many revolutions gear L will make in one minute. Since gear L makes 20 revolutions per minute, it will make 20 revolutions in one minute.\n\nNext, we need to find out how many revolutions gear R will make in one minute. Since gear R makes 40 revolutions per minute, it will make 40 revolutions in one minute.\n\nNow, we can find out how many revolutions gear R will make in 6 seconds by multiplying the number of revolutions it makes in one minute by 6.\n\n40 revolutions/minute x 6 seconds = 240 revolutions\n\nSince gear R will make 240 revolutions in 6 seconds, it will have made exactly 6 more revolutions than gear L after 6 seconds.\n\nTherefore, gear R will have made exactly 6 more revolutions than gear L after 6 seconds.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "the sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?",
+            "original_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 16\nSubtract the second discount from the first discounted price: 320 - 16 = 304\n#### 304",
+            "original_answer": 304.0,
+            "transformed_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 15\nSubtract the second discount from the first discounted price: 320 - 15 = 305\n#### 305",
+            "transformed_answer": 305.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 has a calculation error where the original 320 * 0.05 = 16 is modified to 320 * 0.05 = 15. This wrong calculation in step 3 changes the correct amount of the second discount, and consequently, the following step 4 inherits this error, altering the subtraction to 320 - 15 = 305. Steps before the wrong step, such as 1 and 2, remain unaffected. The subsequent steps related to the wrong step have a single calculation error, and the final transformed answer has been revised to 305, differing from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?\n\n### Response:",
+        "output_str": "\nThe sale price of sarees listed for Rs. 400 after a successive discount of 20% and 5% is:\n\nFirst, we will calculate the discount of 20%:\n\nRs. 400 x 20% = Rs. 80\n\nNow, we will calculate the final price after the discount of 20%:\n\nRs. 400 - Rs. 80 = Rs. 320\n\nNext, we will calculate the discount of 5%:\n\nRs. 320 x 5% = Rs. 16\n\nNow, we will calculate the final price after the discount of 5%:\n\nRs. 320 - Rs. 16 = Rs. 304\n\nTherefore, the sale price of sarees listed for Rs. 400 after a successive discount of 20% and 5% is Rs. 304.",
+        "extract_true_num": 304.0,
+        "extract_pred_num": 304.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "Convert 500 miles into meters?",
+            "original_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 804670 meters\n#### 804670",
+            "original_answer": 804670.0,
+            "transformed_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 800000 meters\n#### 800000",
+            "transformed_answer": 800000.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, the calculation of 500 x 1609.34 has been incorrectly modified to result in an incorrect value of 800000 meters instead of the correct value of 804670 meters. The previous step is not affected since it simply establishes the conversion rate without any calculations. The transformation introduces a single error in step 2, which only changes the outcome of that specific step and the final answer, without altering the logic or the methodology of the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nConvert 500 miles into meters?\n\n### Response:",
+        "output_str": "\nCertainly! To convert 500 miles to meters, we can use the conversion factor of 1 mile = 1609.34 meters.\n\n500 miles x 1609.34 meters/mile = 804,670 meters\n\nSo, 500 miles is equal to 804,670 meters.",
+        "extract_true_num": 804670.0,
+        "extract_pred_num": 804670.0,
+        "is_correct": true
+    }
+]

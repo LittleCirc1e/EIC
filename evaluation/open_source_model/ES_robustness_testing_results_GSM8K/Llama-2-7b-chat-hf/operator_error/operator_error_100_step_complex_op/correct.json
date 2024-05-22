@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Carl buys index cards for his class. He gives each student 10 index cards. He teaches 6 periods a day and each class has 30 students. If a 50 pack of index cards cost $3 how much did he spend on them all?",
+        "original_solution": "He has 30*6=180 students\nSo he needs to buy 180*10=1800 index cards\nThat means he needs to buy 1800/50=36 packs of index cards\nSo he spends 36*3=$108\n#### 108",
+        "original_answer": 108.0,
+        "transformed_solution": "He has 30*6=180 students\nSo he needs to buy 180*10=1800 index cards\nThat means he needs to buy 1800*50=90000 index cards\nSo he spends 90000*3=$270,000\n#### 270000",
+        "transformed_answer": 270000.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the division operation in step 3 has been changed to multiplication, turning 1800/50=36 into 1800*50=90000. This change affects the calculation of the number of packs of index cards needed. Consequently, the amount of money spent, which is calculated in step 4, is also wrongfully affected, changing from 36*3=$108 to 90000*3=$270,000. The error lies solely in the modification of the operator in step 3, but the calculation of 1800*50=90000 is done correctly. This operator error leads to incorrect subsequent steps that rely on its result; however, the calculations in those affected steps are performed accurately based on the altered formula.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that the operator in step 3 encounters an error, multiplication should be used instead of addition. It miscalculates 30 x 6 = 180 instead of 30 x 10 = 300, resulting in an incorrect total number of index cards needed. This affects the calculation of the total number of index cards needed and the cost. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "The American swallow can lift into the air and carry a maximum of 5 pounds of weight, while the European swallow can lift and carry twice the weight as the American swallow. If there was a flock of 90 swallows, containing twice as many American as European swallows, what is the maximum combined weight the flock can carry?",
+        "original_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90-30=60.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n60 American swallows can carry a maximum of 60*5=300 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+300=600 pounds\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90+30=120.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n120 American swallows can carry a maximum of 120*5=600 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+600=900 pounds\n#### 900",
+        "transformed_answer": 900.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation modified step 4 of the original solution, changing the subtraction to addition, converting the number of American swallows from 90-30=60 to 90+30=120. Step 7 incorrectly inherits this result, where it should calculate 60 American swallows carrying 300 pounds, but instead calculates 120 swallows supposedly carrying 600 pounds. This incorrect number of American swallows also affects step 8, erroneously adding a higher carrying capacity for 120 swallows instead of 60, thus giving an incorrect total of 900 pounds. It should be noted that the operator error in step 4 and the miscalculation that follows in steps 7 and 8 lead to the transformed solution being incorrect.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that the operator in step 4 encounters an error, multiplication should be used instead of addition. It miscalculates 2x+x=90 instead of 2x+30=90. This affects the calculation of the number of European swallows, which is 30 instead of 30. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Kendra tracks the different species of birds they spot on their birdwatching trip. On Monday they visited 5 sites and saw an average of 7 birds at each site. On Tuesday, Kendra visited 5 sites and saw an average of 5 birds at each site. On Wednesday visited 10 sites and saw an average of 8 birds at each site. On average, how many different birds did Kendra see on each site?",
+        "original_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds + 80 birds = 140 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw 140 birds / 20 sites = 7 different birds at each site\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "On Monday Kendra saw 5 sites x 7 birds/site = 35 different birds\nOn Tuesday Kendra saw 5 sites x 5 birds/site = 25 different birds\nOn Wednesday Kendra saw 10 sites x 8 birds/site = 80 different birds\nIn total Kendra saw 35 birds + 25 birds - 80 birds = -20 different birds\nIn total Kendra visited 5 sites + 5 sites + 10 sites = 20 sites.\nOn average Kendra saw -20 birds / 20 sites = -1 different birds at each site\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 4 into subtraction, and by changing + to -, 35 birds + 25 birds + 80 birds = 140 birds becomes 35 birds + 25 birds - 80 birds = -20 birds. This affects the subsequent related step 6. Step 6 changes from 140 birds / 20 sites = 7 birds/site to -20 birds / 20 sites = -1 birds/site. It should be noted that only the operator in step 4 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 4 is correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that the operator in step 4 encounters an error, subtraction should be used instead of addition. It miscalculates 35 + 25 - 80 = -20 instead of 35 - 25 + 80 = 35. This affects the final result, which is incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Adam has $100 and wants to spend it to open a rock stand. He can buy rocks for $5 each and sell them for $7 each. If he invests all his money in the rock stand but only sells 60% of his inventory, how much money does he lose?",
+        "original_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 x 7 = 84\nHe lost $16 on his business because 100 - 84 = 16\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 * 7 = 84\nHe lost $16 on his business because 100 * 84 = 8400\n#### -8284",
+        "transformed_answer": -8284.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly transforms the subtraction operator in the original solution's final step into a multiplication operator. By changing '-' to '*', the calculation '100 - 84 = 16' becomes '100 * 84 = 8400', leading to an incorrect step and a vastly incorrect final answer of losing $8,284 instead of $16. This affects only the final step, but all other calculations presented in the transformed solution are performed correctly, maintaining the integrity of the outlined process save for the single error introduced.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that the operator in step 4 encounters an error, multiplication should be used instead of addition. It miscalculates 20 x 60 = 120 instead of 20 x 7 = 140. This affects step 5, which incorrectly calculates 120 x 7 = 840 instead of 140 x 7 = 980. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

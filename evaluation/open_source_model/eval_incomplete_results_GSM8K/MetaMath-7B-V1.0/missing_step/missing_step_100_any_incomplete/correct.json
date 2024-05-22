@@ -1,0 +1,74 @@
+[
+    {
+        "question": "Madeline spends 18 hours a week in class. She spends 4 hours per day working on homework. She spends 8 hours per day sleeping. She works part-time 20 hours per week. How many hours left over does Madeline have?",
+        "original_solution": "Madeline spends 4*7=28 hours on homework.\nShe spends 8*7-56 hours sleeping.\nTherefore, she is busy 28+18+56+20=122 hours per week.\nThere are 7*24=168 hours per week.\nThus, Madeline has 168-122=46 hours left over.\n#### 46",
+        "original_answer": 46.0,
+        "transformed_solution": "She spends 8*7=56 hours sleeping.\nTherefore, she is busy 4*7+18+56+20=144 hours per week.\n",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step, which references the number 4 from the question, is removed. Step 2 of the original_solution, which uses the result 28 from the deleted step, now references the number 4 directly and recalculates the total hours busy per week. The calculation changes from 28+18+56+20=122 to 4*7+18+56+20=144. This does not affect the calculation of step 3 at all, which remains the same. Since step 1 was deleted, we start from step 2 in the transformed_solution, which is a combination of step 1 and step 3 from the original solution. Therefore, the first step that contains an error is step 2 in the transformed_solution, which is equivalent to step 3 in the original_solution. So the wrong_step is 2.",
+        "eval_result": "To determine if the solution is correct, we need to check if the given solution matches the given question.\nIn this case, the given question asks for the number of hours left over that Madeline has.\nThe solution states that Madeline is busy for 144 hours per week.\nSince there are 7 days in a week, Madeline's total time spent on class, homework, sleeping, and work is 4*7+18+56+20=144 hours.\nTherefore, the solution is incorrect because it does not match the given question.\nThe correct solution would be: The solution is incorrect, and the explanation is #.\nTherefore, the answer is incorrect.The answer is: 144"
+    },
+    {
+        "question": "Adam had a farm with animals. He had 12 cows and twice as many sheep. He decided to buy 3 pigs for every sheep he had. How many animals were on the farm after the transaction?",
+        "original_solution": "Adam had twice as many sheep as the cows, so 2 sheep/cow * 12 cows = 24 sheep.\nFor every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 24 sheep + 12 cows = 108 animals.\n#### 108",
+        "original_answer": 108.0,
+        "transformed_solution": "For every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\n",
+        "transformed_answer": 84.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed. In the original_solution, step 1 calculates the number of sheep based on the number of cows, and this result is used in step 2 to calculate the number of pigs. After deleting step 1, the number of sheep is missing in the modified solution, and step 2 should change the formula from 3 pigs/sheep * 24 sheep to 3 pigs/sheep * (2 * 12 cows). However, this has been incorrectly omitted, and the calculation of pigs is directly based on the number of sheep from the removed step, resulting in an unaccounted number of sheep in step 2. The subsequent step 3, which originally summed up pigs, sheep, and cows, now incorrectly sums up just pigs and cows, leading to a wrong total count of animals on the farm. It is step 1 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step with the unaccounted number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "The solution is incorrect, and the explanation is #. To determine the number of animals on the farm after the transaction, we need to add up the number of cows, sheep, and pigs.\n\nAccording to the question, Adam had 12 cows and twice as many sheep as cows, so he had 12 cows * 2 = 24 sheep.\n\nHe decided to buy 3 pigs for every sheep he had, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\n\nTherefore, the total number of animals on the farm after the transaction is 12 cows + 24 sheep + 72 pigs = 108 animals.\n\nThe answer is: 108"
+    },
+    {
+        "question": "There is a playground that is surrounded by a square fence that has a side length of 27 yards. There is a 12 yard by 9 yard garden that has fencing around it. How many yards of fencing do the playground and garden have together?",
+        "original_solution": "27 * 4 = 108 yards\n2 * (12 + 9) = 42 yards\n108 + 42 = 150 yards\nThe playground and garden have a combined fence length of 150 yards.\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "The square fence around the playground is 27 * 4 = 108 yards\nThe fencing for the garden is 2 * (27) = 54 yards instead of 2 * (12 + 9)\n",
+        "transformed_answer": 162.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2, which calculates the fence length of the garden correctly as 2 * (12 + 9) = 42 yards. After removing this step, the next step, which should calculate the combined fence length, should reference the result from the previous step. However, the transformed solution incorrectly references the largest side length from the question, which is 27, assuming that one side of the garden shares the same length as the playground's side length. It makes an error by incorrectly calculating the garden's fence length as 2 * (27) = 54 yards. Subsequently, the calculation for the combined length becomes 108 + 54 = 162 yards. The wrong_step is 2, which serves as the first step that references the incorrect assumption about the garden fence length in the transformed solution.",
+        "eval_result": "The solution is incorrect, and the explanation is: The fencing for the garden is 2 * (27) = 54 yards instead of 2 * (12 + 9) = 42 yards."
+    },
+    {
+        "question": "Frank went to a shop to buy some food for his breakfast. He bought 10 buns for $0.1 each, two bottles of milk, for $2 each, and a carton of eggs, which was three times more expensive than one bottle of milk. How much did Frank pay for his breakfast shopping?",
+        "original_solution": "For the buns, Frank paid 10 * 0.1 = $1.\nHe bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 1 + 4 + 6 = $11.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "He bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 10 * 0.1 + 4 + 6 = $15.\n",
+        "transformed_answer": 15.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been removed. In the original_solution, step 1 calculates the cost for buns and steps 3 and 4 reference the result of $1 from step 1. After removing step 1, the cost of buns is no longer calculated separately, so the final calculation step which was step 4 in the original solution, now becomes step 3 in the transformed solution and now directly references the cost for 10 buns with the formula 10 * 0.1 instead of the previously calculated $1, which results in 10 * 0.1 + 4 + 6 = $15. Since the transformed_solution's step 3 is the first instance where the formula was adjusted to include the omitted step's calculation, the wrong_step is designated as 3.",
+        "eval_result": "The solution is incorrect, and the explanation is: The solution is incorrect because it does not match the given information. The cost of the buns is not $0.1 each, but $1 each. Please correct the solution accordingly.\nThe cost of two bottles of milk is $4, not $4. Please correct the solution accordingly.\nThe cost of one carton of eggs is not $6, but $3. Please correct the solution accordingly.\nThe total cost of Frank's breakfast shopping is $10 + $1 + $3 = $14, not $15. Please correct the solution accordingly.\nTherefore, the solution is incorrect, and the correct answer is $14.The answer is: 14"
+    },
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "Brenda has to throw 15 peaches away, so she has 250 peaches - 15 peaches = 235 peaches left.\n",
+        "transformed_answer": 141.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, we remove the first step from the original_solution. The original first step calculates how many peaches are fresh, based on the total count of 250 peaches, while the second step subtracts those that are too small from the fresh count. By removing the first step, we change the order of the calculations: first subtract the 15 too-small peaches from the total count, then calculate 60% of this new total. This sequence represents the transformed solution. The value changes because instead of calculating 60% of 250 and then subtracting 15, we first subtract 15 from 250 and calculate 60% of the remaining 235 peaches. Hence, the transformed_answer is 141 peaches, which is based on calculating the percent of 235 instead of 250. This error occurs in the first step of the transformed_solution because it changes the base number from which the percentage is calculated, making it the wrong step.",
+        "eval_result": "The solution is incorrect, and the explanation is: 235 peaches left. The number after the peaches should be 235, not 234. Please correct the solution accordingly.The answer is: 234"
+    },
+    {
+        "question": "Lou Senior took 3 cookies out of the cookie jar and ate them. Since he didn't get caught by his wife, he went back the next day and took another 3 cookies out of the jar. But after eating just one of the cookies, he felt guilty about it and put the other two cookies back. His son, Louie Junior saw that his Dad was eating cookies. So, Louie Junior took seven cookies out of the jar and hid them in his bedroom for later. The next morning, Debra, Lou's wife looked into the cookie jar and reacted by accusing her husband of eating half of the cookies out of the cookie jar. How many cookies remained in the jar?",
+        "original_solution": "Lou Sr took 3 cookies from the jar, then another three, but then put two back, for a total of 3+3-2=4 cookies removed.\nLouie Jr took seven more out of the jar, for a total of 4+7=11 cookies removed.\nIf Debra thought half were gone, then the number of missing cookies would equal the number of cookies that remain, or 11 missing=11 remaining cookies\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Lou Sr took 3 cookies from the jar, then put two back, for a total of 3-2=1 cookie removed.\n",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 1 calculates the total number of cookies removed by Lou Sr by combining actions from two days, but step 1 can be seen as two distinct actions. To transform the solution, step 1 is modified by considering only the second action, removing the first day's 3 cookies resulting in 3-2=1 cookie removed. This initial action is directly taken from the question. The second step then changes accordingly, adding only the remaining cookies from day two plus the 7 from Louie Jr, resulting in 1+7=8 cookies removed. The last step remains valid as the logic still applies that the missing number of cookies equals those remaining. Thus, the first incorrect reference becomes the new step 1, replacing \"3+3-2=4\" with \"3-2=1\", reflecting only the second day's action. The removal of the first day's action causes the transformed_answer to be different from the original_answer which is necessary for the case generation process.",
+        "eval_result": "\n\nLouie Jr took 7 cookies from the jar and hid them in his bedroom. So, there are 1 cookie less in the jar. \n\nDebra accused Lou of eating half of the cookies in the jar. Since he ate 1 cookie, that means half of the cookies in the jar is 1 cookie. \n\nTherefore, the total number of cookies remaining in the jar is 1. \n\nThe solution is incorrect, and the explanation is: \n\nThe solution is incorrect because it states that there are 1 cookie remaining in the jar when, in fact, there are 3 cookies remaining. \n\nThe explanation is that the question is asking for the total number of cookies remaining in the jar, which is 3. \n\nThe correct answer is: 3"
+    }
+]

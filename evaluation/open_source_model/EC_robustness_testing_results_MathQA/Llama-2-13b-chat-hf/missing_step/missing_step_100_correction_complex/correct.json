@@ -1,0 +1,50 @@
+[
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 5 hours, and the explanation is that step 1 first makes a mistake in unit conversion and mistakenly believes that 1 km is equal to 1000 m instead of 1000 m = 0.1 km. Therefore, the calculation of 450 km / 90 kmh is incorrect, and the correct calculation is 450000 m / 90 kmh = 5 hours."
+    },
+    {
+        "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+        "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 22, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 10 + 12 = 12 instead of 10 + 12 = 22. The subsequent step 2 references the result of step 1, calculating 12 instead of 22. Therefore, the final incorrect answer is 12."
+    },
+    {
+        "question": "find the simple interest on rs. 620 for 10 months at 10 paisa per month ?",
+        "original_solution": "Simple interest = (Principal x Rate x Time) / 100\nSimple interest = (620 x 10 x 10) / 100 = 620\n#### 620",
+        "original_answer": 620.0,
+        "transformed_solution": "Simple interest = 620 x 10 / 100 = 62\n#### 62",
+        "transformed_answer": 62.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 introduces the formula for simple interest which includes the principal, rate, and time. Since the removal of step 1 requires step 2 to reference the principal directly from the question, the reference to the time in terms of months (10 months at 10 paisa per month) has been overlooked. The transformed_solution then incorrectly calculates the simple interest by only considering the rate (10) over 100, multiplied by the principal amount of 620. It neglects to multiply the rate by the time period (10 months), leading to a transformed answer of 62 instead of the correct simple interest of 620. It is step 1 in the transformed_solution, which would correspond to the removed step 1 in the original_solution, that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 620 x 10 / 100 = 620 x 10 = 6200, and the explanation is that step 1 first makes a mistake in unit conversion and mistakenly believes that one rupee has 100 paise instead of 100 rupees, calculating 620 x 10 / 100 = 62 instead of 620 x 10 = 6200. The subsequent step 2 references the result of step 1, calculating 62 instead of 6200."
+    },
+    {
+        "question": "Sarah is driving to the airport. After driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. She then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. How many miles did she drive in all?",
+        "original_solution": "She drove 50 miles in the first hour because 50 x 1 = 50\nShe drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 200 miles in all because 50 + 150 = 200\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "She drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 150 miles in all because 0 + 150 = 150\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step which calculates how far Sarah drove in the first hour has been removed. The original step 1 resulted in 50 miles. In the transformed_solution, step 2 which originally added 50 miles from step 1 to 150 miles from what was step 2 in the original_solution must now be corrected to add 0 to 150 miles, since step 1 has been removed. This results in a total distance driven of 150 miles, as stated in the transformed_solution. The deletion of step 1 removes the reference to the number of miles driven in the first hour from the solution, which leads to an incorrect calculation of the total distance driven and a wrong transformed_answer of 150 miles, which is different from the original_answer of 200 miles. Therefore, the wrong_step is the rewritten step 2 in the transformed_solution.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 200, and the explanation is that step 1 first makes a mistake in unit conversion and mistakenly believes that one hour has 50 minutes instead of 60 minutes, calculating 1 + 1/2 x 100 = 150 instead of 1 + 1/2 x 60 = 200. The subsequent step 2 reference the result of step 1, calculating 150 + 0 = 150 instead of 200 + 0 = 200. Therefore, the final incorrect answer is 150."
+    }
+]

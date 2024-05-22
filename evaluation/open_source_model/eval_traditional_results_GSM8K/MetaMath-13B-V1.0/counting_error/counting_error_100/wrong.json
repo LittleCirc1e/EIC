@@ -1,0 +1,116 @@
+[
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "On Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?",
+            "original_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*2 = 6 slices per weekend\nIf she uses 6 slices per weekend then over 52 weeks she will have used 6*52 = 312 slices\nShe gets 12 slices per loaf and she needs 312 slices so she needs 312/12 = 26 loaves\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*1 = 3 slices per weekend\nIf she uses 3 slices per weekend then over 52 weeks she will have used 3*52 = 156 slices\nShe gets 12 slices per loaf and she needs 156 slices so she needs 156/12 = 13 loaves\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 mistakenly counts the number of times french toast is made per weekend as 1 time instead of 2 times, resulting in the 3*2 calculation for slices per weekend in the original_solution changed to 3*1 in the transformed_solution. This affects the following step where the total number of slices needed for 52 weeks is also halved from 312 to 156. Subsequently, the calculation in the last step is based on this new total, resulting in the transformed_answer being half of the original_answer. This single counting error of the number of times french toast is made per weekend directly leads to the halved result in the final step of the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?\n\n### Response:",
+        "output_str": "Suzanne and her husband each have 1 whole slice, so that's 1 + 1 = 2 slices for them.\nHer daughters split 1 slice, so that's 1/2 slice for each daughter.\nIn total, Suzanne needs 2 + 1/2 + 1/2 = 3 slices of bread for the family.\nThere are 52 weeks in a year, so Suzanne needs 3 slices x 52 weeks = 156 slices of bread.\nSince there are 12 slices per loaf, Suzanne needs 156 slices / 12 slices per loaf = 13 loaves of bread.\n#### 13\nThe answer is: 13",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 13.0,
+        "is_correct": false
+    },
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272.0,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208.0,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day each instead of 2 days each, transforming the original 'Each week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.' into 'Each week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.' And it affects the subsequent related step, with the original 'In one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.' changing into 'In one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.' The final sum in step 7 changes accordingly from 144 + 128 = 272 hours to 144 + 64 = 208 hours. The transformed answer should be different from the original answer, and no previous or unrelated steps are affected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 classes each day, and each class is 1 hour long, so he spends 3 * 1 = 3 hours attending classes each day.\nOn Tuesdays and Thursdays, Kimo has 2 classes each day, and each class is 2 hours long, so he spends 2 * 2 = 4 hours attending classes each day.\nIn one week, Kimo spends 3 hours attending classes on Mondays, Wednesdays, and Fridays, and 4 hours attending classes on Tuesdays and Thursdays, so he spends a total of 3 + 4 = 7 hours attending classes each week.\nIn one semester, there are 16 weeks of school, so Kimo spends a total of 7 * 16 = 112 hours attending classes in one semester.\n#### 112\nThe answer is: 112",
+        "extract_true_num": 272.0,
+        "extract_pred_num": 112.0,
+        "is_correct": false
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day instead of 2 days each week, resulting in 4 x 2 = 8 becoming 4 x 1 = 4. And it affects the subsequent related step 6, changing from 8 x 16 = 128 to 4 x 16 = 64, and step 7, changing from 144 + 128 = 272 to 144 + 64 = 208. It should be noted that only this step of counting error needs to be considered; the other calculation processes are correct and follow the structure of the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 classes each day, and each class is 1 hour long, so he spends 3 * 1 = 3 hours attending classes each day.\nOn Tuesdays and Thursdays, Kimo has 2 classes each day, and each class is 2 hours long, so he spends 2 * 2 = 4 hours attending classes each day.\nIn one week, Kimo spends 3 hours attending classes on Mondays, Wednesdays, and Fridays, and 4 hours attending classes on Tuesdays and Thursdays, so he spends a total of 3 + 4 = 7 hours attending classes each week.\nIn one semester, there are 16 weeks of school, so Kimo spends a total of 7 * 16 = 112 hours attending classes in one semester.\n#### 112\nThe answer is: 112",
+        "extract_true_num": 272,
+        "extract_pred_num": 112.0,
+        "is_correct": false
+    },
+    {
+        "index": 63,
+        "gsm8k_data": {
+            "question": "On Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?",
+            "original_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*2 = 6 slices per weekend\nIf she uses 6 slices per weekend then over 52 weeks she will have used 6*52 = 312 slices\nShe gets 12 slices per loaf and she needs 312 slices so she needs 312/12 = 26 loaves\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast only on Saturday for a total of 3*1= 3 slices per weekend\nIf she uses 3 slices per weekend then over 52 weeks she will have used 3*52 = 156 slices\nShe gets 12 slices per loaf and she needs 156 slices so she needs 156/12 = 13 loaves\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 in the original_solution erroneously counts Saturday and Sunday as two days to make french toast instead of one day in the transformed_solution, resulting in 3*2=6 becoming 3*1=3. This change affects the subsequent step 3, which changes from 6*52=312 slices to 3*52=156 slices, and therefore step 4 now divides 156/12=13 instead of 312/12=26. Although the steps related to the counting of slices and division by loaf size remain correct, the initial counting assumption has been altered to create a counting error that propagates through the rest of the solution, leading to a different transformed_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?\n\n### Response:",
+        "output_str": "Suzanne and her husband each have 1 whole slice, so that's 1 + 1 = 2 slices for them.\nHer daughters split 1 slice, so that's 1/2 slice for each daughter.\nIn total, Suzanne needs 2 + 1/2 + 1/2 = 3 slices of bread for the family.\nThere are 52 weeks in a year, so Suzanne needs 3 slices x 52 weeks = 156 slices of bread.\nSince there are 12 slices per loaf, Suzanne needs 156 slices / 12 slices per loaf = 13 loaves of bread.\n#### 13\nThe answer is: 13",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 13.0,
+        "is_correct": false
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "The transformed_solution introduces a counting error by changing the number of days in which Kimo attends 2-hour classes. Instead of two days (Tuesday and Thursday), step 5 mistakenly counts only one day for 2-hour classes. This alters the subsequent calculations — instead of attending class for 8 hours each week on Tuesday and Thursday, the transformed_solution suggests he only attends 4 hours. In one semester, this changes from 8 x 16 = 128 hours to 4 x 16 = 64 hours, altering the total hours Kimo spends attending classes for the semester."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 classes each day, and each class is 1 hour long, so he spends 3 * 1 = 3 hours attending classes each day.\nOn Tuesdays and Thursdays, Kimo has 2 classes each day, and each class is 2 hours long, so he spends 2 * 2 = 4 hours attending classes each day.\nIn one week, Kimo spends 3 hours attending classes on Mondays, Wednesdays, and Fridays, and 4 hours attending classes on Tuesdays and Thursdays, so he spends a total of 3 + 4 = 7 hours attending classes each week.\nIn one semester, there are 16 weeks of school, so Kimo spends a total of 7 * 16 = 112 hours attending classes in one semester.\n#### 112\nThe answer is: 112",
+        "extract_true_num": 272,
+        "extract_pred_num": 112.0,
+        "is_correct": false
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "On Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?",
+            "original_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*2 = 6 slices per weekend\nIf she uses 6 slices per weekend then over 52 weeks she will have used 6*52 = 312 slices\nShe gets 12 slices per loaf and she needs 312 slices so she needs 312/12 = 26 loaves\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*1 = 3 slices per weekend\nIf she uses 3 slices per weekend then over 52 weeks she will have used 3*52 = 156 slices\nShe gets 12 slices per loaf and she needs 156 slices so she needs 156/12 = 13 loaves\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 2,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 erroneously counts Saturday and Sunday as 1 day instead of 2 days (3*1=3 slices per weekend instead of 3*2=6), which consequently affects the calculations in step 3, changing from 6*52=312 slices used to 3*52=156 slices used. Finally, step 4 is affected as the result changes from needing 312/12=26 loaves to 156/12=13 loaves."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?\n\n### Response:",
+        "output_str": "Suzanne and her husband each have 1 whole slice, so that's 1 + 1 = 2 slices for them.\nHer daughters split 1 slice, so that's 1/2 slice for each daughter.\nIn total, Suzanne needs 2 + 1/2 + 1/2 = 3 slices of bread for the family.\nThere are 52 weeks in a year, so Suzanne needs 3 slices x 52 weeks = 156 slices of bread.\nSince there are 12 slices per loaf, Suzanne needs 156 slices / 12 slices per loaf = 13 loaves of bread.\n#### 13\nThe answer is: 13",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 13.0,
+        "is_correct": false
+    }
+]

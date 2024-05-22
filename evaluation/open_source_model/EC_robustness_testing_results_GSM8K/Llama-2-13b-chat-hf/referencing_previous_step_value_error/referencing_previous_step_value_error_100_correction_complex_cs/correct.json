@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Pria bought a new car that advertised an estimated gas mileage of 35 miles per gallon. The car has a 12-gallon tank. She filled her car full of gas and was able to drive a total of 372 miles. What was the difference, in miles per gallon, between Pria's mileage and the advertised mileage?",
+        "original_solution": "Pria's car achieved a rate of 372 miles / 12 gallons = 31 miles per gallon.\nTherefore, it was a difference of 35 - 31 = 4 miles per gallon.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Pria's car achieved a rate of 372 miles / 12 gallons = 31 miles per gallon.\nTherefore, it was a difference of 35 - 30 = 5 miles per gallon.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 31 as 30 from step 1 and changes 35 - 31 = 4 miles per gallon to 35 - 30 = 5 miles per gallon. It should be noted that step 1 in the transformed_solution <Pria's car achieved a rate of 372 miles / 12 gallons = 31 miles per gallon.> should be the same as the step 1 in the original_solution <Pria's car achieved a rate of 372 miles / 12 gallons = 31 miles per gallon.> and calculates its result 31 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct and all other steps that reference the result number still reference it correctly. The result of the transformed_solution should be different from that of the original_solution.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 4 miles per gallon, and the explanation is that step 3 first erroneously references the result 372 instead of 350 from step 1, resulting in the calculation of 372 / 12 = 31 instead of 350 / 12 = 30. This affects the calculation of 35 - 31 = 4 instead of 35 - 30 = 5 in step 4, resulting in an error in the final result."
+    },
+    {
+        "question": "On Friday, Hank opened his used-bicycle store with a stock of bicycles, all fixed-up and ready to ride. Over the course of the day, he sold 10 bicycles and bought an additional 15 to fix up. On Saturday, he sold 12 bicycles and bought 8 more. And on Sunday, he sold 9 bicycles and bought 11 more. What was the net increase in the number of bicycles in stock in Hank's store over the three days?",
+        "original_solution": "He sold 10+12+9=31 bicycles.\nHe bought 15+8+11=34 bicycles.\nHe now has 34-31=3 more than at Friday's opening.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He sold 10+12+9=31 bicycles.\nHe bought 15+8+11=34 bicycles.\nHe now has 30-31=-1 more than at Friday's opening.\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 34 as 30 from step 2 and changes 34-31=3 to 30-31=-1. It should be noted that step 2 in the transformed_solution <He bought 15+8+11=34 bicycles.> should be the same as the step 2 in the original_solution <He bought 15+8+11=34 bicycles.> and calculates its result 34 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct. In addition, the transformed_answer should be different from the original_answer, which is why it is now -1 instead of 3.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 3, and the explanation is that step 4 first erroneously references the result 30 instead of 31 from step 3, resulting in the calculation of 30-31=-1 instead of 31-34=3. This affects the calculation of -1 in step 6, resulting in an error in the final result.\n\nThe correct solution is:\nHe sold 10+12+9=31 bicycles.\nHe bought 15+8+11=34 bicycles.\nHe now has 31-34=3 more than at Friday's opening.\n#### 3."
+    }
+]

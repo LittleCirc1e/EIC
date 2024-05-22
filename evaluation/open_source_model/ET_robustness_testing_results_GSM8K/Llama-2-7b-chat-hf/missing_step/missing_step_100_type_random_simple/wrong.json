@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Loisa wants to buy a tablet that costs $450 cash. Since she does not have enough money, the store offered her an installment plan for 12 months. She will pay $100 as a down payment and pay $40 for the first 4 months; then $35 for the next four months; then $30 for the last four months. How much will Loisa save if she will buy the tablet in cash instead of on installment?",
+        "original_solution": "Loisa will pay a total of $40 x 4 = $160 for the first 4 months.\nShe will pay a total of $35 x 4 = $140 for the next four months.\nAnd she will pay a total of $30 x 4 = $120 for the last four months.\nThus, she will pay a total of $100 + $160 + $140 + $120 = $520 for 12 months including the down payment.\nTherefore, Loisa can save $520 - $450 = $70 if she buys the tablet in cash.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Loisa will pay a total of $40 x 4 = $160 for the first 4 months.\nAnd she will pay a total of $30 x 4 = $120 for the last four months.\nThus, she will pay a total of $100 + $160 + $160 + $120 = $540 for 12 months including the down payment.\nTherefore, Loisa can save $540 - $450 = $90 if she buys the tablet in cash.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original_solution, which calculates the total cost of the tablet for the next four months. After removing this step, step 3 of the transformed_solution makes an error by referencing the result $160 from step 1 again instead of the original $140 for the cost of the middle four months. Consequently, the result $540 incorrectly combines $160 twice instead of using $140. The impact of this error is carried forward in the next calculation, which then assesses the total savings as $540 - $450 = $90. The wrong_step is identified as step 3 because it is the first step that uses the incorrect cost reference from the deleted step in the original_solution.",
+        "eval_result": "\nThe solution is correct, and the explanation is #90. The explanation is that if Loisa buys the tablet in cash, she will save $90 compared to the installment plan. This is because the total amount she pays for 12 months is $540, which is $90 more than the $450 she would pay under the installment plan."
+    },
+    {
+        "question": "Josh works 8 hours a day, 5 days a week, 4 weeks a month. Carl is an intern and works 2 hours less than Josh every day. Josh gets $9 an hour and Carl, half that. How much does the company pay for the 2 together in one month?",
+        "original_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/month = $1440 per month.\nCarl works less because he is an intern: 6 hours/day * 5 days/week * 4 weeks/month = 120 hours per month.\nCarl earns 120 hours * $4.5/hour = $540 per month.\nThe company pays for the 2 together: $1440 + $540 = $1980.\n#### 1980",
+        "original_answer": 1980.0,
+        "transformed_solution": "Josh works 8 hours/day * 5 days/week * 4 weeks/month = 160 hours a month.\nHe earns 160 hours/month * $9/hour = $1440 per month.\nCarl earns 160 hours/month * $4.5/hour = $720 per month.\nThe company pays for the 2 together: $1440 + $720 = $2160.\n#### 2160",
+        "transformed_answer": 2160.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 calculates the hours Carl works per month by referencing the hours he works every day (6), which is found by subtracting 2 from the 8 hours Josh works a day in step 1. After deleting step 3, step 4 in the transformed_solution references the 160 hours from step 1 directly when calculating Carl's earnings. This simplifies Carl's monthly earnings calculation to 160 hours/month * $4.5/hour, which results in $720 per month for Carl. The transformed_solution combines steps 1 and 3 of the original_solution, assuming Carl works the same number of hours as Josh. The next step updates step 5 in the original_solution with the new combined total of $2160 instead of $1980. It is step 3 in the transformed_solution that serves as the first step referencing the incorrect number in the transformed_solution, hence the wrong_step is 3.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The first wrong step is 'missing_step', because the reasoning does not include the calculation of Carl's hours worked. Therefore, the wrong type is 'missing_step'."
+    }
+]

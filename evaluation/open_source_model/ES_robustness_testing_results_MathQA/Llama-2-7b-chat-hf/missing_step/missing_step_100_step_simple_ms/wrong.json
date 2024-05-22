@@ -1,0 +1,26 @@
+[
+    {
+        "question": "If 40% of a number is equal to 2/3 of another number, what is the ratio of the first number to the second number?",
+        "original_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 100 to get rid of the decimal: 40x = 200/3y\nDivide both sides by 40: x = (200/3*1)/40y\nx = 5/3y\nThe ratio of the first number to the second number is 5:3\n#### 5:3",
+        "original_answer": "5:3",
+        "transformed_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 3 to get rid of the fraction: 0.40x*3 = 2/3y*3\n0.40x*3 = 2y\nDivide both sides by 0.40: (0.40x*3)/0.40 = 2y/0.40\nx*3 = 5y\nThe ratio of the first number to the second number is 3:5\n#### 3:5",
+        "transformed_answer": "3:5",
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the intermediate step 'Divide both sides by 40: x = (200/3*1)/40y' has been removed. Because the subsequent related step 'x = 5/3y' was originally referring to the result of the removed step, the subsequent steps need to refer to the result of the previous step 'Multiply both sides by 100 to get rid of the decimal: 40x = 200/3y.' However, instead of correcting the process to reflect the impact of this deletion, a wrong manipulation has been performed by multiplying both sides by 3, leading to the incorrect transformed_solution 'x*3=5y.' Consequently, the previous step's result has been misused, and a new error has been introduced, leading to the incorrect conclusion that 'The ratio of the first number to the second number is 3:5' instead of the correct '5:3.' The wrong_step is 3 since it is the first step referencing the result of the deleted step and introducing the incorrect calculation.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the calculation is correct, and the conclusion is reached logically. The first wrong step is step #, which is the absence of a necessary reasoning step. If the reasoning step is added, the entire reasoning will become correct. Therefore, the ratio of the first number to the second number is 3:5."
+    },
+    {
+        "question": "p runs 20% faster than q so p gives q a 300 meter head start. If the race ends in a tie, how far (in meters) did p run in the race?",
+        "original_solution": "Let the distance run by q be x meters\nThen, distance run by p = x + 300 meters\nAs per the given condition, the time taken by both p and q to run the same distance is the same.\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, (x + 300) = 120% of x\n(x + 300) = 1.2x\n0.2x = 300\nx = 1500\nSo, distance run by p = x + 300 = 1500 + 300 = 1800 meters\n#### 1800",
+        "original_answer": 1800.0,
+        "transformed_solution": "Let the distance run by q be x meters\nThen, distance run by p = x meters\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, x = 120% of x - 300\nx = 1.2x - 300\n-0.2x = -300\nx = 1500\nSo, distance run by p = 1500 meters\n#### 1500",
+        "transformed_answer": 1500.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2. In the original_solution, step 2 states that p runs an additional 300 meters to account for the head start given to q, and steps 4-7 carry out the algebra using this information. By deleting step 2, the formula in the subsequent related step 4 changes from (x + 300) = 120% of x to x = 120% of x - 300, which incorrectly subtracts the head start rather than adds it. This causes a mistake in the final calculation of p's distance. In step 5 and 6, the algebraic manipulation now reflects the new incorrect relationship, with step 5 modifying x + 300 = 1.2x to x = 1.2x - 300 and step 6 modifying 0.2x = 300 to -0.2x = -300. Lastly, step 7 in the transformed_solution incorrectly states that p ran the same distance as q, x = 1500 meters, without accounting for the head start. It is step 2 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing incorrect information in the transformed_solution, so the wrong_step is 2.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly determines that the distance run by p is 1500 meters. The reasoning is as follows:\n\nLet the distance run by q be x meters. Then, the distance run by p is x meters, since p runs 20% faster than q.\n\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q. Therefore, the distance run by p is 1.2 times the distance run by q, or 1.2x meters.\n\nHowever, the race ends in a tie, so the distance run by p must be less than the distance run by q. Therefore, the distance run by p is x - 300 meters, where x is the distance run by q.\n\nSubstituting x = 120% of x - 300, we get x = 1500 meters, which is the final answer.\n\nTherefore, the solution is correct, and the explanation is #."
+    }
+]

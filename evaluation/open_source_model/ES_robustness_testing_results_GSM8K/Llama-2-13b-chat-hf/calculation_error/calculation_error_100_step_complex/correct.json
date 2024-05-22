@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Candy has a chair rental business. During the weekdays, 60 chairs are rented each day; but during weekends, 100 chairs are rented each day. If this continues, how many chairs in total will Candy be able to rent out in two 4-week months?",
+        "original_solution": "During weekdays, a total of 60 x 5 = 300 chairs are rented.\nDuring the weekends, a total of 100 x 2 = 200 chairs are rented.\nIn a week, 300 + 200 = 500 chairs are rented.\nSince there are 4 weeks in a month, 500 x 4 = 2000 chairs are rented in a month.\nThus, a total of 2000 x 2 = 4000 chairs are rented in two months.\n#### 4000",
+        "original_answer": 4000.0,
+        "transformed_solution": "During weekdays, a total of 60 x 5 = 300 chairs are rented.\nDuring the weekends, a total of 100 x 2 = 200 chairs are rented.\nIn a week, 300 + 200 = 500 chairs are rented.\nSince there are 4 weeks in a month, 500 x 4 = 1950 chairs are rented in a month.\nThus, a total of 1950 x 2 = 3900 chairs are rented in two months.\n#### 3900",
+        "transformed_answer": 3900.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution changes the calculation in step 4 from 500 x 4 = 2000 to 500 x 4 = 1950, which is a calculation error. This wrong calculation affects step 5, where originally the total for two months is calculated as 2000 x 2 = 4000. Since step 4 is now miscalculated as 1950, step 5 changes to 1950 x 2 = 3900, which gives a different total number of chairs rented in two months. Subsequent steps inherit this single error without affecting the correct calculations or descriptions in previous steps.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 300 + 200 = 500 instead of 300 + 200 = 400. The subsequent step 5 references the result of step 4, calculating 500 x 4 = 1950 instead of 400 x 4 = 1600. The subsequent step 6 references the result of step 5, calculating 1950 / 2 = 3900 instead of 1600 / 2 = 3200. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "question": "A gardener changed the size of his rectangle shaped garden by increasing its length by 40% and decreasing its width by 20%. Find the area of the new garden.",
+        "original_solution": "Let the original length of the garden be L and the original width be W.\nAfter increasing the length by 40%, the new length is 1.4L.\nAfter decreasing the width by 20%, the new width is 0.8W.\nThe area of the new garden is (1.4L) * (0.8W) = 1.12LW.\n#### 1.12LW",
+        "original_answer": 1.12,
+        "transformed_solution": "Let the original length of the garden be L and the original width be W.\nAfter increasing the length by 40%, the new length is 1.4L + 1.4L + 0.8W + 0.8W = 4.4LW.\nThe area of the new garden is actually (1.4L) * (0.8W) = 1.12LW.\n#### 4.4LW",
+        "transformed_answer": 4.4,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the transformed_solution, the perimeter formula (sum of all sides) was mistakenly used instead of the area formula (length times width), as indicated by the addition of the lengths and widths instead of multiplying them. This resulted in an incorrect step as \"1.4L + 1.4L + 0.8W + 0.8W = 4.4LW\" instead of \"1.4L * 0.8W = 1.12LW\". The language used for explaining the step remains unchanged, but the calculation uses the perimeter formula, which is an error. All other steps in the transformed_solution should be correct and consistent with the proper calculations of the original_solution except for the step where the formula is confused.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #1.12LW.\n\nThe error occurs in the first step, where the formula for the new length is incorrect. The formula should be 1.4L + 0.8W, not 1.4L + 1.4L + 0.8W. This mistake causes the area calculation to be incorrect."
+    },
+    {
+        "question": "In a rectangular axis system, what is the area of a parallelogram with the coordinates: (3,5), (9,5), (2,7), (8,7)?",
+        "original_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width*height=6*2=12 square units.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width+height=6+2=8 square units.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the formula for finding the area of a parallelogram (width multiplied by height) with the formula for finding the perimeter of a rectangle (width plus height). The question requires that the area of the parallelogram to be solved be equal to the width multiplied by height. Therefore, the step width*height=6*2=12 in the original_solution is replaced with an incorrect formula width+height=6+2=8 in the transformed_solution. This affects the answer to the question, leading to an incorrect transformed_answer of 8 square units instead of the correct original_answer of 12 square units. Note that the language description in steps 1 and 2 in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 3 is modified with an incorrect formulation, while the other steps correctly describe the measurement process for the width and height of the parallelogram.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe error occurs in the first step, where the width of the parallelogram is calculated as the difference in the x-coordinates of the points on the same horizontal level. The correct calculation for the width is (9-3) = 6, not (9-3) = 6.\n\nThe correct calculation for the area of the parallelogram is:\nArea = width x height = 6 x 2 = 12 square units.\n\nTherefore, the correct answer is #12."
+    }
+]

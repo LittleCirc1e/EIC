@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Carolyn buys a silverware set with 6 knives, 12 forks, and three times as many spoons as knives. Then her friend trades her 10 knives for 6 spoons. What percentage of Carolyn's silverware is knives?",
+        "original_solution": "First find the final number of knives Carolyn has: 10 knives + 6 knives = 16 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 16 knives + 12 forks = 40 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 16 knives / 40 pieces * 100% = 40%\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "First find the final number of knives Carolyn has: 10 knives + 5 knives = 15 knives\n",
+        "transformed_answer": 38.46,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates 10 knives + 5 knives = 15 knives instead of 10 knives + 6 knives = 16 knives. Its subsequent related steps, step 4 and 5 will be affected. Step 4 changes from 12 spoons + 16 knives + 12 forks = 40 pieces to 12 spoons + 15 knives + 12 forks = 39 pieces. Step 5 changes from 16 knives / 40 pieces * 100% = 40% to 15 knives / 39 pieces * 100% = 38.46%. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "The solution is incorrect, the correct answer is 50%, and the explanation is as follows:\nThe total number of silverware Carolyn has is 15 knives + 12 forks + 3 times as many spoons as knives.\nSince she has 3 times as many spoons as knives, she has 3 * 15 knives = 45 spoons.\nAfter her friend trades her 10 knives for 6 spoons, she now has 15 knives - 10 knives + 6 spoons = 11 knives and 45 spoons - 6 spoons = 39 spoons.\nThe total number of knives is 11 knives.\nTo find the percentage of Carolyn's silverware that is knives, we divide the number of knives by the total number of silverware and multiply by 100: (11 knives / (11 knives + 12 forks + 39 spoons)) * 100 = (11 knives / 52 silverware) * 100 = 20%.\nTherefore, the answer is 20%.The answer is: 20"
+    },
+    {
+        "question": "Zion is 8 years old and his dad is 3 more than 4 times his age. In 10 years, how many years older is Zion's dad than him?",
+        "original_solution": "Four times Zion's age is 8 x 4 = 32.\nSo Zion's dad is 32 + 3 = 35 years old.\nIn 10 years, Zion will be 8 + 10 = 18 years old.\nIn 10 years, Zion's dad will be 35 + 10 = 45 years old.\nHence, in 10 years, Zion's dad will be 45 - 18 = 27 years older than Zion.\n#### 27",
+        "original_answer": 27,
+        "transformed_solution": "Four times Zion's age is 8 x 4 = 32.\nSo Zion's dad is 32 + 3 = 35 years old.\nIn 10 years, Zion will be 5 + 10 = 15 years old.\n",
+        "transformed_answer": 30,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 8 in the question as 5 wrongly, and calculates 5 + 10 = 15 instead of 8 + 10 = 18. Its subsequent related step will be affected, calculating 45 - 15 = 30 instead of 45 - 18 = 27 in step 5. Please note that you should only consider one error, so the 35 in step 4 is calculated correctly based on step 2.",
+        "eval_result": "The solution is incorrect, the correct answer is 15, and the explanation is 15.The answer is: 15"
+    }
+]

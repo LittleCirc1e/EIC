@@ -1,0 +1,62 @@
+[
+    {
+        "question": "If x # y is defined to equal x ^ 2 / y for all x and y, then (-1 # 3) # 3 =",
+        "original_solution": "(-1 # 3) = (-1 ^ 2 / 3) = 1 / 3\n(1 / 3) # 3 = (1 / 3) ^ 2 / 3 = 1 / 9\n#### 1 / 9",
+        "original_answer": "1 / 9",
+        "transformed_solution": "(-1 # 3) = (-1 ^ 2 * 3) = 3\n(3) # 3 = (3) ^ 2 / 3 = 9 / 3 = 3\n#### 3",
+        "transformed_answer": "3",
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation changes the division operator to multiplication in the first use of the # operator, specifically changing (-1 ^ 2 / 3) to (-1 ^ 2 * 3), resulting in a value of 3 instead of 1 / 3. The subsequent step properly inherits the outcome of this transformed operation and calculates the square of 3 divided by 3 correctly as 3, which is reflected in the transformed answer.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating (3) ^ 2 / 3 = 9 / 3 = 3 instead of (3) ^ 2 / 3 = 9 / 3 = 27. The subsequent step 4 references the result of step 3, calculating 3 instead of 27, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "The product of three consecutive numbers is 990. Then the sum of the smallest two numbers is?",
+        "original_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\n(n-9)(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nn=9 or n=(-12±√356i)/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n/(n+1)/(n+2) = 990\nn/(n^2+2n+n+2) = 990\nn/(n^3+3n^2+2n) = 990\nn/(n^3+3n^2+2n-990) = 0\n(n-9)/(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution used multiplication to find the product of three consecutive numbers, which accurately forms a cubic equation. However, the transformed solution incorrectly replaces the multiplication with division in step 2, which fundamentally changes the nature of the problem to an impossible division scenario that doesn’t produce a meaningful result (dividing zero or attempting to plot an impossible function). This cascades through to step 3, resulting in a division equation that incorrectly suggests n divided by a cubic function equals zero. As a consequence, the final solution is nonsensical, yielding zero for the sum of the numbers. The only operator change—the division instead of multiplication—causes a fundamental error so early in the solution process that no meaningful problem exists.",
+        "eval_result": "\n\nPlease provide the actual output for the given input.\n\nThe solution is incorrect, the first wrong step is step 5, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 990/3 = 330 instead of 990/3 = 33. The subsequent step 6 references the result of step 5, calculating 330 + 9 + 9 = 348 instead of 33 + 9 + 9 = 42. The first step to make a mistake, which is the root cause of the mistake, is step 5."
+    },
+    {
+        "question": "A man has some hens and cows. If the number of heads be 48 and the number of feet equals 140, then the number of hens will be:",
+        "original_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -52\nDivide by -2: h = 26\n#### 26",
+        "original_answer": 26,
+        "transformed_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h * c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 / h\nSubstitute c = 48 / h into the second equation: 2h + 4(48 / h) = 140\nSimplify the equation: 2h + 192 / h = 140\nMultiply both sides by h to clear the fraction: 2h^2 + 192 = 140h\nRearrange the equation: 2h^2 - 140h + 192 = 0\nThis is a quadratic equation. We can solve by factoring or using the quadratic formula. However, this is not necessary as the transformation is invalid since h * c = 48 does not represent the situation correctly.\n#### Error",
+        "transformed_answer": "Error",
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in the number of heads equation to multiplication, altering the equation h + c = 48 to h * c = 48 (step 2). This invalidates the original problem setup because heads cannot be multiplied to get the total number of heads. The transformation leads to an erroneous situation, which does not need solving since the premise is incorrect. All subsequent steps are based on an incorrect assumption and thus yield invalid results.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 5, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 2h + 4(48 / h) = 140 instead of 2h + 4(24 / h) = 140. The subsequent step 6 references the result of step 5, calculating 140h = 140 instead of 140(24 / h) = 336. The first step to make a mistake, which is the root cause of the mistake, is step 5.\n\nPlease provide the correct solution."
+    },
+    {
+        "question": "A train 160 m long running at 72 kmph crosses a platform in 25 sec. What is the length of the platform?",
+        "original_solution": "First, convert the speed from km/h to m/s: 72 km/h * (1000 m/km) * (1 h/3600 s) = 20 m/s\nNext, find the distance covered by the train in 25 sec: 25 s * 20 m/s = 500 m\nThen, subtract the length of the train to get the length of the platform: 500 m - 160 m = 340 m\n#### 340",
+        "original_answer": 340.0,
+        "transformed_solution": "First, convert the speed from km/h to m/s: 72 km/h / (1000 m/km) / (1 h/3600 s) = 0.02 m/s\nNext, find the distance covered by the train in 25 sec: 25 s * 0.02 m/s = 0.5 m\nThen, subtract the length of the train to get the length of the platform: 0.5 m - 160 m = -159.5 m\n#### -159.5",
+        "transformed_answer": -159.5,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication operator in step 1 into division. By changing * to / in the conversion of speed from km/h to m/s, the calculation becomes erroneous as 72 km/h divided by the conversion factors instead of being multiplied by them. The result is 0.02 m/s instead of 20 m/s. This significantly affects the calculations in step 2, where the distance covered by the train in 25 seconds is 0.5 m instead of 500 m, and step 3, where the length of the platform calculation results in a nonsensical negative number, -159.5 m instead of 340 m. It should be noted that only the operation in step 1 is incorrect while its calculation given the wrong operator is correct, but this leads to incorrect results affecting all subsequent steps.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that 1 km = 1000 m instead of 1000000 m, calculating 0.02 m/s instead of 0.002 m/s. The subsequent step 4 references the result of step 3, calculating 0.5 m instead of 0.05 m. The subsequent step 5 references the result of step 4, calculating -159.5 m instead of -15950 m. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "in some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was?",
+        "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x * (x+10) = 20%\n0.4x(x+10) = 0.2(x+10)^2\n0.4x^2 + 4x = 0.2x^2 + 2x + 2\n0.2x^2 + 2x - 2 = 0\nThis is a quadratic equation and can be solved using the quadratic formula x = [-b ± sqrt(b^2 - 4ac)] / 2a\nFor this equation, a = 0.2, b = 2, c = -2\nUsing the quadratic formula, x = [-2 ± sqrt(2^2 - 4*0.2*(-2))] / (2*0.2)\nx = [-2 ± sqrt(4 + 1.6)] / 0.4\nx = [-2 ± sqrt(5.6)] / 0.4\nThe two solutions are not realistic in this context since we can't have a negative quantity of ghee. We need to recalculate.\n#### Error in calculation",
+        "transformed_answer": "Error in calculation",
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation process has incorrectly changed the division operator in step 6 to multiplication, resulting in an erroneous step '0.4x / (x+10) = 20%' becoming '0.4x * (x+10) = 20%'. This affected the subsequent steps and led to an unsolvable quadratic equation, which is not realistic in the given context. The rest of the steps were incorrectly transformed based on the changed operator leading to a fundamentally different equation. As this involves quantities and distribution that cannot be negative, the quadratic equation does not provide a reasonable solution. Thus, the transformed solution does not lead to a valid answer.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 5, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 0.4x(x+10) = 0.2(x+10)^2 instead of 0.4x(x+10) = 0.2x^2 + 2x + 2. The subsequent step 6 references the result of step 5, calculating 0.2x^2 + 2x - 2 = 0 instead of 0.2x^2 + 2x + 2 = 0. The first step to make a mistake, which is the root cause of the mistake, is step 5."
+    }
+]

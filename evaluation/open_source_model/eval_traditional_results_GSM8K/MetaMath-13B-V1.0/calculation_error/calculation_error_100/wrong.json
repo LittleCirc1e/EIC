@@ -1,0 +1,59 @@
+[
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "An airport has only 2 planes that fly multiple times a day. Each day, the first plane goes to Greece for three-quarters of its flights, and the remaining flights are split equally between flights to France and flights to Germany. The other plane flies exclusively to Poland, and its 44 trips only amount to half the number of trips the first plane makes throughout each day. How many flights to France does the first plane take in one day?",
+            "original_solution": "The second plane flies half as much as the first, so the first plane makes 44 flights * 2 = 88 flights a day.\nIf 3/4 of the first plane’s flights are to Greece, then flights to France or Germany make up 1 – 3/4 = 1/4 of the total daily flights.\nTherefore, 88 daily flights / 4 = 22 flights to France or Germany.\nSplitting these flights equally means the first plane makes 22 flights / 2 = 11 flights to France in one day.\n#### 11",
+            "original_answer": 11,
+            "transformed_solution": "The second plane flies half as much as the first, so the first plane makes 44 flights * 2 = 88 flights a day.\nIf 3/4 of the first plane’s flights are to Greece, then flights to France or Germany make up 1 – 3/4 = 1/4 of the total daily flights.\nTherefore, 88 daily flights / 4 = 24 flights to France or Germany.\nSplitting these flights equally means the first plane makes 24 flights / 2 = 12 flights to France in one day.\n#### 12",
+            "transformed_answer": 12,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error is introduced in step 3, where the division 88 / 4 is incorrectly calculated as 24 instead of the correct result of 22. This mistake affects step 4, changing the original correct division 22 / 2 to the incorrect 24 / 2. The rest of the steps remain unchanged as they do not depend on the result of step 3 or step 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn airport has only 2 planes that fly multiple times a day. Each day, the first plane goes to Greece for three-quarters of its flights, and the remaining flights are split equally between flights to France and flights to Germany. The other plane flies exclusively to Poland, and its 44 trips only amount to half the number of trips the first plane makes throughout each day. How many flights to France does the first plane take in one day?\n\n### Response:",
+        "output_str": "Let's assume the first plane makes x flights in one day.\nThe first plane goes to Greece for three-quarters of its flights, so it makes (3/4)x flights to Greece.\nThe remaining flights are split equally between flights to France and flights to Germany, so it makes (1/4)x flights to each of those countries.\nThe other plane flies exclusively to Poland, and its 44 trips only amount to half the number of trips the first plane makes throughout each day, so the first plane makes 2 * 44 = 88 trips in total.\nTherefore, (3/4)x + (1/4)x + (1/4)x = 88\nCombining like terms, (3/4 + 1/4 + 1/4)x = 88\nSimplifying, (5/4)x = 88\nDividing both sides by 5/4, x = 88 * 4/5\nSimplifying, x = 75\nTherefore, the first plane makes 75 flights in one day, and since (1/4)x = (1/4) * 75 = 18.75, the first plane makes approximately 19 flights to France in one day.\n#### 19\nThe answer is: 19",
+        "extract_true_num": 11,
+        "extract_pred_num": 19.0,
+        "is_correct": false
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "Pam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?",
+            "original_solution": "The total times that they ride the roller coaster is 2+4=6 times.\nThe total times that they ride the luge is 2+2=4 times.\nThe total times they ride that day is 6+4=10 times.\nSo, Pam and Fred used 10x6=60 tickets that day.\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "The total times that they ride the roller coaster is 2+4=6 times.\nThe total times that they ride the luge is 2+2=4 times.\nThe total times they ride that day is 6+4=10 times.\nSo, Pam and Fred used 10x6=50 tickets that day.\n#### 50",
+            "transformed_answer": 50.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 10x6 as 50 instead of 10x6=60 in step 4, which impacts only this last step, as there are no subsequent calculations dependent on this result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?\n\n### Response:",
+        "output_str": "Pam rode the roller coaster 2 times, so she used 2 x 6 = 12 tickets.\nFred rode the roller coaster 4 times, so he used 4 x 6 = 24 tickets.\nAfter that, each of them rode the luge 2 times, so they used 2 x 6 = 12 tickets each.\nIn total, they used 12 + 12 = 24 tickets for the luge.\nTherefore, they used 12 + 24 = 36 tickets in total that day.\n#### 36\nThe answer is: 36",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 36.0,
+        "is_correct": false
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+            "original_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = 5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = 10 applications to mail.\nShe has 3 + 2 + 5 + 10 = 20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 1 = 21 stamps.\n#### 21",
+            "original_answer": 21.0,
+            "transformed_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = 5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = 10 applications to mail.\nShe has 3 + 2 + 5 + 10 = 20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 2 = 22 stamps.\n#### 22",
+            "transformed_answer": 22.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, the calculation for the number of extra stamps needed for the electric bill has been changed from 20 + 1 = 21 stamps to 20 + 2 = 22 stamps in step 5. This is the first and only modification step, resulting in the remaining steps staying the same. Since the postal requirements for the electric bill have not changed, inserting the error at this final juncture ensures that previous calculations remain unaltered and only the affected step is changed, resulting in a different transformed_answer compared to the original_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nValerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?\n\n### Response:",
+        "output_str": "Valerie needs to send thank you cards to her grandmother, uncle, and aunt, so she needs 3 stamps for those.\nShe also needs to pay the water bill and the electric bill separately, so she needs 2 stamps for the electric bill.\nShe wants to send three more mail-in rebates than she does bills, so she needs 3 + 2 = 5 stamps for the rebates.\nShe has twice as many job applications as rebates to mail, so she needs 5 x 2 = 10 stamps for the job applications.\nIn total, Valerie needs 3 + 2 + 5 + 10 = 20 stamps.\n#### 20\nThe answer is: 20",
+        "extract_true_num": 21.0,
+        "extract_pred_num": 20.0,
+        "is_correct": false
+    }
+]

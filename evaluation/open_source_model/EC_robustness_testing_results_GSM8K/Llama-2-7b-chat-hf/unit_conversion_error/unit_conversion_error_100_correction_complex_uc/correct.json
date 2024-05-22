@@ -1,0 +1,98 @@
+[
+    {
+        "question": "William left Missouri by 7:00 AM and arrived at his hometown by 8:00 PM. He had 3 stops of 25, 10 and 25 minutes respectively during the journey. How many hours did he spend on the road?",
+        "original_solution": "8:00 PM is equivalent to 20:00 hrs so he spent a total of 20-7 = 13 hours on the journey\nHe spent 25+10+25 = 60 minutes on stops\nThere are 60 minutes in an hour so he spent (60/60) = 1 hour on stops\nTherefore, he spent 13-1 = 12 hours on the road.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "8:00 PM is equivalent to 20:00 hrs so he spent a total of 20-7 = 13 hours on the journey\nHe spent 25+10+25 = 60 minutes on stops\nThere are 50 minutes in an hour so he spent (60/50) = 1.2 hours on stops\nTherefore, he spent 13-1.2 = 11.8 hours on the road.\n#### 11.8",
+        "transformed_answer": 11.8,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly considered to have 50 minutes instead of 60 minutes, resulting in (60/60) = 1 hour in the original_solution becoming (60/50) = 1.2 hours in the transformed_solution. The incorrect conversion affects the subsequent related step 4, which changes from 13-1 = 12 hours to 13-1.2 = 11.8 hours on the road. It should be noted that you only need to consider one step of unit conversion error, and the previous steps 1 and 2 are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that there are 50 minutes in an hour instead of 60 minutes, and wrongly calculates (60/50) = 1.2 hours on stops, which affects the calculation of the total time spent on the road. The correct calculation is (60/60) = 1 hours on stops, which results in a total time of 12 hours on the road."
+    },
+    {
+        "question": "Every ten minutes during sunset, the sky changes to a new color. How many colors did the sky turn over the two hours of a long summer sunset if each hour is sixty minutes long?",
+        "original_solution": "At 60 minutes per hour, the sunset was 2 * 60 = 120 minutes long.\nThe sky changes color every 10 minutes, so it turned 120 / 10 = 12 colors over the summer sunset.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "At 50 minutes per hour, the sunset was 2 * 50 = 100 minutes long.\nThe sky changes color every 10 minutes, so it turned 100 / 10 = 10 colors over the summer sunset.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is mistakenly taken as having 50 minutes instead of 60 minutes, resulting in 2 * 60 = 120 minutes in the original_solution becoming 2 * 50 = 100 minutes in the transformed_solution. And it affects the subsequent related step 2, which changes from 120 / 10 = 12 colors to 100 / 10 = 10 colors. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 1 makes an incorrect assumption that the sky changes color every 10 minutes, when in fact it changes color every 60 minutes. This affects step 2, which wrongly calculates the total time of the sunset as 100 minutes instead of 120 minutes. Therefore, the number of colors the sky turned is 12, not 10."
+    },
+    {
+        "question": "Liz roasts 2 16 pounds turkeys every Thanksgiving. She can only roast them 1 at a time because she has a small oven. She roasts each turkey for 15 minutes per pound. If dinner is served at 6:00 pm what is the latest time she can start roasting the turkeys?",
+        "original_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 60 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/60 = 8 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 8 hours to cook the turkeys so the latest she can start is 18 - 8 = 10:00 am\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 50 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/50 = 9.6 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 9.6 hours to cook the turkeys so the latest she can start is 18 - 9.6 = 8.4, which is 8 hours and 24 minutes, so 6:00 pm - 8 hours and 24 minutes is 9:36 am\n#### 9.6",
+        "transformed_answer": 9.6,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means an hour wrongly has 50 minutes instead of the standard 60 minutes, resulting in 480/60 = 8 hours in the original_solution becoming 480/50 = 9.6 hours in the transformed_solution. And it affects the subsequent related step 4, changing the calculation of the latest start time. In the original solution, 18 - 8 = 10:00 am, but in transformed solution, 18 - 9.6 = 8.4, which equates to 9:36 am when converted back from military time. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10:30 am, and the explanation is that step 4 makes an incorrect calculation, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 480/50 = 9.6 instead of 480/60 = 8.33. This affects step 5. Step 5 erroneously calculates 18-9.6=8.4 instead of 18-8.33=10.27."
+    },
+    {
+        "question": "Megan is making food for a party. She has to spend 20 minutes preparing one dish in the oven. Each dish can feed 5 people. She spends 2 hours preparing as many of these dishes as she can for the party. How many people can she feed with these dishes?",
+        "original_solution": "First, we need to determine the total amount of minutes available for cooking. We do this by performing 2*60=120, as there are 60 minutes in an hour.\nNow that we know we have 120 minutes, we then divide the preparation time into the total amount of time by performing 120/20= 6 dishes capable of being made.\nSince each dish can feed 5 people, we find the total number of people fed by performing 5*6=30 people.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First, we need to determine the total amount of minutes available for cooking. We do this by performing 2*50=100, as there are 50 minutes in an hour.\nNow that we know we have 100 minutes, we then divide the preparation time into the total amount of time by performing 100/20= 5 dishes capable of being made.\nSince each dish can feed 5 people, we find the total number of people fed by performing 5*5=25 people.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 introduces the unit conversion error, where 1 hour is incorrectly assumed to have 50 minutes instead of the correct 60 minutes. This change in the unit conversion misleads the solution from 2*60=120 to 2*50=100. Consequently, this wrong conversion step reduces the total cooking time available from 120 minutes in the original solution to 100 minutes in the transformed solution and impacts the number of dishes that can be made. Following this, the number of dishes is recalculated to be 5 instead of 6, and as a result, the total number of people who can be fed is decreased from 30 to 25.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 30, and the explanation is that step 2 makes an incorrect calculation, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and it wrongly calculates 2 x 50=100 instead of 2 x 60=120. This affects step 3, which erroneously calculates 100/20=5 instead of 120/20=6. Therefore, the number of dishes Megan can make is 6, not 5. And the number of people she can feed is 6 x 5=30, not 25."
+    },
+    {
+        "question": "Tracy used a piece of wire 4 feet long to support tomato plants in the garden. The wire was cut into pieces 6 inches long. How many pieces did she obtain?",
+        "original_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 12 inches, the total length of the wire in inches was 12*4=48 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 48/6=8 pieces\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 10 inches, the total length of the wire in inches was 10*4=40 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 40/6=6.67 pieces\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 12*4=48 inches in the original_solution becoming 10*4=40 inches in the transformed_solution. And it affects the subsequent related step 2, which changes from 48/6=8 pieces to 40/6=6.67 pieces. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 8, and the explanation is that step 2 makes an incorrect conversion, mistakenly assuming that 1 foot is equal to 6 inches instead of 10 inches, and it wrongly calculates 40/6=6.67 instead of 40/6=8. This affects the calculation of the number of pieces obtained."
+    },
+    {
+        "question": "Tobias went to a swimming pool for 3 hours. Swimming every 100 meters took him 5 minutes, but every 25 minutes he had to take a 5-minute pause. How many meters did Tobias swim during his visit to the swimming pool?",
+        "original_solution": "We need to count the sequences that Tobias made, which consist of 25 minutes of swimming and a 5-minute pause, so one sequence lasts for 25 minutes + 5 minutes = 30 minutes/sequence.\nThree hours is 3 hours * 60 minutes/hour = 180 minutes, so he is able to make 180 minutes / 30 minutes/sequence = 6 sequences.\nTherefore Tobias needs to make 6 pauses within these 6 sequences, which will last for 6 pauses * 5 minutes/pause = 30 minutes.\nDuring three hours, he is going to swim for 180 minutes - 30 minutes = 150 minutes.\nTherefore Tobias can make 100 meters for 150 minutes / 5 minutes/100 meters = 30 times.\nSo he was able to swim 30 times * 100 meters/time = 3000 meters in total.\n#### 3000",
+        "original_answer": 3000,
+        "transformed_solution": "We need to count the sequences that Tobias made, which consist of 25 minutes of swimming and a 5-minute pause, so one sequence lasts for 25 minutes + 5 minutes = 30 minutes/sequence.\nThree hours is 3 hours * 50 minutes/hour = 150 minutes, so he is able to make 150 minutes / 30 minutes/sequence = 5 sequences.\nTherefore Tobias needs to make 5 pauses within these 5 sequences, which will last for 5 pauses * 5 minutes/pause = 25 minutes.\nDuring three hours, he is going to swim for 150 minutes - 25 minutes = 125 minutes.\nTherefore Tobias can make 100 meters for 125 minutes / 5 minutes/100 meters = 25 times.\nSo he was able to swim 25 times * 100 meters/time = 2500 meters in total.\n#### 2500",
+        "transformed_answer": 2500,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 3 hours * 60 minutes/hour = 180 minutes in the original_solution becoming 3 hours * 50 minutes/hour = 150 minutes in the transformed_solution. And it affects the subsequent related step 3 and 4. Step 3 changes from 180 minutes / 30 minutes/sequence = 6 sequences to 150 minutes / 30 minutes/sequence = 5 sequences. Step 4 changes from 180 minutes - 30 minutes = 150 minutes to 150 minutes - 25 minutes = 125 minutes. While step 5 and 6 changes from 150 minutes / 5 minutes/100 meters = 30 times and 30 times * 100 meters/time = 3000 meters to 125 minutes / 5 minutes/100 meters = 25 times and 25 times * 100 meters/time = 2500 meters respectively. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 1, pause time calculation and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 3000, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and it wrongly calculates 150 minutes / 30 minutes/sequence = 5 sequences instead of 4 sequences. This affects step 4, which erroneously calculates 25 minutes for the 5 pauses instead of 30 minutes. Step 5 correctly calculates the total distance swum as 125 minutes, but step 6 incorrectly calculates the number of times Tobias swam as 25 times instead of 30 times."
+    },
+    {
+        "question": "Tobias went to a swimming pool for 3 hours. Swimming every 100 meters took him 5 minutes, but every 25 minutes he had to take a 5-minute pause. How many meters did Tobias swim during his visit to the swimming pool?",
+        "original_solution": "We need to count the sequences that Tobias made, which consist of 25 minutes of swimming and a 5-minute pause, so one sequence lasts for 25 minutes + 5 minutes = 30 minutes/sequence.\nThree hours is 3 hours * 60 minutes/hour = 180 minutes, so he is able to make 180 minutes / 30 minutes/sequence = 6 sequences.\nTherefore Tobias needs to make 6 pauses within these 6 sequences, which will last for 6 pauses * 5 minutes/pause = 30 minutes.\nDuring three hours, he is going to swim for 180 minutes - 30 minutes = 150 minutes.\nTherefore Tobias can make 100 meters for 150 minutes / 5 minutes/100 meters = 3 times.\nSo he was able to swim 30 times * 100 meters/time = 3000 meters in total.\n#### 3000",
+        "original_answer": 3000.0,
+        "transformed_solution": "We need to count the sequences that Tobias made, which consist of 25 minutes of swimming and a 5-minute pause, so one sequence lasts for 25 minutes + 5 minutes = 30 minutes/sequence.\nThree hours is 3 hours * 50 minutes/hour = 150 minutes, so he is able to make 150 minutes / 30 minutes/sequence = 5 sequences.\nTherefore Tobias needs to make 5 pauses within these 5 sequences, which will last for 5 pauses * 5 minutes/pause = 25 minutes.\nDuring three hours, he is going to swim for 150 minutes - 25 minutes = 125 minutes.\nTherefore Tobias can make 100 meters for 125 minutes / 5 minutes/100 meters = 25 times.\nSo he was able to swim 25 times * 100 meters/time = 2500 meters in total.\n#### 2500",
+        "transformed_answer": 2500.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 3 hours * 60 minutes/hour = 180 minutes in the original_solution becoming 3 hours * 50 minutes/hour = 150 minutes in the transformed_solution. And it affects the subsequent related step 3, 4, and 5. Step 3 changes from 180 minutes / 30 minutes/sequence = 6 sequences to 150 minutes / 30 minutes/sequence = 5 sequences. Step 4 changes from 6 pauses * 5 minutes/pause = 30 minutes to 5 pauses * 5 minutes/pause = 25 minutes. Step 5 changes from 180 minutes - 30 minutes = 150 minutes to 150 minutes - 25 minutes = 125 minutes. Step 6 changes from 150 minutes / 5 minutes/100 meters = 30 times to 125 minutes / 5 minutes/100 meters = 25 times. Lastly, step 7 changes from 30 times * 100 meters/time = 3000 meters to 25 times * 100 meters/time = 2500 meters. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 1 and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 3000, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and it wrongly calculates 150 minutes / 30 minutes/sequence = 5 sequences instead of 4 sequences. This affects step 4, which erroneously calculates 25 minutes for the 5 pauses instead of 30 minutes. Step 5 correctly calculates the total distance swum as 125 minutes, but step 6 incorrectly calculates the number of times Tobias swam as 25 times instead of 30 times."
+    },
+    {
+        "question": "Every ten minutes during sunset, the sky changes to a new color. How many colors did the sky turn over the two hours of a long summer sunset if each hour is sixty minutes long?",
+        "original_solution": "At 60 minutes per hour, the sunset was 2 * 60 = 120 minutes long.\nThe sky changes color every 10 minutes, so it turned 120 / 10 = 12 colors over the summer sunset.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "At 50 minutes per hour, the sunset was 2 * 50 = 100 minutes long.\nThe sky changes color every 10 minutes, so it turned 100 / 10 = 10 colors over the summer sunset.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly considered to have 50 minutes instead of 60 minutes, resulting in 2 * 60 = 120 minutes long in the original_solution becoming 2 * 50 = 100 minutes long in the transformed_solution. And it affects the subsequent related step 2, which changes from 120 / 10 = 12 colors to 100 / 10 = 10 colors. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2 and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 12, and the explanation is that step 1 makes an incorrect assumption that the sky changes color every 10 minutes, when in fact it changes color every 60 minutes. This affects step 2, which wrongly calculates the total time of the sunset as 100 minutes instead of 120 minutes. Therefore, the number of colors the sky turned is 12, not 10."
+    }
+]

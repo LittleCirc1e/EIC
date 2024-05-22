@@ -1,0 +1,26 @@
+[
+    {
+        "question": "A light flashes every 20 seconds, how many times will it flash in 1/4 of an hour?",
+        "original_solution": "There are 60 seconds in a minute and 60 minutes in an hour, so there are 60 x 60 = 3600 seconds in an hour.\nThe light flashes 3600 / 20 = 180 times in an hour.\n#### 180",
+        "original_answer": 180.0,
+        "transformed_solution": "There are 60 seconds in a minute and 50 minutes in an hour, so there are 60 x 50 = 3000 seconds in an hour.\nThe light flashes 3000 / 20 = 150 times in an hour.\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 60 x 60 = 3600 seconds in the original_solution becoming 60 x 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from 3600 / 20 = 180 times to 3000 / 20 = 150 times. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 75, and the explanation is as follows:\n\nThe given time is 1/4 of an hour, which is equal to 15 minutes. There are 60 seconds in a minute, so there are 60 x 15 = 900 seconds in 15 minutes.\n\nThe light flashes every 20 seconds, so it will flash 900 / 20 = 45 times in 15 minutes.\n\nTherefore, the light will flash 45 times in 1/4 of an hour."
+    },
+    {
+        "question": "A person jogged 10 times along the perimeter of a rectangular field at the rate of 12 kilometers per hour for 30 minutes. If the field has a length that is twice its width, find the area of the field in square meters.",
+        "original_solution": "The distance jogged is 10 x perimeter of the field.\nPerimeter of the field = 2 x (length + width) = 2 x (2w + w) = 6w.\nDistance jogged = 10 x 6w = 60w.\nDistance = speed x time, so 12 km/hr x 0.5 hr = 6 km.\nBut the distance jogged is 60w, so 60w = 6 km.\nTherefore, width = 6 km / 60 = 0.1 km.\nSince 1 km = 1000 m, width = 0.1 km x 1000 m/km = 100 m.\nLength = 2w = 2 x 100 m = 200 m.\nArea = length x width = 200 m x 100 m = 20,000 square meters.\n#### 20000",
+        "original_answer": 20000.0,
+        "transformed_solution": "The distance jogged is 10 x perimeter of the field.\nPerimeter of the field = 2 x (length + width) = 2 x (2w + w) = 6w.\nDistance jogged = 10 x 6w = 60w.\nDistance = speed x time, so 12 km/hr x 0.8 hr = 9.6 km.\nBut the distance jogged is 60w, so 60w = 9.6 km.\nTherefore, width = 9.6 km / 60 = 0.16 km.\nSince 1 km = 1000 m, width = 0.16 km x 1000 m/km = 160 m.\nLength = 2w = 2 x 160 m = 320 m.\nArea = length x width = 320 m x 160 m = 51,200 square meters.\n#### 51200",
+        "transformed_answer": 51200.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, the time was wrongly converted to 0.8 hr instead of 0.5 hr, resulting in 12 km/hr x 0.5 hr = 6 km in the original_solution becoming 12 km/hr x 0.8 hr = 9.6 km in the transformed_solution. This error affects the calculation of the width in step 6, which changes from 6 km / 60 = 0.1 km to 9.6 km / 60 = 0.16 km, and consequently also changes length in step 8 and the area in step 9. The unit conversion in step 7 from km to m remains correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is #, which is your answer after correction, and the explanation is #, which is your explanation about how to get the correct answer.\n\nThe correct answer is 51,200 square meters.\n\nThe error in the solution is that the distance jogged is not equal to the distance traveled. The distance traveled is 9.6 km, but the distance jogged is 60w, which is not equal to 9.6 km. This error occurs in the first step, where the distance jogged is calculated as 10 x perimeter of the field. The perimeter of the field is not equal to the distance traveled, so the distance jogged is not equal to the distance traveled. This error propagates to the subsequent steps, leading to the final incorrect answer.\n\nTo correct the solution, we need to use the correct distance traveled, which is 9.6 km, in the first step. Then, the rest of the solution is correct. The area of the field is 51,200 square meters."
+    }
+]

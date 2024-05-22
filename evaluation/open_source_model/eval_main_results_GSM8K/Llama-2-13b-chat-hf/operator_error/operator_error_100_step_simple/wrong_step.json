@@ -1,0 +1,50 @@
+[
+    {
+        "question": "In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?",
+        "original_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 + 9 = 24 green cards.\nYellow cards make up to 15 + 24 = 39 cards.\nSo in total, there are 39 + 39 = 78 cards of different colors.\n#### 78",
+        "original_answer": 78.0,
+        "transformed_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 - 9 = 6 green cards.\nYellow cards make up to 15 + 6 = 21 cards.\nSo in total, there are 21 + 21 = 42 cards of different colors.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The example changes the addition in the second step of the calculation to subtraction by turning the correct form '15 + 9 = 24' into '15 - 9 = 6', thus showing an incorrect number of green cards. This logically affects the related subsequent steps. The next step incorrectly calculates the number of yellow cards (now the sum is 15 + 6 = 21), and the final total is incorrectly calculated as 21 + 21 = 42 cards. It should be noted that the operator is only incorrect in the second step with the calculation correctly made based on the incorrect operator, leading to incorrect results for the subsequent figures that rely on it.",
+        "eval_result": "\n\nPlease provide your response here.\n\nThe solution is incorrect, the first wrong step is step #3, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nStep #3 is incorrect because the total number of yellow cards is not equal to the sum of red and green cards. The correct calculation is 15 + 6 = 21, not 21 + 21 = 42. Therefore, the final answer is incorrect."
+    },
+    {
+        "question": "A local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?",
+        "original_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=70 left.\n70+6=76 were enrolled after the final rally.\n76/2=38 are left after half the class dropped.\n38/2=19 are left after half the class graduated.\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72*2=144 left.\n144+6=150 were enrolled after the final rally.\n150/2=75 are left after half the class dropped.\n75/2=37.5 are left after half the class graduated.\n#### 37.5",
+        "transformed_answer": 37.5,
+        "wrong_step": 5,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation changes the subtraction operation in step 5 to multiplication, incorrectly increasing the number of students from \"72-2=70\" to \"72*2=144\". This error impacts all subsequent calculations with the incorrect number of students, such as the final rally enrollment going from \"70+6=76\" to \"144+6=150\", and eventually leading to a different final count of enrolled students after half drop and half graduate, \"38/2=19\" becomes \"75/2=37.5\". All other steps and calculations are performed correctly, but they all rely on the incorrect figure produced in the transformed step 5.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #2, and the explanation is as follows:\n\nIn step #2, the calculation 8*.25 is incorrect. The correct calculation should be 8/4 = 2, not 2*0.25 = 0.5. This error propagates to the next step, causing the final answer to be incorrect.\n\nThe correct solution is:\n\n8+8=16 students are enrolled in the German class.\n2 dropped out from the new recruits, so the class had 16-2=14 students left.\nThere were 14*5+14=70 total students in the class after the rally.\nTwo people had to drop the class, so there were 70*2=140 left.\n140+6=146 were enrolled after the final rally.\n146/2=73 are left after half the class dropped.\n73/2=36.5 are left after half the class graduated.\n\nTherefore, the final answer is 36.5."
+    },
+    {
+        "question": "Cole wanted to buy new jeans for a dance contest. At the store, he couldn't decide between tattered jeans and jogger jeans. Since the jeans were on sale, he decided to buy them both. The tattered jeans cost $28 while the jogger jeans cost $6 less than the tattered jeans. He saved a total of $6. If he saved 1/3 of the total savings from the jogger jeans and the rest from the tattered jeans, how much more do jogger jeans originally cost than the tattered jeans?",
+        "original_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 - $2 = $4 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $4 = $32.\nTherefore, jogger jeans originally cost $32 - $24 = $8 more than the tattered jeans.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Cole saved $6 x 1/3 = $2 on the jogger jeans.\nSo, he saved $6 + $2 = $8 on the tattered jeans.\nThe original price of the jogger jeans is $22 + $2 = $24.\nCole bought the tattered jeans for $28\nHence, the original price of the tattered jeans is $28 + $8 = $36.\nTherefore, jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 2 to an addition, transforming $6 - $2 = $4 into $6 + $2 = $8. This affects subsequent related step 4 and step 5. Step 4 remains unchanged because no other steps affected the purchase price of the tattered jeans. However, the revised savings calculation in step 5, $28 + $8 = $36, leads to the changed conclusion in step 6, stating that jogger jeans originally cost $36 - $24 = $12 more than the tattered jeans instead of $8. Only the operator in step 2 is incorrect to induce the wrong conclusion, but its calculation is correct, as are the calculations of subsequent affected steps.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #3, and the explanation is as follows:\n\nIn step #3, Cole saved $6 x 1/3 = $2 on the jogger jeans, which is incorrect. The correct calculation is $6 x 1/3 = $2 + $2 = $4. Therefore, the total savings from the jogger jeans is $4, not $6.\n\nThe rest of the solution is correct, but the mistake in step #3 affects the final answer. The original price of the jogger jeans is $22 + $2 = $24, not $24 + $4 = $28. Therefore, jogger jeans originally cost $24 - $28 = $4 less than the tattered jeans, not $12 more.\n\nThe correct answer is:\n\nJogger jeans originally cost $4 less than the tattered jeans."
+    },
+    {
+        "question": "On a moonless night, three fireflies danced in the evening breeze. They were joined by four less than a dozen more fireflies, before two of the fireflies flew away. How many fireflies remained?",
+        "original_solution": "Four less than a dozen is 12-4=8.\nThe three fireflies were joined by four less than a dozen more fireflies, for a total of 3+8=11 fireflies.\nTwo flew away, leaving 11-2=9 fireflies remaining.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Four less than a dozen is 12+4=16.\nThe three fireflies were joined by four less than a dozen more fireflies, for a total of 3+16=19 fireflies.\nTwo flew away, leaving 19-2=17 fireflies remaining.\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction operator in the original step 1 to an addition operator. The correct calculation of 12-4=8 is transformed into an incorrect calculation of 12+4=16. This results in a different total of fireflies joined in step 2, now adding up to 3+16=19. In step 3, two fireflies flying away correctly subtracts only 2 from the incorrect total from step 2, resulting in 19-2=17 remaining fireflies. The transformation involves only one incorrect operator, but the calculations themselves are correct, so the other aspects of all other steps remain accurate.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe correct solution is as follows:\n\nFour less than a dozen is 12-4=8.\n\nThe three fireflies were joined by eight more fireflies, for a total of 3+8=11 fireflies.\n\nTwo flew away, leaving 11-2=9 fireflies remaining.\n\n#### 9."
+    }
+]

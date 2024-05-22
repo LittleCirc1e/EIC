@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Trip wanted to watch the new action movie in theaters. An evening ticket cost $10 and a large popcorn & drink combo would cost him an additional $10. He noticed on their website, they had a special offer. From 12 noon to 3 pm, save 20% off tickets and 50% off any food combos. How much money could Trip save by going to the earlier movie?",
+        "original_solution": "An evening movie is $10 and the food combo would be $10 so 10 + 10 = $20\nIf he goes to an earlier movie, it's 20% off the normal ticket price of $10 so 10 * .20 = $2\nIf he goes to an earlier movie, it's 50% off the normal food price of $10 so 10 * .50 = $5\nIf he saves $2 for the ticket and $5 on food, then 2+5 = $7 saved\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "An evening movie is $10 and the food combo would be $10 so 10 + 10 = $20\nIf he goes to an earlier movie, it's 20% off the normal ticket price of $15 so 15 * .20 = $3\nIf he goes to an earlier movie, it's 50% off the normal food price of $10 so 10 * .50 = $5\nIf he saves $3 for the ticket and $5 on food, then 3+5 = $8 saved\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 10 in the question as 15 wrongly, and calculates 15 * .20 = $3 instead of 10 * .20 = $2. This error in step 2 leads to a wrong saving calculation on the ticket in step 4, where 3+5=$8 is calculated instead of 2+5=$7. All subsequent calculations pertaining to this incorrect referencing step are correctly performed using the erroneous result from step 2. Other steps which also reference the price of the ticket still correctly use the original price of $10.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is #4, which is $8.\n\nThe explanation is as follows:\n\nIn the [Solution], the first error occurs in step #2, where the discount for the ticket price is calculated as 20% of $15, instead of 20% of $10. This leads to an incorrect savings of $3 instead of the correct savings of $6.\n\nAdditionally, in step #4, the savings on the food combo is calculated as 50% of $10, instead of 50% of $5. This leads to an incorrect savings of $5 instead of the correct savings of $2.50.\n\nTherefore, the correct answer is $8, which is the sum of the correct savings of $6 for the ticket and $2.50 for the food combo."
+    },
+    {
+        "question": "Jake's neighbors hire him to mow their lawn and plant some flowers. Mowing the lawn takes 1 hour and pays $15. If Jake wants to make $20/hour working for the neighbors, and planting the flowers takes 2 hours, how much should Jake charge (in total, not per hour) for planting the flowers?",
+        "original_solution": "First figure out how many hours total Jake works by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake makes if he earns $20/hour for three hours by multiplying the time spent by the pay rate: $20/hour * 3 hours = $60\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $60 - $15 = $45\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "First figure out how many hours total Jake wants to work by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake wants to make if he earns $25/hour for three hours by multiplying the time spent by the new pay rate: $25/hour * 3 hours = $75\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $75 - $15 = $60\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the hourly rate Jake wants to make as $25/hour instead of $20/hour as stated in the question. The subsequent related steps 3 and 4 will be affected by the erroneous result of this step but still be calculated correctly. Since only one step error is considered, all other steps that reference the hourly rate still reference this number correctly except for the step referenced incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is $60, and the explanation is as follows:\n\nIn the solution, the first error occurs in the second step, where the pay rate for mowing the lawn is incorrect. The pay rate should be $15 per hour, not $25 per hour. This error propagates to the next step, where the total amount Jake wants to make is calculated.\n\nTherefore, the correct calculation for the total amount Jake wants to make is:\n\n$15/hour * 3 hours = $45\n\nSubtracting the amount Jake gets paid for mowing the lawn from the total amount he wants to make gives us the correct total amount he should charge for planting the flowers:\n\n$45 - $15 = $30\n\nSo, Jake should charge $30 for planting the flowers."
+    },
+    {
+        "question": "A rival football team has won twice as many matches as the home team they will be playing did. If records show that the home team has won three matches, and each team drew four matches and lost none, how many matches have both teams played in total?",
+        "original_solution": "The rival team won twice as many as the home team who won 3 matches so they won 2*3 = 6 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 3+6+8 = 17 matches\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The rival team won twice as many as the home team who won 2 matches so they won 2*2 = 4 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 2+4+8 = 14 matches\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 2 wrongly, and calculates 2*2=4 instead of 2*3=6. Its subsequent related step will be affected, calculating 2+4+8=14 instead of 3+6+8=17 in step 3. Please note that you should only consider one error, so step 2 still references 4 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 16, and the explanation is as follows:\n\nIn the first step, the rival team won twice as many matches as the home team, which is correct. However, the home team did not win three matches, but drew three matches and lost none, so the correct number of matches won by the rival team is not 2*2 = 4, but 3*2 = 6.\n\nTherefore, the total number of matches played by both teams is not 2+4+8 = 14, but 6+4+8 = 16. The correct solution is:\n\nThe rival team won 6 matches\nThey both drew 4 matches each for a total of 6*4 = 24 matches\nThe total number of matches played is 24+4+6 = 16 matches."
+    }
+]

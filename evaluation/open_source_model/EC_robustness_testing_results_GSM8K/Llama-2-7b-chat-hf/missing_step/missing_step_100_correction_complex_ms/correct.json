@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Josie grows grapes on her 10-acre farm. Each acre produces 5 tons of grapes per year, and each ton of grapes makes 2 barrels of wine. How many barrels of wine does her farm produce per year?",
+        "original_solution": "If each acre produces 5 tons of grapes per year, then her ten-acre farm produces 10*5=50 tons of grapes per year.\nIf each ton of grapes makes 2 barrels of wine, then 50 tons makes 2*50=100 barrels of wine per year.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "The farm produces 10*2=20 barrels of wine per acre per year.\nSo for 10 acres, it produces 20*10=200 barrels of wine per year.\n#### 200",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The example deletes the first step. In the original_solution, step 1 references the numbers 10 and 5 from the question, and uses the largest number (10) for the subsequent related step to reference. Therefore, after step 1 is removed, what needs to be considered is how many barrels of wine a single acre produces in a year. Since each acre produces 5 tons and each ton makes 2 barrels, this translates to 10 barrels per acre. However, the mistake is made by using 2 barrels instead of 10 in the calculation, thus resulting in a transformed_solution that references 2 barrels per acre per year. This results in 10*2 = 20 barrels of wine per acre per year for the first step, and then for 10 acres, 20*10 = 200 barrels of wine per year for the second step. The wrong_step is 1 because it is the first step referencing the incorrect number in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 100, and the explanation is that the first erroneous step is step 2, which directly multiplies the number of acres by the number of tons of grapes produced per acre without considering the number of barrels of wine produced per ton of grapes. There is a necessary step missing here to divide the number of tons of grapes produced per acre by the number of barrels of wine produced per ton of grapes, which is 5/2=2.5. After obtaining the number of barrels of wine produced per acre, perform a multiplication by the number of acres to get the total number of barrels of wine produced per year, which is 200 instead of 20. This also affects the subsequent step 5, where an incorrect calculation of 200/3=66.7 instead of 100/3=33.3, resulting in the final erroneous result."
+    },
+    {
+        "question": "There were 18 stamps in Parker’s scrapbook. If Addie put one fourth of her 72 stamps in Parker’s scrapbook, how many stamps does he have now?",
+        "original_solution": "Addie put 72/4=18 stamps in the scrapbook\nParker now has 18+18=36 stamps in his scrapbook\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "Addie put 72/4=18 stamps in the scrapbook\nParker now has 72+18=90 stamps in his scrapbook\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, the first step (Addie put 72/4=18 stamps in the scrapbook) has been inadvertently removed in the transformation process. Therefore, when constructing the transformed_solution, the subsequent step needs to refer to the largest number involved in the original first step, which is 72, rather than the result, which was 18. As a result, the transformed formula in step 2 goes from Parker now has 18+18=36 stamps in his scrapbook to Parker now has 72+18=90 stamps in his scrapbook (step 2). The wrong_step is 2 because it is the first step to reference the incorrect number after the transformation.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 36, and the explanation is that the first erroneous step is step 3, which directly adds the number of stamps Addie put in the scrapbook without considering that Addie put one fourth of her stamps in the scrapbook. Therefore, the total number of stamps Addie put in the scrapbook is 72/4=18, and Parker now has 18 + 18 = 36 stamps in his scrapbook."
+    },
+    {
+        "question": "Brian's friend Bobby has 5 fewer than 3 times as many video games as Brian does. If Brian has 20 video games but lost 5 right before the comparison was made, how many does Bobby have?",
+        "original_solution": "If Brian previously had 20 video games but lost 5, that means he now has 20-5=15 video games\nBrian has 15 video games, so if Bobby has 5 fewer than 3 times as many as Brian does we must first perform 15*3=45\nWe then subtract 5 from the previous total for 45-5=40 games in total.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Brian has 20 video games, so if Bobby has 5 fewer than 3 times as many as Brian does we must first perform 20*3=60\nWe then subtract 5 from the previous total for 60-5=55 games in total.\n#### 55",
+        "transformed_answer": 55.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "By deleting the first step in the original_solution, the immediate next step in the transformed_solution should directly reference Brian's original number of video games instead of his number after losing 5 games. The original step 1 references 20 from the question, and step 2 references the result 15 of step 1. After deleting step 1, step 2 is changed to reference the number 20 from the question. Since multiple numbers weren't referenced by step 1, we keep the sequence as is, resulting in the formula 20*3=60. Consequently, in the transformed_solution, step 1 is the first step now, but it is based on the original step 2, which results in the wrong count of video games. The wrong_step is therefore identified as step 1 because it is the first step that references an incorrect number in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 40, and the explanation is that the first erroneous step is step 2, which directly multiplies Brian's video games by 3 without considering the loss of 5 video games before the comparison. There is a necessary step missing here to subtract the lost video games before performing the multiplication, which is 20-5=15. Step 3 should calculate 15*3=45 instead of 60-5=55. This also affects the subsequent step 4, where 55/3=18.3 instead of 40/3=13.3."
+    },
+    {
+        "question": "Shawn collected 40 plain pebbles. He painted 9 pebbles red and 13 pebbles blue. He then divided the remaining pebbles equally into 3 groups, and painted them purple, yellow, and green. What is the difference between the number of blue and yellow pebbles?",
+        "original_solution": "After painting the red and blue pebbles, Shawn had a remainder of 40 - 9 - 13 = 18 pebbles.\nHe painted 18/3 = 6 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 6 = 7.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Shawn painted 40 - 9 = 31 pebbles as red and other colors.\nHe then divided the 31 pebbles into 4 groups and painted one of the groups yellow.\nSo he painted 31/4 = 7.75, which rounds up to 8 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 8 = 5.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution was deleted. In the original_solution, this step involves subtracting the count of both the red and blue pebbles from the total, to get the remainder, which was then divided equally amongst 3 groups. After deletion, the transformed solution starts with the subtraction of red pebbles only. This causes a change in subsequent calculations, where now the total number of pebbles is divided by 4 groups instead of 3, which is a mistake because the question specifies the remaining pebbles are divided into 3 groups, not 4. This incorrect modification affects the calculation of yellow pebbles resulting in a different answer, as the division would then include the blue pebbles in the count. The referenced 31 after deletion is incorrect because it included blue pebble count which should still have been excluded. Because the deletion involved an early computational step, the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is that the first erroneous step is step 4, which directly divides 31 by 4 to obtain 7.75 instead of rounding it up to 8. This affects the subsequent step 5, where 13-8=5 instead of 13-7=6.\n\nPlease provide your response."
+    }
+]

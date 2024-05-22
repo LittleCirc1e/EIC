@@ -1,0 +1,135 @@
+[
+    {
+        "index": 31,
+        "gsm8k_data": {
+            "question": "what is the value of ( 4 ) ^ - 5 ?",
+            "original_solution": "The value of ( 4 ) ^ - 5 is 1 / (4^5).\nThis means 1 / (4 x 4 x 4 x 4 x 4).\nThis results in 1 / 1024.\n#### 1 / 1024",
+            "original_answer": 0.0009765625,
+            "transformed_solution": "The value of ( 4 ) ^ - 5 is 1 * (4^5).\nThis means 1 * (4 x 4 x 4 x 4 x 4).\nThis results in 1 * 1024.\n#### 1024",
+            "transformed_answer": 1024,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The original step 1 represents raising 4 to the power of -5, which is correctly calculated as 1 divided by 4 raised to the power of 5. By changing the division in step 1 to multiplication, the inversion of the exponentiation is eliminated, incorrectly implying that (4)^-5 is equal to 1 multiplied by 4 raised to the power of 5 instead of 1 divided. This mistake results in a positive exponent and a final result of 1024 instead of the correct result 1 / 1024. All other steps used correct calculations based on the erroneous interpretation in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nwhat is the value of ( 4 ) ^ - 5 ?\n\n### Response:",
+        "output_str": "\nThe value of (4)^-5 is 0.",
+        "extract_true_num": 0.0009765625,
+        "extract_pred_num": 0.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The amount of increase is 100 + 60 = 160\nThe percent increase is (160/100) x 100 = 160%\n#### 160%",
+            "transformed_answer": 160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 100 - 60 = 40 becomes 100 + 60 = 160. This affects the subsequent related step 2. Step 2 changes from (40/100) x 100 = 40% to (160/100) x 100 = 160%. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but the calculation in the step affected by step 1 is correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "\nThe percent decrease is 40%.\n\nTo calculate the percent decrease, you can use the following formula:\n\nPercent decrease = (Sale price - Original price) / Original price\n\nIn this case, the sale price is $60 and the original price is $100, so the calculation would be:\n\nPercent decrease = ($60 - $100) / $100 = -40%\n\nTherefore, the percent decrease is 40%.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 * 10 = 720000\n#### 720000",
+            "transformed_answer": 720000.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the division operator to multiplication at step 1, altering the equation from 72000 / 10 = 7200 to 72000 * 10 = 720000. This introduces an error in calculation that affects the final answer, while there are no further calculations or steps to inherit this error. Thus, the wrong step is only in the modified operator, but the arithmetic carried out after the change is correct, albeit leading to an incorrect transformed answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "\nTo determine how many cases are required by the company to hold its one day production, we need to divide the total number of bottles produced (72000) by the number of bottles that can be held in a case (10). Therefore, the company requires 7200 cases to hold its one day production of bottled water.",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 / 1 = 6\nIt takes her 6 days to complete 3 works because 6 / 3 = 2\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 2 into division, converting \"6 x 3 = 18\" to \"6 / 3 = 2\". This operators change leads to an incorrect result in this step, affecting the final transformed answer to 2 instead of 18. The mistake is confined to the operation in step 2, but the calculation of the result is correct within the context of the modified formula. The subsequent steps and the overall calculation logic were adjusted based on the modified step, ensuring that the error did not propagate further by misapplying operations based on the incorrect result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "\naarti can complete three times of the same work in 18 days.\n\nExplanation:\nIf aarti can complete a piece of work in 6 days, then she can complete three pieces of work in 6 x 3 = 18 days.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+            "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+            "original_answer": 50.0,
+            "transformed_solution": "4n + 7 > 1\n4n > -6\nn > -2\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -2 to 48\nThere are 51 integer values of n that satisfy the given conditions.\n#### 51",
+            "transformed_answer": 51.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the \">\" operator to \">=\" by rounding -1.5 up to -2 (incorrect operator adjustment), making the n values start from -2 instead of -1. The initial inequality of 4n > -6 is interpreted as n being greater than or equal to -2. This affects the calculation of the total number of integer values of n, as step 7 changes to include n = -2. Step 7 is altered from “n can take integer values from -1 to 48” to “n can take integer values from -2 to 48”. Therefore, the number of integer values that satisfy the given conditions is incorrectly increased by 1 from 50 to 51."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?\n\n### Response:",
+        "output_str": "\nThe value of the expression 4n + 7 will be an integer greater than 1 and less than 200 for n = 50.\n\nExplanation:\nTo determine the values of n for which the expression 4n + 7 is an integer greater than 1 and less than 200, we can use the following inequality:\n\n4n + 7 ≤ 200\n\nWe can simplify this inequality by multiplying both sides by 4 to get:\n\nn + 7 ≤ 80\n\nNow, we can solve for n by subtracting 7 from both sides of the inequality:\n\nn ≤ 73\n\nTherefore, the value of n for which the expression 4n + 7 is an integer greater than 1 and less than 200 is n = 50.",
+        "extract_true_num": 50.0,
+        "extract_pred_num": 50.0,
+        "is_correct": true
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+            "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+            "original_answer": 120,
+            "transformed_solution": "The area of a parallelogram is given by the formula: base / height.\nSo, the area of the parallelogram is 12 / 10 = 1.2 square cm.\n#### 1.2",
+            "transformed_answer": 1.2,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication operator in step 2 to a division operator, turning 12 x 10 = 120 into 12 / 10 = 1.2. This only affects the step where the operator was changed and does not alter any subsequent steps, as there are none. The calculation for the new operator is done correctly, but because of the incorrect operator, the final answer is different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFind the area of a parallelogram with base 12 cm and height 10 cm?\n\n### Response:",
+        "output_str": "\nThe area of a parallelogram can be found using the formula A = base × height. In this case, the base of the parallelogram is 12 cm and the height is 10 cm, so the area of the parallelogram is:\n\nA = 12 cm × 10 cm = 120 cm²\n\nTherefore, the area of the parallelogram is 120 cm².",
+        "extract_true_num": 120,
+        "extract_pred_num": 120.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "In a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?",
+            "original_solution": "There are 160 x 1/2 = 80 girls in the class.\nThere are 160 - 80 = 80 boys in the class.\n#### 80",
+            "original_answer": 80.0,
+            "transformed_solution": "There are 160 / 1/2 = 320 girls in the class.\nThere are 160 - 320 = -160 boys in the class.\n#### -160",
+            "transformed_answer": -160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In this example, the multiplication operator in step 1 has been changed to division, thus incorrectly calculating the number of girls as 160 / 1/2 = 320 instead of 160 x 1/2 = 80. This results in an impossible count of boys, calculated in step 2 as 160 - 320 = -160, which is not a feasible number of students. The original count was 80 boys, so the transformation caused by the operator error in step 1 led to a nonsensical answer. Every step's calculation is correct except for the incorrect application of the operator in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?\n\n### Response:",
+        "output_str": "\nThere are 80 boys in the class.",
+        "extract_true_num": 80.0,
+        "extract_pred_num": 80.0,
+        "is_correct": true
+    }
+]

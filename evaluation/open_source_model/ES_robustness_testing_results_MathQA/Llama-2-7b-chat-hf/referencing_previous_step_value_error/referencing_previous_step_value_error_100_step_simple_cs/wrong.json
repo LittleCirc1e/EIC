@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Income and expenditure of a person are in the ratio 5 : 4. If the income of the person is Rs. 17000, then find his savings?",
+        "original_solution": "Total ratio units = 5 + 4 = 9\nEach ratio unit is worth Rs. 17000 / 5 = Rs. 3400\nIncome = 5 x Rs. 3400 = Rs. 17000\nExpenditure = 4 x Rs. 3400 = Rs. 13600\nSavings = Income - Expenditure = Rs. 17000 - Rs. 13600 = Rs. 3400\n#### 3400",
+        "original_answer": 3400.0,
+        "transformed_solution": "Total ratio units = 5 + 4 = 9\nEach ratio unit is worth Rs. 17000 / 9 = Rs. 1889\nIncome = 5 x Rs. 3400 = Rs. 17000\nExpenditure = 4 x Rs. 1889 = Rs. 7556\nSavings = Income - Expenditure = Rs. 17000 - Rs. 7556 = Rs. 9444\n#### 9444",
+        "transformed_answer": 9444.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references the value from step 2 as Rs. 1889 instead of the correct Rs. 3400 and incorrectly calculates the expenditure as 4 x Rs. 1889 = Rs. 7556 instead of 4 x Rs. 3400 = Rs. 13600. Step 2 in the transformed_solution <Each ratio unit is worth Rs. 17000 / 9 = Rs. 1889> should remain the same as step 2 in the original_solution <Each ratio unit is worth Rs. 17000 / 9 = Rs. 1889>, which has been calculated correctly. Step 5 and subsequent calculations are correctly based on the erroneous result of step 4. The transformation leads to a different savings amount of Rs. 9444 compared to the original answer of Rs. 3400.",
+        "eval_result": "\nThe solution is correct. The first wrong step is step 4, where the value of Rs. 1889 is used in the formula without checking if it is correct. The actual value of Rs. 1889 is obtained by multiplying the ratio units by the income, which is Rs. 17000 / 9 = Rs. 1889. Therefore, the savings are Rs. 9444."
+    },
+    {
+        "question": "5n + 2 > 17 and 7n - 5 < 44; n must be between which numbers?",
+        "original_solution": "5n > 15 because 17 - 2 = 15\nn > 3 because 15 / 5 = 3\n7n < 49 because 44 + 5 = 49\nn < 7 because 49 / 7 = 7\nSo, n must be between 3 and 7.\n#### 3<n<7",
+        "original_answer": "3<n<7",
+        "transformed_solution": "5n > 15 because 17 - 2 = 15\nn > 3 because 15 / 5 = 3\n7n < 50 because 44 + 6 = 50\nn < 7.14 because 50 / 7 = 7.14\nSo, n must be between 3 and 7.14.\n#### 3<n<7.14",
+        "transformed_answer": "3<n<7.14",
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 44 + 5 as 44 + 6 and changes 7n < 49 to 7n < 50. It should be noted that step 2 in the transformed_solution <7n < 49 because 44 + 5 = 49> should be the same as the step 2 in the original_solution <7n < 49 because 44 + 5 = 49> and calculates its result 49 correctly. The subsequent related steps (4) will be affected by the erroneous result of this certain step but still be calculated correctly based on this erroneous result. The original_solution correctly solves for n < 7 by dividing 49 by 7, but the transformed_solution uses the incorrect reference to incorrectly solve for n < 7.14 by dividing 50 by 7. The transformed_answer produced by the transformed_solution is different from the original_answer as required.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the value of 5n is greater than 15, the value of 7n is less than 50, and the value of n is less than 7.14. The first wrong step is step #3, which is the calculation of 5n. The value of 5n is calculated as 5(3) = 15, which is greater than 17. Therefore, the solution is incorrect."
+    },
+    {
+        "question": "5n + 2 > 17 and 7n - 5 < 44; n must be between which numbers?",
+        "original_solution": "5n > 15 because 17 - 2 = 15\nn > 3 because 15 / 5 = 3\n7n < 49 because 44 + 5 = 49\nn < 7 because 49 / 7 = 7\nSo, n must be between 3 and 7.\n#### 3<n<7",
+        "original_answer": "3<n<7",
+        "transformed_solution": "5n > 15 because 17 - 2 = 15\nn > 3 because 15 / 5 = 3\n7n < 50 because 44 + 5 = 49\nn < 7.1 because 50 / 7 = 7.1\nSo, n must be between 3 and 7.1.\n#### 3<n<7.1",
+        "transformed_answer": "3<n<7.1",
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 49 as 50 from step 2 and changes 44 + 5 = 49 to 44 + 5 = 50. It should be noted that step 2 in the transformed_solution <7n < 49 because 44 + 5 = 49> should be the same as step 2 in the original_solution <7n < 49 because 44 + 5 = 49> and calculates its result 49 correctly. The subsequent step 4 is affected by step 3 and changes n < 7 because 49 / 7 = 7 to n < 7.1 because 50 / 7 = 7.1. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the value of 5n is greater than 15, and the value of 7n is less than 50. Therefore, n must be between 3 and 7.1.\n\nPlease provide your response in the format requested in the instruction."
+    }
+]

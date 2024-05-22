@@ -1,0 +1,98 @@
+[
+    {
+        "question": "Jessica just got her driving permit. She must complete 50 hours of driving with a parent to get her driver’s license. It takes 20 minutes to drive to school. If she drives to and from school every day, how many school days will it take Jessica to meet the 50-hour driving requirement?",
+        "original_solution": "Jessica will drive 20 minutes, twice every school day (to and from school), so 20 minutes x 2 trips = 40 minutes each day.\nThere are 60 minutes in 1 hour, so 50 hours of driving x 60 minutes/hour = 3000 minutes.\nIf you take the 3000 minutes she needs to drive / 40 minutes driving each day = 75 school days to drive 50 hours.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "Jessica will drive 20 minutes, twice every school day (to and from school), so 20 minutes x 2 trips = 40 minutes each day.\nThere are 50 minutes in 1 hour, so 50 hours of driving x 50 minutes/hour = 2500 minutes.\nIf you take the 2500 minutes she needs to drive / 40 minutes driving each day = 62.5 school days to drive 50 hours.\n#### 62.5",
+        "transformed_answer": 62.5,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In step 2, the unit conversion for minutes to hours is incorrectly stated as 50 minutes in 1 hour instead of 60 minutes in 1 hour. Consequently, step 3, which is related to step 2, calculates the number of days based on this incorrect conversion, changing from an original solution of 3000 minutes total to 2500 minutes total. The calculation now shows Jessica would need 62.5 days instead of 75 days to meet the driving requirement. This unit conversion error only affects the steps related to the total minutes calculation and not the unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #75 school days.\n\nExplanation: The solution is incorrect because it assumes that Jessica drives to and from school every day, which is not the case. Since Jessica only needs to drive 50 hours, she can do so in less than 50 days, assuming she drives for 8 hours a day (50 hours / 8 hours/day = 6.25 days). Therefore, the correct answer is 75 school days."
+    },
+    {
+        "question": "Cindy can run at 3 miles per hour and walk at 1 mile per hour. If she runs for half a mile and then walks for half a mile, how many minutes will it take her to travel the full mile?",
+        "original_solution": "It will take her 0.5 miles / 3 mph * (60 minutes / 1 hour) = 10 minutes to run half a mile.\nIt will take her 0.5 miles / 1 mph * (60 minutes / 1 hour) = 30 minutes to walk half a mile.\nHer total time is 10 + 30 = 40 minutes.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "It will take her 0.5 miles / 3 mph * (50 minutes / 1 hour) = 8.33 minutes to run half a mile.\nIt will take her 0.5 miles / 1 mph * (60 minutes / 1 hour) = 30 minutes to walk half a mile.\nHer total time is 8.33 + 30 = 38.33 minutes.\n#### 38.33",
+        "transformed_answer": 38.33,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, altering the calculation of time to run half a mile from 0.5 miles / 3 mph * (60 minutes / 1 hour) = 10 minutes to 0.5 miles / 3 mph * (50 minutes / 1 hour) = 8.33 minutes in the transformed_solution. This affected step 3, altering the total time from 10 + 30 = 40 minutes to 8.33 + 30 = 38.33 minutes. Step 2 remains unchanged because it is not related to the incorrect unit conversion error made in step 1. The transformed_answer 38.33 is different from the original_answer, which meets the required condition.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #40 minutes.\n\nExplanation: The error occurs in the second step, where the speed of walking is calculated as 1 mile per hour instead of 1 mile per hour. Therefore, the time it takes to walk half a mile is 30 minutes instead of 30 minutes. Therefore, the total time it takes Cindy to travel a full mile is 40 minutes."
+    },
+    {
+        "question": "Liz roasts 2 16 pounds turkeys every Thanksgiving. She can only roast them 1 at a time because she has a small oven. She roasts each turkey for 15 minutes per pound. If dinner is served at 6:00 pm what is the latest time she can start roasting the turkeys?",
+        "original_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 60 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/60 = 8 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 8 hours to cook the turkeys so the latest she can start is 18 - 8 = 10:00 am\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 50 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/50 = 9.6 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 9.6 hours to cook the turkeys so the latest she can start is 18 - 9.6 = 8.4, which is 8 hours and 24 minutes, so 6:00 pm - 8 hours and 24 minutes is 9:36 am\n#### 9.6",
+        "transformed_answer": 9.6,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means an hour wrongly has 50 minutes instead of the standard 60 minutes, resulting in 480/60 = 8 hours in the original_solution becoming 480/50 = 9.6 hours in the transformed_solution. And it affects the subsequent related step 4, changing the calculation of the latest start time. In the original solution, 18 - 8 = 10:00 am, but in transformed solution, 18 - 9.6 = 8.4, which equates to 9:36 am when converted back from military time. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe solution is incorrect because it does not take into account the time it takes to preheat the oven. According to the problem, Liz has a small oven, which means it will take some time to preheat it to the desired temperature. Additionally, the solution assumes that Liz can start roasting the turkeys immediately after preheating the oven, which is not the case. It takes time to preheat the oven, and Liz cannot start roasting the turkeys until the oven has reached the desired temperature.\n\nTo correct the solution, we need to take into account the time it takes to preheat the oven. Let's assume it takes 30 minutes to preheat the oven to 350 degrees Fahrenheit, which is a reasonable time based on the size of the oven. Therefore, the latest time Liz can start roasting the turkeys is 9:36 am + 30 minutes = 10:06 am.\n\nTherefore, the correct answer is #10:06 am."
+    },
+    {
+        "question": "Megan is making food for a party. She has to spend 20 minutes preparing one dish in the oven. Each dish can feed 5 people. She spends 2 hours preparing as many of these dishes as she can for the party. How many people can she feed with these dishes?",
+        "original_solution": "First, we need to determine the total amount of minutes available for cooking. We do this by performing 2*60=120, as there are 60 minutes in an hour.\nNow that we know we have 120 minutes, we then divide the preparation time into the total amount of time by performing 120/20= 6 dishes capable of being made.\nSince each dish can feed 5 people, we find the total number of people fed by performing 5*6=30 people.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First, we need to determine the total amount of minutes available for cooking. We do this by performing 2*50=100, as there are 50 minutes in an hour.\nNow that we know we have 100 minutes, we then divide the preparation time into the total amount of time by performing 100/20= 5 dishes capable of being made.\nSince each dish can feed 5 people, we find the total number of people fed by performing 5*5=25 people.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 introduces the unit conversion error, where 1 hour is incorrectly assumed to have 50 minutes instead of the correct 60 minutes. This change in the unit conversion misleads the solution from 2*60=120 to 2*50=100. Consequently, this wrong conversion step reduces the total cooking time available from 120 minutes in the original solution to 100 minutes in the transformed solution and impacts the number of dishes that can be made. Following this, the number of dishes is recalculated to be 5 instead of 6, and as a result, the total number of people who can be fed is decreased from 30 to 25.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #30.\n\nExplanation:\nThe solution is incorrect because there is a unit conversion error in the second step. There are 60 minutes in an hour, not 50. Therefore, the total amount of time available for cooking is 100/60= 1.67 dishes capable of being made. Since each dish can feed 5 people, we find the total number of people fed by performing 5*1.67=8.35 people.\n\nPlease let me know if you have any questions or need further clarification."
+    },
+    {
+        "question": "Mike gets paid 100 dollars a week. He decides to spend half of that at an arcade. He spends 10 dollars at the arcade on food and uses the rest on arcade tokens. He can play for 1 hour for $8. How many minutes can he play?",
+        "original_solution": "He spent 100*.5=$50 at the arcade.\nHe uses 50-10=$40 on tokens\nHe can play 40/8=5 hours\nThere are 60 minutes in an hour so he can play 5*60=300 minutes\n#### 300",
+        "original_answer": 300.0,
+        "transformed_solution": "He spent 100*.5=$50 at the arcade.\nHe uses 50-10=$40 on tokens\nHe can play 40/8=5 hours\nThere are 50 minutes in an hour so he can play 5*50=250 minutes\n#### 250",
+        "transformed_answer": 250.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 incorporates an incorrect unit conversion, assuming there are 50 minutes in an hour instead of 60 minutes. This changes the original calculation from 5*60=300 to 5*50=250 in the transformed solution. The only error introduced is in the conversion of hours to minutes, affecting the final step of calculating the total playtime. The previous steps, including the computation of the budget for arcade tokens, remain accurate.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe error occurs in the first step, where the amount spent at the arcade is calculated as $100*.5=$50. The correct calculation is $100*.5=50, not $50. Therefore, the amount of money Mike has left after spending half of his paycheck at the arcade is $50-10=$40, not $40.\n\nTo get the correct answer, Mike can play for 40/8=5 hours, which is the same as the solution. However, there are 60 minutes in an hour, not 50 minutes, so he can play for 5*60=300 minutes, not 250 minutes. Therefore, the correct answer is #300 minutes."
+    },
+    {
+        "question": "Jessica just got her driving permit. She must complete 50 hours of driving with a parent to get her driver’s license. It takes 20 minutes to drive to school. If she drives to and from school every day, how many school days will it take Jessica to meet the 50-hour driving requirement?",
+        "original_solution": "Jessica will drive 20 minutes, twice every school day (to and from school), so 20 minutes x 2 trips = 40 minutes each day.\nThere are 60 minutes in 1 hour, so 50 hours of driving x 60 minutes/hour = 3,000 minutes.\nIf you take the 3,000 minutes she needs to drive / 40 minutes driving each day = 75 school days to drive 50 hours.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "Jessica will drive 20 minutes, twice every school day (to and from school), so 20 minutes x 2 trips = 40 minutes each day.\nThere are 50 minutes in 1 hour, so 50 hours of driving x 50 minutes/hour = 2,500 minutes.\nIf you take the 2,500 minutes she needs to drive / 40 minutes driving each day = 62.5 school days to drive 50 hours.\n#### 62.5",
+        "transformed_answer": 62.5,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 50 hours of driving x 60 minutes/hour = 3,000 minutes in the original_solution becoming 50 hours of driving x 50 minutes/hour = 2,500 minutes in the transformed_solution. And it affects the subsequent related step 3, which changes from 3,000 minutes she needs to drive / 40 minutes driving each day = 75 school days to 2,500 minutes she needs to drive / 40 minutes driving each day = 62.5 school days. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #75 school days.\n\nExplanation: The solution is incorrect because it assumes that Jessica drives to and from school every day, which is not the case. Since Jessica only needs to drive 50 hours, she can do so in less than 50 days, assuming she drives for 8 hours per day. Therefore, the correct answer is 75 school days."
+    },
+    {
+        "question": "A bathroom has 10 6 inch tiles along its width and 20 6 inch tiles along its length.  What is the square footage of the bathroom?",
+        "original_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 12 inches in a foot and it’s 60 inches wide so it is 60/12 = 5 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*5 = 50 sq feet\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 10 inches in a foot (incorrect unit conversion) and it’s 60 inches wide so it is 60/10 = 6 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*6 = 60 sq feet\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 introduces an incorrect unit conversion, asserting that there are 10 inches in a foot instead of 12 inches. This mistake affects the width calculation of the bathroom, which transforms from 60 inches wide equals to 5 feet wide (60/12) in the original_solution to 60 inches wide equals to 6 feet wide (60/10) in the transformed_solution. Consequently, the square footage calculation in the final step is also impacted, changing from 50 sq feet (10*5) in the original_solution to 60 sq feet (10*6) in the transformed_solution. All other calculation steps remain accurate.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe error in the solution is unit conversion error, specifically, the conversion of inches to feet. There are 12 inches in a foot, not 10. Therefore, the width of the bathroom is 60/12 = 5 feet, not 6 feet.\n\nThe correct calculation for the square footage of the bathroom is:\n\n10 x 5 = 50 sq feet\n\nTherefore, the correct answer is #50 sq feet."
+    },
+    {
+        "question": "If a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.",
+        "original_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 60 minutes, the bunny will come out of the hole 60*3=180 times.\nIn 10 hours, a bunny will come out of their hole 180*10=1800 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1800*20=36000 times.\n#### 36000",
+        "original_answer": 36000.0,
+        "transformed_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 50 minutes, the bunny will come out of the hole 50*3=150 times.\nIn 10 hours, a bunny will come out of their hole 150*10=1500 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1500*20=30000 times.\n#### 30000",
+        "transformed_answer": 30000.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of the correct 60 minutes. This results in a cascade of errors through the subsequent steps. The original_solution stating that a bunny will come out of the hole 60*3=180 times is transformed to 50*3=150 times. Consequently, the 10-hour total for one bunny changes from 180*10=1800 in the original_solution to 150*10=1500 in the transformed_solution. The final combined count for 20 bunnies then changes from 1800*20=36000 times to 1500*20=30000 times. It should be noted that only one step of unit conversion error is considered and the rest of calculation steps are kept consistent with the original solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe solution is incorrect because the calculation of the number of times a bunny comes out of its burrow in 10 hours is not accurate. The correct calculation is:\n\nIf a bunny comes out of its burrow 3 times per minute, it will come out 3 x 60 = 180 times in 1 hour.\n\nIn 10 hours, it will come out 180 x 10 = 1800 times.\n\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1800 x 20 = 36000 times.\n\nTherefore, the correct answer is #36000."
+    }
+]

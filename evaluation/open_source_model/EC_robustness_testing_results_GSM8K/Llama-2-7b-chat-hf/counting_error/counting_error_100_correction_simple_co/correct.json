@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Steve has decided to become a baker. On Mondays, Wednesdays and Fridays, he bakes apple pies. On Tuesdays and Thursdays, he bakes cherry pies. If he bakes 12 pies per day, how many more apple pies does he bake than cherry pies in one week?",
+        "original_solution": "In one week, he bakes 3 * 12 = 36 apple pies.\nIn one week, he bakes 2 * 12 = 24 cherry pies.\nHe bakes 36 - 24 = 12 more apple pies.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "In one week, he bakes 2 * 12 = 24 apple pies.\nIn one week, he bakes 3 * 12 = 36 cherry pies.\nHe bakes 24 - 36 = -12 more apple pies.\n#### -12",
+        "transformed_answer": -12.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the days Steve bakes apple pies as 2 days instead of 3, and step 2 counts the days he bakes cherry pies as 3 days instead of 2. This changes the calculation in step 1 from 3 * 12 = 36 apple pies to 2 * 12 = 24 apple pies, and in step 2 from 2 * 12 = 24 cherry pies to 3 * 12 = 36 cherry pies, subsequently affecting step 3, changing the calculation from 36 - 24 = 12 more apple pies to 24 - 36 = -12 more apple pies. It should be noted that you only need to consider one step of counting error, and here both steps related to counting need to be modified inversely to maintain a single error in the generation.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #12.\n\nExplanation: The solution is incorrect because it counts the number of cherry pies baked on Monday, Wednesday, and Friday as 3 * 3 = 9 pies, instead of 3 * 12 = 36 pies. This error leads to the final answer of -12, which is incorrect. The correct answer is 12 more apple pies than cherry pies in one week."
+    }
+]

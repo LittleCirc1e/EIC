@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Mom went shopping at the market. She left with €55. She bought 2 packs of bananas for €4 each, pears for €2, asparagus for €6 and finally a chicken for €11. How much money does Mom have left?",
+        "original_solution": "Mom bought things that cost: 4 + 4 + 2 + 6 + 11 = €27 .\nSo she has 55 – 27 = €28 left\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "Mom bought things that cost: 4 + 4 + 2 + 6 + 11 = €27.\nBecause she also bought a loaf of bread for €3, so she has 55 - 27 - 3 = €25 left.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <because she also bought a loaf of bread for €3>, resulting in step 2 changing from 55 – 27 = €28 in the original_solution to 55 - 27 - 3 = €25 in the transformed_solution. The transformed_answer becomes €25 instead of the original €28 as a result of this additional expense. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is #11, which is the cost of the chicken. The explanation is that the calculation of the cost of the chicken is incorrect, it should be €11 instead of €6. The correct solution is:\n\nMom bought things that cost: 4 + 4 + 2 + 11 = €29.\nBecause she also bought a loaf of bread for €3, so she has 55 - 29 - 3 = €13 left.\n\n#### 13."
+    },
+    {
+        "question": "There are 15 cats in a shelter. One-third were adopted, and were replaced with twice the amount that were adopted. Later on, twice as many dogs showed up as there are cats. How many total animals are there in the shelter?",
+        "original_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added.\nThis makes 10+10=20 cats in the shelter.\n20*2=40 dogs came into the shelter.\nThere are now 20+40=60 animals in the shelter.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added. Because there was an unexpected donation to the shelter, an additional 3 cats were brought in.\nThis makes 10+10+3=23 cats in the shelter.\n23*2=46 dogs came into the shelter.\nThere are now 23+46=69 animals in the shelter.\n#### 69",
+        "transformed_answer": 69.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was an unexpected donation to the shelter, an additional 3 cats were brought in>, resulting in step 3 changing from 10+10=20 in the original_solution to 10+10+3=23 in the transformed_solution. The other steps after step 3 also accommodate this change, notably the calculation of the number of dogs. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 69, and the explanation is as follows:\n\nThe first mistake occurs in step 3, where 5*2=10 instead of 5*2=10. This error carries over to step 4, where 10+10+3=23 instead of 10+10+3=20. Therefore, the final answer should be 20+46=66, not 69."
+    }
+]

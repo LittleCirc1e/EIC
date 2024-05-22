@@ -1,0 +1,287 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "Annalise was sent by her mother to the store to buy 10 boxes of Kleenex Ultra Soft Facial Tissues. If each box has 20 packs of tissues and each pack contain 100 tissues sold at five cents each, calculate the total amount of money Annalise spent to buy the ten boxes.",
+            "original_solution": "If a box of tissue has 20 packs of tissues, ten boxes have 20 packs/box * 10 boxes = 200 packs\nSince each pack has 100 tissues, Annalise bought 100 tissues/pack * 200 packs = 20000 tissues.\nAnnalise bought 20000 tissues at five cents each, at a total cost of 20000 tissues * $0.05 = $1000\n#### 1000",
+            "original_answer": 1000.0,
+            "transformed_solution": "If a box of tissue has 20 packs of tissues, ten boxes have 20 packs/box / 10 boxes = 2 packs\nSince each pack has 100 tissues, Annalise bought 100 tissues/pack * 2 packs = 200 tissues.\nAnnalise bought 200 tissues at five cents each, at a total cost of 200 tissues * $0.05 = $10\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 1 to division, incorrectly calculating the total number of packs from the ten boxes by changing '20 packs/box * 10 boxes' to '20 packs/box / 10 boxes'. The correct number of packs should be 20 * 10=200 packs, but after changing the operation, it becomes 20 / 10=2 packs. This alteration affects the following calculations, where step 2 and 3 use the incorrect number of packs. The calculation within each incorrect step is performed correctly according to the modified operation, leading to a different (incorrect) transformed_answer compared to the original_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAnnalise was sent by her mother to the store to buy 10 boxes of Kleenex Ultra Soft Facial Tissues. If each box has 20 packs of tissues and each pack contain 100 tissues sold at five cents each, calculate the total amount of money Annalise spent to buy the ten boxes.\n\n### Response:",
+        "output_str": "\nTo calculate the total amount of money Annalise spent to buy the ten boxes of Kleenex Ultra Soft Facial Tissues, we need to multiply the number of boxes by the number of packs in each box, and then multiply that result by the number of tissues in each pack and the cost per tissue.\n\nSo, the total amount of money Annalise spent is:\n10 boxes x 20 packs/box = 200 packs\n200 packs x 100 tissues/pack = 20,000 tissues\n20,000 tissues x $0.05/tissue = $1,000\n\nTherefore, Annalise spent $1,000 to buy the ten boxes of Kleenex Ultra Soft Facial Tissues.",
+        "extract_true_num": 1000.0,
+        "extract_pred_num": 1000.0,
+        "is_correct": true
+    },
+    {
+        "index": 2,
+        "gsm8k_data": {
+            "question": "In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?",
+            "original_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 + 9 = 24 green cards.\nYellow cards make up to 15 + 24 = 39 cards.\nSo in total, there are 39 + 39 = 78 cards of different colors.\n#### 78",
+            "original_answer": 78.0,
+            "transformed_solution": "There are 60/100 * 15 = 9 more green cards than red cards.\nWhich means there are 15 - 9 = 6 green cards.\nYellow cards make up to 15 + 6 = 21 cards.\nSo in total, there are 21 + 21 = 42 cards of different colors.\n#### 42",
+            "transformed_answer": 42.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the addition in the second step of the calculation to subtraction by turning the correct form '15 + 9 = 24' into '15 - 9 = 6', thus showing an incorrect number of green cards. This logically affects the related subsequent steps. The next step incorrectly calculates the number of yellow cards (now the sum is 15 + 6 = 21), and the final total is incorrectly calculated as 21 + 21 = 42 cards. It should be noted that the operator is only incorrect in the second step with the calculation correctly made based on the incorrect operator, leading to incorrect results for the subsequent figures that rely on it."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?\n\n### Response:",
+        "output_str": "\nTo find the total number of cards of all mentioned colors, we need to use the information provided in the instruction.\n\nFirst, we know that there are 15 red cards. If there are 60% more green cards, then there are 15 x 1.6 = 24 green cards.\n\nNext, we know that the total number of yellow cards is equal to the sum of the red and green cards. So, the number of yellow cards is 15 + 24 = 39 cards.\n\nTherefore, there are 15 red cards, 24 green cards, and 39 yellow cards in the set of magicians cards. In total, there are 15 + 24 + 39 = 78 cards.",
+        "extract_true_num": 78.0,
+        "extract_pred_num": 78.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "Andy gets a cavity for every 4 candy canes he eats. He gets 2 candy canes from his parents and 3 candy canes each from 4 teachers. Then he uses his allowance to buy 1/7 as many candy canes as he was given. How many cavities does he get from eating all his candy canes?",
+            "original_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen divide that number by 7 to find the number of canes he buys: 14 canes / 7 = 2 canes\nThen add the number of candy canes he gets from each source to find the total number: 2 canes + 14 canes = 16 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 16 canes / 4 canes/cavity = 4 cavities\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen multiply that number by 7 to find the number of canes he buys incorrectly: 14 canes * 7 = 98 canes\nThen add the number of candy canes he gets from each source to find the total number incorrectly: 98 canes + 14 canes = 112 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 112 canes / 4 canes/cavity = 28 cavities\n#### 28",
+            "transformed_answer": 28.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division operator to multiplication in step 3. Instead of finding the correct number of candy canes he buys by dividing 14 by 7, it incorrectly multiplies 14 by 7 to get 98. This incorrect calculation directly affects step 4 and step 5, resulting in a total count of 112 candy canes instead of 16, and thus an incorrect final number of 28 cavities instead of 4. Each step still maintains the correct application of the incorrect operator, ensuring that all steps prior to step 3 are correctly calculated, and only step 3 contains the single error with the correct execution of the wrong operation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAndy gets a cavity for every 4 candy canes he eats. He gets 2 candy canes from his parents and 3 candy canes each from 4 teachers. Then he uses his allowance to buy 1/7 as many candy canes as he was given. How many cavities does he get from eating all his candy canes?\n\n### Response:",
+        "output_str": "\nAndy will get 4 cavities if he eats all the candy canes he was given.\n\nExplanation:\nAndy gets a cavity for every 4 candy canes he eats. He was given 2 candy canes from his parents and 3 candy canes each from 4 teachers, for a total of 2 + 3 x 4 = 14 candy canes. Since Andy only has to buy 1/7 as many candy canes as he was given, he will have 14 / 7 = 2 cavities left over after buying some candy canes. Therefore, Andy will get 4 cavities if he eats all the candy canes he was given.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "Lucille made an agreement with her mom that she would earn six cents for every weed she pulled in her mom's garden. There are eleven weeds in the flower bed, fourteen in the vegetable patch, and thirty-two in the grass around the fruit trees. Lucille weeded the flower bed, the vegetable patch, and half the grass before she took a break. She bought a soda for 99 cents on her break with some of her earnings. How many cents does Lucille have left?",
+            "original_solution": "Lucille weeded half the grass, so she pulled 32 / 2 = 16 weeds around the fruit frees.\nShe pulled 11 + 14 + 16 = 41 weeds before her break.\nFrom that, she earned 41 * 6 = 246 cents.\nAfter buying her soda, Lucille has 246 - 99 = 147 cents left.\n#### 147",
+            "original_answer": 147.0,
+            "transformed_solution": "Lucille weeded half the grass, so she pulled 32 / 2 = 16 weeds around the fruit frees.\nShe pulled 11 + 14 + 16 = 41 weeds before her break.\nFrom that, she earned 41 * 6 = 246 cents.\nAfter buying her soda, Lucille has 246 / 99 = 2 cents left.\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 4,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction operator to division when calculating the remaining money after buying the soda, changing 246 - 99 = 147 to 246 / 99 = 2. The original statement calculates the money left by subtracting the cost of the soda from the total earnings. By using division instead, the process implies dividing the total earnings by the cost of the soda, which generates an incorrect result for this context. The error affects only the final step, and all calculations are performed correctly by applying the changed operator. The rest of the steps before this wrong step are correctly calculated, which means their subsequent reliance on previous steps is fitting. The transformed answer of 2 is incorrect in the context of the question."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLucille made an agreement with her mom that she would earn six cents for every weed she pulled in her mom's garden. There are eleven weeds in the flower bed, fourteen in the vegetable patch, and thirty-two in the grass around the fruit trees. Lucille weeded the flower bed, the vegetable patch, and half the grass before she took a break. She bought a soda for 99 cents on her break with some of her earnings. How many cents does Lucille have left?\n\n### Response:",
+        "output_str": "\nLucille has 32 cents left after buying a soda for 99 cents with some of her earnings.\n\nExplanation:\nLucille earned 6 cents for every weed she pulled in her mom's garden. Since she pulled 11 weeds in the flower bed, she earned 6 x 11 = 66 cents for that area. She also pulled 14 weeds in the vegetable patch, so she earned 6 x 14 = 84 cents for that area. Finally, she pulled half of the 32 weeds in the grass around the fruit trees, so she earned 6 x 16 = 96 cents for that area. In total, Lucille earned 66 + 84 + 96 = 246 cents.\n\nSince she spent 99 cents on a soda, Lucille has 246 - 99 = 147 cents left.",
+        "extract_true_num": 147.0,
+        "extract_pred_num": 147.0,
+        "is_correct": true
+    },
+    {
+        "index": 18,
+        "gsm8k_data": {
+            "question": "Shelly makes braided keychains for her friends at school. Each keychain takes 12 inches of thread to braid. This year, she made six friends in classes and half that number from after-school clubs. She wants to make each of them a keychain. How many inches of thread does Shelly need?",
+            "original_solution": "Shelly made 6 /2 = 3 friends from after-school clubs.\nShe made 6 + 3 = 9 new friends at school this year.\nShelly will need 9 * 12 = 108 inches of thread to make each friend a keychain.\n#### 108",
+            "original_answer": 108.0,
+            "transformed_solution": "Shelly made 6 * 2 = 12 friends from after-school clubs.\nShe made 6 + 12 = 18 new friends at school this year.\nShelly will need 18 * 12 = 216 inches of thread to make each friend a keychain.\n#### 216",
+            "transformed_answer": 216.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division in step 1 into multiplication, converting 6 / 2 = 3 to 6 * 2 = 12. This incorrect operator swap directly affects the subsequent step related to this incorrect intermediate result. Step 2 changes from 6 + 3 = 9 to 6 + 12 = 18, and step 3 changes from 9 * 12 = 108 to 18 * 12 = 216. It is noted that step 1 contains only the incorrect operator, while its calculation is correct, but its incorrect intermediate result affects all subsequent related steps. However, all steps other than step 1 in the calculation are conducted correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nShelly makes braided keychains for her friends at school. Each keychain takes 12 inches of thread to braid. This year, she made six friends in classes and half that number from after-school clubs. She wants to make each of them a keychain. How many inches of thread does Shelly need?\n\n### Response:",
+        "output_str": "\nTo determine how many inches of thread Shelly needs, we need to calculate the total number of keychains she wants to make. Shelly wants to make 6 keychains for her friends in classes and half that number, or 3 keychains, from after-school clubs. Therefore, the total number of keychains Shelly wants to make is 6 + 3 = 9 keychains.\n\nSince each keychain takes 12 inches of thread to braid, Shelly needs a total of 9 x 12 = 108 inches of thread to make all of the keychains.",
+        "extract_true_num": 108.0,
+        "extract_pred_num": 108.0,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "Jimmy is at the candy store and buys 2 candy bars for $.75 each. He then buys 4 lollipops that cost $.25 each. He spent 1/6 of the money he earned from shoveling snow. If he charges $1.5 per driveway, how many driveways did he shovel?",
+            "original_solution": "Jimmy spent $1.5 on candy bars because 2 x .75 = 1.5\nHe spent $1 on lollipops because 4 x .25 = 1\nHe spent $2.5 in total because 1.5 + 1 = 2.5\nHe earned $15 shoveling driveways because 2.5 / (1/6) = 15\nHe shoveled 10 driveways because 15 / 1.5 = 10\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Jimmy spent $1.5 on candy bars because 2 x .75 = 1.5\nHe spent $1 on lollipops because 4 x .25 = 1\nHe spent $2.5 in total because 1.5 + 1 = 2.5\nHe earned $15 shoveling driveways because 2.5 * (1/6) = 0.4166666667\nHe shoveled 10 driveways because 0.4166666667 / 1.5 = 0.277777778\n#### 0.277777778",
+            "transformed_answer": 0.277777778,
+            "wrong_step": 4,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division operation in step 4 to multiplication, converting 2.5 / (1/6) = 15 to 2.5 * (1/6). This incorrect change affects the final calculation of the number of driveways shoveled, but does not alter the correctness of the calculations in steps 1, 2, 3, and 5. The result is that the transformed_solution's final calculation diverges from the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJimmy is at the candy store and buys 2 candy bars for $.75 each. He then buys 4 lollipops that cost $.25 each. He spent 1/6 of the money he earned from shoveling snow. If he charges $1.5 per driveway, how many driveways did he shovel?\n\n### Response:",
+        "output_str": "\nTo find out how many driveways Jimmy shoveled, we need to use the information given in the problem. We know that Jimmy spent 1/6 of the money he earned from shoveling snow on candy and lollipops, which means he had $6 \\div 6 = 1$ left over after buying the candy and lollipops.\n\nWe also know that Jimmy earned $1.5 per driveway, and he shoveled driveways for a total of x driveways. Therefore, we can set up the equation:\n\n$1.5x = 1$\n\nSolving for x, we get:\n\nx = 10\n\nSo, Jimmy shoveled 10 driveways.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 21,
+        "gsm8k_data": {
+            "question": "The number of dishes Sandrine washed was 10 more than the number of bananas Charles cooked. Also, the number of bananas Charles cooked was 3 times the number of pears he picked. If Charles picked 50 pears, how many dishes did Sandrine wash?",
+            "original_solution": "If the bananas Charles cooked were 3 times the number of pears he picked, then Charles cooked 3*50 = 150 bananas.\nSince all the dishes that Sandrine washed were 10 more than the number of bananas Charles cooked, Sandrine washed 150+10 = 160 dishes.\n#### 160",
+            "original_answer": 160.0,
+            "transformed_solution": "If the bananas Charles cooked were 3 times the number of pears he picked, then Charles cooked 3/50 = 0.06 bananas.\nSince all the dishes that Sandrine washed were 10 more than the number of bananas Charles cooked, Sandrine washed 0.06+10 = 10.06 dishes.\n#### 10.06",
+            "transformed_answer": 10.06,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in the first step to division, converting the operation 3*50=150 to 3/50=0.06. The subsequent related step 2 is affected by the change in the number of bananas Charles cooked, adjusting Sandrine's dishes from 150+10=160 to 0.06+10=10.06. It should be noted that the calculation of the incorrect operator in step 1 is performed correctly, but leads to an incorrect result which then affects the following step. However, the calculation in step 2 is performed correctly based on the new value provided by the modified first step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe number of dishes Sandrine washed was 10 more than the number of bananas Charles cooked. Also, the number of bananas Charles cooked was 3 times the number of pears he picked. If Charles picked 50 pears, how many dishes did Sandrine wash?\n\n### Response:",
+        "output_str": "\nSandrine washed 10 + 3(50) = 10 + 150 = 160 dishes.",
+        "extract_true_num": 160.0,
+        "extract_pred_num": 160.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Max is planning a vacation for 8 people. The Airbnb rental costs $3200. They also plan on renting a car that will cost $800. If they plan on splitting the costs equally, how much will each person’s share be?",
+            "original_solution": "The total cost for the vacation rentals will be $3200 + $800 = $4000.\nThe cost per person will be $4000 / 8 = $500.\n#### 500",
+            "original_answer": 500.0,
+            "transformed_solution": "The total cost for the vacation rentals will be $3200 - $800 = $2400.\nThe cost per person will be $2400 / 8 = $300.\n#### 300",
+            "transformed_answer": 300.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition operator to a subtraction operator in step 1 of the original solution, which results in a change of the total cost calculation from $3200 + $800 = $4000 to $3200 - $800 = $2400. The subsequent step that calculates the cost per person now uses the transformed total cost to give a new answer of $2400 / 8 = $300 instead of the original $500. The calculation itself is correct, however the transformed total cost is not, due to the operator change in step 1. The error is singular and isolated to the operator change."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMax is planning a vacation for 8 people. The Airbnb rental costs $3200. They also plan on renting a car that will cost $800. If they plan on splitting the costs equally, how much will each person’s share be?\n\n### Response:",
+        "output_str": "\nTo determine how much each person's share will be, we need to divide the total cost of the vacation by the number of people. In this case, the total cost of the vacation is $3200 + $800 = $4000. If there are 8 people, each person's share will be $4000 / 8 = $500.",
+        "extract_true_num": 500.0,
+        "extract_pred_num": 500.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "Solomon bought a dining table at a 10% discount and paid the sale price of $450. What was the original price of the dining table?",
+            "original_solution": "Since there was a 10% discount, this means that Solomon only paid 100% - 10% = 90% of the original price.\nThe 90% is represented by $450, so 1% is equal to $450/90 = $5.\nTherefore, the original price of the dining table is $5 x 100 =$500.\n#### 500",
+            "original_answer": 500.0,
+            "transformed_solution": "Since there was a 10% discount, this means that Solomon only paid 100% + 10% = 110% of the original price.\nThe 110% is represented by $450, so 1% is equal to $450/110 = $4.09.\nTherefore, the original price of the dining table is $4.09 x 100 = $409.\n#### 409",
+            "transformed_answer": 409.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 100% - 10% = 90% becomes 100% + 10% = 110%. This affects the subsequent related step 2 and 3. Step 2 changes from $450/90 = $5 to $450/110 = $4.09, and step 3 changes from $5 x 100 = $500 to $4.09 x 100 = $409. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSolomon bought a dining table at a 10% discount and paid the sale price of $450. What was the original price of the dining table?\n\n### Response:",
+        "output_str": "\nThe original price of the dining table was $500.",
+        "extract_true_num": 500.0,
+        "extract_pred_num": 500.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "A mother is making her own bubble mix out of dish soap and water for her two-year-old son. The recipe she is following calls for 3 tablespoons of soap for every 1 cup of water. If the container she hopes to store the bubble mix in can hold 40 ounces of liquid, and there are 8 ounces in a cup of water, how many tablespoons of soap should she add to the container (assuming that the soap itself doesn't count towards the capacity of the container)?",
+            "original_solution": "The 40-ounce container can hold 40/8 = 5 cups of water.\nThis means that 5*3 = 15 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "The 40-ounce container can hold 40*8 = 320 cups of water.\nThis means that 320*3 = 960 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 960",
+            "transformed_answer": 960.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This case changes the division operator in step 1 of the original solution to a multiplication operator, which results in an incorrect calculation of 40*8=320 instead of the correct 40/8=5. This incorrect value is used in step 2 to incorrectly multiply by the 3 tablespoons of soap per cup, resulting in a mistaken value of 960 tablespoons of soap. The error is only in the operator change in step 1; the calculations are correct based on the wrong assumption, but the result is incorrect. The subsequent step involves correct arithmetic based on the prior step's result, leading to an incorrect final answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA mother is making her own bubble mix out of dish soap and water for her two-year-old son. The recipe she is following calls for 3 tablespoons of soap for every 1 cup of water. If the container she hopes to store the bubble mix in can hold 40 ounces of liquid, and there are 8 ounces in a cup of water, how many tablespoons of soap should she add to the container (assuming that the soap itself doesn't count towards the capacity of the container)?\n\n### Response:",
+        "output_str": "\nTo determine how many tablespoons of soap to add to the container, we need to calculate the total volume of the bubble mix. Since the recipe calls for 3 tablespoons of soap for every 1 cup of water, and the container can hold 40 ounces of liquid, we can calculate the volume of the bubble mix as follows:\n\n40 ounces = 40 / 8 ounces per cup = 5 cups\n\nSo, the total volume of the bubble mix is 5 cups x 3 tablespoons per cup = 15 tablespoons of soap.\n\nTherefore, the mother should add 15 tablespoons of soap to the container.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "Anna baked 60 cupcakes. She gives away 4/5 of the cupcakes to her classmates. Of the remaining 1/5 of cupcakes, she eats 3 cupcakes. How many cupcakes does she have left?",
+            "original_solution": "After giving away 4/5 of the cupcakes, Anna has 60 / 5 = 12 cupcakes\nAfter eating 3 cupcakes, Anna has 12 - 3 = 9 cupcakes.\n#### 9",
+            "original_answer": 9.0,
+            "transformed_solution": "After giving away 4/5 of the cupcakes, Anna has 60 * 5 = 300 cupcakes\nAfter eating 3 cupcakes, Anna has 300 - 3 = 297 cupcakes.\n#### 297",
+            "transformed_answer": 297.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the division in step 1 into multiplication, changing 60 / 5 = 12 to 60 * 5 = 300 by changing / to *. This affects step 2, but only the number of cupcakes Anna has is incorrect due to the change in step 1, while the subtraction itself in step 2 is calculated correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAnna baked 60 cupcakes. She gives away 4/5 of the cupcakes to her classmates. Of the remaining 1/5 of cupcakes, she eats 3 cupcakes. How many cupcakes does she have left?\n\n### Response:",
+        "output_str": "\nAnna has 12 cupcakes left after giving away 4/5 of them. Since she ate 3 cupcakes, she has 12 - 3 = 9 cupcakes left.",
+        "extract_true_num": 9.0,
+        "extract_pred_num": 9.0,
+        "is_correct": true
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "Chris wanted to buy a new video game that costs $60 as well as an assortment of candy that costs $5.  To earn the money, he agreed to babysit his little sister for $8 per hour.  If he works 9 hours, how much money will be left over after he makes his purchases?",
+            "original_solution": "He wants to buy a $60 game and $5 of candy so 60 + 5 = $65\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $65 so 72-65 = $7 left over\n#### 7",
+            "original_answer": 7.0,
+            "transformed_solution": "He wants to buy a $60 game and $5 of candy so 60 - 5 = $55\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $55 so 72-55 = $17 left over\n#### 17",
+            "transformed_answer": 17.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition to subtraction in step 1, turning 60 + 5 = $65 into 60 - 5 = $55. The subsequent step 3 that uses the result of step 1 is affected, changing from 72 - 65 = $7 to 72 - 55 = $17. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, leading to an incorrect result for step 1, which subsequently affects the final answer. All other calculations in step 2 and step 3 are correct, considering the altered outcome from step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nChris wanted to buy a new video game that costs $60 as well as an assortment of candy that costs $5.  To earn the money, he agreed to babysit his little sister for $8 per hour.  If he works 9 hours, how much money will be left over after he makes his purchases?\n\n### Response:",
+        "output_str": "\nTo find out how much money will be left over after Chris makes his purchases, we need to calculate the total cost of the items he wants to buy and then subtract the amount he will earn from babysitting.\n\nThe total cost of the video game and candy is $60 + $5 = $65.\n\nIf Chris works 9 hours, he will earn $8 x 9 = $72.\n\nSo, the amount left over after Chris makes his purchases is $72 - $65 = $7.\n\nTherefore, Chris will have $7 left over after he makes his purchases.",
+        "extract_true_num": 7.0,
+        "extract_pred_num": 7.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "Travis and his brother joined a trick-or-treat event. They collected 68 pieces of candy altogether. Each of them ate 4 pieces of candy after the event. How many pieces of candy were left?",
+            "original_solution": "They ate a total of 4 x 2 = 8 pieces of candy after the event.\nSo, Travis and his brother have 68 - 8 = 60 pieces of candy left.\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "They ate a total of 4 + 2 = 6 pieces of candy after the event.\nSo, Travis and his brother have 68 - 6 = 62 pieces of candy left.\n#### 62",
+            "transformed_answer": 62.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 1 into an addition, resulting in the incorrect calculation of the total number of candies eaten. Instead of multiplying 4 by 2 to get 8, it adds 4 and 2 to get 6. The result of this incorrect operation then affects step 2, where the number of candies left is calculated. Using the wrong total number of candies eaten, the calculation becomes 68 - 6, resulting in 62 candies left, which is different from the original answer. All other aspects of the calculations are performed correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTravis and his brother joined a trick-or-treat event. They collected 68 pieces of candy altogether. Each of them ate 4 pieces of candy after the event. How many pieces of candy were left?\n\n### Response:",
+        "output_str": "\nThere were 68 pieces of candy collected by Travis and his brother. After they each ate 4 pieces of candy, there were 68 - 8 = 60 pieces of candy left.",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 79,
+        "gsm8k_data": {
+            "question": "Each turtle lays a clutch of 20 eggs. If 40% of the eggs successfully hatch, how many hatchlings do 6 turtles produce?",
+            "original_solution": "First find the number of eggs that each turtle successfully hatches: 20 eggs * 40% = 8 eggs\nThen multiply the number of eggs per turtle by the number of turtles to find the total number of eggs: 8 eggs/turtle * 6 turtles = 48 turtles\n#### 48",
+            "original_answer": 48.0,
+            "transformed_solution": "First find the number of eggs that each turtle successfully hatches: 20 eggs / 40% = 50 eggs\nThen multiply the number of eggs per turtle by the number of turtles to find the total number of hatchlings: 50 eggs/turtle * 6 turtles = 300 turtles\n#### 300",
+            "transformed_answer": 300.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 1 to division, converting 20 eggs * 40% = 8 eggs to 20 eggs / 40% = 50 eggs by changing * to /. This leads to a different result in the first step, which then affects step 2. Step 2, which should compute the number of hatchlings from the total number of successfully hatched eggs, changes the total from 48 to 300 (8 eggs/turtle * 6 turtles = 48 turtles becomes 50 eggs/turtle * 6 turtles = 300 turtles). It should be noted that each step is calculated correctly based on the transformed operation, although the operation in step 1 is incorrect, leading to incorrect results in subsequent steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nEach turtle lays a clutch of 20 eggs. If 40% of the eggs successfully hatch, how many hatchlings do 6 turtles produce?\n\n### Response:",
+        "output_str": "\nIf 6 turtles lay a clutch of 20 eggs each, and 40% of the eggs successfully hatch, then the number of hatchlings produced by the 6 turtles is:\n\n6 x 20 = 120 eggs\n\n40% of 120 = 48 eggs\n\nTherefore, 6 turtles produce 48 hatchlings.",
+        "extract_true_num": 48.0,
+        "extract_pred_num": 48.0,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "Jane purchased 15 ice cream cones and 5 cups of pudding. Each ice cream cone cost $5 and each cup of pudding cost $2. How much more did Jane spend on ice cream than on pudding, in dollars?",
+            "original_solution": "The cost of 15 cones of ice cream was 15 × $5 = $75.\nThe cost of the 5 cups of pudding was 5 × $2 = $10.\nJane spent $75 - $10 = $65 more on ice cream than on pudding.\n#### 65",
+            "original_answer": 65.0,
+            "transformed_solution": "The cost of 15 cones of ice cream was 15 ÷ $5 = $3.\nThe cost of the 5 cups of pudding was 5 × $2 = $10.\nJane spent $3 - $10 = -$7 more on ice cream than on pudding.\n#### -7",
+            "transformed_answer": -7.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example converts the multiplication in step 1 into division, changing 15 × $5 = $75 to 15 ÷ $5 = $3 by changing × to ÷. Its subsequent step 2 related to it remains the same. Then step 3 uses the results from step 1, and the correct calculation should be $3 - $10 = -$7. The result of step 3 is incorrect due to the wrong calculation of step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJane purchased 15 ice cream cones and 5 cups of pudding. Each ice cream cone cost $5 and each cup of pudding cost $2. How much more did Jane spend on ice cream than on pudding, in dollars?\n\n### Response:",
+        "output_str": "\nJane spent $75 on ice cream cones ($5 x 15 = $75) and $10 on pudding ($2 x 5 = $10). Therefore, Jane spent $65 more on ice cream than on pudding ($75 - $10 = $65).",
+        "extract_true_num": 65.0,
+        "extract_pred_num": 65.0,
+        "is_correct": true
+    }
+]

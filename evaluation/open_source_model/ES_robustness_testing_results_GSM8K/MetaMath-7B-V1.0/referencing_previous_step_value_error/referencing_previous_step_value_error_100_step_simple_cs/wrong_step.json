@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Michael wants to lose 10 pounds by June. He lost 3 pounds in March and 4 pounds in April. How much weight does he have to lose in May to meet his goal?",
+        "original_solution": "In March and April, he lost 3 + 4 = 7 pounds.\nTo meet his goal, he needs to lose 10 – 7 = 3 pounds.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "In March and April, he lost 3 + 4 = 7 pounds.\nTo meet his goal, he needs to lose 10 – 6 = 4 pounds.\n#### 4",
+        "transformed_answer": 4.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 7 as 6 from step 1 and changes 10 – 7 = 3 to 10 – 6 = 4. It should be noted that step 1 in the transformed_solution <In March and April, he lost 3 + 4 = 7 pounds.> should be the same as the step 1 in the original_solution <In March and April, he lost 3 + 4 = 7 pounds.> and calculates its result 7 correctly. The subsequent step (step 2) will be affected by the erroneous result of step 1 but still be calculated correctly based on the mistaken reference. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "To determine if the [Solution] is correct, we need to check if it meets the given goal.\nThe goal is to lose 10 pounds by June.\nIn March and April, Michael lost 7 pounds.\nTo meet his goal, he needs to lose 10 - 7 = 3 pounds in May.\nTherefore, the [Solution] is incorrect, and the first wrong step is step 3.\nThe explanation is: The solution is incorrect, the first wrong step is step 3, and the explanation is that the goal is to lose 10 pounds by June, and he has already lost 7 pounds in March and April. To meet his goal, he needs to lose 10 - 7 = 3 pounds in May. Therefore, the [Solution] is incorrect, and the first wrong step is step 3.\n#### 3\nThe answer is: 3"
+    }
+]

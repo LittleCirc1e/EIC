@@ -1,0 +1,38 @@
+[
+    {
+        "question": "When 15 is divided by integer u, the remainder is 4. For how many values of u is this be true?",
+        "original_solution": "We are looking for the values of u that satisfy the equation 15 % u = 4\nWe can calculate manually using different values for u to see if 15 % u = 4\nWe find that when u = 11, 15 % 11 = 4\nTherefore, there is 1 value of u for which the equation is true.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "We are looking for the values of u that satisfy the equation 15 * u = 4\nWe can calculate manually using different values for u to see if 15 * u = 4\nWe find that when u = 11, 15 * 11 = 165\nTherefore, there are 0 values of u for which the equation is true.\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the modulus operator in step 1 into multiplication, and by changing % to *, the expression 15 % u = 4 becomes 15 * u = 4. This changes the context and meaning of the problem and does not make sense as the question asks for a remainder of 4 when 15 is divided by u. Therefore, there are no values of u that satisfy this altered equation, and the number of valid u values becomes 0 as opposed to 1 in the original solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 1, and the explanation is that the operator in step 2 encounters an error, multiplication should be used instead of division. It miscalculates 15*u=4 instead of 15/u=4. This affects the final result.\n\nPlease provide your response."
+    },
+    {
+        "question": "a salesmanâ€™s terms were changed from a flat commission of 5% on all his sales to a fixed salary of Rs. 1000 plus 2.5% commission on all sales exceeding Rs. 4,000. If his remuneration as per the new scheme was Rs. 600 more than that by the previous scheme, his sales were worth",
+        "original_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) - 0.05x = 600\n1000 - 100 + 0.025x - 0.05x = 600\n0.025x - 0.05x = 600 - 900\n-0.025x = -300\nx = 12000\n#### 12000",
+        "original_answer": 12000.0,
+        "transformed_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) + 0.05x = 600\n1000 + 100 + 0.025x + 0.05x = 600\n0.025x + 0.05x = 600 - 1100\n0.075x = -500\nx = -6666.67\n#### -6666.67",
+        "transformed_answer": -6666.67,
+        "wrong_step": 7,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The change occurred in step 7 where the subtraction operator (-) was changed to an addition operator (+). Originally, 1000 - 100 + 0.025x - 0.05x = 600, was transformed to 1000 + 100 + 0.025x + 0.05x = 600. This led to the altered equation 0.025x + 0.05x = 600 - 1100, which distorted the final calculation into an incorrect total sales worth (x). The operator in step 7 is incorrect, and accordingly, its calculation is also incorrect, which directly affects the final result, leading to an incorrect transformed solution. All other calculations derived from this error were correctly performed based on the modified values.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 12000, and the explanation is that the operator in step 6 encounters an error and should use multiplication instead of addition. It miscalculates 0.075x = -500 instead of 0.075x = 3750, resulting in the final erroneous result.\n\nPlease provide your answer."
+    },
+    {
+        "question": "In a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?",
+        "original_solution": "There are 160 x 1/2 = 80 girls in the class.\nThere are 160 - 80 = 80 boys in the class.\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "There are 160 / 1/2 = 320 girls in the class.\nThere are 160 - 320 = -160 boys in the class.\n#### -160",
+        "transformed_answer": -160.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the multiplication operator in step 1 has been changed to division, thus incorrectly calculating the number of girls as 160 / 1/2 = 320 instead of 160 x 1/2 = 80. This results in an impossible count of boys, calculated in step 2 as 160 - 320 = -160, which is not a feasible number of students. The original count was 80 boys, so the transformation caused by the operator error in step 1 led to a nonsensical answer. Every step's calculation is correct except for the incorrect application of the operator in step 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 80, and the explanation is that the operator in step 2 encounters an error, division should be used instead of subtraction. It miscalculates 160-320= -160 instead of 160/2=80, resulting in the final erroneous result."
+    }
+]

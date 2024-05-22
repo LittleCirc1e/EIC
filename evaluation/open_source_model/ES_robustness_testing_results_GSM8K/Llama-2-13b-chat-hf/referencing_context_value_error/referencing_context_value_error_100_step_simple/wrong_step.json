@@ -1,0 +1,26 @@
+[
+    {
+        "question": "A bead shop sells one set of crystal beads at $9 each and one set of metal beads at $10 each. Nancy buys one set of crystal beads and two sets of metal beads. How much does she spend in all?",
+        "original_solution": "Two sets of metal beads cost 2 x $10 = $20.\nTherefore, Nancy spends $9 + $20 = $29 in all.\n#### 29",
+        "original_answer": 29.0,
+        "transformed_solution": "Two sets of metal beads cost 2 x $12 = $24.\nTherefore, Nancy spends $9 + $24 = $33 in all.\n#### 33",
+        "transformed_answer": 33.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $10 in the question as $12 wrongly, and calculates 2 x $12 = $24 instead of 2 x $10 = $20. Its subsequent related step will be affected, calculating $9 + $24 = $33 instead of $9 + $20 = $29 in step 2. Please note that you should only consider one error, so step 2 still references $9 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #2, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe correct solution is:\n\nTwo sets of metal beads cost 2 x $10 = $20.\nTherefore, Nancy spends $9 + $20 = $29 in all.\n#### 29.\n\nThe first wrong step in the [Solution] is step #2, where the price of one set of metal beads is incorrectly stated as $12 instead of $10. This error propagates to the final answer, leading to an incorrect total cost of $33 instead of $29."
+    },
+    {
+        "question": "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?",
+        "original_solution": "There are 25+40+35=100 flowers total.\nThere are 40+35=75 flowers that are not roses.\nTherefore, (75/100)*100=75% of the flowers are not roses.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "There are 25+40+30=95 flowers total.\nThere are 40+30=70 flowers that are not roses.\nTherefore, (70/95)*100=73.68% of the flowers are not roses.\n#### 73.68",
+        "transformed_answer": 73.68,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 35 in the question as 30 wrongly, and calculates 25+40+30=95 instead of 25+40+35=100. Its subsequent related steps, step 2 and 3, will be affected. Step 2 changes from 40+35=75 to 40+30=70, and step 3 changes from (75/100)*100=75% to (70/95)*100=73.68%. Please note that you should only consider one error, so step 2 still references 40 in the question correctly.",
+        "eval_result": "\n\nPlease provide your response here.\n\nPlease note that the [Solution] is incorrect, and the first wrong step is step #4, which is the calculation of 30 flowers. The correct calculation for the number of flowers that are not roses is 40+35=75, not 70. Therefore, the percentage of flowers that are not roses is (75/95)*100=78.75%, not 73.68%.\n\nThe solution is incorrect, the first wrong step is step #4, and the explanation is that the calculation of 30 flowers is incorrect, and the correct calculation is 40+35=75."
+    }
+]

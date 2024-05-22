@@ -1,0 +1,110 @@
+[
+    {
+        "question": "Baking in batches of 65 cupcakes, Carla made 45 batches of cupcakes for her daughter's birthday party. She then took 5 cupcakes from each batch, and fed them to her dogs. If Carla's daughter had 19 friends and they shared the remaining cupcakes equally among them, including the daughter, calculate the number of cupcakes that each of Carla's daughter's friends ate.",
+        "original_solution": "If Carla sampled 5 cupcakes from each batch and fed them to her dogs, each batch had 65-5 = 60 cupcakes afterwards.\nSince Carla made 45 batches of cupcakes for her daughter's birthday party, after removing the 5 cupcakes from each batch, Carla's daughter and her friends received 45*60 = 2700 cupcakes.\nThe total number of people at the party is 19 friends + 1 daughter = 20\nAfter sharing the cupcakes equally among them, Carla's daughter and her friends each received 2700/20 = 135 cupcakes\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "If Carla sampled 5 cupcakes from each batch and fed them to her dogs, each batch had 65-5 = 60 cupcakes afterwards.\nSince Carla made 50 batches of cupcakes for her daughter's birthday party, after removing the 5 cupcakes from each batch, Carla's daughter and her friends received 50*60 = 3000 cupcakes.\nThe total number of people at the party is 19 friends + 1 daughter = 20\nAfter sharing the cupcakes equally among them, Carla's daughter and her friends each received 3000/20 = 150 cupcakes\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 45 in the question as 50 wrongly, and calculates 50*60=3000 instead of 45*60=2700. Its subsequent related step will be affected, calculating 3000/20=150 instead of 2700/20=135 in step 4. Please note that you should only consider one error, so step 3 still references 19 friends and 1 daughter correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2.\n\nThe solution states that after removing 5 cupcakes from each batch, each batch had 60 cupcakes remaining. However, this is incorrect as there are only 50 batches in total, so the total number of cupcakes remaining after removing 5 cupcakes from each batch is 50*60 = 3000 cupcakes. Therefore, the final answer is #3000."
+    },
+    {
+        "question": "Georgia is working on a math test with 75 problems on it. After 20 minutes she has completed 10 problems. After another 20 minutes, she has completed twice as many problems. She has 40 minutes to complete the rest of the test. How many problems does she have left to solve?",
+        "original_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 10 x 2 = 20.\nWith 40 minutes left she has completed 10 + 20 problems = 30 problems.\nFrom the original 75 problems she has solved 30, 75 - 30 = 45 problems she has left.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 15 x 2 = 30.\nWith 40 minutes left she has completed 10 + 30 problems = 40 problems.\nFrom the original 75 problems she has solved 40, 75 - 40 = 35 problems she has left.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 erroneously references 10 in the original solution as 15, which leads to the calculation of 15 x 2 = 30 instead of the correct 10 x 2 = 20. All the subsequent steps (3 and 4) are affected by the erroneous result of step 2 but are calculated correctly based on that result. In step 3 the number 10 + 30 = 40 is correct in context to the previous error and in step 4, 75 - 40 = 35 is correct following from the affected step 3. Step 1 is correct and steps that reference the numbers from the question in other steps still reference them correctly except for step 2 where the error occurs.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2. The explanation is: The solution assumes that Georgia completed 15 problems in 20 minutes, but this is not possible as she only has 40 minutes left to complete the rest of the test. Therefore, the number of problems she completed in 20 minutes is actually half of what the solution states, 15 / 2 = 7.5 problems. This means she has 75 - 7 = 68 problems left to complete. #."
+    },
+    {
+        "question": "Susan is taking a two week vacation. She works five days a week and has six days of paid vacation. The rest of her workdays will be unpaid vacation time. She gets paid $15 per hour and works 8 hours a day. How much pay will she miss on her vacation?",
+        "original_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $15 per hour, she is paid 15 * 8 = $120 per day.\nAt $120 per day, Susan will miss 120 * 4 = $480 on her vacation.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $20 per hour, she is paid 20 * 8 = $160 per day.\nAt $160 per day, Susan will miss 160 * 4 = $640 on her vacation.\n#### 640",
+        "transformed_answer": 640.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references $15 in the question as $20 wrongly, and calculates 20 * 8 = $160 per day instead of 15 * 8 = $120 per day. The subsequent related step, step 4, inherits this error and will be affected accordingly, calculating 160 * 4 = $640 instead of 120 * 4 = $480. All other steps that reference this number should still reference this number correctly except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe solution calculates the number of days Susan works in two weeks as 2 * 5 = 10 days, which is correct. However, it then calculates the number of unpaid vacation days as 10 - 6 = 4 days, which is incorrect. Susan does not work any unpaid vacation days, as all of her vacation days are paid. Therefore, the correct calculation for the amount of pay Susan will miss on her vacation is 160 * 8 = $1280, not $640."
+    },
+    {
+        "question": "The ratio of men to women on a bus is 5:9. If the total number of passengers on the bus is 84, and 20 women alight from the bus at the next stop, how many women have remained on the bus?",
+        "original_solution": "The total ratio representing the number of women on the bus is 5+9=14\nThe fraction from the ratio representing the number of women is 9/14, and since the total number of passengers representing the full ratio is 84, there are 9/14*84=54 women on the bus.\nIf 20 women alight from the bus at the next stop, the number of women remaining on the bus becomes 54-20=34\n#### 34",
+        "original_answer": 34.0,
+        "transformed_solution": "The total ratio representing the number of passengers on the bus is 5+9=14\nThe fraction from the ratio representing the number of women is 9/14, and since the total number of passengers representing the full ratio is 80, there are 9/14*80=51.43, approximately 51 women on the bus.\nIf 20 women alight from the bus at the next stop, the number of women remaining on the bus becomes 51-20=31\n#### 31",
+        "transformed_answer": 31.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 84 in the question as 80 wrongly, and calculates 9/14*80=51.43, approximately 51 women on the bus, instead of 9/14*84=54. Its subsequent related step (the calculation of the number of women remaining) will be affected, showing 51-20=31 instead of 54-20=34 in step 3.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2, which must be an integer. The explanation is # The ratio of men to women on the bus is 5:9, not 5+9=14. Therefore, the fraction representing the number of women is 9/14, not 9/14*80=51.43. If 20 women alight from the bus at the next stop, the number of women remaining on the bus becomes 9/14, not 31. Therefore, the correct answer is #9."
+    },
+    {
+        "question": "A bowl of fruit holds 18 peaches. Four of the peaches are ripe and two more ripen every day, but on the third day three are eaten. How many more ripe peaches than unripe peaches are in the bowl after five days?",
+        "original_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 14 = 4 unripe peaches left.\nTherefore, there will be 11 - 4 = 7 more ripe peaches than unripe peaches in the bowl after five days.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nTwo were eaten, so there will be 14 - 2 = 12 ripe peaches left.\nThere are 18 - 12 = 6 unripe peaches left.\nTherefore, there will be 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after five days.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 3 peaches eaten as 2 wrongly, and calculates 14 - 2 = 12 instead of 14 - 3 = 11. Its subsequent related steps will be affected, but still be calculated correctly. Step 4 changes from 18 - 14 = 4 to 18 - 12 = 6. Step 5 changes from 11 - 4 = 7 to 12 - 6 = 6. Please note that you should only consider one error, so step 1 and step 2 still correctly reference the number of peaches that ripen every day and the number initially ripe.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3, which must be an integer. The explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe solution states that 2 * 5 = 10 peaches will ripen in 5 days, but this is incorrect. The correct calculation is 2 * 5 = 10 + 4 = 14 peaches will ripen in 5 days, since 4 peaches were already ripe at the start of the 5 days. Therefore, there will be 14 - 2 = 12 ripe peaches left after 5 days, not 12 - 6 = 6 more ripe peaches than unripe peaches. The solution is incorrect because it does not account for the initial number of ripe peaches."
+    },
+    {
+        "question": "John's dog has a litter of 8 puppies. He gives away half of them. He keeps one of the remaining puppies. He then takes the remaining puppies and sells them each for $600. He had to give the owner of the stud $300. How much money does he profit?",
+        "original_solution": "He had 8/2=4 left after giving some puppies away\nHe then keeps one so he sells 4-1=3 puppies\nThat means he made 3*600=$1800\nSo his profit was 1800-300=$1500\n#### 1500",
+        "original_answer": 1500.0,
+        "transformed_solution": "He had 8/2=4 left after giving some puppies away\nHe then keeps one so he sells 4-1=3 puppies\nThat means he made 3*500=$1500\nSo his profit was 1500-300=$1200\n#### 1200",
+        "transformed_answer": 1200.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 600 in the question as 500 wrongly, and calculates 3*500=$1500 instead of 3*600=$1800. Its subsequent related step will be affected, calculating 1500-300=$1200 instead of 1800-300=$1500 in step 4. Please note that you should only consider one error, so step 4 still references 300 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3. The explanation is: The solution assumes that John sold all 4 puppies for $500 each, but in reality, he only sold 3 puppies for $500 each, as he kept one puppy. Therefore, the profit is $1200 - $300 = $900."
+    },
+    {
+        "question": "Carolyn works for a delivery service company that hires on a contract basis. In May, they hired 40 employees, paying each employee $15 per hour for a 40-hour workweek. In June, 1/4 of the employees' contracts expired. Calculate the total amount of money the company paid to the employees in the two months.",
+        "original_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 40 employees, the company paid 40*$2400= $96000 to all of its contract employees in May.\nIn June, 1/4 of the employees' contracts expired, that is 1/4*40 = 10 employees.\nThe total number of employees whose contracts were valid in June was 40-10 = 30 employees.\nThe total amount of money paid to the contracted employees in June is 30*$2400 = $72000\nIn the two months, the company paid a total of $72000+$96000 = $168000\n#### 168000",
+        "original_answer": 168000.0,
+        "transformed_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 35 employees, the company paid 35*$2400= $84000 to all of its contract employees in May.\nIn June, 1/4 of the employees' contracts expired, that is 1/4*40 = 10 employees.\nThe total number of employees whose contracts were valid in June was 40-10 = 30 employees.\nThe total amount of money paid to the contracted employees in June is 30*$2400 = $72000\nIn the two months, the company paid a total of $72000+$84000 = $156000\n#### 156000",
+        "transformed_answer": 156000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 40 in the question as 35 wrongly, and as a result calculates 35*$2400 = $84000 instead of 40*$2400 = $96000. This affects the final calculation where the total paid over two months is now $72000+$84000 = $156000 instead of $72000+$96000 = $168000. The number 35 erroneously used in this step does not occur in the question; however, for the purpose of this case transformation, it was assumed to be a referencing error. Please note that all other steps reference the original number 40 correctly, except for the step where the error is introduced.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #3. The explanation is # The calculation for the total amount of money paid to the employees in May is incorrect. The total number of employees whose contracts were valid in May is 40-10 = 30, not 30*. The correct calculation for the total amount of money paid to the contracted employees in May is 30*$2400 = $72000."
+    },
+    {
+        "question": "A shady restaurant is charging customers gratuities after taxes without them being aware. If my total bill was $140, the sales tax in my city is 10%, I ordered a NY Striploin for $80, and I ordered a glass of wine for $10, how much did they charge me for gratuities?",
+        "original_solution": "The total bill before taxes or gratuities was $80 for the steak + $10 for the wine = $80+$10 = $90\nIf the tax is 10%, then the taxes paid were $90 * 10% = $9\nThat means that the total bill before gratuities was $90 + $9 = $99\nIf the final bill was $140, then you were charged $140-$99 = $41 for gratuities\n#### 41",
+        "original_answer": 41.0,
+        "transformed_solution": "The total bill before taxes or gratuities was $80 for the steak + $10 for the wine = $80+$10 = $90\nIf the tax is 10%, then the taxes paid were $90 * 15% = $13.5\nThat means that the total bill before gratuities was $90 + $13.5 = $103.5\nIf the final bill was $140, then you were charged $140-$103.5 = $36.5 for gratuities\n#### 36.5",
+        "transformed_answer": 36.5,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the tax rate as 15% instead of the correct 10% as given in the question, and calculates $90 * 15% = $13.5 instead of $90 * 10% = $9. Its subsequent related steps, step 3 and step 4 will be affected. Step 3 changes from adding $9 to the initial $90 to adding $13.5, and step 4 changes from subtracting $99 from $140 to subtracting $103.5 from $140. Please note that you should only consider one error, so other references to the tax percentage in other steps are not modified and are still calculated correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2, which must be an integer. The explanation is # The sales tax in the city is 10%, not 15%. So the total bill before taxes or gratuities was $80 for the steak + $10 for the wine = $80+$10 = $90. If the tax is 10%, then the taxes paid were $90 * 10% = $9. If the final bill was $140, then you were charged $140-$9 = $131 for gratuities. #"
+    },
+    {
+        "question": "David is taking a data analytics course that lasts for 24 weeks. The course consists of 2 three-hour classes and 1 four-hour class each week. In addition, David must spend 4 hours each week working on small group homework assignments. How many hours will he spend on this course?",
+        "original_solution": "Each week, David will spend 3 hours + 3 hours + 4 hours = 10 hours in class.\nAdd to that his 4 hours of small group work, 4 + 10 = 14 hours a week.\nHe will spend 14 hours x 24 weeks = 336 hours on the course.\n#### 336",
+        "original_answer": 336.0,
+        "transformed_solution": "Each week, David will spend 3 hours + 3 hours + 4 hours = 10 hours in class.\nAdd to that his 5 hours of small group work, 5 + 10 = 15 hours a week.\nHe will spend 15 hours x 24 weeks = 360 hours on the course.\n#### 360",
+        "transformed_answer": 360.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 4 in the question as 5 wrongly, and calculates 5 + 10 = 15 hours a week instead of 4 + 10 = 14 hours a week. Its subsequent related step will be affected, calculating 15 hours x 24 weeks = 360 hours on the course instead of 14 hours x 24 weeks = 336 hours. Please note that you should only consider one error, so step 3 still references 24 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step #2, which must be an integer. The explanation is # David is incorrect because he adds the hours from each week separately, without considering the fact that the course consists of 23 weeks of 3 hours each, and 1 week of 4 hours. Therefore, the total hours spent on the course is 23 x 3 = 69 hours + 4 = 73 hours, not 360 hours."
+    }
+]

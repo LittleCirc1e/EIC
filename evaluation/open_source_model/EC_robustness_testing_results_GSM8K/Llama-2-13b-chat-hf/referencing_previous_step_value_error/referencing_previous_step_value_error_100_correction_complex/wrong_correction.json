@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Meryll wants to write 35 multiple-choice questions and 15 problem-solving questions for her Chemistry class. She already has written 2/5 of the multiple-choice and 1/3 of the problem-solving questions. How many more questions does she need to write for both multiple-choice and problem-solving?",
+        "original_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 19 questions = 31 questions more.\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 20 questions = 30 questions more.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 19 as 20 from step 3 and changes 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. It should be noted that step 3 in the transformed_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> should be the same as the step 3 in the original_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> and calculates its result 50 correctly. Step 4 affects the subsequent step 5 related to it, changing from 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. You need to only consider one error of referencing, so the calculation of all steps starting from the wrong step and the ones following it is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 30, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 35 + 15 = 50 instead of 35 + 15 = 45. The subsequent step 5 references the result of step 4, calculating 50 - 20 = 30 instead of 45 - 20 = 25. Therefore, the final incorrect answer is 30."
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "question": "If 40% of a number is equal to 2/3 of another number, what is the ratio of the first number to the second number?",
+        "original_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 100 to get rid of the decimal: 40x = 200/3y\nDivide both sides by 40: x = (200/3*1)/40y\nx = 5/3y\nThe ratio of the first number to the second number is 5:3\n#### 5:3",
+        "original_answer": "5:3",
+        "transformed_solution": "Let the first number be x and the second number be y.\n0.40x = 2/3y\nMultiply both sides by 3 to get rid of the fraction: 0.40x*3 = 2/3y*3\n0.40x*3 = 2y\nDivide both sides by 0.40: (0.40x*3)/0.40 = 2y/0.40\nx*3 = 5y\nThe ratio of the first number to the second number is 3:5\n#### 3:5",
+        "transformed_answer": "3:5",
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the intermediate step 'Divide both sides by 40: x = (200/3*1)/40y' has been removed. Because the subsequent related step 'x = 5/3y' was originally referring to the result of the removed step, the subsequent steps need to refer to the result of the previous step 'Multiply both sides by 100 to get rid of the decimal: 40x = 200/3y.' However, instead of correcting the process to reflect the impact of this deletion, a wrong manipulation has been performed by multiplying both sides by 3, leading to the incorrect transformed_solution 'x*3=5y.' Consequently, the previous step's result has been misused, and a new error has been introduced, leading to the incorrect conclusion that 'The ratio of the first number to the second number is 3:5' instead of the correct '5:3.' The wrong_step is 3 since it is the first step referencing the result of the deleted step and introducing the incorrect calculation.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because it follows the correct steps to arrive at the answer. The ratio of the first number to the second number is indeed 3:5.\n\nIf the solution was incorrect, the response would be:\n\nThe solution is incorrect, the correct answer is #, and the explanation is #. The solution is incorrect because it omits a necessary reasoning step, which is the multiplication of both sides of the equation by 3 to get rid of the fraction. If this step is added, the entire reasoning will become correct, and the ratio of the first number to the second number will be 3:5."
+    },
+    {
+        "question": "Find the greatest number which leaves the same remainder when it divides 25, 62, and 105.",
+        "original_solution": "Let x be the greatest number.\nThen, the remainder when x divides 25 is 25 % x.\nThe remainder when x divides 62 is 62 % x.\nThe remainder when x divides 105 is 105 % x.\nSo, we have 25 % x = 62 % x = 105 % x.\nThe greatest number x is the greatest common divisor of 25, 62, and 105.\nBy finding the GCD of 25, 62, and 105, we get x = 1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Then, the remainder when x divides 25 is 25 % x.\nThe remainder when x divides 62 is 62 % x.\nThe remainder when x divides 105 is 105 % x.\nSo, we have 25 % x = 62 % x = 105 % x.\nThe greatest number x is the greatest common divisor of the differences (62-25), (105-62), (105-25).\nBy finding the GCD of (62-25), (105-62), (105-25), we get x = 37.\n#### 37",
+        "transformed_answer": 37.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step 'Let x be the greatest number.' has been removed. Since step 1 often references a concept or introduces a variable and doesn't involve calculations, deleting it should not affect subsequent steps' calculations. The subsequent steps originally referencing result x should not change. However, the calculation to find the greatest number x has been modified to involve finding the GCD of the differences between given numbers, instead of the GCD of numbers themselves, based on the property that if numbers leave the same remainder when divided by x, their differences also should be divisible by x. Thus, we calculate the GCD of (62-25), (105-62), and (105-25) instead, which results in a GCD of 37. This is a logical modification of the solution rather than an erroneous step. Despite the deletion of step 1, the calculation remains valid, and the transformed answer is different from the original answer. Therefore, the wrong_step is marked as 1, referencing the first modified computational step in the transformed_solution.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution correctly identifies that the greatest common divisor of the differences (62-25), (105-62), (105-25) is 37, which is the greatest number that leaves the same remainder when it divides 25, 62, and 105. Therefore, the final answer is 37."
+    }
+]

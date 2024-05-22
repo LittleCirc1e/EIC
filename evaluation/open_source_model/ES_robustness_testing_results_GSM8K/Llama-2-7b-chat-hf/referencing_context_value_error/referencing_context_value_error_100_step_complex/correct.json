@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Ryanne is 7 years older than Hezekiah. Together Ryanne's and Hezekiah's ages equal 15 years. How many years old is Hezekiah?",
+        "original_solution": "Let H = Hezekiah's age\nRyanne = H + 7\n2H + 7 = 15\n2H = 8\nH = 4\nHezekiah is 4 years old.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Let H = Hezekiah's age\nRyanne = H + 5\n2H + 5 = 15\n2H = 10\nH = 5\nHezekiah is 5 years old.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 7 in the question as 5 wrongly, and calculates Ryanne = H + 5 instead of H + 7. Its subsequent related steps, step 3, 4, and 5, will be affected by this error but will still be calculated correctly based on the mistaken step 2 reference. Step 3 changes from 2H + 7 = 15 to 2H + 5 = 15, step 4 changes from 2H = 15 - 7 to 2H = 15 - 5, and step 5 changes from H = 8 / 2 to H = 10 / 2. Please note that you should only consider one error, so step 3 still references Ryanne correctly as H + 5 and does the calculation based on that incorrect reference.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 2H + 5 = 15 instead of 2H = 10, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    },
+    {
+        "question": "Farmer Randy has 1700 acres of cotton he needs to have planted in 5 days. With a crew of 2 tractors working for 2 days and then a crew of 7 tractors working for another 3 days, how many acres of cotton per day does each tractor need to plant to meet their planting deadline?",
+        "original_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 7 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1700 acres with their 25 tractor days, then each tractor team needs to plant 1700/25 = 68 acres of cotton per day.\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 5 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1600 acres with their 25 tractor days, then each tractor team needs to plant 1600/25 = 64 acres of cotton per day.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 1700 in the question as 1600 wrongly, and calculates 1600/25=64 instead of 1700/25=68. Its subsequent related step will be affected, producing a different result of 1600/25=64 instead of the correct 1700/25=68. Please note that you should only consider one error, so all other steps that reference the number of acres still reference 1700 correctly, except for the step referenced incorrectly.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 25 = 4 + 21 instead of 25 = 4 + 21. The subsequent step 5 references the result of step 4, calculating 1600 / 25 = 64 instead of 1600 / 4 = 40, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Sally is saving up for a trip to Sea World. She already has $28 saved. It costs her $10 to park, $55 to get into the park and $25 for a meal pass. Sea World is 165 miles away and her car gets 30 miles per gallon of gas. If gas costs $3 a gallon, how much more will she have to save up?",
+        "original_solution": "She will be driving 330 miles for her trip because 2 x 165 = 330\nThey will need 11 gallons of gas because 330 / 30 =11\nThe gas will cost $33 because 11 x 3 = 33\nHer total cost is $123 because 10 + 55 + 25 + 33 = 123\nShe needs to save $95 more because 123 - 28 = 95\n#### 95",
+        "original_answer": 95.0,
+        "transformed_solution": "She will be driving 330 miles for her trip because 2 x 165 = 330\nThey will need 11 gallons of gas because 330 / 30 = 11\nThe gas will cost $33 because 11 x 3 = 33\nHer total cost is $118 because 10 + 50 + 25 + 33 = 118\nShe needs to save $90 more because 118 - 28 = 90\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 55 in the question as 50 wrongly, and calculates 10 + 50 + 25 + 33 = 118 instead of 10 + 55 + 25 + 33 = 123. Its subsequent related step will be affected, calculating 118 - 28 = 90 instead of 123 - 28 = 95 in step 5.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 330 miles for the trip instead of 165 miles, which is the actual distance to Sea World. The subsequent step 5 references the result of step 4, calculating 11 gallons of gas instead of 4 gallons, resulting in an incorrect total cost. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

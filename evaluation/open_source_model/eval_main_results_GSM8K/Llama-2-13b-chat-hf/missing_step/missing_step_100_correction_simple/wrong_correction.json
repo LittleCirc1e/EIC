@@ -1,0 +1,14 @@
+[
+    {
+        "question": "A man decides to try and do everything off his bucket list while he is still young and fit enough to finish it all. One of his goals was to climb the seven summits. He realizes first he has to get in shape to do it and it takes him 2 years of working out to get healthy enough to take up mountain climbing. He then spends twice that long learning how to be a technically proficient mountain climber. After that he starts with the simplest mountain on the list and climbs them all. He spends 5 months climbing each mountain. After that he takes 13 months learning to dive and dives through all the caves he wants in 2 years. How much time did it take to get through all these goals?",
+        "original_solution": "He spent 2*2=4 years learning to climb\nHe spends 5*7=35 months climbing all 7 mountains\nAfter a 13 month break, he starts diving so that is 35+13=48 months\nThat means it is 48/12=4 years\nSo in total it all took 2+4+4+2=12 years\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "He spends 5*7=35 months climbing all 7 mountains\nAfter a 13 month break, he starts diving so that is 35+13=48 months\nThat means it is 48/12=4 years\nSo in total it all took 2+4+2+2=10 years\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step that calculates the time spent learning to climb is removed. Step 4 of the original_solution, which references the result '4 years' from the deleted Step 1, gets modified. The time spent preparing and learning to dive (2 years + 13 months) remains unaltered. However, since step 1 was removed, the total years cannot include the 4 years from the removed step. The new calculation in the transformed_solution should be the initial 2 years of working out, plus 4 years of mountaineering (calculated from the 48 months), plus 2 years of diving education, plus 2 years of actual diving, equaling 10 years in total. As per guidance given, the transformed solution has one less step compared to the original solution, and the wrong_step is the first one after the deletion that makes reference to the previous calculation ('2+4+4+2=12 years' changes to '2+4+2+2=10 years'), which is transformed step 4.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 8 years, and the explanation is as follows:\n\nThe man spent 2 years working out and learning to be a technically proficient mountain climber, which is not included in the total time. Therefore, the correct total time is 2+4+2=8 years.\n\nThe solution is incorrect because it includes the time spent on learning to dive, which is not part of the original goal of climbing the seven summits. The correct answer is 2+4=6 years, not 10 years."
+    }
+]

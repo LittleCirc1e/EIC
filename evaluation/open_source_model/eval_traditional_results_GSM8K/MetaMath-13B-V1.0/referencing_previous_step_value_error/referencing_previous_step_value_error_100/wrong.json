@@ -1,0 +1,173 @@
+[
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "There are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?",
+            "original_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 10 marbles\n10 marbles are removed to leave 50-10 = 40 marbles\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 16 marbles\n16 marbles are removed to leave 50-16 = 34 marbles\n#### 34",
+            "transformed_answer": 34.0,
+            "wrong_step": 4,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 4 mistakenly references 10 as 16 when doubling the difference between the number of white and blue marbles. It should be noted that step 3 in the transformed_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> should be the same as the step 3 in the original_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> and calculates its result 5 correctly. Step 4 is affected by the erroneous referencing and changes 5*2 = 10 to 5*2 = 16. The subsequent step 5, which is the only step affected by step 4, correctly calculates the new number of marbles left as 50-16 = 34. You need to only consider one error of referencing, so the calculation of all steps is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?\n\n### Response:",
+        "output_str": "There are 20 white marbles and an equal number of red and blue marbles, so there are 20/3 = 6 red and blue marbles each.\nThe total number of white, red, and blue marbles is 20 + 6 + 6 = 32.\nJack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles, so he removes 2 * (20 - 6) = 2 * 14 = 28 marbles.\nTherefore, there are 32 - 28 = 4 marbles left in the box.\n#### 4\nThe answer is: 4",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 4.0,
+        "is_correct": false
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "Adam’s wardrobe is too crowded so he decides to donate some of his clothes to a charity shop. He takes out 4 pairs of pants, 4 jumpers, 4 pajama sets (top and bottom), and 20 t-shirts, then asks his friends if they have anything they want to donate. 3 of his friends donate the same amount of clothing as Adam each. Then he takes another look over his clothing and decides that he actually wants to keep half of his clothes. How many articles of clothing are being donated in total?",
+            "original_solution": "As pajama sets are made up of a top and a bottom, there are 4 pajama sets * 2 = 8 articles of clothing from Adam's donation.\nIn total, Adam is donating 4 pairs of pants + 4 jumpers + 8 pajama pieces + 20 t-shirts = 36 articles of clothing.\nTogether, the 3 friends donate a total of 36 articles of clothing per friend * 3 friends = 108 articles of clothing.\nAdam changes his mind and takes back half, which means he is now actually donating 36 / 2 = 18 articles of clothing.\nThere is therefore now a total of 108 + 18 = 126 articles of clothing being donated.\n#### 126",
+            "original_answer": 126.0,
+            "transformed_solution": "As pajama sets are made up of a top and a bottom, there are 4 pajama sets * 2 = 8 articles of clothing from Adam's donation.\nIn total, Adam is donating 4 pairs of pants + 4 jumpers + 8 pajama pieces + 20 t-shirts = 36 articles of clothing.\nTogether, the 3 friends donate a total of 30 articles of clothing per friend * 3 friends = 90 articles of clothing.\nAdam changes his mind and takes back half, which means he is now actually donating 36 / 2 = 18 articles of clothing.\nThere is therefore now a total of 90 + 18 = 108 articles of clothing being donated.\n#### 108",
+            "transformed_answer": 108.0,
+            "wrong_step": 3,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 3 mistakenly references 36 as 30 from step 2 and changes 36 articles of clothing per friend * 3 friends = 108 articles of clothing to 30 articles of clothing per friend * 3 friends = 90 articles of clothing. It should be noted that step 2 in the transformed_solution <In total, Adam is donating 4 pairs of pants + 4 jumpers + 8 pajama pieces + 20 t-shirts = 36 articles of clothing.> should be the same as the step 2 in the original_solution <In total, Adam is donating 4 pairs of pants + 4 jumpers + 8 pajama pieces + 20 t-shirts = 36 articles of clothing.> and calculates its result 36 correctly. The subsequent steps related to step 3 will be affected by the erroneous result of step 3 but still be calculated correctly. Only one error of referencing is considered here, so the calculations of all steps still reference the numbers mentioned in their respective steps correctly. Furthermore, the transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAdam’s wardrobe is too crowded so he decides to donate some of his clothes to a charity shop. He takes out 4 pairs of pants, 4 jumpers, 4 pajama sets (top and bottom), and 20 t-shirts, then asks his friends if they have anything they want to donate. 3 of his friends donate the same amount of clothing as Adam each. Then he takes another look over his clothing and decides that he actually wants to keep half of his clothes. How many articles of clothing are being donated in total?\n\n### Response:",
+        "output_str": "Adam donates 4 pairs of pants, 4 jumpers, 4 pajama sets, and 20 t-shirts, so he donates a total of 4 + 4 + 4 + 20 = 32 articles of clothing.\nHis 3 friends donate the same amount of clothing as Adam each, so they each donate 32 articles of clothing.\nSo in total, his friends donate 3 x 32 = 96 articles of clothing.\nAdam decides to keep half of his clothes, so he keeps 32 / 2 = 16 articles of clothing.\nTherefore, the total number of articles of clothing being donated is 32 + 96 - 16 = 112.\n#### 112\nThe answer is: 112",
+        "extract_true_num": 126.0,
+        "extract_pred_num": 112.0,
+        "is_correct": false
+    },
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "A basic manicure starts at $35 while a pedicure starts at $40. A certain salon offers 20% off if you get both. Suppose Karen chooses to do both and would also like to add nail art on each of her fingers, which costs $3 per nail. How much would she pay in all?",
+            "original_solution": "The cost for both manicure and pedicure is $35+$40=$75.\nThe discount is $75*0.2=$15.\nSo, Karen would only pay $75-$15=$60 for both services.\nThe cost of the nail art for 10 fingers is $3*$10=$30.\nTherefore, Karen would pay a total of $60+$30=$90.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "The cost for both manicure and pedicure is $35+$40=$75.\nThe discount is $75*0.2=$15.\nSo, Karen would only pay $75-$15=$60 for both services.\nThe cost of the nail art for 10 fingers is $3*$10=$30.\nTherefore, Karen would pay a total of $60+$25=$85.\n#### 85",
+            "transformed_answer": 85.0,
+            "wrong_step": 5,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 5 mistakenly references 30 as 25 from step 4 and changes $60+$30=$90 to $60+$25=$85. It should be noted that step 4 in the transformed_solution <The cost of the nail art for 10 fingers is $3*$10=$30.> should be the same as the step 4 in the original_solution <The cost of the nail art for 10 fingers is $3*$10=$30.> and calculates its result $30 correctly. Only the referencing in step 5 is incorrect, while the previous and subsequent steps are still calculated based on the correct amounts. You need to only consider one error of referencing, so the calculation of all steps is still correct except for the error in step 5."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA basic manicure starts at $35 while a pedicure starts at $40. A certain salon offers 20% off if you get both. Suppose Karen chooses to do both and would also like to add nail art on each of her fingers, which costs $3 per nail. How much would she pay in all?\n\n### Response:",
+        "output_str": "The cost of a basic manicure is $35 and the cost of a pedicure is $40.\nIf Karen gets both, she will get a 20% discount.\nThe discount amount is 20% of the total cost, which is 20/100 * ($35 + $40) = $14.\nSo, the total cost of both services after the discount is ($35 + $40) - $14 = $51.\nKaren also wants to add nail art on each of her fingers, which costs $3 per nail.\nSince she has 10 fingers, the total cost of nail art is $3 * 10 = $30.\nTherefore, Karen would pay a total of $51 + $30 = $81 in all.\n#### 81\nThe answer is: 81",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 81.0,
+        "is_correct": false
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "Sally received the following scores on her math quizzes: 50, 80, 80, 60, 40, 90, 100, 70, and 60. Find her mean score.",
+            "original_solution": "Sally's total score is 50 + 80 + 80 + 60 + 40 + 90 + 100 + 70 + 60 = 630.\nHer mean score is 630 / 9/quizzes = 70/quiz.\n#### 70",
+            "original_answer": 70.0,
+            "transformed_solution": "Sally's total score is 50 + 80 + 80 + 60 + 40 + 90 + 100 + 70 + 60 = 630.\nHer mean score is 630 / 8/quizzes = 78.75/quiz.\n#### 78.75",
+            "transformed_answer": 78.75,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 9 quizzes as 8 from step 1 and changes 630 / 9/quizzes = 70/quiz to 630 / 8/quizzes = 78.75/quiz. It should be noted that step 1 in the transformed_solution <Sally's total score is 50 + 80 + 80 + 60 + 40 + 90 + 100 + 70 + 60 = 630.> should be the same as the step 1 in the original_solution <Sally's total score is 50 + 80 + 80 + 60 + 40 + 90 + 100 + 70 + 60 = 630.> and calculates its result 630 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the related previous step remains unchanged while only the erroneous reference is adjusted in the following step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSally received the following scores on her math quizzes: 50, 80, 80, 60, 40, 90, 100, 70, and 60. Find her mean score.\n\n### Response:",
+        "output_str": "To find the mean, we add up all the scores and divide by the number of scores.\nAdding up the scores, we get $50+80+80+60+40+90+100+70+60=480$.\nThere are 8 scores, so the mean is $\\frac{480}{8}=\\boxed{60}$.\nThe answer is: 60",
+        "extract_true_num": 70.0,
+        "extract_pred_num": 60.0,
+        "is_correct": false
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "After tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?",
+            "original_solution": "For 2 weeks, he spent 5 hours each for a total of 5*2 = 10 hours\nIn another week, he spent 6 hours; which gives a total of 10+6 = 16 hours\n2+1 = 3 weeks have been accounted for\nHe tracked 8 weeks so there are 8-3 = 5 weeks left\nHe spent 4 hours each week for 5 weeks for a total of 4*5 = 20 hours\nThe total across the 8 weeks is: 16+20 = 36 hours\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "For 2 weeks, he spent 5 hours each for a total of 5*2 = 10 hours\nIn another week, he spent 6 hours; which gives a total of 10+6 = 16 hours\n2+1 = 3 weeks have been accounted for\nHe tracked 8 weeks so there are 8-3 = 5 weeks left\nHe spent 4 hours each week for 5 weeks for a total of 4*6 = 24 hours\nThe total across the 8 weeks is: 16+24 = 40 hours\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 5,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 5 mistakenly references the number of remaining weeks (5) as 6 in the calculation 4*5=20 and changes it to 4*6=24. It should be noted that the related previous step 4 in the transformed_solution <He tracked 8 weeks so there are 8-3 = 5 weeks left> should be the same as the step 4 in the original_solution <He tracked 8 weeks so there are 8-3 = 5 weeks left> and calculates its result 5 correctly. The subsequent step 6 related to step 5 is affected by the erroneous result of step 5 but still is calculated correctly based on the wrong premise, changing 16+20=36 to 16+24=40. You need to only consider one error of referencing, so all other steps that reference this incorrect number still reference it correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAfter tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?\n\n### Response:",
+        "output_str": "For 7 weeks, Josh spent 4 hours working out each week, so 7 weeks x 4 hours/week = 28 hours.\nFor the other week, he spent 5 hours working out.\nAnd for another week, he spent 6 hours working out.\nSo in total, across the 8 weeks, Josh spent 28 hours + 5 hours + 6 hours = 49 hours working out.\n#### 49\nThe answer is: 49",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 49.0,
+        "is_correct": false
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How long does it take to download the file?",
+            "original_solution": "First find how many gigabytes are in 40% of the file: 200 GB * 40% = 80 GB\nThen divide that number by the download rate to find the time until Windows restarts: 80 GB / 2 GB/minute = 40 minutes\nThen find the time to download the whole file after the restart: 200 GB / 2 GB/minute = 100 minutes\nThen add the time to download 40% of the file, to download the whole file, and to wait for Windows to update: 40 minutes + 100 minutes + 20 minutes = 160 minutes\n#### 160",
+            "original_answer": 160.0,
+            "transformed_solution": "First find how many gigabytes are in 40% of the file: 200 GB * 40% = 80 GB\nThen divide that number by the download rate to find the time until Windows restarts: 80 GB / 2 GB/minute = 40 minutes\nThen find the time to download the whole file after the restart: 200 GB / 2 GB/minute = 100 minutes\nThen add the time to download 40% of the file, to download the whole file, and to wait for Windows to update: 40 minutes + 100 minutes + 30 minutes = 170 minutes\n#### 170",
+            "transformed_answer": 170.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error_fixed_addition",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, step 4 has a fixed addition error where the waiting time due to Windows update has been incorrectly changed from 20 minutes to 30 minutes, leading to a new sum of 170 minutes. This error only affects the final step; all the other calculations are correct and consistent with the original_solution. The transformed_answer changes accordingly from 160 minutes to 170 minutes due to this single error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nCarla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How long does it take to download the file?\n\n### Response:",
+        "output_str": "Carla is downloading a 200 GB file.\nNormally she can download 2 GB/minute, so it would take her 200 GB / 2 GB/minute = 100 minutes to download the file.\nHowever, 40% of the way through the download, Windows forces a restart, which takes 20 minutes.\nSo, Carla has to restart the download from the beginning, which means she has to download the first 40% of the file again.\nThe first 40% of the file is 200 GB * 40% = 80 GB.\nAt a rate of 2 GB/minute, it would take Carla 80 GB / 2 GB/minute = 40 minutes to download the first 40% of the file.\nAfter the restart, Carla still has to download the remaining 60% of the file.\nThe remaining 60% of the file is 200 GB * 60% = 120 GB.\nAt a rate of 2 GB/minute, it would take Carla 120 GB / 2 GB/minute = 60 minutes to download the remaining 60% of the file.\nTherefore, it would take Carla a total of 40 minutes + 20 minutes + 60 minutes = 120 minutes to download the file.\n#### 120\nThe answer is: 120",
+        "extract_true_num": 160.0,
+        "extract_pred_num": 120.0,
+        "is_correct": false
+    },
+    {
+        "index": 70,
+        "gsm8k_data": {
+            "question": "Donna worked 2 hours every morning walking dogs in her neighborhood for $10.00 an hour. 5 days a week, after school, she worked at a card shop for 2 hours and made $12.50 an hour. On the weekends, she usually made $10.00 an hour babysitting and was guaranteed 4 hours every Saturday from her neighbor. How much money did she make over 7 days?",
+            "original_solution": "She makes $10.00 an hour for 2 hours walking dogs so she makes 10*2 = $20.00 every morning\nOver 7 days she makes 7*20 = $140.00 a week\nShe makes $12.50 for 2 hours working at a card shop so she makes 12.5*2 = $25.00\nShe works there 5 days a week so she makes 5*25 = $125.00 a week\nShe also babysits for 4 hours making $10.00 an hour for a total of 4*10 = $40.00\nOver 7 days, she makes 140+125+40 = $305.00\n#### 305",
+            "original_answer": 305.0,
+            "transformed_solution": "She makes $10.00 an hour for 2 hours walking dogs so she makes 10*2 = $20.00 every morning\nOver 7 days she makes 7*20 = $140.00 a week\nShe makes $12.50 for 2 hours working at a card shop so she makes 12.5*2 = $25.00\nShe works there 5 days a week so she makes 5*25 = $125.00 a week\nShe also babysits for 4 hours making $10.00 an hour for a total of 4*10 = $40.00\nOver 7 days, she makes 140+135+40 = $315.00\n#### 315",
+            "transformed_answer": 315.0,
+            "wrong_step": 5,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 5 mistakenly references 125 as 135 from step 4 and changes 140+125+40 = $305.00 to 140+135+40 = $315.00. It should be noted that step 4 in the transformed_solution <She works there 5 days a week so she makes 5*25 = $125.00 a week> should be the same as the step 4 in the original_solution <She works there 5 days a week so she makes 5*25 = $125.00 a week> and calculates its result 125 correctly. Step 5 affects the final computation but is the only error in the transformed_solution. All other values are referenced correctly, and the calculations are accurate, leading to a transformed_answer of $315.00, which is incorrect due to the single step referencing error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nDonna worked 2 hours every morning walking dogs in her neighborhood for $10.00 an hour. 5 days a week, after school, she worked at a card shop for 2 hours and made $12.50 an hour. On the weekends, she usually made $10.00 an hour babysitting and was guaranteed 4 hours every Saturday from her neighbor. How much money did she make over 7 days?\n\n### Response:",
+        "output_str": "Donna worked 2 hours every morning walking dogs for $10.00 an hour, so she made 2 * $10.00 = $20.00 every morning.\nShe worked 5 days a week, so she made $20.00 * 5 = $100.00 every week from walking dogs.\nAfter school, she worked at a card shop for 2 hours and made $12.50 an hour, so she made 2 * $12.50 = $25.00 every day from the card shop.\nShe worked 5 days a week, so she made $25.00 * 5 = $125.00 every week from the card shop.\nOn the weekends, she usually made $10.00 an hour babysitting, so she made $10.00 * 4 = $40.00 every Saturday from babysitting.\nOver 7 days, she made $100.00 + $125.00 + $40.00 = $265.00\n#### 265\nThe answer is: 265",
+        "extract_true_num": 305.0,
+        "extract_pred_num": 265.0,
+        "is_correct": false
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "A van is delivering 180 bottles of drinks to a neighborhood, and each bottle contains either cider or beer or a mixture of two. Out of the 180 bottles, 40 contain only cider, 80 contain only beer, and the rest are a mixture of the two drinks. If the delivery man gives half the number of each bottle of drink to the first house, how many bottles does the first house get?",
+            "original_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30\nThe first house got 60+30 = 90 bottles of all types of drinks.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 25\nThe first house got 60+25 = 85 bottles of all types of drinks.\n#### 85",
+            "transformed_answer": 85.0,
+            "wrong_step": 6,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 6 mistakenly references the amount of mixture bottles given to the first house as 25 instead of the correct amount 30 from the previous related step 5. It should be noted that step 5 in the transformed_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> should be the same as the step 5 in the original_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> and calculates its result 30 correctly. Because we consider only one error, step 5 has been unaffected and is the same as in the original solution. Subsequent step 7 is related to step 6 and is calculated correctly based on the erroneous amount from step 6, changing the final total to 60+25 = 85 instead of the correct total of 60+30 = 90. The transformed answer reflects the new incorrect total."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA van is delivering 180 bottles of drinks to a neighborhood, and each bottle contains either cider or beer or a mixture of two. Out of the 180 bottles, 40 contain only cider, 80 contain only beer, and the rest are a mixture of the two drinks. If the delivery man gives half the number of each bottle of drink to the first house, how many bottles does the first house get?\n\n### Response:",
+        "output_str": "Out of the 180 bottles, 40 contain only cider and 80 contain only beer, so the remaining bottles are a mixture of the two drinks.\nTo find the number of bottles that are a mixture, we subtract the number of bottles that contain only cider and only beer from the total number of bottles: 180 - 40 - 80 = 60.\nSince the delivery man gives half the number of each bottle to the first house, the first house will receive 1/2 * 40 = 20 bottles of cider.\nThe first house will also receive 1/2 * 80 = 40 bottles of beer.\nTherefore, the first house will receive a total of 20 + 40 = 60 bottles.\n#### 60\nThe answer is: 60",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 60.0,
+        "is_correct": false
+    },
+    {
+        "index": 96,
+        "gsm8k_data": {
+            "question": "Prudence was starting a cupcake business. She figured that each cupcake cost $0.75 to make. The first 2 dozen that she made burnt and she had to throw them out. The next 2 came out perfectly and she ended up eating 5 cupcakes right away. Later that day she made 2 more dozen cupcakes and decided to eat 4 more. If she sells the remaining cupcakes at $2.00 each, how much is her net profit?",
+            "original_solution": "She burnt 2 dozen, cooked 2 dozen and then another 2 dozen that evening. So she made 2+2+2 =6 dozen cupcakes\nEach dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes\nShe threw away 2 dozen cupcakes, so 2*12 = 24 cupcakes\nShe made 72, threw away 24, ate 5 and then ate another 4 so she had 72-24-5-4 = 39 cupcakes left\nShe sells the 39 cupcakes at $2.00 each so she earned 39*2 = $78.00\nShe made 72 cupcakes at a cost of $0.75 each for a total cost of 72*$0.75 = $54.00\nIf she made $78 on the remaining cupcakes and it cost her $54.00 to make all of the cupcakes then her profit is $78-$54 = $24.00\n#### 24",
+            "original_answer": 24.0,
+            "transformed_solution": "She burnt 2 dozen, cooked 2 dozen and then another 2 dozen that evening. So she made 2+2+2 =6 dozen cupcakes\nEach dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes\nShe threw away 2 dozen cupcakes, so 2*12 = 24 cupcakes\nShe made 72, threw away 24, ate 5 and then ate another 4 so she had 72-24-5-4 = 39 cupcakes left\nShe sells the 39 cupcakes at $2.00 each so she earned 39*2 = $78.00\nShe made 72 cupcakes at a cost of $0.75 each for a total cost of 70*$0.75 = $52.50\nIf she made $78 on the remaining cupcakes and it cost her $52.50 to make all of the cupcakes then her profit is $78-$52.50 = $25.50\n#### 25.50",
+            "transformed_answer": 25.5,
+            "wrong_step": 6,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 6 mistakenly references 72 as 70 from step 2 and changes 72*$0.75 to 70*$0.75. It should be noted that step 2 in the transformed_solution <Each dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes> should be the same as the step 2 in the original_solution <Each dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes> and calculates its result 72 correctly. The calculation of step 6 affects the subsequent step 7 related to it, changing the total cost and ultimately the profit calculation from $78-$54 = $24.00 to $78-$52.50 = $25.50. You need to only consider one error of referencing, so the calculation of all steps is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPrudence was starting a cupcake business. She figured that each cupcake cost $0.75 to make. The first 2 dozen that she made burnt and she had to throw them out. The next 2 came out perfectly and she ended up eating 5 cupcakes right away. Later that day she made 2 more dozen cupcakes and decided to eat 4 more. If she sells the remaining cupcakes at $2.00 each, how much is her net profit?\n\n### Response:",
+        "output_str": "Prudence made 2 dozen cupcakes, which is 2 x 12 = 24 cupcakes.\nThe first 2 dozen burnt, so she had to throw them out, which means she lost 24 cupcakes.\nThe next 2 dozen came out perfect, so she had 24 cupcakes.\nShe ate 5 cupcakes right away, so she had 24 - 5 = 19 cupcakes.\nShe made 2 more dozen cupcakes, which is another 24 cupcakes.\nShe ate 4 more cupcakes, so she had 24 - 4 = 20 cupcakes.\nIn total, she had 19 + 20 = 39 cupcakes.\nShe sells each cupcake for $2.00, so her total revenue is 39 x $2.00 = $78.00.\nHer net profit is her total revenue minus her total cost.\nEach cupcake costs $0.75 to make, so her total cost is 39 x $0.75 = $27.25.\nHer net profit is $78.00 - $27.25 = $50.75.\n#### 50.75\nThe answer is: 50.75",
+        "extract_true_num": 24.0,
+        "extract_pred_num": 50.75,
+        "is_correct": false
+    }
+]

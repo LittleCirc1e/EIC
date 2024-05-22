@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Camden went swimming 16 times in March and Susannah went 24 times. If the number of times they went throughout the month was divided equally among 4 weeks, how many more times a week did Susannah swim than Camden?",
+        "original_solution": "Camden went swimming 16/4 = 4 times a week\nSusannah went swimming 24/4 = 6 times a week\nSusannah went 6 - 4 = 2 more times a week than Camden\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Susannah went swimming 24/4 = 6 times a week\nSusannah went 6 - 16 = -10 more times a week than Camden\n#### -10",
+        "transformed_answer": -10.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 1. In the original_solution, step 1 references the number 16 from the question, and step 3 references the result 4 from step 1. Therefore, after deleting step 1, step 3 should reference the number 16 from the question and change the formula from 6 - 4 = 2 to 6 - 16 = -10, resulting in Susannah \"swimming\" -10 more times a week than Camden, which is logically incorrect since the frequency of swimming cannot be negative. However, as per the transformation rules, the logical correctness of the transformation is not under consideration. It is step 2 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution based on the deletion, so the wrong_step is 2.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is missing_step, and the explanation is that the first wrong step is step 4. Step 4 does not convert the time they went swimming from March to weeks, but directly adds up the time they went swimming in March (times) and the number of weeks in March (4), which only results in an operand error in the formula, so it belongs to missing_step."
+    }
+]

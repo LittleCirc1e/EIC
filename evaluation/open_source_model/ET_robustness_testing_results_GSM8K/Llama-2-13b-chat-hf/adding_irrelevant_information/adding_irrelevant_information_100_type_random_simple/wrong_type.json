@@ -1,0 +1,14 @@
+[
+    {
+        "question": "James decides to bulk up. He weighs 120 kg and gains 20% of his body weight in muscle and 1 quarter that much in fat. How much does he weigh now?",
+        "original_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nThat means he gains a total of 24+6=30 kg of bodyweight\nSo his new body weight is 120+30=150 kg\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nBecause he also drank a weight gain supplement that added an extra 5 kg, that means he gains a total of 24+6+5=35 kg of bodyweight\nSo his new body weight is 120+35=155 kg\n#### 155",
+        "transformed_answer": 155.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he also drank a weight gain supplement that added an extra 5 kg>, resulting in step 3 changing from 24+6=30 kg of bodyweight in the original_solution to 24+6+5=35 kg of bodyweight in the transformed_solution. The language description has also changed from <That means he gains a total of 24+6=30 kg of bodyweight> to <that means he gains a total of 24+6+5=35 kg of bodyweight>. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is:\n\nIn the solution, the correct calculation for the weight gain in muscle is 120*.2=24 kg, but the calculation for the weight gain in fat is incorrect. The correct calculation for the weight gain in fat is 120*.25=3 kg, not 24/4=6 kg. Therefore, the total weight gain is 24+3+5=32 kg, not 35 kg. The correct answer is 120+32=152 kg, not 155 kg."
+    }
+]

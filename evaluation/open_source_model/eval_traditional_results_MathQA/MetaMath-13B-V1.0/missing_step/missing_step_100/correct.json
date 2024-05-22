@@ -1,0 +1,572 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "doughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:",
+            "original_solution": "The total parts in the ratio are 5 + 3 + 1 = 9\nEach part is equal to 50 / 5 = 10\nThere are 10 parts of muffins because 10 x 1 = 10\nThere are 10 muffins in the shop because 10 x 10 = 100\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Each part is equal to 50 / 5 = 10\nThere are 10 parts of muffins because 10 x 1 = 10\nThere are 10 muffins in the shop because 10 x 10 = 100\n#### 100",
+            "transformed_answer": 100.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed, which calculates the total parts of the ratio. Consequently, step 2 should reference the result from the question, which is 50 doughnuts equivalent to 5 parts. The reference to each part being equivalent to 10 still holds as the calculation method is correct, but since we consider there to be 10 parts of muffins instead of 1, step 2 should be modified to reflect a 1:1 part ratio between doughnuts and muffins. Given there are 50 doughnuts, the calculation changes to 50 x 1 = 50 for the number of muffins, which should ultimately modify the formula to 50 x 1 = 50. It should be noted that the calculation in step 3 maintains the error and refers incorrectly to '10 parts of muffins', as the initial step that created the incorrect carryover effect from the deletion is step 1, thus it is marked as the wrong_step. The transformed_solution erroneously states that there are 100 muffins due to incorrectly maintaining the original step 4 calculation without adjusting for the altered quantity suggested by the deleted step 1 (10 parts was used instead of the correct 1 part, leading to multiplying by 10 instead of 1)."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ndoughnuts, cookies and muffins in a pastry shop are in the ratio of 5 : 3 : 1. if there are 50 doughnuts, the number of muffins in the shop is:\n\n### Response:",
+        "output_str": "The ratio of doughnuts to muffins is 5:1, which means for every 5 doughnuts, there is 1 muffin.\nIf there are 50 doughnuts, we can set up a proportion to find the number of muffins:\n5 doughnuts / 1 muffin = 50 doughnuts / x muffins\nCross multiplying, we get 5x = 50\nDividing both sides by 5, we find x = 10\nTherefore, there are 10 muffins in the shop.\n#### 10\nThe answer is: 10",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "a man crosses a 600 m long street in 5 minutes. what is his speed in km per hour?",
+            "original_solution": "First, we need to convert 5 minutes to hours, so 5 minutes = 5/60 hours = 1/12 hours.\nThe speed is calculated as distance/time, so the speed is 600 meters / (1/12) hours = 600 x 12 = 7200 meters/hour.\nTo convert meters to kilometers, we divide the speed by 1000, so 7200 meters/hour = 7200/1000 = 7.2 km/hour.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "The speed is calculated as distance/time, so the speed is 600 meters / (1/12) hours = 600 x 12 = 7200 meters/hour.\nTo convert meters to kilometers, we divide the speed by 1000, so 7200 meters/hour = 7200/1000 = 7.2 km/hour.\nSo the speed is 7.2*60/5 = 86.4 km/hour.\n#### 86.4",
+            "transformed_answer": 86.4,
+            "wrong_step": 3,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, step 1 which converts 5 minutes to hours (1/12) is removed. In the original_solution, step 2 references the result (1/12 hours) from step 1, so after deleting step 1, the numbers from step 1 are still used in step 2 of the transformed_solution incorrectly. What should have happened is that instead of referencing (1/12), step 2's calculation should've been adjusted to refer to the original value from the question, which is 5 minutes, but is instead left unchanged which results in an incorrect interpretation of the units and an incorrect answer. Step 3 in the transformed_solution becomes the incorrect step as it attempts to recalculate the speed, multiplying by an incorrect scale factor of 60/5 that doesn't correspond to any conversion process in this context. This extra, unrelated step is what leads to the incorrect answer. Therefore, the wrong_step is 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na man crosses a 600 m long street in 5 minutes. what is his speed in km per hour?\n\n### Response:",
+        "output_str": "To find the speed, we need to divide the distance by the time.\nThe distance is 600 m and the time is 5 minutes.\nTo convert minutes to hours, we divide by 60.\nSo, 5 minutes is equal to 5/60 = 1/12 hours.\nNow, we can calculate the speed by dividing the distance by the time.\nThe speed is 600 m / (1/12 hours) = 600 * 12 = 7200 m/h.\nTo convert m/h to km/h, we divide by 1000.\nSo, the speed is 7200 m/h / 1000 = 7.2 km/h.\n#### 7.2\nThe answer is: 7.2",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 4,
+        "gsm8k_data": {
+            "question": "the diagonals of a rhombus are 14 cm and 20 cm. find its area ?",
+            "original_solution": "The area of a rhombus is given by the formula: (1/2) * d1 * d2, where d1 and d2 are the diagonals.\nPlugging in the given values: (1/2) * 14 * 20 = 140\n#### 140",
+            "original_answer": 140.0,
+            "transformed_solution": "The area of the rhombus is 14 * 20 = 280\n#### 280",
+            "transformed_answer": 280.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The transformation removes the first step which includes the formula for the area. The original step 2 references the result of step 1, which is the area formula. Without that step, the problem incorrectly applies the diagonal lengths directly without multiplying by (1/2) to find the area. The transformed_solution reflects direct multiplication without the division by 2 step, which indicates a miscalculation of the area. The first and only step in the transformed_solution also represents the first step that references an incorrect application of the formula, therefore the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe diagonals of a rhombus are 14 cm and 20 cm. find its area ?\n\n### Response:",
+        "output_str": "The diagonals of a rhombus are perpendicular bisectors of each other, so they divide the rhombus into four congruent right triangles.\nLet $d_1$ and $d_2$ be the lengths of the diagonals.\nThe area of a rhombus is given by $\\frac{1}{2}d_1d_2$.\nIn this case, $d_1 = 14$ cm and $d_2 = 20$ cm, so the area of the rhombus is $\\frac{1}{2}(14)(20) = \\boxed{140}$ square cm.\nThe answer is: 140",
+        "extract_true_num": 140.0,
+        "extract_pred_num": 140.0,
+        "is_correct": true
+    },
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "a number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is",
+            "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "Let the number be x.\nThen x^2 = (6+3)^2 = 36+54+9= 6(15) + 9, which means when the square of the number is divided by 6, the remainder is 9.\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, the first step which establishes the form of x has been removed. The original solution uses x = 6a + 3 to form the base equation of the number before squaring it. By deleting this, the transformed solution directly references the remainder '3' when creating the square of the number, which should result in a form of (6 + 3)^2, but incorrectly transforms it into 36+54+9, implying the number to be squared was 9 instead of 6a+3. Consequently, the final step alters the remainder incorrectly from 3 to 9 when the number is squared. The wrong_step is 1 because it is the first step in the transformed_solution that uses incorrect logic, resulting in the incorrect conclusion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is\n\n### Response:",
+        "output_str": "Let the number be $x$. We are given that $x \\equiv 3 \\pmod{6}$.\nThis means that $x$ can be written as $x = 6k + 3$ for some integer $k$.\nWe want to find the remainder when $(x^2)$ is divided by 6.\nSubstituting $x = 6k + 3$ into $(x^2)$, we get $(6k + 3)^2 = 36k^2 + 36k + 9$.\nDividing $36k^2 + 36k + 9$ by 6, we get a remainder of $\\boxed{3}$.\nThe answer is: 3",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+            "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?\n\n### Response:",
+        "output_str": "To find the time required for a bike to cover a distance of 450 km with a speed of 90 kmh, we can use the formula: time = distance / speed.\nPlugging in the values, we get: time = 450 km / 90 kmh = 5 hours.\nTherefore, it will take 5 hours for the bike to cover the distance of 450 km.\n#### 5\nThe answer is: 5",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 5.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "In a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?",
+            "original_solution": "One cow will eat 20 bags of husk in 20 days because 20/20 = 1.\nOne cow will eat one bag of husk in 20 days because 20/1 = 20.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "One cow will eat one bag of husk in 20*20 = 400 days because the same amount of food will last one cow 20 times longer than it would for 20 cows.\n#### 400",
+            "transformed_answer": 400.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. The original solution step 1 ('One cow will eat 20 bags of husk in 20 days') is erroneous and misguiding as it misses the logical representation of the sharing principle based on which the 20 bags of husk can feed 20 cows. In the transformed_solution, the unnecessary and confusing step 1 is removed and the correct reasoning is directly applied to establish how long it will take for one cow to eat one bag of husk. The calculation multiplies the total number of days (20) by the number of cows (20) to yield the correct number of days for one cow to eat one bag. Therefore, the transformed solution references the numerical values in the question correctly to arrive at a different (and in this case, correct) transformed answer, which is 400 days for one cow to eat one bag of husk by itself."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?\n\n### Response:",
+        "output_str": "If 20 cows eat 20 bags of husk in 20 days, then one cow eats 20/20 = 1 bag of husk in 20 days.\nTherefore, one cow will eat one bag of husk in 20 days.\n#### 20\nThe answer is: 20",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+            "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?\n\n### Response:",
+        "output_str": "Lilly has 10 fish and Rosy has 12 fish.\nTo find the total number of fish they have, we add the number of fish each person has.\n10 + 12 = 22\nSo, they have a total of 22 fish.\n#### 22\nThe answer is: 22",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 22.0,
+        "is_correct": true
+    },
+    {
+        "index": 32,
+        "gsm8k_data": {
+            "question": "Of 70 players on a football team, 31 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+            "original_solution": "There are 70-31 = 39 non-throwers.\nThere are 39/3 = 13 left-handed players.\nThere are 39 - 13 = 26 right-handed non-throwers.\nThere are 26 + 31 = 57 right-handed players in total.\n#### 57",
+            "original_answer": 57.0,
+            "transformed_solution": "There are 70/3 = 23 left-handed players.\nThere are 70 - 23 = 47 right-handed players in total.\n#### 47",
+            "transformed_answer": 47.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 of the original solution has been removed. Step 1 references the number 70 and 31 from the question, while step 2 references the result of step 1. Upon deletion of step 1, step 2 has been modified to directly reference the total number of players instead. However, the calculation in step 2 is incorrect because it should divide the number of non-throwers (70 - 31) rather than the total number of players. With step 1 missing, the calculation in the transformed solution incorrectly references the total number of players (70) when calculating left-handed players, which is incorrect because it omits subtracting the throwers (70 - 31) first. Following the instructions, I chose to use only the calculation involving the total number of players, but since we are removing the first step, this leads to an incorrect calculation for left-handed and consequently, right-handed players. The number of left-handed players is incorrectly calculated as 70/3 instead of (70 - 31)/3. The total right-handed players are calculated using this incorrect number, resulting in step 2 referencing an incorrect figure from the modified step 1. Therefore, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOf 70 players on a football team, 31 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?\n\n### Response:",
+        "output_str": "There are 70 - 31 = 39 players who are not throwers.\nOne third of the non-throwers are left-handed, so there are 39/3 = 13 left-handed players.\nThe rest of the non-throwers are right-handed, so there are 39 - 13 = 26 right-handed players.\nTherefore, there are a total of 31 + 26 = 57 right-handed players.\n#### 57\nThe answer is: 57",
+        "extract_true_num": 57.0,
+        "extract_pred_num": 57.0,
+        "is_correct": true
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+            "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "Since the average of b and c is 80, the sum of b and c is 80 x 2 = 160.\nThe sum of b and c minus twice the average of a and b (which is 70) is 160 - 70 x 2 = 20.\nThe value of c - a is 20.\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 1 by deleting the calculation of the sum of a and b. In the original_solution, step 2 references 80 from the question, and step 3 references the results from step 1 and step 2. After deleting step 1, step 3 should reference the result 160 from step 2 and the arithmetic mean of a and b (35) directly from the question, since the average of a and b is already provided. However, the transformed solution incorrectly subtracts twice the average of a and b from the sum of b and c, resulting in the error. Instead of calculating the correct subtraction of the sums (160 - 70), the transformed solution uses the incorrect subtraction (160 - 70 x 2). Step 4, which should be based on the correct subtraction of the sums, is now based on the incorrect value obtained in step 3. It is step 2 in the transformed_solution that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?\n\n### Response:",
+        "output_str": "The average of a and b is 35, so we have $\\frac{a+b}{2}=35$.\nMultiplying both sides by 2 gives $a+b=70$.\nThe average of b and c is 80, so we have $\\frac{b+c}{2}=80$.\nMultiplying both sides by 2 gives $b+c=160$.\nWe can subtract the first equation from the second equation to get $b+c-(a+b)=160-70$, which simplifies to $c-a=90$.\nTherefore, the value of c - a is $\\boxed{90}$.The answer is: 90",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 90.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+            "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "The number of pairs sold is the total sales divided by another price, so 735 / 10 = 73.5.\n#### 73.5",
+            "transformed_answer": 73.5,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The original_solution only had one step calculation. For the transformed_solution, since I can't delete the final step and there's only one step, I have modified it to reference the closest whole number to the original price per pair, which is $10 instead of $9.8, and reran the calculation with this new price to produce a new answer. Therefore, as per the problem guidelines, I have chosen to slightly alter the price per pair used in the calculation from $9.8 to $10. The wrong_step is 1 because in the transformed solution, it is the first step that incorrectly references the price of a pair of rackets as $10 instead of $9.8, which results in the transformed_answer being different from the original_answer, as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?\n\n### Response:",
+        "output_str": "The total amount of money earned from selling ping pong rackets is $735.\nIf the average price of a pair of rackets is $9.8, then the number of pairs sold can be found by dividing the total amount earned by the average price per pair.\nSo, the number of pairs sold is $735 / $9.8 = 75.\nTherefore, 75 pairs of ping pong rackets were sold.\n#### 75\nThe answer is: 75",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 75.0,
+        "is_correct": true
+    },
+    {
+        "index": 38,
+        "gsm8k_data": {
+            "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+            "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+            "original_answer": 120.0,
+            "transformed_solution": "The area of the parallelogram is 12 x 12 = 144 square cm.\n#### 144",
+            "transformed_answer": 144.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been completely removed. In the original_solution, step 1 states the formula for the area of a parallelogram and step 2 references both the base and the height from the question, multiplying them to find the area. Since we are deleting step 1, step 2 should still calculate the area but since we need a different answer, we reference the base for both the base and height, which is the largest number. Hence, we get 12 (base) x 12 (chosen number instead of the height) = 144 square cm. The calculation in step 2 after the transformation is using the incorrect formula but still internally consistent as a simple multiplication. It is the transformed step 1, which is also step 2 in the original_solution, that first references the incorrect number, in this case using the base (12) instead of the height (10). Thus, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFind the area of a parallelogram with base 12 cm and height 10 cm?\n\n### Response:",
+        "output_str": "The area of a parallelogram is given by the formula base times height.\nSo, the area of this parallelogram is $12 \\times 10 = \\boxed{120}$ square cm.The answer is: 120",
+        "extract_true_num": 120.0,
+        "extract_pred_num": 120.0,
+        "is_correct": true
+    },
+    {
+        "index": 40,
+        "gsm8k_data": {
+            "question": "a student is ranked 13th from right and 8th from left. How many students are there?",
+            "original_solution": "Total students = (13 + 8) - 1 \nTotal students = 21 - 1 \nTotal students = 20 \n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "Total students = 13 + 8 \nTotal students = 21 \n#### 21",
+            "transformed_answer": 21.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, intermediate step 2 has been removed. In the original_solution, step 1 references the numbers 13 and 8 from the question, and step 2 references the result 21 of step 1. So after deleting step 2, step 1 should change from (13 + 8) - 1 to 13 + 8, which results in the incorrect total of 21, as it fails to subtract the one overlap of the student being counted from both sides. The subtraction is necessary because the student's rank from the right and from the left share a single position. Thus, the transformed_solution includes just two steps instead of three, and the first step (which is now the only computation step) references the numbers from the question, resulting in the error. It is step 1 in the transformed_solution, which incorrectly results in the transformed_answer of 21, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na student is ranked 13th from right and 8th from left. How many students are there?\n\n### Response:",
+        "output_str": "If the student is ranked 13th from right and 8th from left, that means there are 12 students ranked higher than the student from the right and 7 students ranked higher than the student from the left.\nTherefore, there are a total of 12 + 7 + 1 = 20 students.\n#### 20\nThe answer is: 20",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "of the final grades received by the students in a certain math course , 1 / 5 are a  s , 1 / 4 are b  s , 1 / 2 are c  s , and the remaining 40 grades are d  s . what is the number of students in the course ?",
+            "original_solution": "Let the total number of students be x\nNumber of As = (1/5)x\nNumber of Bs = (1/4)x\nNumber of Cs = (1/2)x\nNumber of Ds = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n800 = 20x - 19x = x\n#### 800",
+            "original_answer": 800.0,
+            "transformed_solution": "Number of As = (1/5)x\nNumber of Bs = (1/4)x\nNumber of Cs = (1/2)x\nNumber of Ds = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n1600 = 2(20x - 19x) = 2x\n#### 1600",
+            "transformed_answer": 1600.0,
+            "wrong_step": 4,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The intermediate step \"Let the total number of students be x\" was removed. This step set the variable for the total number of students which is then used in all subsequent steps. After deleting this step, we must remember that x is still representing the total number of students. The transformed solution directly begins with the calculation of the number of As, Bs, and Cs as proportions of x, continuing with the inclusion of the 40 Ds. The last step should still solve for x, but instead of setting x to 800, as in the original, it was incorrectly doubled to make the final transformed_answer incorrect at 1600. All the previous steps still properly calculated the parts of x, but the final step introduced an arbitrary multiplication by 2 to inflate the final answer to a different value from the original solution. The mistake in the final step showing an incorrect conclusion is made possible by the removal of the explicative initial declaration, so the wrong_step is 4, which is the altered conclusion step in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nof the final grades received by the students in a certain math course , 1 / 5 are a  s , 1 / 4 are b  s , 1 / 2 are c  s , and the remaining 40 grades are d  s . what is the number of students in the course ?\n\n### Response:",
+        "output_str": "Let's assume the total number of students in the course is $x$.\nAccording to the given information, we have the following proportions:\n$\\frac{1}{5}$ of the students received an A,\n$\\frac{1}{4}$ of the students received a B,\n$\\frac{1}{2}$ of the students received a C,\nand the remaining 40 grades were Ds.\nWe can set up the following equation based on the given information:\n$\\frac{1}{5}x + \\frac{1}{4}x + \\frac{1}{2}x + 40 = x$\nMultiplying through by 20 to clear the fractions, we get:\n$4x + 5x + 10x + 800 = 20x$\nSimplifying, we have:\n$19x + 800 = 20x$\nSubtracting $19x$ from both sides, we get:\n$800 = x$\nTherefore, the number of students in the course is $\\boxed{800}$.The answer is: 800",
+        "extract_true_num": 800.0,
+        "extract_pred_num": 800.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 / 1 = 72000\n#### 72000",
+            "transformed_answer": 72000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed in the transformed_solution. The original_solution only had one step, which referenced the number 10 from the question. By removing this step and because the solution involves a simple division, the solution should directly reference the number from the question. Since step 1 in the original_solution references the number 10 and there is no other number to choose from, in the transformed_solution, we directly divide by 1, pretending that a case can hold only 1 bottle, hence the total number of cases required would be 72000. This leads to a calculation of 72000 / 1 = 72000. The number 1 is the smallest default number for division when the actual divisor is omitted. This results in the incorrect conclusion that 72000 cases are required, with the transformation error occurring at the only step in the new solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "The company produces 72000 bottles of water everyday.\nIf a case can hold 10 bottles of water, then the company needs 72000/10 = 7200 cases to hold its one day production.\n#### 7200\nThe answer is: 7200",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 43,
+        "gsm8k_data": {
+            "question": "there is a train and car . the ratio btw the speed of a train & a car is 16 : 15 respectively . also , a bus covered a distance of 480 km in 8 h . the speed of the bus is 3 / 4 th of the speed of the train . how much distance will the car cover in 6 h ?",
+            "original_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDistance covered by the car in 6 hours is 6*75 = 450 km.\n#### 450",
+            "original_answer": 450.0,
+            "transformed_solution": "The speed of the bus is (3/4)*(16*15) = 180.\n480 = 180 * 8.\nThe speed of the car is 15*15 = 225.\nDistance covered by the car in 6 hours is 6*225 = 1350 km.\n#### 1350",
+            "transformed_answer": 1350.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the ratio 16:15 from the question and defines the speed of the car as 15x and the speed of the train as 16x, while step 2 references result 16x from step 1. After deleting step 1, step 2 should change to reference the numbers 16 and 15 directly from the question and incorrectly uses the largest number (16) to multiply by 15, resulting in (3/4)*(16*15) = 180 as the speed of the bus. The subsequent steps reference this new value. Step 3 incorrectly references the result of step 2 as 180 * 8 to justify 480 km covered by the bus. Step 4 incorrectly states the speed of the car as 15*15 = 225, referencing the number directly instead of using the variable x. And step 5 finds the distance covered by the car in 6 hours using the incorrect speed of 225 km/h, leading to a result of 6*225 = 1350 km. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect numbers in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthere is a train and car . the ratio btw the speed of a train & a car is 16 : 15 respectively . also , a bus covered a distance of 480 km in 8 h . the speed of the bus is 3 / 4 th of the speed of the train . how much distance will the car cover in 6 h ?\n\n### Response:",
+        "output_str": "The ratio of the speed of the train to the speed of the car is 16:15.\nLet's assume the speed of the train is 16x and the speed of the car is 15x.\nThe speed of the bus is 3/4 of the speed of the train, so the speed of the bus is (3/4) * 16x = 12x.\nThe bus covered a distance of 480 km in 8 h, so the speed of the bus is 480 km / 8 h = 60 km/h.\nTherefore, 12x = 60 km/h.\nSolving for x, we get x = 60 km/h / 12 = 5 km/h.\nThe speed of the car is 15x = 15 * 5 km/h = 75 km/h.\nIn 6 h, the car will cover a distance of 75 km/h * 6 h = 450 km.\n#### 450\nThe answer is: 450",
+        "extract_true_num": 450.0,
+        "extract_pred_num": 450.0,
+        "is_correct": true
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "a number is doubled and 5 is added . if the resultant is trebled , it becomes 123 . what is that number ?",
+            "original_solution": "Let the number be x.\n2x + 5 = 123/3\n2x + 5 = 41\n2x = 41 - 5 = 36\nx = 36/2 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "Let the number be x.\n2x + 5 = 41\n2x = 41 - 5 = 36\nx = 36/2 = 18\n#### 18",
+            "transformed_answer": 36.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Step 1 has been removed from the original solution. In the original_solution, step 1 states the equation '2x + 5 = 123/3'. This division operation simplifies the equation, so after deleting step 1, the equation becomes incorrect in step 2 as it should still include the division step. As such, the transformation skips the division step and incorrectly sets '2x + 5 = 41'. The values in the subsequent steps must be adjusted to account for this change, causing each one to inherit the mistake. Since the original equation without the division gives '2x = 36', the transformed answer becomes 36 instead of 18. The wrong_step is 1, as it is the first step that suffers from the incorrect transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na number is doubled and 5 is added . if the resultant is trebled , it becomes 123 . what is that number ?\n\n### Response:",
+        "output_str": "Let the number be $x$.\nWe are given that $2x + 5$ is tripled to get $123$.\nSo, we have the equation $3(2x + 5) = 123$.\nSimplifying, we get $6x + 15 = 123$.\nSubtracting 15 from both sides, we have $6x = 108$.\nDividing both sides by 6, we find $x = \\boxed{18}$.\nThe answer is: 18",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+            "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "3 ø 1 ø 2 = ( 2 ^ 3 / 2 ^ 1 ) / 2 ^ 2 = 8 / 2 / 4 = 4 / 4 = 1\n#### 1",
+            "transformed_answer": 1.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step in the original_solution, which references the numbers in the operation \"3 ø 1,\" was removed. By doing this, 3 ø 1 was then combined with the operation ø 2 in the single expression \"3 ø 1 ø 2\", implying a straight calculation without breaking it down step by step. The first step then incorrectly references the calculation as (2 ^ 3 / 2 ^ 1) / 2 ^ 2 instead of calculating 3 ø 1 first and then applying ø 2. As such, the formula changes from performing 3 ø 1 separately and then 4 ø 2, to directly performing 3 ø 1 ø 2, leading from 4 to 1 in the final result. It is therefore step 1 in the transformed_solution that is the first step referencing incorrect calculation order and number in the transformed_solution, thus the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?\n\n### Response:",
+        "output_str": "We have $(3\\o1)\\o2 = \\left(\\frac{2^3}{2^1}\\right)\\o2 = \\left(\\frac{8}{2}\\right)\\o2 = 4\\o2 = \\frac{2^4}{2^2} = \\frac{16}{4} = \\boxed{4}$.\nThe answer is: 4",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+            "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+            "original_answer": 375.0,
+            "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+            "transformed_answer": 25.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?\n\n### Response:",
+        "output_str": "If each small box contains 25 chocolate bars, then the total number of chocolate bars in the small boxes is 15 * 25 = 375.\nSince the large box contains the small boxes, the total number of chocolate bars in the large box is 375.\n#### 375\nThe answer is: 375",
+        "extract_true_num": 375.0,
+        "extract_pred_num": 375.0,
+        "is_correct": true
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "solve the equation for x : 8 x - 40 + 2 x = 5 + 10 - x",
+            "original_solution": "Combine like terms: 10x - 40 = 15 - x\nAdd x to both sides: 11x - 40 = 15\nAdd 40 to both sides: 11x = 55\nDivide both sides by 11: x = 5\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "Combine like terms: 10x - 40 = 10 + 5\nAdd 40 to both sides: 10x = 50 + 5\nCombine like terms: 10x = 55\nDivide both sides by 10: x = 5.5\n#### 5.5",
+            "transformed_answer": 5.5,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 2. In the original solution, step 2 references the result 10x - 40 and 15 - x from step 1, and step 3 references the result 11x - 40 = 15 from step 2. Therefore, after deleting step 2, step 3 should reference the result 10x - 40 from step 1 and change the formula from 11x - 40 = 15 to 10x - 40 = 50 + 5. Step 4 inherits the error from step 3, modifying it accordingly from 11x - 40 = 15 to 10x - 40 = 50 + 5. Step 4 in the original refers to 11x = 55, but in the transformed solution, it is changed to 10x = 50 + 5 which misses the addition of x to both sides. The transformed solution incorrectly divides by 10 instead of 11 in the last step, resulting in x = 5.5 instead of the correct answer of 5. It is step 2 in the transformed solution, which is also step 3 in the original solution, that serves as the first step referencing incorrect number in the transformed solution, so the wrong_step is 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nsolve the equation for x : 8 x - 40 + 2 x = 5 + 10 - x\n\n### Response:",
+        "output_str": "Combining like terms, we have 10x - 40 = 15 - x.\nAdding x to both sides, we have 10x - 40 + x = 15.\nCombining like terms again, we have 11x - 40 = 15.\nAdding 40 to both sides, we have 11x = 55.\nDividing both sides by 11, we have x = 5.\nSo the solution to the equation is x = 5.\nThe answer is: 5",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 5.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The percent decrease is (60/100) x 100 = 60%\n#### 60%",
+            "transformed_answer": 60.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the original step 1 has been removed. The original step 1 calculates the amount of decrease by subtracting the sale price from the original price. Since step 1 has been removed, step 2 in the transformed_solution is now step 1 and incorrectly references 60 from the question as the amount of decrease instead of using the correct decrease value which should be 40, the calculation now incorrectly becomes (60/100) x 100 resulting in an incorrect transformed_answer of 60%. It should note that the correct value for the amount of decrease is the difference between the original price and the sale price (100 - 60 = 40). The transformed_solution should then use this correct decrease amount to calculate the percent decrease. Hence, step 1 in the transformed_solution, which is also the first step referring to the incorrect number, is the wrong_step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "The original price of the trousers is $100.\nThe sale price of the trousers is $60.\nTo find the percent decrease, we need to find the difference between the original price and the sale price, which is $100 - $60 = $40.\nThen, we divide the difference by the original price and multiply by 100 to find the percent decrease: ($40 / $100) * 100 = 40%.\n#### 40\nThe answer is: 40",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "An amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?",
+            "original_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 4000\n#### 4000",
+            "original_answer": 4000.0,
+            "transformed_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between p and r's share is 9600 - 2400 = Rs. 7200\n#### 7200",
+            "transformed_answer": 7200.0,
+            "wrong_step": 3,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 6, which includes the calculation of the share of q (7x). In the original_solution, steps 6 and 7 reference results 800 and 5600 respectively from previous steps. Therefore, after deleting step 6, references to q's share should be removed and step 7 should now reference the result from the new step 5 (x = 800). The value for the share of q, which was previously found to be 7x (or 7*800), is omitted, leading to a reference to p's share (3x or 3*800) instead in the calculation of the difference in shares. Following the change, the new transformed_solution incorrectly calculates the difference between p and r's share, rather than q and r's, thus arriving at 9600 - 2400 = Rs. 7200 for the difference between p and r's share. The incorrect reference to 2400 (the share of p) instead of 5600 (the share of q) originated from the removal of the computation of q's share. Consequently, the wrong_step is 3 in the transformed_solution, which is also step 7 in the original_solution (that originally referenced q's share), and serves as the first step referencing the incorrect number in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?\n\n### Response:",
+        "output_str": "The ratio of p : q : r is 3 : 7 : 12.\nLet's assume the common ratio is x.\nSo, p = 3x, q = 7x, and r = 12x.\nThe difference between p and q is 7x - 3x = 4x.\nGiven that the difference between p and q is Rs. 3200, we have 4x = 3200.\nSolving for x, we find x = 800.\nTherefore, q = 7x = 7 * 800 = 5600.\nThe difference between q and r is 12x - 7x = 5x.\nSubstituting x = 800, we find 5x = 5 * 800 = 4000.\nTherefore, the difference between q and r's share is Rs. 4000.\n#### 4000\nThe answer is: 4000",
+        "extract_true_num": 4000.0,
+        "extract_pred_num": 4000.0,
+        "is_correct": true
+    },
+    {
+        "index": 67,
+        "gsm8k_data": {
+            "question": "the sum of four consecutive even numbers is 292. what would be the largest number?",
+            "original_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 280\nx = 70\nThe largest number is 70+6 = 76\n#### 76",
+            "original_answer": 76.0,
+            "transformed_solution": "The sum of the four consecutive even numbers is 292\nDividing the sum by 4 gives the average even number: 292 / 4 = 73\nThe largest even number is 2 more than twice the average (as it's the 4th number in the series), so: 73 * 2 + 2 = 148\n#### 148",
+            "transformed_answer": 148.0,
+            "wrong_step": 1,
+            "wrong_type": "wrong_transformation",
+            "is_single_error": true,
+            "explanation": "In transforming the solution, step 1 of the original_solution has been incorrectly modified, leading to an error in finding the correct largest number. Instead of initiating with letting x be the smallest of the consecutive even numbers, the transformation starts by dividing the total sum by 4 to find the 'average' even number (step 2). The error is compounded by an incorrect formula to find the largest number based on the incorrect average (step 3), giving 148 instead of 76. The first step that references the result of the deleted step in the transformed_solution is step 2, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe sum of four consecutive even numbers is 292. what would be the largest number?\n\n### Response:",
+        "output_str": "Let's assume the first even number is x.\nThe next consecutive even number would be x + 2.\nThe next consecutive even number after that would be x + 4.\nAnd the last consecutive even number would be x + 6.\nThe sum of these four consecutive even numbers is x + (x + 2) + (x + 4) + (x + 6) = 4x + 12.\nWe know that the sum of these four consecutive even numbers is 292, so we can set up the equation 4x + 12 = 292.\nSubtracting 12 from both sides of the equation gives us 4x = 280.\nDividing both sides of the equation by 4 gives us x = 70.\nSo the largest number is x + 6 = 70 + 6 = 76.\n#### 76\nThe answer is: 76",
+        "extract_true_num": 76.0,
+        "extract_pred_num": 76.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "A man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?",
+            "original_solution": "Let the speed of the man in still water be x kmph.\nThen, speed downstream = (x + 20) kmph\nSpeed upstream = (x - 20) kmph\nAccording to the given data, x + 20 = 60 and x - 20 = 20\nSolving the equations we get, x = 40 kmph\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "According to the given data, speed downstream - speed upstream = 60 - 20\nThis implies 2 * speed of the man in still water = 40 kmph\nTherefore, the speed of the man in still water = 40 / 2\nThis gives us x = 20 kmph\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, step 1 has been removed, which initially let x be the speed of the man in still water and expressed the downstream and upstream speeds in terms of x. Therefore, the downstream and upstream speeds are now directly derived from the given data, taking the difference between the two known speeds. The subsequent calculations are based on this difference, which leads to an incorrect calculation of the speed of the man in still water. The wrong_step is 1, as it is the first step that now references the incorrect derived speeds without the setup involving x."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?\n\n### Response:",
+        "output_str": "The speed of the man in still water is the average of his upstream and downstream speeds.\nThe average is calculated by adding the two speeds and dividing by 2.\nSo, the speed of the man in still water is (20 + 60) / 2 = 40 kmph.\n#### 40\nThe answer is: 40",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 73,
+        "gsm8k_data": {
+            "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+            "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+            "original_answer": 1.0,
+            "transformed_solution": "The distance traveled in the third interval is (2 + 5 * 2) * (5 / 60) = 2 miles\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the first step has been omitted, and its calculations wrongly incorporated into a single transformed step. The increase in speed after two intervals (which should be 2 + 5 * 2 = 12 miles per hour) is correctly calculated, but the multiplication by the fraction representing 5 minutes in an hour (5/60) is incorrectly done. Due to this, the distance traveled in the third interval equation changes to (2 + 5 * 2) * (5 / 60) in the transformed_solution. Since the omission has led to a calculation error in the combined single step, the wrong_step is 1. The transformed answer of 2 miles is incorrect as the actual distance traveled in the third 5-minute interval should be 1 mile."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?\n\n### Response:",
+        "output_str": "In the first 5-minute interval, the car traveled $2 \\times 5/60 = 2/3$ miles.\nIn the second 5-minute interval, the car traveled $(2/3) + 5/60 = 2/3 + 1/12 = 11/12$ miles.\nIn the third 5-minute interval, the car traveled $(11/12) + 5/60 = 11/12 + 1/12 = \\boxed{12/12}$ miles, which is equal to 1 mile.\nThe answer is: 1",
+        "extract_true_num": 1.0,
+        "extract_pred_num": 1.0,
+        "is_correct": true
+    },
+    {
+        "index": 74,
+        "gsm8k_data": {
+            "question": "Ratio between 2 numbers is 5:7 and their product is 560. What is the difference between the 2 numbers?",
+            "original_solution": "Let the numbers be 5x and 7x.\nThen, 5x * 7x = 560\n35x^2 = 560\nx^2 = 16\nx = 4\nThe numbers are 5*4 = 20 and 7*4 = 28\nThe difference between the 2 numbers is 28 - 20 = 8\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "Then, 5x * 7x = 560\n35x^2 = 560\nx^2 = 16\nx = 4\nThe numbers are 5*4 = 20 and 7*4 = 28\nThe difference between the 2 numbers is 20 + 28 = 48\n#### 48",
+            "transformed_answer": 48.0,
+            "wrong_step": 6,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes the first step. In the original_solution, the first step defines the numbers as 5x and 7x, which is required to interpret the subsequent equations. After step 1 is deleted, every reference to 5x and 7x still has a meaning because the ratio between the numbers has been stated in the question. However, a mistake has been introduced in the final transformed step, changing the operation from subtraction to addition. This results in steps 5 and 6 incorrectly adding the products instead of subtracting them to find the difference. The error is introduced during the transformation to the incorrect \"The difference between the 2 numbers is 20 + 28 = 48\" instead of the correct subtraction 28 - 20 = 8, hence the error carried over to the final step, making the wrong_step 6."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nRatio between 2 numbers is 5:7 and their product is 560. What is the difference between the 2 numbers?\n\n### Response:",
+        "output_str": "Let the two numbers be $5x$ and $7x$.\nWe are given that $5x \\cdot 7x = 560$.\nSimplifying, we have $35x^2 = 560$.\nDividing both sides by 35, we get $x^2 = 16$.\nTaking the square root of both sides, we have $x = 4$.\nTherefore, the two numbers are $5x = 5 \\cdot 4 = 20$ and $7x = 7 \\cdot 4 = 28$.\nThe difference between the two numbers is $28 - 20 = \\boxed{8}$.The answer is: 8",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 85,
+        "gsm8k_data": {
+            "question": "Sarah is driving to the airport. After driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. She then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. How many miles did she drive in all?",
+            "original_solution": "She drove 50 miles in the first hour because 50 x 1 = 50\nShe drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 200 miles in all because 50 + 150 = 200\n#### 200",
+            "original_answer": 200.0,
+            "transformed_solution": "She drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 150 miles in all because 0 + 150 = 150\n#### 150",
+            "transformed_answer": 150.0,
+            "wrong_step": 2,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, the first step which calculates how far Sarah drove in the first hour has been removed. The original step 1 resulted in 50 miles. In the transformed_solution, step 2 which originally added 50 miles from step 1 to 150 miles from what was step 2 in the original_solution must now be corrected to add 0 to 150 miles, since step 1 has been removed. This results in a total distance driven of 150 miles, as stated in the transformed_solution. The deletion of step 1 removes the reference to the number of miles driven in the first hour from the solution, which leads to an incorrect calculation of the total distance driven and a wrong transformed_answer of 150 miles, which is different from the original_answer of 200 miles. Therefore, the wrong_step is the rewritten step 2 in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSarah is driving to the airport. After driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. She then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. How many miles did she drive in all?\n\n### Response:",
+        "output_str": "Sarah drove at 50 miles per hour for one hour, so she traveled 50 miles.\nShe then traveled at 100 miles per hour for the rest of the trip.\nSince she arrived 30 minutes before her flight departs, she must have traveled for 1 hour and 30 minutes, or 1.5 hours.\nAt a rate of 100 miles per hour, she traveled 100 miles per hour * 1.5 hours = 150 miles.\nIn total, Sarah drove 50 miles + 150 miles = 200 miles.\n#### 200\nThe answer is: 200",
+        "extract_true_num": 200.0,
+        "extract_pred_num": 200.0,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+            "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+            "original_answer": 14.0,
+            "transformed_solution": "Let d be the number of dogs and p be the number of people.\nThe total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n2p = 28 + 2p\nThen, after simplifying we have 0 = 28, which is not possible.\n#### -1",
+            "transformed_answer": -1.0,
+            "wrong_step": 3,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 4. In the original_solution, step 4 references the total number of legs and heads, and the relationship between them stated in the question, setting up the equation 4d + 2p = 28 + 2(d + p). Step 5 references the result of step 4 and simplifies the equation. Therefore, after deleting step 4, step 5 directly attempts to use the elimination method incorrectly without establishing the proper equation from the relationship of legs and heads; it incorrectly concludes that 2p can be canceled out from both sides without considering the dogs' count, leading us to a nonsensical simplification 0 = 28, which implies that the system of equations has no solution. This step also incorrectly references numbers from the question itself. Since this is nonsense and does not provide a solution, the transformed_answer is set to -1 to indicate an error in the process. It is step 3 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step removed in the transformed_solution, so the wrong_step is 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]\n\n### Response:",
+        "output_str": "Let $d$ be the number of dogs and $p$ be the number of people.\nEach dog has 4 legs and each person has 2 legs.\nSo, the total number of legs is $4d$ and the total number of heads is $d+p$.\nAccording to the problem, $4d = 2(d+p) + 28$.\nSimplifying, we get $4d = 2d + 2p + 28$.\nSubtracting $2d$ from both sides, we get $2d = 2p + 28$.\nDividing both sides by 2, we get $d = p + 14$.\nSince the number of dogs cannot be greater than the number of people, we know that $d \\leq p$.\nTherefore, the possible values for $d$ are $p+14$ where $p$ is a non-negative integer.\nSince we are given that there are no missing legs, we know that $d$ must be a positive integer.\nThe only possible value for $p$ that makes $d$ a positive integer is $p=14$.\nTherefore, there are $\\boxed{14}$ dogs.The answer is: 14",
+        "extract_true_num": 14.0,
+        "extract_pred_num": 14.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "At present, the ratio between the ages of Shekhar and Shobha is 4:3. After 6 years, Shekhar's age will be 26 years. Find out the age of Shobha at present?",
+            "original_solution": "Shekhar's current age is 26 - 6 = 20 years\nThe current ratio of ages is 4:3, so Shobha's current age is 20 * (3/4) = 15 years\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "The current ratio of ages is 4:3, so Shobha's current age is 26 * (3/4) = 19.5 years\n#### 19.5",
+            "transformed_answer": 19.5,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed, which calculated Shekhar's current age, and is also the step that provides the base age for calculating Shobha's age. The modified solution skips the calculation of Shekhar's current age and refers directly to his age after 6 years, which is 26. Since step 1 references a number from the question (Shekhar's age after 6 years), the subsequent step that references the result of step 1 now refers back to the age of Shekhar after 6 years instead. As the next step originally multiplied Shekhar's current age by (3/4) to get Shobha's current age, the transformation led to 26 * (3/4), the largest number provided by the context of the original step 1. This is an error because the age after 6 years was used instead of the current age, giving an inflated number for Shobha's age. It is the first step in the transformed_solution, which references the incorrect number (26 years after 6 years), so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAt present, the ratio between the ages of Shekhar and Shobha is 4:3. After 6 years, Shekhar's age will be 26 years. Find out the age of Shobha at present?\n\n### Response:",
+        "output_str": "If Shekhar's age will be 26 years after 6 years, then his current age is 26 - 6 = 20 years.\nSince the ratio between their ages is 4:3, we can set up the equation 4x = 20, where x represents the common factor between their ages.\nSolving for x, we find that x = 20 / 4 = 5.\nTherefore, Shobha's age at present is 3x = 3 * 5 = 15 years.\n#### 15\nThe answer is: 15",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "A towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?",
+            "original_solution": "The area of the towel is decreased by 36% because 20% + 20% + (20% x 20%) = 36%\n#### 36%",
+            "original_answer": 36.0,
+            "transformed_solution": "The decreased area percentage is calculated as (20% x 20%) = 4%\n#### 4%",
+            "transformed_answer": 4.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, step 1 has been removed. Step 1 of the original_solution originally involved adding the individual percentages of length and breadth reduction and also including the combined effect of the reductions. However, after deletion, the transformed_solution incorrectly only takes the product of the two percentage reductions (20% x 20%), which actually represents the combined effect, not the entire decrease in area. The combined effect has been mistaken for the total decrease in area, resulting in a calculation that only considers the intersection of the length and breadth reductions. The transformed_solution, therefore, does not add the individual percentage reductions of length and breadth, hence arriving at an incorrect answer of 4%. The first step, which would have been referencing the individual and combined reductions correctly, is now missing."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?\n\n### Response:",
+        "output_str": "Let the original length of the towel be $l$ and the original breadth be $b$.\nThe new length after bleaching is $0.8l$ (80% of the original length) and the new breadth is $0.8b$ (80% of the original breadth).\nThe area of the original towel is $l \\cdot b$ and the area of the bleached towel is $(0.8l) \\cdot (0.8b) = 0.64l \\cdot b$.\nThe percentage decrease in area is $\\frac{(1-0.64)}{1} \\cdot 100\\% = \\frac{0.36}{1} \\cdot 100\\% = \\boxed{36\\%}$.\nThe answer is: 36",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "John bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.",
+            "original_solution": "The cost price per meter is 434.75 / 9.25 = 47\n#### 47",
+            "original_answer": 47.0,
+            "transformed_solution": "The cost price per meter is 434.75 / 9 = 48.3055555556\n#### 48.31",
+            "transformed_answer": 48.31,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this case, the first and only step of the original solution has been removed and replaced by reference to a different number. The original step references the number 9.25 from the question and the division is performed accordingly to determine the cost price per meter. By changing the divisor from 9.25 to 9 (a number smaller than 9.25), the formula becomes 434.75 / 9, resulting in the incorrect transformed answer. As this is the first step in determining the cost price per meter, and it is now referencing an incorrect number, it is marked as the wrong step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.\n\n### Response:",
+        "output_str": "To find the cost price per metre, we need to divide the total cost by the total length of the cloth.\nThe total cost is $434.75 and the total length is 9.25 m.\nSo, the cost price per metre is $434.75 / 9.25 = $47.\n#### 47\nThe answer is: 47",
+        "extract_true_num": 47.0,
+        "extract_pred_num": 47.0,
+        "is_correct": true
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Nancy, the librarian, is shelving books from the cart. She shelved 12 history books, 8 romance books, and 4 poetry books from the top section of the cart. Half the books on the bottom section of the cart were mystery books, which she quickly put back into place. Then, she shelved the remaining books from the bottom of the cart, including 5 Western novels and 6 biographies. How many books did she have on the book cart when she started?",
+        "original_solution": "Half of the books on the bottom section of the cart are mystery books, which means they are the same as the number of Western novels and biographies put together. So there are 5 + 6 = 11 mystery novels.\nAdd them all together, and there are 12 history + 8 romance + 4 poetry + 11 mystery + 5 Western + 6 biographies = 46 books total\n#### 46",
+        "original_answer": 46.0,
+        "transformed_solution": "Half of the books on the bottom section of the cart are mystery books, which means they are the same number as the sum of Western novels, biographies, and an additional 3 literature textbooks that Nancy forgot to count initially. So there are 5 Western novels + 6 biographies + 3 literature textbooks = 14 books that are not mystery novels.\nThe mystery books are the same amount, so there are also 14 mystery novels.\nTo find the total, we sum up all the categories: 12 history + 8 romance + 4 poetry + 14 mystery + 5 Western + 6 biographies + 3 literature = 52 books total\n#### 52",
+        "transformed_answer": 52.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "The modified step 1 adds information that is not mentioned in the original question statement <and an additional 3 literature textbooks that Nancy forgot to count initially>, resulting in the transformation of the step from \"5 + 6 = 11 mystery novels\" in the original_solution to \"5 Western novels + 6 biographies + 3 literature textbooks = 14 books that are not mystery novels\" in the transformed_solution. This affects the following summation step, changing the total from \"12 history + 8 romance + 4 poetry + 11 mystery + 5 Western + 6 biographies = 46 books\" to \"12 history + 8 romance + 4 poetry + 14 mystery + 5 Western + 6 biographies + 3 literature = 52 books\". The other calculation processes remain correct.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_previous_step_value_error'. In the first wrong step, Nancy mistakenly referenced the result of the previous step, which was 14 mystery novels, instead of the correct result"
+    },
+    {
+        "question": "Linda is painting her bedroom. Her bedroom has 4 walls, with the room being 20 feet wide by 20 feet long by 8 feet tall. One wall has a 3-foot by 7-foot doorway. A second wall has a 6-foot by 4-foot window. A third wall has a 5-foot by 7-foot doorway to a walk-in-closet. And the fourth wall is completely solid. What is the total area of wall space that Linda will have to paint?",
+        "original_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nThe total area of the doors and windows is 21 sq. ft + 24 sq. ft. + 35 sq. ft. = 80 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors and window are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors and window, the total wall area Linda will have to paint is 640 sq. ft. - 80 sq. ft. = 560 sq. ft.\n#### 560",
+        "original_answer": 560.0,
+        "transformed_solution": "The solid wall is 8 ft. * 20 ft. = 160 sq. ft.\nThe doorway is 3 ft. * 7 ft. = 21 sq. ft.\nThe window is 6 ft. * 4 ft. = 24 sq. ft.\nThe closet door is 5 ft. * 7 ft. = 35 sq. ft.\nBecause there is also a 2-foot by 2-foot painting on the second wall that does not need painting, the total area of the doors, windows, and the painting is 21 sq. ft + 24 sq. ft. + 35 sq. ft. + 4 sq. ft. = 84 sq. ft.\nThe solid wall is 160 sq. ft., so before the areas of the doors, window, and painting are taken into account, the total wall area is 4 * 160 sq. ft. = 640 sq. ft.\nTaking into account the doors, window, and the painting, the total wall area Linda will have to paint is 640 sq. ft. - 84 sq. ft. = 556 sq. ft.\n#### 556",
+        "transformed_answer": 556.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because there is also a 2-foot by 2-foot painting on the second wall that does not need painting>, resulting in step 4 changing from a total area of 80 sq. ft. of doors and windows to 84 sq. ft., including the painting. This additional irrelevant detail modifies the total wall area to be painted from 560 sq. ft. in the original solution to 556 sq. ft. in the transformed solution. The error has been integrated into an existing step where it affects the final calculation.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "Elmer has a pond that initially contained 2400 pollywogs, but these pollywogs matured into toads and left the pond at a constant rate of 50 pollywogs per day. In addition, Elmer has a son named Melvin, who loves to catch pollywogs, remove them from the pond, and release them into a nearby stream. For the first 20 days, Melvin caught 10 pollywogs per day and released them into the stream. How many days did it take for all of the pollywogs to disappear from the pond?",
+        "original_solution": "For the first 20 days, the combined rate of disappearance of pollywogs from the pond is 50+10=60 pollywogs per day.\nDuring these first 20 days, the total number of pollywogs removed was 60*20=1200 pollywogs.\nThis means after 20 days there were 2400-1200=1200 pollywogs left in the pond.\nAt a disappearance rate of rate 50 pollywogs per day, it will take an additional 1200/50=24 days for the rest of the pollywogs to disappear from the pond.\nThus, overall, it will take 20+24=44 days for all of the pollywogs to disappear from the pond.\n#### 44",
+        "original_answer": 44.0,
+        "transformed_solution": "For the first 20 days, the combined rate of disappearance of pollywogs from the pond is 50+10=60 pollywogs per day.\nDuring these first 20 days, the total number of pollywogs removed was 60*20=1200 pollywogs.\nThis means after 20 days there were 2400-1200=1200 pollywogs left in the pond.\nAssuming Elmer also started catching an additional 5 pollywogs per day from the pond starting from day 21, the new daily disappearance rate would be 50+5=55 pollywogs per day.\nAt this new disappearance rate of 55 pollywogs per day, it will take an additional 1200/55=21.82 days, which rounds up to 22 days for the rest of the pollywogs to disappear from the pond.\nThus, overall, it will take 20+22=42 days for all of the pollywogs to disappear from the pond.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming Elmer also started catching an additional 5 pollywogs per day from the pond starting from day 21>, resulting in step 4 changing from a rate of 50 pollywogs per day to a new daily disappearance rate of 55 pollywogs per day. This changes the time calculation from 1200/50=24 to 1200/55=21.82 days which rounds up to 22 days. The final step changes from 20+24=44 days to 20+22=42 days. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "Scout delivers groceries on the weekends. His base pay is $10.00 an hour. He also earns a $5.00 tip per customer that he delivers groceries to. On Saturday he worked 4 hours and delivered groceries to 5 people. Sunday he worked 5 hours and delivered groceries to 8 people. How much did he make over the weekend?",
+        "original_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nHe makes $5.00 per delivery and he delivered to 13 people so he made 5*13 = $65.00\nHis base pay is $90.00 and he made $65.00 in tips for a total of 90+65 = $155.00\n#### 155",
+        "original_answer": 155.0,
+        "transformed_solution": "He worked 4 hours on Saturday and 5 hours on Sunday for a total of 4+5 = 9 hours\nHis base pay is $10.00 an hour and he worked 9 hours for a total of 10*9 = $90.00\nHe delivered groceries to 5 people on Saturday and 8 people on Sunday for a total of 5+8 = 13 deliveries\nBecause he received an extra $2.00 bonus from happy customers for every delivery made on Sunday, he makes an additional 8*$2 = $16.00\nHe makes $5.00 per delivery and he delivered to 13 people so he made 5*13 = $65.00\nHis base pay is $90.00, he made $65.00 in tips, and an extra $16.00 in bonuses for a total of 90+65+16 = $171.00\n#### 171",
+        "transformed_answer": 171.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because he received an extra $2.00 bonus from happy customers for every delivery made on Sunday>, resulting in a new calculation for the additional bonus of $16.00 for Sunday deliveries. This creates a change in the final total from the original solution, with the total pay changing from 90+65 = $155.00 to 90+65+16 = $171.00 in the transformed solution. The addition is made into an existing step and directly affects the final result, differentiating the transformed answer from the original one.",
+        "eval_result": "\n\nThe solution"
+    },
+    {
+        "question": "Every Sunday, Sean picks up 1 almond croissant and 1 salami and cheese croissant that are $4.50 each. He also grabs a plain croissant for $3.00 and a loaf of focaccia for $4.00. On his way home he stops and picks up 2 lattes for $2.50 each. How much did he spend?",
+        "original_solution": "The almond croissant and the salami and cheese croissant are $4.50 each so that's 2*4.50 = $9.00\nHe buys 2 lattes that are $2.50 each so that's 2*2.50 = $5.00\nThe flavored croissants are $9.00, the lattes are $5.00 and he also grabbed a plain croissant for $3.00 and focaccia for $4.00 for a total of 9+5+3+4 = $21.00\n#### 21",
+        "original_answer": 21.0,
+        "transformed_solution": "The almond croissant and the salami and cheese croissant are $4.50 each so that's 2*4.50 = $9.00\nHe buys 2 lattes that are $2.50 each so that's 2*2.50 = $5.00\nBecause Sean treats his friend to another latte, the lattes now total 2*2.50 + 2.50 = $7.50\nThe flavored croissants are $9.00, the lattes are now $7.50, and he also grabbed a plain croissant for $3.00 and focaccia for $4.00 for a new total of 9+7.50+3+4 = $23.50\n#### 23.50",
+        "transformed_answer": 23.5,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 of the transformed_solution changes the calculation formula from the original price of 2 lattes to include the cost of an additional latte that Sean treats his friend to, which is information not mentioned in the question statement. This results in the incorrect transformation from 2*2.50 = $5.00 to 2*2.50 + 2.50 = $7.50. The subsequent calculation steps and the final answer are affected by this additional and incorrect information.",
+        "eval_result": "\n\nPlease help me with this task. I need to determine if the solution is correct and if not, which type of error it belongs to.\n\nThank you."
+    }
+]

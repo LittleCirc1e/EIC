@@ -1,0 +1,26 @@
+[
+    {
+        "question": "What is the sum of natural numbers between 20 and 100?",
+        "original_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nThe sum of natural numbers between 20 and 100 = 5050 - 190 = 4860\n#### 4860",
+        "original_answer": 4860.0,
+        "transformed_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nAssuming there is an error and the first natural number to consider is from 21 instead of 20, the sum of natural numbers between 21 and 100 = 5050 - (190 + 20) = 4840\n",
+        "transformed_answer": 4840.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 incorrectly adds information that is not mentioned in the question statement <Assuming there is an error and the first natural number to consider is from 21 instead of 20>, resulting in step 3 changing from 5050 - 190 = 4860 in the original_solution to 5050 - (190 + 20) = 4840 in the transformed_solution. This alteration erroneously excludes the value 20 from the calculation, which was not part of the original question's scope. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "The solution is incorrect, and the explanation is #. The solution is incorrect because it includes the step \"Assuming there is an error and the first natural number to consider is from 21 instead of 20.\" This implies that there is an error in the given solution, which is not possible since the solution is provided by the question itself. Therefore, there is no explanation needed for this incorrect solution.The answer is: 21"
+    },
+    {
+        "question": "the sum of four consecutive even numbers is 292 . what would be the largest number ?",
+        "original_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 280\nx = 70\nThe largest number is 70+6 = 76\n#### 76",
+        "original_answer": 76.0,
+        "transformed_solution": "Assuming that there is an error where we incorrectly subtracted an additional $8 that is not part of the problem statement,\nLet the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n",
+        "transformed_answer": 78.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds an incorrect subtraction of $8 that is not mentioned in the question statement, resulting in step 3 changing from 4x + 12 = 292 to 4x + 12 - 8 = 292, which adjusts the equation solving process. The error affects the computed value of x and consequently the final result for the largest number, which changes from x + 6 = 76 in the original_solution to x + 6 = 78 in the transformed_solution.",
+        "eval_result": "To determine if the solution is correct, we need to check if the given sum is equal to the sum of the four consecutive even numbers.\nLet's set up the equation:\n4x + 12 = 292\nSubtract 12 from both sides of the equation:\n4x = 280\nDivide both sides of the equation by 4:\nx = 70\nTherefore, the largest number is x+6 = 70+6 = 76.\nThe solution is incorrect, and the explanation is: The solution is incorrect because it does not match the given information. The largest number should be 76, not 70.The answer is: 70"
+    }
+]

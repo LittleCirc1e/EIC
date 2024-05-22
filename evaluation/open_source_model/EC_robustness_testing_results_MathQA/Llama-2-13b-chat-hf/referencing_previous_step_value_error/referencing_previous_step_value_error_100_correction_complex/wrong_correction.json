@@ -1,0 +1,98 @@
+[
+    {
+        "question": "If x # y is defined to equal x ^ 2 / y for all x and y, then (-1 # 3) # 3 =",
+        "original_solution": "(-1 # 3) = (-1 ^ 2 / 3) = 1 / 3\n(1 / 3) # 3 = (1 / 3) ^ 2 / 3 = 1 / 9\n#### 1 / 9",
+        "original_answer": "1 / 9",
+        "transformed_solution": "(-1 # 3) = (-1 ^ 2 / 3) = 1 / 3\n(1 / 3) # 3 = (1 / 3) ^ 2 / 3 = 1 / 27\n#### 1 / 27",
+        "transformed_answer": "1 / 27",
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 2 incorrectly calculates the square of (1/3) as (1/3) ^ 2 = 1 / 9 instead of the correct 1 / 9. The erroneous solution proceeds correctly with the incorrect value to divide it by 3, which results in 1 / 27. The original solution's related step <(1 / 3) # 3 = (1 / 3) ^ 2 / 3 = 1 / 9> remains the same in the transformed solution, as only the numerical result changes due to the wrong calculation. The subsequent step includes the incorrect intermediate result but correctly applies the given operation. All other steps are correctly computed.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 1 / 9, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one square has 27 minutes instead of 60 minutes, calculating 1 / 3 ^ 2 / 3 = 1 / 27 instead of 1 / 3 ^ 2 / 60 = 1 / 9. The subsequent step 3 references the result of step 2, calculating 1 / 27 instead of 1 / 9."
+    },
+    {
+        "question": "if 0.75 : x : : 5 : 8 , then x is equal to :",
+        "original_solution": "Define a ratio a:b = c:d iff ad = bc.\nWrite the proportion 0.75 : x = 5 : 8 as 0.75/x = 5/8.\nCross-multiply to get 0.75*8 = 5*x.\nDivide by 5 to find x, so x = 0.75*8/5.\nx = 1.2\n#### 1.2",
+        "original_answer": 1.2,
+        "transformed_solution": "Define a ratio a:b = c:d iff ad = bc.\nWrite the proportion 0.75 : x = 5 : 8 as 0.75/x = 5/8.\nCross-multiply to get 0.75*8 = 5*x.\nDivide by 5 to find x, so x = 0.75*5/5.\nx = 0.75\n#### 0.75",
+        "transformed_answer": 0.75,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 8 as 5 from step 3 and changes 0.75*8/5 to 0.75*5/5. It should be noted that step 3 in the transformed_solution <Cross-multiply to get 0.75*8 = 5*x.> should be the same as step 3 in the original_solution <Cross-multiply to get 0.75*8 = 5*x.> and calculates its result (0.75*8) correctly. Step 4 affects the subsequent related step 5, changing from 'x = 0.75*8/5' to 'x = 0.75*5/5'. Note that in the transformed_solution, all other steps are correctly calculated based on the error made in step 4, maintaining consistency with one error in referencing, so no modification is necessary for steps 1, 2, and 3.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 8, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.75*8=6 instead of 0.75*8=64. The subsequent step 5 references the result of step 4, calculating 6/5=1.2 instead of 64/5=12.8, resulting in the final incorrect answer."
+    },
+    {
+        "question": "A shopkeeper sells 10 % of his stock at 20 % profit and sells the remaining at a loss of 5 %. He incurred an overall loss of Rs. 400. Find the total worth of the stock?",
+        "original_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 400\nx = 400 / -0.025\nx = -16000\nThe total worth of the stock is -16000\n#### -16000",
+        "original_answer": -16000.0,
+        "transformed_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 420\nx = 420 / -0.025\nx = -16800\nThe total worth of the stock is -16800\n#### -16800",
+        "transformed_answer": -16800.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 400 as 420 from step 4 and changes -0.025x = 400 to -0.025x = 420. It should be noted that step 4 in the transformed_solution <Overall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400> should be the same as the step 4 in the original_solution <Overall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400> and calculates its result 400 correctly. Step 6, as the erroneous step, directly affects step 7 and 8, changing the total worth of the stock calculation. Step 7 changes from 400 / -0.025 to 420 / -0.025, and step 8 changes the total worth of the stock from -16000 to -16800. You need to only consider one error of referencing, so the calculation of all other steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is -1680, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400 instead of 0.1 * x * 20/100 - 0.9 * x * 5/100 = 420. The subsequent step 5 references the result of step 4, calculating -0.025x = 420 instead of -0.025x = 420, resulting in the final incorrect answer."
+    },
+    {
+        "question": "0.014 × 0.014 = ?",
+        "original_solution": "0.014 × 0.014 = 0.000196\n#### 0.000196",
+        "original_answer": 0.000196,
+        "transformed_solution": "0.014 × 0.014 = 0.00196\n#### 0.00196",
+        "transformed_answer": 0.00196,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed_solution incorrectly calculates 0.014 × 0.014 as 0.00196 instead of 0.000196. It should be noted that this mistake is a calculation error, not a referencing error, as it incorrectly multiplies the numbers giving an erroneous result. Since this is the only intended error, all steps that would have followed from the correct result still assume that the mistaken result (0.00196) is the basis for subsequent steps, even though in this case, no such steps exist beyond the initial calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 0.002, and the explanation is that step 1 first makes a mistake in the multiplication process, calculating 0.014 x 0.014 = 0.00196 instead of 0.014 x 0.014 = 0.002. The subsequent step 2 references the result of step 1, calculating 0.00196 instead of 0.002, resulting in the final incorrect answer."
+    },
+    {
+        "question": "a man goes downstream at 11 kmph , and upstream 8 kmph . the speed of the stream is",
+        "original_solution": "Let the speed of the man be x km/hr and the speed of the stream be y km/hr.\nThen, 2x = 11 + 8\n2x = 19\nx = 19/2 = 9.5\nSo, the speed of the man in still water is 9.5 km/hr.\nAnd the speed of the stream is (11 - 8)/2 = 1.5 km/hr.\n#### 1.5",
+        "original_answer": 1.5,
+        "transformed_solution": "Let the speed of the man be x km/hr and the speed of the stream be y km/hr.\nThen, 2x = 11 + 8\n2x = 19\nx = 19/2 = 9.5\nSo, the speed of the man in still water is 9.5 km/hr.\nAnd the speed of the stream is (11 - 9)/2 = 1 km/hr.\n#### 1",
+        "transformed_answer": 1.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references 9 instead of 8 from \"upstream 8 kmph\" in the original solution and changes the calculation from (11 - 8)/2 = 1.5 km/hr to (11 - 9)/2 = 1 km/hr. It should be noted that the original step 4 and other related upstream/downstream speeds in the transformed solution remain unchanged (9.5 km/hr for the speed of man in still water, 11 kmph downstream, 8 kmph upstream). Subsequent calculations are affected by the erroneous reference in step 5 but are still carried out correctly based on the wrong step. This single error in referencing has led to a different transformed answer (1 km/hr) compared to the original answer (1.5 km/hr).",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 2, and the explanation is that step 1 first makes a mistake in unit conversion and mistakenly believes that 11 kmph and 8 kmph are in miles per hour instead of kilometers per hour, calculating 11 + 8 = 19 instead of 11 x 1.60934 = 17.88 and 8 x 1.60934 = 12.66. The subsequent step 2 reference the result of step 1, calculating 19 - 17.88 = 1.12 instead of 17.88 - 12.66 = 5.22. The subsequent step 3 reference the result of step 2, calculating 1.12 / 2 = 0.56 instead of 5.22 / 2 = 2.61. The subsequent step 4 reference the result of step 3, calculating 0.56 x 2 = 1.12 instead of 2.61 x 2 = 5.22. The final incorrect answer is due to the compounding of these errors."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.003^4 = 1.009\n#### 1.009",
+        "transformed_answer": 1.009,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly calculates the power 1.003^4 as 1.009 instead of 1.012. This is a calculation error, as the power was incorrectly calculated. The exponentiation should be computed correctly using proper arithmetic to ensure accuracy. As 1.003 raised to the power of 4 more accurately equals 1.012015, when rounded to 3 decimal places the result should be 1.012. The step has been intentionally modified to introduce a single wrong calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 1.024, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 1.003^4 as 1.009 instead of 1.024. The subsequent step 2 references the result of step 1, calculating 1.009 as the power of 4 instead of 1.024. Therefore, the final incorrect answer is 1.009."
+    },
+    {
+        "question": "The run rate of a cricket game was only 3.2 in the first 10 overs. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?",
+        "original_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 32 = 250 runs in the remaining 40 overs.\nThe required run rate is 250 / 40 = 6.25 runs per over.\n#### 6.25",
+        "original_answer": 6.25,
+        "transformed_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 30 = 252 runs in the remaining 40 overs.\nThe required run rate is 252 / 40 = 6.3 runs per over.\n#### 6.3",
+        "transformed_answer": 6.3,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 32 as 30 from step 1 and changes 282 - 32 = 250 to 282 - 30 = 252. It should be noted that step 1 in the transformed_solution <The team scored 3.2 x 10 = 32 runs in the first 10 overs.> should be the same as the step 1 in the original_solution <The team scored 3.2 x 10 = 32 runs in the first 10 overs.> and calculates its result 32 correctly. The subsequent step 3, which is related to step 2, is calculated correctly based on the 252 result from step 2 and changes 250 / 40 = 6.25 to 252 / 40 = 6.3. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 6.6, and the explanation is that step 3 first makes a mistake in calculation, calculating 32 runs instead of 30 runs. The subsequent step 4 references the result of step 3, calculating 252 - 32 = 220 instead of 252 - 30 = 222. The final incorrect answer is due to the compounding effect of this mistake.\n\nThe correct solution is as follows:\n\nThe team scored 3.2 x 10 = 30 runs in the first 10 overs.\nThe team needs to score 282 - 30 = 252 runs in the remaining 40 overs.\nThe required run rate is 252 / 40 = 6.6 runs per over.\n\nTherefore, the solution is incorrect, the correct answer is 6.6, and the explanation is that step 3 first makes a mistake in calculation, calculating 32 runs instead of 30 runs, which leads to a compounding error in the subsequent steps."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 km/h?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 km/h = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = Distance / Speed\nTime = 450 km / 80 km/h = 5.625 hours\n#### 5.625",
+        "transformed_answer": 5.625,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 90 km/h as 80 km/h from step 1 and incorrectly calculates the time as 450 km / 80 km/h = 5.625 hours instead of the correct calculation which is 450 km / 90 km/h = 5 hours. It should be noted that step 1 in the transformed_solution <Time = Distance / Speed> should be the same as the step 1 in the original_solution <Time = Distance / Speed>. You need to only consider one error of referencing, so all other calculations or references are assumed to be correct despite this error. The transformed_answer differs from the original_answer as the error changes the final result.",
+        "eval_result": "\n\nPlease provide the correct answer and explanation.\n\nThe solution is incorrect, the correct answer is 5.6 hours, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one hour has 80 minutes instead of 60 minutes, calculating 450 km / 80 km/h = 5.625 instead of 450 km / 60 km/h = 5.6. The subsequent step 3 references the result of step 2, calculating 5.625 hours instead of 5.6 hours."
+    }
+]

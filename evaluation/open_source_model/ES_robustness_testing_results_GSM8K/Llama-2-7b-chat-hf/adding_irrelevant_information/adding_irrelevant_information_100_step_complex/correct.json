@@ -1,0 +1,122 @@
+[
+    {
+        "question": "Irene earns $500 if she works for 40 hours a week and gets an extra $20 for every hour of overtime. If she worked 50 hours last week, calculate her total income.",
+        "original_solution": "If Irene worked 50 hours last week, the total number of hours counting as overtime is 50-40 = 10 hours.\nSince she's given $20 for every hour of overtime, she earned 10*$20 = $200 in overtime.\nHer total income, including the overtime, is $500+$200= $700\n#### 700",
+        "original_answer": 700.0,
+        "transformed_solution": "If Irene worked 50 hours last week, the total number of hours counting as overtime is 50-40 = 10 hours.\nSince she's given $20 for every hour of overtime, she earned 10*$20 = $200 in overtime.\nAdditionally, Irene received a bonus for perfect attendance amounting to $50, so her total income, including the overtime and bonus, is $500 + $200 + $50 = $750\n#### 750",
+        "transformed_answer": 750.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Additionally, Irene received a bonus for perfect attendance amounting to $50>, resulting in step 3 changing from $500 + $200 = $700 in the original_solution to $500 + $200 + $50 = $750 in the transformed_solution. This addition of a bonus affects the calculation of the total income, thereby changing the final result. The rest of the calculation processes are correct and only the addition of the bonus is the single error made in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating $200 instead of $100 for the overtime earned. The subsequent step 4 references the result of step 3, calculating $750 instead of $650, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "John decides to start collecting art.  He pays the same price for his first 3 pieces of art and the total price came to $45,000.  The next piece of art was 50% more expensive than those.  How much did all the art cost?",
+        "original_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nThat means it cost 15,000+7,500=$22,500\nThat means in total he spent 45,000+22,500=$67,500\n#### 67,500",
+        "original_answer": 67500.0,
+        "transformed_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nThat means it cost 15,000+7,500=$22,500\nAssuming John had to pay a 10% buyers premium on the total purchase, that means in total he spent (45,000+22,500)*1.1=$74,250\n#### 74,250",
+        "transformed_answer": 74250.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming John had to pay a 10% buyers premium on the total purchase>, resulting in step 4 changing from 45,000+22,500=$67,500 in the original_solution to (45,000+22,500)*1.1=$74,250 in the transformed_solution. This additional charge affects the final calculation of the total cost. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 15,000*.5=7,500 instead of 15,000*.55=7,750. The subsequent step 5 references the result of step 4, calculating 7,500+7,750=15,250 instead of 7,750+7,750=15,500, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Mark just got a new puppy that cost $10. He also bought enough food for 3 weeks. He knows the puppy eats 1/3 cup of food a day. A bag of food with 3.5 cups costs $2. How much did all of this cost him?",
+        "original_solution": "He needs food for 21 days because 3 x 7 = 21\nThe puppy will eat 7 cups of food because 21 x (1/3) = 7\nHe needs 2 bags of food because 7 / 3.5 = 2\nThe food will cost him $4 because 2 x 2 = 4\nIt will cost $14 in total because 10 + 4 = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "He needs food for 21 days because 3 x 7 = 21\nThe puppy will eat 7 cups of food because 21 x (1/3) = 7\nHe needs 2 bags of food because 7 / 3.5 = 2\nThe food will cost him $4 because 2 x 2 = 4\nBecause Mark also bought a $5 toy for the puppy, it will cost $19 in total because 10 + 4 + 5 = 19\n#### 19",
+        "transformed_answer": 19.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because Mark also bought a $5 toy for the puppy>, resulting in step 4 changing from It will cost $14 in total because 10 + 4 = 14 in the original_solution to It will cost $19 in total because 10 + 4 + 5 = 19 in the transformed_solution. The transformed_answer reflects the additional cost of the unmentioned toy, making it different from the original_answer. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 7 cups of food by dividing 21 by (1/3) instead of 21 / 7 = 3, resulting in an incorrect answer. The subsequent step 5 references the result of step 4, calculating 2 bags of food by dividing 7 by 3.5 instead of 7 / 3 = 2, resulting in an incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "Jim decides to open up a bike shop.  The most common repair he does is fixing bike tires.  He charges $20 for this and it cost him $5 in parts.  In one month Jim does 300 of these repairs.  He also does 2 more complex repairs for $300 each and cost $50 in parts.  He also sells $2000 profit worth of things from his retail shop.  If rent and other fixed expense for the shop is $4000 a month how much profit did the shop make?",
+        "original_solution": "From each tire repair, he made 20-5=$15 profit\nSo repairs made him a profit of 15*300=$4500\nThe two complex repairs each made him 300-50=$250 profit\nSo those added 250*2=$500\nSo his total profit from everything was 4500+500+2000=$7000\nSo he made a profit of 7000-4000=$3000\n#### 3000",
+        "original_answer": 3000.0,
+        "transformed_solution": "From each tire repair, he made 20-5=$15 profit\nSo repairs made him a profit of 15*300=$4500\nThe two complex repairs each made him 300-50=$250 profit\nSo those added 250*2=$500\nBecause Jim had to pay a $300 fine for a parking violation related to his shop, his total profit from everything was 4500+500+2000-300=$6700\nSo he made a profit of 6700-4000=$2700\n#### 2700",
+        "transformed_answer": 2700.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because Jim had to pay a $300 fine for a parking violation related to his shop>, resulting in step 4 changing from 4500+500+2000=$7000 in the original_solution to 4500+500+2000-300=$6700 in the transformed_solution. This change also affected step 5, where the new profit calculation is 6700-4000=$2700 instead of the original $3000. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 15 x 300 = 4500 instead of 15 x 300 = 4200. The subsequent step 5 references the result of step 4, calculating 250 x 2 = 500 instead of 250 x 2 = 500, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "In a classroom, 10 children have 7 books each. Their teacher brings another 8 books to the classroom. How many books are in the classroom altogether?",
+        "original_solution": "At first, the children have 10*7=70 books\nWith their teacher, they have 70+8=78 books\n#### 78",
+        "original_answer": 78.0,
+        "transformed_solution": "At first, the children have 10*7=70 books\nAssuming a librarian brought in an extra 5 books for a special reading session, with their teacher and librarian, they have 70+8+5=83 books\n#### 83",
+        "transformed_answer": 83.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming a librarian brought in an extra 5 books for a special reading session>, resulting in step 2 changing from 70+8=78 books in the original_solution to 70+8+5=83 books in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 mistakenly believes that the teacher brings 8 books to the classroom, when in fact the teacher brings 8 books to the classroom and adds them to the books already owned by the children, resulting in a total of 70 + 8 = 78 books in the classroom. The subsequent step 3 references the result of step 2, calculating 78 + 5 = 83 instead of 78 + 5 = 83. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause 5 people abstained but their votes were later counted for the unicorn cake, then add the number of votes for each cake including the abstentions to find the total number of votes: 21 votes + 5 abstained votes + 32 votes + 7 votes = 65 votes\n#### 65",
+        "transformed_answer": 65.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 5 people abstained but their votes were later counted for the unicorn cake>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 5 abstained votes + 32 votes + 7 votes = 65 votes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 21 votes for the unicorn cake instead of 7 votes for the unicorn cake. The subsequent step 4 references the result of step 3, calculating 25 votes + 7 votes = 32 votes instead of 25 votes + 7 votes = 34 votes. The subsequent step 5 references the result of step 4, calculating 32 votes + 5 abstentions = 37 votes instead of 34 votes + 5 abstentions = 41 votes. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause 5 people submitted blank votes, then add the number of votes for each cake plus the blank votes to find the total number of votes: 21 votes + 32 votes + 7 votes + 5 blank votes = 65 votes\n#### 65",
+        "transformed_answer": 65.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 5 people submitted blank votes>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 32 votes + 7 votes + 5 blank votes = 65 votes in the transformed_solution. The addition of blank votes affects the final tally, which is inconsistent with the information given in the original question.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 25 + 7 = 32 instead of 25 + 7 = 34. The subsequent step 4 references the result of step 3, calculating 32 + 7 = 40 instead of 34 + 7 = 41, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "In the baking contest, three times as many people voted for the unicorn cake compared to the witch cake, and the number of votes for the dragon cake was 25 more than the number of votes for the witch cake. If 7 people voted for the witch cake, how many votes were cast total?",
+        "original_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nThen add the number of votes for each cake to find the total number of votes: 21 votes + 32 votes + 7 votes = 60 votes\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "First find the number of votes for the unicorn cake: 7 votes * 3 = 21 votes\nThen find the number of votes for the dragon cake: 25 votes + 7 votes = 32 votes\nBecause there was also a mermaid cake that received a number of votes equal to half the number of votes of the witch cake, add that to find the total number of votes: 21 votes + 32 votes + 7 votes + (7 votes / 2) = 66.5 votes\n#### 66.5",
+        "transformed_answer": 66.5,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was also a mermaid cake that received a number of votes equal to half the number of votes of the witch cake>, resulting in step 3 changing from 21 votes + 32 votes + 7 votes = 60 votes in the original_solution to 21 votes + 32 votes + 7 votes + (7 votes / 2) = 66.5 votes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 21 votes + 32 votes = 53 instead of 21 votes + 32 votes = 53. The subsequent step 4 references the result of step 3, calculating 53 + 7 votes = 60 instead of 53 + 7 votes = 66.5, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Quinton brought 40 cupcakes to school on his birthday. He gave a cupcake to each of the 18 students in Ms. Delmont's class. He also gave a cupcake to each of the 16 students in Mrs. Donnelly's class. He also gave a cupcake to Ms. Delmont, Mrs. Donnelly, the school nurse, and the school principal. How many cupcakes did he have left over?",
+        "original_solution": "Quinton had 40 cupcakes - 18 = 22 cupcakes.\nHe then had 22 cupcakes - 16 students = 6 cupcakes.\nQuinton then gave away 6 - 1 -1 -1 -1 = 2 cupcakes left.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Quinton had 40 cupcakes - 18 students = 22 cupcakes.\nHe then had 22 cupcakes - 16 students = 6 cupcakes left.\nBecause he gave an additional cupcake to the librarian, Quinton then gave away 6 - 1 -1 -1 -1 -1 = 1 cupcake left.\n#### 1",
+        "transformed_answer": 1.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he gave an additional cupcake to the librarian>, resulting in step 3 changing from 6 - 1 -1 -1 -1 = 2 cupcakes left in the original_solution to 6 - 1 -1 -1 -1 -1 = 1 cupcake left in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 22 - 16 = 6 instead of 22 - 16 = 6. The subsequent step 4 references the result of step 3, calculating 6 - 1 - 1 - 1 - 1 = 1 instead of 6 - 1 - 1 - 1 - 1 = 0, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Naomi is doing the wash. First she makes piles of different types, with one pile for towels, one for sheets, and one for clothes that need to be washed on the gentle cycle. The clothes take 30 minutes to wash. The towels take twice as long as the clothes to wash. The sheets take 15 minutes less time to wash than the towels. How many minutes total will it take for Naomi to wash everything?",
+        "original_solution": "The clothes take 30 minutes to wash and the towels take twice as long, 30 x 2 = 60 minutes to wash the towels.\nThe sheets take 15 minutes less than the towels, 60 - 15 = 45 minutes to wash the sheets.\nIt takes 30 minutes + 60 minutes + 45 minutes = 135 minutes to wash everything.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "The clothes take 30 minutes to wash and the towels take twice as long, 30 x 2 = 60 minutes to wash the towels.\nBecause Naomi also needs to wash a delicate blouse which takes the same amount of time as the clothes, the sheets take 15 minutes less than the towels, 60 - 15 = 45 minutes to wash the sheets.\nIt takes 30 minutes for clothes + 30 minutes for the delicate blouse + 60 minutes for towels + 45 minutes for sheets = 165 minutes to wash everything.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because Naomi also needs to wash a delicate blouse which takes the same amount of time as the clothes>, resulting in step 3 changing from 30 minutes + 60 minutes + 45 minutes = 135 minutes in the original_solution to 30 minutes for clothes + 30 minutes for the delicate blouse + 60 minutes for towels + 45 minutes for sheets = 165 minutes in the transformed_solution. The transformed solution now includes an extra laundry item, therefore altering the final calculation. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 60 minutes for the towels instead of 60 x 2 = 120 minutes, resulting in the final incorrect answer. The subsequent step 4 references the result of step 3, calculating 120 + 30 + 45 = 195 instead of 165, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

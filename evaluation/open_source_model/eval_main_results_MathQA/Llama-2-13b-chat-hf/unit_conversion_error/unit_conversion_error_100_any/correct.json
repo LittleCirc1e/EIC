@@ -1,0 +1,98 @@
+[
+    {
+        "question": "The angle between the minute hand and the hour hand of a clock when the time is 4.20 ° is",
+        "original_solution": "The angle made by the hour hand for 4:20 can be calculated as follows: (30*4) + (20/60*30) = 120 + 10 = 130 degrees\nThe angle made by the minute hand for 4:20 can be calculated as follows: 20*6 = 120 degrees\nThe angle between the minute hand and the hour hand at 4:20 can be calculated as follows: |130 - 120| = 10 degrees\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "The angle made by the hour hand for 4:20 can be calculated as follows: (30*4) + (20/50*30) = 120 + 12 = 132 degrees\nThe angle made by the minute hand for 4:20 can be calculated as follows: 20*6 = 120 degrees\nThe angle between the minute hand and the hour hand at 4:20 can be calculated as follows: |132 - 120| = 12 degrees\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, which means 60 minutes per hour is wrongly used as 50 minutes per hour, resulting in (20/60*30) in the original_solution becoming (20/50*30) in the transformed_solution. The calculation of the angle for the hour hand is affected, changing from 120 + 10 = 130 degrees to 120 + 12 = 132 degrees, but the calculation of the angle for the minute hand remains accurate, leading to the final angle changing from |130 - 120| = 10 degrees to |132 - 120| = 12 degrees.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The calculation for the angle made by the hour hand is incorrect. The hour hand should be at 4*30 + 20/50*30 = 120 + 10 = 130 degrees, not 120 degrees.\n\nThe angle made by the minute hand is correct, 20*6 = 120 degrees.\n\nThe angle between the minute hand and the hour hand at 4:20 can be calculated as follows: |130 - 120| = 10 degrees.\n\n#### 10."
+    },
+    {
+        "question": "The distance from city A to city B is 30 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.5 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.5 = 0.25 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0.25 hours = 120 miles per hour.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.75 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.75 = 0 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0 hours = undefined miles per hour.\n#### undefined",
+        "transformed_answer": null,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion error by stating that Alice has 0.75 hours less time instead of 0.5 hours, due to incorrectly converting 30 minutes into 0.75 hours instead of the correct 0.5 hours. This error affects the subsequent steps, specifically steps 3 and 4, where the time Alice has to drive is calculated incorrectly as 0 hours (0.75 - 0.75), leading to an incorrect, undefined speed calculation since one cannot divide by zero.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The reason why the solution is incorrect is that the calculation of the time it takes Bob to get to city B is incorrect. The correct calculation is 30 miles / 40 miles per hour = 0.75 hours, not 0.75 - 0.75 = 0 hours. Therefore, Alice must drive at a constant speed of at least 40 miles per hour to arrive in city B before Bob."
+    },
+    {
+        "question": "A mobile battery in 1 hour charges to 20 percent. How much time (in minutes) will it require more to charge to 40 percent?",
+        "original_solution": "The battery charges 20 percent in 60 minutes.\nTo charge to 40 percent, the time required would be 60 minutes + 60 minutes = 120 minutes.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The battery charges 20 percent in 50 minutes.\nTo charge to 40 percent, the time required would be 50 minutes + 50 minutes = 100 minutes.\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in \"The battery charges 20 percent in 60 minutes\" in the original_solution becoming \"The battery charges 20 percent in 50 minutes\" in the transformed_solution. And it affects the subsequent related step 2, which changes from \"60 minutes + 60 minutes = 120 minutes\" to \"50 minutes + 50 minutes = 100 minutes\". The transformed_answer is therefore different from the original_answer due to the implemented unit conversion error. It should be noted that you only need to consider one step of unit conversion error, without affecting the previous or unrelated steps.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The given solution assumes that the battery charges at a constant rate, which is not the case. The battery charges at a linear rate, so the time required to charge to 40 percent would be proportional to the time required to charge to 20 percent. Therefore, the correct answer is 50 minutes + 20 minutes = 70 minutes, not 100 minutes."
+    },
+    {
+        "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+        "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is why the [Solution] is incorrect.\n\nThe correct solution is to start both hourglasses together and let them run. When the 7 mins hourglass runs out, flip it over immediately. When the 11 mins hourglass runs out, flip it over immediately. When the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over. 10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n\nThe [Solution] is incorrect because it does not take into account the time that has passed since the start of the hourglasses. The correct calculation is 10 + (7 - 7) = 10 + 0 = 10 minutes, not 10 + 4 = 14 minutes."
+    },
+    {
+        "question": "The distance from city A to city B is 60 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "Bob takes 60 miles / 40 miles per hour = 1.5 hours to arrive in city B.\nAlice leaves 30 minutes after Bob, so she has 1.5 - 0.5 = 1 hour to reach city B before Bob.\nTo reach city B in 1 hour, Alice must drive at a speed of 60 miles / 1 hour = 60 miles per hour\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "Bob takes 60 miles / 40 miles per hour = 1.5 hours to arrive in city B.\nAlice leaves 30 minutes after Bob, so she has 1.5 - 0.3 = 1.2 hours to reach city B before Bob.\nTo reach city B in 1.2 hours, Alice must drive at a speed of 60 miles / 1.2 hours = 50 miles per hour\n#### 50",
+        "transformed_answer": 50.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which mistakenly converts 30 minutes to 0.3 hours instead of 0.5 hours, resulting in 1.5 - 0.5 = 1 hour in the original_solution becoming 1.5 - 0.3 = 1.2 hours in the transformed_solution. This affects the subsequent related step 3, changing the calculated speed from 60 miles / 1 hour = 60 miles per hour to 60 miles / 1.2 hours = 50 miles per hour. It is important to note that we only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is your explanation about why the [Solution] is incorrect.\n\nThe solution is incorrect because Alice leaves 30 minutes after Bob, not 1.2 hours as calculated in the solution. Therefore, Alice has only 30 minutes to reach city B before Bob, which is not enough time to drive at a constant speed of 50 miles per hour and arrive before Bob. The correct answer is that Alice cannot arrive in city B before Bob."
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The negative distance doesn't make sense in this context, so the child is not 455 meters from his school.\n\nThe correct solution is:\n\nLet x be the distance from his home to the school.\n\nAccording to the given data, time = distance/speed.\n\nSo, x/5 + 6 = x/7 - 20\n\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\n\nRearranging terms gives 2x = -910, so x = -455.\n\nThe child is 455 meters from his school.\n\n#### 455."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the ratio of minutes to hours should be expressed as a fraction of minutes to hours, not as a fraction of minutes to minutes. The correct solution is 12/60 = 1/5."
+    },
+    {
+        "question": "If jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+        "original_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours.\nNow, divide the distance by the time: 9 miles / 1.25 hours = 7.2 miles per hour.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/50 = 0.3 hours, so the total time is 1 + 0.3 = 1.3 hours.\nNow, divide the distance by the time: 9 miles / 1.3 hours = 6.923 miles per hour.\n#### 6.923",
+        "transformed_answer": 6.923,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 15 minutes is wrongly considered as 15/50 of an hour instead of 15/60, resulting in 15/60 = 0.25 hours in the original_solution becoming 15/50 = 0.3 hours in the transformed_solution. And it affects the subsequent related step 2, which changes from 9 miles / 1.25 hours = 7.2 miles per hour to 9 miles / 1.3 hours = 6.923 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the conversion of 1 hour and 15 minutes to hours is incorrect. The correct conversion is 1 hour and 15 minutes is equal to 1.25 hours, not 1.3 hours. Therefore, the calculation of the rate of walking should be: 9 miles / 1.25 hours = 7.2 miles per hour."
+    }
+]

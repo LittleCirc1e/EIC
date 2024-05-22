@@ -1,0 +1,86 @@
+[
+    {
+        "question": "the mass of 1 cubic meter of a substance is 400 kilograms under certain conditions. What is the volume, in cubic centimeters, of 1 gram of this substance under these conditions? (1 kilogram = 1,000 grams and 1 cubic meter = 1,000,000 cubic centimeters)",
+        "original_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 1,000 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram.\n#### 2.5",
+        "original_answer": 2.5,
+        "transformed_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 800 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram.\n#### 3.125",
+        "transformed_answer": 3.125,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 800 grams instead of 1,000 grams, resulting in 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram in the original_solution becoming 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram in the transformed_solution. This improper conversion leads to a larger volume for 1 gram, as there are fewer grams in this incorrect kilogram than there should be. It should be noted that only one step of unit conversion error is considered, so the other calculation processes before step 3 are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The volume of 1 gram of the substance is not 3.125 cubic centimeters, but 0.003125 cubic centimeters. The error occurs in the conversion of kilograms to grams."
+    },
+    {
+        "question": "If Jack walked 4 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+        "original_solution": "First, we need to convert 1 hour and 15 minutes to hours. There are 60 minutes in an hour, so 15 minutes is 15/60 = 0.25 hours. Therefore, 1 hour and 15 minutes is 1 + 0.25 = 1.25 hours.\nNext, we divide the distance Jack walked by the time it took: 4 miles / 1.25 hours = 3.2 miles per hour.\n#### 3.2",
+        "original_answer": 3.2,
+        "transformed_solution": "First, we need to convert 1 hour and 15 minutes to hours. There are 50 minutes in an hour, so 15 minutes is 15/50 = 0.3 hours. Therefore, 1 hour and 15 minutes is 1 + 0.3 = 1.3 hours.\nNext, we divide the distance Jack walked by the time it took: 4 miles / 1.3 hours = 3.07692307692 miles per hour.\n#### 3.07692307692",
+        "transformed_answer": 3.07692307692,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 15 minutes being converted to 15/60 = 0.25 hours in the original_solution into 15/50 = 0.3 hours in the transformed_solution. This affects the sum in the conversion to hours from 1 + 0.25 = 1.25 hours to 1 + 0.3 = 1.3 hours. Consequently, the division for the rate in miles per hour changes from 4 miles / 1.25 hours = 3.2 miles per hour to 4 miles / 1.3 hours = 3.07692307692 miles per hour. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The explanation is that the conversion of 1 hour and 15 minutes to hours is incorrect, there are 60 minutes in an hour, so 15 minutes is 15/60 = 0.25 hours. Therefore, 1 hour and 15 minutes is 1.25 hours."
+    },
+    {
+        "question": "Excluding the stoppages, the speed of a bus is 64 km/hr and including the stoppages the speed of the bus is 48 km/hr. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr.\nSolving for x gives 64(60 - x) = 48 * 60, then 3840 - 64x = 2880, and x = (3840 - 2880)/64 = 15.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr.\nSolving for x gives 64(50 - x) = 48 * 50, then 3200 - 64x = 2400, and x = (3200 - 2400)/64 = 12.5.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr in the original_solution becoming 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr in the transformed_solution. And it changes the subsequent related step 2 to 64(50 - x) = 48 * 50 and step 3 to 3200 - 64x = 2400, and the last step which is the solution of x is changed from (3840 - 2880)/64 = 15 to (3200 - 2400)/64 = 12.5. It should be noted that you only need to consider one step of unit conversion error, so the conversion factors in the other steps are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The formula used in the solution is 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr, which is incorrect because the units of distance and time are not consistent. The correct formula would be 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr \\* 60 s/min, where s is the unit of time. Therefore, the answer is 20 minutes."
+    },
+    {
+        "question": "Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 33 kmph. Of how many minutes does the train stop per hour?",
+        "original_solution": "Let T be the time taken for stoppages in hours.\nDistance = Speed x Time\n45 kmph x (1 - T) = 33 kmph x 1\n45(1 - T) = 33\n45 - 45T = 33\n45T = 12\nT = 12/45 = 4/15 hours\nIn minutes, 4/15 hours x 60 minutes/hour = 16 minutes\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let T be the time taken for stoppages in hours.\nDistance = Speed x Time\n45 kmph x (1 - T) = 33 kmph x 1\n45(1 - T) = 33\n45 - 45T = 33\n45T = 12\nT = 12/45 = 4/15 hours\nIn minutes, 4/15 hours x 50 minutes/hour = 13.333 minutes\n#### 13.333",
+        "transformed_answer": 13.333,
+        "wrong_step": 7,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 7 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 4/15 hours x 60 minutes/hour = 16 minutes in the original_solution becoming 4/15 hours x 50 minutes/hour = 13.333 minutes in the transformed_solution. The affected step is the final conversion to minutes; the rest of the steps to find T in hours are unaffected and correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The formula in the first wrong step is correct, but the unit conversion is incorrect. The speed of the train in kilometers per hour is 45 kmph, but in the formula, it is written as 45(1 - T) = 33 kmph, which is a unit conversion error. The correct unit conversion should be 45 kmph x (1 - T) = 33 kmph x 1, which gives the correct answer of 12 hours. Therefore, the explanation is #12."
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The distance is in meters, but the calculation is done in meters squared. The correct calculation is: x/5 + 6 = x/7 - 20, which gives 2x = -910, so x = -455.\n\nExplanation: The mistake is in the calculation of the distance, the formula is correct but the units are not, the distance is in meters but the calculation is done in meters squared, this is a unit conversion error."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The correct answer is 12/50 = 2/10."
+    },
+    {
+        "question": "If jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+        "original_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours.\nNow, divide the distance by the time: 9 miles / 1.25 hours = 7.2 miles per hour.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/50 = 0.3 hours, so the total time is 1 + 0.3 = 1.3 hours.\nNow, divide the distance by the time: 9 miles / 1.3 hours = 6.923 miles per hour.\n#### 6.923",
+        "transformed_answer": 6.923,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 15 minutes is wrongly considered as 15/50 of an hour instead of 15/60, resulting in 15/60 = 0.25 hours in the original_solution becoming 15/50 = 0.3 hours in the transformed_solution. And it affects the subsequent related step 2, which changes from 9 miles / 1.25 hours = 7.2 miles per hour to 9 miles / 1.3 hours = 6.923 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The explanation is that the conversion of 15 minutes to hours is incorrect, it should be 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours. Therefore, the rate of walking in miles per hour is 9 / 1.25 = 7.2 miles per hour."
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Sara builds a birdhouse that is 1 foot wide, 2 feet tall and 2 feet deep. Jake builds a birdhouse that is 16 inches wide, 20 inches tall and 18 inches deep. What is the difference in volume between the two birdhouses?",
+        "original_solution": "To compare volumes, the measurements must be in the same units. There are 12 inches in 1 ft, so Sara’s birdhouse is 1 ft x 12 inches/ft = 12 inches wide, 2 ft x 12 inches/ft = 24 inches tall, and 2 ft x 12 inches/ft = 24 inches deep.\nThe volume of Sara’s birdhouse is 12 inches x 24 inches x 24 inches = 6,912 cubic inches\nThe volume of Jake’s birdhouse is 16 inches x 20 inches x 18 inches = 5,760 cubic inches.\nThe difference between the two birdhouses is 6,912 cubic inches – 5,760 cubic inches = 1,152 cubic inches.\n#### 1,152",
+        "original_answer": 1152,
+        "transformed_solution": "To compare volumes, the measurements must be in the same units. There are 10 inches in 1 ft, so Sara’s birdhouse is 1 ft x 10 inches/ft = 10 inches wide, 2 ft x 10 inches/ft = 20 inches tall, and 2 ft x 10 inches/ft = 20 inches deep.\nThe volume of Sara’s birdhouse is 10 inches x 20 inches x 20 inches = 4,000 cubic inches\nThe volume of Jake’s birdhouse is 16 inches x 20 inches x 18 inches = 5,760 cubic inches.\nThe difference between the two birdhouses is 4,000 cubic inches – 5,760 cubic inches = -1,760 cubic inches.\n#### -1,760",
+        "transformed_answer": -1760,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, assuming there are 10 inches in a foot instead of the actual 12 inches, which alters the dimensions of Sara's birdhouse in the transformed_solution. This incorrect conversion leads to recalculating the volume of Sara's birdhouse and the difference between the two birdhouses. It should be noted that only the incorrect unit conversion step results in an altered transformation, not affecting the volume calculation of Jake's birdhouse.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The volume of Sara's birdhouse is 10 inches x 20 inches x 20 inches = 8,000 cubic inches, not 4,000 cub"
+    },
+    {
+        "question": "Jerry can run from his house to his school and back in the time it takes his brother Carson to run to the school. If it takes Jerry 15 minutes to make a one-way trip from his house to his school and the school is 4 miles away, how fast does Carson run in miles per hour?",
+        "original_solution": "We know that Carson takes twice as long as Jerry to get to the school, so we can find the time it takes him by multiplying Jerry's time by 2: 15 minutes * 2 = 30 minutes\nThen convert that time to house by dividing by 60 minutes/hour = 30 minutes / 60 minutes/hour = .5 hour\nThen divide the distance Carson runs by the time it takes him to run it to find his speed: 4 miles / 0.5 hours = 8 miles/hour\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "We know that Carson takes twice as long as Jerry to get to the school, so we can find the time it takes him by multiplying Jerry's time by 2: 15 minutes * 2 = 30 minutes\nThen convert that time to house by dividing by 50 minutes/hour = 30 minutes / 50 minutes/hour = 0.6 hour\nThen divide the distance Carson runs by the time it takes him to run it to find his speed: 4 miles / 0.6 hours = 6.67 miles/hour\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 30 minutes / 60 minutes/hour = 0.5 hour in the original_solution becoming 30 minutes / 50 minutes/hour = 0.6 hour in the transformed_solution. And it affects the subsequent related step 3, which changes from 4 miles / 0.5 hours = 8 miles/hour to 4 miles / 0.6 hours = 6.67 miles/hour. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The distance Carson runs is in miles, and the time it takes him to run it is in hours, so the unit conversion is incorrect. The correct answer is #6.67 miles/hour."
+    },
+    {
+        "question": "Aunt Gemma has four dogs. She feeds them with dog food twice a day. Each dog can consume 250 grams of food per meal. If aunt Gemma bought 2 sacks of dog food, each weighing 50 kilograms, how many days will those food last?",
+        "original_solution": "Each dog consumes 250 grams x 2 = 500 grams of dog food each day.\nSo, 4 dogs consume 500 grams x 4 = 2000 grams of dog food each day.\nSince there are 1000 grams in 1 kilogram, then the 4 dogs can consume 2000/1000 = 2 kilograms of dog food each day.\nAunt Gemma bought a total of 50 kilograms x 2 = 100 kilograms of dog food.\nHence, it will last 100 kilograms/2 kilograms = 50 days.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "Each dog consumes 250 grams x 2 = 500 grams of dog food each day.\nSo, 4 dogs consume 500 grams x 4 = 2000 grams of dog food each day.\nSince there are 2000 grams in 1 kilogram, then the 4 dogs can consume 2000/2000 = 1 kilograms of dog food each day.\nAunt Gemma bought a total of 50 kilograms x 2 = 100 kilograms of dog food.\nHence, it will last 100 kilograms/1 kilograms = 100 days.\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In this case, the incorrect unit conversion occurs in step 3 of the original_solution, where it was mistakenly assumed that there are 2000 grams in a kilogram instead of the correct 1000 grams. This changes the daily dog food consumption from 2 kilograms to 1 kilogram and as a result, the computed duration in days doubles from 50 to 100. The wrong step and its subsequent related steps are adjusted accordingly, while the previous steps and unrelated calculations remain unchanged.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The explanation is that the solution mistakenly converted 50 kilograms to 100 kilograms without considering the unit of measurement. The correct conversion should be 50 kilograms x 1000 grams/kilogram = 50,000 grams, which will last 50,000 grams/2"
+    }
+]

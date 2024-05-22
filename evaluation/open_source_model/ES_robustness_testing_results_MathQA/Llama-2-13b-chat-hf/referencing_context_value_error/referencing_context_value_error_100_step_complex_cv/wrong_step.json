@@ -1,0 +1,14 @@
+[
+    {
+        "question": "how much more would rs . 50000 fetch , after two years , if it is put at 20 % p . a . compound interest payable half yearly than if is put at 20 % p . a . compound interest payable yearly ?",
+        "original_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 73205 - 72000 = 1205\n#### 1205",
+        "original_answer": 1205.0,
+        "transformed_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 25/100, n = 2, and t = 2\nA = 50000(1 + 0.25/2)^(2*2) = 50000(1 + 0.125)^(4) = 50000(1.125)^4\nA = 50000*1.6010 = 80050\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 80050 - 72000 = 8050\n#### 8050",
+        "transformed_answer": 8050.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20% in the question as 25% wrongly, and calculates 50000(1 + 0.25/2)^(2*2) = 50000(1 + 0.125)^(4) = 50000(1.125)^4 = 50000*1.6010 = 80050 instead of 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4 = 50000*1.4641 = 73205. Its subsequent related step will be affected, calculating the difference in the amounts as 80050 - 72000 = 8050 instead of 73205 - 72000 = 1205 in the last step. Please note that you should only consider one error, so all other steps that reference the rate of interest as 20% still reference this number correctly except for the step which references it incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes an error in referencing the number of the question description <After two years, if it is put at 20 % p . a . compound interest payable half yearly>. It erroneously references 2 as 20, causing the formula to calculate 25/20 = 0.125 instead of 25/2 = 0.25. This affects subsequent steps 4 and 5 that reference its result. Step 4 incorrectly calculates 1.125 instead of 1.25. Step 5 incorrectly calculates 80050 instead of 80500. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

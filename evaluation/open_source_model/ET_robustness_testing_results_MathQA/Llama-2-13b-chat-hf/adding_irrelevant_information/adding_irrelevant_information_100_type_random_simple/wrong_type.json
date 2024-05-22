@@ -1,0 +1,38 @@
+[
+    {
+        "question": "A train 360 m long is running at a speed of 45 km/hr. In what time will it pass a bridge 240 m long?",
+        "original_solution": "First convert the speed from km/hr to m/s: 45 km/hr x (1000 m/1 km) x (1 hr/3600 s) = 12.5 m/s\nTotal distance to be covered = length of train + length of bridge = 360 m + 240 m = 600 m\nTime = Distance/Speed = 600 m / 12.5 m/s = 48 s\n#### 48 s",
+        "original_answer": 48.0,
+        "transformed_solution": "First convert the speed from km/hr to m/s: 45 km/hr x (1000 m/1 km) x (1 hr/3600 s) = 12.5 m/s\nTotal distance to be covered = length of train + length of bridge + an additional length of 60 m maintenance work on the bridge = 360 m + 240 m + 60 m = 660 m\nTime = Distance/Speed = 660 m / 12.5 m/s = 52.8 s\n#### 52.8 s",
+        "transformed_answer": 52.8,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <an additional length of 60 m maintenance work on the bridge>, resulting in step 2 changing from length of train + length of bridge = 360 m + 240 m = 600 m in the original_solution to length of train + length of bridge + an additional length of 60 m maintenance work on the bridge = 360 m + 240 m + 60 m = 660 m in the transformed_solution. The final calculation has thus been affected, altering the total distance and corresponding time required to pass the bridge and leading to a different result.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'unit_conversion_error', and the explanation is: In the first step, the speed of the train should be converted from km/hr to m/s, but the formula used is incorrect. The correct formula is: 45 km/hr x (1000 m/1 km) = 45000 m/3600 s = 12.5 m/s. The additional length of 60 m for maintenance work on the bridge should not be included in the calculation. Therefore, the correct time is: 660 m / 12.5 m/s = 52.8 s."
+    },
+    {
+        "question": "A metallic sheet is of rectangular shape with dimensions 48 m x 36 m . from each of its corners , a square is cut off so as to make an open box . if the length of the square is 3 m , the volume of the box ( in m 3 ) is :",
+        "original_solution": "Length after cutting the squares from each corner = 48 - 2*3 = 48 - 6 = 42 m\nWidth after cutting the squares from each corner = 36 - 2*3 = 36 - 6 = 30 m\nHeight of the box = 3 m\nVolume of the box = 42 * 30 * 3 = 3780 m^3\n#### 3780",
+        "original_answer": 3780.0,
+        "transformed_solution": "Length after cutting the squares from each corner and an additional notch for handles = 48 - 2*3 - 2*0.5 = 48 - 6 - 1 = 41 m\nWidth after cutting the squares from each corner = 36 - 2*3 = 36 - 6 = 30 m\nHeight of the box = 3 m\nVolume of the box = 41 * 30 * 3 = 3690 m^3\n#### 3690",
+        "transformed_answer": 3690.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and an additional notch for handles>, resulting in step 1 changing from 48 - 2*3 = 42 m in the original_solution to 48 - 2*3 - 2*0.5 = 41 m in the transformed_solution. This adjustment affects the subsequent steps for calculating the volume. The transformed answer is therefore different from the original answer due to this added irrelevant information. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is:\n\nThe volume of the box should be calculated as 41 * 30 * 2 = 2590 m^3, not 3690 m^3. The error is in the height of the box, which is 2 m instead of 3 m."
+    },
+    {
+        "question": "the sum of 4 consecutive numbers is 102. The greatest among these 3 number is:",
+        "original_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 = 102.\n4x = 96.\nx = 24.\nThe greatest number is x + 3 = 24 + 3 = 27.\n#### 27",
+        "original_answer": 27.0,
+        "transformed_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 + 8 = 102 because there was a mistake in the original sum calculation.\n4x + 14 = 102.\n4x = 102 - 14.\n4x = 88.\nx = 22.\nThe greatest number is x + 3 = 22 + 3 = 25.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <because there was a mistake in the original sum calculation>, resulting in step 3 changing from 4x + 6 = 102 in the original_solution to 4x + 6 + 8 = 102 in the transformed_solution. This incorrect addition of 8 erroneously increases the sum, which alters the solution cascade and leads to a different greatest number, 25 instead of 27. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The mistake in the original sum calculation is adding 8 instead of 6, which causes the final answer to be incorrect. The correct calculation is: x + (x+1) + (x+2) + (x+3) = 4x + 6, not 4x + 8. Therefore, the greatest number is x + 3 = 22 + 3 = 25, not 28."
+    }
+]

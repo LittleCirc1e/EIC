@@ -1,0 +1,50 @@
+[
+    {
+        "question": "a car consumes 210 liters of petrol weekly. for how many days will 1470 liters of petrol be sufficient?",
+        "original_solution": "The number of weeks it takes to consume 1470 liters is 1470 / 210 = 7 weeks\nThere are 7 days in a week, so the number of days 1470 liters will be sufficient is 7 * 7 = 49 days\n#### 49",
+        "original_answer": 49.0,
+        "transformed_solution": "The number of weeks it takes to consume 1470 liters is 1470 / 210 = 7 weeks\nThere are 6 days in a week, so the number of days 1470 liters will be sufficient is 7 * 6 = 42 days\n#### 42",
+        "transformed_answer": 42,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 incorrectly states that there are 6 days in a week instead of 7 days. This error modifies the result of the multiplication in step 2, changing it from 7 * 7 = 49 days to 7 * 6 = 42 days. The count of days in a week is the only change made, and thus only the transformed_answer is affected while the division calculation remains correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #49 days.\n\nExplanation: The error in the solution is a counting error, specifically, counting Saturday and Sunday as 3 days instead of 2 days. Therefore, the number of days 1470 liters will be sufficient is 7 weeks \\* 7 days/week = 49 days."
+    },
+    {
+        "question": "how many numbers from 2 to 15 are exactly divisible by 2 ?",
+        "original_solution": "There are 7 numbers between 2 and 15\n2, 4, 6, 8, 10, 12, 14\n#### 7",
+        "original_answer": 7,
+        "transformed_solution": "There are 6 numbers between 2 and 15\n2, 4, 6, 8, 10, 12\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the numbers between 2 and 15 that are exactly divisible by 2 as 6 instead of 7. This counting error excludes number 14 from the series, changing the original solution (which correctly identifies 2, 4, 6, 8, 10, 12, 14) to an incorrect count of 2, 4, 6, 8, 10, 12 in the transformed_solution. The other numbers remain unchanged, and only the count is affected, causing the transformed_answer to differ from the original_answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #7.\n\nExplanation: The solution states that there are 6 numbers between 2 and 15 that are exactly divisible by 2, but this is incorrect. The correct answer is 7, as there are 7 numbers between 2 and 15 that are exactly divisible by 2: 2, 4, 6, 8, 10, and 12."
+    },
+    {
+        "question": "on sunday , bill ran 4 more miles than he ran on saturday . julia did not run on saturday , but she ran twice the number of miles on sunday that bill ran on sunday . if bill and julia ran a total of 16 miles on saturday and sunday , how many miles did bill run on sunday ?",
+        "original_solution": "Let x be the number of miles Bill ran on Saturday\nBill ran x + 4 miles on Sunday\nJulia ran 2*(x + 4) = 2x + 8 miles on Sunday\nThe total number of miles ran on Saturday and Sunday is x + (x + 4) + 2x + 8 = 16 miles\nCombining like terms, 4x + 12 = 16\n4x = 4\nx = 1\nBill ran 1 + 4 = 5 miles on Sunday\n#### 5",
+        "original_answer": 5,
+        "transformed_solution": "Let x be the number of miles Bill ran on Saturday\nBill ran x + 4 miles on Sunday\nJulia ran 2*(x + 4) = 2x + 8 miles on Sunday\nThe total number of miles ran on Saturday and Sunday is x + (x + 4) + 2x + 8 = 16 miles\nCombining like terms, 4x + 12 = 16\n4x = 4\nx = 1. Instead of saying Bill ran 1 + 4 miles on Sunday, we say Bill ran 1 + 5 = 6 miles on Sunday\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 8,
+        "wrong_type": "arithmetic_error",
+        "is_single_error": true,
+        "explanation": "Here, the transformed_solution has an arithmetic error introduced in the last line of the calculation, where the original solution correctly states that Bill ran 1 + 4 = 5 miles, while the transformed_solution incorrectly states Bill ran 1 + 5 = 6 miles on Sunday, without impacting previous steps. This arithmetic error leads to a different answer in the transformed_solution (6 miles) than in the original_solution (5 miles).",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe error occurs in the second step, where Julia ran 2 times the number of miles Bill ran on Sunday. The correct calculation is:\n\nJulia ran 2x + 8 miles on Sunday\n\nSo, the total number of miles ran on Saturday and Sunday is:\n\nx + (x + 4) + 2x + 8 = 16 miles\n\nCombining like terms, we get:\n\n4x + 12 = 16\n\n4x = 4\n\nx = 1\n\nBill ran 1 + 4 = 5 miles on Sunday.\n\nTherefore, the correct answer is #5 miles."
+    },
+    {
+        "question": "one week , a certain truck rental lot had a total of 26 trucks , all of which were on the lot monday morning . if 50 % of the trucks that were rented out during the week were returned to the lot on or before saturday morning of that week , and if there were at least 14 trucks on the lot that saturday morning , what is the greatest number of different trucks that could have been rented out during the week ?",
+        "original_solution": "The total number of trucks rented out during the week is 26 - 14 = 12 trucks\nSince 50% of the rented out trucks were returned by Saturday morning, the total number of trucks rented out during the week is 12 / (50/100) = 24 trucks\n#### 24",
+        "original_answer": 24,
+        "transformed_solution": "The total number of trucks rented out during the week is 26 - 13 = 13 trucks\nSince 50% of the rented out trucks were returned by Saturday morning, the total number of trucks rented out during the week is 13 / (50/100) = 26 trucks\n#### 26",
+        "transformed_answer": 26,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts the trucks on the lot as being 13 instead of 14 on Saturday morning, resulting in the calculation being changed from 26 - 14 = 12 trucks to 26 - 13 = 13 trucks. And it affects the subsequent related step, changing the computed total number of trucks rented out during the week from 24 to 26. It should be noted that only one step of counting error is considered, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #24.\n\nExplanation:\nThe calculation of the total number of trucks rented out during the week is incorrect. The correct calculation is:\n\nTotal number of trucks rented out = Total number of trucks on Monday morning - Number of trucks returned by Saturday morning\n\nUsing the information given in the question, we can calculate the total number of trucks rented out as follows:\n\nTotal number of trucks rented out = 26 - 14 = 12\n\nTherefore, the greatest number of different trucks that could have been rented out during the week is 12."
+    }
+]

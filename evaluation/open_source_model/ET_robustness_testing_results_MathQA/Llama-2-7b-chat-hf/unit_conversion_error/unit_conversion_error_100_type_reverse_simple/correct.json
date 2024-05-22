@@ -1,0 +1,62 @@
+[
+    {
+        "question": "the mass of 1 cubic meter of a substance is 400 kilograms under certain conditions. What is the volume, in cubic centimeters, of 1 gram of this substance under these conditions? (1 kilogram = 1,000 grams and 1 cubic meter = 1,000,000 cubic centimeters)",
+        "original_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 1,000 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram.\n#### 2.5",
+        "original_answer": 2.5,
+        "transformed_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 800 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram.\n#### 3.125",
+        "transformed_answer": 3.125,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 800 grams instead of 1,000 grams, resulting in 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram in the original_solution becoming 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram in the transformed_solution. This improper conversion leads to a larger volume for 1 gram, as there are fewer grams in this incorrect kilogram than there should be. It should be noted that only one step of unit conversion error is considered, so the other calculation processes before step 3 are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The volume of 1 gram of the substance is not 3.125 cubic centimeters, but 1 cubic centimeter. The error occurs in the conversion of kilograms to grams. The correct calculation is:\n\nVolume of 1 gram = Volume of"
+    },
+    {
+        "question": "If Jack walked 4 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+        "original_solution": "First, we need to convert 1 hour and 15 minutes to hours. There are 60 minutes in an hour, so 15 minutes is 15/60 = 0.25 hours. Therefore, 1 hour and 15 minutes is 1 + 0.25 = 1.25 hours.\nNext, we divide the distance Jack walked by the time it took: 4 miles / 1.25 hours = 3.2 miles per hour.\n#### 3.2",
+        "original_answer": 3.2,
+        "transformed_solution": "First, we need to convert 1 hour and 15 minutes to hours. There are 50 minutes in an hour, so 15 minutes is 15/50 = 0.3 hours. Therefore, 1 hour and 15 minutes is 1 + 0.3 = 1.3 hours.\nNext, we divide the distance Jack walked by the time it took: 4 miles / 1.3 hours = 3.07692307692 miles per hour.\n#### 3.07692307692",
+        "transformed_answer": 3.07692307692,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 15 minutes being converted to 15/60 = 0.25 hours in the original_solution into 15/50 = 0.3 hours in the transformed_solution. This affects the sum in the conversion to hours from 1 + 0.25 = 1.25 hours to 1 + 0.3 = 1.3 hours. Consequently, the division for the rate in miles per hour changes from 4 miles / 1.25 hours = 3.2 miles per hour to 4 miles / 1.3 hours = 3.07692307692 miles per hour. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The conversion of 1 hour and 15 minutes to hours is incorrect, there are 60 minutes in an hour, so 15 minutes is 15/60 = 0.25 hours. Therefore, 1 hour and 15 minutes is 1.5 hours. Next, we divide the distance Jack walked by the time it took: 4 miles / 1.5 hours = 2.66666666667 miles per hour.#### 2.66666666667."
+    },
+    {
+        "question": "The distance from city A to city B is 30 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.5 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.5 = 0.25 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0.25 hours = 120 miles per hour.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.75 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.75 = 0 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0 hours = undefined miles per hour.\n#### undefined",
+        "transformed_answer": null,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion error by stating that Alice has 0.75 hours less time instead of 0.5 hours, due to incorrectly converting 30 minutes into 0.75 hours instead of the correct 0.5 hours. This error affects the subsequent steps, specifically steps 3 and 4, where the time Alice has to drive is calculated incorrectly as 0 hours (0.75 - 0.75), leading to an incorrect, undefined speed calculation since one cannot divide by zero.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The problem states that Alice leaves 30 minutes after Bob, so she has 30/60 = 0.5 hours less time to get to city B than Bob. Therefore, Alice must drive 30 miles in 0.5 - 0.75 = 0.25 hours to arrive in city B before Bob. The minimum constant speed in miles per hour that Alice must exceed is 30 miles / 0.25 hours = 12"
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The formula used in the solution is correct, but the units of distance are not consistent. In the first step, the distance is given in meters, but in the second step, the distance is given in feet. Therefore, the solution is incorrect.\n\nExplanation: The formula used in the solution is correct, but the units of distance are not consistent. In the first step, the distance is given in meters, but in the second step, the distance is given in feet. Therefore, the solution is incorrect."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The correct answer is 12/50 = 2/10."
+    }
+]

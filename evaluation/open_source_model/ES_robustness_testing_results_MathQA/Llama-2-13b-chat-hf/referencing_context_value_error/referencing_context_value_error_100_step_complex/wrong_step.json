@@ -1,0 +1,74 @@
+[
+    {
+        "question": "A shopkeeper sells 10% of his stock at 20% profit and sells the remaining at a loss of 5%. He incurred an overall loss of Rs. 400. Find the total worth of the stock?",
+        "original_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 400\nx = 400 / -0.025\nx = -16000\nThe total worth of the stock is -16000\n#### -16000",
+        "original_answer": -16000.0,
+        "transformed_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.15 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.15 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.03x - 0.045x = 400\n-0.015x = 400\nx = 400 / -0.015\nx = -26666.67\nThe total worth of the stock is -26666.67\n#### -26666.67",
+        "transformed_answer": -26666.67,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the 10% of the stock as 15% wrongly and calculates profit from that percentage as 0.15 * x * 20/100 instead of 0.1 * x * 20/100. The subsequent related steps 3, 4, 5, 6, and 7 are affected by the erroneous result of 0.15 * x * 20/100 but are still calculated correctly based on that incorrect value. Please note that you should only consider one error, so all subsequent calculations should still reference the original 10% from the question correctly except for the incorrect step.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.15 * x * 20/100 instead of 0.15 * x * 20/100 - 0.9 * x * 5/100 = 400. The subsequent step 5 references the result of step 4, calculating -0.015x = 400 instead of -0.03x + 0.045x = 400. The first step to make a mistake, which is the root cause of the mistake, is step 4.\n\nThe correct solution should be:\n\nLet the total worth of the stock be x.\nProfit from 10% of stock = 0.15 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.15 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.03x - 0.045x = 400\n-0.015x = 400\nx = 400 / -0.015\nx = 26666.67\nThe total worth of the stock is 26666.67.\n\nPlease note that the correct solution is slightly different from the given solution, as the correct solution has a negative value for x, while the given solution has a positive value. This is because the correct solution takes into account the overall loss of Rs. 400, while the given solution only considers the profit from the 10% sale."
+    },
+    {
+        "question": "how much more would rs . 50000 fetch , after two years , if it is put at 20 % p . a . compound interest payable half yearly than if is put at 20 % p . a . compound interest payable yearly ?",
+        "original_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 73205 - 72000 = 1205\n#### 1205",
+        "original_answer": 1205.0,
+        "transformed_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 25/100, n = 2, and t = 2\nA = 50000(1 + 0.25/2)^(2*2) = 50000(1 + 0.125)^(4) = 50000(1.125)^4\nA = 50000*1.6010 = 80050\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 80050 - 72000 = 8050\n#### 8050",
+        "transformed_answer": 8050.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20% in the question as 25% wrongly, and calculates 50000(1 + 0.25/2)^(2*2) = 50000(1 + 0.125)^(4) = 50000(1.125)^4 = 50000*1.6010 = 80050 instead of 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4 = 50000*1.4641 = 73205. Its subsequent related step will be affected, calculating the difference in the amounts as 80050 - 72000 = 8050 instead of 73205 - 72000 = 1205 in the last step. Please note that you should only consider one error, so all other steps that reference the rate of interest as 20% still reference this number correctly except for the step which references it incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1.6010 instead of 1.44. The subsequent step 4 references the result of step 3, calculating 80050 instead of 72000. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.002^4 = 1.008\n#### 1.008",
+        "transformed_answer": 1.008,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 1.003 in the question as 1.002 wrongly, and calculates 1.002^4=1.008 instead of 1.003^4=1.012. This error changes the final result of the calculation from correct 1.012 to incorrect 1.008 while maintaining the same calculation structure. The error is only related to referencing the base number incorrectly in the first step, while the operation of raising to the power is still performed correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1.003^4 instead of 1.002^4. The subsequent step 4 references the result of step 3, calculating 1.008 instead of 1.008. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "at a certain committee meeting only associate professors and assistant professors are present. each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. if a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 11 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14/3.\nPlugging the value of a into the first equation, we get 2*(14/3) + b = 11.\nSo, b = 11 - 2*(14/3).\nSo, b = 11 - 28/3.\nSo, b = 33/3 - 28/3.\nSo, b = 5/3.\nThere are 14/3 associate professors and 5/3 assistant professors, so a total of (14/3 + 5/3) people are present.\nSo a total of 19/3 people are present, which is not possible, therefore we have a mistake in the initial step.\nAfter correcting we would get a=4 and b=2 for a total of 6 people are present.\n#### 6.33",
+        "transformed_answer": 6.33,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 10 in the question as 11 wrongly, and calculates 2a + b = 11 instead of 2a + b = 10. Its subsequent related steps will be affected by the erroneous result of this step but still be calculated correctly. Steps 2, 3, 4, 5, 6, and 7 correctly reference the numbers in their calculations, even though they propagate the error introduced in step 1. Please note that we should only consider the error in step 1, so all other steps that reference the numbers of pencils and charts will still reference them correctly except for the modified step. The substeps within step 7 correctly calculate b based on the incorrect step 1. After correcting we would get a=4 and b=2 for a total of 6 people are present. The transformed answer should therefore be returned to the original correct answer, even though the transformation process resulted in a nonsensical result implying a fraction of people.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one pencil has 2/3 minutes instead of 1 minute, calculating 2a + b = 22 instead of 2a + b = 14. The subsequent step 4 references the result of step 3, calculating 3a = 14 instead of 3a = 4. The subsequent step 5 references the result of step 4, calculating b = 5/3 instead of b = 2. The subsequent step 6 references the result of step 5, calculating a total of 19/3 people are present instead of a total of 6 people are present. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "If it is assumed that 50 percent of those who receive a questionnaire by mail will respond and 300 responses are needed, what is the minimum number of questionnaires that should be mailed?",
+        "original_solution": "Let x be the number of questionnaires mailed.\n0.50x = 300\nx = 300 / 0.50 = 600\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "Let x be the number of questionnaires mailed.\n0.60x = 300\nx = 300 / 0.60 = 500\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, and calculates 0.60x=300 instead of 0.50x=300. Its subsequent related step will be affected, calculating x = 300 / 0.60 = 500 instead of 300 / 0.50 = 600 in step 2. Please note that you should only consider one error, so step 2 still references 300 in the question correctly, only the incorrect percentage is carried over in the calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one questionnaire has 0.60 responses instead of 0.50 responses, calculating 0.60x = 300 instead of 0.50x = 300. The subsequent step 4 references the result of step 3, calculating 500 instead of 300, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "the difference between c . i . and s . i . on an amount of $ 20,000 for 2 years is $ 72 . what is the rate of interest per annum ?",
+        "original_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72.\nSolving this equation gives x = 0.06.\n#### 6%",
+        "original_answer": 6.0,
+        "transformed_solution": "Let x be the rate of interest per annum.\nThe compound interest is 15000*(1+x)^2 - 15000.\nThe simple interest is 15000*x*2.\nThe difference between c . i . and s . i . is 15000*(1+x)^2 - 15000 - 15000*x*2 = 72.\nSolving this equation won't give an accurate value for x since the original problem statement has been changed.\n#### value_changed",
+        "transformed_answer": "value_changed",
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly references the principal amount as $15,000 instead of the correct $20,000 from the question, and subsequently calculates the compound and simple interest based on the incorrect principal. The subsequent steps carry forward the error from step 1 but still use the correct method as per step in the original solution to calculate the difference based on the incorrect principal values. This leads to an entirely different transformed solution where the rate x cannot be accurately determined. As per instructions, all other steps that reference the correct principal amount of $20,000 do so correctly except for the erroneous step 1.",
+        "eval_result": "\n\nPlease provide the correct [Solution] and [Output] for the given [Question].\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 15000*(1+x)^2 - 15000 instead of 15000*(1+x)^2 - 15000 + 15000*x*2 = 72. The subsequent step 5 references the result of step 4, calculating 15000*(1+x)^2 - 15000 - 15000*x*2 = 72 instead of 15000*(1+x)^2 - 15000 + 15000*x*2 = 144. The first step to make a mistake, which is the root cause of the mistake, is step 4.\n\nThe correct [Solution] is 'Let x be the rate of interest per annum. The compound interest is 15000*(1+x)^2 - 15000. The simple interest is 15000*x*2. The difference between c . i . and s . i . is 15000*(1+x)^2 - 15000 - 15000*x*2 = 72.'.\n\nThe correct [Output] is 'The solution is correct, and the explanation is that the difference between compound interest and simple interest on an amount of $20,000 for 2 years is $72, which can be calculated as 15000*(1+x)^2 - 15000 - 15000*x*2 = 72, where x is the rate of interest per annum.'."
+    }
+]

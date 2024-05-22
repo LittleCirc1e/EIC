@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Last month, Tasha made $80 from selling lemonade and mowing lawns. The first week, she mowed Kamala's lawn thrice as many times as she did Joe's. The following week, she mowed Alba's lawn five times as she did Joe's. If Joe paid Tasha $6 for her work, how much did she make from lemonade sales?",
+        "original_solution": "At Kamala's Tasha made three times what she made mowing Joe's lawn, which gives 3 * 6 = 18 dollars\nSince the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 18 + 30 = 54 dollars\nSubtracting the lawn mowing money from the total amount gives us 80 - 54 = 26 dollars\nTasha therefore made 26 dollars selling lemonade.\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Since the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 6 + 30 = 42 dollars\n",
+        "transformed_answer": 38.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformed_solution, the missing intermediate step is the calculation of the money Tasha made at Kamala's, which is 3 * 6 = 18 dollars. As a consequence, step 2 in the transformed_solution is the first instance that does not follow from the preceding steps, instead combining Tasha's earnings from Joe's lawn (6 dollars) with Alba's (30 dollars). This step also adds another lawn mowing session at Joe's (6 dollars), which corresponds to the largest number referenced by the deleted step 1 related to lawn mowing. The subsequent steps are all affected by this change and are modified to calculate and subtract from the total based on the incorrect total lawn mowing earnings. It is step 2 in the transformed_solution, that serves as the first step referencing the incorrect total after deleting the first step, so the wrong_step is 2.",
+        "eval_result": "The solution is incorrect, the correct answer is 42, and the explanation is 42. The value of unknown variable x is 42.The answer is: 42"
+    },
+    {
+        "question": "Frank went to a shop to buy some food for his breakfast. He bought 10 buns for $0.1 each, two bottles of milk, for $2 each, and a carton of eggs, which was three times more expensive than one bottle of milk. How much did Frank pay for his breakfast shopping?",
+        "original_solution": "For the buns, Frank paid 10 * 0.1 = $1.\nHe bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 1 + 4 + 6 = $11.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "He bought two bottles of milk, for $2 each, so he paid for them 2 * 2 = $4.\nOne carton of eggs was three times more expensive than one bottle of milk, so it cost 3 * 2 = $6.\nSo for all his shopping Frank had to pay 10 * 0.1 + 4 + 6 = $15.\n",
+        "transformed_answer": 15.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been removed. In the original_solution, step 1 calculates the cost for buns and steps 3 and 4 reference the result of $1 from step 1. After removing step 1, the cost of buns is no longer calculated separately, so the final calculation step which was step 4 in the original solution, now becomes step 3 in the transformed solution and now directly references the cost for 10 buns with the formula 10 * 0.1 instead of the previously calculated $1, which results in 10 * 0.1 + 4 + 6 = $15. Since the transformed_solution's step 3 is the first instance where the formula was adjusted to include the omitted step's calculation, the wrong_step is designated as 3.",
+        "eval_result": "The solution is incorrect, the correct answer is 15, and the explanation is 15.The answer is: 15"
+    }
+]

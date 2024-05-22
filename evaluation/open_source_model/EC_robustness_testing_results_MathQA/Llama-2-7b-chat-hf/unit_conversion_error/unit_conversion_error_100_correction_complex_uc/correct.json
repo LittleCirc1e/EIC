@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (60 minutes per hour) / (60 - x) minutes per hour and 45 kmph = (60 minutes per hour) / x minutes per hour.\nSolving for x, we get x = 10.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (50 minutes per hour) / (50 - x) minutes per hour and 45 kmph = (50 minutes per hour) / x minutes per hour.\nSolving for x, we get x = 5.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 hour is wrongly calculated as 50 minutes instead of the actual 60 minutes. This has subsequently affected the equation in step 3, changing it from (60 minutes per hour) / (60 - x) minutes and (60 minutes per hour) / x minutes to (50 minutes per hour) / (50 - x) minutes and (50 minutes per hour) / x minutes. This incorrect unit conversion results in a different solution for x, leading to an altered answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #, and the explanation is #.\n\nThe reason for this is that the solution makes an error in step 3, where it assumes that the time taken to cover the distance is directly proportional to the speed, which is not the case. The correct formula for calculating the time taken to cover a distance at a constant speed is: Time = Distance / Speed, not Time = Speed / Distance. Therefore, the solution should be:\n\nLet x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (50 minutes per hour) / (50 - x) minutes per hour and 45 kmph = (50 minutes per hour) / x minutes per hour.\nSolving for x, we get x = 10.\n#### 10.\n\nTherefore, the correct answer is 10, and the explanation is that step 3 makes an error in assuming that the time taken to cover the distance is directly proportional to the speed, which affects the calculation of x in step 4."
+    },
+    {
+        "question": "If jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+        "original_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours.\nNow, divide the distance by the time: 9 miles / 1.25 hours = 7.2 miles per hour.\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/50 = 0.3 hours, so the total time is 1 + 0.3 = 1.3 hours.\nNow, divide the distance by the time: 9 miles / 1.3 hours = 6.923 miles per hour.\n#### 6.923",
+        "transformed_answer": 6.923,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 15 minutes is wrongly considered as 15/50 of an hour instead of 15/60, resulting in 15/60 = 0.25 hours in the original_solution becoming 15/50 = 0.3 hours in the transformed_solution. And it affects the subsequent related step 2, which changes from 9 miles / 1.25 hours = 7.2 miles per hour to 9 miles / 1.3 hours = 6.923 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7.2, and the explanation is that step 2 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and it wrongly calculates 9 / 1.3 = 6.923 instead of 9 / 1.5 = 6.67. This affects step 3. Step 3 erroneously calculates 6.67 x 60 = 394 instead of 6.67 x 60 = 400."
+    },
+    {
+        "question": "A car traveling at a certain constant speed takes 5 seconds longer to travel 1 km than it would take to travel 1 km at 90 km / hour. At what speed, in km / hr, is the car traveling?",
+        "original_solution": "Let the speed of the car be x km/hr.\nTime taken to travel 1 km at speed x = 1/x hours.\nTime taken to travel 1 km at speed 90 km/hr = 1/90 hours.\nAccording to the given information, 1/x - 1/90 = 5/3600.\nMultiplying through by 90x(3600)\n3600(90) - 3600x = 450x\n450x + 3600x = 3600(90)\n4050x = 324000\ncar traveling speed x = 324000 / 4050 = 80\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "Let the speed of the car be x km/hr.\nTime taken to travel 1 km at speed x = 1/x hours.\nTime taken to travel 1 km at speed 90 km/hr = 1/90 hours.\nAccording to the given information, 1/x - 1/90 = 5/3500.\nMultiplying through by 90x(3500)\n3500(90) - 3500x = 450x\n450x + 3500x = 3500(90)\n3950x = 315000\ncar traveling speed x = 315000 / 3950 = 79.75\n#### 79.75",
+        "transformed_answer": 79.75,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In step 4, the unit conversion from seconds to hours is incorrect. Instead of using 3600 seconds which is the correct number of seconds in an hour, I used 3500 seconds, which is an incorrect unit conversion, leading to the wrong equation 1/x - 1/90 = 5/3500. This then also changes the multiplication factor in step 5, which was originally 90x(3600) and becomes 90x(3500) in the transformed_solution. As such, the right-hand side of the equation in step 6 changes due to this incorrect multiplication, and this error propagates through the following steps until the final answer, which is incorrect as well. The subsequent related steps are affected by this wrong unit conversion error.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 80, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that 1 hour has 3500 minutes instead of 60 minutes, and wrongly calculates 3500 x 90 = 315000 instead of 60 x 90 = 5400. This affects step 4. Step 4 erroneously calculates 450x = 4500 instead of 450(60) = 2700. Step 5 correctly calculates 2700 - 2700 = 0. Therefore, the correct answer is 80."
+    },
+    {
+        "question": "Circular gears p and q start rotating at the same time at constant speeds. Gear p makes 10 revolutions per minute and gear q makes 40 revolutions per minute. How many seconds after the gears start rotating will gear q have made exactly 5 more revolutions than gear p?",
+        "original_solution": "Let t be the time in minutes after the gears start rotating.\nAfter t minutes, gear p will have made 10t revolutions and gear q will have made 40t revolutions.\nWe need to find t such that 40t = 10t + 5\nSolving for t: 30t = 5, t = 5/30 = 1/6\nIn seconds, 1/6 minutes is 1/6 * 60 = 10 seconds.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let t be the time in minutes after the gears start rotating.\nAfter t minutes, gear p will have made 10t revolutions and gear q will have made 40t revolutions.\nWe need to find t such that 40t = 10t + 5\nSolving for t: 30t = 5, t = 5/30 = 1/6\nIn seconds, 1/6 minutes is 1/6 * 50 = 8.33 seconds.\n#### 8.33",
+        "transformed_answer": 8.33,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 1/6 * 60 = 10 seconds in the original_solution becoming 1/6 * 50 = 8.33 seconds in the transformed_solution. The error only affects the unit conversion for representing minutes into seconds and does not affect the algebraic operation or the process to find t, as that remains correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that 1 minute has 50 seconds instead of 60 seconds, and it wrongly calculates 40t = 10t + 5 as 30t = 5, t = 1/30 = 0.067 seconds instead of 30t = 5, t = 1/6 = 8.33 seconds. This affects the calculation of t in step 4. Step 4 erroneously calculates 10t + 5 = 8.33 instead of 10t + 5 = 10."
+    }
+]

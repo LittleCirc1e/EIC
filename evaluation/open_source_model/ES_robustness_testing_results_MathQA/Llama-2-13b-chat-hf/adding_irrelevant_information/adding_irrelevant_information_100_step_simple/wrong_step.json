@@ -1,0 +1,78 @@
+[
+    {
+        "question": "If the price of a book is first decreased by 15 % and then increased by 10 %, then the net change in the price will be:",
+        "original_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nThe price after a 10% increase is 85 + (0.10 * 85) = 85 + 8.5 = $93.50.\nThe net change in the price is 93.50 - 100 = -$6.50\n#### -6.50",
+        "original_answer": -6.5,
+        "transformed_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nAssuming there was a mistaken additional discount of 5% applied in this step, the actual price after the discounts would be 85 - (0.05 * 85) = 85 - 4.25 = $80.75.\nThe price after a 10% increase is 80.75 + (0.10 * 80.75) = 80.75 + 8.075 = $88.825.\nThe net change in the price is 88.825 - 100 = -$11.175\n#### -11.175",
+        "transformed_answer": -11.175,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, specifically, introducing a mistaken additional discount of 5%. This mistake changes the calculations in step 2 from a price decrease to $85 to a further reduced price of $80.75. Following this error, all subsequent calculations are based on the incorrect price of $80.75 instead of $85, resulting in the transformed solution stating the price after a 10% increase and the net change in price incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which must be an integer, and the explanation is as follows:\n\nIn step #4, there is a mistake in calculating the price after the mistaken additional discount of 5%. The correct calculation should be 85 - (0.05 * 85) = 85 - 4.25 = $81.25, not $80.75. This mistake propagates to the next step, leading to the final incorrect answer. Therefore, the first wrong step is step #4."
+    },
+    {
+        "question": "Speed of a boat in standing water is 9 kmph and the speed of the stream is 1.5 kmph. A man rows to a place at a distance of 105 km and comes back to the starting point. The total time taken by him is",
+        "original_solution": "Speed downstream = 9 + 1.5 = 10.5 kmph\nSpeed upstream = 9 - 1.5 = 7.5 kmph\nTime taken downstream = 105 / 10.5 = 10 hours\nTime taken upstream = 105 / 7.5 = 14 hours\nTotal time taken = 10 + 14 = 24 hours\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Speed downstream = 9 + 1.5 = 10.5 kmph\nSpeed upstream = 9 - 1.5 = 7.5 kmph\nDue to a temporary increase in stream speed by 0.5 kmph, the speed upstream on the return trip becomes 9 - 1.5 - 0.5 = 6.5 kmph\nTime taken downstream = 105 / 10.5 = 10 hours\nTime taken upstream with increased stream speed = 105 / 6.5 = approximately 16.15 hours\nTotal time taken = 10 + 16.15 = approximately 26.15 hours\n#### 26.15",
+        "transformed_answer": 26.15,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <due to a temporary increase in stream speed by 0.5 kmph>, resulting in the speed upstream on the return trip changing from 9 - 1.5 in the original_solution to 9 - 1.5 - 0.5 in the transformed_solution. This change affects the subsequent computations, particularly the time taken upstream and the total time. The transformed_solution shows a total time of approximately 26.15 hours, different from the original_answer of 24 hours. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #3, which must be an integer, and the explanation is as follows:\n\nThe mistake occurs when calculating the speed upstream on the return trip. The correct formula for calculating the speed upstream is:\n\nSpeed upstream = 9 - 1.5 - 0.5 = 7 kmph\n\nNot 6.5 kmph as calculated in the solution.\n\nTherefore, the total time taken will be:\n\nTime taken downstream = 105 / 10.5 = 10 hours\n\nTime taken upstream with increased stream speed = 105 / 7 = approximately 14.29 hours\n\nTotal time taken = 10 + 14.29 = approximately 24.29 hours\n\n#### 24.29."
+    },
+    {
+        "question": "A container holding 15 ounces of a solution that is 1 part alcohol to 2 parts water is added to a container holding 8 ounces of a solution that is 1 part alcohol to 3 parts water. What is the ratio of alcohol to water in the resulting solution?",
+        "original_solution": "For the first container, there are 15/3 = 5 ounces of alcohol and 15*2/3 = 10 ounces of water.\nFor the second container, there are 8/4 = 2 ounces of alcohol and 8*3/4 = 6 ounces of water.\nThe total amount of alcohol is 5 + 2 = 7 ounces.\nThe total amount of water is 10 + 6 = 16 ounces.\nThe ratio of alcohol to water is 7:16\n#### 7:16",
+        "original_answer": "7:16",
+        "transformed_solution": "For the first container, there are 15/3 = 5 ounces of alcohol and 15*2/3 = 10 ounces of water.\nFor the second container, there are 8/4 = 2 ounces of alcohol and 8*3/4 = 6 ounces of water.\nBecause of evaporation, there is a loss of 1 ounce of alcohol from the first container, so the total amount of alcohol is 5 - 1 + 2 = 6 ounces.\nThe total amount of water is 10 + 6 = 16 ounces.\nThe ratio of alcohol to water is therefore 6:16 or simplified to 3:8\n#### 3:8",
+        "transformed_answer": "3:8",
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because of evaporation, there is a loss of 1 ounce of alcohol from the first container>, resulting in step 3 changing from a calculation of the total amount of alcohol as 5 + 2 = 7 ounces in the original_solution to 5 - 1 + 2 = 6 ounces in the transformed_solution. This alteration affects the final result, which mistakenly states the total amount of alcohol as 6 ounces instead of 7 ounces, leading to a different ratio of 3:8 instead of the correct 7:16. It should be noted that only one error of adding additional information in one step is considered, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which is the step where the evaporation is considered. The explanation is that evaporation should not be considered as it is not a physical process that can occur in this situation. The correct solution is to simply mix the two containers and calculate the ratio of alcohol to water based on the total amount of each liquid.\n\nThe correct solution is:\n\nThe total amount of alcohol is 5 + 2 = 7 ounces\nThe total amount of water is 10 + 6 = 16 ounces\nThe ratio of alcohol to water is therefore 7:16 or simplified to 1:2.\n\n#### 1:2."
+    },
+    {
+        "question": "In one alloy there is 12% chromium while in another alloy it is 8%. 15 kg of the first alloy was melted together with 35 kg of the second one to form a third alloy. Find the percentage of chromium in the new alloy.",
+        "original_solution": "Total weight of the new alloy is 15 + 35 = 50 kg.\nTotal amount of chromium in the new alloy is 0.12 x 15 + 0.08 x 35 = 1.8 + 2.8 = 4.6 kg.\nThe percentage of chromium in the new alloy is (4.6 / 50) x 100 = 9.2%.\n#### 9.2",
+        "original_answer": 9.2,
+        "transformed_solution": "Total weight of the new alloy is 15 + 35 + 5 (assuming 5 kg of a non-cited pure chromium is added) = 55 kg.\nTotal amount of chromium in the new alloy is 0.12 x 15 + 0.08 x 35 + 5 (pure chromium addition) = 1.8 + 2.8 + 5 = 9.6 kg.\nThe percentage of chromium in the new alloy is (9.6 / 55) x 100 = 17.4545... which rounds to 17.5%.\n#### 17.5",
+        "transformed_answer": 17.5,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 has been modified with additional content that is not provided in the question statement by introducing <assuming 5 kg of a non-cited pure chromium is added>, which causes the total weight to calculate from 50 kg to 55 kg. As a result of the added pure chromium, the transformed_solution integrates this additional weight when calculating the total amount of chromium and its percentage in the new alloy, leading to a transformed_answer that differs from the original_answer.",
+        "eval_result": "\n\nPlease provide your response here.\n\nThe solution is incorrect, the first wrong step is step #3, which must be an integer, and the explanation is as follows:\n\nIn step #3, the assumption that 5 kg of a non-cited pure chromium is added is not justified. There is no information in the problem statement to support this assumption, and it is not a reasonable assumption to make. Therefore, the calculation of the total amount of chromium in the new alloy is incorrect, and the final answer is also incorrect. The correct solution is to simply calculate the total weight of the new alloy as 15 + 35 = 50 kg, and the percentage of chromium in the new alloy as (9.6 / 50) x 100 = 19.2%, which rounds to 19%."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4, and they found an additional even number x+6 lying on the ground which they also took.\nThe sum of the four numbers including the one found is x + (x+2) + (x+4) + (x+6) = 4x + 12.\nAccording to the problem, now including the number found, the total is 4x + 12 = 246.\n4x = 234.\nx = 58.5 which is not possible since we are looking for even numbers.\nThere might be an error in calculating or including the number found since the original problem only asked for the sum of three consecutive even numbers.\n#### Error",
+        "transformed_answer": "Error",
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement by including a non-existent additional number <and they found an additional even number x+6 lying on the ground which they also took>, resulting in step 1 changing from calculating the sum of three even numbers x + (x+2) + (x+4) in the original_solution to calculating the sum of four numbers including the supposed number found x + (x+2) + (x+4) + (x+6) in the transformed_solution. This change caused the derived equation to become 4x + 12 = 246, which led to an incorrect calculation of the value of x, and thus the incorrect listing of the numbers as this violates the original problem constraints. This error makes the new answer not viable.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which is the step where they included the number found, and the explanation is that the original problem only asked for the sum of three consecutive even numbers, and including the number found is not part of the problem. The correct solution is to only consider the sum of the three consecutive even numbers, which is 3x + 6 = 246, and the explanation is that the number found is not part of the problem."
+    },
+    {
+        "question": "In an examination, there were 2,000 candidates, out of which 900 candidates were girls and the rest were boys. If 32% of the boys and 32% of the girls passed, then the total percentage of failed candidates is?",
+        "original_solution": "Number of boys = 2000 - 900 = 1100\nNumber of girls passed = 900 x 32% = 900 x 0.32 = 288\nNumber of boys passed = 1100 x 32% = 1100 x 0.32 = 352\nTotal number of candidates passed = 288 + 352 = 640\nTotal number of candidates failed = 2000 - 640 = 1360\nPercentage of failed candidates = (1360 / 2000) x 100 = 68%\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "Number of boys = 2000 - 900 = 1100\nNumber of girls passed = 900 x 32% = 900 x 0.32 = 288\nBecause 10 boys were absent, the number of boys taking the exam was 1100 - 10 = 1090\nNumber of boys passed = 1090 x 32% = 1090 x 0.32 = 348.8, approximately 349\nTotal number of candidates passed = 288 + 349 = 637\nTotal number of candidates failed = 2000 - 637 = 1363\nPercentage of failed candidates = (1363 / 2000) x 100 = 68.15%, approximately 68.2%\n#### 68.2",
+        "transformed_answer": 68.2,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 10 boys were absent>, resulting in step 3 changing from Number of boys passed = 1100 x 32% = 352 in the original_solution to Number of boys passed = 1090 x 32% = 348.8, approximately 349 in the transformed_solution. This new information affects the total number of candidates who passed and the final percentage of failed candidates.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe mistake in the solution is that the number of boys passed is calculated as 1090 x 32% = 1090 x 0.32 = 348.8, approximately 349, but the correct calculation should be 1090 x 32% = 1090 x 0.32 = 348, without the decimal part. Therefore, the total number of candidates passed should be 288 + 348 = 636, not 637.\n\nThe correct answer is:\n\nTotal number of candidates passed = 636\nTotal number of candidates failed = 2000 - 636 = 1364\nPercentage of failed candidates = (1364 / 2000) x 100 = 68.2%, approximately 68.2%."
+    }
+]

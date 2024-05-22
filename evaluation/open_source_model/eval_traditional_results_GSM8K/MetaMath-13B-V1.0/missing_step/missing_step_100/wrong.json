@@ -1,0 +1,78 @@
+[
+    {
+        "index": 30,
+        "gsm8k_data": {
+            "question": "John can read a book 60% faster than his brother. If his brother takes 8 hours to read a book, how long would it take John to read 3 books?",
+            "original_solution": "Reading 60% faster means John's brother takes 1+.6=1.6 times as long as John to read\nSo John reads a book in 8/1.6=5 hours\nSo it would take John 5*3=15 hours to read 3 books\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "So John reads a book in 8/.6=13.333 hours\nSo it would take John 13.333*3=40 hours to read 3 books\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 60% from the question, and step 2 references the result 1.6 of step 1. So after deleting step 1, step 2 should change and no longer contain a division by 1.6, but mistakenly uses division by .6 instead. Hence, the result changes incorrectly from John reading a book in 5 hours to claiming he reads it in 13.333 hours. The transformed_solution should not change from division by 1.6 to .6. The subsequent step 3 changes accordingly, from 5*3=15 to 13.333*3=40. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing an incorrect computation in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn can read a book 60% faster than his brother. If his brother takes 8 hours to read a book, how long would it take John to read 3 books?\n\n### Response:",
+        "output_str": "If John can read a book 60% faster than his brother, then he can read a book in 100% - 60% = 40% of the time it takes his brother.\nIf his brother takes 8 hours to read a book, then John can read a book in 8 hours * 40% = 3.2 hours.\nTo read 3 books, it would take John 3.2 hours/book * 3 books = 9.6 hours.\n#### 9.6\nThe answer is: 9.6",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 9.6,
+        "is_correct": false
+    },
+    {
+        "index": 32,
+        "gsm8k_data": {
+            "question": "In a yard, the number of tanks is five times the number of trucks. If there are 20 trucks in the yard, calculate the total number of tanks and trucks in the yard.",
+            "original_solution": "There are 5*20 = 100 tanks in the yard.\nAltogether, there are 100+20 = 120 trucks and tanks in the yard.\n#### 140",
+            "original_answer": 140.0,
+            "transformed_solution": "Altogether, there are 5*20+20 = 120 trucks and tanks in the yard.\n#### 120",
+            "transformed_answer": 120.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes step 1 from the original_solution. The original step 1 references number 20 from the question to calculate the number of tanks and step 2 references the result from step 1 to calculate the total. After deleting step 1, reference to the number of tanks is replaced by the direct calculation of 5 times the number of trucks (5*20) in the formula for the total number of trucks and tanks. This results in a single formula that serves as step 1 for the calculation: 5*20+20 = 120. The transformed solution does not have the wrong intermediate step, and hence wrong_step is 1 since it's the first step in the transformed_solution that has an error, being the step that references the result of the deleted step. The result of the total calculation is different from the original answer, ensuring that the transformed_answer is 120, not 140, which is also a logic error in the original_solution since the correct total is in fact 120."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a yard, the number of tanks is five times the number of trucks. If there are 20 trucks in the yard, calculate the total number of tanks and trucks in the yard.\n\n### Response:",
+        "output_str": "If there are 20 trucks in the yard, then the number of tanks is 5 * 20 = 100 tanks.\nThe total number of tanks and trucks in the yard is 100 tanks + 20 trucks = 120.\n#### 120\nThe answer is: 120",
+        "extract_true_num": 140.0,
+        "extract_pred_num": 120.0,
+        "is_correct": false
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "Quentavious has 5 nickels. His friend offers him some gum and will give him two pieces per nickel. If Quentavious leaves with 2 nickels, how many pieces of gum did he get?",
+            "original_solution": "He spent 3 nickels because 5 - 2 = 3\nHe got 6 pieces of gum because 3 x 2 = 6\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "He got 10 pieces of gum because 5 x 2 = 10\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of nickels Quentavious spent and uses this information in step 2. After deleting step 1, step 2 should now incorporate the total number of nickels Quentavious originally had, which was 5. Therefore, the formula in step 2 is changed from 3 x 2 = 6 to 5 x 2 = 10. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves the first step using the incorrect number in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nQuentavious has 5 nickels. His friend offers him some gum and will give him two pieces per nickel. If Quentavious leaves with 2 nickels, how many pieces of gum did he get?\n\n### Response:",
+        "output_str": "Quentavious has 5 nickels, and his friend gives him 2 pieces of gum per nickel.\nIf he leaves with 2 nickels, then he gets 2 * 2 = 4 pieces of gum.\nTherefore, Quentavious gets 4 pieces of gum.\n#### 4\nThe answer is: 4",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 4.0,
+        "is_correct": false
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "Bill is ordering a new truck. He has decided to purchase a two-ton truck with several added features: a king cab upgrade, a towing package, leather seats, running boards, and the upgraded exterior light package. The base price of the truck is $30,000, and the other features are at extra cost. The king cab is an extra $7,500, leather seats are one-third the cost of the king cab upgrade, running boards are $500 less than the leather seats, and the upgraded exterior light package is $1500. What is the total cost of Bill's new truck, in dollars?",
+            "original_solution": "The leather seats are one-third the cost of the king cab upgrade, at a cost of $7,500/3=$2500.\nThe running boards are $500 less than the leather seats at a cost of $2500-$500=$2000\nThe total cost of the truck is $30,000+$7500+$2500+$2000+$1500=$43,500\n#### 43,500",
+            "original_answer": 43500.0,
+            "transformed_solution": "The running boards are $500 less than the leather seats which are one-third the cost of the king cab upgrade, at a cost of $7500/3-$500=$2000\nThe total cost of the truck is $30,000+$7500+($7500/3)+$2000+$1500=$42,000\n#### 42,000",
+            "transformed_answer": 42000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "This example removes intermediate step 1. In the original_solution, step 1 calculates the cost of the leather seats as one-third the cost of the king cab upgrade, and step 2 references the result $2500 from step 1. Therefore, after deleting step 1, step 2 should reference the calculation for the cost of the leather seats directly as one-third of the cost of the king cab upgrade and then subtracting $500. The language in the transformed_solution is updated to combine the deleted step's calculation with the next step into 'The running boards are $500 less than the leather seats which are one-third the cost of the king cab upgrade, at a cost of $7500/3-$500=$2000'. Step 3 is adjusted accordingly to reference the recalculated price for the running boards and provide a new total cost, changing from $30,000+$7500+$2500+$2000+$1500=$43,500 to $30,000+$7500+($7500/3)+$2000+$1500=$42,000. Since step 1 in the transformed_solution now combines the original steps 1 and 2, the first wrong reference after the missing step occurs in the new step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBill is ordering a new truck. He has decided to purchase a two-ton truck with several added features: a king cab upgrade, a towing package, leather seats, running boards, and the upgraded exterior light package. The base price of the truck is $30,000, and the other features are at extra cost. The king cab is an extra $7,500, leather seats are one-third the cost of the king cab upgrade, running boards are $500 less than the leather seats, and the upgraded exterior light package is $1500. What is the total cost of Bill's new truck, in dollars?\n\n### Response:",
+        "output_str": "The base price of the truck is $30,000.\nThe king cab upgrade is an extra $7,500.\nThe leather seats are one-third the cost of the king cab upgrade, so they cost $7,500/3 = $2,500.\nThe running boards are $500 less than the leather seats, so they cost $2,500 - $500 = $2,000.\nThe upgraded exterior light package is $1500.\nTo find the total cost, we add up the cost of each feature: $30,000 + $7,500 + $2,500 + $2,000 + $1500 = $42,000.\nThe total cost of Bill's new truck is $42,000.\n#### 42000\nThe answer is: 42000",
+        "extract_true_num": 43500.0,
+        "extract_pred_num": 42000.0,
+        "is_correct": false
+    }
+]

@@ -1,0 +1,97 @@
+[
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272.0,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208.0,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day each instead of 2 days each, transforming the original 'Each week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.' into 'Each week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.' And it affects the subsequent related step, with the original 'In one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.' changing into 'In one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.' The final sum in step 7 changes accordingly from 144 + 128 = 272 hours to 144 + 64 = 208 hours. The transformed answer should be different from the original answer, and no previous or unrelated steps are affected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 1-hour classes each day, so that's 3 * 1 = 3 hours per day.\nOn Tuesdays and Thursdays, he has 2 2-hour classes each day, so that's 2 * 2 = 4 hours per day.\nIn total, Kimo spends 3 + 4 = 7 hours attending classes each day.\nIn one semester, there are 16 weeks of school, so Kimo spends 7 * 5 = 35 hours attending classes each week.\nTherefore, in one semester, Kimo spends 35 * 16 = 560 hours attending classes.\n#### 560\nThe answer is: 560",
+        "extract_true_num": 272.0,
+        "extract_pred_num": 560.0,
+        "is_correct": false
+    },
+    {
+        "index": 46,
+        "gsm8k_data": {
+            "question": "On the weekend, Tony will walk to the store. On weekdays, he runs to the store. When he walks, he goes 2 MPH. When he runs he goes 10 MPH. The store is 4 miles away. If he goes on Sunday, Tuesday, and Thursday, what is the average time in minutes that he spends to get to the store?",
+            "original_solution": "On Sunday he takes 2 hours to get there because 4 / 2 = 2\nThis takes him 120 minutes because 2 x 60 = 120\nOn Tuesday and Thursday, it takes him .4 hours to get to the store because 4 / 10 = .4\nOn Tuesday and Thursday, it takes him 24 minutes to get to the store because .4 x 60 = 24\nIn total it takes him 168 minutes to get to the store because 120 + 24 + 24 = 168\nOn average it takes him 56 minutes because 168 / 3 = 56\n#### 56",
+            "original_answer": 56.0,
+            "transformed_solution": "On Sunday he takes 2 hours to get there because 4 / 2 = 2\nThis takes him 120 minutes because 2 x 60 = 120\nOn Tuesday and Thursday, it takes him .4 hours to get to the store because 4 / 10 = .4\nOn Tuesday and Thursday, it takes him 24 minutes to get to the store because .4 x 60 = 24\nIn total it takes him 144 minutes to get to the store because 120 + 12 + 12 = 144\nOn average it takes him 48 minutes because 144 / 3 = 48\n#### 48",
+            "transformed_answer": 48.0,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 erroneously adds the times for Sunday, Tuesday, and Thursday as if Tony only spent 12 minutes each on Tuesday and Thursday, instead of 24 minutes, resulting in an incorrect total time of 144 minutes. This affects the final average calculation in step 6, changing it from 168 / 3 = 56 minutes to 144 / 3 = 48 minutes. The rest of the calculations are still correct, as we consider only one step of counting error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn the weekend, Tony will walk to the store. On weekdays, he runs to the store. When he walks, he goes 2 MPH. When he runs he goes 10 MPH. The store is 4 miles away. If he goes on Sunday, Tuesday, and Thursday, what is the average time in minutes that he spends to get to the store?\n\n### Response:",
+        "output_str": "The distance to the store is 4 miles.\nWhen Tony walks, he goes 2 MPH, so it will take him 4 miles / 2 MPH = 2 hours to walk to the store.\nWhen Tony runs, he goes 10 MPH, so it will take him 4 miles / 10 MPH = 0.4 hours to run to the store.\nTo convert hours to minutes, we multiply by 60, so 2 hours = 2 * 60 = 120 minutes and 0.4 hours = 0.4 * 60 = 24 minutes.\nTony spends a total of 120 minutes + 24 minutes + 60 minutes = 204 minutes to get to the store on Sunday, Tuesday, and Thursday.\nTo find the average time, we divide the total time by the number of days, so 204 minutes / 3 days = 68 minutes per day.\n#### 68\nThe answer is: 68",
+        "extract_true_num": 56.0,
+        "extract_pred_num": 68.0,
+        "is_correct": false
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, step 5 erroneously counts Tuesday and Thursday as 1 day instead of 2 days each week, resulting in 4 x 2 = 8 becoming 4 x 1 = 4. And it affects the subsequent related step 6, changing from 8 x 16 = 128 to 4 x 16 = 64, and step 7, changing from 144 + 128 = 272 to 144 + 64 = 208. It should be noted that only this step of counting error needs to be considered; the other calculation processes are correct and follow the structure of the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 1-hour classes each day, so that's 3 * 1 = 3 hours per day.\nOn Tuesdays and Thursdays, he has 2 2-hour classes each day, so that's 2 * 2 = 4 hours per day.\nIn total, Kimo spends 3 + 4 = 7 hours attending classes each day.\nIn one semester, there are 16 weeks of school, so Kimo spends 7 * 5 = 35 hours attending classes each week.\nTherefore, in one semester, Kimo spends 35 * 16 = 560 hours attending classes.\n#### 560\nThe answer is: 560",
+        "extract_true_num": 272,
+        "extract_pred_num": 560.0,
+        "is_correct": false
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "On Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?",
+            "original_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 2 = 8 hours in class on Tuesday and Thursday.\nIn one semester, he spends 8 x 16 = 128 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 128 = 272 hours attending classes.\n#### 272",
+            "original_answer": 272,
+            "transformed_solution": "Kimo spends 3 x 1 = 3 hours in class on any given Monday, Wednesday or Friday.\nEach week, he spends 3 x 3 = 9 hours in class on Monday, Wednesday, and Friday.\nIn one semester, he spends 9 x 16 = 144 hours in class for Monday, Wednesday, and Friday.\nHe spends 2 x 2 = 4 hours in class on any given Tuesday or Thursday.\nEach week, he spends 4 x 1 = 4 hours in class on Tuesday and Thursday.\nIn one semester, he spends 4 x 16 = 64 hours in class on Tuesday and Thursday.\nIn total for one semester, Kimo spends 144 + 64 = 208 hours attending classes.\n#### 208",
+            "transformed_answer": 208,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "The transformed_solution introduces a counting error by changing the number of days in which Kimo attends 2-hour classes. Instead of two days (Tuesday and Thursday), step 5 mistakenly counts only one day for 2-hour classes. This alters the subsequent calculations — instead of attending class for 8 hours each week on Tuesday and Thursday, the transformed_solution suggests he only attends 4 hours. In one semester, this changes from 8 x 16 = 128 hours to 4 x 16 = 64 hours, altering the total hours Kimo spends attending classes for the semester."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn Mondays, Wednesdays, and Fridays, college student Kimo has three 1-hour classes each day. On Tuesdays and Thursdays, he has two 2-hour classes each day. In one semester, there are 16 weeks of school. In one semester, how many hours does Kimo spend attending classes?\n\n### Response:",
+        "output_str": "On Mondays, Wednesdays, and Fridays, Kimo has 3 1-hour classes each day, so that's 3 * 1 = 3 hours per day.\nOn Tuesdays and Thursdays, he has 2 2-hour classes each day, so that's 2 * 2 = 4 hours per day.\nIn total, Kimo spends 3 + 4 = 7 hours attending classes each day.\nIn one semester, there are 16 weeks of school, so Kimo spends 7 * 5 = 35 hours attending classes each week.\nTherefore, in one semester, Kimo spends 35 * 16 = 560 hours attending classes.\n#### 560\nThe answer is: 560",
+        "extract_true_num": 272,
+        "extract_pred_num": 560.0,
+        "is_correct": false
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "On the weekend, Tony will walk to the store. On weekdays, he runs to the store. When he walks, he goes 2 MPH. When he runs he goes 10 MPH. The store is 4 miles away. If he goes on Sunday, Tuesday, and Thursday, what is the average time in minutes that he spends to get to the store?",
+            "original_solution": "On Sunday he takes 2 hours to get there because 4 / 2 = 2\nThis takes him 120 minutes because 2 x 60 = 120\nOn Tuesday and Thursday, it takes him .4 hours to get to the store because 4 / 10 = .4\nOn Tuesday and Thursday, it takes him 24 minutes to get to the store because .4 x 60 = 24\nIn total it takes him 168 minutes to get to the store because 120 + 24 + 24 = 168\nOn average it takes him 56 minutes because 168 / 3 = 56\n#### 56",
+            "original_answer": 56.0,
+            "transformed_solution": "On Sunday he takes 2 hours to get there because 4 / 2 = 2\nThis takes him 120 minutes because 2 x 60 = 120\nOn Tuesday and Thursday, it takes him .4 hours to get to the store because 4 / 10 = .4\nOn Tuesday and Thursday, it takes him 24 minutes to get to the store because .4 x 60 = 24\nIn total it takes him 192 minutes to get to the store because 120 + 24 + 48 = 192\nOn average it takes him 64 minutes because 192 / 3 = 64\n#### 64",
+            "transformed_answer": 64.0,
+            "wrong_step": 5,
+            "wrong_type": "counting_error",
+            "is_single_error": true,
+            "explanation": "Here, the wrong step (5) erroneously counts the time taken on Tuesday and Thursday as 48 minutes in total instead of 24 + 24 = 48 minutes, which should have been unchanged from the original solution. Therefore, instead of adding 120 + 24 + 24 = 168, we erroneously added 120 + 48 = 168. Consequently, the final step calculation also changed from 168 / 3 = 56 to 192 / 3 = 64, although it was performed correctly given the wrong input."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn the weekend, Tony will walk to the store. On weekdays, he runs to the store. When he walks, he goes 2 MPH. When he runs he goes 10 MPH. The store is 4 miles away. If he goes on Sunday, Tuesday, and Thursday, what is the average time in minutes that he spends to get to the store?\n\n### Response:",
+        "output_str": "The distance to the store is 4 miles.\nWhen Tony walks, he goes 2 MPH, so it will take him 4 miles / 2 MPH = 2 hours to walk to the store.\nWhen Tony runs, he goes 10 MPH, so it will take him 4 miles / 10 MPH = 0.4 hours to run to the store.\nTo convert hours to minutes, we multiply by 60, so 2 hours = 2 * 60 = 120 minutes and 0.4 hours = 0.4 * 60 = 24 minutes.\nTony spends a total of 120 minutes + 24 minutes + 60 minutes = 204 minutes to get to the store on Sunday, Tuesday, and Thursday.\nTo find the average time, we divide the total time by the number of days, so 204 minutes / 3 days = 68 minutes per day.\n#### 68\nThe answer is: 68",
+        "extract_true_num": 56.0,
+        "extract_pred_num": 68.0,
+        "is_correct": false
+    }
+]

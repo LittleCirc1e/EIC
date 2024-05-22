@@ -1,0 +1,20 @@
+[
+    {
+        "question": "Sum of two numbers is 20. Two times the first exceeds by 5 from the three times the second. Find the numbers.",
+        "original_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\nx = 13\nThe two numbers are 13 and 7.\n#### 13, 7",
+        "original_answer": [
+            13,
+            7
+        ],
+        "transformed_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\n",
+        "transformed_answer": [
+            15,
+            7
+        ],
+        "wrong_step": 9,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 9 mistakenly references 20 - 7 as 15 from step 8 and changes x + 7 = 20 to x = 15 instead of x = 13. It should be noted that step 8 in the transformed_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> should be the same as the step 8 in the original_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> and calculates its result 20 correctly. Because only one error of referencing is considered, all other steps that follow step 8 still reference the number correctly and are calculated based on the erroneous result from step 9. Therefore, despite the wrong reference at step 9, the subsequent step 10 uses the new incorrect value of x from step 9 to calculate correctly within the context of the transformed solution. The transformed_answer differs from the original_answer as required.",
+        "eval_result": "The solution is incorrect, and the correct answer is 7.\nThe value of unknown variable x is incorrect.The answer is: 7"
+    }
+]

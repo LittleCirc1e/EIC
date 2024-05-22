@@ -1,0 +1,173 @@
+[
+    {
+        "index": 3,
+        "gsm8k_data": {
+            "question": "The total number of plums that grow during each year on a certain plum tree is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). During its 5th year, the plum tree grew 50 plums. If this trend continues, how many plums will it grow during its 6th year?",
+            "original_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nIt will grow 5 plums during its 6th year because 50 - 5 = 45\n#### 45",
+            "original_answer": 45.0,
+            "transformed_solution": "During its 5th year, the tree was 4 years old because 50 = 5 - 1\nDuring its 6th year, the tree will be 5 years old because 6 - 1 = 5\nAssuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%, it will grow 10% fewer plums during its 6th year, so 50 - 5 - (10% of 50) = 45 - 5 = 40\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 3,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming that the tree was affected by an early frost this year, decreasing the expected plums by 10%>, resulting in step 3 changing from 50 - 5 = 45 in the original_solution to 50 - 5 - (10% of 50) = 45 - 5 = 40 in the transformed_solution. The natural conditions affecting the plum production are not specified in the question, thus the introduction of the frost condition adds irrelevant information and changes the outcome erroneously."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe total number of plums that grow during each year on a certain plum tree is equal to the number of plums that grew during the previous year, less the age of the tree in years (rounded down to the nearest integer). During its 5th year, the plum tree grew 50 plums. If this trend continues, how many plums will it grow during its 6th year?\n\n### Response:",
+        "output_str": "\nThe plum tree will grow 45 plums during its 6th year.\n\nExplanation:\nThe instruction states that the number of plums grown by the tree each year is equal to the number of plums grown the previous year minus the age of the tree in years (rounded down to the nearest integer). In the 5th year, the tree grew 50 plums, so the number of plums it will grow in the 6th year is 50 - 5 = 45.",
+        "extract_true_num": 45.0,
+        "extract_pred_num": 45.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "an article with a cost price of 192 is sold at 25% profit. What is the selling price?",
+            "original_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nThe selling price is the cost price plus the profit, 192 + 48 = 240\n#### 240",
+            "original_answer": 240.0,
+            "transformed_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nBecause the item needed packaging that cost an additional $16, the selling price is the cost price plus the profit and packaging cost, (192 + 48) + 16 = 256\n#### 256",
+            "transformed_answer": 256.0,
+            "wrong_step": 2,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the item needed packaging that cost an additional $16>, resulting in step 2 changing from 192 + 48 = 240 in the original_solution to (192 + 48) + 16 = 256 in the transformed_solution. The language description has also changed from <the selling price is the cost price plus the profit> to <the selling price is the cost price plus the profit and packaging cost>. The additional packaging cost is included in the calculation and this affects the final result, as the transformed_answer is different from the original_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nan article with a cost price of 192 is sold at 25% profit. What is the selling price?\n\n### Response:",
+        "output_str": "\nThe selling price of the article can be calculated by using the formula:\n\nSelling Price = Cost Price x (1 + Profit Percentage)\n\nIn this case, the cost price of the article is $192, and the profit percentage is 25%, which is equal to $48.\n\nTherefore, the selling price of the article can be calculated as follows:\n\nSelling Price = $192 x (1 + $48)\n= $192 x 1.25\n= $240\n\nSo, the selling price of the article is $240.",
+        "extract_true_num": 240.0,
+        "extract_pred_num": 240.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+            "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "Considering that Lilly gave away 3 fish, they now have 10 - 3 + 12 = 19 fish in all.\n#### 19",
+            "transformed_answer": 19.0,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <Considering that Lilly gave away 3 fish>, resulting in step 1 changing from 10 + 12 = 22 fish in the original_solution to 10 - 3 + 12 = 19 fish in the transformed_solution. The transformation introduces a scenario that was not provided in the question, thus affecting the final total count of the fish and changing the correct answer. It should be noted that there should only be one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?\n\n### Response:",
+        "output_str": "\nLilly has 10 fish and Rosy has 12 fish, so together they have 10 + 12 = 22 fish.",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 22.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "the total marks obtained by a student in mathematics and physics is 40 and his score in chemistry is 20 marks more than that in physics . find the average marks scored in mathamatics and chemistry together .",
+            "original_solution": "Let the score in physics be x\nThe score in mathematics is 40 - x because the total marks obtained by a student in mathematics and physics is 40\nThe score in chemistry is x + 20 because his score in chemistry is 20 marks more than that in physics\nThe average marks scored in mathematics and chemistry together is (40 - x + x + 20) / 2 = (60)/2 = 30\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "Let the score in physics be x\nThe score in mathematics is 40 - x because the total marks obtained by a student in mathematics and physics is 40\nThe score in chemistry is x + 20 because his score in chemistry is 20 marks more than that in physics\nAssuming the student also participated in an extra project which gave him an additional 10 marks in chemistry, the score in chemistry is now x + 20 + 10.\nThe average marks scored in mathematics and chemistry together with the extra project marks is (40 - x + x + 20 + 10) / 2 = (70)/2 = 35\n#### 35",
+            "transformed_answer": 35.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming the student also participated in an extra project which gave him an additional 10 marks in chemistry>, resulting in step 4 changing from (40 - x + x + 20) / 2 = (60)/2 = 30 in the original_solution to (40 - x + x + 20 + 10) / 2 = (70)/2 = 35 in the transformed_solution. The transformed solution incorrectly adds 10 marks to the chemistry score even though this additional score is not mentioned in the question. The transformed_answer is different from the original_answer due to this additional information."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe total marks obtained by a student in mathematics and physics is 40 and his score in chemistry is 20 marks more than that in physics . find the average marks scored in mathamatics and chemistry together .\n\n### Response:",
+        "output_str": "\nTo find the average marks scored in mathematics and chemistry together, we need to first find the marks obtained by the student in mathematics. Since the total marks obtained by the student is 40, the marks obtained in mathematics is 40 / 2 = 20.\n\nNow, we know that the score in chemistry is 20 marks more than the score in physics, so the marks obtained in chemistry is 20 + 20 = 40.\n\nTherefore, the average marks scored in mathematics and chemistry together is (20 + 40) / 2 = 30.",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    },
+    {
+        "index": 55,
+        "gsm8k_data": {
+            "question": "Of 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+            "original_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nThe number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) = 56.\n#### 56",
+            "original_answer": 56.0,
+            "transformed_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nAssuming there are 4 ambidextrous players who are counted as right-handed, the number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) + 4 (ambidextrous) = 60.\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming there are 4 ambidextrous players who are counted as right-handed>, resulting in step 4 changing from 28 (non-throwers) + 28 (throwers) = 56 in the original_solution to 28 (non-throwers) + 28 (throwers) + 4 (ambidextrous) = 60 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOf 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?\n\n### Response:",
+        "output_str": "\nTo find the number of right-handed players on the football team, we need to first determine the number of left-handed players. Since 28 of the 70 players are throwers, and all throwers are right-handed, there are 28 right-handed players among the non-throwers. Therefore, the total number of right-handed players is 28 + 28 = 56.",
+        "extract_true_num": 56.0,
+        "extract_pred_num": 56.0,
+        "is_correct": true
+    },
+    {
+        "index": 56,
+        "gsm8k_data": {
+            "question": "you collect pens . suppose you start out with 25 . mike gives you another 22 pens . since her father makes pens , cindy decides to double your pens . since you 're nice , you give sharon 19 pens . how many pens do you have at the end ?",
+            "original_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, you have 94-19 = 75 pens at the end.\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, then you find 5 more pens on the street, you have 94-19+5 = 80 pens at the end.\n#### 80",
+            "transformed_answer": 80.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <then you find 5 more pens on the street>, resulting in step 4 changing from 94-19 = 75 pens in the original_solution to 94-19+5 = 80 pens in the transformed_solution. This additional information increases the number of pens you have at the end, which affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nyou collect pens . suppose you start out with 25 . mike gives you another 22 pens . since her father makes pens , cindy decides to double your pens . since you 're nice , you give sharon 19 pens . how many pens do you have at the end ?\n\n### Response:",
+        "output_str": "\nAt the beginning, you have 25 pens. Then, Mike gives you another 22 pens, so you have a total of 25 + 22 = 47 pens. Cindy decides to double your pens, so you give her 47 x 2 = 94 pens. Finally, you give Sharon 19 pens, so you have 94 - 19 = 75 pens at the end.",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 75.0,
+        "is_correct": true
+    },
+    {
+        "index": 62,
+        "gsm8k_data": {
+            "question": "In a mixture of 60 liters, the ratio of milk and water is 2 : 1. If this ratio is to be 1 : 2, then the quantity of water to be further added is",
+            "original_solution": "The current quantity of milk in the mixture is 2/(2+1) * 60 = 40 liters\nThe current quantity of water in the mixture is 1/(2+1) * 60 = 20 liters\nLet the quantity of water to be further added be x\nThe new total quantity of water in the mixture will be 20 + x\nThe new total quantity of milk in the mixture will be 40 liters\nThe new ratio of milk and water is 40 : (20 + x), and as per the given ratio, we have 40/(20 + x) = 1/2\n40 = (20 + x)/2\n80 = 20 + x\n60 = x\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "The current quantity of milk in the mixture is 2/(2+1) * 60 = 40 liters\nThe current quantity of water in the mixture is 1/(2+1) * 60 = 20 liters\nLet the quantity of water to be further added be x\nAssuming there is an additional 5 liter loss due to evaporation, the new total quantity of water in the mixture including evaporation loss will be 20 + x - 5\nThe new total quantity of milk in the mixture will be 40 liters\nThe new ratio of milk and water is 40 : (20 + x - 5), and as per the given ratio, we have 40/(20 + x - 5) = 1/2\n40 = (20 + x - 5)/2\n80 = 20 + x - 5\n65 = x\n#### 65",
+            "transformed_answer": 65.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming there is an additional 5 liter loss due to evaporation>, resulting in step 4 changing from The new total quantity of water in the mixture will be 20 + x in the original_solution to The new total quantity of water in the mixture including evaporation loss will be 20 + x - 5 in the transformed_solution. This change affects the subsequent calculations, where the new equation to solve for x becomes 40 = (20 + x - 5)/2 and leads to x being 65 instead of the original answer of 60."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a mixture of 60 liters, the ratio of milk and water is 2 : 1. If this ratio is to be 1 : 2, then the quantity of water to be further added is\n\n### Response:",
+        "output_str": "\nTo make the ratio of milk and water 1 : 2, we need to add 60 liters of water to the mixture. Therefore, the quantity of water to be further added is 60 liters.",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 74,
+        "gsm8k_data": {
+            "question": "bhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food . if he spends rs . 300 on petrol then what is the expenditure on house rent ?",
+            "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+            "original_answer": 210.0,
+            "transformed_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nShortly after, the house rent prices increased by 10%, and thus he had to spend an additional 10% on the new rent. So he actually spends 30% of the remaining income plus 10% of that amount on house rent, or (0.3 * 0.7x) * 1.1\nHe spends the balance on food, which is 0.7x - (0.3 * 0.7x) * 1.1 = 0.7x - 0.231x = 0.469x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, after the rent increase, the expenditure on house rent is (0.3 * 0.7 * 1000) * 1.1 = 231\n#### 231",
+            "transformed_answer": 231.0,
+            "wrong_step": 4,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 4 adds information that is not mentioned in the question statement <Shortly after, the house rent prices increased by 10%, and thus he had to spend an additional 10% on the new rent>, resulting in an integrated modification where the calculation changes from 0.3 * 0.7x to (0.3 * 0.7x) * 1.1. This inflates the house rent expenditure after calculating the total income, changing from 0.3 * 0.7 * 1000 = 210 in the original_solution to (0.3 * 0.7 * 1000) * 1.1 = 231 in the transformed_solution. The other steps remain valid as direct consequences of the modified step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nbhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food . if he spends rs . 300 on petrol then what is the expenditure on house rent ?\n\n### Response:",
+        "output_str": "\nIf Bhanu spends 30% of his income on petrol and 30% of the remaining amount on house rent, then he spends 30% of his income on petrol and 30% of the remaining amount on house rent.\n\nSo, if he spends Rs. 300 on petrol, he spends:\n\n30% of Rs. 300 = Rs. 90 on petrol\n\nAnd he spends:\n\n30% of Rs. 300 - Rs. 90 = Rs. 210 on house rent.\n\nTherefore, the expenditure on house rent is Rs. 210.",
+        "extract_true_num": 210.0,
+        "extract_pred_num": 210.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "A number when divided by 6 leaves a remainder 3. When the square of the same number is divided by 6, the remainder is what?",
+            "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+            "original_answer": 3,
+            "transformed_solution": "Let the number be x, and it's given that x when divided by 6 leaves a remainder 3 and there is a penalty of 2 units for drawing numbers on the board.\nTherefore, x = 6a + 3 - 2, where a is the quotient.\nThen x^2 = (6a + 1)^2 = 36a^2 + 12a + 1 = 6(6a^2 + 2a) + 1, which means when the square of the number is divided by 6, the remainder is 1.\n#### 1",
+            "transformed_answer": 1,
+            "wrong_step": 1,
+            "wrong_type": "adding_irrelevant_information",
+            "is_single_error": true,
+            "explanation": "Step 1 adds information that is not mentioned in the question statement <and there is a penalty of 2 units for drawing numbers on the board>, resulting in step 1 changing from x = 6a + 3 in the original_solution to x = 6a + 3 - 2 in the transformed_solution. This change affects the calculation of the square of the number and thus the wrong remainder is obtained when divided by 6. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA number when divided by 6 leaves a remainder 3. When the square of the same number is divided by 6, the remainder is what?\n\n### Response:",
+        "output_str": "\nWhen the square of the number (x^2) is divided by 6, the remainder is also 3.\n\nExplanation:\nWhen a number is divided by 6, the remainder is 3. In the case of the square of the number (x^2), when divided by 6, the remainder is also 3. This is because the square of the number (x^2) can be written as 6x^2 + 3x, and when divided by 6, the remainder is 3.",
+        "extract_true_num": 3,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    }
+]

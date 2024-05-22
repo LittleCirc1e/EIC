@@ -1,0 +1,38 @@
+[
+    {
+        "question": "The product of 3 consecutive numbers is 210 . Then the sum of the smallest two numbers is ?",
+        "original_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x^2 + 3x + 2) = 210\nx^3 + 3x^2 + 2x = 210\nx^3 + 3x^2 + 2x - 210 = 0\n(x-5)(x^2 + 8x + 42) = 0\nThe solutions for x are 5, -4+/-sqrt(4-4(1)(42)) / (2(1)) = 5, -4+/-sqrt(-164) / 2\nThe two solutions are x = 5 and x = -4+/-4.472/2\nThe sum of the smallest two numbers is 5 + 6 = 11\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x+1)+x+2 = 210\nx^2 + x + x + 2 = 210\nx^2 + 2x + 2 = 210\nx^2 + 2x + 2 - 210 = 0\nx^2 + 2x - 208 = 0\nUsing the quadratic formula x = [-2 +/- sqrt(2^2 - 4(1)(-208))] / (2(1)) = [-2 +/- sqrt(4 + 832)] / 2 = [-2 +/- sqrt(836)] / 2\nx = [-2 +/- 28.92] / 2\nThe two solutions are x = [-2 + 28.92] / 2 = 13.46 and x = [-2 - 28.92] / 2 = -15.46\nThe sum of the smallest two numbers is 13.46 + 14.46 = 27.92\n#### 27.92",
+        "transformed_answer": 27.92,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This case changes the multiplication operator in the original solution to addition. In step 2, instead of x(x+1)(x+2) = 210, it is changed to x(x+1)+x+2 = 210. This leads to a different equation and therefore to different solutions for x. Since the next steps depend on the value of x obtained in step 2, all of them are affected and therefore changed, yet the calculations are performed correctly based on the altered equation. The final answer for the sum of the smallest two numbers is consequently different from the original one.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The solution is correct because the formula x(x+1)(x+2) = 210 is correct, and the calculations are accurate. The smallest two numbers are x and x+1, and their sum is 13.46 + 14.46 = 27.92, which is the correct answer."
+    },
+    {
+        "question": "In what time will a railway train 30 m long moving at the rate of 36 kmph pass a telegraph post on its way?",
+        "original_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) / (3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 10 m/s = 3 s\n#### 3 seconds",
+        "original_answer": 3.0,
+        "transformed_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) * (3600 s/h) = 129600 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 129600 m/s = 0.000231 s\n#### 0.000231 seconds",
+        "transformed_answer": 0.000231,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in step 1 was changed from division to multiplication which should convert speed from km/h to m/s but instead gave an implausible speed of 129600 m/s due to multiplying where you should divide. This resulted in an incorrect calculation of the duration it would take the train to pass the telegraph post: instead of dividing the length of the train by a reasonable speed in m/s, it's divided by an excessively large incorrect value of speed. All other steps are correctly calculated based on the transformed values, but the outcome of the wrong step leads to an incorrect result that is significantly different from the original result.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #0, which is the conversion of the speed from km/h to m/s. The error occurs when the speed is multiplied by 1000 m/km, resulting in an incorrect value of 129600 m/s."
+    },
+    {
+        "question": "what is the positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square?",
+        "original_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 - 14 = 27.\n#### 27",
+        "original_answer": 27,
+        "transformed_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 + 14 = 55.\n#### 55",
+        "transformed_answer": 55,
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 6 to addition, hence changing '41 - 14 = 27' to '41 + 14 = 55'. This affects the final answer, but all previous calculations remain correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #4, where the sum of the prime numbers between the first square and fourth square is calculated incorrectly. The correct answer is 55."
+    }
+]

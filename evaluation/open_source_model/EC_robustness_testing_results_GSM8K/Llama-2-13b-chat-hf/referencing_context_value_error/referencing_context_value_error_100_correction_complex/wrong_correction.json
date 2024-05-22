@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Mr. Callen bought 10 paintings at $40 each and 8 wooden toys at $20 each from the crafts store to resell at a profit. However, when he sold the items, the selling price of a painting was 10% less and the selling price of a hat 15% less. Calculate the total loss Mr. Callen made from the sale of the items.",
+        "original_solution": "If he sold a painting at a 10% loss, then he made a 10/100*$40 = $4 loss on each painting.\nsince he bought 10 paintings, the total loss he made from selling the paintings is 10*$4 = $40\nHe also made a loss of 15/100*20 = $3 loss from selling each wooden toy.\nSince he bought 8 wooden toys, the total loss he made was 3*8 = $24\nIn total, Mr. Callen made a loss of $40+$24 = $64 from the sales of the items.\n#### 64",
+        "original_answer": 64.0,
+        "transformed_solution": "If he sold a painting at a 10% loss, then he made a 10/100*$30 = $3 loss on each painting.\nsince he bought 10 paintings, the total loss he made from selling the paintings is 10*$3 = $30\nHe also made a loss of 15/100*20 = $3 loss from selling each wooden toy.\nSince he bought 8 wooden toys, the total loss he made was 3*8 = $24\nIn total, Mr. Callen made a loss of $30+$24 = $54 from the sales of the items.\n#### 54",
+        "transformed_answer": 54.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $40 in the question as $30 wrongly, and calculates 10/100*$30 = $3 loss on each painting instead of 10/100*$40 = $4. Its subsequent related step will be affected, calculating 10*$3 = $30 instead of 10*$4 = $40 in step 2. Please note that you should only consider one error, so the steps that reference the correct cost of the wooden toy will still reference $20 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 56, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 10/100*30=3 instead of 10/100*40=4. The subsequent step 6 references the result of step 5, calculating 3*8=24 instead of 4*8=32. Therefore, the final incorrect answer is 54 instead of 56."
+    },
+    {
+        "question": "In 2004, there were some kids at a cookout. In 2005, half the number of kids came to the cookout as compared to 2004. In 2006, 2/3 as many kids came to the cookout as in 2005. If there were 20 kids at the cookout in 2006, how many kids came to the cookout in 2004?",
+        "original_solution": "In 2005, 20/2*3=30 kids came to the cookout.\nIn 2004, 30*2=60 kids came to the cookout.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "In 2005, 24/2*3=36 kids came to the cookout.\nIn 2004, 36*2=72 kids came to the cookout.\n#### 72",
+        "transformed_answer": 72.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20 in the question as 24 wrongly, and calculates 24/2*3=36 instead of 20/2*3=30. Its subsequent related step will be affected, calculating 36*2=72 instead of 30*2=60 in step 2. Please note that you should only consider one error, so step 2 still references the result from step 1 correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 48, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one year has 2 months instead of 12 months, calculating 24/2*3=36 instead of 24/12*3=48. The subsequent step 3 reference the result of step 2, calculating 36*2=72 instead of 48*2=96. The subsequent step 4 reference the result of step 3, calculating 72/2=36 instead of 96/2=48, resulting in the final incorrect answer."
+    },
+    {
+        "question": "If 24 out of every 60 individuals like football and out of those that like it, 50% play it, how many people would you expect play football out of a group of 250?",
+        "original_solution": "If 50% of individuals that like football play it, and there are 24 out of 60 individuals that like it, then 24*50% = 12 out of 60 individuals play it\nIf 12 individuals play it out of 60 individuals then that means only 12/60 = 1/5 or 20% play it\nIf 20% of individuals play football out of a group of 250 people, one would expect 250*20% = 50 individuals to play it\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If 50% of individuals that like football play it, and there are 20 out of 60 individuals that like it, then 20*50% = 10 out of 60 individuals play it\nIf 10 individuals play it out of 60 individuals then that means only 10/60 = 1/6 or approximately 16.67% play it\nIf approximately 16.67% of individuals play football out of a group of 250 people, one would expect 250*16.67% = 41.675 individuals to play it\n#### 41.675",
+        "transformed_answer": 41.675,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the number 24 in the question incorrectly as 20, and incorrectly calculates 20*50% = 10 instead of the correct 24*50% = 12. The error affects the subsequent steps that rely on the number of individuals who play football. The percentage is recalculated from 12/60 = 20% to 10/60 ≈ 16.67%, and finally, the expected number of individuals who play football out of 250 is miscalculated as 250*16.67% ≈ 41.675 instead of the correct 250*20% = 50. The erroneous step will produce subsequent related steps with correct calculations based on its erroneous result. All other steps that reference values from the question still reference the values correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 42, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that 1/6 is approximately 16.67 instead of 1/6 is approximately 16.7. The subsequent step 4 reference the result of step 3, calculating 10/60 = 1/6 instead of 10/60 = 16.7. The subsequent step 5 reference the result of step 4, calculating 16.67% instead of 16.7%. The final incorrect answer is due to the compounding of these small errors."
+    },
+    {
+        "question": "Zion is 8 years old and his dad is 3 more than 4 times his age. In 10 years, how many years older is Zion's dad than him?",
+        "original_solution": "Four times Zion's age is 8 x 4 = 32.\nSo Zion's dad is 32 + 3 = 35 years old.\nIn 10 years, Zion will be 8 + 10 = 18 years old.\nIn 10 years, Zion's dad will be 35 + 10 = 45 years old.\nHence, in 10 years, Zion's dad will be 45 - 18 = 27 years older than Zion.\n#### 27",
+        "original_answer": 27,
+        "transformed_solution": "Four times Zion's age is 8 x 4 = 32.\nSo Zion's dad is 32 + 3 = 35 years old.\nIn 10 years, Zion will be 5 + 10 = 15 years old.\nIn 10 years, Zion's dad will be 35 + 10 = 45 years old.\nHence, in 10 years, Zion's dad will be 45 - 15 = 30 years older than Zion.\n#### 30",
+        "transformed_answer": 30,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 8 in the question as 5 wrongly, and calculates 5 + 10 = 15 instead of 8 + 10 = 18. Its subsequent related step will be affected, calculating 45 - 15 = 30 instead of 45 - 18 = 27 in step 5. Please note that you should only consider one error, so the 35 in step 4 is calculated correctly based on step 2.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 25, and the explanation is that step 3 first makes a mistake in unit conversion and mistakenly believes that one year has 12 months instead of 12 x 30 days = 360 days. Calculating 10 years as 10 x 12 = 120 months instead of 10 x 360 = 3600 days. The subsequent step 4 references the result of step 3, calculating 120 / 12 = 10 instead of 3600 / 12 = 300. The subsequent step 5 references the result of step 4, calculating 10 + 15 = 25 instead of 300 + 15 = 315. The final incorrect answer is due to the compounding effect of the series of mistakes."
+    },
+    {
+        "question": "Seth is twice as old as Brooke. In 2 years, the sum of their ages will be 28. How old is Seth?",
+        "original_solution": "To solve this problem, we can set up an equation where x represents Brooke’s age and 2x represents Seth’s age and noting that in two years, the sum of their ages is (2x + 2) + (x + 2) = 28.\nThen we add all the values together, 3x + 4 = 28.\nAnd we subtract 4 from each side, 3x + 4 - 4 = 28 – 4.\nThen we divide each side by 3, x = 24/3.\nWe find that x = 8, or Brooke’s age is 8.\nSeth is twice as old as Brooke, so Seth is 8 x 2 = 16.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "To solve this problem, we can set up an equation where x represents Brooke’s age and 2x represents Seth’s age and noting that in three years, the sum of their ages is (2x + 3) + (x + 3) = 28.\nThen we add all the values together, 3x + 6 = 28.\nAnd we subtract 6 from each side, 3x + 6 - 6 = 28 – 6.\nThen we divide each side by 3, x = 22/3.\nWe find that x = 22/3, or Brooke’s age is approximately 7.33.\nSeth is twice as old as Brooke, so Seth is approximately 7.33 x 2 = 14.67.\n#### 14.67",
+        "transformed_answer": 14.67,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references \"in two years\" in the question as \"in three years\" wrongly, and calculates (2x + 3) + (x + 3) = 28 instead of (2x + 2) + (x + 2) = 28. Its subsequent related steps will be affected by the erroneous result of this step but still be calculated correctly. Therefore, step 2 changes to 3x + 6 = 28, step 3 changes to 3x + 6 - 6 = 28 – 6, step 4 changes to x = 22/3, step 5 changes to x = 22/3, and step 6 changes to Seth’s age being approximately 7.33 x 2 = 14.67. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 14, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one year has 3 months instead of 12 months, calculating 3x + 6 = 28 instead of 3x + 12 = 36. The subsequent step 5 references the result of step 4, calculating 22/3 instead of 12/3. The subsequent step 6 references the result of step 5, calculating 14.67 instead of 14. The final incorrect answer is due to the compounding effect of the series of mistakes."
+    }
+]

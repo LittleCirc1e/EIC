@@ -1,0 +1,249 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "There are 28 students in a classroom. Half of them have 5 notebooks each and the other half have 3 notebooks each. How many notebooks in total are in the classroom?",
+            "original_solution": "Half of the class consists of 28 students / 2 = 14 students.\nOne half of the students have 14 students * 3 notebooks/student = 42 notebooks.\nThe other half have 14 students * 5 notebooks/student = 70 notebooks.\nThere are 42 notebooks + 70 notebooks = 112 notebooks in total in the classroom.\n#### 112",
+            "original_answer": 112.0,
+            "transformed_solution": "Half of the class consists of 28 students / 2 = 14 students.\nOne half of the students have 14 students * 3 notebooks/student = 42 notebooks.\nThe other half have 14 students * 5 notebooks/student = 70 notebooks.\nThere are 40 notebooks + 70 notebooks = 110 notebooks in total in the classroom.\n#### 110",
+            "transformed_answer": 110.0,
+            "wrong_step": 4,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 4 mistakenly references 42 as 40 from step 2 and changes 42 notebooks + 70 notebooks = 112 notebooks to 40 notebooks + 70 notebooks = 110 notebooks. It should be noted that step 2 in the transformed_solution <One half of the students have 14 students * 3 notebooks/student = 42 notebooks.> should be the same as the step 2 in the original_solution <One half of the students have 14 students * 3 notebooks/student = 42 notebooks.> and calculates its result 42 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 28 students in a classroom. Half of them have 5 notebooks each and the other half have 3 notebooks each. How many notebooks in total are in the classroom?\n\n### Response:",
+        "output_str": "\nTo find the total number of notebooks in the classroom, we need to calculate the number of notebooks for each group of students and then add them up. Since half of the students have 5 notebooks each, that means 14 students have 5 notebooks, and the other 14 students have 3 notebooks. Therefore, the total number of notebooks in the classroom is 14 x 5 = 70 notebooks + 14 x 3 = 42 notebooks = 112 notebooks.",
+        "extract_true_num": 112.0,
+        "extract_pred_num": 112.0,
+        "is_correct": true
+    },
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "On the night of the dance, 400 students show up to the party. 70% of the students who showed up were invited. If 40% of those invited to the party had their invitation revoked and were not allowed into the party, how many invited students attended the party?",
+            "original_solution": "On the night of the dance 70/100*400 = 280 students who showed up to the party were invited.\nIf 40% of those invited to the party had their invitation revoked, there were 40/100*280 = 112 students who showed up and had their invitation revoked.\nThe number of invited students who attended the party is 280-112 = 168\n#### 168",
+            "original_answer": 168.0,
+            "transformed_solution": "On the night of the dance 70/100*400 = 280 students who showed up to the party were invited.\nIf 40% of those invited to the party had their invitation revoked, there were 40/100*300 = 120 students who showed up and had their invitation revoked.\nThe number of invited students who attended the party is 280-120 = 160\n#### 160",
+            "transformed_answer": 160.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 280 as 300 from step 1 and changes 40/100*280=112 to 40/100*300=120. It should be noted that step 1 in the transformed_solution <On the night of the dance 70/100*400 = 280 students who showed up to the party were invited.> should be the same as the step 1 in the original_solution <On the night of the dance 70/100*400 = 280 students who showed up to the party were invited.> and calculates its result 280 correctly. The subsequent steps related to step 2 have been affected, with step 3 changing from 280-112=168 to 280-120=160. However, the calculation within each step remains correct. You need to only consider one error of referencing, so all other steps still reference this result number correctly, and thus only step 2 has been transformed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOn the night of the dance, 400 students show up to the party. 70% of the students who showed up were invited. If 40% of those invited to the party had their invitation revoked and were not allowed into the party, how many invited students attended the party?\n\n### Response:",
+        "output_str": "\nTo find out how many invited students attended the party, we need to subtract the number of students who had their invitation revoked from the total number of students who showed up to the party.\n\nSo, if 400 students showed up to the party and 70% of them were invited, that means 280 students were invited (400 x 70%). Then, if 40% of the invited students had their invitation revoked, that means 112 students (280 x 40%) did not attend the party.\n\nTherefore, the number of invited students who attended the party is 280 - 112 = 168 students.",
+        "extract_true_num": 168.0,
+        "extract_pred_num": 168.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "Stefan goes to a restaurant to eat dinner with his family. They order an appetizer that costs $10 and 4 entrees that are $20 each. If they tip 20% of the total for the waiter, what is the total amount of money that they spend at the restaurant?",
+            "original_solution": "The total cost of the entrees is 4 * $20 = $80.\nThe total cost of the dinner is $80 + $10 = $90.\nThe tip is $90 * 0.20 = $18\nThe total cost with tip is $90 + $18 = $108\n#### 108",
+            "original_answer": 108.0,
+            "transformed_solution": "The total cost of the entrees is 4 * $20 = $80.\nThe total cost of the dinner is $80 + $10 = $90.\nThe tip is $100 * 0.20 = $20\nThe total cost with tip is $90 + $20 = $110\n#### 110",
+            "transformed_answer": 110.0,
+            "wrong_step": 3,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 3 mistakenly references 90 as 100 from step 2 and changes $90 * 0.20 = $18 to $100 * 0.20 = $20. It should be noted that step 2 in the transformed_solution <The total cost of the dinner is $80 + $10 = $90.> should be the same as the step 2 in the original_solution <The total cost of the dinner is $80 + $10 = $90.> and calculates its result 90 correctly. Furthermore, although step 3 has an error, the subsequent step 4 is affected by the erroneous result from step 3 but still executes the calculation correctly and changes $90 + $18 = $108 to $90 + $20 = $110. Since only one step error is considered, the calculation of step 4 references the correct result from the erroneous step 3 and doesn't require any additional changes itself. The transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nStefan goes to a restaurant to eat dinner with his family. They order an appetizer that costs $10 and 4 entrees that are $20 each. If they tip 20% of the total for the waiter, what is the total amount of money that they spend at the restaurant?\n\n### Response:",
+        "output_str": "\nTo find the total amount of money that Stefan and his family spend at the restaurant, we need to calculate the total cost of their meal first. The appetizer costs $10, and each of the 4 entrees costs $20, so the total cost of their meal is:\n\n$10 (appetizer) + ($20 x 4) (entrees) = $10 + $80 = $90\n\nNext, we need to calculate the tip for the waiter. If they tip 20% of the total cost of their meal, the tip is:\n\n$90 x 20% = $18\n\nSo, the total amount of money that Stefan and his family spend at the restaurant is:\n\n$90 (meal cost) + $18 (tip) = $108\n\nTherefore, the total amount of money that they spend at the restaurant is $108.",
+        "extract_true_num": 108.0,
+        "extract_pred_num": 108.0,
+        "is_correct": true
+    },
+    {
+        "index": 22,
+        "gsm8k_data": {
+            "question": "Leo and Agrey went fishing. Agrey caught 20 more fish than Leo. If Leo caught 40 fish, what's the total number of fish they caught together?",
+            "original_solution": "Agrey caught 40+20 = 60 fish.\nThe total number of fish they caught is 60+40 = 100 fish.\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "Agrey caught 40+20 = 60 fish.\nThe total number of fish they caught is 60+35 = 95 fish.\n#### 95",
+            "transformed_answer": 95.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 40 as 35 from step 1 and changes 60+40=100 to 60+35=95. It should be noted that step 1 in the transformed_solution <Agrey caught 40+20 = 60 fish.> should be the same as the step 1 in the original_solution <Agrey caught 40+20 = 60 fish.> and calculates its result 60 correctly. You need to only consider one error of referencing, and all other steps including their calculations and references to the numbers from the previous steps remain correct. Furthermore, the transformed_answer is different from the original_answer as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLeo and Agrey went fishing. Agrey caught 20 more fish than Leo. If Leo caught 40 fish, what's the total number of fish they caught together?\n\n### Response:",
+        "output_str": "\nThe total number of fish that Leo and Agrey caught together is 60.\n\nExplanation:\nIf Agrey caught 20 more fish than Leo, that means Agrey caught 20 + 40 = 60 fish. Since Leo caught 40 fish, the total number of fish they caught together is 40 + 60 = 100 fish.",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 23,
+        "gsm8k_data": {
+            "question": "Gabriel is looking at her marble sets. She sees that in the first set 10% of her marbles are broken. In the second set, 20% of the marbles are broken. The first set contains 50 marbles. The second set contains 60. How many marbles are broken in total?",
+            "original_solution": "In the first set there are 5 broken marbles because 50 x .1 = 5\nIn the second set there are 12 broken marbles because 60 x .2 = 12\nThere are 17 broken marbles in total because 5 + 12 = 17\n#### 17",
+            "original_answer": 17.0,
+            "transformed_solution": "In the first set there are 5 broken marbles because 50 x .1 = 5\nIn the second set there are 10 broken marbles because 60 x .2 = 12\nThere are 15 broken marbles in total because 5 + 10 = 15\n#### 15",
+            "transformed_answer": 15.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 12 as 10 from step 1 and changes 60 x .2 = 12 to 60 x .2 = 10. It should be noted that step 1 in the transformed_solution <In the first set there are 5 broken marbles because 50 x .1 = 5> should be the same as the step 1 in the original_solution <In the first set there are 5 broken marbles because 50 x .1 = 5> and calculates its result 5 correctly. Step 3, as the subsequent related step of the wrong step 2, is now 5 + 10 = 15. You need to only consider one error of referencing, so the calculation of all steps is still correct, aside from the error introduced in step 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nGabriel is looking at her marble sets. She sees that in the first set 10% of her marbles are broken. In the second set, 20% of the marbles are broken. The first set contains 50 marbles. The second set contains 60. How many marbles are broken in total?\n\n### Response:",
+        "output_str": "\nTo find out how many marbles are broken in total, we need to find the total number of marbles in both sets and then multiply it by the percentage of broken marbles in each set.\n\nSo, the total number of marbles in both sets is 50 + 60 = 110 marbles.\n\nIf 10% of the marbles in the first set are broken, that means 10% of 50 = 5 marbles are broken.\n\nIf 20% of the marbles in the second set are broken, that means 20% of 60 = 12 marbles are broken.\n\nTherefore, the total number of broken marbles is 5 + 12 = 17 marbles.\n\nSo, there are 17 marbles broken in total.",
+        "extract_true_num": 17.0,
+        "extract_pred_num": 17.0,
+        "is_correct": true
+    },
+    {
+        "index": 24,
+        "gsm8k_data": {
+            "question": "One afternoon, Rachelle, Gretchen and Rocky threw pennies into the fountain and made wishes. Rachelle threw 180 pennies into the fountain. Gretchen threw half as many pennies into the fountain as Rachelle and Rocky threw in one-third as many pennies as Gretchen. What was the total number of pennies thrown into the fountain by the three of them?",
+            "original_solution": "Gretchen threw half as many pennies into the fountain as did Rachelle, for a total of 180/2=90 pennies.\nRocky threw one-third as many as Gretchen, for a total of 90/3=30 pennies.\nIn total, the three threw 180+90+30=300 pennies into the fountain.\n#### 300",
+            "original_answer": 300.0,
+            "transformed_solution": "Gretchen threw half as many pennies into the fountain as did Rachelle, for a total of 180/2=90 pennies.\nRocky threw one-third as many as Gretchen, for a total of 90/3=30 pennies.\nIn total, the three threw 180+90+25=295 pennies into the fountain.\n#### 295",
+            "transformed_answer": 295.0,
+            "wrong_step": 3,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 3 mistakenly references 30 as 25 from step 2 and changes 180+90+30=300 to 180+90+25=295. It should be noted that step 2 in the transformed_solution <Rocky threw one-third as many as Gretchen, for a total of 90/3=30 pennies.> should be the same as the step 2 in the original_solution <Rocky threw one-third as many as Gretchen, for a total of 90/3=30 pennies.> and calculates its result 30 correctly. The calculation of 180+90+25=295 is correct under the assumption that Rocky threw in 25 pennies instead of 30. You need to only consider one error of referencing, so the calculations of all steps are still collected, except for the intentional referencing error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOne afternoon, Rachelle, Gretchen and Rocky threw pennies into the fountain and made wishes. Rachelle threw 180 pennies into the fountain. Gretchen threw half as many pennies into the fountain as Rachelle and Rocky threw in one-third as many pennies as Gretchen. What was the total number of pennies thrown into the fountain by the three of them?\n\n### Response:",
+        "output_str": "\nTo find the total number of pennies thrown into the fountain by the three of them, we need to use the information provided in the instruction.\n\nRachelle threw 180 pennies into the fountain, Gretchen threw half as many pennies as Rachelle, and Rocky threw one-third as many pennies as Gretchen.\n\nSo, Gretchen threw 180 / 2 = 90 pennies into the fountain, and Rocky threw 90 / 3 = 30 pennies into the fountain.\n\nTherefore, the total number of pennies thrown into the fountain by the three of them is 180 + 90 + 30 = 300 pennies.",
+        "extract_true_num": 300.0,
+        "extract_pred_num": 300.0,
+        "is_correct": true
+    },
+    {
+        "index": 55,
+        "gsm8k_data": {
+            "question": "Martin is casting three bells for the church's belfry. The first bell takes 50 pounds of bronze, the second bell is twice the size of the first bell, and the third bell is four times the size of the second bell. How much bronze does he need total?",
+            "original_solution": "First find the size of the second bell: 50 pounds * 2 = 100 pounds\nThen find the size of the third bell: 100 pounds * 4 = 400 pounds\nThen add the amount of bronze used for each bell to find the total: 100 pounds + 400 pounds + 50 pounds = 550 pounds\n#### 550",
+            "original_answer": 550.0,
+            "transformed_solution": "First find the size of the second bell: 50 pounds * 2 = 100 pounds\nThen find the size of the third bell: 100 pounds * 4 = 400 pounds\nThen add the amount of bronze used for each bell to find the total: 100 pounds + 400 pounds + 60 pounds = 560 pounds\n#### 560",
+            "transformed_answer": 560.0,
+            "wrong_step": 3,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 3 mistakenly references 50 as 60 from its related previous step 1 and changes the equation 100 pounds + 400 pounds + 50 pounds = 550 pounds to 100 pounds + 400 pounds + 60 pounds = 560 pounds. It should be noted that step 1 in the transformed_solution <First find the size of the second bell: 50 pounds * 2 = 100 pounds> should be the same as the step 1 in the original_solution <First find the size of the second bell: 50 pounds * 2 = 100 pounds> and calculates its result 100 correctly. The transformed_solution then calculates the total by erroneously including this mistake as if it were the actual size of the first bell, but all subsequent calculations are done accurately based on the previous steps. This creates a single error in referencing, leading to a different transformed_answer from the original_answer, while preserving the correctness of the individual arithmetic operations after the error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMartin is casting three bells for the church's belfry. The first bell takes 50 pounds of bronze, the second bell is twice the size of the first bell, and the third bell is four times the size of the second bell. How much bronze does he need total?\n\n### Response:",
+        "output_str": "\nTo determine the total amount of bronze needed, we need to use the information provided in the instruction.\n\nThe first bell requires 50 pounds of bronze, the second bell is twice the size of the first bell, so it requires 2 x 50 = 100 pounds of bronze, and the third bell is four times the size of the second bell, so it requires 4 x 100 = 400 pounds of bronze.\n\nTherefore, the total amount of bronze needed is 50 + 100 + 400 = 550 pounds.",
+        "extract_true_num": 550.0,
+        "extract_pred_num": 550.0,
+        "is_correct": true
+    },
+    {
+        "index": 64,
+        "gsm8k_data": {
+            "question": "How many portions of 200 ml milk can Jasmine pour from a full 2-liter container of milk?",
+            "original_solution": "Since there are 1000 ml in 1 liter, then 2 liters is equal to 1000 x 2 = 2000 ml.\nThus, Jasmine can pour 2000/200 = 10 portions of 200 ml milk.\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Since there are 1000 ml in 1 liter, then 2 liters is equal to 1000 x 2 = 2000 ml.\nThus, Jasmine can pour 2000/250 = 8 portions of 200 ml milk.\n#### 8",
+            "transformed_answer": 8.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 200 as 250 from step 1 and changes 2000/200=10 to 2000/250=8. It should be noted that step 1 in the transformed_solution <Since there are 1000 ml in 1 liter, then 2 liters is equal to 1000 x 2 = 2000 ml.> should be the same as the step 1 in the original_solution <Since there are 1000 ml in 1 liter, then 2 liters is equal to 1000 x 2 = 2000 ml.> and calculates its result 2000 ml correctly. Step 2 is the step where the error occurs, introducing a different divisor in the calculation, which results in an incorrect number of portions. You need to only consider one error of referencing, so the calculation of step 1 is still correct, and the step 2 calculation is also performed correctly after the introduced error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHow many portions of 200 ml milk can Jasmine pour from a full 2-liter container of milk?\n\n### Response:",
+        "output_str": "\nJasmine can pour 200 ml of milk from a full 2-liter container of milk in 10 portions.",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 65,
+        "gsm8k_data": {
+            "question": "Phil has 10 books that are all 100 pages each.  He moves to a new home and during the move, 2 books are lost.  How many pages worth of books does Phil have left?",
+            "original_solution": "Phil starts with 10 books and loses 2, for 10-2=8 books\nEach of Phil's remaining books has 100 pages, so he has 8*100= 800 pages worth of books\n#### 800",
+            "original_answer": 800.0,
+            "transformed_solution": "Phil starts with 10 books and loses 2, for 10-2=8 books\nEach of Phil's remaining books has 100 pages, so he has 8*90= 720 pages worth of books\n#### 720",
+            "transformed_answer": 720.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 100 as 90 from step 1 and changes 8*100=800 to 8*90=720. It should be noted that step 1 in the transformed_solution <Phil starts with 10 books and loses 2, for 10-2=8 books> should be the same as the step 1 in the original_solution <Phil starts with 10 books and loses 2, for 10-2=8 books> and calculates its result 8 correctly. The calculation of all steps is still correct, except for the single erroneous referencing in step 2, which affects only the calculation of that step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPhil has 10 books that are all 100 pages each.  He moves to a new home and during the move, 2 books are lost.  How many pages worth of books does Phil have left?\n\n### Response:",
+        "output_str": "\nPhil has 8 books left, each with 100 pages, so he has a total of 800 pages worth of books left.",
+        "extract_true_num": 800.0,
+        "extract_pred_num": 800.0,
+        "is_correct": true
+    },
+    {
+        "index": 73,
+        "gsm8k_data": {
+            "question": "Goldie makes $5 an hour for pet-sitting. Last week, she worked for 20 hours while this week, she worked for 30 hours. How much did Goldie earn in two weeks for pet-sitting?",
+            "original_solution": "Goldie did pet-sitting for a total of 20 + 30 = 50 hours.\nSo, she earned a total of $5 x 50 = $250.\n#### 250",
+            "original_answer": 250.0,
+            "transformed_solution": "Goldie did pet-sitting for a total of 20 + 30 = 50 hours.\nSo, she earned a total of $5 x 40 = $200.\n#### 200",
+            "transformed_answer": 200.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 50 as 40 from step 1 and changes $5 x 50 = $250 to $5 x 40 = $200. It should be noted that step 1 in the transformed_solution <Goldie did pet-sitting for a total of 20 + 30 = 50 hours.> should be the same as the step 1 in the original_solution <Goldie did pet-sitting for a total of 20 + 30 = 50 hours.> and calculates its result 50 correctly. Because you need to only consider one error, the calculation of the erroneous step is still correctly performed using the erroneous figure."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nGoldie makes $5 an hour for pet-sitting. Last week, she worked for 20 hours while this week, she worked for 30 hours. How much did Goldie earn in two weeks for pet-sitting?\n\n### Response:",
+        "output_str": "\nGoldie earned $100 for pet-sitting last week and $150 this week, for a total of $250 in two weeks.",
+        "extract_true_num": 250.0,
+        "extract_pred_num": 250.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "For a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?",
+            "original_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 24 packs = 26 more packs of cookies to reach his target\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 20 packs = 30 more packs of cookies to reach his target\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 3,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 3 mistakenly references 24 packs as 20 packs from step 2 and changes 50 packs - 24 packs = 26 more packs to 50 packs - 20 packs = 30 more packs. It should be noted that step 2 in the transformed_solution <Tory sold 19 packs + 5 packs = 24 packs in total> should be the same as the step 2 in the original_solution <Tory sold 19 packs + 5 packs = 24 packs in total> and calculates its result 24 correctly. This is the only step with an error and all other calculations are performed correctly based on the wrong result from this step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?\n\n### Response:",
+        "output_str": "\nTo determine how many more packs of cookies Tory needs to sell, we need to subtract the number of packs he has already sold from the total number of packs he needs to sell. In this case, Tory needs to sell 50 packs of cookies, but he has already sold 12 + 7 + 5 = 24 packs. Therefore, Tory needs to sell 50 - 24 = 26 more packs of cookies.",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 26.0,
+        "is_correct": true
+    },
+    {
+        "index": 85,
+        "gsm8k_data": {
+            "question": "Two white socks cost 25 cents more than a single brown sock. If two white socks cost 45 cents, how much would you pay for 15 brown socks?",
+            "original_solution": "Two white socks cost 25 cents more than a single brown sock, meaning a brown sock is sold at $0.45-$0.25=$0.20\nThe cost of buying 15 brown socks is 15*$0.20=$3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "Two white socks cost 25 cents more than a single brown sock, meaning a brown sock is sold at $0.45-$0.25=$0.20\nThe cost of buying 15 brown socks is 15*$0.25=$3.75\n#### 3.75",
+            "transformed_answer": 3.75,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references the price of a brown sock as $0.25 instead of the correct $0.20 from step 1 and changes the calculation from 15*$0.20=$3 to 15*$0.25=$3.75. It should be noted that step 1 in the transformed_solution <Two white socks cost 25 cents more than a single brown sock, meaning a brown sock is sold at $0.45-$0.25=$0.20> should be the same as the step 1 in the original_solution <Two white socks cost 25 cents more than a single brown sock, meaning a brown sock is sold at $0.45-$0.25=$0.20> and calculates its result $0.20 correctly. Step 2, as the only modified step, affects the final outcome but maintains correct calculation based on the erroneous reference. You need only consider one error of referencing, so all other references to this number in any further steps are considered to be done correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTwo white socks cost 25 cents more than a single brown sock. If two white socks cost 45 cents, how much would you pay for 15 brown socks?\n\n### Response:",
+        "output_str": "\nIf two white socks cost 25 cents more than a single brown sock, then the cost of one brown sock is 45 cents - 25 cents = 20 cents.\nTherefore, the cost of 15 brown socks would be 15 x 20 cents = 300 cents or $3.\n\nIs this correct?",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "Jordan read 120 French novels last holiday. His brother Alexandre read 1/10 of what Jordan read. How many more novels did Jordan read than Alexandre?",
+            "original_solution": "Alexandre read 120 * 1/10 = 12 novels.\nSo, Jordan read 120 - 12 = 108 novels more than Alexandre.\n#### 108",
+            "original_answer": 108.0,
+            "transformed_solution": "Alexandre read 120 * 1/10 = 12 novels.\nSo, Jordan read 120 - 10 = 110 novels more than Alexandre.\n#### 110",
+            "transformed_answer": 110.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_previous_step_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 mistakenly references 12 as 10 from step 1 and changes 120 - 12 = 108 to 120 - 10 = 110. It should be noted that step 1 in the transformed_solution <Alexandre read 120 * 1/10 = 12 novels.> should be the same as the step 1 in the original_solution <Alexandre read 120 * 1/10 = 12 novels.> and calculates its result 12 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJordan read 120 French novels last holiday. His brother Alexandre read 1/10 of what Jordan read. How many more novels did Jordan read than Alexandre?\n\n### Response:",
+        "output_str": "\nJordan read 120 French novels last holiday, which means Alexandre read 120/10 = 12 novels. Therefore, Jordan read 120 - 12 = 108 more novels than Alexandre.",
+        "extract_true_num": 108.0,
+        "extract_pred_num": 108.0,
+        "is_correct": true
+    }
+]

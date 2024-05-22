@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Of 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+        "original_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nThe number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) = 56.\n#### 56",
+        "original_answer": 56.0,
+        "transformed_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nAssuming there are 4 ambidextrous players who are counted as right-handed, the number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) + 4 (ambidextrous) = 60.\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Assuming there are 4 ambidextrous players who are counted as right-handed>, resulting in step 4 changing from 28 (non-throwers) + 28 (throwers) = 56 in the original_solution to 28 (non-throwers) + 28 (throwers) + 4 (ambidextrous) = 60 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #, and the explanation is #.\n\nThe first mistake in the solution is step 4, where the number of left-handed players is calculated as 42 / 3 = 14. This is incorrect because the question states that the team is divided so one third are left-handed, which means that the number of left-handed players should be 70 / 3 = 23.\n\nThe second mistake is step 6, where the number of right-handed players is calculated as 28 (non-throwers) + 28 (throwers) + 4 (ambidextrous) = 60. This is incorrect because the question states that all throwers are right-handed, which means that the number of right-handed players should be 28 (non-throwers) + 28 (throwers) = 56.\n\nTherefore, the correct answer is 56, and the explanation is #."
+    },
+    {
+        "question": "At a garage sale, all of the items were sold at different prices. If the price of a radio sold at the garage sale was both the 17th highest price and the 24th lowest price among the prices of the items sold, how many items were sold at the garage sale?",
+        "original_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nThe radio was the 24th lowest price, so there were 23 items priced lower than the radio.\nThere were 16 + 1 + 23 = 40 items sold at the garage sale.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nConsidering a mistake where an item was double-counted because it was initially misplaced, the radio was actually the 23rd lowest price instead of the 24th, so there were 23 - 1 = 22 items priced lower than the radio.\nThere were 16 + 1 + 22 = 39 items sold at the garage sale.\n#### 39",
+        "transformed_answer": 39.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Considering a mistake where an item was double-counted because it was initially misplaced>, resulting in step 2 changing from the radio being the 24th lowest price to the radio being the 23rd lowest price, by subtracting one for the mistake. This change leads to a recalculation of the items priced lower than the radio from 23 to 22 and ultimately affects the total number of items sold, changing from 40 items in the original_solution to 39 items in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in a single step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 40, and the explanation is that the first wrong step is step 3. Step 3 assumes that the radio was the 24th lowest price, causing the result of step 3 to be overestimated by 1. Step 5, as the subsequent step of step 3, miscalculates 39 items instead of 40 items.\n\nPlease provide your answer."
+    },
+    {
+        "question": "Alice picked a number of pears, each of which she sold, canned, or poached. She canned 20 percent more than she poached, and she poached 50 percent less than she sold. If there were a total of 42 pears, then how many pears did she sell?",
+        "original_solution": "Let x be the number of pears she sold.\nShe poached 0.5x pears.\nShe canned 1.2 * 0.5x = 0.6x pears.\nTotal number of pears is x + 0.5x + 0.6x = 42.\n2.1x = 42.\nx = 20.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let x be the number of pears she sold.\nShe poached 0.5x pears.\nBecause she gave away 2 pears before canning, she actually canned 1.2 * 0.5x - 2 = 0.6x - 2 pears.\nTotal number of pears is x + 0.5x + (0.6x - 2) = 42.\n2.1x - 2 = 42.\n2.1x = 44.\nx = 44 / 2.1.\nx ≈ 20.95.\n#### 20.95",
+        "transformed_answer": 20.95,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because she gave away 2 pears before canning>, resulting in step 3 changing from 1.2 * 0.5x = 0.6x pears in the original_solution to 1.2 * 0.5x - 2 = 0.6x - 2 pears in the transformed_solution. The language description in step 3 has also changed to incorporate the erroneous information. Finally, the last steps have been adjusted accordingly to find the new value of x, but it should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #, and the explanation is #.\n\nIn this case, the first wrong step is step 3. Step 3 adds information not included in the question statement, causing the result of step 3 to be overestimated by 2. Step 5, as the subsequent step of step 3, miscalculates 0.6x - 2 = 0.6(20.95) - 2 = 12.46 instead of 0.6x - 2 = 0.6(20) - 2 = 12.4.\n\nTherefore, the correct answer is 20."
+    }
+]

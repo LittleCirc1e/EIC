@@ -1,0 +1,26 @@
+[
+    {
+        "question": "a number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is",
+        "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 2) + 1, which means when the square of the number is divided by 6, the remainder is 1.\n#### 1",
+        "transformed_answer": 1.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 6a^2 + 6a + 1 as 6a^2 + 6a + 2 from step 2 and changes 6(6a^2 + 6a + 1) + 3 to 6(6a^2 + 6a + 2) + 1. It should be noted that step 2 in the transformed_solution <Therefore, x = 6a + 3, where a is the quotient.> should be the same as the step 2 in the original_solution <Therefore, x = 6a + 3, where a is the quotient.> and calculates its result x = 6a + 3 correctly. The error in step 3 leads to the incorrect conclusion that the remainder is 1 instead of 3, as the original solution correctly stated. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #3, and the explanation is as follows:\n\nIn step #3, the equation x^2 = 36a^2 + 36a + 9 is incorrect. The correct equation should be x^2 = 36a^2 + 36a + 10, since the square of 3 is 9, not 1. Therefore, the final answer should be 6a + 4, not 6a + 2.\n\nThe root cause of the mistake is the incorrect equation in step #3, which leads to a wrong remainder of 1 instead of the correct remainder of 4."
+    },
+    {
+        "question": "The cost price of a radio is Rs . 1500 and it was sold for Rs . 1290 , find the loss % ?",
+        "original_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1400) * 100 = 15%\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 1500 as 1400 from step 1 and changes the loss percentage calculation from (210/1500) * 100 to (210/1400) * 100. It should be noted that step 1 in the transformed_solution <The loss is 1500 - 1290 = 210> should be the same as the step 1 in the original_solution <The loss is 1500 - 1290 = 210> and calculates its result 210 correctly. Step 2 affects only the subsequent calculation related to it, changing the original loss percentage from 14% to 15%. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #2, and the explanation is as follows:\n\nIn step #2, the calculation of the loss should be (1500 - 1290) = 210, not (1400 - 1290) = 210. This mistake leads to a 10% error in the calculation of the loss percentage. Therefore, the correct loss percentage is (210/1500) * 100 = 14% instead of 15%.\n\nThe correct solution is:\n\nThe loss is 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14."
+    }
+]

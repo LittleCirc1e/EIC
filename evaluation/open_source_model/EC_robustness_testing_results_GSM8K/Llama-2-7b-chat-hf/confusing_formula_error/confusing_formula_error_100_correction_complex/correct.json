@@ -1,0 +1,98 @@
+[
+    {
+        "question": "James is building a hall of mirrors. Three of the walls will be completed covered with glass. If two of those walls are 30 feet by 12 feet and the third is 20 feet by 12 feet, how many square feet of glass does he need?",
+        "original_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the area of the short wall: 20 feet * 12 feet = 240 square feet\nThen add that area to the area of the two long walls to find the total area: 720 square feet + 240 square feet = 960 square feet\n#### 960",
+        "original_answer": 960.0,
+        "transformed_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the area of the short wall: 20 feet + 12 feet + 20 feet + 12 feet = 64 square feet\nThen add that area to the area of the two long walls to find the total area: 720 square feet + 64 square feet = 784 square feet\n#### 784",
+        "transformed_answer": 784.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the perimeter and area of a rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 20 feet * 12 feet = 240 square feet in the original_solution changed to 20 feet + 12 feet + 20 feet + 12 feet = 64 square feet in the transformed_solution. This affects the subsequent step 4, changing from 720 square feet + 240 square feet = 960 square feet to 720 square feet + 64 square feet = 784 square feet. Note that the language description of step 3 < Then find the area of the short wall > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 3 mistakenly uses the formula of rectangular area, while the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 960 square feet, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 64 square feet instead of 80 square feet, resulting in the final incorrect answer."
+    },
+    {
+        "question": "The perimeter of a triangle is 160 cm. If two of the sides are 40 cm and 50 cm, calculate the length of the third side?",
+        "original_solution": "To get the perimeter, you add all the sides of the triangle, so the first two sides add up to 40+50 = 90 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-90 = 70 cm.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "To get the perimeter, you add all the sides of the triangle, so the first two sides add up to 40*50 = 2000 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-2000 = -1840 cm.\n#### -1840",
+        "transformed_answer": -1840.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the addition of lengths required for perimeter with the multiplication of lengths, which is not a meaningful operation for finding the perimeter or any other geometric property of a triangle. This directly affects the result in step 2, where the incorrect value of 2000 cm from the first step is subtracted from the given perimeter of 160 cm to incorrectly find the length of the third side as -1840 cm. The language description of step 1 in the original solution remains unchanged in the transformed solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 70 cm, and the explanation is that step 3 first makes a mistake in the calculation process, calculating -1840 instead of 70. The subsequent step 4 references the result of step 3, calculating -1840 / 3 = -613 instead of 70 / 3 = 23.3, resulting in the final incorrect answer."
+    },
+    {
+        "question": "James is building a hall of mirrors. Three of the walls will be completed covered with glass. If two of those walls are 30 feet by 12 feet and the third is 20 feet by 12 feet, how many square feet of glass does he need?",
+        "original_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the area of the short wall: 20 feet * 12 feet = 240 square feet\nThen add that area to the area of the two long walls to find the total area: 720 square feet + 240 square feet = 960 square feet\n#### 960",
+        "original_answer": 960.0,
+        "transformed_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the area of the short wall: 12 feet + 12 feet + 20 feet + 20 feet = 64 square feet\nThen add that area to the area of the two long walls to find the total area: 720 square feet + 64 square feet = 784 square feet\n#### 784",
+        "transformed_answer": 784.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In step 3, the formula used to calculate the area of the short wall was replaced with the formula for the perimeter of a rectangle, which is the sum of all sides, instead of the area. The correct formula to find the area should be length multiplied by width. The language description of \"Then find the area of the short wall\" remains unchanged in the transformed_solution. Only this step has the formula error, while the formulas for calculating the areas of the long walls and the summing step are correct. Therefore, the formula for area 20 feet * 12 feet = 240 square feet in the original_solution was mistakenly changed to adding all sides of the wall 12 feet + 12 feet + 20 feet + 20 feet = 64 square feet in the transformed_solution. The other steps are unaffected by this mistake.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 960 square feet, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 64 square feet instead of 80 square feet, resulting in the final incorrect answer."
+    },
+    {
+        "question": "One logger can cut down 6 trees per day. The forest is a rectangle measuring 4 miles by 6 miles, and each square mile has 600 trees. If there are 30 days in each month, how many months will it take 8 loggers to cut down all the trees?",
+        "original_solution": "First find the total area of the forest: 4 miles * 6 miles = 24 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 24 square miles = 14400 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 14400 trees / 48 trees/day = 300 days\nThen divide the time in days by the number of days per month to find the time in months: 300 days / 30 days/month = 10 months\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "First find the total area of the forest: 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 20 square miles = 12000 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 12000 trees / 48 trees/day = 250 days\nThen divide the time in days by the number of days per month to find the time in months: 250 days / 30 days/month = 8.33333333333 months\n#### 8.33333333333",
+        "transformed_answer": 8.33333333333,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, which gives the total area available for the trees: 4 miles * 6 miles = 24 square miles in the original_solution. However, step 1 of the transformed_solution mistakenly uses the formula for calculating the perimeter of the rectangle: 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles. This results in the total number of trees being recalculated in step 2, changing from 600 trees/square mile * 24 square miles = 14400 trees to 600 trees/square mile * 20 square miles = 12000 trees in the transformed_solution. Subsequent calculations are based on this modified step 2. Note that the language description of step 1 < First find the total area of the forest: > in the original_solution remains unchanged in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10.\n\nThe mistake in the solution is in step 4, where the number of trees cut down per day is calculated as 48 trees. However, there are 8 loggers, so the total number of trees cut down per day should be 8 x 6 = 48 trees. Therefore, the total number of days it takes to clear the forest is 12000 / 48 = 250 days.\n\nThe correct answer is 10 months, because 250 days / 30 days/month = 8.33333333333 months."
+    },
+    {
+        "question": "The perimeter of a triangle is 160 cm. If two of the sides are 40 cm and 50 cm, calculate the length of the third side?",
+        "original_solution": "To get the perimeter, you add all the sides of the triangles, so the first two sides add up to 40+50 = 90 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-90 = 70 cm.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "To get the perimeter, you add all the sides of the triangles, so the first two sides add up to 40*50 = 2000 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-2000 = -1840 cm.\n#### -1840",
+        "transformed_answer": -1840.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the addition of lengths (which gives perimeter) with the multiplication of lengths (which gives area, not applicable for this case since triangle sides are not area). The question requires that the lengths of sides be added, not multiplied, so the original step adding 40+50=90 cm is replaced by 40*50=2000 cm in the transformed_solution. This affects the subsequent step 2, changing from 160-90=70 cm to 160-2000=-1840 cm. Note that the language description of step 1 < To get the perimeter, you add all the sides of the triangles > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 1 introduces a confusing formula error, and the other calculation processes are still correct. In this case, step 1 mistakenly uses a formula that would calculate area (if applicable) instead of perimeter, while the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 70 cm, and the explanation is that step 3 first makes a mistake in the calculation process, calculating -1840 instead of 70. The subsequent step 4 references the result of step 3, calculating -1840 / 3 = -613 instead of 70, resulting in the final incorrect answer."
+    },
+    {
+        "question": "James is building a hall of mirrors. Three of the walls will be completed covered with glass. If two of those walls are 30 feet by 12 feet and the third is 20 feet by 12 feet, how many square feet of glass does he need?",
+        "original_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the area of the short wall: 20 feet * 12 feet = 240 square feet\nThen add that area to the area of the two long walls to find the total area: 720 square feet + 240 square feet = 960 square feet\n#### 960",
+        "original_answer": 960.0,
+        "transformed_solution": "First find the area of one of the long walls: 30 feet * 12 feet = 360 square feet\nThen double that amount since there are two walls: 360 square feet * 2 = 720 square feet\nThen find the perimeter of the short wall: 20 feet + 12 feet + 20 feet + 12 feet = 64 square feet\nThen add that perimeter to the area of the two long walls to find the total area: 720 square feet + 64 square feet = 784 square feet\n#### 784",
+        "transformed_answer": 784.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, step 3 incorrectly uses the perimeter formula instead of the area formula by summing the sides of the wall. The error results in calculating the perimeter of 20 feet + 12 feet + 20 feet + 12 feet = 64 square feet instead of calculating the area with 20 feet * 12 feet = 240 square feet as in the original. This affects the final step, changing the total area from 720 square feet + 240 square feet = 960 square feet to 720 square feet + 64 square feet = 784 square feet. The language in the explanation of step 3 < Then find the perimeter of the short wall: > matches the original explanation but presents an incorrect calculation due to the introduced error. The single error is introduced in step 3 while other steps use correct formulas.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 960 square feet, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 64 square feet instead of 48 square feet, resulting in the final incorrect answer."
+    },
+    {
+        "question": "The perimeter of a triangle is 160 cm. If two of the sides are 40 cm and 50 cm, calculate the length of the third side?",
+        "original_solution": "To get the perimeter, you add all the sides of the triangle, so the first two sides add up to 40+50 = 90 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-90 = 70 cm.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "To get the perimeter, you add all the sides of the triangle, so the first two sides add up to 40*50 = 2000 cm.\nIf the perimeter of the triangle is 160, the remaining side is 160-2000 = -1840 cm.\n#### -1840",
+        "transformed_answer": -1840.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter (which involves addition of the sides) and the area (which typically involves multiplying length and width, although for triangles the formula is different, involving a half of base times height). The question requires that the values of two sides be added—since it’s a linear measure of perimeter—resulting in 40+50=90 cm in the original solution. By changing the addition to multiplication (40*50=2000 cm), we make an error reflecting confusion between linear and area measures. This affects the subsequent step 2 (the calculation for the remaining side), changing the correct subtraction from 160-90=70 cm to an incorrect subtraction 160-2000=-1840 cm. Note that while the transformed solution contains the error in step 1, the language description remains unchanged. It is a single error in confusing the formula type while the concept of subtraction in step 2 is applied correctly, but with incorrect values.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 70 cm, and the explanation is that step 3 first makes a mistake in the calculation process, calculating -1840 instead of 70. The subsequent step 4 references the result of step 3, calculating -1840 / 3 = -613 instead of 70 / 3 = 23.3, resulting in the final incorrect answer."
+    },
+    {
+        "question": "John decided to start rowing around a square lake.  Each side of the lake is 15 miles.  Jake can row at twice the speed he can swim.  It takes him 20 minutes to swim 1 mile.  How long, in hours, does it take to row the lake?",
+        "original_solution": "The perimeter of the lake is 4*15=60 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 60/6=10 hours to row around the lake\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "The area of the lake is 15*15=225 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 225/6=37.5 hours to row around the lake\n#### 37.5",
+        "transformed_answer": 37.5,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of the square. The question requires that the perimeter of the square to be solved be equal to the side length multiplied by 4, rather than the side length multiplied by itself, which is equivalent to the area of the square, resulting in 4*15=60 in the original_solution becoming 15*15=225 in the transformed_solution. This affects the subsequent step 4, changing from 60/6=10 hours to 225/6=37.5 hours to row around the lake. Note that the language description of step 1 < The perimeter of the lake is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 1 mistakenly uses the formula for square area, while the other calculation processes related to the speed and time are still correct in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 10, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 225/6=37.5 instead of 225/2=11. The subsequent step 4 references the result of step 3, calculating 11 x 2 = 22 instead of 11 x 4 = 44, resulting in the final incorrect answer."
+    }
+]

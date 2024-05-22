@@ -1,0 +1,50 @@
+[
+    {
+        "question": "If the price of a book is first decreased by 15 % and then increased by 10 %, then the net change in the price will be:",
+        "original_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nThe price after a 10% increase is 85 + (0.10 * 85) = 85 + 8.5 = $93.50.\nThe net change in the price is 93.50 - 100 = -$6.50\n#### -6.50",
+        "original_answer": -6.5,
+        "transformed_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nAssuming there was a mistaken additional discount of 5% applied in this step, the actual price after the discounts would be 85 - (0.05 * 85) = 85 - 4.25 = $80.75.\nThe price after a 10% increase is 80.75 + (0.10 * 80.75) = 80.75 + 8.075 = $88.825.\nThe net change in the price is 88.825 - 100 = -$11.175\n#### -11.175",
+        "transformed_answer": -11.175,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, specifically, introducing a mistaken additional discount of 5%. This mistake changes the calculations in step 2 from a price decrease to $85 to a further reduced price of $80.75. Following this error, all subsequent calculations are based on the incorrect price of $80.75 instead of $85, resulting in the transformed solution stating the price after a 10% increase and the net change in price incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is #80, and the explanation is as follows:\n\nIn the first step, the price after a 15% decrease is calculated as 100 - (0.15 * 100) = 100 - 15 = $85. However, there is a mistake in this step, as the discount of 15% should be applied to $100, not to $85. Therefore, the correct price after the first discount should be $80, not $85.\n\nThe rest of the solution is correct, and the net change in the price is $88.825 - $100 = -$11.175. Therefore, the final answer is $80."
+    },
+    {
+        "question": "In a company of 148 employees, 92 are females. A total of 78 employees have advanced degrees and the rest have a college degree only. If 31 employees are males with a college degree only, how many employees are females with advanced degrees?",
+        "original_solution": "There are 148 - 92 = 56 male employees.\nThere are 56 - 31 = 25 male employees with advanced degrees.\nThere are 78 - 25 = 53 female employees with advanced degrees.\n#### 53",
+        "original_answer": 53.0,
+        "transformed_solution": "There are 148 - 92 = 56 male employees.\nThere are 56 - 31 = 25 male employees with advanced degrees.\nAssuming there are additional 3 female employees on sabbatical who return to the company, the total employees with advanced degrees including the returning females is 78 + 3 = 81.\nNow, there are 81 - 25 = 56 female employees with advanced degrees.\n#### 56",
+        "transformed_answer": 56.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming there are additional 3 female employees on sabbatical who return to the company>, resulting in step 3 changing from 78 - 25 = 53 in the original_solution to 81 - 25 = 56 in the transformed_solution. This addition is assumed to change the total number of employees with advanced degrees from 78 to 81, which is integrated into the calculation step rather than being a separate step and leads to a different transformed_answer compared to the original_answer.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 31, and the explanation is as follows:\n\nThe given solution contains a logical error in step 3. The assumption that there are 3 female employees on sabbatical who return to the company is not supported by the given information. Therefore, the total number of female employees with advanced degrees cannot be calculated by adding 3 to the number of female employees with college degrees.\n\nThe correct solution is as follows:\n\nThere are 148 - 92 = 56 male employees.\nThere are 56 - 31 = 25 male employees with advanced degrees.\nThere are 148 - 56 = 92 female employees.\nThere are 92 - 25 = 67 female employees with advanced degrees.\n\nTherefore, the correct answer is 67."
+    },
+    {
+        "question": "Calculate the average of all the numbers between 18 and 57 which are divisible by 7.",
+        "original_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56.\nThe sum of these numbers is 21+28+35+42+49+56 = 231.\nThe average is 231/6 = 38.5.\n#### 38.5",
+        "original_answer": 38.5,
+        "transformed_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56, including an extra number 63 mistakenly included within the range.\nThe sum of these numbers including the extra is 21+28+35+42+49+56+63 = 294.\nThe average is 294/7 = 42.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <including an extra number 63 mistakenly included within the range>, resulting in step 2 changing from 21+28+35+42+49+56 = 231 in the original_solution to 21+28+35+42+49+56+63 = 294 in the transformed_solution. The related subsequent step also changes to reflect this new total number, with the average calculated as 294/7 = 42 instead of 231/6. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 35, and the explanation is as follows:\n\nThe mistake in the solution is that the extra number 63 is included in the sum, which should not be there. If we exclude 63, the correct sum is 21+28+35+42+49+56 = 268.\n\nThe average is 268/7 = 38, which is the correct answer.\n\nTherefore, the root cause of the mistake is including the extra number 63 in the sum."
+    },
+    {
+        "question": "In an election between two candidates, the winner has a margin of 10% of the votes polled. If 2000 people change their mind and vote for the loser, the loser would have won by a margin of 10% of the votes polled. Find the total number of votes polled in the election?",
+        "original_solution": "Let the total number of votes polled be x\nThe winner got 0.1x more votes than the loser, so the winner got 0.5x + 0.05x = 0.55x votes\nThe loser got 0.45x votes\nIf 2000 people change their mind and vote for the loser, the loser would have 0.55x - 2000 votes\n0.55x - 2000 = 0.45x\n0.1x = 2000\nx = 20000\n#### 20000",
+        "original_answer": 20000.0,
+        "transformed_solution": "Let the total number of votes polled be x\nThe winner got 0.1x more votes than the loser, so the winner got 0.5x + 0.05x = 0.55x votes\nThe loser got 0.45x votes\nIf 2000 people change their mind and vote for the loser also there was a counting error that added an extra 1000 votes to the winner, the loser would have 0.55x - 2000 - 1000 votes\n0.55x - 2000 - 1000 = 0.45x\n0.1x = 3000\nx = 30000\n#### 30000",
+        "transformed_answer": 30000.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <also there was a counting error that added an extra 1000 votes to the winner>, resulting in step 4 changing from 0.55x - 2000 = 0.45x in the original_solution to 0.55x - 2000 - 1000 = 0.45x in the transformed_solution. The subsequent arithmetic also changes accordingly, and now the equation to solve changes from 0.1x = 2000 to 0.1x = 3000, leading to a different final answer of x = 30000 instead of x = 20000. It should be noted that the error is made by adding additional information in one step, and all other calculation processes remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 20000, and the explanation is as follows:\n\nIn the solution, the winner got 0.55x votes, and the loser got 0.45x votes, which means the winner got 10% more votes than the loser. If 2000 people change their mind and vote for the loser, the loser would have gotten 0.45x + 2000 = 0.65x votes.\n\nHowever, the solution states that the loser would have 0.55x - 2000 - 1000 votes, which is not correct. The correct calculation is:\n\n0.55x - 2000 - 1000 = 0.45x\n\nTherefore, the correct answer is 20000, not 30000."
+    }
+]

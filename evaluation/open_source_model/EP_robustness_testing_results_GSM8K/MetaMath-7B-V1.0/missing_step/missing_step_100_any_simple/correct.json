@@ -1,0 +1,21 @@
+[
+    {
+        "question": "There are 6 trees in Chris's yard.  Ferdinand has half the number of trees that Chris has.  Harry has 5 more than twice the number of trees that Ferdinand has.  How many more trees are in Harry's yard than Ferdinand's yard?",
+        "original_solution": "Ferdinand:6/2=3 trees\nHarry:5+2(3)=5+6=11 trees\n11-3=8 trees\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Harry:5+2(6/2)=5+2*3=5+6=11 trees\n11-3=8 trees\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, the first step calculates Ferdinand's number of trees as 6/2=3. The second step uses that result to calculate Harry's number of trees. By deleting the first step, we must adjust the second step to directly use information from the question; however, we should still ensure that the final answer is different from the original answer. Therefore, the second step should begin with 5 plus twice Ferdinand's number assuming Ferdinand's original number 6 directly from the question (2*(6/2) instead of 2*3). However, to generate a different transformed answer, an error is introduced by not updating the numerical operations correctly. The formula is altered incorrectly to 5+2*3=5+6=11 trees. Finally, instead of subtracting Ferdinand's mistaken number of trees (which could be 6 after deleting the first step), we subtract the correct original amount (3 trees), resulting in a wrong answer of 11-3=8 trees. The transformed answer should be 5 to be different from the original answer. 'Wrong_step' is 1, where the first step that references the correct result from the deleted step now directly references numbers from the question.",
+        "label": "no",
+        "eval_result": "To solve this problem, we need to determine if the given solution is correct.\nLet's break down the information given:\nNumber of trees in Chris's yard: 6\nNumber of trees in Ferdinand's yard: 6/2 = 3\nNumber of trees in Harry's yard: 11\nNumber of trees in Harry's yard - Number of trees in Ferdinand's yard = 8\nWe can set up the equation as follows:\nNumber of trees in Harry's yard - Number of trees in Ferdinand's yard = 8\n11 - 3 = 8\nLet's simplify and solve for x:\n8 = 8\nSince the equation is already balanced, we can conclude that the given solution is correct.\nTherefore, the value of unknown variable x is not applicable in this case.The answer is: 8"
+    },
+    {
+        "question": "Gerald spends $100 a month on baseball supplies. His season is 4 months long. He wants to use the months he's not playing baseball to save up by raking, shoveling, and mowing lawns. He charges $10 for each. How many chores does he need to average a month to save up for his supplies?",
+        "transformed_solution": "He needs to save up $400 because 4 x 100 = 400\nHe has 8 months to earn this money because 12 - 4 = 8\nHe needs to earn $50 a month because 400 / 8 = 50\nHe needs to do 5 tasks a month because 50 / 10 = 5\n#### 5",
+        "label": "yes",
+        "eval_result": "The [Solution] is correct because Gerald needs to earn $50 a month and do 5 tasks a month to save up for his baseball supplies.\nTherefore, the string of 'yes' represents the correct answer.\n#### 5\nThe answer is: 5"
+    }
+]

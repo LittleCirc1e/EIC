@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Camden went swimming 16 times in March and Susannah went 24 times. If the number of times they went throughout the month was divided equally among 4 weeks, how many more times a week did Susannah swim than Camden?",
+        "original_solution": "Camden went swimming 16/4 = 4 times a week\nSusannah went swimming 24/4 = 6 times a week\nSusannah went 6 - 4 = 2 more times a week than Camden\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Susannah went swimming 24/4 = 6 times a week\nSusannah went 6 - 16 = -10 more times a week than Camden\n#### -10",
+        "transformed_answer": -10.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 1. In the original_solution, step 1 references the number 16 from the question, and step 3 references the result 4 from step 1. Therefore, after deleting step 1, step 3 should reference the number 16 from the question and change the formula from 6 - 4 = 2 to 6 - 16 = -10, resulting in Susannah \"swimming\" -10 more times a week than Camden, which is logically incorrect since the frequency of swimming cannot be negative. However, as per the transformation rules, the logical correctness of the transformation is not under consideration. It is step 2 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution based on the deletion, so the wrong_step is 2.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 5, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 24/4=6 instead of 24/4=8. The subsequent step 4 references the result of step 3, calculating -10 instead of 2. The final incorrect answer is -10."
+    },
+    {
+        "question": "Zig wrote four times as many books as Flo. If Zig wrote 60 books, how many books did they write altogether?",
+        "original_solution": "If Zig wrote 60 books, four times as many books as Flo, Flo wrote 60/4=15 books\nTogether, they wrote 60+15=75 books.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "Together, they wrote 60+60=120 books.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 involves determining how many books Flo wrote by dividing Zig's books by 4. Step 2 adds Zig's books to Flo's books for the total. After deleting step 1, step 2 should change to directly reference the number of books Zig wrote from the question for Flo's share as well, but since we need to choose the largest number for the subsequent related steps to reference, we incorrectly use the total number of books Zig wrote instead of the quarter amount, maintaining the addition operation leading to a formula change from 60 + 15 = 75 to 60 + 60 = 120. This incorrect alteration leads to a different transformed_answer of 120, which is incorrect, causing step 1 in the transformed_solution to be the first step referencing the incorrect number, 60, for both parts, resulting in the wrong_step being 1.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 180, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 60+60=120 instead of 60+60=180. The subsequent step 2 references the result of step 1, calculating 120 instead of 180. Therefore, the final incorrect answer is 120."
+    }
+]

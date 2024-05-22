@@ -1,0 +1,26 @@
+[
+    {
+        "question": "A batsman scored 210 runs which included 3 boundaries and 8 sixes. What % of his total score did he make by running between the wickets?",
+        "original_solution": "He scored 6 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nHe scored 150 runs by running between the wickets because 210 - 12 - 48 = 150\nHe made 71.4% of his total score by running between the wickets because (150 / 210) x 100 = 71.4\n#### 71.4",
+        "original_answer": 71.4,
+        "transformed_solution": "He scored 6 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nBecause of penalty runs, 5 additional runs are awarded to the batsman, so he scored 155 runs by running between the wickets because 210 - 12 - 48 + 5 = 155\nHe made 73.8% of his total score by running between the wickets because (155 / 210) x 100 = 73.8\n#### 73.8",
+        "transformed_answer": 73.8,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because of penalty runs, 5 additional runs are awarded to the batsman>, resulting in step 3 changing from 210 - 12 - 48 = 150 in the original_solution to 210 - 12 - 48 + 5 = 155 in the transformed_solution. The percentage calculated in the final step also changes accordingly, affecting the transformed_answer to become 73.8 instead of 71.4. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 adds information not included in the question statement <Because of penalty runs, 5 additional runs are awarded to the batsman>, causing the result of step 3 to be overestimated by 5. Step 5, as the subsequent step of step 3, miscalculates 210 - 12 - 48 + 5 = 155 instead of 210 - 12 - 48 = 152. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nThe correct solution is:\nHe scored 6 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nHe scored 152 runs by running between the wickets because 210 - 12 - 48 = 152\nHe made 71.4% of his total score by running between the wickets because (152 / 210) x 100 = 71.4\n#### 71.4."
+    },
+    {
+        "question": "Speed of a boat in standing water is 9 kmph and the speed of the stream is 1.5 kmph. A man rows to a place at a distance of 105 km and comes back to the starting point. The total time taken by him is",
+        "original_solution": "Speed downstream = 9 + 1.5 = 10.5 kmph\nSpeed upstream = 9 - 1.5 = 7.5 kmph\nTime taken downstream = 105 / 10.5 = 10 hours\nTime taken upstream = 105 / 7.5 = 14 hours\nTotal time taken = 10 + 14 = 24 hours\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Speed downstream = 9 + 1.5 = 10.5 kmph\nSpeed upstream = 9 - 1.5 = 7.5 kmph\nDue to a temporary increase in stream speed by 0.5 kmph, the speed upstream on the return trip becomes 9 - 1.5 - 0.5 = 6.5 kmph\nTime taken downstream = 105 / 10.5 = 10 hours\nTime taken upstream with increased stream speed = 105 / 6.5 = approximately 16.15 hours\nTotal time taken = 10 + 16.15 = approximately 26.15 hours\n#### 26.15",
+        "transformed_answer": 26.15,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <due to a temporary increase in stream speed by 0.5 kmph>, resulting in the speed upstream on the return trip changing from 9 - 1.5 in the original_solution to 9 - 1.5 - 0.5 in the transformed_solution. This change affects the subsequent computations, particularly the time taken upstream and the total time. The transformed_solution shows a total time of approximately 26.15 hours, different from the original_answer of 24 hours. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 adds information not included in the question statement <Due to a temporary increase in stream speed by 0.5 kmph>, causing the result of step 4 to be overestimated by 0.5. Step 6, as the subsequent step of step 4, miscalculates 105 / 6.5 = approximately 16.15 hours instead of 105 / 7.5 = approximately 13.85 hours. The first step to make a mistake, which is the root cause of the mistake, is step 4.\n\nPlease note that the correct calculation for the time taken upstream with increased stream speed should be:\n\nTime taken upstream with increased stream speed = 105 / 7.5 = approximately 13.85 hours\n\nTherefore, the total time taken should be:\n\nTotal time taken = 10 + 13.85 = approximately 23.85 hours\n\nThe correct answer is:\n\n#### 23.85."
+    }
+]

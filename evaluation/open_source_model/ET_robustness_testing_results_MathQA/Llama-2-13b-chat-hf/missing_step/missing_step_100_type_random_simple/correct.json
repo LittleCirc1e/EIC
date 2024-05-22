@@ -1,0 +1,38 @@
+[
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The formula used is correct, but the calculation is incorrect. The correct calculation is Time = 450 km / 90 km/h = 5 hours."
+    },
+    {
+        "question": "Two trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?",
+        "original_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)\nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (500/18) = (340 * 18) / 500 = 12.24 seconds\n#### 12.24",
+        "original_answer": 12.24,
+        "transformed_solution": "Relative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (500/18) = (340 * 18) / 500 = 11.544 seconds\n#### 11.544",
+        "transformed_answer": 11.544,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. Since step 1 included the expression “Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)” which is the overall formula for calculating time, removing it does not impact the calculation itself. Since this is a simple process and there is no other intermediate step that references the result from step 1, the only change is in the calculation on step 3 due to a math error introduced when computing 340 * 18 / 500, incorrectly generating a different answer, 11.544 seconds. The wrong_step is 3 as this is the first occurrence where an error is introduced in the process of altering the original solution. The process of alteration was to skip the general formula which was described in step 1, and proceed directly to calculating the specific values needed for this problem.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The calculation error is in the relative speed calculation, where the relative speed is calculated as (60 + 40) km/hr instead of (60 - 40) km/hr, which results in an incorrect answer. The correct relative speed calculation should be (60 - 40) km/hr = 20 km/hr."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'calculation_error', and the explanation is: The next prime number after 59 is 61, not 63. The correct sequence should be: 23, 29, 31, 37, 41, 43, 47, 53, 59, 61."
+    }
+]

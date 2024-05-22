@@ -1,0 +1,74 @@
+[
+    {
+        "question": "Annalise was sent by her mother to the store to buy 10 boxes of Kleenex Ultra Soft Facial Tissues. If each box has 20 packs of tissues and each pack contain 100 tissues sold at five cents each, calculate the total amount of money Annalise spent to buy the ten boxes.",
+        "original_solution": "If a box of tissue has 20 packs of tissues, ten boxes have 20 packs/box * 10 boxes = 200 packs\nSince each pack has 100 tissues, Annalise bought 100 tissues/pack * 200 packs = 20000 tissues.\nAnnalise bought 20000 tissues at five cents each, at a total cost of 20000 tissues * $0.05 = $1000\n#### 1000",
+        "original_answer": 1000.0,
+        "transformed_solution": "If a box of tissue has 20 packs of tissues, ten boxes have 20 packs/box / 10 boxes = 2 packs\nSince each pack has 100 tissues, Annalise bought 100 tissues/pack * 2 packs = 200 tissues.\nAnnalise bought 200 tissues at five cents each, at a total cost of 200 tissues * $0.05 = $10\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 1 to division, incorrectly calculating the total number of packs from the ten boxes by changing '20 packs/box * 10 boxes' to '20 packs/box / 10 boxes'. The correct number of packs should be 20 * 10=200 packs, but after changing the operation, it becomes 20 / 10=2 packs. This alteration affects the following calculations, where step 2 and 3 use the incorrect number of packs. The calculation within each incorrect step is performed correctly according to the modified operation, leading to a different (incorrect) transformed_answer compared to the original_answer.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #2, where the calculation of 20 packs/box / 10 boxes = 2 packs is incorrect. The correct calculation is 20 packs/box / 10 boxes = 2 packs per box. Therefore, Annalise bought 20 packs of tissues per box, which is 200 tissues."
+    },
+    {
+        "question": "Valerie needs to put stamps on the envelopes she is about to mail. She has thank you cards for each of her grandmother, uncle and aunt for the birthday presents they sent. She also has to pay the water bill and the electric bill separately. She wants to send three more mail-in rebates than she does bills and she has twice as many job applications as rebates to mail. How many stamps does she need if everything needs 1 stamp except the electric bill, which needs 2?",
+        "original_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 + 2 = 5 mail-in rebates to mail.\nShe has twice as many job applications as rebates, so she has 2 * 5 = 10 applications to mail.\nShe has 3 + 2 + 5 + 10 = 20 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 20 + 1 = 21 stamps.\n#### 21",
+        "original_answer": 21,
+        "transformed_solution": "Valerie has to send a thank you card to each of 3 people, so she has 3 * 1 = 3 thank you cards to mail.\nShe has 2 bills to mail.\nShe has 3 more rebates than bills, so 3 - 2 = 1 mail-in rebate to mail.\nShe has twice as many job applications as rebates, so she has 2 * 1 = 2 applications to mail.\nShe has 3 + 2 + 1 + 2 = 8 pieces of mail to send.\nThe electric bill needs an extra stamp, so she needs 8 + 1 = 9 stamps.\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The example modifies the addition in step 3 to subtraction, changing the formula \"3 + 2 = 5\" to \"3 - 2 = 1\". The single step that has been modified is only the operator in step 3, but it is calculated correctly, which leads to a different result from the original answer, affecting subsequent related steps. The number of rebates affects the job applications as well (step 4 changes from \"2 * 5 = 10\" to \"2 * 1 = 2\"), and subsequently also changes the total number of mail pieces to send (step 5 changes from \"3 + 2 + 5 + 10 = 20\" to \"3 + 2 + 1 + 2 = 8\"). The last step (step 6) adds an extra stamp for the electric bill, changing from \"20 + 1 = 21\" to \"8 + 1 = 9\" stamps needed. The explanation makes clear that only the operator in step 3 is incorrect, leading to its incorrect result and affecting subsequent calculations, which are however correctly performed with the modified values.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #3, where Valerie has 3 more rebates than bills, but she should have 2 more rebates than bills. Therefore, the correct answer is 3 - 2 = 1 mail-in rebate to mail."
+    },
+    {
+        "question": "Suzanne wants to raise money for charity by running a 5-kilometer race. Her parents have pledged to donate $10 for her first kilometer and double the donation for every successive kilometer. If Suzanne finishes the race, how much money will her parents donate?",
+        "original_solution": "For the 2nd kilometer, the donation will be $10 * 2 = $20.\nFor the 3rd kilometer, the donation will be $20 * 2 = $40.\nFor the 4th kilometer, the donation will be $40 * 2 = $80.\nFor the final kilometer, the donation will be $80 * 2 = $160.\nFor the entire race the donation will be $10 + $20 + $40 + $80 + $160 = $310.\n#### 310",
+        "original_answer": 310.0,
+        "transformed_solution": "For the 2nd kilometer, the donation will be $10 / 2 = $5.\nFor the 3rd kilometer, the donation will be $5 * 2 = $10.\nFor the 4th kilometer, the donation will be $10 * 2 = $20.\nFor the final kilometer, the donation will be $20 * 2 = $40.\nFor the entire race the donation will be $10 + $5 + $10 + $20 + $40 = $85.\n#### 85",
+        "transformed_answer": 85.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the operator from multiplication to division only in the first step of the calculation sequence, turning $10 * 2 = $20 into $10 / 2 = $5. This affects the subsequent related steps because the amount of donation for the 2nd, 3rd, 4th, and final kilometers is based on the results of previous steps. All subsequent steps correctly use the new values based on the changed operation in the first step, leading to a new final answer. No other aspects of the steps have been changed, ensuring that the calculation is done correctly within the context of the altered operation in the first step.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #3, where the donation for the 3rd kilometer is calculated as $5 instead of $10. This mistake is the root cause of the error in the subsequent steps, leading to an incorrect total donation. Therefore, the correct total donation is $85."
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours * 2 = 8 hours studying on Saturday.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 4 into multiplication by changing / to *. It incorrectly calculates 4 hours / 2 as 4 * 2 = 8 hours for Saturday's study time. All other aspects of the other steps are correct, but this changed operator leads to a wrong result at this step and a transformed_answer different from the original_answer.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. Tristan studies for 8 hours on Saturday because he has 4 hours left to study after using 21 hours on the first 5 days of the week, and he splits his time evenly over 2 days."
+    },
+    {
+        "question": "Bailey needs to buy 2 new sets of towels for the guest bathroom and 4 new sets for her master bathroom. The set of towels for the guest bathroom are $40.00 each and the master bathroom set is $50.00 each. The store is currently offering 20% off so how much will Bailey spend on towel sets?",
+        "original_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280-56 =$224.00\n#### 224",
+        "original_answer": 224.0,
+        "transformed_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280+56 = $336.00\n#### 336",
+        "transformed_answer": 336.0,
+        "wrong_step": 5,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the subtraction in step 5 into addition, changing 280-56 to 280+56 by changing - to +. As a result, the calculation in step 5 is still correct given the altered operator, but the outcome is different, leading to a changed transformed_answer. The wrong step (step 5) alters the outcome of the calculation such that Bailey will be spending more than the discounted price, which is incorrect in the context of the problem. However, all prior steps and calculations remain correct.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #, which is the calculation of the cost of the master bath towels. The calculation is incorrect because it does not consider the 20% discount. The correct calculation is 4*50 = $200.00, not $200.00. Therefore, the total cost of the towels will be $80.00 + $200.00 = $280.00, and the discount will be $280*.20 = $56.00. The final answer is #336.00."
+    },
+    {
+        "question": "Josh wants to build a square sandbox that is 3 ft long, 3 ft wide for his son. He can buy sand in 3 sq ft bags for $4.00 a bag. How much will it cost him to fill up the sandbox?",
+        "original_solution": "The sandbox is 3' long, 3' wide so the sq footage of the sandbox is 3*3 = 9 sq ft\nHe needs 9 sq ft of sand to fill the sandbox and he can buy it in 3 sq ft bags so he needs 9/3 = 3 bags of sand\nThe sand costs $4.00 a bag and he needs 3 bags so it will cost him 4*3 = $12.00 in sand\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "The sandbox is 3' long, 3' wide so the sq footage of the sandbox is 3*3 = 9 sq ft\nHe needs 9 sq ft of sand to fill the sandbox and he can buy it in 3 sq ft bags so he needs 9*3 = 27 bags of sand\nThe sand costs $4.00 a bag and he needs 27 bags so it will cost him 4*27 = $108.00 in sand\n#### 108",
+        "transformed_answer": 108.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the division in step 2 into multiplication, and by changing / to *, 9/3 = 3 becomes 9*3 = 27. This affects the subsequent related step 3, where the calculation changes from 4*3 = $12.00 to 4*27 = $108.00. It should be noted that only the operator in step 2 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent step of using its result, but the calculation in step 3 is correct based on the incorrect step 2 result.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The first wrong step is step #2, where the sq footage of the sandbox is calculated as 3*3 = 9 sq ft, instead of 9*3 = 27 sq ft, which is the correct calculation for the area of the sandbox. This mistake leads to the final answer of 108, which is incorrect. The correct answer is 27 bags of sand, which costs $108.00."
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "question": "Edmonton is 220 kilometers north of Red Deer. Calgary is 110 kilometers south of Red Deer. If you travel at 110 kilometers per hour, how long will it take to get from Edmonton to Calgary?",
+        "original_solution": "Total distance travelled is 220km + 110km = 330 km.\nTime to travel that far is 330km / 110km/hour = 3 hours.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Total distance travelled is 220km + 110km = 330 km.\nTime to travel that far is 330km / 100km/hour = 3.3 hours.\n#### 3.3",
+        "transformed_answer": 3.3,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 110km/hour as 100km/hour from step 1 and changes 330km / 110km/hour = 3 hours to 330km / 100km/hour = 3.3 hours. It should be noted that step 1 in the transformed_solution <Total distance travelled is 220km + 110km = 330 km.> should be the same as the step 1 in the original_solution <Total distance travelled is 220km + 110km = 330 km.> and calculates its result 330 km correctly. The change in speed from 110 km/hour to 100 km/hour in step 2 leads to an erroneous calculation of time as 3.3 hours instead of 3 hours. The subsequent step showing the calculated time will reflect this incorrect speed, showing 3.3 hours instead of the correct 3 hours. You need to only consider one error of referencing, so the initial distance calculation step is still correct.",
+        "eval_result": "To determine if the solution is correct, we need to check if the time it takes to travel from Edmonton to Calgary is indeed 3.3 hours.\nWe can use the formula: time = distance / speed\nIn this case, the distance is 330 kilometers and the speed is 110 kilometers per hour.\nSo, the time it takes to travel from Edmonton to Calgary is 330 kilometers / 110 kilometers per hour = 3 hours.\nTherefore, the solution is incorrect, and the correct answer is 3 hours.\nThe explanation is: The solution is incorrect, the correct answer is 3 hours, and the explanation is that the distance between Edmonton and Calgary is 330 kilometers, and the speed is 110 kilometers per hour. The time it takes to travel that distance is 330 kilometers / 110 kilometers per hour = 3 hours.\n#### 3\nThe answer is: 3"
+    }
+]

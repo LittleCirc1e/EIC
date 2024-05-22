@@ -1,0 +1,26 @@
+[
+    {
+        "question": "On Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?",
+        "original_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\n12,000 + 24,000 = 36,000 ice cream cones have been sold in total.\n#### 36,000",
+        "original_answer": 36000,
+        "transformed_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\nOn Thursday, an additional 5,000 ice cream cones were sold due to a promotion.\n12,000 + 24,000 + 5,000 = 41,000 ice cream cones have been sold in total.\n#### 41,000",
+        "transformed_answer": 41000,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <On Thursday, an additional 5,000 ice cream cones were sold due to a promotion>, resulting in step 2 changing from 12,000 + 24,000 = 36,000 in the original_solution to 12,000 + 24,000 + 5,000 = 41,000 in the transformed_solution. This step incorrectly assumes a third day of sales occurs even though the question only asks about Tuesday and Wednesday.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 42,000, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 12,000 + 24,000 + 5,000 = 41,000 instead of 12,000 + 24,000 + 5,000 = 42,000."
+    },
+    {
+        "question": "Quinton brought 40 cupcakes to school on his birthday. He gave a cupcake to each of the 18 students in Ms. Delmont's class. He also gave a cupcake to each of the 16 students in Mrs. Donnelly's class. He also gave a cupcake to Ms. Delmont, Mrs. Donnelly, the school nurse, and the school principal. How many cupcakes did he have left over?",
+        "original_solution": "Quinton had 40 cupcakes - 18 = 22 cupcakes.\nHe then had 22 cupcakes - 16 students = 6 cupcakes.\nQuinton then gave away 6 - 1 -1 -1 -1 = 2 cupcakes left.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Quinton had 40 cupcakes - 18 students = 22 cupcakes.\nHe then had 22 cupcakes - 16 students = 6 cupcakes left.\nBecause he gave an additional cupcake to the librarian, Quinton then gave away 6 - 1 -1 -1 -1 -1 = 1 cupcake left.\n#### 1",
+        "transformed_answer": 1.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he gave an additional cupcake to the librarian>, resulting in step 3 changing from 6 - 1 -1 -1 -1 = 2 cupcakes left in the original_solution to 6 - 1 -1 -1 -1 -1 = 1 cupcake left in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 5, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 22-16=6 instead of 22-18=4. The subsequent step 4 references the result of step 3, calculating 6-1-1-1-1-1=1 instead of 4-1-1-1-1-1=2. Therefore, the final incorrect answer is 1 instead of 5."
+    }
+]

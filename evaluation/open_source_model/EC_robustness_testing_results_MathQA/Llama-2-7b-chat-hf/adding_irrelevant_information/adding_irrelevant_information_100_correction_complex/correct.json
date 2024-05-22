@@ -1,0 +1,98 @@
+[
+    {
+        "question": "On a certain test, Bill scored 20 more points than John, but half as many points as Sue. If the sum of the scores of the 3 students was 160 points, how many points did Bill receive?",
+        "original_solution": "Let x be the number of points John scored.\nBill scored x + 20 points.\nSue scored 2*(x+20) = 2x + 40 points.\nTheir total score is x + (x+20) + (2x+40) = 160.\n4x + 60 = 160.\n4x = 100.\nx = 25.\nBill scored 25 + 20 = 45 points.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Let x be the number of points John scored.\nBill scored x + 20 points.\nSue scored 2*(x+20) = 2x + 40 points.\nBecause they received a group bonus for teamwork of 10 points each, their total score including the bonus is x + (x+20) + (2x+40) + 3*10 = 160.\n4x + 90 = 160.\n4x = 70.\nx = 17.5.\nBill scored 17.5 + 20 = 37.5 points.\n#### 37.5",
+        "transformed_answer": 37.5,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because they received a group bonus for teamwork of 10 points each>, resulting in step 4 changing from x + (x+20) + (2x+40) = 160 to x + (x+20) + (2x+40) + 3*10 = 160 in the transformed_solution. This alters the equation to 4x + 90 = 160 instead of 4x + 60 = 160, and as a result, the value of x changes and thus the score of Bill changes to 37.5 points from the original 45 points. This is the first and only introduced error in the transformed_solution.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 45, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 4x + 90 = 70 instead of 4x + 90 = 160. The subsequent step 5 references the result of step 4, calculating 17.5 + 20 = 37.5 instead of 45, resulting in the final incorrect answer."
+    },
+    {
+        "question": "the floor of a rectangular room is 17 m long and 12 m wide . the room is surrounded by a veranda of width 2 m on all its sides . the area of the veranda is :",
+        "original_solution": "The length of the room with veranda is 17 + 2 + 2 = 21 m\nThe width of the room with veranda is 12 + 2 + 2 = 16 m\nThe area of the veranda is (21*16) - (17*12) = 336 - 204 = 132 sq m\n#### 132",
+        "original_answer": 132.0,
+        "transformed_solution": "The length of the room with veranda is 17 + 2 + 2 = 21 m\nThe width of the room with veranda is 12 + 2 + 2 = 16 m\nBecause there is a statue occupying 4 sq m of space on the veranda, the area of the veranda is (21*16) - (17*12) - 4 = 336 - 204 - 4 = 128 sq m\n#### 128",
+        "transformed_answer": 128.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there is a statue occupying 4 sq m of space on the veranda>, resulting in step 3 changing from (21*16) - (17*12) = 336 - 204 = 132 sq m in the original_solution to (21*16) - (17*12) - 4 = 336 - 204 - 4 = 128 sq m in the transformed_solution. The added information directly affects the calculation of the area of the veranda, leading to a different final answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 132, and the explanation is that step 3 first makes a mistake in the calculation process, calculating (21*16) - (17*12) - 4 = 336 - 204 - 4 = 128 instead of 336 - 204 - 4 = 132. The subsequent step 4 references the result of step 3, calculating 128 / 3 = 42.67 instead of 132 / 3 = 44.33, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Vishal invested 10 % more than Trishul. Trishul invested 10 % less than Raghu. If the total sum of their investments is Rs. 6647, how much amount did Raghu invest?",
+        "original_solution": "Let the amount Raghu invested be x.\nThen, Trishul invested x - 10% of x = 0.9x.\nAnd Vishal invested 0.9x + 10% of 0.9x = 0.99x.\nSo, x + 0.9x + 0.99x = 6647.\n2.89x = 6647\nx = 6647 / 2.89\nx = 2300\n#### 2300",
+        "original_answer": 2300.0,
+        "transformed_solution": "Let the amount Raghu invested be x.\nThen, Trishul invested x - 10% of x = 0.9x.\nAnd Vishal invested 0.9x + 10% of 0.9x + an additional donation of 1% of x = 0.99x + 0.01x.\nSo, x + 0.9x + (0.99x + 0.01x) = 6647.\n2.9x = 6647\nx = 6647 / 2.9\nx = 2292.07\n#### 2292.07",
+        "transformed_answer": 2292.07,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 in the original_solution was modified to include information not mentioned in the question, <an additional donation of 1% of x>. As a result, Vishal's investment calculation changed from 0.9x + 10% of 0.9x = 0.99x to 0.9x + 10% of 0.9x + 0.01x = 0.99x + 0.01x = 1x in the transformed_solution. This small change affects the final equation from x + 0.9x + 0.99x to x + 0.9x + 1x, adding an additional term that shouldn't be there, thereby altering the final answer. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 2300, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 2.9x = 6647 instead of 2.9 x = 6647 / 10 = 664.7. The subsequent step 3 references the result of step 2, calculating x = 6647 / 2.9 = 2292.07 instead of x = 664.7, resulting in the final incorrect answer."
+    },
+    {
+        "question": "A pupil ' s marks were wrongly entered as 83 instead of 63 . due to that the average marks for the class got increased by half ( 1 / 2 ) . the number of pupils in the class is :",
+        "original_solution": "The total increase in marks due to the error is 83 - 63 = 20\nLet x be the number of pupils in the class\nThe total increase in marks divided by the number of pupils is 20 / x\nThe average marks increased by 10 because 20 / x = 1 / 2\nTherefore, x = 40\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "The total increase in marks due to the error is 83 - 63 = 20\nLet x be the number of pupils in the class\nAssuming there is an extra credit awarded to every student amounting to 2 marks, the total effective false increment would be 20 + 2 * x\nThe total increase in marks including extra credit divided by the number of pupils is (20 + 2 * x) / x\nThe average marks increased by 10 because (20 + 2 * x) / x = 1 / 2\nTherefore, after simplifying we find x = 30\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Assuming there is an extra credit awarded to every student amounting to 2 marks>, resulting in step 3 changing from 20 / x = 1 / 2 in the original_solution to (20 + 2 * x) / x = 1 / 2 in the transformed_solution. It inadvertently introduces an additional variable (2 * x) to the numerator, which affects the calculation for the class size. Consequently, the transformed solution arrives at a different number of pupils by including this made-up extra credit. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 40, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 20 + 2*x = 20 + 2*30 = 40 instead of 20 + 2*x = 20 + 2*30 = 60. The subsequent step 5 references the result of step 4, calculating (20 + 2*x) / x = (20 + 2*30) / 30 = 10 instead of (20 + 2*x) / x = (20 + 2*30) / 30 = 20. Therefore, the final incorrect answer is 40."
+    },
+    {
+        "question": "a bag contains an equal number of one rupee, 50 paise and 25 paise coins respectively. if the total value is 210, how many coins of each type are there?",
+        "original_solution": "Let the number of each type of coin be x.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value is x + 0.5x + 0.25x = 210.\n1.75x = 210\nx = 120\nThere are 120 coins of each type.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "Let the number of each type of coin be x.\nAssume there is a commission of 10 rupees for counting the coins, so the actual total value without the commission is 210 - 10 = 200.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value without the commission is x + 0.5x + 0.25x = 200.\n1.75x = 200\nx = 200 / 1.75\nx = 114.29, but since we cannot have a fraction of a coin, we round down to 114 coins of each type.\n#### 114",
+        "transformed_answer": 114.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Assume there is a commission of 10 rupees for counting the coins>, resulting in step 2 changing from x + 0.5x + 0.25x = 210 in the original_solution to x + 0.5x + 0.25x = 200 in the transformed_solution. The final result is also affected, altering the number of coins from 120 to 114 for each type. The calculated number of coins must be an integer; hence, the fraction is rounded down to make the number realistic. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 120, and the explanation is that step 2 first makes a mistake in the calculation process, calculating 1.75x = 200 instead of 1.75x = 190. The subsequent step 3 references the result of step 2, calculating 190 / 1.75 = 114.29 instead of 190 / 1.75 = 114, resulting in the final incorrect answer."
+    },
+    {
+        "question": "At a garage sale, all of the items were sold at different prices. If the price of a radio sold at the garage sale was both the 17th highest price and the 24th lowest price among the prices of the items sold, how many items were sold at the garage sale?",
+        "original_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nThe radio was the 24th lowest price, so there were 23 items priced lower than the radio.\nThere were 16 + 1 + 23 = 40 items sold at the garage sale.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "The radio was the 17th highest price, so there were 16 items priced higher than the radio.\nConsidering a mistake where an item was double-counted because it was initially misplaced, the radio was actually the 23rd lowest price instead of the 24th, so there were 23 - 1 = 22 items priced lower than the radio.\nThere were 16 + 1 + 22 = 39 items sold at the garage sale.\n#### 39",
+        "transformed_answer": 39.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Considering a mistake where an item was double-counted because it was initially misplaced>, resulting in step 2 changing from the radio being the 24th lowest price to the radio being the 23rd lowest price, by subtracting one for the mistake. This change leads to a recalculation of the items priced lower than the radio from 23 to 22 and ultimately affects the total number of items sold, changing from 40 items in the original_solution to 39 items in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in a single step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 40, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 16 + 1 + 22 = 39 instead of 16 + 1 + 22 = 40. The subsequent step 4 references the result of step 3, calculating 40 / 3 = 13.33 instead of 40 / 3 = 13.333, resulting in the final incorrect answer."
+    },
+    {
+        "question": "The sum of ages of 5 children born at the intervals of 3 years each is 65 years. What is the age of the youngest child?",
+        "original_solution": "Let the age of the youngest child be x.\nThe ages of the other children are x+3, x+6, x+9, and x+12.\nTheir sum is x + (x+3) + (x+6) + (x+9) + (x+12) = 5x + 30.\nAccording to the given information, 5x + 30 = 65.\n5x = 35\nx = 7.\nThe age of the youngest child is 7.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Let the age of the youngest child be x, and assume they recently celebrated a birthday which was not taken into account in the previous sum.\nThe ages of the other children are x+3, x+6, x+9, and x+12.\nHowever, since their birthdays just passed, each child is now 1 year older, so their ages are x+1, x+4, x+7, x+10, and x+13.\nTheir sum is x + (x+1) + (x+4) + (x+7) + (x+10) + (x+13) = 5x + 35.\nAccording to the given information, 5x + 35 = 65.\n5x = 30\nx = 6.\nThe age of the youngest child is now 6.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <and assume they recently celebrated a birthday which was not taken into account in the previous sum>, resulting in an alteration of the ages of children, claiming each child is now 1 year older. This changes the calculation of their ages, transforming the equation from 5x + 30 = 65 to 5x + 35 = 65, thus giving a different final answer for the age of the youngest child from x = 7 to x = 6. The error introduced changes the outcome of the problem by making a wrong assumption about the data given in the question.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 5x = 30 instead of 5x = 35, resulting in the final incorrect answer."
+    },
+    {
+        "question": "there is a train and car. the ratio btw the speed of a train & a car is 16 : 15 respectively. also, a bus covered a distance of 480 km in 8 h. the speed of the bus is 3 / 4 th of the speed of the train. how much distance will the car cover in 6 h?",
+        "original_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDistance covered by the car in 6 hours is 6*75 = 450 km.\n#### 450",
+        "original_answer": 450.0,
+        "transformed_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDue to road constructions, the effective speed of the car reduces by 5 km/h.\nDistance covered by the car in 6 hours is 6*(75-5) = 6*70 = 420 km.\n#### 420",
+        "transformed_answer": 420.0,
+        "wrong_step": 6,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 6 adds information that is not mentioned in the question statement <Due to road constructions, the effective speed of the car reduces by 5 km/h>, resulting in step 6 changing from 6*75=450 km in the original_solution to 6*(75-5)=6*70=420 km in the transformed_solution. In this process, an irrelevant factor is incorrectly introduced that affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 450, and the explanation is that step 5 first makes a mistake in the calculation process, calculating 12x = 60 instead of 12x = 72, resulting in the final incorrect answer.\n\nPlease provide your response."
+    }
+]

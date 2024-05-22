@@ -1,0 +1,38 @@
+[
+    {
+        "question": "A survey conducted by the school showed that only 20% of the 800 parents agree to a tuition fee increase. How many parents disagree with the tuition fee increase?",
+        "original_solution": "There were 800 x 20/100 = 160 parents who agreed to the tuition fee increase.\nSo, there were 800 - 160 = 640 parents who disagreed.\n#### 640",
+        "original_answer": 640.0,
+        "transformed_solution": "There were 800 x 20/100 = 160 parents who agreed to the tuition fee increase.\nSo, there were 800 - 160 = 630 parents who disagreed.\n#### 630",
+        "transformed_answer": 630.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 800 - 160 as 630 instead of the correct 640 in step 2. This is the wrong step that introduces the calculation error and step 1 remains unchanged as it is not affected by this error. Therefore, only step 2 and the subsequent transformed answer are impacted by the incorrect calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 630, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one parent has 20% instead of 20/100, calculating 800 x 20/100 = 160 instead of 800 x 20/100 = 160. The subsequent step 3 references the result of step 2, calculating 800 - 160 = 630 instead of 800 - 160 = 640. The subsequent step 4 references the result of step 3, calculating 630 instead of 640. Therefore, the final incorrect answer is 630."
+    },
+    {
+        "question": "Candy has a chair rental business. During the weekdays, 60 chairs are rented each day; but during weekends, 100 chairs are rented each day. If this continues, how many chairs in total will Candy be able to rent out in two 4-week months?",
+        "original_solution": "During weekdays, a total of 60 x 5 = 300 chairs are rented.\nDuring the weekends, a total of 100 x 2 = 200 chairs are rented.\nIn a week, 300 + 200 = 500 chairs are rented.\nSince there are 4 weeks in a month, 500 x 4 = 2000 chairs are rented in a month.\nThus, a total of 2000 x 2 = 4000 chairs are rented in two months.\n#### 4000",
+        "original_answer": 4000.0,
+        "transformed_solution": "During weekdays, a total of 60 x 5 = 300 chairs are rented.\nDuring the weekends, a total of 100 x 2 = 200 chairs are rented.\nIn a week, 300 + 200 = 500 chairs are rented.\nSince there are 4 weeks in a month, 500 x 4 = 1950 chairs are rented in a month.\nThus, a total of 1950 x 2 = 3900 chairs are rented in two months.\n#### 3900",
+        "transformed_answer": 3900.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution changes the calculation in step 4 from 500 x 4 = 2000 to 500 x 4 = 1950, which is a calculation error. This wrong calculation affects step 5, where originally the total for two months is calculated as 2000 x 2 = 4000. Since step 4 is now miscalculated as 1950, step 5 changes to 1950 x 2 = 3900, which gives a different total number of chairs rented in two months. Subsequent steps inherit this single error without affecting the correct calculations or descriptions in previous steps.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 3900, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 300 + 200 = 500 instead of 300 + 200 = 400. The subsequent step 5 references the result of step 4, calculating 500 x 4 = 1950 instead of 400 x 4 = 1600. The subsequent step 6 references the result of step 5, calculating 1950 / 2 = 3900 instead of 1600 / 2 = 3200, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Leo has to write a 400-word story for his literature class. 10 words fit on each line of his notebook and 20 lines fit on each page. Lucas has filled one and a half pages. How many words does he have left to write?",
+        "original_solution": "Half a page is 20 / 2 = 10 lines.\nIn total, he has written 20 + 10 = 30 lines.\nThe 30 lines written are 30 * 10 = 300 words.\nLucas has 400 - 300 = 100 words left to write.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Half a page is 20 / 2 = 10 lines.\nIn total, he has written 20 + 10 = 30 lines.\nThe 30 lines written are 30 * 10 = 300 words.\nLucas has 400 - 300 = 80 words left to write.\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 4, where the correct calculation of 400 - 300 should result in 100 words left to write. However, the error changes this to 400 - 300 = 80, thus producing the wrong outcome of 80 words left to write. The previous steps remain unchanged as they are not affected by the error made in step 4.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 400 - 300 = 100 words, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 300 words instead of 300 - 30 = 270 words. The subsequent step 5 references the result of step 4, calculating 80 instead of 100."
+    }
+]

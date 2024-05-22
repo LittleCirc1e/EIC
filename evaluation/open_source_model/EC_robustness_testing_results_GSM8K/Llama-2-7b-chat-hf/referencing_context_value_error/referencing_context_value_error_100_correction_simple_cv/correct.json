@@ -1,0 +1,98 @@
+[
+    {
+        "question": "If a rectangle has a width of 42 inches and an area of 1638, how many rectangles of the same size would reach a length of 390 inches?",
+        "original_solution": "The rectangle has a length of 1638 in/ 42in = 39 in.\nThe number of rectangles required to reach 390 inches is 390/39 = 10 rectangles.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "The rectangle has a length of 1638 in/ 40in = 40.95 in.\nThe number of rectangles required to reach 390 inches is 390/40.95 ≈ 9 rectangles.\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 42 in the question as 40 wrongly, and calculates 1638 in / 40 in = 40.95 in instead of 1638 in / 42 in = 39 in. Its subsequent related step will be affected, calculating 390 / 40.95 ≈ 9 rectangles instead of 390 / 39 = 10 rectangles in step 2. Please note that you should only consider one error, so step 2 will inherit the erroneous result from step 1 and continue the calculation correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #10 rectangles.\n\nThe explanation is: The solution is incorrect because there is a calculation error in step 1. The formula for the area of a rectangle is A = L x W, where L is the length and W is the width. In step 1, the solution calculates the length of the rectangle as 1638 / 40.95 = 40.95 inches. However, this is not the correct calculation, as the length of the rectangle is 1638 inches, not 40.95 inches. Therefore, the number of rectangles required to reach 390 inches is 10, not 9."
+    },
+    {
+        "question": "Jon's car needs a tune-up every 1000 miles. He drives 100 miles a day for a 30 day month. How many tune-ups does he need in that time?",
+        "original_solution": "He drives 100*30=3000 miles\nSo he needs 3000/1000=3 tune-ups\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He drives 90*30=2700 miles\nSo he needs 2700/1000=2.7 tune-ups\n#### 2.7",
+        "transformed_answer": 2.7,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 100 in the question as 90 wrongly, and calculates 90*30=2700 instead of 100*30=3000. Its subsequent related step will be affected, calculating 2700/1000=2.7 instead of 3000/1000=3 in step 2.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #3.\n\nExplanation: The error occurs in the first step when the solution calculates the total distance driven in a month. The solution multiplies the daily distance by the number of days in a month, resulting in an incorrect total distance of 300 miles instead of 3000 miles. This error carries through to the calculation of the number of tune-ups needed, resulting in an incorrect answer of 2.7 tune-ups instead of 3 tune-ups."
+    },
+    {
+        "question": "Julie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?",
+        "original_solution": "The total cost of the green and red lettuce is $8 + $6 = $14.\nJulie bought $14 / $2 =7 pounds of lettuce.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "The total cost of the green and red lettuce is $8 + $4 = $12.\nJulie bought $12 / $2 = 6 pounds of lettuce.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $6 in the question as $4 wrongly, and calculates $8 + $4 = $12 instead of $8 + $6 = $14. Its subsequent related step will be affected by this error, calculating $12 / $2 = 6 instead of $14 / $2 = 7 in step 2. Please note that you should only consider one error, so step 2 still references $2 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #7.\n\nExplanation: The error occurs in the second step, where the total cost of the green and red lettuce is calculated as $8 + $4 = $12. The correct calculation is $8 + $6 = $14, so Julie bought $14 / $2 = 7 pounds of lettuce."
+    },
+    {
+        "question": "Georgia is working on a math test with 75 problems on it. After 20 minutes she has completed 10 problems. After another 20 minutes, she has completed twice as many problems. She has 40 minutes to complete the rest of the test. How many problems does she have left to solve?",
+        "original_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 10 x 2 = 20.\nWith 40 minutes left she has completed 10 + 20 problems = 30 problems.\nFrom the original 75 problems she has solved 30, 75 - 30 = 45 problems she has left.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 15 x 2 = 30.\nWith 40 minutes left she has completed 10 + 30 problems = 40 problems.\nFrom the original 75 problems she has solved 40, 75 - 40 = 35 problems she has left.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 erroneously references 10 in the original solution as 15, which leads to the calculation of 15 x 2 = 30 instead of the correct 10 x 2 = 20. All the subsequent steps (3 and 4) are affected by the erroneous result of step 2 but are calculated correctly based on that result. In step 3 the number 10 + 30 = 40 is correct in context to the previous error and in step 4, 75 - 40 = 35 is correct following from the affected step 3. Step 1 is correct and steps that reference the numbers from the question in other steps still reference them correctly except for step 2 where the error occurs.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #45.\n\nExplanation:\nThe solution states that Georgia has completed 40 problems, but it does not take into account the 10 problems she completed at the beginning of the test. Therefore, the correct answer is 45 problems."
+    },
+    {
+        "question": "Cody and Trevor had 12 sandwiches. Cody ate a third of the sandwiches, and Trevor ate a quarter of the sandwiches. How many sandwiches are left?",
+        "original_solution": "Cody ate 12/3=4 sandwiches.\nTrevor ate 12/4=3 sandwiches.\nCody and Trevor ate 4+3=7 sandwiches.\nThere are 12-7=5 sandwiches left\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Cody ate 10/3=3.33 sandwiches.\nTrevor ate 10/4=2.5 sandwiches.\nCody and Trevor ate 3.33+2.5=5.83 sandwiches.\nThere are 10-5.83=4.17 sandwiches left\n#### 4.17",
+        "transformed_answer": 4.17,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 12 in the question as 10 wrongly, and calculates 10/3=3.33 instead of 12/3=4. Its subsequent related steps will be affected by the output of this erroneous step but still be calculated correctly based on the mistaken result. Step 2 still correctly references 10 in the subsequent calculation as 10/4=2.5. Step 3 calculates the new total of eaten sandwiches as 3.33+2.5=5.83 based on the erroneous values from steps 1 and 2. Finally, step 4 calculates the sandwiches left from 10 as 10-5.83=4.17 instead of 12-7=5, making use of the unchanged quantity from step 1. All other references to the number of sandwiches originally (12) are correct except for the first step where the error is introduced.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #5.\n\nExplanation: The solution is incorrect because in step 3, the number 3.33 should be 5, which is the total number of sandwiches eaten by Cody. Therefore, the final answer is 10-5=5 sandwiches left."
+    },
+    {
+        "question": "A bowl of fruit holds 18 peaches. Four of the peaches are ripe and two more ripen every day, but on the third day three are eaten. How many more ripe peaches than unripe peaches are in the bowl after five days?",
+        "original_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 14 = 4 unripe peaches left.\nTherefore, there will be 11 - 4 = 7 more ripe peaches than unripe peaches in the bowl after five days.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nTwo were eaten, so there will be 14 - 2 = 12 ripe peaches left.\nThere are 18 - 12 = 6 unripe peaches left.\nTherefore, there will be 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after five days.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 3 peaches eaten as 2 wrongly, and calculates 14 - 2 = 12 instead of 14 - 3 = 11. Its subsequent related steps will be affected, but still be calculated correctly. Step 4 changes from 18 - 14 = 4 to 18 - 12 = 6. Step 5 changes from 11 - 4 = 7 to 12 - 6 = 6. Please note that you should only consider one error, so step 1 and step 2 still correctly reference the number of peaches that ripen every day and the number initially ripe.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #7.\n\nExplanation:\nThe solution is incorrect because it does not take into account the fact that two peaches were eaten on the third day. Therefore, after five days, there will be 18 - 2 = 16 peaches left in the bowl, including 4 ripe peaches and 12 unripe peaches. So, there will be 4 - 2 = 2 more ripe peaches than unripe peaches in the bowl after five days, which is #7."
+    },
+    {
+        "question": "Cynthia has four times as many water balloons as her husband, Randy. Randy has only half as many water balloons as his daughter, Janice. If Janice throws all 6 of her water balloons at her father, how many water balloons does Cynthia have, which she could also choose to throw at Randy?",
+        "original_solution": "Randy has only half as many water balloons as Janice’s 6, for a total of (½)*6=3 water balloons.\nCynthia has 4 times as many water balloons as Randy, for a total of 4*3=12 water balloons\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "Randy has only half as many water balloons as Janice’s 8, for a total of (½)*8=4 water balloons.\nCynthia has 4 times as many water balloons as Randy, for a total of 4*4=16 water balloons\n#### 16",
+        "transformed_answer": 16.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 8 wrongly, and calculates (½)*8=4 instead of (½)*6=3. The following step inherited this erroneous result and calculated 4*4=16 instead of the correct 4*3=12. Please note that you should only consider one error, so step 2 still references the number 4 calculated from step 1 correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #12.\n\nExplanation:\nThe solution assumes that Randy has 4 water balloons, which is incorrect. According to the question, Randy has only half as many water balloons as Janice's 8, which means Randy has 8/2=4 water balloons. Therefore, Cynthia has 4 times as many water balloons as Randy, which is 4*4=16 water balloons."
+    },
+    {
+        "question": "John's dog has a litter of 8 puppies. He gives away half of them. He keeps one of the remaining puppies. He then takes the remaining puppies and sells them each for $600. He had to give the owner of the stud $300. How much money does he profit?",
+        "original_solution": "He had 8/2=4 left after giving some puppies away\nHe then keeps one so he sells 4-1=3 puppies\nThat means he made 3*600=$1800\nSo his profit was 1800-300=$1500\n#### 1500",
+        "original_answer": 1500.0,
+        "transformed_solution": "He had 8/2=4 left after giving some puppies away\nHe then keeps one so he sells 4-1=3 puppies\nThat means he made 3*500=$1500\nSo his profit was 1500-300=$1200\n#### 1200",
+        "transformed_answer": 1200.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 600 in the question as 500 wrongly, and calculates 3*500=$1500 instead of 3*600=$1800. Its subsequent related step will be affected, calculating 1500-300=$1200 instead of 1800-300=$1500 in step 4. Please note that you should only consider one error, so step 4 still references 300 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #1500.\n\nThe error occurs in the second step, when the solution states that he keeps one of the remaining puppies. However, the correct answer is that he keeps none of the remaining puppies, as he gives them all away. Therefore, the correct calculation is:\n\nHe had 8/2=4 left after giving some puppies away\nHe then sells 4 puppies for $600 each, making $2400\nHe had to give the owner of the stud $300\nTherefore, his profit is $2400 - $300 = $2100.\n\nExplanation: The solution is incorrect because it assumes that John keeps one of the remaining puppies, when in fact he gives them all away. This changes the calculation for the number of puppies he sells, resulting in a higher profit."
+    }
+]

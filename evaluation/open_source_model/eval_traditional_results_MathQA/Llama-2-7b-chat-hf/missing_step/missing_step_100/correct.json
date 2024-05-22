@@ -1,0 +1,268 @@
+[
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "a number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is",
+            "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "Let the number be x.\nThen x^2 = (6+3)^2 = 36+54+9= 6(15) + 9, which means when the square of the number is divided by 6, the remainder is 9.\n#### 9",
+            "transformed_answer": 9.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this example, the first step which establishes the form of x has been removed. The original solution uses x = 6a + 3 to form the base equation of the number before squaring it. By deleting this, the transformed solution directly references the remainder '3' when creating the square of the number, which should result in a form of (6 + 3)^2, but incorrectly transforms it into 36+54+9, implying the number to be squared was 9 instead of 6a+3. Consequently, the final step alters the remainder incorrectly from 3 to 9 when the number is squared. The wrong_step is 1 because it is the first step in the transformed_solution that uses incorrect logic, resulting in the incorrect conclusion."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is\n\n### Response:",
+        "output_str": "\nThe number that satisfies the given conditions is 9.\n\nWhen 9 is divided by 6, the remainder is 3.\n\n9^2 = 81\n\nWhen 81 is divided by 6, the remainder is 3.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+            "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?\n\n### Response:",
+        "output_str": "\nTo find the time required for a bike to cover a distance of 450 km with a speed of 90 kmh, we can use the formula:\n\nTime = Distance / Speed\n\nPlugging in the values given in the problem, we get:\n\nTime = 450 km / 90 kmh\n\nTime = 5 hours\n\nTherefore, the time required for the bike to cover a distance of 450 km with a speed of 90 kmh is 5 hours.",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 5.0,
+        "is_correct": true
+    },
+    {
+        "index": 13,
+        "gsm8k_data": {
+            "question": "In a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?",
+            "original_solution": "One cow will eat 20 bags of husk in 20 days because 20/20 = 1.\nOne cow will eat one bag of husk in 20 days because 20/1 = 20.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "One cow will eat one bag of husk in 20*20 = 400 days because the same amount of food will last one cow 20 times longer than it would for 20 cows.\n#### 400",
+            "transformed_answer": 400.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been removed. The original solution step 1 ('One cow will eat 20 bags of husk in 20 days') is erroneous and misguiding as it misses the logical representation of the sharing principle based on which the 20 bags of husk can feed 20 cows. In the transformed_solution, the unnecessary and confusing step 1 is removed and the correct reasoning is directly applied to establish how long it will take for one cow to eat one bag of husk. The calculation multiplies the total number of days (20) by the number of cows (20) to yield the correct number of days for one cow to eat one bag. Therefore, the transformed solution references the numerical values in the question correctly to arrive at a different (and in this case, correct) transformed answer, which is 400 days for one cow to eat one bag of husk by itself."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a dairy farm, 20 cows eat 20 bags of husk in 20 days. In how many days will one cow eat one bag of husk?\n\n### Response:",
+        "output_str": "\nOne cow will eat one bag of husk in 20 days.",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+            "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+            "original_answer": 50.0,
+            "transformed_solution": "4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from 0 to 48\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+            "transformed_answer": 49.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the first step, which involves the inequality '4n + 7 > 1', was removed. Since the subsequent steps do not reference the result of this first step, we only need to adjust the range of integer values that n can take from '-1 to 48' to '0 to 48'. Hence, the total count of integer values changes from 50 to 49. It is step 1 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing the range of n in the transformed_solution, so the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?\n\n### Response:",
+        "output_str": "\nThe value of the expression 4n + 7 will be an integer greater than 1 and less than 200 for n = 50.\n\nExplanation:\nTo determine the values of n for which the expression 4n + 7 is an integer greater than 1 and less than 200, we can use the following inequality:\n\n4n + 7 ≤ 200\n\nWe can simplify this inequality by multiplying both sides by 4 to get:\n\nn + 7 ≤ 80\n\nNow, we can solve for n by subtracting 7 from both sides of the inequality:\n\nn ≤ 73\n\nTherefore, the value of n for which the expression 4n + 7 is an integer greater than 1 and less than 200 is n = 50.",
+        "extract_true_num": 50.0,
+        "extract_pred_num": 50.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "Lilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?",
+            "original_solution": "They have 10 + 12 = 22 fish in all.\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "They have 12 = 12 fish in all.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed. In the original_solution, step 1 references the numbers from the question, combining 10 and 12 to make 22. The transformed_solution then incorrectly references just the second number, 12, ignoring the 10 fish that Lilly has. Therefore, it fails to add Lilly’s and Rosy’s fish together, resulting in an incorrect calculation of 12 fish in total. Since there is no longer a step combining the amounts, the formula changes from 10+12=22 to just 12=12. The wrong_step is 1, which refers to the first step that should combine the two numbers but now incorrectly only references the largest number without adding the two."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nLilly has 10 fish and Rosy has 12 fish. In total, how many fish do they have in all?\n\n### Response:",
+        "output_str": "\nLilly has 10 fish and Rosy has 12 fish, so together they have 10 + 12 = 22 fish.",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 22.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+            "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "The number of pairs sold is the total sales divided by another price, so 735 / 10 = 73.5.\n#### 73.5",
+            "transformed_answer": 73.5,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The original_solution only had one step calculation. For the transformed_solution, since I can't delete the final step and there's only one step, I have modified it to reference the closest whole number to the original price per pair, which is $10 instead of $9.8, and reran the calculation with this new price to produce a new answer. Therefore, as per the problem guidelines, I have chosen to slightly alter the price per pair used in the calculation from $9.8 to $10. The wrong_step is 1 because in the transformed solution, it is the first step that incorrectly references the price of a pair of rackets as $10 instead of $9.8, which results in the transformed_answer being different from the original_answer, as required."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?\n\n### Response:",
+        "output_str": "\nTo find out how many pairs of ping pong rackets were sold, we need to divide the total amount of money spent by the average price of a pair of rackets.\n\n$735 / $9.8 = 75\n\nSo, the sports equipment store sold 75 pairs of ping pong rackets.",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 75.0,
+        "is_correct": true
+    },
+    {
+        "index": 38,
+        "gsm8k_data": {
+            "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+            "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+            "original_answer": 120.0,
+            "transformed_solution": "The area of the parallelogram is 12 x 12 = 144 square cm.\n#### 144",
+            "transformed_answer": 144.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, step 1 has been completely removed. In the original_solution, step 1 states the formula for the area of a parallelogram and step 2 references both the base and the height from the question, multiplying them to find the area. Since we are deleting step 1, step 2 should still calculate the area but since we need a different answer, we reference the base for both the base and height, which is the largest number. Hence, we get 12 (base) x 12 (chosen number instead of the height) = 144 square cm. The calculation in step 2 after the transformation is using the incorrect formula but still internally consistent as a simple multiplication. It is the transformed step 1, which is also step 2 in the original_solution, that first references the incorrect number, in this case using the base (12) instead of the height (10). Thus, the wrong_step is 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFind the area of a parallelogram with base 12 cm and height 10 cm?\n\n### Response:",
+        "output_str": "\nThe area of a parallelogram can be found using the formula A = base × height. In this case, the base of the parallelogram is 12 cm and the height is 10 cm, so the area of the parallelogram is:\n\nA = 12 cm × 10 cm = 120 cm²\n\nTherefore, the area of the parallelogram is 120 cm².",
+        "extract_true_num": 120.0,
+        "extract_pred_num": 120.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 / 1 = 72000\n#### 72000",
+            "transformed_answer": 72000.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "The first step has been removed in the transformed_solution. The original_solution only had one step, which referenced the number 10 from the question. By removing this step and because the solution involves a simple division, the solution should directly reference the number from the question. Since step 1 in the original_solution references the number 10 and there is no other number to choose from, in the transformed_solution, we directly divide by 1, pretending that a case can hold only 1 bottle, hence the total number of cases required would be 72000. This leads to a calculation of 72000 / 1 = 72000. The number 1 is the smallest default number for division when the actual divisor is omitted. This results in the incorrect conclusion that 72000 cases are required, with the transformation error occurring at the only step in the new solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "\nTo determine how many cases are required by the company to hold its one day production, we need to divide the total number of bottles produced (72000) by the number of bottles that can be held in a case (10). Therefore, the company requires 7200 cases to hold its one day production of bottled water.",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "Of 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+            "original_solution": "The number of throwers is 28 and the total number of players is 70, so the number of non-throwers is 70 - 28 = 42.\nThe number of left-handed players is 42 / 3 = 14.\nThe number of right-handed non-throwers is 42 - 14 = 28.\nThe number of right-handed players in the team is 28 (non-throwers) + 28 (throwers) = 56.\n#### 56",
+            "original_answer": 56.0,
+            "transformed_solution": "The number of left-handed players is 70 / 3 = 23.33, rounded down to 23 since you can’t have a fraction of a player.\nThe number of right-handed non-throwers is 70 - 23 - 28 = 19.\nThe number of right-handed players in the team is 19 (non-throwers) + 28 (throwers) = 47.\n#### 47",
+            "transformed_answer": 47.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the first step has been removed. In the original_solution, step 1 references the number of throwers and the total number of players from the question, and step 2 references the result of step 1, the number of non-throwers. So after deleting step 1, step 2 should change from calculating a third of 42 to calculating a third of 70, the original total number of players. The correct calculation of a third of the non-throwers should be (70 - 28) / 3 instead of 70 / 3. Step 2, which become step 1 in the transformed_solution, incorrectly calculates the number of left-handed players as 70 / 3 = 23 (rounded down from 23.33), causing all subsequent calculations to be incorrect and leading to a transformed answer of 47 instead of the correct answer, 56. The wrong_step is 1 since it’s the first step that contains an error in the transformation process."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOf 70 players on a football team, 28 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?\n\n### Response:",
+        "output_str": "\nTo find the number of right-handed players on the football team, we need to first determine the number of left-handed players. Since 28 of the 70 players are throwers, and all throwers are right-handed, there are 28 right-handed players among the non-throwers. Therefore, the total number of right-handed players is 28 + 28 = 56.",
+        "extract_true_num": 56.0,
+        "extract_pred_num": 56.0,
+        "is_correct": true
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+            "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+            "original_answer": 375.0,
+            "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+            "transformed_answer": 25.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?\n\n### Response:",
+        "output_str": "\nThere are 15 small boxes in the large box, and each small box contains 25 chocolate bars, so the total number of chocolate bars in the large box is 15 x 25 = 375 chocolate bars.",
+        "extract_true_num": 375.0,
+        "extract_pred_num": 375.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The percent decrease is (60/100) x 100 = 60%\n#### 60%",
+            "transformed_answer": 60.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "Here, the original step 1 has been removed. The original step 1 calculates the amount of decrease by subtracting the sale price from the original price. Since step 1 has been removed, step 2 in the transformed_solution is now step 1 and incorrectly references 60 from the question as the amount of decrease instead of using the correct decrease value which should be 40, the calculation now incorrectly becomes (60/100) x 100 resulting in an incorrect transformed_answer of 60%. It should note that the correct value for the amount of decrease is the difference between the original price and the sale price (100 - 60 = 40). The transformed_solution should then use this correct decrease amount to calculate the percent decrease. Hence, step 1 in the transformed_solution, which is also the first step referring to the incorrect number, is the wrong_step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "\nThe percent decrease is 40%.\n\nTo calculate the percent decrease, you can use the following formula:\n\nPercent decrease = (Sale price - Original price) / Original price\n\nIn this case, the sale price is $60 and the original price is $100, so the calculation would be:\n\nPercent decrease = ($60 - $100) / $100 = -40%\n\nTherefore, the percent decrease is 40%.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "A man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?",
+            "original_solution": "Let the speed of the man in still water be x kmph.\nThen, speed downstream = (x + 20) kmph\nSpeed upstream = (x - 20) kmph\nAccording to the given data, x + 20 = 60 and x - 20 = 20\nSolving the equations we get, x = 40 kmph\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "According to the given data, speed downstream - speed upstream = 60 - 20\nThis implies 2 * speed of the man in still water = 40 kmph\nTherefore, the speed of the man in still water = 40 / 2\nThis gives us x = 20 kmph\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, step 1 has been removed, which initially let x be the speed of the man in still water and expressed the downstream and upstream speeds in terms of x. Therefore, the downstream and upstream speeds are now directly derived from the given data, taking the difference between the two known speeds. The subsequent calculations are based on this difference, which leads to an incorrect calculation of the speed of the man in still water. The wrong_step is 1, as it is the first step that now references the incorrect derived speeds without the setup involving x."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?\n\n### Response:",
+        "output_str": "\nTo find the speed of the man in still water, we need to use the information given in the instruction. The man can row upstream at 20 kmph and downstream at 60 kmph. This means that the man's speed in still water (i.e., in the absence of any current) is half the difference between his upstream and downstream speeds.\n\nTherefore, the speed of the man in still water is:\n\nSpeed in still water = (60 kmph - 20 kmph) / 2 = 40 kmph\n\nSo, the man can row at a speed of 40 kmph in still water.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+            "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+            "original_answer": 61,
+            "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+            "transformed_answer": 63,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nResolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )\n\n### Response:",
+        "output_str": "\nThe next number in the sequence is 61.",
+        "extract_true_num": 61,
+        "extract_pred_num": 61.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "John bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.",
+            "original_solution": "The cost price per meter is 434.75 / 9.25 = 47\n#### 47",
+            "original_answer": 47.0,
+            "transformed_solution": "The cost price per meter is 434.75 / 9 = 48.3055555556\n#### 48.31",
+            "transformed_answer": 48.31,
+            "wrong_step": 1,
+            "wrong_type": "missing_step",
+            "is_single_error": true,
+            "explanation": "In this case, the first and only step of the original solution has been removed and replaced by reference to a different number. The original step references the number 9.25 from the question and the division is performed accordingly to determine the cost price per meter. By changing the divisor from 9.25 to 9 (a number smaller than 9.25), the formula becomes 434.75 / 9, resulting in the incorrect transformed answer. As this is the first step in determining the cost price per meter, and it is now referencing an incorrect number, it is marked as the wrong step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.\n\n### Response:",
+        "output_str": "\nTo find the cost price per metre of the cloth, we need to divide the total cost of the cloth by the total length of the cloth.\n\nCost price per metre = Total cost of cloth / Length of cloth\n= $434.75 / 9.25 m\n= $47.00 per metre\n\nTherefore, the cost price per metre of the cloth is $47.00.",
+        "extract_true_num": 47.0,
+        "extract_pred_num": 47.0,
+        "is_correct": true
+    }
+]

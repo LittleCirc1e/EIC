@@ -1,0 +1,74 @@
+[
+    {
+        "question": "Find the probability that a leap year chosen at random will have 53 Sundays.",
+        "original_solution": "In a leap year, there are 366 days\nThere are 52 weeks in a year, so 52 * 7 = 364 days\nSo, there are 366 - 364 = 2 extra days in a leap year\nThus, a leap year will have 53 Sundays if one of the extra days is a Sunday or both are Sunday.\nIn a leap year, there are 52 Sundays\nSo, the probability that a leap year chosen at random will have 53 Sundays is 2 / 7\n#### 2/7",
+        "original_answer": "2/7",
+        "transformed_solution": "In a leap year, there are 366 days\nThere are 52 weeks in a year, so 52 * 7 = 364 days\nSo, there are 366 - 364 = 2 extra days in a leap year\nThus, a leap year will have 53 Sundays if both of the extra days are Sunday.\nIn a leap year, there are 52 Sundays\nSo, the probability that a leap year chosen at random will have 53 Sundays is 1 / 7\n#### 1/7",
+        "transformed_answer": "1/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 is modified to assume that a leap year will have 53 Sundays only if both extra days are Sunday, which changes the correct perspective of having at least one Sunday in the two extra days. This results in the probability calculation changing from 2 / 7 to 1 / 7, and therefore affects the probability mentioned in step 6. This is a counting error as it miscounts the conditions under which there can be 53 Sundays. The other steps and calculations are unaffected and remain correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 366 - 364 = 2 instead of 366 - 365 = 1. The subsequent step 5 references the result of step 4, calculating 2 extra days in a leap year as Sunday, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "if w is the set of all the integers between 69 and 99, inclusive, that are either multiples of 3 or multiples of 2 or multiples of both, then w contains how many numbers?",
+        "original_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98\nNow find the common multiples of 2 and 3:\n72, 78, 84, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 20 numbers.\n#### 20",
+        "original_answer": 20,
+        "transformed_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96\nNow find the common multiples of 2 and 3:\n72, 78, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 19 numbers.\n#### 19",
+        "transformed_answer": 19,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously omits counting the number 84 as a common multiple of 2 and 3, which is present in both the list of multiples of 2 and 3. This results in the list of common multiples being 72, 78, 90, 96 instead of 72, 78, 84, 90, 96. Consequently, the final count is one less than what it should be, so the original count of 20 is incorrectly transformed to 19.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 mistakenly believes that the common multiples of 2 and 3 are only 72, 78, and 90, instead of all the common multiples of 2 and 3 between 69 and 99, which are 72, 78, 90, 96. The subsequent step 4 references the result of step 3, calculating 72 + 78 + 90 + 96 = 426 instead of 19. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Find the probability that a non leap year selected at random will have 53 Sundays",
+        "original_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day in that year\nThe probability of selecting a non leap year with 53 Sundays is 1/7\n#### 1/7",
+        "original_answer": "1/7",
+        "transformed_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day that could potentially fall on a Sunday\nThe probability of selecting a non leap year with 53 Sundays is 2/7\n#### 2/7",
+        "transformed_answer": "2/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 erroneously calculates the probability of having 53 Sundays in a non-leap year as 2/7 instead of 1/7. Since there are 365 days in a non-leap year and 52 full weeks account for 364 days, there is 1 extra day, not 2 as implied by the transformed solution. This extra day has a 1/7 chance of being a Sunday, not 2/7. To generate the transformed_solution, the counting of weeks is kept correct, but the probability calculation is erroneously changed which is reflected in the transformed_answer.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 mistakenly believes that there are 52 weeks in a non-leap year instead of 53 weeks. As a result, it calculates the probability of selecting a non-leap year with 53 Sundays as 2/7 instead of 1/7. The correct calculation is 1/7."
+    },
+    {
+        "question": "On Sunday, Bill ran 4 more miles than he ran on Saturday. Julia did not run on Saturday, but she ran twice the number of miles on Sunday that Bill ran on Sunday. If Bill and Julia ran a total of 36 miles on Saturday and Sunday, how many miles did Bill run on Sunday?",
+        "original_solution": "Let x be the number of miles Bill ran on Saturday\nOn Sunday, Bill ran x + 4 miles\nJulia ran 2 * (x + 4) miles on Sunday\nThe total distance is x + x + 4 + 2 * (x + 4) = 36 miles\nCombine like terms to get 4x + 12 = 36\n4x = 24\nx = 6\nSo, Bill ran x + 4 = 6 + 4 = 10 miles on Sunday.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let x be the number of miles Bill ran on Saturday\nOn Sunday, Bill ran x + 4 miles\nJulia ran 3 * (x + 4) miles on Sunday\nThe total distance is x + x + 4 + 3 * (x + 4) = 36 miles\nCombine like terms to get 5x + 16 = 36\n5x = 20\nx = 4\nSo, Bill ran x + 4 = 4 + 4 = 8 miles on Sunday.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 incorrectly assumes that Julia ran 3 times the miles Bill ran on Sunday instead of 2 times. This error changes the total distance equation in step 3 to x + x + 4 + 3 * (x + 4) = 36 and subsequently affects the equation in step 4 to get 5x + 16 = 36. The solution process after the erroneous step still follows the correct arithmetic procedure, calculating the changed equation properly to find x = 4, resulting in Bill running 8 miles on Sunday, which differs from the original answer of 10 miles.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 3 * (x + 4) = 3 * 4 = 12 instead of 3 * (x + 4) = 3 * 5 = 15. The subsequent step 5 references the result of step 3, calculating 12 + 12 + 16 = 38 instead of 15 + 15 + 16 = 46, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "on sunday , bill ran 4 more miles than he ran on saturday . julia did not run on saturday , but she ran twice the number of miles on sunday that bill ran on sunday . if bill and julia ran a total of 28 miles on saturday and sunday , how many miles did bill run on sunday ?",
+        "original_solution": "Let x be the number of miles Bill ran on Saturday\nTherefore, Bill ran x + 4 miles on Sunday\nJulia ran 2(x+4) = 2x + 8 miles on Sunday\nThe total number of miles Bill and Julia ran is x + x + 4 + 2x + 8 = 28\n4x + 12 = 28\n4x = 16\nx = 4\nTherefore, Bill ran x + 4 = 4 + 4 = 8 miles on Sunday\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let x be the number of miles Bill ran on Saturday\nTherefore, Bill ran x + 4 miles on Sunday\nJulia ran 1(x+4) = x + 4 miles on Sunday\nThe total number of miles Bill and Julia ran is x + x + 4 + x + 4 = 28\n3x + 8 = 28\n3x = 20\nx = 6.6667\nTherefore, Bill ran x + 4 = 6.6667 + 4 = 10.6667 miles on Sunday\n#### 10.6667",
+        "transformed_answer": 10.6667,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously counts the number of miles Julia ran as equal to the number of miles Bill ran on Sunday instead of twice. This causes step 3 to change from 2(x+4)=2x+8 to 1(x+4)=x+4, a counting error of the miles Julia ran. And it affects the subsequent related steps: step 4 is changed from 4x + 12 = 28 to 3x + 8 = 28, step 5 is changed from 4x = 16 to 3x = 20, step 6 is changed from x = 4 to x = 6.6667, and step 7, the conclusion, is changed from Bill ran 8 miles to Bill ran 10.6667 miles on Sunday. The error is isolated to this multiplication factor, and all other arithmetic steps are correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1(x+4) = x + 4 instead of x + 4 = x + 4, resulting in the incorrect answer. The correct calculation is x + 4 = 6.6667 + 4 = 10.6667 miles. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "At Chennai it rained as much on Tuesday as on all the others days of the week combined. If the average rainfall for the whole week was 3cm. How much did it rain on Tuesday?",
+        "original_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 7 * 3 = 21 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 21 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 21 - x\n2x = 21\nx = 10.5\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 6 * 3 = 18 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 18 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 18 - x\n2x = 18\nx = 9\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original_solution, the total days are erroneously counted as 6 instead of 7 when calculating the total rainfall for the week. This affects the following steps since the total rainfall is now incorrectly set to 18 cm instead of 21 cm. Consequently, the calculation is based on the wrong total, which also changes the final answer for Tuesday’s rainfall from 10.5 cm to 9 cm.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 2, and the explanation is that step 2 first makes a mistake in unit conversion and mistakenly believes that one day has 6 cm instead of 1 cm, calculating 6 x 3 = 18 instead of 1 x 3 = 3. The subsequent step 3 references the result of step 2, calculating 18 - x instead of 3 - x, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2."
+    }
+]

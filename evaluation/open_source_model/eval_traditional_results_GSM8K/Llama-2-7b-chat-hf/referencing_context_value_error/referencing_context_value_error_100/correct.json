@@ -1,0 +1,230 @@
+[
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "Jon's car needs a tune-up every 1000 miles. He drives 100 miles a day for a 30 day month. How many tune-ups does he need in that time?",
+            "original_solution": "He drives 100*30=3000 miles\nSo he needs 3000/1000=3 tune-ups\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "He drives 90*30=2700 miles\nSo he needs 2700/1000=2.7 tune-ups\n#### 2.7",
+            "transformed_answer": 2.7,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 100 in the question as 90 wrongly, and calculates 90*30=2700 instead of 100*30=3000. Its subsequent related step will be affected, calculating 2700/1000=2.7 instead of 3000/1000=3 in step 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJon's car needs a tune-up every 1000 miles. He drives 100 miles a day for a 30 day month. How many tune-ups does he need in that time?\n\n### Response:",
+        "output_str": "\nJon needs 3 tune-ups in that time. Since he drives 100 miles a day, he drives a total of 3000 miles in a 30 day month. Since his car needs a tune-up every 1000 miles, he needs 3 tune-ups in that time.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 9,
+        "gsm8k_data": {
+            "question": "Julie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?",
+            "original_solution": "The total cost of the green and red lettuce is $8 + $6 = $14.\nJulie bought $14 / $2 =7 pounds of lettuce.\n#### 7",
+            "original_answer": 7.0,
+            "transformed_solution": "The total cost of the green and red lettuce is $8 + $4 = $12.\nJulie bought $12 / $2 = 6 pounds of lettuce.\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references $6 in the question as $4 wrongly, and calculates $8 + $4 = $12 instead of $8 + $6 = $14. Its subsequent related step will be affected by this error, calculating $12 / $2 = 6 instead of $14 / $2 = 7 in step 2. Please note that you should only consider one error, so step 2 still references $2 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJulie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?\n\n### Response:",
+        "output_str": "\nJulie bought 4 pounds of green lettuce and 3 pounds of red lettuce, for a total of 7 pounds of lettuce.",
+        "extract_true_num": 7.0,
+        "extract_pred_num": 7.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+            "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+            "original_answer": 520.0,
+            "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\nHe then loses half of them for 1000/2= 500 cards remaining.\n#### 500",
+            "transformed_answer": 500.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nPhil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?\n\n### Response:",
+        "output_str": "\nPhil has 10 baseball cards left after the fire.\n\n### Explanation:\nThe instruction states that Phil buys a pack of twenty baseball cards each week for a year, which means he has 20 x 52 = 1040 baseball cards. Then, it says that Phil loses half of them in a fire, which means he loses 1040 / 2 = 520 baseball cards. Therefore, Phil has 1040 - 520 = 520 baseball cards left after the fire.",
+        "extract_true_num": 520.0,
+        "extract_pred_num": 520.0,
+        "is_correct": true
+    },
+    {
+        "index": 30,
+        "gsm8k_data": {
+            "question": "Burt spent $2.00 on a packet of basil seeds and $8.00 on potting soil.  The packet of seeds yielded 20 basil plants.  He sells each basil plant for $5.00 at the local farmer's market.  What is the net profit from his basil plants?",
+            "original_solution": "He spent $2.00 on seeds and $8.00 on soil for a total of 2+8 = $10.00\nHe sells each of the 20 basil plants for $5.00 so he makes 20*5 = $100.00\nHe made $100.00 from selling basil plants and he spent $10.00 to buy and grow the seeds. His net profit is 100-10 = $90.00\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "He spent $1.00 on seeds and $8.00 on soil for a total of 1+8 = $9.00\nHe sells each of the 20 basil plants for $5.00 so he makes 20*5 = $100.00\nHe made $100.00 from selling basil plants and he spent $9.00 to buy and grow the seeds. His net profit is 100-9 = $91.00\n#### 91",
+            "transformed_answer": 91.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references $2.00 in the question as $1.00 wrongly, and calculates 1+8 = $9.00 instead of 2+8 = $10.00. Its subsequent related step will be affected, calculating the net profit as 100-9 = $91.00 instead of 100-10 = $90.00 in step 3. Please note that you should only consider one error, so the total revenue calculated in step 2 still references the correct price of $5.00 per basil plant."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBurt spent $2.00 on a packet of basil seeds and $8.00 on potting soil.  The packet of seeds yielded 20 basil plants.  He sells each basil plant for $5.00 at the local farmer's market.  What is the net profit from his basil plants?\n\n### Response:",
+        "output_str": "\nTo find the net profit from Burt's basil plants, we need to subtract the cost of the seeds and soil from the total amount he earned from selling the basil plants.\n\nCost of seeds = $2.00\nCost of soil = $8.00\nTotal cost = $2.00 + $8.00 = $10.00\n\nTotal amount earned from selling basil plants = $5.00 x 20 basil plants = $100.00\n\nNet profit = Total amount earned - Total cost = $100.00 - $10.00 = $90.00\n\nTherefore, the net profit from Burt's basil plants is $90.00.",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 90.0,
+        "is_correct": true
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "Andy has 4 times as many white socks as he has black socks. If he loses half his white socks, how many more white socks does he still have than black socks if he has 6 black socks?",
+            "original_solution": "Andy has 6 x 4 = 24 white socks.\nHe loses 24/2 = 12 white socks.\nHe still has 12 - 6 = 6 white socks more than black socks.\n#### 6",
+            "original_answer": 6,
+            "transformed_solution": "Andy has 6 x 5 = 30 white socks.\nHe loses 30/2 = 15 white socks.\nHe still has 15 - 6 = 9 white socks more than black socks.\n#### 9",
+            "transformed_answer": 9,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 4 in the question as 5 wrongly, and calculates 6*5=30 instead of 6*4=24. Its subsequent related step, step 2, will be affected, calculating 30/2=15 instead of 24/2=12. The subsequent related step, step 3, will inherit the error from step 2, calculating 15-6=9 instead of 12-6=6. Please note that you should only consider one error, so step 2 and step 3 still reference 24 and 12 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAndy has 4 times as many white socks as he has black socks. If he loses half his white socks, how many more white socks does he still have than black socks if he has 6 black socks?\n\n### Response:",
+        "output_str": "\nAndy still has 4 times as many white socks as he has black socks even after losing half of his white socks. So, he has 4 times 6 = 24 white socks and 6 black socks.",
+        "extract_true_num": 6,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 58,
+        "gsm8k_data": {
+            "question": "Mr. Callen bought 10 paintings at $40 each and 8 wooden toys at $20 each from the crafts store to resell at a profit. However, when he sold the items, the selling price of a painting was 10% less and the selling price of a hat 15% less. Calculate the total loss Mr. Callen made from the sale of the items.",
+            "original_solution": "If he sold a painting at a 10% loss, then he made a 10/100*$40 = $4 loss on each painting.\nsince he bought 10 paintings, the total loss he made from selling the paintings is 10*$4 = $40\nHe also made a loss of 15/100*20 = $3 loss from selling each wooden toy.\nSince he bought 8 wooden toys, the total loss he made was 3*8 = $24\nIn total, Mr. Callen made a loss of $40+$24 = $64 from the sales of the items.\n#### 64",
+            "original_answer": 64.0,
+            "transformed_solution": "If he sold a painting at a 10% loss, then he made a 10/100*$30 = $3 loss on each painting.\nsince he bought 10 paintings, the total loss he made from selling the paintings is 10*$3 = $30\nHe also made a loss of 15/100*20 = $3 loss from selling each wooden toy.\nSince he bought 8 wooden toys, the total loss he made was 3*8 = $24\nIn total, Mr. Callen made a loss of $30+$24 = $54 from the sales of the items.\n#### 54",
+            "transformed_answer": 54.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references $40 in the question as $30 wrongly, and calculates 10/100*$30 = $3 loss on each painting instead of 10/100*$40 = $4. Its subsequent related step will be affected, calculating 10*$3 = $30 instead of 10*$4 = $40 in step 2. Please note that you should only consider one error, so the steps that reference the correct cost of the wooden toy will still reference $20 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nMr. Callen bought 10 paintings at $40 each and 8 wooden toys at $20 each from the crafts store to resell at a profit. However, when he sold the items, the selling price of a painting was 10% less and the selling price of a hat 15% less. Calculate the total loss Mr. Callen made from the sale of the items.\n\n### Response:",
+        "output_str": "\nTo calculate the total loss Mr. Callen made from the sale of the items, we need to calculate the selling price of each item and then subtract the cost price of each item.\n\nFor the paintings, the selling price was $40 x 0.9 = $36 per painting, and the cost price was $40 per painting, so the loss per painting is $36 - $40 = $4 per painting. Therefore, the total loss from the sale of the paintings is $4 x 10 = $40.\n\nFor the wooden toys, the selling price was $20 x 0.85 = $17 per toy, and the cost price was $20 per toy, so the loss per toy is $17 - $20 = $3 per toy. Therefore, the total loss from the sale of the wooden toys is $3 x 8 = $24.\n\nSo, the total loss Mr. Callen made from the sale of the items is $40 + $24 = $64.",
+        "extract_true_num": 64.0,
+        "extract_pred_num": 64.0,
+        "is_correct": true
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "A secretary who has been working for 6 years and who earns €10,000 a month has obtained a salary increase of 2%. What is her new salary?",
+            "original_solution": "We have the amount the salary will increase: 10000 * 2 / 100 = 200€\nSo the new salary is: 10000 + 200= 10200€\n#### 10200",
+            "original_answer": 10200.0,
+            "transformed_solution": "We have the amount the salary will increase: 10000 * 3 / 100 = 300€\nSo the new salary is: 10000 + 300 = 10300€\n#### 10300",
+            "transformed_answer": 10300.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 2% in the question as 3% wrongly, and calculates 10000 * 3 / 100 = 300€ instead of 10000 * 2 / 100 = 200€. Its subsequent related step will be affected, calculating 10000 + 300 = 10300€ instead of 10000 + 200 = 10200€ in step 2. Please note that you should only consider one error, so step 2 still references 10000 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA secretary who has been working for 6 years and who earns €10,000 a month has obtained a salary increase of 2%. What is her new salary?\n\n### Response:",
+        "output_str": "\nThe secretary's new salary is €10,000 x 1.02 = €10,200 per month.",
+        "extract_true_num": 10200.0,
+        "extract_pred_num": 10200.0,
+        "is_correct": true
+    },
+    {
+        "index": 82,
+        "gsm8k_data": {
+            "question": "Nora's mother tells her to go and pick oranges from their farm. She picks 80 oranges from one tree, 60 from another tree, and 120 from the third tree. What's the total number of oranges she picked?",
+            "original_solution": "After picking 80 oranges from the first tree and 60 oranges from the second tree, she has 80+60 = 140 oranges.\nWhen she adds 120 more oranges from the third tree, she has 140+120 = 260 oranges.\n#### 260",
+            "original_answer": 260.0,
+            "transformed_solution": "After picking 80 oranges from the first tree and 50 oranges from the second tree, she has 80+50 = 130 oranges.\nWhen she adds 120 more oranges from the third tree, she has 130+120 = 250 oranges.\n#### 250",
+            "transformed_answer": 250.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 60 in the question as 50 wrongly, and calculates 80+50=130 instead of 80+60=140. Its subsequent related step will be affected, calculating 130+120=250 instead of 140+120=260 in step 2. Please note that you should only consider one error, so step 2 still references 120 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nNora's mother tells her to go and pick oranges from their farm. She picks 80 oranges from one tree, 60 from another tree, and 120 from the third tree. What's the total number of oranges she picked?\n\n### Response:",
+        "output_str": "\nThe total number of oranges Nora picked is 80 + 60 + 120 = 260 oranges.",
+        "extract_true_num": 260.0,
+        "extract_pred_num": 260.0,
+        "is_correct": true
+    },
+    {
+        "index": 90,
+        "gsm8k_data": {
+            "question": "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?",
+            "original_solution": "There are 25+40+35=100 flowers total.\nThere are 40+35=75 flowers that are not roses.\nTherefore, (75/100)*100=75% of the flowers are not roses.\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "There are 25+40+30=95 flowers total.\nThere are 40+30=70 flowers that are not roses.\nTherefore, (70/95)*100=73.68% of the flowers are not roses.\n#### 73.68",
+            "transformed_answer": 73.68,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 35 in the question as 30 wrongly, and calculates 25+40+30=95 instead of 25+40+35=100. Its subsequent related steps, step 2 and 3, will be affected. Step 2 changes from 40+35=75 to 40+30=70, and step 3 changes from (75/100)*100=75% to (70/95)*100=73.68%. Please note that you should only consider one error, so step 2 still references 40 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?\n\n### Response:",
+        "output_str": "\nTo find the percentage of flowers that are not roses, we need to subtract the number of roses from the total number of flowers.\n\nPercentage of flowers that are not roses = (Total number of flowers - Number of roses) / Total number of flowers\n\nIn this case, the total number of flowers is 25 + 40 + 35 = 100. The number of roses is 25. Therefore, the percentage of flowers that are not roses is:\n\nPercentage of flowers that are not roses = (100 - 25) / 100 = 75%\n\nSo, 75% of the flowers in the garden are not roses.",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 75.0,
+        "is_correct": true
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "Erin has 7 lollipops. Her mother gives Erin another 10 lollipops. If Erin gives 3 of her lollipops to Ella, how many lollipops does she have left?",
+            "original_solution": "Erin has 7 + 10 = 17 lollipops\nAfter she gives 3 lollipops to Ella she has 17 - 3 = 14 lollipops.\n#### 14",
+            "original_answer": 14.0,
+            "transformed_solution": "Erin has 5 + 10 = 15 lollipops\nAfter she gives 3 lollipops to Ella she has 15 - 3 = 12 lollipops.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 7 in the question as 5 wrongly, and calculates 5 + 10 = 15 instead of 7 + 10 = 17. The subsequent related step will be affected, calculating 15 - 3 = 12 instead of 17 - 3 = 14 in step 2. Please note that you should only consider one error, so step 2 still references 3 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nErin has 7 lollipops. Her mother gives Erin another 10 lollipops. If Erin gives 3 of her lollipops to Ella, how many lollipops does she have left?\n\n### Response:",
+        "output_str": "\nErin has 7 lollipops to start with. Her mother gives her another 10 lollipops, so now Erin has 7 + 10 = 17 lollipops. If Erin gives 3 of her lollipops to Ella, then Erin has 17 - 3 = 14 lollipops left.",
+        "extract_true_num": 14.0,
+        "extract_pred_num": 14.0,
+        "is_correct": true
+    },
+    {
+        "index": 95,
+        "gsm8k_data": {
+            "question": "Stella wanted to buy a new dress for the upcoming dance. At the store she found out that the dress she wanted was $50. The store was offering 30% off of everything in the store. What was the final cost of the dress?",
+            "original_solution": "The dress was $50 and 30% off so 50*.30 = $15 discount price\nThe dress cost $50 minus $15 (30% off discount) so 50-15 = $35\n#### 35",
+            "original_answer": 35.0,
+            "transformed_solution": "The dress was $60 and 30% off so 60*.30 = $18 discount price\nThe dress cost $60 minus $18 (30% off discount) so 60-18 = $42\n#### 42",
+            "transformed_answer": 42.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 50 in the question as 60 wrongly, and calculates 60*.30=$18 instead of 50*.30=$15. Its subsequent related step will be affected, calculating 60-18=$42 instead of 50-15=$35 in step 2. Please note that you should only consider one error, so step 2 still references the correct 30% discount from the question."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nStella wanted to buy a new dress for the upcoming dance. At the store she found out that the dress she wanted was $50. The store was offering 30% off of everything in the store. What was the final cost of the dress?\n\n### Response:",
+        "output_str": "\nThe final cost of the dress would be $50 x 0.70 = $35.\n\nExplanation:\nTo find the final cost of the dress, we need to calculate the discount first. The store is offering 30% off of everything in the store, which means we need to calculate 30% of the original price of the dress. In this case, the original price of the dress is $50, so we multiply it by 0.70 to get the discount amount: $50 x 0.70 = $35. Therefore, the final cost of the dress is $35.",
+        "extract_true_num": 35.0,
+        "extract_pred_num": 35.0,
+        "is_correct": true
+    },
+    {
+        "index": 96,
+        "gsm8k_data": {
+            "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+            "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+            "original_answer": 39.0,
+            "transformed_solution": "Let k be the number of koi fish in the pond\n14-2*k=68\n2*k=68+14=82\n2k=82\nk=82/2=41\n#### 41",
+            "transformed_answer": 41.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?\n\n### Response:",
+        "output_str": "\nTo find the number of koi fish in the pond, we can use the information given in the instruction. We know that 14 less than two times the number of koi fish in the pond is 64.\n\nSo, if we let x be the number of koi fish in the pond, we can write the equation:\n\n14 - 2x = 64\n\nTo solve for x, we can add 14 to both sides of the equation:\n\n2x = 78\n\nNow, we can divide both sides of the equation by 2 to find the number of koi fish in the pond:\n\nx = 39\n\nTherefore, there are 39 koi fish in the pond.",
+        "extract_true_num": 39.0,
+        "extract_pred_num": 39.0,
+        "is_correct": true
+    }
+]

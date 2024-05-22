@@ -1,0 +1,249 @@
+[
+    {
+        "index": 2,
+        "gsm8k_data": {
+            "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+            "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+            "original_answer": 8900.0,
+            "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+            "transformed_answer": 8910.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?\n\n### Response:",
+        "output_str": "\nThe Dow was at 8,900 in the morning before the markets opened.",
+        "extract_true_num": 8900.0,
+        "extract_pred_num": 8900.0,
+        "is_correct": true
+    },
+    {
+        "index": 15,
+        "gsm8k_data": {
+            "question": "Venny spent $15000 on a used car which cost 40% of the original price. What was the original price of the car?",
+            "original_solution": "Let x be the original price of the car.\nThen 40% * x = $15000\nThus x = $15000 / 0.4 = $37500\n#### 37500",
+            "original_answer": 37500.0,
+            "transformed_solution": "Let x be the original price of the car.\nThen 40% * x = $15000\nThus x = $15000 / 0.4 = $35000\n#### 35000",
+            "transformed_answer": 35000.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates $15000 / 0.4 as $35000 instead of $15000 / 0.4 = $37500 in step 3. Since this is the last step and it contains the actual error, the calculation error does not propagate to any subsequent steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nVenny spent $15000 on a used car which cost 40% of the original price. What was the original price of the car?\n\n### Response:",
+        "output_str": "\nThe original price of the car was $37500.\n\nTo find the original price of the car, we can use the information given in the instruction. The instruction states that Venny spent $15000 on a used car that cost 40% of the original price. This means that the cost of the used car is 40% of the original price.\n\nWe can set up an equation to represent this relationship:\n\nCost of used car = 0.4 x Original price\n\nSubstituting the value given in the instruction, we get:\n\nCost of used car = 0.4 x $37500\n\nSolving for the original price, we get:\n\nOriginal price = Cost of used car / 0.4\n\nOriginal price = $15000 / 0.4\n\nOriginal price = $37500\n\nTherefore, the original price of the car was $37500.",
+        "extract_true_num": 37500.0,
+        "extract_pred_num": 37500.0,
+        "is_correct": true
+    },
+    {
+        "index": 19,
+        "gsm8k_data": {
+            "question": "After collecting all the old electronics in their house, Lauryn made $2000 from selling the items on eBay. If her friend Aurelia also made 70% of what she sold on eBay after selling her used electronics, calculate the total amount of money the two friends made on eBay.",
+            "original_solution": "If Lauryn made $2000 from eBay, then her friend made 70/100*$2000 =$1400\nIn total, the two friends made $2000+$1400 = $3400\n#### 3400",
+            "original_answer": 3400.0,
+            "transformed_solution": "If Lauryn made $2000 from eBay, then her friend made 70/100*$2000 =$1300\nIn total, the two friends made $2000+$1300 = $3300\n#### 3300",
+            "transformed_answer": 3300.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The first step, which is the calculation of Aurelia’s earnings as 70% of Lauryn’s, is modified to an incorrect value of $1300 instead of the correct $1400. The subsequent steps depend on the sum of Lauryn’s and the incorrect calculated amount for Aurelia, therefore the total calculation is also incorrect. Steps prior to the error remain unchanged and no new errors are introduced in the subsequent steps. This is an example of a single error where only one calculation is incorrectly altered, affecting the outcome."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAfter collecting all the old electronics in their house, Lauryn made $2000 from selling the items on eBay. If her friend Aurelia also made 70% of what she sold on eBay after selling her used electronics, calculate the total amount of money the two friends made on eBay.\n\n### Response:",
+        "output_str": "\nTo calculate the total amount of money that Lauryn and Aurelia made on eBay, we need to multiply the amount that Lauryn made by 1.7 (which is 70% of $2000). So, the total amount of money they made on eBay is:\n\n$2000 x 1.7 = $3400\n\nTherefore, the two friends made a total of $3400 on eBay.",
+        "extract_true_num": 3400.0,
+        "extract_pred_num": 3400.0,
+        "is_correct": true
+    },
+    {
+        "index": 24,
+        "gsm8k_data": {
+            "question": "Jimmy wants to order a pizza at a new place. The large pizza costs $10.00 and is cut into 8 slices. The first topping costs $2.00, the next 2 toppings cost $1.00 each and the rest of the toppings cost $0.50. If he orders a large pizza with pepperoni, sausage, ham, olives, mushrooms, bell peppers and pineapple. How much will his pizza cost per slice?",
+            "original_solution": "The pizza costs $10 and the first topping, pepperoni costs $2 so right now it costs 10+2 = $12.00\nThe next 2 toppings, sausage and ham, cost $1.00 each so 2*1 = $2.00\nThe remaining toppings, olives, mushrooms, bell peppers and pineapple, cost $0.50 each so they cost 4*.50 = $2.00\nAll total, Jimmy's pizza costs 12+2+2 = $16.00\nThe pizza is sliced into 8 pieces and the pizza costs $16 so each slice costs 16/8= $2.00 a slice\n#### 2",
+            "original_answer": 2.0,
+            "transformed_solution": "The pizza costs $10 and the first topping, pepperoni costs $2 so right now it costs 10+2 = $12.00\nThe next 2 toppings, sausage and ham, cost $1.00 each so 2*1 = $2.00\nThe remaining toppings, olives, mushrooms, bell peppers and pineapple, cost $0.50 each so they cost 4*.50 = $1.00\nAll total, Jimmy's pizza costs 12+2+1 = $15.00\nThe pizza is sliced into 8 pieces and the pizza costs $15 so each slice costs 15/8= $1.88 a slice\n#### 1.88",
+            "transformed_answer": 1.88,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example incorrectly calculates the cost of the remaining toppings. Instead of correctly totaling $2.00 for the 4 toppings at $0.50 each, it is mistakenly calculated as $1.00. This error is then carried on to the subsequent steps, affecting the total cost of the pizza and the cost per slice. Step 3 is the only step with a calculation error, whereas the unrelated steps 1, 2, and the related subsequent steps 4 and 5 inherit the error from step 3. The correct calculations for steps 4 and 5 are modified based on the mistaken result from step 3, changing $12+2+2 = $16.00 to $12+2+1 = $15.00 and changing 16/8 = $2.00 a slice to 15/8 = $1.88 a slice."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJimmy wants to order a pizza at a new place. The large pizza costs $10.00 and is cut into 8 slices. The first topping costs $2.00, the next 2 toppings cost $1.00 each and the rest of the toppings cost $0.50. If he orders a large pizza with pepperoni, sausage, ham, olives, mushrooms, bell peppers and pineapple. How much will his pizza cost per slice?\n\n### Response:",
+        "output_str": "\nTo calculate the cost per slice of Jimmy's pizza, we need to add up the cost of all the toppings. The cost of the large pizza is $10.00, and the cost of each topping is as follows:\n\n* Pepperoni: $2.00\n* Sausage: $1.00\n* Ham: $1.00\n* Olives: $0.50\n* Mushrooms: $0.50\n* Bell peppers: $0.50\n* Pineapple: $1.00\n\nTotal cost of toppings: $8.00\n\nTherefore, the cost per slice of Jimmy's pizza is:\n\n$10.00 (cost of large pizza) - $8.00 (cost of toppings) = $2.00 per slice\n\nSo, Jimmy's pizza will cost $2.00 per slice.",
+        "extract_true_num": 2.0,
+        "extract_pred_num": 2.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "If Alice purchased 3600 acorns for nine times the price Bob paid, and Bob paid $6000 for his acorns, how much money did Alice pay for each acorn?",
+            "original_solution": "Nine times the price Bob paid for his acorns is 9*$6000 = $54000\nIf Alice purchased 3600 acorns for nine times the price Bob paid, she paid $54000/3600 = $15 for each acorn.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "Nine times the price Bob paid for his acorns is 9*$6000 = $54000\nIf Alice purchased 3600 acorns for nine times the price Bob paid, she paid $54000/3600 = $14 for each acorn.\n#### 14",
+            "transformed_answer": 14.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error occurs in step 2 of the transformed_solution, where the division $54000/3600 is incorrectly calculated as $14 instead of the correct $15. The initial operation (9*$6000) remains unchanged and is correct. Only the calculation result of step 2 is changed by the error, and the subsequent calculation in the solution incorrectly inherits this mistake. However, the arithmetic operation to obtain the final transformed solution is correctly executed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf Alice purchased 3600 acorns for nine times the price Bob paid, and Bob paid $6000 for his acorns, how much money did Alice pay for each acorn?\n\n### Response:",
+        "output_str": "\nAlice paid $9 x $6000 = $54,000 for her 3600 acorns. Therefore, she paid $54,000 / 3600 = $15 per acorn.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "You walk twice as fast as Mr. Harris, and Mr. Harris took 2 hours to walk to the store. If your destination is 3 times further away than the store Mr. Harris walked to, how many hours will it take you to get there?",
+            "original_solution": "First we find out how long it would take Mr. Harris to walk to your destination, which we find by multiplying his 2 hour walk by 3 since your destination is 3 times further away, meaning it would take him 2*3= 6 hours.\nSince you walk twice as fast, it would take you half the time. Half of 6, 6/2=3 hours in total.\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "First we find out how long it would take Mr. Harris to walk to your destination, which we find by multiplying his 2 hour walk by 3 since your destination is 3 times further away, meaning it would take him 2*3= 6 hours.\nSince you walk twice as fast, it would take you half the time. Half of 6, 6/2=2 hours in total.\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 6/2 as 2 hours instead of the correct 6/2=3 hours in step 2. This does not affect step 1, where the calculation 2*3 remains correct, resulting in 6 hours. The error occurs in the final calculation, changing the total hours incorrectly and affecting only the last step, which is step 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nYou walk twice as fast as Mr. Harris, and Mr. Harris took 2 hours to walk to the store. If your destination is 3 times further away than the store Mr. Harris walked to, how many hours will it take you to get there?\n\n### Response:",
+        "output_str": "\nIf Mr. Harris took 2 hours to walk to the store, and I walk twice as fast as him, then I will take 1 hour to walk to the store. Since the destination is 3 times further away than the store, it will take me 3 x 1 = 3 hours to get there.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 56,
+        "gsm8k_data": {
+            "question": "At Mario's barbershop haircuts are 50% more expensive during the weekends. If Mario paid $18 for his last haircut on Monday, how much he would have paid the day before?",
+            "original_solution": "Mario's $18 cut on Monday would have been 50% more expensive on Sunday or $18*50% = $9 more expensive\nThat means he would have paid $9 more on Sunday than what he paid ($18) on Monday or $9+$18 = $27\n#### 27",
+            "original_answer": 27.0,
+            "transformed_solution": "Mario's $18 cut on Monday would have been 50% more expensive on Sunday or $18*50% = $8 more expensive\nThat means he would have paid $8 more on Sunday than what he paid ($18) on Monday or $8+$18 = $26\n#### 26",
+            "transformed_answer": 26.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the 50% of $18 is incorrectly calculated as $8 instead of $9 in step 1. This affects step 2, which incorrectly calculates the total cost for Sunday as $8 more instead of $9 more, resulting in a transformed_solution where Mario would have paid $26 rather than the correct $27 on Sunday."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAt Mario's barbershop haircuts are 50% more expensive during the weekends. If Mario paid $18 for his last haircut on Monday, how much he would have paid the day before?\n\n### Response:",
+        "output_str": "\nIf haircuts are 50% more expensive during the weekends at Mario's barbershop, then the price of a haircut on Saturday would be 50% higher than the price on Monday. Therefore, if Mario paid $18 for his last haircut on Monday, he would have paid $27 for his haircut the day before (Sunday).",
+        "extract_true_num": 27.0,
+        "extract_pred_num": 27.0,
+        "is_correct": true
+    },
+    {
+        "index": 59,
+        "gsm8k_data": {
+            "question": "Chad bought 6 packages of cat food and 2 packages of dog food. Each package of cat food contained 9 cans, and each package of dog food contained 3 cans. How many more cans of cat food than dog food did Chad buy?",
+            "original_solution": "Chad's cat food total was 6 packages * 9 cans = 54 cans of cat food.\nChad's dog food total was 2 packages * 3 cans = 6 cans of dog food.\nChad had 54 cans of cat food - 6 cans of dog food = 48 more cans of cat food.\n#### 48",
+            "original_answer": 48.0,
+            "transformed_solution": "Chad's cat food total was 6 packages * 9 cans = 54 cans of cat food.\nChad's dog food total was 2 packages * 3 cans = 6 cans of dog food.\nChad had 54 cans of cat food - 6 cans of dog food = 45 more cans of cat food.\n#### 45",
+            "transformed_answer": 45.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the transformed solution has an arithmetic error in step 3 where the original subtraction, 54 - 6 was correctly calculated as 48, but was erroneously transformed to 54 - 6 = 45. This error only affects step 3 and does not propagate to any other unrelated step or affect the previous steps since the calculation error was introduced at the point of calculating the difference."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nChad bought 6 packages of cat food and 2 packages of dog food. Each package of cat food contained 9 cans, and each package of dog food contained 3 cans. How many more cans of cat food than dog food did Chad buy?\n\n### Response:",
+        "output_str": "\nChad bought 6 packages of cat food, which contained 9 cans per package, for a total of 54 cans of cat food. He also bought 2 packages of dog food, which contained 3 cans per package, for a total of 6 cans of dog food. Therefore, Chad bought 54 - 6 = 48 more cans of cat food than dog food.",
+        "extract_true_num": 48.0,
+        "extract_pred_num": 48.0,
+        "is_correct": true
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+            "original_solution": "Janet sells 16 - 3 - 4 = 9 duck eggs a day.\nShe makes 9 * 2 = $18 every day at the farmer’s market.\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "Janet sells 16 - 3 - 4 = 9 duck eggs a day.\nShe makes 9 * 2 = $16 every day at the farmer’s market.\n#### 16",
+            "transformed_answer": 16.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformation adjusts the result of step 2 of the calculation from 9 * 2 = $18 to 9 * 2 = $16, which is incorrect because 9 multiplied by 2 should indeed be $18. This error does not affect step 1, where the number of eggs sold is correctly calculated, but changes the result in step 2. The explanation of the process would be that the second step incorrectly states the total earnings, resulting in an incorrect final answer for the transformed solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJanet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\n\n### Response:",
+        "output_str": "\nJanet makes $16 per day at the farmers' market.\n\nExplanation:\nJanet lays 16 eggs per day, and she eats 3 for breakfast every day, leaving her with 13 eggs. She bakes muffins with 4 eggs, so she has 9 eggs left. She sells the remaining eggs at the farmers' market for $2 per egg, so she makes $2 x 9 = $18 per day at the farmers' market.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 75,
+        "gsm8k_data": {
+            "question": "Alice made 52 friendship bracelets over spring break to sell at school. It only cost her $3.00 in materials to make these bracelets. During the break, she gave 8 of her bracelets away. Back at school, she sells all of the remaining bracelets at $0.25 each. How much profit did she make (money earned after paying initial costs) on the sale of her bracelets?",
+            "original_solution": "She made 52 bracelets but gave 8 away so she had 52-8 = 44 bracelets left. \nShe sold 44 bracelets at $0.25 each for a total of 44 * .25 = $11.00 \nShe made $11.00 but she spent $3.00 on the supplies. So her profit would be 11-3 = $8.00 \n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "She made 52 bracelets but gave 8 away so she had 52-8 = 44 bracelets left. \nShe sold 44 bracelets at $0.25 each for a total of 44 * .25 = $10.00 \nShe made $10.00 but she spent $3.00 on the supplies. So her profit would be 10-3 = $7.00 \n#### 7",
+            "transformed_answer": 7.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 2 has a miscalculated total sales amount where instead of correctly calculating 44 * .25 as $11.00, it is wrongly calculated as $10.00. This error in calculation only affects step 2 and the final profit calculation in step 3. The later steps correctly use the incorrect result from step 2 and the previous steps remain unchanged. Therefore, in step 3 the original calculation is altered from 11-3 = $8.00 to 10-3 = $7.00, which provides the incorrect transformed answer of $7.00."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAlice made 52 friendship bracelets over spring break to sell at school. It only cost her $3.00 in materials to make these bracelets. During the break, she gave 8 of her bracelets away. Back at school, she sells all of the remaining bracelets at $0.25 each. How much profit did she make (money earned after paying initial costs) on the sale of her bracelets?\n\n### Response:",
+        "output_str": "\nTo find out how much profit Alice made from selling her friendship bracelets, we need to subtract the initial cost of materials from the total amount of money she earned from selling the bracelets.\n\nAlice spent $3.00 on materials to make 52 bracelets, so the initial cost of each bracelet is $0.06. Since she gave away 8 bracelets, she had 44 bracelets left to sell. She sold each bracelet for $0.25, so the total amount of money she earned from selling the bracelets is:\n\n$0.25 x 44 bracelets = $11.00\n\nTo find the profit, we subtract the initial cost of materials from the total amount of money she earned:\n\n$11.00 - $3.00 = $8.00\n\nSo, Alice made a profit of $8.00 from selling her friendship bracelets.",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 8.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "The total number of lions in a park is twice the number of leopards in the same park. The number of elephants is half the combined number of lions and leopards. Calculate the total population of the three animals in the park if the number of lions is 200.",
+            "original_solution": "If there are 200 lions in the park, which is twice the number of leopards in the park, there are 200/2 = 100 leopards in the park.\nThe total population of lions and leopards in the park is 200 lions + 100 leopards = 300\nThe number of elephants in the park is 1/2 the total population of lions and leopards; thus, there are 300/2 = 150 elephants in the park.\nThere are a total of 150+300 = 450 animals in the park.\n#### 450",
+            "original_answer": 450,
+            "transformed_solution": "If there are 200 lions in the park, which is twice the number of leopards in the park, there are 200/2 = 100 leopards in the park.\nThe total population of lions and leopards in the park is 200 lions + 100 leopards = 300\nThe number of elephants in the park is 1/2 the total population of lions and leopards; thus, there are 300/2 = 100 elephants in the park.\nThere are a total of 100+300 = 400 animals in the park.\n#### 400",
+            "transformed_answer": 400,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, the 300/2 calculation in step 3 has been incorrectly changed to 100 instead of 150. Subsequently, step 4 inherits the error from step 3, modifying the formula of the total number of animals from 150+300 = 450 to 100+300 = 400. The preceding steps 1 and 2 remain unaffected, along with their descriptions and calculations. The transformed answer becomes 400 instead of the original 450."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe total number of lions in a park is twice the number of leopards in the same park. The number of elephants is half the combined number of lions and leopards. Calculate the total population of the three animals in the park if the number of lions is 200.\n\n### Response:",
+        "output_str": "\nTo calculate the total population of the three animals in the park, we need to use the information given in the instruction.\n\nFirst, we know that the number of leopards in the park is half the number of lions, so the number of leopards is 200/2 = 100.\n\nNext, we know that the number of elephants is half the combined number of lions and leopards, so the number of elephants is (200 + 100) / 2 = 150.\n\nTherefore, the total population of the three animals in the park is 200 + 100 + 150 = 450.",
+        "extract_true_num": 450,
+        "extract_pred_num": 450.0,
+        "is_correct": true
+    },
+    {
+        "index": 95,
+        "gsm8k_data": {
+            "question": "The stadium seats 60,000 fans, but only 75% of the seats were sold for the music show. Because of the threat of rain, 5,000 fans stayed home. How many attended the show?",
+            "original_solution": "The number of seats sold was 0.75*60,000=45,000.\nAnd 45,000-5,000=40,000.\n#### 40,000",
+            "original_answer": 40000.0,
+            "transformed_solution": "The number of seats sold was 0.75*60,000=45,000.\nAnd 45,000-5,000=35,000.\n#### 35,000",
+            "transformed_answer": 35000.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates 45,000-5,000=35,000 instead of 45,000-5,000=40,000 in step 2. The error in the subtraction at step 2 affects only the final answer, not the initial calculation of seats sold (step 1). Note that the transformed solution only has one calculation error introduced, and subsequent steps correctly use the result from the erroneous step, following the pattern of inheriting the error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe stadium seats 60,000 fans, but only 75% of the seats were sold for the music show. Because of the threat of rain, 5,000 fans stayed home. How many attended the show?\n\n### Response:",
+        "output_str": "\nAccording to the instruction, 60,000 fans could attend the show, but only 75% of them actually did. This means that 45,000 fans attended the show (60,000 x 75%). Then, we subtract the 5,000 fans who stayed home due to the threat of rain, leaving us with 40,000 fans who actually attended the show. Therefore, the answer is 40,000.",
+        "extract_true_num": 40000.0,
+        "extract_pred_num": 40000.0,
+        "is_correct": true
+    },
+    {
+        "index": 99,
+        "gsm8k_data": {
+            "question": "Jack and Jill are friends who borrow from each other often. Last week Jack borrowed $1200 from Jill, which he promised to pay back with an interest of 10%. How much will Jack pay back?",
+            "original_solution": "The interest on the loan is 0.1*1200=$120\nThe total amount Jack needs to pay back is 1200+120=1320\n#### 1320",
+            "original_answer": 1320.0,
+            "transformed_solution": "The interest on the loan is 0.1*1200=$100\nThe total amount Jack needs to pay back is 1200+100=1300\n#### 1300",
+            "transformed_answer": 1300.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example changes the calculation of interest in step 1 by wrongly calculating it as 0.1*1200=$100 instead of 0.1*1200=$120. This change goes on to impact step 2, which relies on the result of step 1 for its calculation. So, instead of the correct sum of 1200+120=$1320, after the change it is calculated as 1200+100=$1300. All other elements not reliant on step 1 remain unaffected, and the error is propagated to the sum in step 2, leading to a different total repayment amount of $1300."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJack and Jill are friends who borrow from each other often. Last week Jack borrowed $1200 from Jill, which he promised to pay back with an interest of 10%. How much will Jack pay back?\n\n### Response:",
+        "output_str": "\nJack will pay back $1320 to Jill.\n\nExplanation:\nTo calculate the amount Jack will pay back, we need to multiply the original amount borrowed ($1200) by the interest rate (10%) for the time period (1 week). So, the total amount Jack will pay back is:\n\n$1200 x 10% x 7 days = $1320\n\nTherefore, Jack will pay back $1320 to Jill.",
+        "extract_true_num": 1320.0,
+        "extract_pred_num": 1320.0,
+        "is_correct": true
+    }
+]

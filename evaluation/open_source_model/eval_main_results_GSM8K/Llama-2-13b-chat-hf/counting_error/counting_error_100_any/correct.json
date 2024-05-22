@@ -1,0 +1,98 @@
+[
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nThe average distance traveled per day is counted as 51/2 = 25.5 miles because Wednesday is mistakenly excluded.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously assumes the total distance covered should be divided by 2 days instead of 3, which means Wednesday is mistakenly excluded. Hence the average 51/3=17 changes to 51/2=25.5. The error is isolated to the counting of the number of days, and the previous step regarding the calculation of total distance remains unaffected.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2. The reason is that the calculation only includes two days, Monday and Tuesday, and Wednesday is excluded. Therefore, the average distance traveled per day is calculated as (12 + 18) / 2 = 30 / 2 = 15 miles, not 25.5 miles."
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he intends to split his time over the weekend, but mistakenly counts that as 1 day, he spends 4 hours / 1 = 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 of the transformed_solution incorrectly assumes that the weekend is 1 day instead of 2, therefore changing 4 hours / 2 to 4 hours / 1. The mistake results in Tristan spending all 4 remaining hours on Saturday as opposed to dividing them evenly between Saturday and Sunday. This counting error affects only the final step related to the allocation of study hours over the weekend and the subsequent calculation of hours studied on Saturday, without affecting previous or unrelated steps.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #3. The mistake in the solution is that Tristan studies for 8 hours on Tuesday, but he only studies for 3 hours on Wednesday, Thursday, and Friday. Therefore, the total number of hours Tristan studies in the first 5 days of the week is 4 hours Monday + 3 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 15 hours, not 21 hours as calculated in the solution.\n\nTherefore, Tristan has 25 planned hours – 15 used hours = 10 hours left to study. He spends 10 hours / 2 days = 5 hours studying on Saturday. The correct answer is 5 hours."
+    },
+    {
+        "question": "Bobby buys two packets of candy. He eats two candies every day from Monday through Friday and takes one each during the remaining days of the week. If it takes him 3 such weeks to finish the 2 packets, how many candies are in a packet?",
+        "original_solution": "He eats 2 each from Monday through Friday for a total of 2*5 = 10 candies\nHe eats 1 each every other day of the week (Saturday and Sunday) for a total of 1*2 = 2 candies\nIn a week, he consumes a total of 10+2 = 12 candies\nDoing this for 3 weeks, he will consume 3*12 = 36 candies\nIf 2 packets contain 36 candies, then 1 contains 36/2 = 18 candies\n#### 18",
+        "original_answer": 18,
+        "transformed_solution": "He eats 2 each from Monday through Friday for a total of 2*5 = 10 candies\nHe eats 1 each on the remaining day of the week (Sunday) for a total of 1*1 = 1 candy\nIn a week, he consumes a total of 10+1 = 11 candies\nDoing this for 3 weeks, he will consume 3*11 = 33 candies\nIf 2 packets contain 33 candies, then 1 contains 33/2 = 16.5 candies\n#### 16.5",
+        "transformed_answer": 16.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the remaining days of the week as one day (Sunday only) instead of two days (Saturday and Sunday), resulting in 1*2=2 becoming 1*1=1. And it affects the subsequent related steps, step 3 changes from 10+2=12 to 10+1=11, step 4 changes from 3*12=36 to 3*11=33, and step 5 changes from 36/2=18 to 33/2=16.5. It should be noted that you only need to consider one step of counting error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2.\n\nIn the solution, the total number of candies consumed in a week is calculated as 10 + 1 = 11 candies, which is correct. However, the total number of candies consumed in 3 weeks is calculated as 3 * 11 = 33 candies, which is incorrect.\n\nTo calculate the correct total, we need to multiply the number of candies consumed in a week by 3, not 11. Therefore, the correct calculation should be:\n\n3 weeks x 11 candies/week = 33 candies\n\nSo, the correct answer is 33 candies, not 16.5 candies."
+    },
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2. The reason why the solution is incorrect is that the total distance covered from Monday to Wednesday is not 51 miles, but 31 miles (12 + 18 + 21 = 31). The mistake is in the calculation of the total distance.\n\nTherefore, the average distance traveled per day is 31/3 = 10.33 miles."
+    },
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 4 * 1=4 candies.\nIn a week she eats 4 + 4= 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts the other days of the week (which should be 5 days) as 4 days, resulting in the original calculation of 5 * 1=5 candies becoming 4 * 1=4 candies in the transformed solution. This change affects subsequent calculations, changing from 5 + 4 = 9 candies eaten in a week to 4 + 4 = 8 candies eaten in a week, and finally changing the answer from 36 / 9 = 4 weeks to 36 / 8 = 4.5 weeks. This error creates a situation that is mathematically possible but does not align with the actual days of the week, as the question implies a 7-day week.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The calculation for the number of weeks it takes for Lisa to eat all the candies is incorrect.\n\nOn Monday and Wednesdays, she eats 2 * 2 = 4 candies, but the calculation for the other days of the week is incorrect. Instead of eating 4 * 1=4 candies, she eats 1 * 3 = 3 candies on Tuesday, Thursday, and Friday. Therefore, the total number of candies eaten in a week is 4 + 3 = 7 candies, not 8 candies.\n\nSo, it takes 36 / 7 = 5 weeks for Lisa to eat all the candies, not 4.5 weeks."
+    },
+    {
+        "question": "Steve has decided to become a baker. On Mondays, Wednesdays and Fridays, he bakes apple pies. On Tuesdays and Thursdays, he bakes cherry pies. If he bakes 12 pies per day, how many more apple pies does he bake than cherry pies in one week?",
+        "original_solution": "In one week, he bakes 3 * 12 = 36 apple pies.\nIn one week, he bakes 2 * 12 = 24 cherry pies.\nHe bakes 36 - 24 = 12 more apple pies.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "In one week, he bakes 2 * 12 = 24 apple pies.\nIn one week, he bakes 3 * 12 = 36 cherry pies.\nHe bakes 24 - 36 = -12 more apple pies.\n#### -12",
+        "transformed_answer": -12.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the days Steve bakes apple pies as 2 days instead of 3, and step 2 counts the days he bakes cherry pies as 3 days instead of 2. This changes the calculation in step 1 from 3 * 12 = 36 apple pies to 2 * 12 = 24 apple pies, and in step 2 from 2 * 12 = 24 cherry pies to 3 * 12 = 36 cherry pies, subsequently affecting step 3, changing the calculation from 36 - 24 = 12 more apple pies to 24 - 36 = -12 more apple pies. It should be noted that you only need to consider one step of counting error, and here both steps related to counting need to be modified inversely to maintain a single error in the generation.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The calculation of 24 - 36 = -12 is incorrect because the number of cherry pies baked is 36, not 12. Therefore, the difference between the number of apple pies and cherry pies baked is not -12, but 36 - 24 = 12.\n\nThe correct answer is 12 more apple pies than cherry pies in one week."
+    },
+    {
+        "question": "From Monday to Friday, Elle practices piano for 30 minutes. On Saturday, she practices piano three times as much as on a weekday. There is no practice on Sunday. How many hours does Elle spend practicing piano each week?",
+        "original_solution": "From Monday to Friday, Elle practices 0.50 x 5 = 2.5 hours.\nOn Saturday, she practices 0.50 x 3 = 1.5 hours.\nEach week, Elle practices piano for 2.5 + 1.5 = 4 hours.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "From Monday to Friday, Elle practices 0.50 x 5 = 2.5 hours.\nOn Saturday, she incorrectly practices 0.50 x 2 = 1.0 hours.\nEach week, Elle practices piano for 2.5 + 1.0 = 3.5 hours.\n#### 3.5",
+        "transformed_answer": 3.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly calculates the practice time for Saturday as if Elle practices twice as much as on a weekday instead of three times as much. The incorrect multiplication of 0.50 x 2 = 1.0 hours replaces the correct calculation of 0.50 x 3 = 1.5 hours. This affects the last step, changing the sum from 2.5 + 1.5 = 4 hours to 2.5 + 1.0 = 3.5 hours. The other calculations leading up to the erroneous step remain correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is your explanation about why the [Solution] is incorrect.\n\nThe solution incorrectly states that Elle practices piano for 1.0 hour on Saturday, which is not correct. According to the problem, Elle practices piano three times as much as on a weekday, which means she should practice for 3 x 30 minutes = 90 minutes on Saturday. Therefore, the correct answer is 2.5 + 90 = 92.5 hours per week."
+    },
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 4 * 1=4 candies.\nIn a week she eats 4 + 4= 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 2 wrongly counts the other days of the week as 4 days instead of 5 days (excluding Monday and Wednesday which are correct at 2 days). This error leads to the miscalculation of the total number of candies eaten in a week as 8 instead of 9, and ultimately to the wrong answer that it would take 4.5 weeks for Lisa to eat all candies instead of 4 weeks.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The calculation for the number of weeks it takes for Lisa to eat all the candies is incorrect.\n\nOn Monday and Wednesdays, she eats 2 * 2 = 4 candies, but the calculation for the other days of the week is incorrect. Instead of eating 4 * 1=4 candies, she eats 1 * 3 = 3 candies on Tuesday, Thursday, and Friday. Therefore, the total number of candies eaten in a week is 4 + 3 = 7 candies, not 8 candies.\n\nSo, it takes 36 / 7 = 5 weeks for Lisa to eat all the candies, not 4.5 weeks."
+    }
+]

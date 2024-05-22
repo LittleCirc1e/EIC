@@ -1,0 +1,14 @@
+[
+    {
+        "question": "4 mat-weavers can weave 4 mats in 4 days. At the same rate, how many mats would be woven by 12 mat-weavers in 12 days?",
+        "original_solution": "One mat-weaver can weave 1 mat in 4 days because 4 / 4 = 1\nOne mat-weaver can weave 1/4 of a mat in 1 day because 1 / 4 = 1/4\n12 mat-weavers can weave 3 mats in 1 day because 12 x (1/4) = 3\n12 mat-weavers can weave 36 mats in 12 days because 3 x 12 = 36\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "One mat-weaver can weave 1 mat in 4 days because 4 / 4 = 1\nOne mat-weaver can weave 1/4 of a mat in 1 day because 1 / 4 = 1/4\n12 mat-weavers can weave 3 mats in 1 day because 12 x (1/4) = 3\n12 mat-weavers can weave 12 mats in 12 days because 3 / 12 = 1/4\n#### 3",
+        "transformed_answer": 3.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 4 into division, and by changing x to /, 3 x 12 = 36 becomes 3 / 12 = 1/4. It incorrectly suggests that 12 mat-weavers can weave only 1/4 of a mat in 12 days, changing the original correct answer from 36 to an incorrect result of 3 (since 1/4 of a mat woven by 12 weavers in 12 days should not be the answer). It should be noted that only the operator in step 4 is incorrect, and while its calculation is correct, it leads to an incorrect transformed_answer. All other steps involved in this transformation remain correct in their calculations.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one mat has 1/4 instead of 1. The subsequent step 5 references the result of step 4, calculating 3 instead of 12. The subsequent step 6 references the result of step 5, calculating 3 / 12 = 1/4 instead of 12 / 12 = 1, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

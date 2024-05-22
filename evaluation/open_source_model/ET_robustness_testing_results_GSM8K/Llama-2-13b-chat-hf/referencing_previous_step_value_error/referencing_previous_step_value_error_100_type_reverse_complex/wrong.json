@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Katy participated in a summer reading program at her local library. She read 8 books in June, twice as many in July and three fewer in August than she did in July. How many books did Katy read during the summer?",
+        "original_solution": "Katy read twice as many books in July as she did in June, so she read 2 * 8 = 16 books in July.\nShe read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.\nSo, including June, she read 8 + 16 + 13 = 37 books total\n#### 37",
+        "original_answer": 37.0,
+        "transformed_solution": "Katy read twice as many books in July as she did in June, so she read 2 * 8 = 16 books in July.\nShe read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.\nSo, including June, she read 8 + 16 + 15 = 39 books total\n#### 39",
+        "transformed_answer": 39.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 13 as 15 from step 2 and changes the correct calculation 8 + 16 + 13 = 37 to an incorrect 8 + 16 + 15 = 39. It should be noted that step 2 in the transformed_solution <She read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.> should be the same as the step 2 in the original_solution <She read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.> and calculates its result 13 correctly. However, the mistakenly referenced number 15 in step 3 affects the final calculation but is the only error introduced, so all subsequent steps that are related to this error are calculated correctly from the erroneous result.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "Meryll wants to write 35 multiple-choice questions and 15 problem-solving questions for her Chemistry class. She already has written 2/5 of the multiple-choice and 1/3 of the problem-solving questions. How many more questions does she need to write for both multiple-choice and problem-solving?",
+        "original_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 19 questions = 31 questions more.\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 20 questions = 30 questions more.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 19 as 20 from step 3 and changes 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. It should be noted that step 3 in the transformed_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> should be the same as the step 3 in the original_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> and calculates its result 50 correctly. Step 4 affects the subsequent step 5 related to it, changing from 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. You need to only consider one error of referencing, so the calculation of all steps starting from the wrong step and the ones following it is still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 15 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "Lilia has 15 peaches. She sold 10 peaches to her friends for $2 each, while 4 other peaches were sold to her relatives for $1.25 each, and she left the other one for herself. How much did she earn after selling 14 peaches?",
+        "original_solution": "Lilia earned 10 x $2 = $20 for selling the peaches to her friends.\nShe also earned 4 x $1.25 = $5 for selling the peaches to her relatives.\nTherefore, Lilia earned $20 + $5 = $25 for selling 14 peaches.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Lilia earned 10 x $2 = $20 for selling the peaches to her friends.\nShe also earned 4 x $1.25 = $5 for selling the peaches to her relatives.\nTherefore, Lilia earned $20 + $4 = $24 for selling 14 peaches.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references $5 as $4 from step 2 and changes $20 + $5 = $25 to $20 + $4 = $24. It should be noted that step 2 in the transformed_solution <She also earned 4 x $1.25 = $5 for selling the peaches to her relatives.> should be the same as the step 2 in the original_solution <She also earned 4 x $1.25 = $5 for selling the peaches to her relatives.> and calculates its result $5 correctly. Even though step 3 produces an incorrect sum due to the error, the subsequent step, which provides the total earnings, references the incorrect sum but calculates within its own step correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct except for the referencing error in step 3.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

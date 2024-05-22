@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Tracy used a piece of wire 4 feet long to support tomato plants in the garden. The wire was cut into pieces 6 inches long. How many pieces did she obtain?",
+        "original_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 12 inches, the total length of the wire in inches was 12*4=48 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 48/6=8 pieces\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 10 inches, the total length of the wire in inches was 10*4=40 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 40/6=6.67 pieces\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 12*4=48 inches in the original_solution becoming 10*4=40 inches in the transformed_solution. And it affects the subsequent related step 2, which changes from 48/6=8 pieces to 40/6=6.67 pieces. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the calculation 40/6 should be done as 40/6=6, not 6.67. The correct answer is 6 pieces."
+    },
+    {
+        "question": "A bathroom has 10 6 inch tiles along its width and 20 6 inch tiles along its length.  What is the square footage of the bathroom?",
+        "original_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 12 inches in a foot and it’s 60 inches wide so it is 60/12 = 5 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*5 = 50 sq feet\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 10 inches in a foot (incorrect unit conversion) and it’s 60 inches wide so it is 60/10 = 6 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*6 = 60 sq feet\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 introduces an incorrect unit conversion, asserting that there are 10 inches in a foot instead of 12 inches. This mistake affects the width calculation of the bathroom, which transforms from 60 inches wide equals to 5 feet wide (60/12) in the original_solution to 60 inches wide equals to 6 feet wide (60/10) in the transformed_solution. Consequently, the square footage calculation in the final step is also impacted, changing from 50 sq feet (10*5) in the original_solution to 60 sq feet (10*6) in the transformed_solution. All other calculation steps remain accurate.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #3, which is your explanation about why the [Solution] is incorrect.\n\nThe solution incorrectly converts the length of the bathroom from inches to feet by dividing by 10 instead of 12. The correct conversion would be 60/12 = 5 feet wide, not 6 feet wide. Therefore, the square footage of the bathroom would be 5 x 60 = 300 sq feet, not 60 sq feet."
+    }
+]

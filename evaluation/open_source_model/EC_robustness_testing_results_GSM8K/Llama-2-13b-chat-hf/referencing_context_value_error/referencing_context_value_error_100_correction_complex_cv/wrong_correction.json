@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Jake's neighbors hire him to mow their lawn and plant some flowers. Mowing the lawn takes 1 hour and pays $15. If Jake wants to make $20/hour working for the neighbors, and planting the flowers takes 2 hours, how much should Jake charge (in total, not per hour) for planting the flowers?",
+        "original_solution": "First figure out how many hours total Jake works by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake makes if he earns $20/hour for three hours by multiplying the time spent by the pay rate: $20/hour * 3 hours = $60\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $60 - $15 = $45\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "First figure out how many hours total Jake wants to work by adding the time spent mowing the lawn to the time spent planting flowers: 1 hour + 2 hours = 3 hours\nThen figure out how much money Jake wants to make if he earns $25/hour for three hours by multiplying the time spent by the new pay rate: $25/hour * 3 hours = $75\nThen subtract the money Jake gets paid for mowing the lawn from the total to find how much he should charge in total for planting the flowers: $75 - $15 = $60\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the hourly rate Jake wants to make as $25/hour instead of $20/hour as stated in the question. The subsequent related steps 3 and 4 will be affected by the erroneous result of this step but still be calculated correctly. Since only one step error is considered, all other steps that reference the hourly rate still reference this number correctly except for the step referenced incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 60, and the explanation is that step 2 first makes an error in referencing the number of the question description <If Jake wants to make $20/hour working for the neighbors, and planting the flowers takes 2 hours>. It erroneously references 20 as 25, causing the formula to calculate $25/hour * 3 hours = $75 instead of $20/hour * 3 hours = $60. This affects subsequent steps 3 and 4 that reference its result. Step 3 incorrectly calculates $75 - $15 = $60 instead of $60 - $15 = $45. And step 4 incorrectly calculates $45 / 2 = $22.5 instead of $45 / 1 = $45."
+    },
+    {
+        "question": "Rose bought five dozens of eggs for $2.40 a dozen. She will sell it for $1 for 3 eggs. How much will be Rose's profit?",
+        "original_solution": "Rose bought five dozens of eggs for $2.40 x 5 = $12.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $12 = $8.",
+        "original_answer": 8.0,
+        "transformed_solution": "Rose bought five dozens of eggs for $1.40 x 5 = $7.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $7 = $13.",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $2.40 in the question as $1.40 wrongly, and calculates $1.40 x 5=$7.00 instead of $2.40 x 5=$12.00. Its subsequent related steps, step 2 and 6, are affected. However, the error only affects the final result of the calculation which is step 6 while step 2 still references 12 x 5=60 correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is $10, and the explanation is that step 2 first makes an error in referencing the number of the question description <Rose bought five dozens of eggs for $2.40 a dozen.>. It erroneously references 2 as 1, causing the formula to calculate $1.40 x 5 = $7.00 instead of $2.40 x 5 = $12.00. This affects subsequent steps 3 and 4 that reference its result. Step 3 incorrectly calculates 60/3 = 20 instead of 60/2 = 30. Step 4 incorrectly calculates $1 x 20 = $20 instead of $1 x 30 = $30."
+    },
+    {
+        "question": "If 24 out of every 60 individuals like football and out of those that like it, 50% play it, how many people would you expect play football out of a group of 250?",
+        "original_solution": "If 50% of individuals that like football play it, and there are 24 out of 60 individuals that like it, then 24*50% = 12 out of 60 individuals play it\nIf 12 individuals play it out of 60 individuals then that means only 12/60 = 1/5 or 20% play it\nIf 20% of individuals play football out of a group of 250 people, one would expect 250*20% = 50 individuals to play it\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If 50% of individuals that like football play it, and there are 20 out of 60 individuals that like it, then 20*50% = 10 out of 60 individuals play it\nIf 10 individuals play it out of 60 individuals then that means only 10/60 = 1/6 or approximately 16.67% play it\nIf approximately 16.67% of individuals play football out of a group of 250 people, one would expect 250*16.67% = 41.675 individuals to play it\n#### 41.675",
+        "transformed_answer": 41.675,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the number 24 in the question incorrectly as 20, and incorrectly calculates 20*50% = 10 instead of the correct 24*50% = 12. The error affects the subsequent steps that rely on the number of individuals who play football. The percentage is recalculated from 12/60 = 20% to 10/60 ≈ 16.67%, and finally, the expected number of individuals who play football out of 250 is miscalculated as 250*16.67% ≈ 41.675 instead of the correct 250*20% = 50. The erroneous step will produce subsequent related steps with correct calculations based on its erroneous result. All other steps that reference values from the question still reference the values correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 42, and the explanation is that step 2 first makes an error in referencing the number of the question description <If 50% of individuals that like football play it, and there are 20 out of 60 individuals that like it, then 20*50% = 10 out of 60 individuals play it>. It erroneously references 20 as 10, causing the formula to calculate 10/60 = 1/6 instead of 20/60 = 1/3. This affects subsequent steps 3 and 4 that reference its result. Step 3 incorrectly calculates 1/6 instead of 1/3, and step 4 incorrectly calculates 16.67% instead of 33.33%."
+    },
+    {
+        "question": "Seth is twice as old as Brooke. In 2 years, the sum of their ages will be 28. How old is Seth?",
+        "original_solution": "To solve this problem, we can set up an equation where x represents Brooke’s age and 2x represents Seth’s age and noting that in two years, the sum of their ages is (2x + 2) + (x + 2) = 28.\nThen we add all the values together, 3x + 4 = 28.\nAnd we subtract 4 from each side, 3x + 4 - 4 = 28 – 4.\nThen we divide each side by 3, x = 24/3.\nWe find that x = 8, or Brooke’s age is 8.\nSeth is twice as old as Brooke, so Seth is 8 x 2 = 16.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "To solve this problem, we can set up an equation where x represents Brooke’s age and 2x represents Seth’s age and noting that in three years, the sum of their ages is (2x + 3) + (x + 3) = 28.\nThen we add all the values together, 3x + 6 = 28.\nAnd we subtract 6 from each side, 3x + 6 - 6 = 28 – 6.\nThen we divide each side by 3, x = 22/3.\nWe find that x = 22/3, or Brooke’s age is approximately 7.33.\nSeth is twice as old as Brooke, so Seth is approximately 7.33 x 2 = 14.67.\n#### 14.67",
+        "transformed_answer": 14.67,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references \"in two years\" in the question as \"in three years\" wrongly, and calculates (2x + 3) + (x + 3) = 28 instead of (2x + 2) + (x + 2) = 28. Its subsequent related steps will be affected by the erroneous result of this step but still be calculated correctly. Therefore, step 2 changes to 3x + 6 = 28, step 3 changes to 3x + 6 - 6 = 28 – 6, step 4 changes to x = 22/3, step 5 changes to x = 22/3, and step 6 changes to Seth’s age being approximately 7.33 x 2 = 14.67. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 14, and the explanation is that step 3 first makes an error in referencing the number of the question description <In 2 years, the sum of their ages will be 28.>. It erroneously references 2 as 3, causing the formula to calculate 3x + 6 = 28 instead of 2x + 6 = 28. This affects subsequent steps 4 and 5 that reference its result. Step 4 incorrectly calculates x + 6 = 22 instead of 2x + 6 = 28. Step 5 incorrectly calculates 22 + 6 = 28 instead of 28 + 6 = 34."
+    }
+]

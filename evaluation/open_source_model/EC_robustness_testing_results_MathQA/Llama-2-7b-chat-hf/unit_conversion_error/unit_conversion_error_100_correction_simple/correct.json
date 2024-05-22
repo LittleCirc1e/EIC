@@ -1,0 +1,26 @@
+[
+    {
+        "question": "5 bells begin to toll together at 12:00 noon and toll respectively at intervals of 3, 4, 5, 6, and 7 seconds. Not including the toll at 12:00 noon, how many more times will all 5 bells toll together before 1:00 pm (i.e., one hour later)?",
+        "original_solution": "The least common multiple (LCM) of 3, 4, 5, 6, and 7 is 420 seconds.\nThere are 60 minutes in an hour, so 60 * 60 = 3600 seconds in an hour.\nSince 420 seconds go into 3600 seconds about 8 times (420 * 8 = 3360), all 5 bells will toll together 8 times within the hour.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The least common multiple (LCM) of 3, 4, 5, 6, and 7 is 420 seconds.\nThere are 60 minutes in an hour, so 60 * 50 = 3000 seconds in an hour.\nSince 420 seconds go into 3000 seconds about 7 times (420 * 7 = 2940), all 5 bells will toll together 7 times within the hour.\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 * 60 = 3600 seconds in the original_solution becoming 60 * 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 3, which changes from 420 * 8 = 3360 to 420 * 7 = 2940. It should be noted that you only need to consider one step of unit conversion error, so the calculation process of step 1 and the other unrelated processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #8.\n\nExplanation: The LCM of 3, 4, 5, 6, and 7 is actually 2100 seconds, not 420 seconds. This means that all 5 bells will toll together 8 times within the hour, not 7 times."
+    },
+    {
+        "question": "A car traveling at a certain constant speed takes 5 seconds longer to travel 1 km than it would take to travel 1 km at 90 km / hour. At what speed, in km / hr, is the car traveling?",
+        "original_solution": "Let the speed of the car be x km/hr.\nTime taken to travel 1 km at speed x = 1/x hours.\nTime taken to travel 1 km at speed 90 km/hr = 1/90 hours.\nAccording to the given information, 1/x - 1/90 = 5/3600.\nMultiplying through by 90x(3600)\n3600(90) - 3600x = 450x\n450x + 3600x = 3600(90)\n4050x = 324000\ncar traveling speed x = 324000 / 4050 = 80\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "Let the speed of the car be x km/hr.\nTime taken to travel 1 km at speed x = 1/x hours.\nTime taken to travel 1 km at speed 90 km/hr = 1/90 hours.\nAccording to the given information, 1/x - 1/90 = 5/3500.\nMultiplying through by 90x(3500)\n3500(90) - 3500x = 450x\n450x + 3500x = 3500(90)\n3950x = 315000\ncar traveling speed x = 315000 / 3950 = 79.75\n#### 79.75",
+        "transformed_answer": 79.75,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In step 4, the unit conversion from seconds to hours is incorrect. Instead of using 3600 seconds which is the correct number of seconds in an hour, I used 3500 seconds, which is an incorrect unit conversion, leading to the wrong equation 1/x - 1/90 = 5/3500. This then also changes the multiplication factor in step 5, which was originally 90x(3600) and becomes 90x(3500) in the transformed_solution. As such, the right-hand side of the equation in step 6 changes due to this incorrect multiplication, and this error propagates through the following steps until the final answer, which is incorrect as well. The subsequent related steps are affected by this wrong unit conversion error.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #80.\n\nExplanation:\nThe step where the solution is incorrect is step 4, where the equation 450x + 3500x = 315000 is written. The correct equation should be 450x + 3500x = 395000, which leads to the correct answer of 80."
+    }
+]

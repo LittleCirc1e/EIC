@@ -1,0 +1,38 @@
+[
+    {
+        "question": "how much more would rs . 50000 fetch , after two years , if it is put at 20 % p . a . compound interest payable half yearly than if is put at 20 % p . a . compound interest payable yearly ?",
+        "original_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 73205 - 72000 = 1205\n#### 1205",
+        "original_answer": 1205.0,
+        "transformed_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 71000\nThe difference in the amounts is 73205 - 71000 = 2205\n#### 2205",
+        "transformed_answer": 2205.0,
+        "wrong_step": 9,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the second amount as 71000 instead of 72000 in step 9, which affects the final step for calculating the difference between the amounts. The erroneous calculation in step 9 leads to an incorrect difference computed in the final step, modifying 73205 - 72000 = 1205 to 73205 - 71000 = 2205. It is essential to recognize that only one calculation error is introduced, and all other previous calculations or steps that do not directly relate to the wrong step are presumed to be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1.10^4 instead of 1.20^2. The subsequent step 4 references the result of step 3, calculating 1.10^4 instead of 1.20^2, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "a 230 m long train running at the speed of 120 km / hr crosses another train running in opposite direction at the speed of 80 km / hr in 9 sec . what is the length of the other train ?",
+        "original_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 500 - 230\nLength of the other train = 270 m\n#### 270",
+        "original_answer": 270.0,
+        "transformed_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 499.95 - 230\nLength of the other train = 269.95 m\n#### 269.95",
+        "transformed_answer": 269.95,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates (55.55 x 9) as 499.95 instead of 500 in step 6, affecting the calculation in step 7 and the resulting Length of the other train. The steps prior to step 6 are unaffected and are correctly calculated. The error is carried through to step 7, adjusting the calculation from (500 - 230) to (499.95 - 230), resulting in the transformed answer of 269.95 m instead of the original answer of 270 m.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 55.55 x 9 = 499.95 instead of 55.55 x 9 = 495.55. The subsequent step 5 references the result of step 4, calculating 499.95 - 230 = 269.95 instead of 495.55 - 230 = 265.55. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "how many positive integers less than 50 are there such that they are multiples of 9 ?",
+        "original_solution": "The multiples of 9 less than 50 are 9, 18, 27, 36, 45.\nThere are 5 positive integers less than 50 that are multiples of 9.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "The multiples of 9 less than 50 are 9, 18, 27, 36, 45.\nThere are 6 positive integers less than 50 that are multiples of 9.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "To transform the solution, we change the number of positive integers less than 50 that are multiples of 9 from 5 to 6 in step 2. This is a calculation error that does not affect the previous step, which correctly lists the multiples of 9. Since the subsequent step only includes concluding the count, it inherits this modified number, but the calculation to obtain that number is not shown and hence not affected in the steps provided. The previous steps of listing the multiples are correct and remain unchanged. The transformed answer differs from the original answer as a result of the mistaken count.",
+        "eval_result": "\n\nPlease provide the correct output for the given input.\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 36 instead of 45. The subsequent step 4 references the result of step 3, calculating 6 instead of 5. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nThe correct output should be:\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 36 instead of 45. The subsequent step 4 references the result of step 3, calculating 6 instead of 5. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nThe correct answer is 5."
+    }
+]

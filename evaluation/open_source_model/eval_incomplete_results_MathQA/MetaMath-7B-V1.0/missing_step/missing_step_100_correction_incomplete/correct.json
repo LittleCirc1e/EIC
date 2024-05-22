@@ -1,0 +1,14 @@
+[
+    {
+        "question": "the sale price sarees listed for rs . 400 after successive discount is 20 % and 5 % is ?",
+        "original_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 16\nSubtract the second discount from the first discounted price: 320 - 16 = 304\n#### 304",
+        "original_answer": 304.0,
+        "transformed_solution": "Then, find the amount of the first discount: 400 * 0.20 = 80\nFind the amount of the second discount: 400 * 0.05 = 20\n",
+        "transformed_answer": 300.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, intermediate step 3 has been removed. Since the step 3 in the original_solution references the result of the second discount calculated from the first discounted price (320 * 0.05 = 16), its subsequent step, step 4, references its result. After removing step 3, step 2, which is now the new step referencing the second discount, should directly reference the original price and recalculate the second discount as 400 * 0.05 = 20. Step 4 must be updated accordingly to account for the new amount of the second discount, altering the computation from 320 - 16 = 304 to 320 - 20 = 300. The transformed_solution thus includes the error introduced by removing step 3, which causes subsequent steps to reference the wrong numbers. The first step that reflects this error is step 2 in the transformed_solution, so the wrong_step is 2.",
+        "eval_result": "The solution is incorrect, the correct answer is 80, and the explanation is 80.The answer is: 80"
+    }
+]

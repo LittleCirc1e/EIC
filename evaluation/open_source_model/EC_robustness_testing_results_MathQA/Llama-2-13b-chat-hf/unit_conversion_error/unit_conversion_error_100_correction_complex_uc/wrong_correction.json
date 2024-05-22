@@ -1,0 +1,74 @@
+[
+    {
+        "question": "a train covers a distance of 12 km in 10 minutes. if it takes 9 seconds to pass a telegraph post, then the length of the train is",
+        "original_solution": "First, convert 10 minutes to seconds: 10 minutes * 60 seconds/minute = 600 seconds\nNow calculate the speed of the train: 12 km / 600 seconds = 0.02 km/second\nConvert 0.02 km/second to meters/second: 0.02 km/second * 1000 meters/km = 20 meters/second\nNow use the formula: length = speed * time\nLength of the train = 20 meters/second * 9 seconds = 180 meters\n#### 180",
+        "original_answer": 180.0,
+        "transformed_solution": "First, convert 10 minutes to seconds: 10 minutes * 50 seconds/minute = 500 seconds\nNow calculate the speed of the train: 12 km / 500 seconds = 0.024 km/second\nConvert 0.024 km/second to meters/second: 0.024 km/second * 1000 meters/km = 24 meters/second\nNow use the formula: length = speed * time\nLength of the train = 24 meters/second * 9 seconds = 216 meters\n#### 216",
+        "transformed_answer": 216.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly being converted to 50 seconds instead of 60 seconds, resulting in 10 minutes * 60 seconds/minute = 600 seconds in the original_solution becoming 10 minutes * 50 seconds/minute = 500 seconds in the transformed_solution. This error affects the subsequent related steps. Step 2 changes from 12 km / 600 seconds = 0.02 km/second to 12 km / 500 seconds = 0.024 km/second. Step 3 changes from 0.02 km/second * 1000 meters/km = 20 meters/second to 0.024 km/second * 1000 meters/km = 24 meters/second. Step 4 remains logically correct in structure, calculating the length as speed times time, with the modified values resulting in 24 meters/second * 9 seconds = 216 meters. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 240 meters, and the explanation is that step 4 makes an incorrect unit conversion, mistakenly assuming that 1 second has 50 seconds instead of 60 seconds, and wrongly calculates 9 seconds x 50 seconds/minute = 450 seconds instead of 9 seconds x 60 seconds/minute = 540 seconds. This affects step 5, which erroneously calculates 500 seconds / 450 seconds = 1.11 instead of 500 seconds / 540 seconds = 0.92."
+    },
+    {
+        "question": "If 10 typists can type 30 letters in 30 minutes, then how many letters will 40 typists working at the same rate complete in 1 hour?",
+        "original_solution": "If 10 typists can type 30 letters in 30 minutes, then 1 typist can type 30 letters in 30 minutes * 10 typists = 300 minutes.\nSo, 40 typists working at the same rate can type 30 letters in 300 minutes / 40 typists = 7.5 minutes.\nIn 1 hour there are 60 minutes, so 40 typists can type 30 letters in 60 minutes / 7.5 minutes per 30 letters = 8 times the original amount.\nTherefore, 40 typists can type 30 letters * 8 = 240 letters in 1 hour.\n#### 240",
+        "original_answer": 240.0,
+        "transformed_solution": "If 10 typists can type 30 letters in 30 minutes, then 1 typist can type 30 letters in 30 minutes * 10 typists = 300 minutes.\nSo, 40 typists working at the same rate can type 30 letters in 300 minutes / 40 typists = 7.5 minutes.\nIn 1 hour there are 50 minutes, so 40 typists can type 30 letters in 50 minutes / 7.5 minutes per 30 letters = 6.67 times the original amount.\nTherefore, 40 typists can type 30 letters * 6.67 = 200.1 letters in 1 hour.\n#### 200.1",
+        "transformed_answer": 200.1,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion by stating there are 50 minutes in an hour instead of 60 minutes. The error in step 3 impacts the multiplication in step 4, where the number of times the typists can type 30 letters in one hour is reduced from 60/7.5 = 8 to 50/7.5 = 6.67. Consequently, the final calculation of the total number of letters typed is altered from the correct calculation of 30 letters * 8 = 240 to the erroneous calculation of 30 letters * 6.67 = 200.1. The other steps remain unaffected by this unit conversion error.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 200 letters, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 minute has 7.5 minutes instead of 60 minutes, and wrongly calculates 300 minutes / 7.5 minutes per 30 letters = 50 minutes instead of 500 minutes / 60 minutes per 30 letters = 8.33 minutes. This affects steps 4 and 5. Step 4 erroneously calculates 50 minutes / 7.5 minutes per 30 letters = 6.67 instead of 8.33. Step 5 erroneously calculates 6.67 times the original amount instead of 8.33 times the original amount."
+    },
+    {
+        "question": "The distance from city A to city B is 30 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.5 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.5 = 0.25 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0.25 hours = 120 miles per hour.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.75 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.75 = 0 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0 hours = undefined miles per hour.\n#### undefined",
+        "transformed_answer": null,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion error by stating that Alice has 0.75 hours less time instead of 0.5 hours, due to incorrectly converting 30 minutes into 0.75 hours instead of the correct 0.5 hours. This error affects the subsequent steps, specifically steps 3 and 4, where the time Alice has to drive is calculated incorrectly as 0 hours (0.75 - 0.75), leading to an incorrect, undefined speed calculation since one cannot divide by zero.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 40, and the explanation is that step 4 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 0.75 hours as 0 hours. This affects step 5, which erroneously calculates 30 miles / 0 hours = undefined miles per hour instead of 30 miles / 0.75 hours = 40 miles per hour."
+    },
+    {
+        "question": "A train covers a distance of 12 km in 10 minutes. If it takes 7 seconds to pass a telegraph post, then the length of the train is",
+        "original_solution": "First, we convert 10 minutes to seconds: 10 minutes * 60 seconds per minute = 600 seconds.\nNext, we calculate the speed of the train: 12 km / 600 seconds = 0.02 km/s.\nThen, we convert 0.02 km/s to m/s: 0.02 km/s * 1000 m per km = 20 m/s.\nNow we calculate the distance traveled by the train while passing the telegraph post: 20 m/s * 7 s = 140 m.\nSo, the length of the train is 140 m.\n#### 140",
+        "original_answer": 140.0,
+        "transformed_solution": "First, we convert 10 minutes to seconds: 10 minutes * 50 seconds per minute = 500 seconds.\nNext, we calculate the speed of the train: 12 km / 500 seconds = 0.024 km/s.\nThen, we convert 0.024 km/s to m/s: 0.024 km/s * 1000 m per km = 24 m/s.\nNow we calculate the distance traveled by the train while passing the telegraph post: 24 m/s * 7 s = 168 m.\nSo, the length of the train is 168 m.\n#### 168",
+        "transformed_answer": 168.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 10 minutes * 60 seconds per minute = 600 seconds in the original_solution becoming 10 minutes * 50 seconds per minute = 500 seconds in the transformed_solution. This error affects the subsequent related step 2, which changes from 12 km / 600 seconds = 0.02 km/s to 12 km / 500 seconds = 0.024 km/s. The correction on speed carries over to step 3, altering it from 0.02 km/s * 1000 m per km = 20 m/s to 0.024 km/s * 1000 m per km = 24 m/s. Finally, this error impacts step 4, changing the length of the train from the original 20 m/s * 7 s = 140 m to the erroneous 24 m/s * 7 s = 168 m. It should be noted that you only need to consider one step of unit conversion error, so the subsequent steps that rely on the incorrect conversion will be affected but the previous and unrelated steps are still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 120, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 kilometer has 1000 meters instead of 1000 meters per kilometer, and wrongly calculates 12 km x 1000 m/km = 12000 m instead of 12 km x 1000 m/km = 12000 m. This affects step 4, which erroneously calculates 12000 m / 7 s = 1714 m/s instead of 12000 m / 7 s = 1714 m/s."
+    },
+    {
+        "question": "if 20 typists can type 44 letters in 20 minutes, then how many letters will 30 typists working at the same rate complete in 1 hour?",
+        "original_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 3 = 6.6 letters.\nSo, 30 typists working at the same rate can type 30 x 6.6 = 198 letters in 1 hour.\n#### 198",
+        "original_answer": 198.0,
+        "transformed_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 2 = 4.4 letters.\nSo, 30 typists working at the same rate can type 30 x 4.4 = 132 letters in 1 hour.\n#### 132",
+        "transformed_answer": 132.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 40 minutes instead of 60 minutes, resulting in '2.2 x 3 = 6.6 letters' in the original_solution becoming '2.2 x 2 = 4.4 letters' in the transformed_solution. And it affects the subsequent related step 4, which changes from '30 x 6.6 = 198 letters' to '30 x 4.4 = 132 letters'. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct, maintaining consistency with the presented cases.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 168, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 minute has 20 seconds instead of 60 seconds, and wrongly calculates 44/20=2.2 instead of 44/60=0.7333. This affects step 4, which erroneously calculates 2.2 x 2=4.4 instead of 0.7333 x 2=1.4667. Step 5 then erroneously calculates 132 instead of 168."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 12/60 = 2/15, and the explanation is that the unit conversion error occurs in step 2, mistakenly assuming that there are 50 minutes in an hour instead of 60 minutes, and wrongly calculating 12/50=6/25 instead of 12/60=2/15. This affects step 4, which erroneously calculates 6/25 instead of 2/15."
+    }
+]

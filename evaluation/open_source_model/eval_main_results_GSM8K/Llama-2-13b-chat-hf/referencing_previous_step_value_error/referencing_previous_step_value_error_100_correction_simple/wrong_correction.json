@@ -1,0 +1,14 @@
+[
+    {
+        "question": "John decided to start rowing around a square lake. Each side of the lake is 15 miles. Jake can row at twice the speed he can swim. It takes him 20 minutes to swim 1 mile. How long, in hours, does it take to row the lake?",
+        "original_solution": "The perimeter of the lake is 4*15=60 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 60/6=10 hours to row around the lake\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "The perimeter of the lake is 4*15=60 miles\nHe swims at a speed of 60/20=3 mph\nSo he rows at a speed of 3*2=6 mph\nThat means it takes him 60/5=12 hours to row around the lake\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 6 as 5 from step 3 and changes 60/6=10 hours to 60/5=12 hours to calculate the time it takes to row around the lake. It should be noted that step 3 in the transformed_solution <So he rows at a speed of 3*2=6 mph> should be the same as the step 3 in the original_solution <So he rows at a speed of 3*2=6 mph> and calculates its result 6 correctly. The subsequent step 4, which should be affected by step 3, is mistakenly using 5 instead of 6 that leads to the wrong calculation of 60 divided by 5 instead of 6. You need to only consider one error of referencing, so the calculation of all steps is still correct except for the intentionally altered one.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 6 hours, and the explanation is as follows:\n\nIn the solution, the mistake occurs in the third step, where the speed of rowing is calculated as 3*2=6 mph, which is incorrect. The correct speed of rowing should be 2*3=6 mph, not 3 mph.\n\nTherefore, the correct answer is 60/6=6 hours, not 12 hours."
+    }
+]

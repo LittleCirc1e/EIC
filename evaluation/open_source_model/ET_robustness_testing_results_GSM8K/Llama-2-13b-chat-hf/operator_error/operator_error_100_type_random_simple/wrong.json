@@ -1,0 +1,122 @@
+[
+    {
+        "question": "The city is holding its annual rubber duck race for charity. The regular size rubber ducks are $3.00 each and the large size rubber duck is $5.00 each. All of the rubber ducks will be dropped into the river at the same time and the first duck that floats across the finish line wins. They sold 221 regular size ducks and 185 large size ducks. How much money did the city raise for charity?",
+        "original_solution": "They sold 221 regular size rubber ducks at $3.00 each so they made 221*3 = $663.00\nThey sold 185 large rubber ducks at $5.00 each so they made 185*5 = $925.00\nThe regular size ducks brought in $663.00 and the large brought in $925.00 for a total of 663+925 = $1,588.00 for charity\n#### 1588",
+        "original_answer": 1588.0,
+        "transformed_solution": "They sold 221 regular size rubber ducks at $3.00 each so they made 221*3 = $663.00\nThey sold 185 large rubber ducks at $5.00 each so they made 185/5 = $37.00\nThe regular size ducks brought in $663.00 and the large brought in $37.00 for a total of 663+37 = $700.00 for charity\n#### 700",
+        "transformed_answer": 700.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 2 into division, and by changing * to /, 185*5 = $925.00 becomes 185/5 = $37.00. This error affects the subsequent related step 3. Step 3's addition remains the same, and as a result of step 2's error, it changes from 663+925 = $1,588.00 to 663+37 = $700.00. It should be noted that although the operator in step 2 is incorrect, the calculation after the change is done correctly, which leads to a different result from the original answer and affects the final step involving the sum of money raised for charity.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'adding_irrelevant_information'. The first wrong step adds the phrase \"They sold\" which is not included in the [Question] statement, and it affects the final result. The correct solution should be $663.00 + $37.00 = $700.00."
+    },
+    {
+        "question": "A local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?",
+        "original_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=70 left.\n70+6=76 were enrolled after the final rally.\n76/2=38 are left after half the class dropped.\n38/2=19 are left after half the class graduated.\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72*2=144 left.\n144+6=150 were enrolled after the final rally.\n150/2=75 are left after half the class dropped.\n75/2=37.5 are left after half the class graduated.\n#### 37.5",
+        "transformed_answer": 37.5,
+        "wrong_step": 5,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation changes the subtraction operation in step 5 to multiplication, incorrectly increasing the number of students from \"72-2=70\" to \"72*2=144\". This error impacts all subsequent calculations with the incorrect number of students, such as the final rally enrollment going from \"70+6=76\" to \"144+6=150\", and eventually leading to a different final count of enrolled students after half drop and half graduate, \"38/2=19\" becomes \"75/2=37.5\". All other steps and calculations are performed correctly, but they all rely on the incorrect figure produced in the transformed step 5.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is that the [Solution] correctly calculated the number of students left after the final rally by"
+    },
+    {
+        "question": "Andy gets a cavity for every 4 candy canes he eats. He gets 2 candy canes from his parents and 3 candy canes each from 4 teachers. Then he uses his allowance to buy 1/7 as many candy canes as he was given. How many cavities does he get from eating all his candy canes?",
+        "original_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen divide that number by 7 to find the number of canes he buys: 14 canes / 7 = 2 canes\nThen add the number of candy canes he gets from each source to find the total number: 2 canes + 14 canes = 16 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 16 canes / 4 canes/cavity = 4 cavities\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "First find how many candy canes Andy gets from his teachers: 3 canes/teacher * 4 teachers = 12 canes\nThen add the number of candy canes he gets from his parents: 12 canes + 2 canes = 14 canes\nThen multiply that number by 7 to find the number of canes he buys incorrectly: 14 canes * 7 = 98 canes\nThen add the number of candy canes he gets from each source to find the total number incorrectly: 98 canes + 14 canes = 112 canes\nThen divide the total number of candy canes by the number of candy canes it takes to get one cavity to find the number of cavities Andy gets: 112 canes / 4 canes/cavity = 28 cavities\n#### 28",
+        "transformed_answer": 28.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division operator to multiplication in step 3. Instead of finding the correct number of candy canes he buys by dividing 14 by 7, it incorrectly multiplies 14 by 7 to get 98. This incorrect calculation directly affects step 4 and step 5, resulting in a total count of 112 candy canes instead of 16, and thus an incorrect final number of 28 cavities instead of 4. Each step still maintains the correct application of the incorrect operator, ensuring that all steps prior to step 3 are correctly calculated, and only step 3 contains the single error with the correct execution of the wrong operation.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'missing_step'. The first wrong step is missing the step of adding the number of candy canes Andy gets from each source, which"
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours * 2 = 8 hours studying on Saturday.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 4 into multiplication by changing / to *. It incorrectly calculates 4 hours / 2 as 4 * 2 = 8 hours for Saturday's study time. All other aspects of the other steps are correct, but this changed operator leads to a wrong result at this step and a transformed_answer different from the original_answer.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'missing_step'. The first wrong step is the assumption that Tristan studies for 3 hours each day from Wednesday to Friday, which is not stated in the [Question]. If this absent step is added, the entire reasoning will become correct. The correct reasoning is: On Monday, Tristan studies for 4 hours, and on Tuesday,"
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "The American swallow can lift into the air and carry a maximum of 5 pounds of weight, while the European swallow can lift and carry twice the weight as the American swallow. If there was a flock of 90 swallows, containing twice as many American as European swallows, what is the maximum combined weight the flock can carry?",
+        "original_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90-30=60.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n60 American swallows can carry a maximum of 60*5=300 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+300=600 pounds\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "If \"x\" is the number of European swallows, then, for every one European swallow, there would be 2x American swallows.\nThus, the total number of swallows would be 2x+x=90 swallows\nThus, the number of European swallows x=30.\nAnd the number of American swallows is 90+30=120.\nA European swallow can carry twice what an American swallow can carry, or 2*5=10 pounds.\n30 European swallows can carry a maximum of 30*10=300 pounds.\n120 American swallows can carry a maximum of 120*5=600 pounds.\nThus, a flock of 90 birds, with 30 European and 60 American swallows, can carry 300+600=900 pounds\n#### 900",
+        "transformed_answer": 900.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformation modified step 4 of the original solution, changing the subtraction to addition, converting the number of American swallows from 90-30=60 to 90+30=120. Step 7 incorrectly inherits this result, where it should calculate 60 American swallows carrying 300 pounds, but instead calculates 120 swallows supposedly carrying 600 pounds. This incorrect number of American swallows also affects step 8, erroneously adding a higher carrying capacity for 120 swallows instead of 60, thus giving an incorrect total of 900 pounds. It should be noted that the operator error in step 4 and the miscalculation that follows in steps 7 and 8 lead to the transformed solution being incorrect.",
+        "eval_result": "\n\nPlease help me with this task. I need to determine if the solution is correct and if there is any error in the solution.\n\nThank you."
+    },
+    {
+        "question": "Steve's new book sells 1,000,000 copies. He got an advance to pay for 100,000 copies. He gets $2 for each copy of the book sold. His agent takes 10% of that. How much money did he keep not counting the money from the advance?",
+        "original_solution": "He sold 1,000,000-100,000=900,000 not counting the advance\nSo he made 900,000*2=$1,800,000 from selling the books\nHis agent took 1,800,000*.1=$180,000\nThat means he kept 1,800,000-180,000=$1,620,000\n#### 1620000",
+        "original_answer": 1620000.0,
+        "transformed_solution": "He sold 1,000,000+100,000=1,100,000 not counting the advance\nSo he made 1,100,000*2=$2,200,000 from selling the books\nHis agent took 2,200,000*.1=$220,000\nThat means he kept 2,200,000-220,000=$1,980,000\n#### 1980000",
+        "transformed_answer": 1980000.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 1,000,000-100,000=900,000 becomes 1,000,000+100,000=1,100,000. This affects the subsequent related step 2, 3, and 4. Step 2 changes from 900,000*2=$1,800,000 to 1,100,000*2=$2,200,000, step 3 changes from 1,800,000*.1=$180,000 to 2,200,000*.1=$220,000, and step 4 changes from 1,800,000-180,000=$1,620,000 to 2,200,000-220,000=$1,980,000. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "eval_result": "\n\nPlease determine if the solution is correct. In the solution, each \n represents a step, and the number after #### represents the final answer. You need to first determine which is the first step to make a mistake, and then determine which of wrong types it belongs to.\n\nPlease select one of the following nine wrong types:\n\n1. adding_irrelevant_information\n2. confusing_formula_error\n3. missing_step\n4. operator_error\n5. unit_conversion_error\n6. referencing_previous_step_"
+    },
+    {
+        "question": "A fisherman catches 3 types of fish in his net. There are 32 bass, 1/4 as many trout as bass, and double the number of blue gill as bass. How many fish did the fisherman catch total?",
+        "original_solution": "Bass:32\nTrout:32/4=8\nBlue Gill:2(32)=64\nTotal:32+8+64=104 fish\n#### 104",
+        "original_answer": 104.0,
+        "transformed_solution": "Bass:32\nTrout:32/4=8\nBlue Gill:32*3=96\nTotal:32+8+96=136 fish\n#### 136",
+        "transformed_answer": 136.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution mistakenly changes the multiplication factor from 2 to 3 in the calculation of the number of Blue Gill. The original operation was to double the number of bass, 2(32)=64, but has been incorrectly transformed to a triple calculation, 32*3=96. This leads to an erroneous total count of fish, with steps 3 and 4 reflecting this incorrect calculation. It should be noted that the operator change (from *2 to *3) in step 3 is the only error introduced; the rest of the calculations are executed correctly based on this wrong assumption.",
+        "eval_result": "\n\nPlease help me determine if the solution is correct.\n\nI have reviewed the solution, and I believe the solution is incorrect. The wrong type is 'adding_irrelevant_information', and the explanation is that the solution includes 32/4, which is not present in the original question. The correct solution should only include the information provided in the question.\n\nThe correct solution should be: Bass: 32\nTrout: 0\nBlue Gill: 0\nTotal: 32.\n\nPlease let me know if I am correct or if there is another error in the solution."
+    },
+    {
+        "question": "Leo had 400 marbles in a jar. He packed the marbles with ten marbles in each pack, and he gave some of them to his two friends, Manny and Neil. He gave Manny 1/4 of the number of packs of marbles, Neil received 1/8 of the number of packs of marbles, and he kept the rest. How many packs of marbles did Leo keep?",
+        "original_solution": "Leo had 400/10 = 40 packs of marbles.\nHe gave Manny 1/4 x 40 = 10 packs of marbles.\nAnd, Neil received 1/8 x 40 = 5 packs of marbles.\nThus, Leo. gave a total of 10 + 5 = 15 packs of marbles.\nTherefore, Leo kept 40 - 15 = 25 packs of marbles.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Leo had 400/10 = 40 packs of marbles.\nHe gave Manny 1/4 x 40 = 10 packs of marbles.\nAnd, Neil received 1/8 x 40 = 5 packs of marbles.\nThus, Leo. gave a total of 10 - 5 = 5 packs of marbles.\nTherefore, Leo kept 40 - 5 = 35 packs of marbles.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the addition in step 4 is changed to subtraction, converting '10 + 5 = 15' into '10 - 5 = 5'. This affects the related step 5, changing '40 - 15 = 25' to '40 - 5 = 35'. Only the operator in step 4 is incorrect, altering the result of that step, which then affects the subsequent step 5. However, the calculation within all other steps, including the modified step, is correct.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is that the [Solution] correctly calculates the number of packs of marbles that Leo kept by subtracting the number of packs given to Manny and Neil from the total number of packs of marbles that Leo had."
+    },
+    {
+        "question": "Bailey needs to buy 2 new sets of towels for the guest bathroom and 4 new sets for her master bathroom. The set of towels for the guest bathroom are $40.00 each and the master bathroom set is $50.00 each. The store is currently offering 20% off so how much will Bailey spend on towel sets?",
+        "original_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280-56 =$224.00\n#### 224",
+        "original_answer": 224.0,
+        "transformed_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280+56 = $336.00\n#### 336",
+        "transformed_answer": 336.0,
+        "wrong_step": 5,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the subtraction in step 5 into addition, changing 280-56 to 280+56 by changing - to +. As a result, the calculation in step 5 is still correct given the altered operator, but the outcome is different, leading to a changed transformed_answer. The wrong step (step 5) alters the outcome of the calculation such that Bailey will be spending more than the discounted price, which is incorrect in the context of the problem. However, all prior steps and calculations remain correct.",
+        "eval_result": "\n\nPlease help me with this task. I need to determine if the solution is correct and if not, which type of error it belongs to.\n\nThank you."
+    }
+]

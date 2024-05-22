@@ -1,0 +1,1299 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "One computer can upload 100 megabytes worth of data in 3 seconds. Two computers, including this one, working together, can upload 1300 megabytes worth of data in 30 seconds. How long would it take for the second computer, working on its own, to upload 100 megabytes of data?",
+            "original_solution": "The speed of one computer is 100 / 3 = 33.33 megabytes per second\nThe combined speed of two computers is 1300 / 30 = 43.33 megabytes per second\nThe speed of the second computer is 43.33 - 33.33 = 10 megabytes per second\nIt would take the second computer 10 seconds to upload 100 megabytes of data on its own.\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "The speed of one computer is 100 / 3 = 33.33 megabytes per second\nThe combined speed of two computers is 1300 / 30 = 50 megabytes per second\nThe speed of the second computer is 50 - 33.33 = 16.67 megabytes per second\nIt would take the second computer 100 / 16.67 = 6 seconds to upload 100 megabytes of data on its own.\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, step 2 has a calculation error, changing the original correct calculation of 1300 / 30 from 43.33 to an incorrect 50 megabytes per second for the combined speed of two computers. This error affects the result in step 3, where the calculation now incorrectly subtracts 33.33 from the erroneous 50, resulting in 16.67 megabytes per second as the speed of the second computer. Furthermore, the incorrect speed affects step 4, changing the time it would take the second computer to upload 100 megabytes of data on its own from the correct 10 seconds to 6 seconds. The previous steps 1 and the correct calculations within each step are not changed, only the numbers affected by the error are altered."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nOne computer can upload 100 megabytes worth of data in 3 seconds. Two computers, including this one, working together, can upload 1300 megabytes worth of data in 30 seconds. How long would it take for the second computer, working on its own, to upload 100 megabytes of data?\n\n### Response:",
+        "output_str": "If one computer can upload 100 megabytes in 3 seconds, then two computers can upload 1300 megabytes in 30 seconds.\nThis means that the two computers can upload 1300/100 = 13 times as much data in 30 seconds compared to one computer in 3 seconds.\nSo, if the second computer is working on its own, it would take 30 seconds x 13 = 390 seconds to upload 100 megabytes of data.\n#### 390\nThe answer is: 390",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 390.0,
+        "is_correct": false
+    },
+    {
+        "index": 3,
+        "gsm8k_data": {
+            "question": "Two trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?",
+            "original_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains) \nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s \nLength of both trains = 140 m + 200 m = 340 m \nTime taken = 340 / (500/18) = (340 * 18) / 500 = 12.24 seconds \n#### 12.24",
+            "original_answer": 12.24,
+            "transformed_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains) \nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s \nLength of both trains = 140 m + 200 m = 340 m \nTime taken = 340 / (500/18) = (340 * 18) / 500 = 11.24 seconds \n#### 11.24",
+            "transformed_answer": 11.24,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation error is introduced in the last step, changing the correct time of 12.24 seconds to an incorrect time of 11.24 seconds. This is done by modifying the final division result without altering the mathematical operation leading up to it. The error is confined to this single operation, ensuring that all previous steps remain unaffected, resulting in a transformed answer that is different from the original one."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTwo trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?\n\n### Response:",
+        "output_str": "The first train is 140 m long and runs at a speed of 60 km/hr, so it takes 140/60 = 2.33 hours to cross the second train.\nThe second train is 200 m long and runs at a speed of 40 km/hr, so it takes 200/40 = 5 hours to cross the first train.\nSince they are running in opposite directions, the total time it takes for them to cross each other is 2.33 + 5 = 7.33 hours.\n#### 7\nThe answer is: 7",
+        "extract_true_num": 12.24,
+        "extract_pred_num": 7.0,
+        "is_correct": false
+    },
+    {
+        "index": 4,
+        "gsm8k_data": {
+            "question": "kamal obtained 76 , 65 , 82 , 67 and 85 marks ( out of 100 ) in english , mathematics , physics , chemistry and biology . what are his average marks ?",
+            "original_solution": "Add all the marks: 76+65+82+67+85=375\nDivide the total by the number of subjects: 375/5=75\n#### 75",
+            "original_answer": 75.0,
+            "transformed_solution": "Add all the marks: 76+65+82+67+85=365\nDivide the total by the number of subjects: 365/5=73\n#### 73",
+            "transformed_answer": 73.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The sum of the marks in the modified first step was incorrectly calculated as 365 instead of 375. As a result, all subsequent calculations are based on this incorrect total. The division in step 2 is correctly performed using the new, incorrect total, yielding an average of 73 instead of 75."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nkamal obtained 76 , 65 , 82 , 67 and 85 marks ( out of 100 ) in english , mathematics , physics , chemistry and biology . what are his average marks ?\n\n### Response:",
+        "output_str": "To find the average marks, we need to add up all the marks and divide by the number of subjects.\nThe total marks obtained are 76 + 65 + 82 + 67 + 85 = 401.\nSince there are 5 subjects, we divide the total marks by 5 to find the average.\n401 / 5 = 80.2.\nTherefore, Kamal's average marks are 80.2.\nThe answer is: 80.2",
+        "extract_true_num": 75.0,
+        "extract_pred_num": 80.2,
+        "is_correct": false
+    },
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "a and b can finish a work in 10 days while a alone can do the same work in 20 days. In how many days b alone will complete the work?",
+            "original_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 20 days.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 40 days.\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformed solution modifies step 4 of the original solution, changing the number of days that b alone can finish the work from 20 to 40. This is a calculation error in the last step, and there is only one error introduced, as required. The previous steps remain accurate and are not affected by this change."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na and b can finish a work in 10 days while a alone can do the same work in 20 days. In how many days b alone will complete the work?\n\n### Response:",
+        "output_str": "If a and b can finish the work in 10 days, then the rate at which they work together is $\\frac{1}{10}$ of the work per day.\nIf a alone can do the same work in 20 days, then the rate at which a works alone is $\\frac{1}{20}$ of the work per day.\nLet's assume that b alone can complete the work in $x$ days.\nSince the rate at which b works alone is $\\frac{1}{x}$ of the work per day, we can set up the equation $\\frac{1}{x} = \\frac{1}{10} - \\frac{1}{20}$.\nSimplifying, we get $\\frac{1}{x} = \\frac{3}{20} = \\frac{3}{10}$.\nCross-multiplying, we get $20 = 3x$, so $x = \\boxed{6}$.\nThe answer is: 6",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 6.0,
+        "is_correct": false
+    },
+    {
+        "index": 6,
+        "gsm8k_data": {
+            "question": "the average salary of all the workers in a workshop is rs. 8000. the average salary of 7 technicians is rs. 12000 and the average salary of the rest is rs. 6000. how many workers are there in the workshop?",
+            "original_solution": "The total salary of all workers is 8000 * n, where n is the number of workers\nThe total salary of the 7 technicians is 12000 * 7 = 84000\nThe total salary of the rest of the workers is 6000 * (n-7)\nSo, 8000 * n = 84000 + 6000 * (n-7)\n2000n = 42000\nn = 21\n#### 21",
+            "original_answer": 21.0,
+            "transformed_solution": "The total salary of all workers is 8000 * n, where n is the number of workers\nThe total salary of the 7 technicians is 12000 * 7 = 84000\nThe total salary of the rest of the workers is 6000 * (n-7)\nSo, 8000 * n = 84000 + 6000 * (n-7)\n2000n = 84000\nn = 42\n#### 42",
+            "transformed_answer": 42.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The 42000 in step 5 of the original solution has been changed incorrectly to 84000 while converting the equation. The operands or operators of the formulas have not been changed but only the result of the equation. Due to changing the total salary of rest of the workers to 84000 instead of 42000, the answer which was divided by 2000 gave a false amount of 42 workers instead of the correct 21 workers. This error propagated to the final step where n was incorrectly calculated as 42. The steps before the error remained unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe average salary of all the workers in a workshop is rs. 8000. the average salary of 7 technicians is rs. 12000 and the average salary of the rest is rs. 6000. how many workers are there in the workshop?\n\n### Response:",
+        "output_str": "The total salary of all the workers is the average salary multiplied by the number of workers.\nLet's assume there are x workers in the workshop.\nThe average salary of all the workers is Rs. 8000, so the total salary of all the workers is Rs. 8000 * x.\nThe average salary of 7 technicians is Rs. 12000, so the total salary of the 7 technicians is Rs. 12000 * 7.\nThe average salary of the rest of the workers is Rs. 6000, so the total salary of the rest of the workers is Rs. 6000 * (x - 7).\nThe total salary of all the workers is the sum of the total salary of the 7 technicians and the total salary of the rest of the workers, which is Rs. 12000 * 7 + Rs. 6000 * (x - 7).\nSince the average salary of all the workers is Rs. 8000, we can set up the equation:\nRs. 8000 * x = Rs. 12000 * 7 + Rs. 6000 * (x - 7).\nSimplifying the equation, we get:\n8000x = 84000 + 6000x - 42000.\nCombining like terms, we get:\n1400x = 42000.\nDividing both sides by 1400, we get:\nx = 30.\nTherefore, there are 30 workers in the workshop.\n#### 30\nThe answer is:",
+        "extract_true_num": 21.0,
+        "extract_pred_num": 30.0,
+        "is_correct": false
+    },
+    {
+        "index": 8,
+        "gsm8k_data": {
+            "question": "the distance from city a to city b is 220 miles. while driving from city a to city b, bob drives at a constant speed of 40 miles per hour. alice leaves city a 30 minutes after bob. what is the minimum constant speed in miles per hour that alice must exceed in order to arrive in city b before bob?",
+            "original_solution": "The time it takes Bob to get to city B is 220/40 = 5.5 hours\nThe time it takes Alice to get to city B is 5.5 - 0.5 = 5 hours.\nAlice must exceed a constant speed of 220/5 = 44 miles per hour to arrive in city B before Bob.\n#### 44",
+            "original_answer": 44.0,
+            "transformed_solution": "The time it takes Bob to get to city B is 220/40 = 5.5 hours\nThe time it takes Alice to get to city B is 5.5 - 0.5 = 4 hours.\nAlice must exceed a constant speed of 220/4 = 55 miles per hour to arrive in city B before Bob.\n#### 55",
+            "transformed_answer": 55.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformed solution contains a miscalculation in step 2 where 5.5 - 0.5 is incorrectly calculated as 4 instead of 5. This error affects the calculation in step 3, where the speed is miscomputed as 220/4 = 55 miles per hour instead of 220/5. The previous step 1 remains unaffected, while steps 2 and 3 inherit the error in calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe distance from city a to city b is 220 miles. while driving from city a to city b, bob drives at a constant speed of 40 miles per hour. alice leaves city a 30 minutes after bob. what is the minimum constant speed in miles per hour that alice must exceed in order to arrive in city b before bob?\n\n### Response:",
+        "output_str": "We can use the formula $d = rt$, where $d$ is the distance, $r$ is the rate (or speed), and $t$ is the time.\nBob's speed is 40 miles per hour, and he travels for a certain amount of time.\nAlice leaves 30 minutes after Bob, which is 0.5 hours.\nLet's say Alice's speed is $x$ miles per hour.\nSince Alice leaves 0.5 hours after Bob, she will travel the same distance in less time.\nSo, we have the equation $x \\cdot 0.5 = 40 \\cdot t$.\nSimplifying, we get $x = 80/t$.\nTo arrive in city B before Bob, Alice must travel the same distance in less time.\nSo, we have the inequality $x > 40$.\nSubstituting $x = 80/t$, we get $80/t > 40$.\nSolving for $t$, we get $t < 2$.\nSince time cannot be negative, the minimum constant speed that Alice must exceed is $\\boxed{45}$ miles per hour.\nThe answer is: 45",
+        "extract_true_num": 44.0,
+        "extract_pred_num": 45.0,
+        "is_correct": false
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+            "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+            "original_answer": 50,
+            "transformed_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 47\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+            "transformed_answer": 49,
+            "wrong_step": 7,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "To create the transformed_solution, the range for n was incorrectly altered to be from -1 to 47 instead of -1 to 48, leading to a count of 49 integer values instead of the correct count of 50 integer values. This changes the answer at step 8 without affecting the prior unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?\n\n### Response:",
+        "output_str": "We want to find the number of integer values of $n$ such that $4n + 7$ is an integer greater than 1 and less than 200.\nWe can rewrite this as $4n + 7 > 1$ and $4n + 7 < 200$.\nSimplifying, we have $4n > -6$ and $4n < 199$.\nDividing both sides of each inequality by 4, we get $n > -\\frac{3}{2}$ and $n < \\frac{199}{4}$.\nThe integer values of $n$ that satisfy these inequalities are $n = 2, 3, 4, \\ldots, 49$.\nTherefore, there are $\\boxed{25}$ integer values of $n$ that satisfy the given conditions.\nThe answer is: 25",
+        "extract_true_num": 50,
+        "extract_pred_num": 25.0,
+        "is_correct": false
+    },
+    {
+        "index": 12,
+        "gsm8k_data": {
+            "question": "A taxi company charges $1.85 for the first quarter of a mile and fifteen cents for each additional quarter of a mile. What is the maximum distance someone could travel with $4.90?",
+            "original_solution": "Each additional quarter of a mile costs $0.15, so (4.90 - 1.85) / 0.15 = 20.33\nThe maximum distance someone could travel is 20 * 0.25 = 5 miles\n#### 5",
+            "original_answer": 5.0,
+            "transformed_solution": "Each additional quarter of a mile costs $0.15, so (4.90 - 1.85) / 0.15 = 20.33\nThe maximum distance someone could travel is 20 * 0.25 = 5.25 miles\n#### 5.25",
+            "transformed_answer": 5.25,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The modification was made in step 2 by incorrectly calculating the distance as 5.25 miles instead of 5 miles despite using the correct number of quarters (20) that the person could afford for additional travel. The second step error did not affect the first step, as it only involved changing the result while keeping the same calculation process, and the transformed answer of 5.25 is incorrect when compared to the correct original answer of 5 miles."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA taxi company charges $1.85 for the first quarter of a mile and fifteen cents for each additional quarter of a mile. What is the maximum distance someone could travel with $4.90?\n\n### Response:",
+        "output_str": "Let $x$ be the number of additional quarters of a mile.\nThe cost for the first quarter of a mile is $1.85$, and the cost for each additional quarter of a mile is $0.15$.\nSo the total cost for the first $x+1$ quarters of a mile is $1.85 + 0.15x$.\nWe want to find the maximum distance someone could travel with $4.90, so we set up the inequality $1.85 + 0.15x \\leq 4.90$.\nSubtracting $1.85$ from both sides gives $0.15x \\leq 3.05$.\nDividing both sides by $0.15$ gives $x \\leq \\frac{3.05}{0.15} = 20.33$.\nSince $x$ represents the number of additional quarters of a mile, it must be a whole number.\nSo the maximum number of additional quarters of a mile is $20$, which means the maximum distance someone could travel is $20 + 1 = \\boxed{21}$ quarters of a mile.\nThe answer is: 21",
+        "extract_true_num": 5.0,
+        "extract_pred_num": 21.0,
+        "is_correct": false
+    },
+    {
+        "index": 14,
+        "gsm8k_data": {
+            "question": "a 1200 m long train crosses a tree in 120 sec, how much time will it take to pass a platform 400 m long?",
+            "original_solution": "The length of the train is 1200 m.\nThe time taken to pass the tree is 120 sec.\nThe speed of the train is 1200 / 120 = 10 m/s.\nThe total length to be crossed is 1200 + 400 = 1600 m.\nThe time taken to pass 1600 m is 1600 / 10 = 160 sec.\n#### 160",
+            "original_answer": 160.0,
+            "transformed_solution": "The length of the train is 1200 m.\nThe time taken to pass the tree is 120 sec.\nThe speed of the train is 1200 / 120 = 10 m/s.\nThe total length to be crossed is 1200 + 400 = 1600 m.\nThe time taken to pass 1600 m is 1600 / 10 = 150 sec.\n#### 150",
+            "transformed_answer": 150.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The calculation in the last step was altered from the correct calculation 1600 / 10 = 160 sec to an incorrect one 1600 / 10 = 150 sec. This intentional error only affects the outcome of the last step, not the accuracy of any prior steps or calculations. The prior steps correctly determine the speed of the train and the total distance to be crossed, but the final time calculation (transformed solution) has been deliberately made incorrect to differ from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na 1200 m long train crosses a tree in 120 sec, how much time will it take to pass a platform 400 m long?\n\n### Response:",
+        "output_str": "The train crosses a tree in 120 sec, so its speed is 1200 m / 120 sec = 10 m/sec.\nTo pass a platform 400 m long, it will take 400 m / 10 m/sec = 40 sec.\n#### 40\nThe answer is: 40",
+        "extract_true_num": 160.0,
+        "extract_pred_num": 40.0,
+        "is_correct": false
+    },
+    {
+        "index": 15,
+        "gsm8k_data": {
+            "question": "In what time will a railway train 30 m long moving at the rate of 36 kmph pass a telegraph post on its way?",
+            "original_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) / (3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 10 m/s = 3 s\n#### 3 seconds",
+            "original_answer": 3.0,
+            "transformed_solution": "First convert the speed from km/h to m/s: 36 km/h * (1000 m/km) / (3600 s/h) = 10 m/s\nThe time it takes to pass the telegraph post is the length of the train divided by the speed: 30 m / 2 m/s = 15 s\n#### 15 seconds",
+            "transformed_answer": 15.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the division step for calculating the time (step 2) is where the calculation error has been intentionally introduced. Instead of using the correct speed of 10 m/s, the calculation mistakenly uses 2 m/s. As a result, the time to pass the telegraph post is incorrectly calculated as 30 m / 2 m/s = 15 s instead of the correct 30 m / 10 m/s = 3 s. The previous step related to the speed conversion remains unaffected as it is not related to the miscalculation in the final answer. Here, the changed step 1 that leads to the miscalculation in step 2 is consistent in keeping the explanation relevant to the type of error, which is a calculation error, and only one error is considered for the transformation process."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn what time will a railway train 30 m long moving at the rate of 36 kmph pass a telegraph post on its way?\n\n### Response:",
+        "output_str": "The train is moving at a rate of 36 kmph, which means it is traveling 36 kilometers in one hour.\nThe train is 30 meters long, which is equivalent to 30/1000 = 0.03 kilometers.\nTo find the time it takes for the train to pass the telegraph post, we can divide the distance of the train by the rate at which it is traveling.\nSo, the time it takes for the train to pass the telegraph post is 0.03 kilometers / 36 kmph = 0.000833 hours.\nSince there are 60 minutes in an hour, we can convert the time to minutes by multiplying by 60.\nSo, the train will pass the telegraph post in 0.000833 hours x 60 minutes/hour = 0.498 minutes.\n#### 0.498\nThe answer is: 0.498",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 0.498,
+        "is_correct": false
+    },
+    {
+        "index": 17,
+        "gsm8k_data": {
+            "question": "a certain number when divided by 39 leaves a remainder 16, what is the remainder when the same number is divided by 13?",
+            "original_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a*3 + 13*1 + 3\nThe remainder is 3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a*3 + 13*1 + 2\nThe remainder is 2\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, we randomly change the remainder found in the original_solution from 3 to 2, which only affects the final outcome. The steps showing the breakdown of the number into multiple of 13 plus remainder have also been affected to incorporate this miscalculation. The prior algebraic representation (\"x = 39a + 16 for some integer a\") remains correct as it is a definition, not a calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na certain number when divided by 39 leaves a remainder 16, what is the remainder when the same number is divided by 13?\n\n### Response:",
+        "output_str": "Let the number be $x$. We are given that $x \\equiv 16 \\pmod{39}$.\nThis means that $x$ can be written as $x = 39k + 16$ for some integer $k$.\nTo find the remainder when $x$ is divided by 13, we substitute $x$ into the equation and simplify:\n$x = 39k + 16 \\equiv 16 \\pmod{13}$\n$x = 16 \\pmod{13}$\nTherefore, the remainder when $x$ is divided by 13 is $\\boxed{16}$.The answer is: 16",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 16.0,
+        "is_correct": false
+    },
+    {
+        "index": 21,
+        "gsm8k_data": {
+            "question": "an engineer undertakes a project to build a road 10 km long in 60 days and employs 30 men for the purpose. after 20 days, he finds only 2 km of the road has been completed. find the (approximate) number of extra men he must employ to finish the work in time.",
+            "original_solution": "In 20 days, 2 km of the road have been completed, so the rate is 2/20 = 0.1 km/day.\nTo finish the remaining 8 km in 40 days, the rate required is 8/40 = 0.2 km/day.\nThe current rate of each man is 0.1 km/day, so the number of men required to achieve the desired rate is 0.2/0.1 x 30 = 60.\nExtra men he must employ is 60 - 30 = 30.\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "In 20 days, 2 km of the road have been completed, so the rate is 2/20 = 0.1 km/day.\nTo finish the remaining 8 km in 40 days, the rate required is 8/40 = 0.3 km/day.\nThe current rate of each man is 0.1 km/day, so the number of men required to achieve the desired rate is 0.3/0.1 x 30 = 90.\nExtra men he must employ is 90 - 30 = 60.\n#### 60",
+            "transformed_answer": 60.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The mistake was intentionally introduced in step 2 of the original solution by changing the required rate from 0.2 km/day to 0.3 km/day. This error was then carried through the subsequent calculations. As the previous steps are not affected by this change, they remain the same. The transformed solution altered the number of men required to achieve the new, incorrect rate, changing the end result of the calculation to an incorrect number of extra men needed."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nan engineer undertakes a project to build a road 10 km long in 60 days and employs 30 men for the purpose. after 20 days, he finds only 2 km of the road has been completed. find the (approximate) number of extra men he must employ to finish the work in time.\n\n### Response:",
+        "output_str": "The engineer has 60 days to complete a 10 km road, so he needs to complete 10 km / 60 days = 1/6 km per day.\nAfter 20 days, he has completed 2 km, so he needs to complete 10 km - 2 km = 8 km in the remaining 40 days.\nTo complete 8 km in 40 days, he needs to complete 8 km / 40 days = 1/5 km per day.\nSince he has 30 men, each man can complete 1 km / 5 men = 1/5 km per day.\nTo complete the remaining 8 km, he needs 8 km / (1/5 km per day) = 40 men.\nTherefore, he needs to employ an additional 40 men - 30 men = 10 men.\n#### 10\nThe answer is: 10",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 10.0,
+        "is_correct": false
+    },
+    {
+        "index": 22,
+        "gsm8k_data": {
+            "question": "45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?",
+            "original_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 15 days\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "One person can complete the work in 45 x 12 x 5 = 2700 hours\n30 persons working 6 hours a day will complete the work in 2700 / (30 x 6) = 10 days\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the error is in the division of 2700 by the product of 30 and 6. Instead of calculating 2700 / (30 x 6) = 15 properly, the transformed solution incorrectly states 2700 / (30 x 6) = 10. The mistake is only in the second step's calculation, and it does not require changing the operands or operators. It only changes the result, which leads to a different final answer. The earlier step of calculating the total man hours remains unchanged, as does the equation in the erroneous step (which still uses 30 x 6 correctly); only the final result from the dubious calculation is altered."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n45 persons can repair a road in 12 days, working 5 hours a day. In how many days will 30 persons, working 6 hours a day, complete the work?\n\n### Response:",
+        "output_str": "If 45 people can repair a road in 12 days, then the total work required to repair the road is 45 people x 12 days = 540 person-days.\nIf 30 people are working, and they work 6 hours a day, then the total work they can complete in a day is 30 people x 6 hours = 180 person-days.\nTo complete the work of 540 person-days, it will take 540 person-days / 180 person-days per day = 3 days.\nTherefore, 30 people, working 6 hours a day, will complete the work in 3 days.\n#### 3\nThe answer is: 3",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 24,
+        "gsm8k_data": {
+            "question": "Because he’s taxed by his home planet, Mork pays a tax rate of 40% on his income, while Mindy pays a rate of only 30% on hers. If Mindy earned 3 times as much as Mork did, what was their combined tax rate?",
+            "original_solution": "Mindy earned 3 times as much as Mork, so Mindy's income was 3x and Mork's income was x.\nMork paid 40% in taxes, so he kept 60% of his income: 0.6x\nMindy paid 30% in taxes, so she kept 70% of her income: 0.7(3x)\nThe total kept after taxes is 0.6x + 2.1x = 2.7x\nThe combined tax rate is 1 - (2.7x / 4x) = 0.325\nThe combined tax rate is 32.5%\n#### 32.5%",
+            "original_answer": 32.5,
+            "transformed_solution": "Mindy earned 3 times as much as Mork, so Mindy's income was 3x and Mork's income was x.\nMork paid 40% in taxes, so he kept 60% of his income: 0.6x\nMindy paid 30% in taxes, so she kept 70% of her income: 0.7(3x)\nThe total kept after taxes is 0.6x + 2.1x = 2.9x\nThe combined tax rate is 1 - (2.9x / 4x) = 0.275\nThe combined tax rate is 27.5%\n#### 27.5%",
+            "transformed_answer": 27.5,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly modifies the total kept after taxes to be 2.9x instead of the correct 2.7x in step 4, which is a calculation error. This wrong calculation subsequently affects step 5, where the combined tax rate is then wrongly calculated as 27.5% instead of the correct 32.5%. The rest of the steps are unaffected by this error, as it only occurs at step 4 and subsequent step 5 inherits it. The rest of the steps, including the setup and tax retention for both individuals, remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nBecause he’s taxed by his home planet, Mork pays a tax rate of 40% on his income, while Mindy pays a rate of only 30% on hers. If Mindy earned 3 times as much as Mork did, what was their combined tax rate?\n\n### Response:",
+        "output_str": "If Mindy earned 3 times as much as Mork did, then Mindy earned 3 * Mork's income.\nLet's say Mork's income is X. Then Mindy's income is 3X.\nMork pays a tax rate of 40% on his income, so his tax amount is 40% * X = 0.4X.\nMindy pays a tax rate of 30% on her income, so her tax amount is 30% * 3X = 0.3 * 3X = 0.9X.\nThe combined tax amount is 0.4X + 0.9X = 1.3X.\nSince the combined tax rate is the total tax amount divided by the total income, the combined tax rate is 1.3X / (X + 3X) = 1.3X / 4X = 0.325.\n#### 0.325\nThe answer is: 0.325",
+        "extract_true_num": 32.5,
+        "extract_pred_num": 0.325,
+        "is_correct": false
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "There are 8 students. 4 of them are men and 4 of them are women. If 4 students are selected from the 8 students, what is the probability that the number of men is equal to that of women?",
+            "original_solution": "The total number of ways to choose 4 students out of 8 is C(8,4) = 70\nThe number of ways to choose 2 men out of 4 is C(4,2) = 6\nThe number of ways to choose 2 women out of 4 is also C(4,2) = 6\nSo, the total number of favorable outcomes is 6 x 6 = 36\nThe probability is the number of favorable outcomes divided by the total number of outcomes, which is 36/70\n#### 18/35",
+            "original_answer": "18/35",
+            "transformed_solution": "The total number of ways to choose 4 students out of 8 is C(8,4) = 70\nThe number of ways to choose 2 men out of 4 is C(4,2) = 6\nThe number of ways to choose 2 women out of 4 is also C(4,2) = 6\nSo, the total number of favorable outcomes is 6 x 6 = 30\nThe probability is the number of favorable outcomes divided by the total number of outcomes, which is 30/70\n#### 3/7",
+            "transformed_answer": "3/7",
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformation, step 4 mistakenly calculates 6 x 6 = 30 instead of 6 x 6 = 36. This leads to a change in the final probability calculation in step 5, which becomes 30/70 instead of the correct 36/70. All other steps remain unchanged because they are not affected by the calculation error introduced in step 4. This altered step directly leads to a different transformed_answer, which is 3/7 instead of 18/35."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are 8 students. 4 of them are men and 4 of them are women. If 4 students are selected from the 8 students, what is the probability that the number of men is equal to that of women?\n\n### Response:",
+        "output_str": "There are a total of $\\binom{8}{4}=70$ ways to select 4 students from the 8 students.\nTo have an equal number of men and women, we can either select 2 men and 2 women or 4 men and 0 women (which is not possible).\nThere are $\\binom{4}{2}=6$ ways to select 2 men from the 4 men and $\\binom{4}{2}=6$ ways to select 2 women from the 4 women.\nSo, there are a total of $6 \\cdot 6 = 36$ ways to select 2 men and 2 women.\nTherefore, the probability of selecting an equal number of men and women is $\\frac{36}{70}=\\boxed{\\frac{9}{25}}$.\nThe answer is: \\frac{9}{25}",
+        "extract_true_num": "18/35",
+        "extract_pred_num": 25.0,
+        "is_correct": false
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "find 62976 ÷ ? = 123",
+            "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+            "original_answer": 512.0,
+            "transformed_solution": "123 x ? = 62976\n? = 62976 / 120\n#### 524",
+            "transformed_answer": 524.67,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the wrong step is the final division (step 2), where it incorrectly divides 62976 by 120 instead of 123, leading to a transformed answer of approximately 524.67. The original multiplication step (step 1) remains unaffected because it precedes the incorrect division. There is only one error introduced, so it is considered a single error, and the explanation summarizes the error introduced and its impact on the subsequent step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nfind 62976 ÷ ? = 123\n\n### Response:",
+        "output_str": "To solve this problem, we need to determine the value of x, which represents the unknown variable in the division equation.\nWe are given that 62976 ÷ x = 123.\nTo find the value of x, we can multiply both sides of the equation by x:\n62976 = 123x\nTo isolate x, we divide both sides of the equation by 123:\n62976 ÷ 123 = 123x ÷ 123\n50 = x\nThe value of x is 50.The answer is: 50",
+        "extract_true_num": 512.0,
+        "extract_pred_num": 50.0,
+        "is_correct": false
+    },
+    {
+        "index": 29,
+        "gsm8k_data": {
+            "question": "Two trains are moving in the same direction at 162 kmph and 18 kmph. The faster train crosses a man in the slower train in 33 seconds. Find the length of the faster train?",
+            "original_solution": "The relative speed of the two trains is 162 - 18 = 144 kmph\nThe distance covered in 33 seconds at this speed is 144 x 33 x (5/18) = 1320 meters\nThe length of the faster train is 1320 meters\n#### 1320",
+            "original_answer": 1320.0,
+            "transformed_solution": "The relative speed of the two trains is 162 - 18 = 144 kmph\nThe distance covered in 33 seconds at this speed is 144 x 33 x (5/18) = 1452 meters\nThe length of the faster train is 1452 meters\n#### 1452",
+            "transformed_answer": 1452.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, the calculation of the distance covered in step 2 has been altered to be incorrect. The original correct calculation is 144 x 33 x (5/18) = 1320 meters, while the transformed_solution incorrectly states it as 144 x 33 x (5/18) = 1452 meters. This is the wrong_step, and it is a calculation_error. All other steps remain unaffected by this miscalculation; all the following formula conversions are correct, but they use the incorrect result from the wrong_step. The transformed_answer reflects the result of the changed calculation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTwo trains are moving in the same direction at 162 kmph and 18 kmph. The faster train crosses a man in the slower train in 33 seconds. Find the length of the faster train?\n\n### Response:",
+        "output_str": "The faster train is traveling at a speed of 162 kmph and the slower train is traveling at a speed of 18 kmph.\nIn 33 seconds, the faster train crosses the slower train.\nTo find the length of the faster train, we need to determine the distance traveled by both trains in 33 seconds.\nThe distance traveled by the faster train is equal to the speed of the faster train multiplied by the time of 33 seconds.\nDistance = Speed x Time\nDistance = 162 kmph x 33 seconds\nDistance = 5032 km\nThe distance traveled by the slower train is equal to the speed of the slower train multiplied by the time of 33 seconds.\nDistance = Speed x Time\nDistance = 18 kmph x 33 seconds\nDistance = 624 km\nSince the faster train crosses the slower train, the length of the faster train is equal to the difference in distances traveled by both trains.\nLength = Distance of faster train - Distance of slower train\nLength = 5032 km - 624 km\nLength = 4408 km\n#### 4408\nThe answer is: 4408",
+        "extract_true_num": 1320.0,
+        "extract_pred_num": 4408.0,
+        "is_correct": false
+    },
+    {
+        "index": 30,
+        "gsm8k_data": {
+            "question": "28 buckets of water fill a tank when the capacity of each bucket is 13.5 litres. How many buckets will be required to fill the same tank if the capacity of each bucket is 9 litres?",
+            "original_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 378 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 378 / 9 = 42\n#### 42",
+            "original_answer": 42.0,
+            "transformed_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 385 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 385 / 9 = 42.77\n#### 42.77",
+            "transformed_answer": 42.77,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation in step 1 (28 x 13.5) has been incorrectly modified to equal 385 instead of the correct 378. This introduces a calculation error that carries through to step 3, where the number of buckets required to fill the same tank is now based on the incorrect total capacity of 385 litres. Note that we divide 385 by 9 to get an incorrect transformed_answer of 42.77 buckets, which maintains the correct mathematical operation but with an incorrect value inherited from step 1. Steps that do not depend on the miscalculated total capacity remain unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n28 buckets of water fill a tank when the capacity of each bucket is 13.5 litres. How many buckets will be required to fill the same tank if the capacity of each bucket is 9 litres?\n\n### Response:",
+        "output_str": "The total capacity of the tank is 28 buckets x 13.5 liters/bucket = 367 liters.\nTo fill the same tank with 9-liter buckets, we will need 367 liters / 9 liters/bucket = 40 buckets.\nTherefore, 40 buckets will be required to fill the same tank.\n#### 40\nThe answer is: 40",
+        "extract_true_num": 42.0,
+        "extract_pred_num": 40.0,
+        "is_correct": false
+    },
+    {
+        "index": 32,
+        "gsm8k_data": {
+            "question": "the ratio of three numbers is 3 : 4 : 7 and their product is 18144 . the numbers are",
+            "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+            "original_answer": [
+                18,
+                24,
+                42
+            ],
+            "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 200\nx = 5.85\nThe numbers are 3x = 17.55, 4x = 23.4, and 7x = 40.95\n#### 17.55, 23.4, 40.95",
+            "transformed_answer": [
+                17.55,
+                23.4,
+                40.95
+            ],
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this transformed solution, the calculation error was introduced at step 3 by incorrectly deducing that x^3 = 200 from 84x^3 = 18144 (instead of the correct x^3 = 216). The result then propagates to the following steps: calculating the cube root of 200 to get an incorrect x value (step 4), which then leads to incorrect values for 3x, 4x, and 7x (step 5). The previous steps remain unchanged, preserving the relationship between 3x, 4x, 7x and ensuring the product still results in 18144. However, the transformed answer deviates from the original due to the calculation error introduced at step 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe ratio of three numbers is 3 : 4 : 7 and their product is 18144 . the numbers are\n\n### Response:",
+        "output_str": "To solve this problem, we need to determine the value of x, which represents one of the numbers in the ratio.\nLet's break down the information given:\nRatio of three numbers: 3 : 4 : 7\nProduct of the three numbers: 18144\nWe can set up the equation as follows:\nFirst number * Second number * Third number = Product of the three numbers\n3 * 4 * 7 = 18144\nLet's simplify and solve for x:\n84 = 18144\nTo isolate x, we divide both sides of the equation by 84:\n84 / 84 = 18144 / 84\n1 = 216\nSince 1 does not equal 216, there is no value of x that satisfies the equation.\nTherefore, there is no value of x for which the ratio of three numbers is 3 : 4 : 7 and their product is 18144.The answer is: 7",
+        "extract_true_num": [
+            18,
+            24,
+            42
+        ],
+        "extract_pred_num": 7.0,
+        "is_correct": false
+    },
+    {
+        "index": 33,
+        "gsm8k_data": {
+            "question": "A train crosses a platform of 250 m in 20 sec, the same train crosses another platform of length 640 m in 40 sec. Then find the length of the train?",
+            "original_solution": "Speed = Distance/Time\nLet the length of the train be x\nSpeed of the train when crossing a 250 m platform = (x+250)/20\nSpeed of the train when crossing a 640 m platform = (x+640)/40\n(x+250)/20 = (x+640)/40\n2(x+250) = x+640\n2x+500 = x+640\nx = 140\n#### 140",
+            "original_answer": 140.0,
+            "transformed_solution": "Speed = Distance/Time\nLet the length of the train be x\nSpeed of the train when crossing a 250 m platform = (x+250)/20\nSpeed of the train when crossing a 640 m platform = (x+630)/40\n(x+250)/20 = (x+630)/40\n2(x+250) = x+630\n2x+500 = x+630\nx = 130\n#### 130",
+            "transformed_answer": 130.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 4 incorrectly alters the length of the second platform from 640 m to 630 m, which affects the equation in step 5 (2(x+250) = x+630 instead of 2(x+250) = x+640). This lead to a wrong result in the final calculation of x in step 7, where we get x = 130 instead of the correct x = 140. Each subsequent step inherits the error from the modified step, and only the first erroneous step counts as the single error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA train crosses a platform of 250 m in 20 sec, the same train crosses another platform of length 640 m in 40 sec. Then find the length of the train?\n\n### Response:",
+        "output_str": "The train crosses the first platform in 20 sec, so its speed is 250 m / 20 sec = 12.5 m/sec.\nThe train crosses the second platform in 40 sec, so its speed is 640 m / 40 sec = 16 m/sec.\nSince the speed of the train is the same for both platforms, we can set up the equation 12.5 m/sec = 16 m/sec.\nTo find the length of the train, we need to find the value of x in the equation 12.5x = 16x.\nDividing both sides of the equation by 12.5, we get x = 16 / 12.5 = 1.2.\nTherefore, the length of the train is 1.2 * 250 m = 300 m.\n#### 300\nThe answer is: 300",
+        "extract_true_num": 140.0,
+        "extract_pred_num": 300.0,
+        "is_correct": false
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "a car started running at a speed of 30 km / hr and the speed of the car was increased by 2 km / hr at the end of every hour. find the total distance covered by the car in the first 8 hours of the journey.",
+            "original_solution": "The distance covered in the first hour is 30 km because 30 x 1 = 30\nThe distance covered in the second hour is 32 km because 32 x 1 = 32\nThe distance covered in the third hour is 34 km because 34 x 1 = 34\nThe distance covered in the fourth hour is 36 km because 36 x 1 = 36\nThe distance covered in the fifth hour is 38 km because 38 x 1 = 38\nThe distance covered in the sixth hour is 40 km because 40 x 1 = 40\nThe distance covered in the seventh hour is 42 km because 42 x 1 = 42\nThe distance covered in the eighth hour is 44 km because 44 x 1 = 44\nThe total distance covered is 296 km because 30 + 32 + 34 + 36 + 38 + 40 + 42 + 44 = 296\n#### 296",
+            "original_answer": 296.0,
+            "transformed_solution": "The distance covered in the first hour is 30 km because 30 x 1 = 30\nThe distance covered in the second hour is 32 km because 32 x 1 = 32\nThe distance covered in the third hour is 34 km because 34 x 1 = 34\nThe distance covered in the fourth hour is 36 km because 36 x 1 = 36\nThe distance covered in the fifth hour is 28 km because 28 x 1 = 28\nThe distance covered in the sixth hour is 40 km because 40 x 1 = 40\nThe distance covered in the seventh hour is 42 km because 42 x 1 = 42\nThe distance covered in the eighth hour is 44 km because 44 x 1 = 44\nThe total distance covered is 286 km because 30 + 32 + 34 + 36 + 28 + 40 + 42 + 44 = 286\n#### 286",
+            "transformed_answer": 286.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example erroneously calculates the distance for the fifth hour as 28 km instead of 38 km in step 5, resulting in the subsequent step 9 (the sum of distances) being affected. The total is incorrectly summed as 286 km instead of 296 km due to this single calculation error, which only affects the total distance calculation and leaves all other steps unaltered. The steps before the wrongly calculated step remain unchanged. The relevant numbers in step 9 (summing of distances) inherit the error, but the arithmetic operation in step 9 itself is still performed correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na car started running at a speed of 30 km / hr and the speed of the car was increased by 2 km / hr at the end of every hour. find the total distance covered by the car in the first 8 hours of the journey.\n\n### Response:",
+        "output_str": "In the first hour, the car traveled at a speed of 30 km/hr, so it covered a distance of 30 km.\nIn the second hour, the speed of the car increased by 2 km/hr, so it traveled at a speed of 30 + 2 = 32 km/hr. Therefore, it covered a distance of 32 km.\nIn the third hour, the speed of the car increased by 2 km/hr again, so it traveled at a speed of 32 + 2 = 34 km/hr. Therefore, it covered a distance of 34 km.\nIn the fourth hour, the speed of the car increased by 2 km/hr once more, so it traveled at a speed of 34 + 2 = 36 km/hr. Therefore, it covered a distance of 36 km.\nIn the fifth hour, the speed of the car increased by 2 km/hr again, so it traveled at a speed of 36 + 2 = 38 km/hr. Therefore, it covered a distance of 38 km.\nIn the sixth hour, the speed of the car increased by 2 km/hr once more, so it traveled at a speed of 38 + 2 = 40 km/hr. Therefore, it covered a distance of 40 km.\nIn the seventh hour, the speed of the car increased by 2 km/hr again, so it traveled at a speed of 40 + 2 = 42 km/hr. Therefore, it covered a distance of 42 km.\nIn the eighth hour, the speed of the car increased by 2 km/hr once more, so it traveled at a speed of 42 + 2 = 44 km/hr. Therefore, it covered a distance of 44 km.\nThe total",
+        "extract_true_num": 296.0,
+        "extract_pred_num": 44.0,
+        "is_correct": false
+    },
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "Suppose 8 monkeys take 8 minutes to eat 8 bananas. How many minutes would it take 3 monkeys to eat 3 bananas?",
+            "original_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 10 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 10",
+            "transformed_answer": 10.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly claims that it would take 10 minutes instead of 8 minutes for 3 monkeys to eat 3 bananas in step 2, even though the rate of eating (1 banana per monkey per minute) remains the same. The error in step 2 does not impact step 1 as it is independent and correct in stating the initial ratio. Thus, only the related subsequent step is affected while previous or unrelated steps remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nSuppose 8 monkeys take 8 minutes to eat 8 bananas. How many minutes would it take 3 monkeys to eat 3 bananas?\n\n### Response:",
+        "output_str": "If 8 monkeys take 8 minutes to eat 8 bananas, then 1 monkey takes 8/8 = 1 minute to eat 1 banana.\nTherefore, 3 monkeys would take 3 * 1 = 3 minutes to eat 3 bananas.\nThe answer is: 3",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 39,
+        "gsm8k_data": {
+            "question": "An alloy weighing 48 ounces is 25% gold. How many ounces of pure gold must be added to create an alloy that is 40% gold?",
+            "original_solution": "The amount of gold in the original alloy is 48 x 0.25 = 12 ounces.\nLet's say x ounces of pure gold must be added.\nThe total weight of the new alloy is 48 + x ounces.\nThe amount of gold in the new alloy is 12 + x ounces.\nSo, (12 + x) / (48 + x) = 0.40\n12 + x = 0.40 * (48 + x)\n12 + x = 19.20 + 0.40x\n0.60x = 7.20\nx = 12 ounces\n#### 12",
+            "original_answer": 12.0,
+            "transformed_solution": "The amount of gold in the original alloy is 48 x 0.25 = 12 ounces.\nLet's say x ounces of pure gold must be added.\nThe total weight of the new alloy is 48 + x ounces.\nThe amount of gold in the new alloy is 12 + x ounces.\nSo, (12 + x) / (48 + x) = 0.40\n12 + x = 0.40 * (48 + x)\n12 + x = 19.20 + 0.40x\n0.60x = 6.40\nx = 10.67 ounces\n#### 10.67",
+            "transformed_answer": 10.67,
+            "wrong_step": 8,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformation process, the correct subtraction in step 8, which should have been 19.20 - 12, has been changed to produce an incorrect result of 6.40 instead of 7.20, thus altering the result in step 9 from 12 ounces to an incorrect value of approximately 10.67 ounces. Subsequent steps have inherited the error from step 8 but did not affect previous steps. The modified step explicitly presents a calculation error fulfilling the requirement that only one step in the solution process should be wrong, and the error should propagate accordingly without changing the operands or the operators of the formula."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn alloy weighing 48 ounces is 25% gold. How many ounces of pure gold must be added to create an alloy that is 40% gold?\n\n### Response:",
+        "output_str": "If the alloy weighs 48 ounces and is 25% gold, then the amount of gold in the alloy is $0.25 \\times 48 = 12$ ounces.\nTo create an alloy that is 40% gold, we need to add $0.40 \\times 48 = 19.2$ ounces of gold.\nSince we already have 12 ounces of gold, we need to add $19.2 - 12 = \\boxed{7.2}$ ounces of pure gold.\nThe answer is: 7.2",
+        "extract_true_num": 12.0,
+        "extract_pred_num": 7.2,
+        "is_correct": false
+    },
+    {
+        "index": 40,
+        "gsm8k_data": {
+            "question": "A boat having a length of 3 m and breadth of 2 m is floating on a lake. The boat sinks by 1 cm when a man gets on it. What is the mass of the man?",
+            "original_solution": "Volume of water displaced = length x breadth x change in depth\n= 3 x 2 x 0.01 = 0.06 cubic meters\nWeight of water displaced = 0.06 x 1000 = 60 kg (as 1 cubic meter of water weighs 1000 kg)\nTherefore, the mass of the man is 60 kg\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "Volume of water displaced = length x breadth x change in depth\n= 3 x 2 x 0.01 = 0.06 cubic meters\nWeight of water displaced = 0.06 x 1000 = 70 kg (as 1 cubic meter of water weighs 1000 kg)\nTherefore, the mass of the man is 70 kg\n#### 70",
+            "transformed_answer": 70.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformation process incorrectly changes the weight of water displaced from 60 kg to 70 kg in step 2. This error then carries through to step 3, affecting the final statement about the mass of the man, which becomes 70 kg instead of the correct 60 kg. The calculation in step 2 is the only error introduced, and the subsequent affected step (step 3) mirrors this incorrect result. There is only one error in the transformed solution, and the numbers in the formula and language description inherit the error, although the calculation process to get the incorrect number is not shown."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA boat having a length of 3 m and breadth of 2 m is floating on a lake. The boat sinks by 1 cm when a man gets on it. What is the mass of the man?\n\n### Response:",
+        "output_str": "The volume of the boat is calculated by multiplying the length and breadth, so the volume is 3 m x 2 m = 6 cubic meters.\nSince the boat sinks by 1 cm when a man gets on it, the volume of the man is 6 cubic meters - 1 cm x 6 cubic meters = 6 cubic meters - 6 cubic centimeters = 6 cubic centimeters.\nTo convert cubic centimeters to grams, we multiply by 1000, so the mass of the man is 6 cubic centimeters x 1000 = 6000 grams.\n#### 6000\nThe answer is: 6000",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 6000.0,
+        "is_correct": false
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "if you multiply all the numbers on your mobile phone except 0 and 9 , what is the answer ?",
+            "original_solution": "The numbers on a mobile phone are 1, 2, 3, 4, 5, 6, 7, and 8.\nMultiplying all these numbers gives 40,320.\n#### 40,320",
+            "original_answer": 40320.0,
+            "transformed_solution": "The numbers on a mobile phone are 1, 2, 3, 4, 5, 6, 7, and 8.\nMultiplying all these numbers gives 40,322.\n#### 40,322",
+            "transformed_answer": 40322.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the transformed_solution has only one incorrect calculation step which arbitrarily changes the product from the correct value 40,320 to an incorrect value 40,322. The correct multiplication of numbers 1 to 8 on a mobile phone keypad excluding 0 and 9 does indeed give 40,320. By changing the result to 40,322, we introduce a calculation error at step 2. The other step which describes the numbers on the phone is unaffected and therefore remains correct and unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif you multiply all the numbers on your mobile phone except 0 and 9 , what is the answer ?\n\n### Response:",
+        "output_str": "If we multiply all the numbers on our mobile phone except 0 and 9, we are essentially multiplying all the numbers from 1 to 8.\nThe product of these numbers can be found by multiplying the first and last number (8) and then multiplying by the number of terms (8-0+1)/2+1 = 40.\nSo, the product is 8 * 40 = 320.\nTherefore, the answer is $\\boxed{320}$.The answer is: 320",
+        "extract_true_num": 40320.0,
+        "extract_pred_num": 320.0,
+        "is_correct": false
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "the difference between c . i . and s . i . on an amount of $ 20,000 for 2 years is $ 72 . what is the rate of interest per annum ?",
+            "original_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72.\nSolving this equation gives x = 0.06.\n#### 6%",
+            "original_answer": 6.0,
+            "transformed_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 82.\nSolving this equation gives x = 0.07.\n#### 7%",
+            "transformed_answer": 7.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example presents an error in step 3 where the difference between c . i . and s . i . is wrongly taken as $82 instead of $72. This error affects the equation to be solved and thus, results in a different calculated interest rate in step 4. Since the interest rate x calculated is based on the erroneous step 3, it gets incorrectly calculated as 0.07 (or 7%) instead of the correct 0.06 (or 6%). Previous steps remain unaffected by this error, only subsequent steps that depend on the wrong output of the altered step are influenced."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe difference between c . i . and s . i . on an amount of $ 20,000 for 2 years is $ 72 . what is the rate of interest per annum ?\n\n### Response:",
+        "output_str": "Let $x$ be the rate of interest per annum.\nFor the first year, the amount of money earned from interest is $20,000 \\cdot \\frac{x}{100} = 200x$.\nFor the second year, the amount of money earned from interest is $20,000 \\cdot \\frac{x}{100} = 200x$.\nThe difference between the two amounts is $200x - 200x = 72$.\nSimplifying, we have $0 = 72$.\nThis means that the rate of interest per annum is $\\boxed{0}$.\nThe answer is: 0",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 0.0,
+        "is_correct": false
+    },
+    {
+        "index": 43,
+        "gsm8k_data": {
+            "question": "a train 630 m long, running with a speed of 63 km / hr will pass a tree in ?",
+            "original_solution": "First convert the speed from km/hr to m/s: 63 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 63000 / 3600 = 175/10 = 17.5 m/s\nCalculate the time it takes to pass the tree using the formula time = distance / speed: 630 m / 17.5 m/s = 36 s\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "First convert the speed from km/hr to m/s: 63 km/hr * (1000 m / 1 km) * (1 hr / 3600 s) = 63000 / 3600 = 175/10 = 15 m/s\nCalculate the time it takes to pass the tree using the formula time = distance / speed: 630 m / 15 m/s = 42 s\n#### 42",
+            "transformed_answer": 42.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the conversion from km/hr to m/s as 15 m/s instead of the accurate conversion, which is 17.5 m/s. This error in step 1 affects the step when calculating the time it takes to pass the tree. The original time calculation of 630 m / 17.5 m/s = 36 s is altered to 630 m / 15 m/s = 42 s due to the incorrect conversion rate in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na train 630 m long, running with a speed of 63 km / hr will pass a tree in ?\n\n### Response:",
+        "output_str": "To find the time it takes for the train to pass the tree, we can use the formula: time = distance / speed.\nThe distance of the train is 630 m and its speed is 63 km/hr.\nTo convert the distance to kilometers, we divide by 1000: 630 m / 1000 = 0.63 km.\nNow we can calculate the time: 0.63 km / 63 km/hr = 1 hour.\nTherefore, the train will pass the tree in 1 hour.\n#### 1\nThe answer is: 1",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 1.0,
+        "is_correct": false
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "In a manufacturing plant, it takes 36 machines 4 hours of continuous work to fill 4 standard orders. At this rate, how many hours of continuous work by 72 machines are required to fill 12 standard orders?",
+            "original_solution": "It takes 36 machines 4 hours to fill 4 standard orders, so it takes 36 x 4 = 144 machine-hours to fill 4 standard orders.\nTo fill 12 standard orders, it will take 144 x (12/4) = 144 x 3 = 432 machine-hours.\n72 machines working together will take 432 / 72 = 6 hours to fill 12 standard orders.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "It takes 36 machines 4 hours to fill 4 standard orders, so it takes 36 x 4 = 144 machine-hours to fill 4 standard orders.\nTo fill 12 standard orders, it will take 144 x (12/4) = 144 x 3 = 442 machine-hours.\n72 machines working together will take 442 / 72 = 6.14 hours to fill 12 standard orders.\n#### 6.14",
+            "transformed_answer": 6.14,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, there is an intentional miscalculation in step 2 where 144 x 3 was incorrectly calculated as 442 instead of 432. This affected the last step, where it falsely states that 442 machine-hours worked by 72 machines would take 6.14 hours to complete rather than the correct 6 hours. The earlier step calculating the machine-hours needed for 4 standard orders is unaffected, so it remains the same as in the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a manufacturing plant, it takes 36 machines 4 hours of continuous work to fill 4 standard orders. At this rate, how many hours of continuous work by 72 machines are required to fill 12 standard orders?\n\n### Response:",
+        "output_str": "If it takes 36 machines 4 hours of continuous work to fill 4 standard orders, then it takes 36/4 = 9 machines 1 hour of continuous work to fill 1 standard order.\nTherefore, to fill 12 standard orders, we would need 12 * 9 = 108 machines 1 hour of continuous work.\nSince we have 72 machines, we can calculate the total number of hours of continuous work required by dividing the total number of machines by the number of machines required for 1 hour of continuous work: 72 / 9 = 8 hours.\nTherefore, 8 hours of continuous work by 72 machines are required to fill 12 standard orders.\n#### 8\nThe answer is: 8",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 8.0,
+        "is_correct": false
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 24 days to complete 3 works because 6 x 3 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 6 x 3 as 24 instead of 6 x 3 = 18 in step 2. The first step, which involves calculating the time it takes for 1 work, remains unchanged. The erroneous calculation is introduced in step 2 by changing the original correct result of 6 x 3 = 18 to a wrong result of 6 x 3 = 24. Since this is the last part of the calculation, no subsequent steps are affected, and thus step 2 is the only step with a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "If aarti can do a piece of work in 6 days, then she can do 1/6 of the work in 1 day.\nTo complete three times the work of the same type, she would need to do 3 * 1/6 = 1/2 of the work in 1 day.\nSince she can do 1/6 of the work in 1 day, it would take her 1/2 * 6 = 3 days to complete three times the work.\n#### 3\nThe answer is: 3",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 47,
+        "gsm8k_data": {
+            "question": "In a class of 25 students in an examination in maths 5 students scored 95 marks each, 3 get zero each and the average of the rest was 45. What is the average of the whole class?",
+            "original_solution": "Total marks scored by the 5 students = 5 x 95 = 475\nTotal marks scored by the 3 students = 3 x 0 = 0\nTotal marks scored by the 17 students = 17 x 45 = 765\nTotal marks scored by all 25 students = 475 + 0 + 765 = 1240\nAverage marks of the whole class = 1240 / 25 = 49.6\n#### 49.6",
+            "original_answer": 49.6,
+            "transformed_solution": "Total marks scored by the 5 students = 5 x 95 = 475\nTotal marks scored by the 3 students = 3 x 0 = 0\nTotal marks scored by the 17 students = 17 x 45 = 765\nTotal marks scored by all 25 students = 475 + 0 + 765 = 1235\nAverage marks of the whole class = 1235 / 25 = 49.4\n#### 49.4",
+            "transformed_answer": 49.4,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the sum of the marks in step 4 has been wrongly calculated as 1235 instead of 1240. This modification affects the final average calculation in step 5, changing the answer to 49.4 instead of 49.6. Previous and unrelated steps remain unchanged as the error is only introduced in step 4, and step 5 reflects the impact of the erroneous total."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a class of 25 students in an examination in maths 5 students scored 95 marks each, 3 get zero each and the average of the rest was 45. What is the average of the whole class?\n\n### Response:",
+        "output_str": "There are 5 students who scored 95 marks each, so their total marks are 5 * 95 = 475.\nThere are 3 students who got zero marks each, so their total marks are 3 * 0 = 0.\nThe remaining students are 25 - 5 - 3 = 17.\nThe average of the remaining students is 45, so their total marks are 17 * 45 = 755.\nThe total marks of the whole class are 475 + 0 + 755 = 1230.\nThe average of the whole class is 1230 / 25 = 49.2.\nRounded to the nearest whole number, the average is 49.\n#### 49\nThe answer is: 49",
+        "extract_true_num": 49.6,
+        "extract_pred_num": 49.0,
+        "is_correct": false
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "a sum fetched a total simple interest of rs . 2700 at the rate of 6 p . c . p . a . in 3 years . what is the sum ?",
+            "original_solution": "Simple interest = (P * R * T) / 100\n2700 = (P * 6 * 3) / 100\n2700 * 100 / (6 * 3) = P\nP = 15000\n#### 15000",
+            "original_answer": 15000.0,
+            "transformed_solution": "Simple interest = (P * R * T) / 100\n2700 = (P * 6 * 3) / 100\n2700 * 100 / (6 * 3) = P\nP = 16000\n#### 16000",
+            "transformed_answer": 16000.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "I have altered the calculation result in the final step, changing P from 15000 to 16000, without modifying any operands or operators of the formula. This error is propagated directly from the last step of calculation and does not affect the previous steps. The calculation through the formula itself is correct; however, the final result has been intentionally altered from the correct answer. All other steps remain unchanged and no other calculations are affected because they precede the error and are unrelated to it."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na sum fetched a total simple interest of rs . 2700 at the rate of 6 p . c . p . a . in 3 years . what is the sum ?\n\n### Response:",
+        "output_str": "The formula for simple interest is: I = P * r * t, where I is the interest, P is the principal (the initial amount), r is the interest rate, and t is the time in years.\nIn this case, we are given that the interest is rs 2700, the interest rate is 6%, and the time is 3 years.\nSo we can set up the equation: rs 2700 = P * 0.06 * 3.\nSimplifying, we have: rs 2700 = 0.18P.\nTo solve for P, we divide both sides of the equation by 0.18: P = rs 2700 / 0.18.\nCalculating this, we find that P = rs 14400.\nTherefore, the sum is rs 14400 + rs 2700 = rs 17100.\n#### 17100\nThe answer is: 17100",
+        "extract_true_num": 15000.0,
+        "extract_pred_num": 17100.0,
+        "is_correct": false
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "If 13 men do a work in 80 days, in how many days will 20 men do it?",
+            "original_solution": "One man will take 13 x 80 = 1040 days to do the work.\n20 men will take 1040 / 20 = 52 days to do it.\n#### 52",
+            "original_answer": 52.0,
+            "transformed_solution": "One man will take 13 x 80 = 1040 days to do the work.\n20 men will take 1040 / 20 = 50 days to do it.\n#### 50",
+            "transformed_answer": 50.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, step 2, which is 1040 / 20, is incorrectly calculated as 50 instead of 52. The change made to the second step does not have any impact on the calculations of the prior step. The calculation error in transformed_solution is present only in step 2 where the result of dividing 1040 by 20 is mistakenly said to be 50, the actual division carries the correct answer of 52."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf 13 men do a work in 80 days, in how many days will 20 men do it?\n\n### Response:",
+        "output_str": "If 13 men do a work in 80 days, then the rate of work is 13 men / 80 days = 1/6 men per day.\nIf 20 men are working, then the rate of work is 20 men / x days = 1/6 men per day.\nCross multiplying, we get 20 * 6 = x * 1.\nSimplifying, we get 120 = x.\nTherefore, 20 men will do the work in 120 days.\n#### 120\nThe answer is: 120",
+        "extract_true_num": 52.0,
+        "extract_pred_num": 120.0,
+        "is_correct": false
+    },
+    {
+        "index": 51,
+        "gsm8k_data": {
+            "question": "two thirds of the roads from a to b are at least 5 miles long, and 1 / 2 of the roads from b to c are at least 5 miles long. if you randomly pick a road from a to b and then randomly pick a road from b to c, what is the probability that at least one of the roads you pick is at least 5 miles long?",
+            "original_solution": "Probability = 1 - (1 - 2/3) * (1 - 1/2) = 1 - (1/3) * (1/2)\nProbability = 1 - (1/6)\nProbability = 5/6\n#### 5/6",
+            "original_answer": "5/6",
+            "transformed_solution": "Probability = 1 - (1 - 2/3) * (1 - 1/2) = 1 - (1/3) * (1/2)\nProbability = 1 - (1/6)\nProbability = 4/6\n#### 4/6",
+            "transformed_answer": "4/6",
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the error was introduced in the last step of the calculation, by changing the correct probability from 5/6 to 4/6. The steps before the error (steps 1 and 2) are not affected and remain unchanged. Step 3 transforms 1 - (1/6) to 4/6 instead of the correct 5/6, thus introducing the error that carries over to the final answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ntwo thirds of the roads from a to b are at least 5 miles long, and 1 / 2 of the roads from b to c are at least 5 miles long. if you randomly pick a road from a to b and then randomly pick a road from b to c, what is the probability that at least one of the roads you pick is at least 5 miles long?\n\n### Response:",
+        "output_str": "Let $x$ be the total number of roads from $a$ to $b$, and let $y$ be the total number of roads from $b$ to $c$.\nWe are given that $\\frac{2}{3}x$ roads from $a$ to $b$ are at least 5 miles long, and $\\frac{1}{2}y$ roads from $b$ to $c$ are at least 5 miles long.\nThe probability that a randomly chosen road from $a$ to $b$ is at least 5 miles long is $\\frac{\\frac{2}{3}x}{x} = \\frac{2}{3}$,\nand the probability that a randomly chosen road from $b$ to $c$ is at least 5 miles long is $\\frac{\\frac{1}{2}y}{y} = \\frac{1}{2}$.\nSince the two events are independent, the probability that at least one of the roads you pick is at least 5 miles long is $\\frac{2}{3} \\cdot \\frac{1}{2} = \\boxed{\\frac{1}{3}}$.\nThe answer is: \\frac{1}{3}",
+        "extract_true_num": "5/6",
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "in some quantity of ghee , 60 % of pure ghee and 40 % of is vanaspati . if 10 kg of pure ghee is added , then the strength of vanaspati ghee becomes 20 % . the original quantity was ?",
+            "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 4\n0.2x = 4\nx = 20\nThe original quantity of ghee was 20 kg.\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 8,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the wrong calculation is introduced at step 8, where the term \"0.2x + 2\" is incorrectly changed to \"0.2x + 4\". This error is then inherited by the following steps. Step 9 changes the subtraction result to \"0.2x = 4\", and step 10 gives us the incorrect answer \"x = 20\" instead of the correct \"x = 10\". Only this single error has been made, and it propagates through to the final answer, resulting in a transformed answer of 20 kg instead of the correct original answer of 10 kg."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nin some quantity of ghee , 60 % of pure ghee and 40 % of is vanaspati . if 10 kg of pure ghee is added , then the strength of vanaspati ghee becomes 20 % . the original quantity was ?\n\n### Response:",
+        "output_str": "Let the original quantity of ghee be x kg.\n60% of x kg is 0.6x kg of pure ghee.\n40% of x kg is 0.4x kg of vanaspati ghee.\nIf 10 kg of pure ghee is added, the new quantity of pure ghee is 0.6x + 10 kg.\nThe new quantity of vanaspati ghee is 0.4x + 10 kg.\nThe strength of vanaspati ghee becomes 20% when the new quantity is 0.2(0.4x + 10) kg.\nSimplifying the equation, we get 0.2(0.4x + 10) = 0.2x + 2 kg.\nExpanding and simplifying further, we get 0.08x + 2 = 0.2x + 2.\nSubtracting 0.2x from both sides, we get 0.08x - 0.2x = 2 - 2.\nSimplifying, we get -0.12x = 0.\nDividing both sides by -0.12, we get x = 0.\nTherefore, the original quantity of ghee is 0 kg.\n#### 0\nThe answer is: 0",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 0.0,
+        "is_correct": false
+    },
+    {
+        "index": 53,
+        "gsm8k_data": {
+            "question": "8 business executives and 7 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place?",
+            "original_solution": "The business executives will have 8C2 = 28 handshakes \nThe chairmen will have 7*8 = 56 handshakes \nSo, the total number of handshakes would be 28 + 56 = 84 \n#### 84",
+            "original_answer": 84.0,
+            "transformed_solution": "The business executives will have 8C2 = 28 handshakes \nThe chairmen will have 7*8 = 54 handshakes \nSo, the total number of handshakes would be 28 + 54 = 82 \n#### 82",
+            "transformed_answer": 82.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates step 2 as 7 * 8 = 54 instead of 7 * 8 = 56. This changes step 3 from the correct computation of 28 + 56 = 84 to an incorrect total of 28 + 54 = 82. The error in step 2 affects step 3, which is the sum of the handshakes, but does not impact the correct calculation performed in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n8 business executives and 7 chairmen meet at a conference. If each business executive shakes the hand of every other business executive and every chairman once, and each chairman shakes the hand of each of the business executives but not the other chairmen, how many handshakes would take place?\n\n### Response:",
+        "output_str": "Each business executive shakes the hand of every other business executive, so there are $\\binom{8}{2} = 28$ handshakes among the business executives.\nEach business executive also shakes the hand of each chairman, so there are $8 \\cdot 7 = 56$ handshakes between the business executives and the chairmen.\nEach chairman shakes the hand of each business executive, so there are $7 \\cdot 8 = 56$ handshakes between the chairmen and the business executives.\nHowever, we have counted each handshake twice (once for each person involved), so we need to divide by 2 to get the total number of handshakes.\nTherefore, the total number of handshakes is $\\frac{28 + 56 + 56}{2} = \\boxed{74}$.The answer is: 74",
+        "extract_true_num": 84.0,
+        "extract_pred_num": 74.0,
+        "is_correct": false
+    },
+    {
+        "index": 54,
+        "gsm8k_data": {
+            "question": "A waitress's income consists of her salary and tips. During one week, her tips were 11/4 of her salary. What fraction of her income for the week came from tips?",
+            "original_solution": "The fraction of her income from tips is 11/4 / (1 + 11/4) = 11/4 / (4/4 + 11/4) = 11/4 / 15/4 = 11/15\n#### 11/15",
+            "original_answer": "11/15",
+            "transformed_solution": "The fraction of her income from tips is 11/4 / (1 + 11/4) = 11/4 / (4/4 + 11/4) = 11/4 / 15/4 = 11/16\n#### 11/16",
+            "transformed_answer": "11/16",
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, there is a deliberate calculation error in step 3, where the fraction 11/15 is incorrectly changed to 11/16. This is the only modification made. The steps before the error remain correct according to the original_solution. The wrong calculation results from misrepresenting the fraction 15/4 as 16/4, which leads to the incorrect final answer of 11/16 instead of 11/15."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA waitress's income consists of her salary and tips. During one week, her tips were 11/4 of her salary. What fraction of her income for the week came from tips?\n\n### Response:",
+        "output_str": "Let's say the waitress's salary for the week is $x.\nThen her tips for the week are $\\frac{11}{4}x$.\nHer total income for the week is $x + \\frac{11}{4}x = \\frac{15}{4}x$.\nTo find the fraction of her income that came from tips, we divide her tips by her total income:\n$\\frac{\\frac{11}{4}x}{\\frac{15}{4}x} = \\frac{11}{15}$.\nSo, $\\frac{11}{15}$ of her income for the week came from tips.\nThe answer is: \\frac{11}{15}",
+        "extract_true_num": "11/15",
+        "extract_pred_num": 15.0,
+        "is_correct": false
+    },
+    {
+        "index": 55,
+        "gsm8k_data": {
+            "question": "What will be the fraction of 8 %?",
+            "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+            "original_answer": "2/25",
+            "transformed_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 4/50.\n#### 4/50",
+            "transformed_answer": "4/50",
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformation incorrectly simplifies the fraction 8/100. The correct simplification is 2/25 (as this is 8 divided by the common factor of 4), but instead, it presents 8/100 simplified as 4/50 which is not the simplest form. As the simplification is the only step after converting the percentage to a fraction, this miscalculation only affects the answer and is therefore a single error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat will be the fraction of 8 %?\n\n### Response:",
+        "output_str": "To find the fraction of 8%, we need to divide 8 by 100.\n8 divided by 100 is 0.08.\nTherefore, the fraction of 8% is 0.08.\nThe answer is: 0.08",
+        "extract_true_num": "2/25",
+        "extract_pred_num": 0.08,
+        "is_correct": false
+    },
+    {
+        "index": 56,
+        "gsm8k_data": {
+            "question": "how much more would rs . 50000 fetch , after two years , if it is put at 20 % p . a . compound interest payable half yearly than if is put at 20 % p . a . compound interest payable yearly ?",
+            "original_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 72000\nThe difference in the amounts is 73205 - 72000 = 1205\n#### 1205",
+            "original_answer": 1205.0,
+            "transformed_solution": "In the first case, the interest compounded half yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 2, and t = 2\nA = 50000(1 + 0.20/2)^(2*2) = 50000(1 + 0.10)^(4) = 50000(1.10)^4\nA = 50000*1.4641 = 73205\nIn the second case, the interest compounded yearly, so the amount after two years will be A = P(1 + r/n)^(nt) where P = 50000, r = 20/100, n = 1, and t = 2\nA = 50000(1 + 0.20)^(2*1) = 50000*1.20^2 = 50000*1.44\nA = 71000\nThe difference in the amounts is 73205 - 71000 = 2205\n#### 2205",
+            "transformed_answer": 2205.0,
+            "wrong_step": 9,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates the second amount as 71000 instead of 72000 in step 9, which affects the final step for calculating the difference between the amounts. The erroneous calculation in step 9 leads to an incorrect difference computed in the final step, modifying 73205 - 72000 = 1205 to 73205 - 71000 = 2205. It is essential to recognize that only one calculation error is introduced, and all other previous calculations or steps that do not directly relate to the wrong step are presumed to be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nhow much more would rs . 50000 fetch , after two years , if it is put at 20 % p . a . compound interest payable half yearly than if is put at 20 % p . a . compound interest payable yearly ?\n\n### Response:",
+        "output_str": "If the money is put at 20% p.a. compound interest payable half yearly, then the formula for the amount after two years is $A = P(1 + r/n)^(2n)$, where $P$ is the principal amount, $r$ is the interest rate, $n$ is the number of times interest is compounded per year, and $A$ is the final amount.\nPlugging in the given values, we have $A = 50000(1 + 0.20/2)^(2*2) = 50000(1.10)^4 = 50000(1.4641) = 73255$.\nIf the money is put at 20% p.a. compound interest payable yearly, then the formula for the amount after two years is $A = P(1 + r/1)^(1*2) = 50000(1 + 0.20)^2 = 50000(1.20)^2 = 50000(1.44) = 72000$.\nThe difference in the amounts is $73255 - 72000 = \\boxed{1255}$.\nThe answer is: 1255",
+        "extract_true_num": 1205.0,
+        "extract_pred_num": 1255.0,
+        "is_correct": false
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "Income and expenditure of a person are in the ratio 5 : 4. If the income of the person is Rs. 17000, then find his savings?",
+            "original_solution": "Total ratio units = 5 + 4 = 9\nEach ratio unit is worth Rs. 17000 / 5 = Rs. 3400\nIncome = 5 x Rs. 3400 = Rs. 17000\nExpenditure = 4 x Rs. 3400 = Rs. 13600\nSavings = Income - Expenditure = Rs. 17000 - Rs. 13600 = Rs. 3400\n#### 3400",
+            "original_answer": 3400.0,
+            "transformed_solution": "Total ratio units = 5 + 4 = 9\nEach ratio unit is worth Rs. 17000 / 5 = Rs. 3400\nIncome = 5 x Rs. 3400 = Rs. 17000\nExpenditure = 4 x Rs. 3400 = Rs. 12000\nSavings = Income - Expenditure = Rs. 17000 - Rs. 12000 = Rs. 5000\n#### 5000",
+            "transformed_answer": 5000.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The calculation error was introduced in step 4, where the Expenditure was incorrectly calculated as 4 x Rs. 3400 = Rs. 12000 instead of 4 x Rs. 3400 = Rs. 13600. Since the error occurred in the computation of Expenditure, the subsequent Savings calculation (step 5) also needs to incorporate this error. We continue with the correct method for subtraction in step 5, but use the erroneous Rs. 12000 for Expenditure instead of the correct Rs. 13600. The calculation for the previous steps remains unaffected, therefore, these steps are unchanged. The error leads to the wrong conclusion that the Savings are Rs. 5000 instead of the correct Rs. 3400."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIncome and expenditure of a person are in the ratio 5 : 4. If the income of the person is Rs. 17000, then find his savings?\n\n### Response:",
+        "output_str": "The ratio of income to expenditure is 5 : 4.\nIf the income is Rs. 17000, then the expenditure is 4/5 * Rs. 17000 = Rs. 12800.\nThe savings are the difference between the income and expenditure, which is Rs. 17000 - Rs. 12800 = Rs. 4200.\n#### 4200\nThe answer is: 4200",
+        "extract_true_num": 3400.0,
+        "extract_pred_num": 4200.0,
+        "is_correct": false
+    },
+    {
+        "index": 59,
+        "gsm8k_data": {
+            "question": "Two trains of length 160 m and 280 m are running towards each other on parallel lines at 42 kmph and 30 kmph respectively. In what time will they be clear of each other from the moment they meet?",
+            "original_solution": "Relative speed = (42 + 30) km/hr = 72 km/hr = (72 * 5) / 18 m/s = 20 m/s\nDistance covered = 160 + 280 = 440 m\nTime = Distance / Speed = 440 / 20 = 22 seconds\n#### 22",
+            "original_answer": 22.0,
+            "transformed_solution": "Relative speed = (42 + 30) km/hr = 72 km/hr = (72 * 5) / 18 m/s = 20 m/s\nDistance covered = 160 + 280 = 440 m\nTime = Distance / Speed = 440 / 20 = 24 seconds\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformed solution introduces a calculation error in step 3 where the time, calculated as Distance / Speed resulting in 440 / 20, is incorrectly given as 24 seconds instead of the correct 22 seconds. All other steps correctly inherit the outputs and calculations from the preceding steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTwo trains of length 160 m and 280 m are running towards each other on parallel lines at 42 kmph and 30 kmph respectively. In what time will they be clear of each other from the moment they meet?\n\n### Response:",
+        "output_str": "The first train is traveling at a speed of 42 kmph and has a length of 160 m.\nThe second train is traveling at a speed of 30 kmph and has a length of 280 m.\nWhen the two trains meet, the relative speed between them is 42 kmph - 30 kmph = 12 kmph.\nTo calculate the time it takes for the two trains to be clear of each other, we need to divide the total distance between them by the relative speed.\nThe total distance between the two trains is 160 m + 280 m = 440 m.\nThe time it takes for the two trains to be clear of each other is 440 m / 12 kmph = 36 hours.\n#### 36\nThe answer is: 36",
+        "extract_true_num": 22.0,
+        "extract_pred_num": 36.0,
+        "is_correct": false
+    },
+    {
+        "index": 62,
+        "gsm8k_data": {
+            "question": "There are some birds in a cage. 1/3 fly away. Then 2/5 of the remaining left the cage. Then 2/3 of the remaining left the cage. At last, 8 were remaining. How many birds were in total?",
+            "original_solution": "Let x be the original number of birds\nAfter 1/3 fly away, there are 2x/3 birds left\nAfter 2/5 of the remaining leave, there are (2x/3) x (3/5) = 2x/5 birds left\nAfter 2/3 of the remaining leave, there are (2x/5) x (1/3) = 2x/15 birds left\n2x/15 = 8, so x = 8 x 15 / 2 = 60\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "Let x be the original number of birds\nAfter 1/3 fly away, there are 2x/3 birds left\nAfter 2/5 of the remaining leave, there are (2x/3) x (3/5) = 2x/5 birds left\nAfter 2/3 of the remaining leave, there are (2x/5) x (1/3) = 2x/45 birds left\n2x/45 = 8, so x = 8 x 45 / 2 = 180\n#### 180",
+            "transformed_answer": 180.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 originally correctly multiplies (2x/5) by (1/3) to get 2x/15, but has been wrongly modified to (2x/5) x (1/3) = 2x/45. As a result, the answer in step 3 changes the number of remaining birds, which also changes the final calculation to solve for x. The wrong calculation of 2x/45 = 8, followed by solving for x gives x = 8 x 45 / 2 = 180, which leads to the incorrect transformed answer of 180. This error only affects the subsequent related steps, not the preceding ones."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThere are some birds in a cage. 1/3 fly away. Then 2/5 of the remaining left the cage. Then 2/3 of the remaining left the cage. At last, 8 were remaining. How many birds were in total?\n\n### Response:",
+        "output_str": "Let's assume the total number of birds in the cage is x.\n1/3 of the birds fly away, so the remaining number of birds is (2/3)x.\n2/5 of the remaining birds leave the cage, so the remaining number of birds is (2/3)x * (3/5) = (2/5)x.\n2/3 of the remaining birds leave the cage, so the remaining number of birds is (2/5)x * (3/2) = (3/5)x.\nAt last, 8 birds are remaining, so (3/5)x = 8.\nTo solve for x, we multiply both sides of the equation by 5/3: x = 8 * (5/3) = 10.\nTherefore, there were 10 birds in total.\n#### 10\nThe answer is: 10",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 10.0,
+        "is_correct": false
+    },
+    {
+        "index": 63,
+        "gsm8k_data": {
+            "question": "What is the perimeter, in meters, of a rectangular garden 8 meters wide that has the same area as a rectangular playground 16 meters long and 12 meters wide?",
+            "original_solution": "Area of the garden = 8 * length\nArea of the playground = 16 * 12\n8 * length = 16 * 12\nlength = 16 * 12 / 8\nlength = 24\nPerimeter of the garden = 2 * (8 + 24) = 64\n#### 64",
+            "original_answer": 64.0,
+            "transformed_solution": "Area of the garden = 8 * length\nArea of the playground = 16 * 12\n8 * length = 16 * 12\nlength = 16 * 12 / 8\nlength = 32\nPerimeter of the garden = 2 * (8 + 32) = 80\n#### 80",
+            "transformed_answer": 80.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation of length in step 4 is incorrectly performed as 16 * 12 / 8 = 32 instead of the correct 16 * 12 / 8 = 24. As a result, the perimeter, which is calculated based on the length, is also incorrect in step 5, with 2 * (8 + 32) yielding 80 instead of the correct 2 * (8 + 24) = 64. The steps before the error remain unchanged as they do not depend on the miscalculated length."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat is the perimeter, in meters, of a rectangular garden 8 meters wide that has the same area as a rectangular playground 16 meters long and 12 meters wide?\n\n### Response:",
+        "output_str": "The area of the garden is $8 \\times 12 = 96$ square meters.\nThe area of the playground is $16 \\times 12 = 192$ square meters.\nSince the areas are equal, the dimensions of the garden are half the dimensions of the playground.\nTherefore, the length of the garden is $16/2 = 8$ meters and the width is $12/2 = 6$ meters.\nThe perimeter of the garden is $2(8+6) = \\boxed{20}$ meters.\nThe answer is: 20",
+        "extract_true_num": 64.0,
+        "extract_pred_num": 20.0,
+        "is_correct": false
+    },
+    {
+        "index": 64,
+        "gsm8k_data": {
+            "question": "the flow of water through a drainage pipe was monitored for a 3-hour period. in the second hour, the rate of flow was 36 gallons per hour, which was 50 percent faster than the rate of flow for the first hour. if 25 percent more water flowed through the pipe in the third hour than it did in the second, how many gallons of water flowed through the pipe during the entire 3 hours?",
+            "original_solution": "The rate of flow in the first hour was 36 / 1.5 = 24 gallons per hour.\nIn the second hour, 36 x 1.25 = 45 gallons flowed through the pipe.\nThe total amount of water flowed through the pipe for 3 hours is 24 + 36 + 45 = 105 gallons.\n#### 105",
+            "original_answer": 105.0,
+            "transformed_solution": "The rate of flow in the first hour was 36 / 1.5 = 24 gallons per hour.\nIn the second hour, 36 x 1.25 = 45 gallons flowed through the pipe.\nThe total amount of water flowed through the pipe for 3 hours is 24 + 36 + 45 = 108 gallons.\n#### 108",
+            "transformed_answer": 108.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the addition in step 3 has been carried out incorrectly to transform the solution. Instead of correctly summing 24 + 36 + 45 to get 105 gallons, it was transformed to sum up to 108 gallons. This error does not affect the previous calculations, as they are independent of the addition in step 3. The respective calculations for each hour remain correct (24 gallons for the first hour, 45 gallons for the second hour). Only the final summation is modified, which produces the transformed answer of 108 gallons instead of the original answer of 105 gallons."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe flow of water through a drainage pipe was monitored for a 3-hour period. in the second hour, the rate of flow was 36 gallons per hour, which was 50 percent faster than the rate of flow for the first hour. if 25 percent more water flowed through the pipe in the third hour than it did in the second, how many gallons of water flowed through the pipe during the entire 3 hours?\n\n### Response:",
+        "output_str": "In the first hour, the rate of flow was 36/1.5 = 24 gallons per hour.\nIn the second hour, the rate of flow was 36 gallons per hour.\nIn the third hour, the rate of flow was 36 + (36 * 0.25) = 36 + 9 = 45 gallons per hour.\nSo, the total rate of flow for the 3 hours is 24 + 36 + 45 = 105 gallons per hour.\nTherefore, the total amount of water that flowed through the pipe during the 3 hours is 105 * 3 = 315 gallons.\n#### 315\nThe answer is: 315",
+        "extract_true_num": 105.0,
+        "extract_pred_num": 315.0,
+        "is_correct": false
+    },
+    {
+        "index": 66,
+        "gsm8k_data": {
+            "question": "12 spheres of the same size are made from melting a solid cylinder of 16 cm diameter and 16 cm height. What is the diameter of each sphere?",
+            "original_solution": "The volume of the cylinder is V = π * r^2 * h = π * 8^2 * 16 = 1024π cubic cm\nThe volume of one sphere is V = 1024π / 12 = 256π / 3 cubic cm\nThe radius of each sphere is r = (3V / 4π)^(1/3) = (3(256π / 3) / (4π))^(1/3) = 4 cm\nThe diameter of each sphere is 2r = 8 cm\n#### 8",
+            "original_answer": 8.0,
+            "transformed_solution": "The volume of the cylinder is V = π * r^2 * h = π * 8^2 * 16 = 1024π cubic cm\nThe volume of one sphere is V = 1024π / 12 = 85π cubic cm\nThe radius of each sphere is r = (3V / 4π)^(1/3) = (3(85π) / (4π))^(1/3)\nThe diameter of each sphere is 2r\n#### 2r",
+            "transformed_answer": "2r",
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, I modified the calculation result of the second step, incorrectly calculating the volume of one sphere as 85π instead of the correct 256π / 3. This affects the third step, where the formula now includes the incorrect value (3(85π) / (4π))^(1/3) for the radius. The diameter calculation in step four also becomes incorrect because it depends on the radius from step three. The error is only present in the calculation of step two, and subsequent dependent steps. The calculation error leads to a change in the numerical result, which deviates from the correct answer. Due to the complexity of the cubic root calculation, the exact numerical answer for the radius and diameter is not provided in the transformed_solution, represented as '2r' in the transformed_answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n12 spheres of the same size are made from melting a solid cylinder of 16 cm diameter and 16 cm height. What is the diameter of each sphere?\n\n### Response:",
+        "output_str": "The volume of the cylinder is $\\pi r^2 h = \\pi (8^2)(16) = 512\\pi$.\nSince the cylinder is melted to form 12 spheres, the volume of each sphere is $\\frac{512\\pi}{12} = 42\\pi$.\nThe volume of a sphere is $\\frac{4}{3}\\pi r^3$, so we have $\\frac{4}{3}\\pi r^3 = 42\\pi$.\nDividing both sides by $\\frac{4}{3}\\pi$, we get $r^3 = 36$.\nTaking the cube root of both sides, we find $r = 3$.\nThe diameter of each sphere is twice the radius, so the diameter is $2(3) = \\boxed{6}$.\nThe answer is: 6",
+        "extract_true_num": 8.0,
+        "extract_pred_num": 6.0,
+        "is_correct": false
+    },
+    {
+        "index": 67,
+        "gsm8k_data": {
+            "question": "A train 440 meters long is running with a speed of 60 kmph . in what time will it pass a man who is running at 6 kmph in the direction opposite to that in which the train is going ?",
+            "original_solution": "The relative speed of the train and the man is 60 + 6 = 66 kmph = 66*(5/18) m/s = 55/3 m/s.\nTime taken to pass the man = Distance/Speed = 440/(55/3) = 440*(3/55) = 24 seconds.\n#### 24",
+            "original_answer": 24.0,
+            "transformed_solution": "The relative speed of the train and the man is 60 + 6 = 66 kmph = 66*(5/18) m/s = 55/3 m/s.\nTime taken to pass the man = Distance/Speed = 440/(55/3) = 440*(3/55) = 30 seconds.\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, there's a single calculation error introduced in step 3 where the expression 440*(3/55) is incorrectly calculated as 30 seconds instead of the original correct calculation of 24 seconds. This results in the transformed_answer being different from the original_answer. The steps prior to the error remain unaffected, and this is the only error introduced into the solution process."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA train 440 meters long is running with a speed of 60 kmph . in what time will it pass a man who is running at 6 kmph in the direction opposite to that in which the train is going ?\n\n### Response:",
+        "output_str": "The train is running at a speed of 60 kmph and is 440 meters long.\nThe man is running at a speed of 6 kmph.\nTo find the time it takes for the train to pass the man, we need to find the relative speed between the train and the man.\nThe relative speed is the difference in their speeds, which is 60 - 6 = 54 kmph.\nSince the train is 440 meters long, we need to convert the relative speed from kmph to meters per second.\nThere are 1000 meters in a km, so the relative speed is 54 kmph * 1000 meters/km = 54,000 meters per second.\nTo find the time it takes for the train to pass the man, we divide the distance between them (440 meters) by the relative speed (54,000 meters per second).\nThe time it takes is 440 meters / 54,000 meters per second = 0.008 seconds.\nSince there are 60 seconds in a minute and 60 minutes in an hour, the time it takes is 0.008 seconds * 60 seconds/minute * 60 minutes/hour = 48 hours.\nTherefore, it will take 48 hours for the train to pass the man.\n#### 48\nThe answer is: 48",
+        "extract_true_num": 24.0,
+        "extract_pred_num": 48.0,
+        "is_correct": false
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "how many zeros does 10 ! end with ?",
+            "original_solution": "The number of zeros at the end of 10! is determined by the number of times 10 can be factored out of the factorial. There are two 5s in the prime factorization of 10, so there will be two trailing zeros.\n#### 2",
+            "original_answer": 2.0,
+            "transformed_solution": "The number of zeros at the end of 10! is determined by the number of times 10 can be factored out of the factorial. There are three 5s in the prime factorization of 10!, so there will be three trailing zeros.\n#### 3",
+            "transformed_answer": 3.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformation process involved changing the number \"two\" to \"three\" in the original solution text, which is incorrect because there are actually only two 5s in the prime factorization of 10!. As a result of changing the factor count, an incorrect number of trailing zeros was presented – three instead of two. This is a single calculation error (miscount of factors), and the transformed answer is consequently different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nhow many zeros does 10 ! end with ?\n\n### Response:",
+        "output_str": "To determine the number of zeros at the end of a factorial, we need to determine the number of factors of 10 in the product.\nSince 10 is equal to $2 \\times 5$, we need to count the number of factors of 2 and 5 in the prime factorization of the factorial.\nIn the prime factorization of 10!, there are clearly more factors of 2 than 5.\nTherefore, we only need to count the number of factors of 5.\nTo do this, we divide the factorial by powers of 5 until we reach a number less than 5.\n$10! \\div 5 = 20$\n$20 \\div 5 = 4$\n$4 \\div 5 = 0$\nSince we reached a number less than 5, we stop dividing.\nTherefore, there are $\\boxed{3}$ zeros at the end of 10!.The answer is: 3",
+        "extract_true_num": 2.0,
+        "extract_pred_num": 3.0,
+        "is_correct": false
+    },
+    {
+        "index": 69,
+        "gsm8k_data": {
+            "question": "A manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?",
+            "original_solution": "The difference in size between the largest and smallest is 17-8 = 9\nThe increase in length is 9 x (1/5) = 9/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 9/5\nSo, 1.2x = x + 9/5\n0.2x = 9/5\nx = (9/5) / 0.2 = 9\nThe length of size 8 is 9 inches, and size 15 is 9 + 7/5 = 10.4 inches\n#### 10.4",
+            "original_answer": 10.4,
+            "transformed_solution": "The difference in size between the largest and smallest is 17-8 = 9\nThe increase in length is 9 x (1/5) = 9/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 9/5\nSo, 1.2x = x + 9/5\n0.2x = 9/5\nx = (9/5) / 0.2 = 45\nThe length of size 8 is 45 inches, and size 15 is 45 + 7/5 = 46.4 inches\n#### 46.4",
+            "transformed_answer": 46.4,
+            "wrong_step": 6,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error is introduced at step 6 where the division (9/5) / 0.2 is incorrectly calculated as 45 instead of 9. All previous operations and logic are correct and unrelated to the error. The wrong result of step 6 leads to a miscalculation in the subsequent step 7, where the length of size 8 is incorrectly stated as 45 inches, and then the length of size 15 will also be wrong, calculated as 45 + 7/5 = 46.4 inches instead of 9 + 7/5 = 10.4 inches."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?\n\n### Response:",
+        "output_str": "Let $x$ be the length of the shoe in size 8.\nThen the length of the shoe in size 15 is $x + 15 \\cdot \\frac{1}{5} = x + 3$.\nSince the largest size is 20% longer than the smallest size, we have $x + 3 = 1.2x$.\nSolving for $x$, we find $x = \\frac{3}{0.2} = 15$.\nTherefore, the length of the shoe in size 15 is $15 + 3 = \\boxed{18}$ inches.\nThe answer is: 18",
+        "extract_true_num": 10.4,
+        "extract_pred_num": 18.0,
+        "is_correct": false
+    },
+    {
+        "index": 70,
+        "gsm8k_data": {
+            "question": "128 % of 5 / 8 =",
+            "original_solution": "First find 128% of 5, which is 128/100 * 5 = 6.4\nThen divide 6.4 by 8, which is 6.4 / 8 = 0.8\n#### 0.8",
+            "original_answer": 0.8,
+            "transformed_solution": "First find 128% of 5, which is 128/100 * 5 = 6.4\nThen divide 6.4 by 8, which is 6.4 / 8 = 0.7\n#### 0.7",
+            "transformed_answer": 0.7,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error was made in step 2 where I changed the division result of 6.4 / 8 from the correct 0.8 to an incorrect 0.7, without changing the operands or the operator. This is the first and only changed step in the transformed_solution, and the previous step is not affected. The value after the incorrect calculation is used for the transformed_answer, which is why the transformed_answer of 0.7 is different from the original_answer of 0.8."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n128 % of 5 / 8 =\n\n### Response:",
+        "output_str": "To find the value of the expression, we need to perform the operations in the correct order.\nFirst, we calculate 128 % of 5, which is 128/5 = 25.\nThen, we divide 25 by 8, which gives us 25/8 = 3.125.\nTherefore, the value of the expression is 3.125.The answer is: 3.125",
+        "extract_true_num": 0.8,
+        "extract_pred_num": 3.125,
+        "is_correct": false
+    },
+    {
+        "index": 71,
+        "gsm8k_data": {
+            "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+            "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+            "original_answer": [
+                80,
+                82,
+                84
+            ],
+            "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 246.\nx = 82.\nThe three consecutive even numbers are 82, 84, and 86.\n#### 82, 84, 86",
+            "transformed_answer": [
+                82,
+                84,
+                86
+            ],
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This dictionary shows that in the transformed_solution, the calculation of 3x from the equation 3x + 6 = 246 has not been altered correctly in step 4. Instead of subtracting 6 from both sides to get 3x = 240, it mistakenly keeps the equation as 3x = 246. Therefore, when 3x is divided by 3 to solve for x, the incorrect number 246 is used instead of the correct 240, and the resulting x is incorrectly calculated as 82 instead of the correct value of 80. All the steps that use the value of x, which are steps 5 and 6, will need to use the wrong x value of 82 and output the incorrect sequence of numbers 82, 84, 86."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe sum of three consecutive even numbers is 246. What are the numbers?\n\n### Response:",
+        "output_str": "Let the first even number be $x$. Then the next two consecutive even numbers are $x+2$ and $x+4$.\nThe sum of these three numbers is $x + (x+2) + (x+4) = 3x + 6$.\nWe are given that this sum is 246, so we have the equation $3x + 6 = 246$.\nSubtracting 6 from both sides gives $3x = 240$, and dividing both sides by 3 gives $x = 80$.\nTherefore, the three consecutive even numbers are 80, 82, and 84.\nThe answer is: 80,82,84",
+        "extract_true_num": [
+            80,
+            82,
+            84
+        ],
+        "extract_pred_num": 808284.0,
+        "is_correct": false
+    },
+    {
+        "index": 73,
+        "gsm8k_data": {
+            "question": "How is 1 / 2 % expressed as a decimal fraction?",
+            "original_solution": "1 / 2 % = 1 / 2 / 100 = 0.005\n#### 0.005",
+            "original_answer": 0.005,
+            "transformed_solution": "1 / 2 % = 1 / 2 / 100 = 0.0005\n#### 0.0005",
+            "transformed_answer": 0.0005,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the calculation of 1 / 2 / 100 was erroneously transformed to 0.0005 instead of the correct 0.005. There is only one step in the original solution, so changing the calculation result automatically affects the final answer. No previous steps or unrelated calculations are present, so no other changes are needed aside from the incorrect calculation in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nHow is 1 / 2 % expressed as a decimal fraction?\n\n### Response:",
+        "output_str": "To express 1 / 2 % as a decimal fraction, we need to divide 1 by 2 and then convert the result to a fraction.\nDividing 1 by 2 gives us 0.5.\nTo convert 0.5 to a fraction, we write it as 0.5 / 1.\nTherefore, 1 / 2 % is equal to 0.5 / 1, which can be written as the decimal fraction $\\boxed{\\frac{1}{2}}$.The answer is: \\frac{1}{2}",
+        "extract_true_num": 0.005,
+        "extract_pred_num": 2.0,
+        "is_correct": false
+    },
+    {
+        "index": 74,
+        "gsm8k_data": {
+            "question": "a man has some hens and cows. if the number of heads be 48 and the number of feet equals 140, then the number of hens will be:",
+            "original_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -52\nDivide by -2: h = 26\n#### 26",
+            "original_answer": 26.0,
+            "transformed_solution": "Let h = number of hens and c = number of cows\nThe number of heads equation is h + c = 48\nThe number of feet equation is 2h + 4c = 140\nSolve the first equation for c: c = 48 - h\nSubstitute c = 48 - h into the second equation: 2h + 4(48 - h) = 140\nSimplify the equation: 2h + 192 - 4h = 140\nCombine like terms: -2h + 192 = 140\nSubtract 192 from both sides: -2h = -50\nDivide by -2: h = 25\n#### 25",
+            "transformed_answer": 25.0,
+            "wrong_step": 7,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates -2h = -50 instead of -2h = -52 in step 7, which affects the subsequent step 8. Step 8 inherits the error from step 7, modifying h = 26 to h = 25. The error affects only the modified step and the steps that are dependent on it. All previous steps remain unaffected and are correctly calculated as in the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na man has some hens and cows. if the number of heads be 48 and the number of feet equals 140, then the number of hens will be:\n\n### Response:",
+        "output_str": "Let's assume the number of hens is H and the number of cows is C.\nEach hen has 1 head and 2 feet, and each cow has 4 heads and 4 feet.\nSo, the total number of heads is H + 2C, and the total number of feet is 4C.\nWe are given that the total number of heads is 48 and the total number of feet is 140.\nTherefore, we can write the following equations:\nH + 2C = 48\n4C = 140\nSolving the second equation, we find that C = 35.\nSubstituting this value into the first equation, we find that H + 2(35) = 48.\nSimplifying, we find that H + 70 = 48.\nSubtracting 70 from both sides, we find that H = -22.\nSince the number of hens cannot be negative, we can conclude that there are no hens.\nTherefore, the number of hens is 0.\n#### 0\nThe answer is: 0",
+        "extract_true_num": 26.0,
+        "extract_pred_num": 0.0,
+        "is_correct": false
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "Wink, Inc. follows a certain procedure that requires two tasks to be finished independently in order for a job to be done. On any given day, there is a 2/3 probability that task 1 will be completed on time, and a 3/5 probability that task 2 will be completed on time. On a certain day, what is the probability that task 1 will be completed on time, but task 2 will not?",
+            "original_solution": "The probability that task 1 will be completed on time is 2/3.\nThe probability that task 2 will not be completed on time is 1 - 3/5 = 2/5\nThe probability that task 1 will be completed on time, but task 2 will not is 2/3 * 2/5 = 4/15\n#### 4/15",
+            "original_answer": "4/15",
+            "transformed_solution": "The probability that task 1 will be completed on time is 2/3.\nThe probability that task 2 will not be completed on time is 1 - 3/5 = 3/5\nThe probability that task 1 will be completed on time, but task 2 will not is 2/3 * 3/5 = 6/15\n#### 6/15",
+            "transformed_answer": "6/15",
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the error occurs at step 2, where the probability that task 2 will not be completed on time is calculated incorrectly as 3/5 instead of 2/5. This error then affects the final calculation of the probability that task 1 will be completed on time but task 2 will not, leading to a transformed probability of 6/15 instead of the original 4/15. The subsequent step related to step 2 inherits the wrong result, modifying the calculation from 2/3 * 2/5 = 4/15 to 2/3 * 3/5 = 6/15. It's important to note that the calculation within step 2 (1 - 3/5) is still correct in terms of process, but the numerical result is incorrect."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWink, Inc. follows a certain procedure that requires two tasks to be finished independently in order for a job to be done. On any given day, there is a 2/3 probability that task 1 will be completed on time, and a 3/5 probability that task 2 will be completed on time. On a certain day, what is the probability that task 1 will be completed on time, but task 2 will not?\n\n### Response:",
+        "output_str": "The probability that task 1 will be completed on time is 2/3, and the probability that task 2 will be completed on time is 3/5.\nSince the tasks must be completed independently, the probability that both tasks will be completed on time is the product of the individual probabilities, which is (2/3)(3/5) = 6/15.\nTherefore, the probability that task 1 will be completed on time but task 2 will not is 1 - 6/15 = 9/15.\nSo the answer is 9/15.The answer is: \\frac{9}{15}",
+        "extract_true_num": "4/15",
+        "extract_pred_num": 15.0,
+        "is_correct": false
+    },
+    {
+        "index": 77,
+        "gsm8k_data": {
+            "question": "In a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?",
+            "original_solution": "The total number of players present is 16 + 12 + 18 + 13 = 59.\n#### 59",
+            "original_answer": 59.0,
+            "transformed_solution": "The total number of players present is 16 + 12 + 18 + 10 = 56.\n#### 56",
+            "transformed_answer": 56.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example change the number of softball players from 13 to 10 in step 1 without justification, which impacts the total calculated in the same step. The remaining part of the solution inherits this error without other changes. All original operands and operators remain the same, and the only change is to the result of the addition, making the end result different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a games hour 4 different types of players came to the ground - cricket 16, hockey 12, football 18, softball 13. How many players are present in the ground?\n\n### Response:",
+        "output_str": "The total number of players present in the ground is the sum of the players for each type of game.\nSo, the total number of players is 16 + 12 + 18 + 13 = 69.\n#### 69\nThe answer is: 69",
+        "extract_true_num": 59.0,
+        "extract_pred_num": 69.0,
+        "is_correct": false
+    },
+    {
+        "index": 78,
+        "gsm8k_data": {
+            "question": "From a pack of 52 cards, 1 card is drawn at random. What is the probability that a jack, queen, or king is drawn?",
+            "original_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 52\nProbability = 12/52 = 3/13\n#### 3/13",
+            "original_answer": "3/13",
+            "transformed_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 15\nTotal possible outcomes = 52\nProbability = 15/52\n#### 15/52",
+            "transformed_answer": "15/52",
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "Step 2 in the original solution has been intentionally altered in the transformation from 4 + 4 + 4 = 12 to 4 + 4 + 4 = 15. This error influences the consequent calculation of the probability in Step 4, changing it to 15/52 to reflect the earlier wrong number of favorable outcomes. Previous steps are not affected, and there is no change in the operands or operators of the formula. The transformed answer is different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFrom a pack of 52 cards, 1 card is drawn at random. What is the probability that a jack, queen, or king is drawn?\n\n### Response:",
+        "output_str": "There are 52 cards in total, and 13 of them are jack, queen, or king.\nSo the probability of drawing a jack, queen, or king is $\\frac{13}{52} = \\frac{1}{4}$.\nTherefore, the probability is $\\boxed{\\frac{1}{4}}$.\nThe answer is: \\frac{1}{4}",
+        "extract_true_num": "3/13",
+        "extract_pred_num": 4.0,
+        "is_correct": false
+    },
+    {
+        "index": 79,
+        "gsm8k_data": {
+            "question": "the area of an isosceles trapezoid with sides of length 5 and bases of length 6 and 12 is?",
+            "original_solution": "The area of an isosceles trapezoid is given by the formula A = (1/2) * (a + b) * h, where a and b are the lengths of the bases and h is the height.\nThe height of the trapezoid can be found using the Pythagorean theorem: h = sqrt(5^2 - ((12-6)/2)^2) = sqrt(25 - 9) = sqrt(16) = 4\nPlugging in the values, A = (1/2) * (6 + 12) * 4 = (1/2) * 18 * 4 = 9 * 4 = 36\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "The area of an isosceles trapezoid is given by the formula A = (1/2) * (a + b) * h, where a and b are the lengths of the bases and h is the height.\nThe height of the trapezoid can be found using the Pythagorean theorem: h = sqrt(5^2 - ((12-6)/2)^2) = sqrt(25 - 9) = sqrt(16) = 4\nPlugging in the values, A = (1/2) * (6 + 12) * 4 = (1/2) * 18 * 4 = 9 * 4 = 34\n#### 34",
+            "transformed_answer": 34.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The transformed solution has a calculation error at step 4 where the product of 9 * 4 is incorrectly stated as 34 instead of 36. This is the only step modified, as the error is isolated to this step. Although 9 * 4 equals 36, in the transformed solution we intentionally make a single calculation error, resulting in a transformed answer of 34 which is different from the original answer of 36."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe area of an isosceles trapezoid with sides of length 5 and bases of length 6 and 12 is?\n\n### Response:",
+        "output_str": "The area of a trapezoid is given by the formula $A = \\frac{1}{2}(b_1 + b_2)h$,\nwhere $b_1$ and $b_2$ are the lengths of the bases and $h$ is the height.\nIn this case, the bases are 6 and 12, so $b_1 + b_2 = 6 + 12 = 18$.\nThe height of the trapezoid is the perpendicular distance between the bases,\nwhich is the same as the height of the isosceles triangle with bases 6 and 12.\nUsing the Pythagorean Theorem, we can find the height of the triangle to be $\\sqrt{12^2 - 6^2} = 4$.\nTherefore, the area of the trapezoid is $\\frac{1}{2}(18)(4) = \\boxed{16}$.\nThe answer is: 16",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 16.0,
+        "is_correct": false
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "a and b start walking towards each other at 1 pm at speed of 5 kmph and 7 kmph. They were initially 24 km apart. At what time do they meet?",
+            "original_solution": "Relative speed = 5 + 7 = 12 km/hr\nTime taken to meet = 24 / 12 = 2 hours\nThey meet at 3 pm\n#### 3 pm",
+            "original_answer": "3 pm",
+            "transformed_solution": "Relative speed = 5 + 7 = 12 km/hr\nTime taken to meet = 24 / 12 = 3 hours\nThey meet at 4 pm\n#### 4 pm",
+            "transformed_answer": "4 pm",
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, a miscalculation is made at step 2, where the time taken to meet is incorrectly calculated as 3 hours instead of 2. As a consequence, the meeting time is also wrongly calculated as 4 pm instead of 3 pm in step 3. The subsequent step 3 inherits this error, but steps prior remain unaffected."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na and b start walking towards each other at 1 pm at speed of 5 kmph and 7 kmph. They were initially 24 km apart. At what time do they meet?\n\n### Response:",
+        "output_str": "The distance between a and b is 24 km.\nThe speed of a is 5 kmph, so it will take a 24 km / 5 kmph = 4.8 hours to reach b.\nThe speed of b is 7 kmph, so it will take b 24 km / 7 kmph = 3.6 hours to reach a.\nSince they are walking towards each other, the total time it takes for them to meet is 4.8 hours + 3.6 hours = 8.4 hours.\nSince they start at 1 pm, they will meet at 1 pm + 8.4 hours = 9.4 pm.\n#### 9\nThe answer is: 9",
+        "extract_true_num": "3 pm",
+        "extract_pred_num": 9.0,
+        "is_correct": false
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+            "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14 / 3.\nPlugging the value of a into the first equation, we get 2*(14 / 3) + b = 10.\nSo, b = 10 - 28 / 3.\nSo, b = (30 - 28) / 3.\nSo, b = 2 / 3.\nThere are 14 / 3 associate professors and 2 / 3 assistant professors, so a total of 16/3 or approximately 5.33 people are present.\n#### 5.33",
+            "transformed_answer": 5.33,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the transformed_solution contains a miscalculation in step 4, where the multiplication of 2 by the first equation is incorrectly carried out as 4a + 2b = 22 instead of 4a + 2b = 20. This single error affects all subsequent steps that rely on it. As a result, step 5 becomes 3a = 14 rather than 3a = 12, and consequently in step 6, the value of a is incorrectly calculated using the wrong 3a value, giving a = 14 / 3 instead of 4. This error flows through to step 7, 8 and 9, where the value of b and the total number of people are calculated based on this incorrect number of associate professors a. Thus, the entire transformed solution carries the initial miscalculation through all related steps, resulting in a wrong answer of approximately 5.33 people instead of the correct answer of 6 people."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAt a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?\n\n### Response:",
+        "output_str": "Let $a$ be the number of associate professors and $a$ be the number of assistant professors.\nEach associate professor brings 2 pencils and 1 chart, so the total number of pencils brought by the associate professors is $2a$ and the total number of charts brought by the associate professors is $a$.\nEach assistant professor brings 1 pencil and 2 charts, so the total number of pencils brought by the assistant professors is $a$ and the total number of charts brought by the assistant professors is $2a$.\nThe total number of pencils brought to the meeting is $2a + a = 3a$ and the total number of charts brought to the meeting is $a + 2a = 3a$.\nWe are given that the total number of pencils brought to the meeting is 10 and the total number of charts brought to the meeting is 8.\nSo, we have the equations $3a = 10$ and $3a = 8$.\nSolving these equations, we find that $a = 2$.\nTherefore, there are $a + a = 2 + 2 = \\boxed{4}$ people present at the meeting.\nThe answer is: 4",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 4.0,
+        "is_correct": false
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "A train 360 m long is running at a speed of 54 km/hr. In what time will it pass a bridge 140 m long?",
+            "original_solution": "First, we need to convert the speed from km/hr to m/s. 54 km/hr = 54 x 1000 / 3600 = 15 m/s.\nNext, we need to calculate the total distance the train needs to cover, which is 360 m + 140 m = 500 m.\nNow, we can use the formula time = distance / speed to find the time it takes for the train to pass the bridge. Time = 500 m / 15 m/s = 33.33 seconds.\n#### 33.33",
+            "original_answer": 33.33,
+            "transformed_solution": "First, we need to convert the speed from km/hr to m/s. 54 km/hr = 54 x 1000 / 3600 = 15 m/s.\nNext, we need to calculate the total distance the train needs to cover, which is 360 m + 140 m = 500 m.\nNow, we can use the formula time = distance / speed to find the time it takes for the train to pass the bridge. Time = 500 m / 15 m/s = 34 seconds.\n#### 34",
+            "transformed_answer": 34.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the division in step 3 is incorrectly calculated as 500 m / 15 m/s = 34 seconds instead of the correct 33.33 seconds. This is the only modification made, and it changes the final result to 34.0 seconds, which is incorrect but consists of only a single error in the transformation process. The subsequent step is affected as it is the calculation of the incorrect result, but the previous steps remain correct and unchanged as they are unrelated to the error introduced."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA train 360 m long is running at a speed of 54 km/hr. In what time will it pass a bridge 140 m long?\n\n### Response:",
+        "output_str": "The train is 360 m long and the bridge is 140 m long.\nThe train is running at a speed of 54 km/hr.\nTo find the time it takes for the train to pass the bridge, we need to divide the distance of the train by the speed of the train.\nThe distance of the train is 360 m and the speed is 54 km/hr.\nTo convert km/hr to m/hr, we divide by 1000.\nSo, the speed of the train is 54 km/hr / 1000 = 0.054 m/hr.\nTo find the time it takes for the train to pass the bridge, we divide the distance of the bridge by the speed of the train.\nThe distance of the bridge is 140 m and the speed is 0.054 m/hr.\nSo, the time it takes for the train to pass the bridge is 140 m / 0.054 m/hr = 2500 hr.\nSince we want the time in hours, we convert 2500 hr to hours.\nThere are 60 minutes in an hour, so 2500 hr is equal to 2500 hr * 60 minutes/hr = 150,000 minutes.\nTherefore, it will take 150,000 minutes for the train to pass the bridge.\n#### 150000\nThe answer is: 150000",
+        "extract_true_num": 33.33,
+        "extract_pred_num": 150000.0,
+        "is_correct": false
+    },
+    {
+        "index": 85,
+        "gsm8k_data": {
+            "question": "a person deposits 1 / 16 of his income as provident fund and 1 / 15 of the remaining as insurance premium. if he spends 5 / 7 of the balance on domestic needs and deposits an amount of rs. 50 in the bank, his total income would be",
+            "original_solution": "Let x be the total income.\nIncome deposited as provident fund = x * 1/16\nIncome remaining after provident fund deposit = x - x * 1/16 = x * 15/16\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x * 15/16 - x/16 = x * 14/16\nAmount spent on domestic needs = x * 14/16 * 5/7 = x * 10/16\nBalance after domestic needs = x * 14/16 - x * 10/16 = x * 4/16\nAmount deposited in the bank = x * 4/16 = 50\nx = 200\n#### 200",
+            "original_answer": 200.0,
+            "transformed_solution": "Let x be the total income.\nIncome deposited as provident fund = x * 1/16\nIncome remaining after provident fund deposit = x - x * 1/16 = x * 15/16\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x * 15/16 - x/16 = x * 14/16\nAmount spent on domestic needs = x * 14/16 * 5/7 = x * 10/16\nBalance after domestic needs = x * 14/16 - x * 10/16 = x * 4/16\nAmount deposited in the bank = x * 4/16 = 40\nx = 160\n#### 160",
+            "transformed_answer": 160.0,
+            "wrong_step": 7,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 7 contains a mistake where the balance amount (x * 4/16) is incorrectly equated to 40 instead of 50. This error leads to step 8, where the calculation will also be wrong, resulting in an incorrect total income (x = 160). The rest of the steps which are not dependent on step 7 remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na person deposits 1 / 16 of his income as provident fund and 1 / 15 of the remaining as insurance premium. if he spends 5 / 7 of the balance on domestic needs and deposits an amount of rs. 50 in the bank, his total income would be\n\n### Response:",
+        "output_str": "Let's assume the person's income is x.\nHe deposits 1/16 of his income as provident fund, so he deposits (1/16)x.\nThe remaining income after depositing the provident fund is (1 - 1/16)x = (15/16)x.\nHe then deposits 1/15 of the remaining income as insurance premium, so he deposits (1/15)(15/16)x = (1/16)x.\nThe balance after depositing the insurance premium is (15/16)x - (1/16)x = (14/16)x = (7/8)x.\nHe spends 5/7 of the balance on domestic needs, so he spends (5/7)(7/8)x = (35/56)x.\nThe remaining balance after spending on domestic needs is (7/8)x - (35/56)x = (47/56)x.\nHe deposits an amount of Rs. 50 in the bank, so (47/56)x = 50.\nSolving for x, we have (47/56)x = 50.\nMultiplying both sides by 56/47, we get x = (50)(56/47) = 52.\nTherefore, the person's total income is Rs. 52.\n#### 52\nThe answer is: 52",
+        "extract_true_num": 200.0,
+        "extract_pred_num": 52.0,
+        "is_correct": false
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "Two cars are driving towards one another. The first car is traveling at a speed of 120 km/h, which is 28% faster than the second car. If the distance between the cars is 855 km, how long will it take the cars to meet (in hours)?",
+            "original_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\nx = 120 / 1.28 = 93.75 km/h.\nIn 1 hour, the cars cover 120 + 93.75 = 213.75 km.\nThe time it takes to meet is 855 / 213.75 = 4 hours.\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\nx = 120 / 1.28 = 93.75 km/h.\nIn 1 hour, the cars cover 120 + 93.75 = 213.75 km.\nThe time it takes to meet is 855 / 210 = 4.07 hours.\n#### 4.07",
+            "transformed_answer": 4.07,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this example, the result of step 5 has been changed from 213.75 to an erroneous value of 210 km/h. Therefore, the cars would supposedly cover 210 km in 1 hour instead of 213.75 km. All the previous steps remain unchanged, and the subsequent step 6 uses the incorrect value from step 5 for further calculation: 855 / 210 = 4.07 hours instead of the correct 855 / 213.75 = 4 hours. Only one calculation result was incorrectly modified, and the rest of the solution is adapted based on this error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nTwo cars are driving towards one another. The first car is traveling at a speed of 120 km/h, which is 28% faster than the second car. If the distance between the cars is 855 km, how long will it take the cars to meet (in hours)?\n\n### Response:",
+        "output_str": "If the first car is traveling at a speed of 120 km/h, and that is 28% faster than the second car, then the second car is traveling at a speed of 120 km/h / (1 + 28%) = 120 km/h / 1.28 = 90 km/h.\nThe distance between the cars is 855 km, so it will take the first car 855 km / 120 km/h = 7.125 hours to reach the second car.\nIt will take the second car 855 km / 90 km/h = 9.444 hours to reach the first car.\nSince the cars are driving towards one another, the total time it will take for the cars to meet is 7.125 hours + 9.444 hours = 16.57 hours.\n#### 16\nThe answer is: 16",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 16.0,
+        "is_correct": false
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "circular gears l and r start to rotate at the same time at the same rate. gear l makes 20 complete revolutions per minute and gear r makes 40 revolutions per minute. how many seconds after the gears start to rotate will gear r have made exactly 6 more revolutions than gear l?",
+            "original_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 60 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 60/10 = 6 seconds\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 50 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 50/10 = 5 seconds\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example shows an incorrect calculation in step 4 with 1200/20 being miscalculated as 50 instead of 60. The subsequent step 5, which depends on the result of step 4, now uses the incorrect value to determine the time it takes for gear r to make 6 more revolutions than gear l as 5 seconds instead of 6 seconds. Steps 1, 2, and 3 are correct and remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\ncircular gears l and r start to rotate at the same time at the same rate. gear l makes 20 complete revolutions per minute and gear r makes 40 revolutions per minute. how many seconds after the gears start to rotate will gear r have made exactly 6 more revolutions than gear l?\n\n### Response:",
+        "output_str": "We can set up an equation to represent the situation.\nLet $t$ be the number of seconds after the gears start to rotate.\nGear L makes 20 complete revolutions per minute, so in $t$ seconds, it will make $\\frac{20}{60}t = \\frac{1}{3}t$ revolutions.\nGear R makes 40 complete revolutions per minute, so in $t$ seconds, it will make $\\frac{40}{60}t = \\frac{2}{3}t$ revolutions.\nWe want to find the value of $t$ when Gear R has made 6 more revolutions than Gear L.\nSo we set up the equation $\\frac{2}{3}t = \\frac{1}{3}t + 6$ and solve for $t$.\nMultiplying both sides of the equation by 3, we get $2t = t + 18$.\nSubtracting $t$ from both sides of the equation, we get $t = 18$.\nTherefore, Gear R will have made exactly 6 more revolutions than Gear L after $\\boxed{18}$ seconds.\nThe answer is: 18",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 18.0,
+        "is_correct": false
+    },
+    {
+        "index": 90,
+        "gsm8k_data": {
+            "question": "a salesmanâ€™s terms were changed from a flat commission of 5% on all his sales to a fixed salary of Rs. 1000 plus 2.5% commission on all sales exceeding Rs. 4,000. If his remuneration as per the new scheme was Rs. 600 more than that by the previous scheme, his sales were worth",
+            "original_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) - 0.05x = 600\n1000 - 100 + 0.025x - 0.05x = 600\n0.025x - 0.05x = 600 - 900\n-0.025x = -300\nx = 12000\n#### 12000",
+            "original_answer": 12000,
+            "transformed_solution": "Let x be the total sales worth\nPrevious remuneration = 0.05x\nNew remuneration = 1000 + 0.025(x-4000)\nNew remuneration - Previous remuneration = 600\n1000 + 0.025(x-4000) - 0.05x = 600\n1000 - 100 + 0.025x - 0.05x = 600\n0.025x - 0.05x = 600 - 800\n-0.025x = -200\nx = 8000\n#### 8000",
+            "transformed_answer": 8000,
+            "wrong_step": 6,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, a miscalculation is introduced in step 6 where the correct operation 1000-100 is mistakenly changed to yield 600 - 800 instead of 600 - 900. This intentional error propagates down to step 7, changing the equation to -0.025x = -200 from the correct -0.025x = -300, which in turn affects the final step where the sales worth is erroneously found to be Rs. 8000 instead of Rs. 12000. Steps prior to the wrong step and unrelated to the wrong calculation remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na salesmanâ€™s terms were changed from a flat commission of 5% on all his sales to a fixed salary of Rs. 1000 plus 2.5% commission on all sales exceeding Rs. 4,000. If his remuneration as per the new scheme was Rs. 600 more than that by the previous scheme, his sales were worth\n\n### Response:",
+        "output_str": "Let's assume the salesman's previous commission rate was x%.\nAccording to the previous scheme, his commission would be (x/100) * total sales.\nAccording to the new scheme, his fixed salary is Rs. 1000 and his commission rate is 2.5%.\nHis commission would be (2.5/100) * (total sales - Rs. 4000).\nWe are given that his remuneration according to the new scheme is Rs. 600 more than that by the previous scheme.\nSo, we can set up the equation: (2.5/100) * (total sales - Rs. 4000) + Rs. 1000 = (x/100) * total sales + Rs. 600.\nSimplifying the equation, we get: (2.5/100) * (total sales - Rs. 4000) = (x/100) * total sales + Rs. 600 - Rs. 1000.\nCombining like terms, we get: (2.5/100) * (total sales - Rs. 4000) = (x/100) * total sales - Rs. 400.\nDividing both sides of the equation by (2.5/100), we get: total sales - Rs. 4000 = (x/2.5) * total sales - (x/2.5) * Rs. 400.\nSimplifying further, we get: total sales - Rs. 4000 =",
+        "extract_true_num": 12000,
+        "extract_pred_num": 4000.0,
+        "is_correct": false
+    },
+    {
+        "index": 91,
+        "gsm8k_data": {
+            "question": "a 230 m long train running at the speed of 120 km / hr crosses another train running in opposite direction at the speed of 80 km / hr in 9 sec . what is the length of the other train ?",
+            "original_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 500 - 230\nLength of the other train = 270 m\n#### 270",
+            "original_answer": 270.0,
+            "transformed_solution": "First, convert the speeds of both trains to m/s: \n120 km/hr = (120 x 1000) / 3600 = 33.33 m/s\n80 km/hr = (80 x 1000) / 3600 = 22.22 m/s\nThe relative speed of the two trains = 33.33 + 22.22 = 55.55 m/s\nNow, use the formula: Length = Speed x Time\n230 + Length of the other train = 55.55 x 9\nLength of the other train = (55.55 x 9) - 230\nLength of the other train = 499.95 - 230\nLength of the other train = 269.95 m\n#### 269.95",
+            "transformed_answer": 269.95,
+            "wrong_step": 6,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates (55.55 x 9) as 499.95 instead of 500 in step 6, affecting the calculation in step 7 and the resulting Length of the other train. The steps prior to step 6 are unaffected and are correctly calculated. The error is carried through to step 7, adjusting the calculation from (500 - 230) to (499.95 - 230), resulting in the transformed answer of 269.95 m instead of the original answer of 270 m."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na 230 m long train running at the speed of 120 km / hr crosses another train running in opposite direction at the speed of 80 km / hr in 9 sec . what is the length of the other train ?\n\n### Response:",
+        "output_str": "The length of the train is given by the formula: length = speed x time\nFor the first train, the length is 230 m = 120 km/hr x 9 sec\nFor the second train, the length is the speed of the first train (120 km/hr) x the time it takes for the two trains to cross (9 sec)\nLet's call the length of the second train L\nL = 120 km/hr x 9 sec\nL = 1080 km\nSince the length of the second train is in kilometers, we need to convert it to meters by multiplying by 1000\nL = 1080 km x 1000\nL = 1,080,000 meters\nTherefore, the length of the other train is 1,080,000 meters.\n#### 1080000\nThe answer is: 1080000",
+        "extract_true_num": 270.0,
+        "extract_pred_num": 1080000.0,
+        "is_correct": false
+    },
+    {
+        "index": 92,
+        "gsm8k_data": {
+            "question": "Rice weighing 29 / 4 pounds was divided equally and placed in 4 containers. How many ounces of rice were in each container? (Note that 1 pound = 16 ounces)",
+            "original_solution": "The rice weighed 29 / 4 x 16 = 116 ounces in total.\nEach container had 116 / 4 = 29 ounces of rice.\n#### 29",
+            "original_answer": 29.0,
+            "transformed_solution": "The rice weighed 29 / 4 x 16 = 116 ounces in total.\nEach container had 116 / 4 = 28 ounces of rice.\n#### 28",
+            "transformed_answer": 28.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 116 / 4 = 28 instead of 116 / 4 = 29 in step 2. The error in step 2 does not affect step 1, which remains correct as 29 / 4 x 16 = 116. Step 2 inherits and incorrectly presents the transformed answer based on the unchanged total weight from step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nRice weighing 29 / 4 pounds was divided equally and placed in 4 containers. How many ounces of rice were in each container? (Note that 1 pound = 16 ounces)\n\n### Response:",
+        "output_str": "The total weight of the rice is 29 / 4 = 7.25 pounds.\nSince 1 pound is equal to 16 ounces, the total weight of the rice is 7.25 * 16 = 115 ounces.\nThe rice is divided equally into 4 containers, so each container has 115 / 4 = 28.75 ounces of rice.\nSince we cannot have a fraction of an ounce, we round down to the nearest whole number.\nTherefore, each container has 28 ounces of rice.\n#### 28\nThe answer is: 28",
+        "extract_true_num": 29.0,
+        "extract_pred_num": 28.0,
+        "is_correct": false
+    },
+    {
+        "index": 93,
+        "gsm8k_data": {
+            "question": "the sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?",
+            "original_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 16\nSubtract the second discount from the first discounted price: 320 - 16 = 304\n#### 304",
+            "original_answer": 304.0,
+            "transformed_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 15\nSubtract the second discount from the first discounted price: 320 - 15 = 305\n#### 305",
+            "transformed_answer": 305.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 has a calculation error where the original 320 * 0.05 = 16 is modified to 320 * 0.05 = 15. This wrong calculation in step 3 changes the correct amount of the second discount, and consequently, the following step 4 inherits this error, altering the subtraction to 320 - 15 = 305. Steps before the wrong step, such as 1 and 2, remain unaffected. The subsequent steps related to the wrong step have a single calculation error, and the final transformed answer has been revised to 305, differing from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe sale price of sarees listed for rs. 400 after successive discount is 20% and 5% is?\n\n### Response:",
+        "output_str": "The discount is 20% and 5%, so the total discount is 20% + 5% = 25%.\nThe sale price is the original price minus the discount, so the sale price is 100% - 25% = 75% of the original price.\nIf the original price is Rs. 400, then the sale price is 75% of Rs. 400, which is 0.75 * Rs. 400 = Rs. 300.\n#### 300\nThe answer is: 300",
+        "extract_true_num": 304.0,
+        "extract_pred_num": 300.0,
+        "is_correct": false
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "Convert 500 miles into meters?",
+            "original_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 804670 meters\n#### 804670",
+            "original_answer": 804670.0,
+            "transformed_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 800000 meters\n#### 800000",
+            "transformed_answer": 800000.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, the calculation of 500 x 1609.34 has been incorrectly modified to result in an incorrect value of 800000 meters instead of the correct value of 804670 meters. The previous step is not affected since it simply establishes the conversion rate without any calculations. The transformation introduces a single error in step 2, which only changes the outcome of that specific step and the final answer, without altering the logic or the methodology of the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nConvert 500 miles into meters?\n\n### Response:",
+        "output_str": "Since there are 1000 meters in 1 mile, we can convert 500 miles into meters by multiplying 500 by 1000.\nTherefore, 500 miles is equal to 500 * 1000 = 500,000 meters.\nThe answer is: 500,000",
+        "extract_true_num": 804670.0,
+        "extract_pred_num": 500000.0,
+        "is_correct": false
+    },
+    {
+        "index": 97,
+        "gsm8k_data": {
+            "question": "evaluate : | 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = ?",
+            "original_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 * -9 = -72\nSo, the expression becomes |7 - (-72)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-72) = 79\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |79| - |-6| = 79 - 6 = 73\n#### 73",
+            "original_answer": 73.0,
+            "transformed_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 * -9 = -72\nSo, the expression becomes |7 - (-72)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-72) = 79\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |79| - |-6| = 79 - 4 = 75\n#### 75",
+            "transformed_answer": 75.0,
+            "wrong_step": 5,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In this case, the error has been introduced at the final step of the calculation. The correct evaluation of |-6| should be 6, but in the transformed solution, it has been evaluated incorrectly as 4. This leads to the final transformed expression being 79 - 4 = 75 instead of the correct 79 - 6 = 73. All other steps are performed correctly, and only the final calculation has been altered, changing the final answer and introducing a single error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nevaluate : | 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = ?\n\n### Response:",
+        "output_str": "First, we simplify the expression inside the absolute value signs:\n$| 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = | -4 | - | -6 |$.\nNext, we evaluate the absolute values:\n$| -4 | - | -6 | = 4 - 6 = -2$.\nTherefore, the value of the expression is $\\boxed{-2}$.The answer is: -2",
+        "extract_true_num": 73.0,
+        "extract_pred_num": 2.0,
+        "is_correct": false
+    }
+]

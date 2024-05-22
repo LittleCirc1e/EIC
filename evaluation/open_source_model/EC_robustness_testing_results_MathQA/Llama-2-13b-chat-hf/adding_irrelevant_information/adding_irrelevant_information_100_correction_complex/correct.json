@@ -1,0 +1,14 @@
+[
+    {
+        "question": "The run rate of a cricket game was only 3.2 in the first 10 overs. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?",
+        "original_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 32 = 250 runs in the remaining 40 overs.\nThe required run rate is 250 / 40 = 6.25 runs per over.\n#### 6.25",
+        "original_answer": 6.25,
+        "transformed_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nDue to a scoring penalty of 5 runs, the team needs to score 282 - 32 + 5 = 255 runs in the remaining 40 overs.\nThe required run rate is 255 / 40 = 6.375 runs per over.\n#### 6.375",
+        "transformed_answer": 6.375,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Due to a scoring penalty of 5 runs>, resulting in step 2 changing from 282 - 32 = 250 runs in the original_solution to 282 - 32 + 5 = 255 runs in the transformed_solution. This in turn affects the final run rate calculation, changing it from 250 / 40 = 6.25 to 255 / 40 = 6.375 runs per over. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 6.25, and the explanation is that step 3 first makes a mistake in calculating the scoring penalty, mistakenly believing that the scoring penalty is 5 runs instead of 4 runs, calculating 282 - 32 + 5 = 255 instead of 282 - 32 + 4 = 256. The subsequent step 4 references the result of step 3, calculating 255 / 40 = 6.375 instead of 256 / 40 = 6.25. The final incorrect answer is 6.375 instead of 6.25."
+    }
+]

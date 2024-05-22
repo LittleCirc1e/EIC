@@ -1,0 +1,211 @@
+[
+    {
+        "index": 0,
+        "gsm8k_data": {
+            "question": "The area of a square garden is q square feet and the perimeter is p feet. If q = 2p + 20, what is the perimeter of the garden in feet?",
+            "original_solution": "Let s be the side length of the square garden.\nThen the area q = s^2\nAnd the perimeter p = 4s\nWe know that q = 2p + 20\nSo, s^2 = 2(4s) + 20\nSimplify this to s^2 = 8s + 20\nRearranging terms, we have s^2 - 8s - 20 = 0\nWe can solve this quadratic equation to find s, the side length of the square garden\nUsing the quadratic formula: s = (-(-8) +- sqrt((-8)^2 - 4*1*(-20))) / (2*1)\nSolving for s, we get s = (8 +- sqrt(64 + 80)) / 2\nThis simplifies to s = (8 +- sqrt(144)) / 2\nSo s = (8 +- 12) / 2\nWe have two possible values for s: s = (8 + 12) / 2 = 10 or s = (8 - 12) / 2 = -2\nSince the side length cannot be negative, s = 10\nTherefore, the perimeter p = 4s = 4*10 = 40 feet\n#### 40",
+            "original_answer": 40.0,
+            "transformed_solution": "Let s be the side length of the square garden.\nThen the area q = s + s + s + s\nAnd the perimeter p = 4s\nWe know that q = 2p + 20\nSo, 4s = 2(4s) + 20\nSimplify this to 4s = 8s + 20\nRearranging terms, we have 8s - 4s - 20 = 0\nThis simplifies to 4s = 20\nSo s = 20 / 4\nTherefore, s = 5\nTherefore, the perimeter p = 4 * 5 = 20 feet\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, the area formula for a square has been incorrectly modified to represent the perimeter in step 2, which mistakes the formula for area to be the same as perimeter, leading to an incorrect simplification of '4s = 8s + 20' instead of 's^2 = 8s + 20'. This affects all the subsequent calculations belying the logical chain of finding the side length s and thus the perimeter p, which incorrectly leads to a value of 20 feet instead of the correct 40 feet for the perimeter. The original language descriptor 'Then the area q =' in the original_solution remains unchanged in the transformed_solution. The original logic to deduce the side length from the quadratic equation and in turn find perimeter has been abandoned due to the confusion in step 2 about area versus perimeter."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe area of a square garden is q square feet and the perimeter is p feet. If q = 2p + 20, what is the perimeter of the garden in feet?\n\n### Response:",
+        "output_str": "\nThe perimeter of the garden is 2(2p + 20) = 4p + 40 feet.",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 4,
+        "gsm8k_data": {
+            "question": "What is the percentage increase in the area of a rectangle, if each of its sides is increased by 20%?",
+            "original_solution": "Let the original length of the rectangle be L and the original width be W\nAfter a 20% increase, the new length becomes 1.2L and the new width becomes 1.2W\nThe original area is L*W and the new area is 1.2L*1.2W=1.44LW\nThe increase in area is 1.44LW - LW = 0.44LW\nTo find the percentage increase, we divide the increase by the original area and multiply by 100\nSo the percentage increase is (0.44LW / LW) * 100 = 44%\n#### 44%",
+            "original_answer": 44.0,
+            "transformed_solution": "Let the original length of the rectangle be L and the original width be W\nAfter a 20% increase, the new length becomes 1.2L and the new width becomes 1.2W\nThe original perimeter is 2*(L+W) and the new perimeter is 2*(1.2L+1.2W)=2.4L+2.4W\nThe increase in perimeter is (2.4L+2.4W) - 2*(L+W) = 0.4L+0.4W\nTo find the percentage increase, we divide the increase by the original perimeter and multiply by 100\nSo the percentage increase is ((0.4L+0.4W) / (2*(L+W))) * 100 = 20%\n#### 20%",
+            "transformed_answer": 20.0,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the area with the perimeter. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than twice the sum of the length and width, which is equivalent to the perimeter of the rectangle. This results in the formula for the original area in the original_solution (L*W) being replaced with a formula for the original perimeter (2*(L+W)) in the transformed_solution. Subsequently, the increase in perimeter is incorrectly calculated instead of the increase in area, impacting the transformed_answer. Note that the language descriptions for steps 3 and 4 in the original_solution remain unchanged in the transformed_solution, although the formulas used for calculations are incorrect only for step 3, while step 5 correctly calculates the percentage based on the modified step 4. Thus, only the calculation relevant to the step involving the confused formula is incorrect."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat is the percentage increase in the area of a rectangle, if each of its sides is increased by 20%?\n\n### Response:",
+        "output_str": "\nTo find the percentage increase in the area of a rectangle, we need to first find the new area of the rectangle after each side is increased by 20%.\n\nLet's say the original dimensions of the rectangle are length x width, so the area is length x width square units.\n\nIf each side is increased by 20%, the new length will be 1.2x, and the new width will be 1.2x.\n\nThe new area will be:\n\n1.2x x 1.2x = 1.44x^2\n\nSo, the percentage increase in the area of the rectangle is:\n\n(1.44x^2 - x^2) / x^2 x 100%\n\n= 44%\n\nTherefore, the percentage increase in the area of the rectangle is 44%.",
+        "extract_true_num": 44.0,
+        "extract_pred_num": 44.0,
+        "is_correct": true
+    },
+    {
+        "index": 12,
+        "gsm8k_data": {
+            "question": "Find the area of the maximum size circle that can be inscribed in a 10 inch square.",
+            "original_solution": "The diameter of the circle will be equal to the side length of the square, which is 10 inches.\nThe radius of the circle is half of the diameter, so it is 10/2=5 inches.\nThe area of the circle is pi*radius^2 = 3.14*5^2=3.14*25=78.5 square inches.\n#### 78.5",
+            "original_answer": 78.5,
+            "transformed_solution": "The diameter of the circle will be equal to the side length of the square, which is 10 inches.\nThe radius of the circle is half of the diameter, so it is 10/2=5 inches.\nThe circumference of the circle is 2*pi*radius = 2*3.14*5=31.4 inches.\n#### 31.4",
+            "transformed_answer": 31.4,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the area and circumference of a circle. The question requires that the area of the circle to be solved be equal to pi multiplied by radius squared, rather than 2 times pi multiplied by radius, which is equivalent to the circumference of a circle, resulting in pi*radius^2 = 3.14*5^2=3.14*25=78.5 square inches in the original_solution being changed to 2*pi*radius = 2*3.14*5=31.4 inches in the transformed_solution. This affects only the step where the confusion occurs. The calculation for the diameter and radius remains correct as per the problem statement. Note that the language description of step 3 < The area of the circle is > in the original_solution should remain unchanged in the transformed_solution. It should be noted that you need to only consider one step of confusing formula error, which in this case is the formula for the calculation of the area, while the rest of the calculation processes remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFind the area of the maximum size circle that can be inscribed in a 10 inch square.\n\n### Response:",
+        "output_str": "\nTo find the area of the maximum size circle that can be inscribed in a 10 inch square, we need to first find the diameter of the circle. Since the circle is inscribed in a square, the diameter of the circle must be less than or equal to the side length of the square.\n\nThe side length of the square is 10 inches, so the diameter of the circle must be less than or equal to 10 inches.\n\nThe formula for the area of a circle is A = πr^2, where r is the radius of the circle. Since the diameter is 10 inches, the radius is half of that, or 5 inches.\n\nNow we can plug in the value of the radius into the formula for the area of the circle:\n\nA = π(5)^2\n\nA = 3.14 x 25\n\nA = 78.5 square inches\n\nTherefore, the area of the maximum size circle that can be inscribed in a 10 inch square is approximately 78.5 square inches.",
+        "extract_true_num": 78.5,
+        "extract_pred_num": 78.5,
+        "is_correct": true
+    },
+    {
+        "index": 21,
+        "gsm8k_data": {
+            "question": "In digging a pond 20 m * 12 m * 5 m the volumes of the soil extracted will be ?",
+            "original_solution": "The volume of the soil extracted from the pond is the volume of the rectangular cuboid, which is given by the formula V = l * w * h\nWhere l = length, w = width, and h = height of the cuboid\nSo the volume of the soil extracted = 20 * 12 * 5 = 1200 cubic meters\n#### 1200",
+            "original_answer": 1200.0,
+            "transformed_solution": "The volume of the soil extracted from the pond is the volume of the rectangular cuboid, which is given by the formula V = l * w * h\nWhere l = length, w = width, and h = height of the cuboid\nSo the volume of the soil extracted = 2*(20 + 12 + 20 + 12) + 5 * (20 * 12) = 160 + 1200 = 1360 cubic meters\n#### 1360",
+            "transformed_answer": 1360.0,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the volume and surface area of a rectangular cuboid. The question requires finding the volume, which is the product of length, width, and height, but by changing the formula to incorporate the calculation of the perimeter (which is part of the surface area formula), the method calculates incorrectly. Specifically, it unlawfully combines the perimeter of the base, calculated as 2*(20 + 12 + 20 + 12), with one face area, leading to an incorrect volume in the transformed_solution. The language description of step 3 in the original_solution remains unchanged in the transformed_solution. Only step 3 mistakenly uses elements of the surface area formula in the calculation of volume, while the other parts of the solution do not include computational errors based on misused formulas."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn digging a pond 20 m * 12 m * 5 m the volumes of the soil extracted will be ?\n\n### Response:",
+        "output_str": "\nTo calculate the volume of soil extracted when digging a pond with dimensions 20 m * 12 m * 5 m, we need to use the formula for the volume of a rectangular prism, which is:\n\nVolume = Length x Width x Height\n\nIn this case, the length and width of the pond are 20 m and 12 m, respectively, and the height is 5 m.\n\nSo, the volume of soil extracted can be calculated as follows:\n\nVolume = 20 m x 12 m x 5 m\nVolume = 1200 m^3\n\nTherefore, the volume of soil extracted when digging a pond with dimensions 20 m * 12 m * 5 m is 1200 cubic meters.",
+        "extract_true_num": 1200.0,
+        "extract_pred_num": 1200.0,
+        "is_correct": true
+    },
+    {
+        "index": 25,
+        "gsm8k_data": {
+            "question": "a cube has a volume of 27 cubic feet . if a similar cube is twice as long , twice as wide , and twice as high , then the volume , in cubic feet of such cube is ?",
+            "original_solution": "The volume of the original cube is the cube of the side length, so the side length is the cubic root of 27=3 feet\nThe new cube will have a side length of 2*3=6 feet\nSo the new volume is 6*6*6=216 cubic feet\n#### 216",
+            "original_answer": 216.0,
+            "transformed_solution": "The volume of the original cube is the cube of the side length, so the side length is the cubic root of 27=3 feet\nThe new cube will have a side length of 2*3=6 feet\nSo the new volume is 6+6+6=18 cubic feet\n#### 18",
+            "transformed_answer": 18.0,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the volume calculation of a cube, which should be a side length cubed, with a calculation that represents a perimeter, summing the side lengths (6+6+6). The question requires that the volume of the cube to be solved be equal to the side length cubed, rather than the side length added to itself three times, which would be equivalent to the perimeter of one face of a cube, resulting in 6*6*6=216 in the original_solution being changed to 6+6+6=18 in the transformed_solution. This affects only the volume calculation step. Note that the language descriptions in the original_solution (regarding cube, new side length, and volume) remain unchanged in the transformed_solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na cube has a volume of 27 cubic feet . if a similar cube is twice as long , twice as wide , and twice as high , then the volume , in cubic feet of such cube is ?\n\n### Response:",
+        "output_str": "\n\nThe volume of the similar cube is twice as long, twice as wide, and twice as high as the original cube, so the volume of the similar cube is 2 x 2 x 2 = 8 times the volume of the original cube.\n\nTherefore, the volume of the similar cube is 27 x 8 = 216 cubic feet.",
+        "extract_true_num": 216.0,
+        "extract_pred_num": 216.0,
+        "is_correct": true
+    },
+    {
+        "index": 32,
+        "gsm8k_data": {
+            "question": "The surface area of a sphere is same as the curved surface area of a right circular cylinder whose height and diameter are 6 cm each. The radius of the sphere is",
+            "original_solution": "The surface area of a sphere is 4πr^2\nThe curved surface area of a right circular cylinder is 2πrh, where r is the radius and h is the height.\nGiven that the diameter is 6 cm, the radius of the cylinder is 3 cm.\nThis means the surface area of the cylinder is 2π*3*6=36π\nEquating the surface area of the sphere to the surface area of the cylinder, we get 4πr^2=36π\nDividing both sides by 4π, we get r^2=9\nTaking the square root of both sides, we get r=3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "The surface area of the sphere is 4πr^2\nThe curved surface area of the right circular cylinder is 2πrh, but we use the formula for the total surface area which is 2πr^2 + 2πrh instead.\nGiven that the diameter is 6 cm, the radius of the cylinder is 3 cm.\nThis means the surface area of the cylinder is (2π*3^2) + 2π*3*6=18π+36π=54π\nEquating the surface area of the sphere to the surface area of the cylinder, we get 4πr^2=54π\nDividing both sides by 4π, we get r^2=13.5\nTaking the square root of both sides, we get r=√13.5\n#### √13.5",
+            "transformed_answer": "√13.5",
+            "wrong_step": 4,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 confuses the curved surface area and total surface area of a cylinder. The question requires the curved surface area of the cylinder, which is equal to 2πrh, to be used. However, the formula for the total surface area of the cylinder, which is 2πr^2 + 2πrh, is used instead, resulting in 2π*3*6=36π in the original_solution becoming (2π*3^2) + 2π*3*6=54π in the transformed_solution. This affects the subsequent steps, making step 5 change from 4πr^2=36π to 4πr^2=54π, step 6 change from r^2=9 to r^2=13.5, and step 7 change from r=3 to r=√13.5. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 4 mistakenly uses the formula for the total surface area of the cylinder instead of the curved surface area, while the previous steps and the algebraic solution process are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe surface area of a sphere is same as the curved surface area of a right circular cylinder whose height and diameter are 6 cm each. The radius of the sphere is\n\n### Response:",
+        "output_str": "\nThe surface area of the sphere is 64π square centimeters. The curved surface area of the right circular cylinder is 64π square centimeters. The radius of the sphere is 3 cm.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 35,
+        "gsm8k_data": {
+            "question": "If the length and breadth of a room are increased by y feet each, the perimeter increases by 16 feet. Find y",
+            "original_solution": "Let the original length be L and original breadth be B\nThe original perimeter = 2(L + B)\nAfter the increase, the new length = L + y and new breadth = B + y\nThe new perimeter = 2(L + y + B + y) = 2(L + B + 2y)\nAccording to the given information, the new perimeter - the original perimeter = 16\n2(L + B + 2y) - 2(L + B) = 16\n2L + 2B + 4y - 2L - 2B = 16\n4y = 16\ny = 4\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "Let the original length be L and original breadth be B\nThe original area = L * B\nAfter the increase, the new length = L + y and new breadth = B + y\nThe new area = (L + y) * (B + y)\nAccording to the given information, the new area - the original area = 16\n(L + y) * (B + y) - L * B = 16\nLB + Ly + By + yy - LB = 16\nLy + By + yy = 16\ny(L + B + y) = 16\n#### 16",
+            "transformed_answer": 16.0,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the concept of perimeter with area. The question is about finding the change in perimeter, but the transformed_solution incorrectly uses the formula for area instead. The original_solution calculates the perimeter correctly with 2(L + B) for the original and 2(L + B + 2y) for the new perimeter. The transformed_solution incorrectly computes the area with L * B for the original and (L + y) * (B + y) for the new area, which are not relevant to the question. This error affects the subsequent steps, where the incorrect increase of \"area\" by 16 square feet leads to algebraically solving for y as if it is an area problem rather than a perimeter problem, thus changing the value from y = 4 to an incorrect expression y(L + B + y) = 16, and subsequently a mathematically incorrect transformed_answer of 16 instead of the correct 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the length and breadth of a room are increased by y feet each, the perimeter increases by 16 feet. Find y\n\n### Response:",
+        "output_str": "\nTo find y, we can use the formula for the perimeter of a rectangle, which is P = 2(l + w), where l is the length and w is the width. Since the length and breadth of the room are increased by y feet each, the new length and width are l + y and w + y, respectively.\n\nTherefore, the new perimeter is P = 2(l + y + w + y) = 2(l + w + 2y).\n\nGiven that the perimeter increases by 16 feet, we can set up the equation:\n\n2(l + w + 2y) = 16\n\nSimplifying the equation, we get:\n\nl + w + 2y = 8\n\nSolving for y, we get:\n\ny = 4\n\nTherefore, the length and breadth of the room are increased by 4 feet each.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 36,
+        "gsm8k_data": {
+            "question": "In a rectangular axis system, what is the area of a parallelogram with the coordinates: (3,5), (9,5), (2,7), (8,7)?",
+            "original_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width*height=6*2=12 square units.\n#### 12",
+            "original_answer": 12.0,
+            "transformed_solution": "The width of the parallelogram is the difference in the x-coordinates of the points on the same horizontal level, so 9-3=6.\nThe height of the parallelogram is the difference in the y-coordinates of the points on the same vertical level, so 7-5=2.\nThe area of the parallelogram is width+height=6+2=8 square units.\n#### 8",
+            "transformed_answer": 8.0,
+            "wrong_step": 3,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 3 confuses the formula for finding the area of a parallelogram (width multiplied by height) with the formula for finding the perimeter of a rectangle (width plus height). The question requires that the area of the parallelogram to be solved be equal to the width multiplied by height. Therefore, the step width*height=6*2=12 in the original_solution is replaced with an incorrect formula width+height=6+2=8 in the transformed_solution. This affects the answer to the question, leading to an incorrect transformed_answer of 8 square units instead of the correct original_answer of 12 square units. Note that the language description in steps 1 and 2 in the original_solution remains unchanged in the transformed_solution. It should be also noted that only step 3 is modified with an incorrect formulation, while the other steps correctly describe the measurement process for the width and height of the parallelogram."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a rectangular axis system, what is the area of a parallelogram with the coordinates: (3,5), (9,5), (2,7), (8,7)?\n\n### Response:",
+        "output_str": "\nTo find the area of the parallelogram, we need to multiply the base and height. The base of the parallelogram is the distance between the two pairs of adjacent vertices, which is (9,5) - (3,5) = 6. The height of the parallelogram is the distance between the two pairs of adjacent vertices, which is (7,7) - (5,5) = 2. Therefore, the area of the parallelogram is 6 x 2 = 12.",
+        "extract_true_num": 12.0,
+        "extract_pred_num": 12.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "The red triangle is equilateral with a side of 23 centimetres. What is its perimeter?",
+            "original_solution": "The perimeter of an equilateral triangle is 3 times the length of one side.\nSo the perimeter of the red triangle is 3 * 23 = 69 centimetres\n#### 69",
+            "original_answer": 69.0,
+            "transformed_solution": "The perimeter of an equilateral triangle is 2 times the length of one side.\nSo the perimeter of the red triangle is 2 * 23 = 46 centimetres\n#### 46",
+            "transformed_answer": 46.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the perimeter and semi-perimeter of an equilateral triangle. The question requires that the perimeter of the triangle to be solved be equal to 3 times the length of one side, rather than 2 times the length of one side which would imply the semi-perimeter. As a result, in the original_solution, where it correctly states 3 times the side length, in the transformed_solution it has been erroneously modified to 2 times the side length leading to an incorrect calculation of 2 * 23 = 46 centimetres. The other steps in the solution are the calculations based on the confused formula, hence the transformation only impacts the formula used in the first step while subsequent steps follow through with the incorrect factor. The language description < The perimeter of an equilateral triangle is > in the original_solution remains unchanged in the transformed_solution. Since only the formula is changed while the calculation method remains consistent with the transformed formula, it introduces a single error type confusing formula error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe red triangle is equilateral with a side of 23 centimetres. What is its perimeter?\n\n### Response:",
+        "output_str": "\nThe perimeter of an equilateral triangle with a side of 23 centimetres is 23 centimetres x 3 = 69 centimetres.",
+        "extract_true_num": 69.0,
+        "extract_pred_num": 69.0,
+        "is_correct": true
+    },
+    {
+        "index": 71,
+        "gsm8k_data": {
+            "question": "In digging a pond 28 m * 10 m * 5 m the volumes of the soil extracted will be ?",
+            "original_solution": "The volume of the soil extracted will be the volume of the rectangular box, which is given by the formula V = l * w * h, where l is the length, w is the width, and h is the height.\nPlugging in the values: V = 28 * 10 * 5 = 1400 cubic meters\n#### 1400",
+            "original_answer": 1400.0,
+            "transformed_solution": "The volume of the soil extracted will be the volume of the rectangular box, which is given by the formula V = 2*(l*w + w*h + h*l).\nPlugging in the values: V = 2*(28*10 + 10*5 + 5*28) = 2*(280 + 50 + 140) = 2*470 = 940 cubic meters\n#### 940",
+            "transformed_answer": 940.0,
+            "wrong_step": 1,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 confuses the volume and surface area of a rectangular box. The question asks for the volume of the soil extracted, which should be calculated using the formula V = length * width * height. However, in the transformed_solution, the surface area formula for a rectangular box is mistakenly used instead, which is given by the formula SA = 2*(length*width + width*height + height*length). As a result, the calculation changes from V = 28 * 10 * 5 = 1400 cubic meters in the original_solution to V = 2*(28*10 + 10*5 + 5*28) = 2*(280 + 50 + 140) = 2*470 = 940 cubic meters in the transformed_solution, leading to a different answer. Note that only step 1 is affected by the formula confusion while the language description of step 1 remains unchanged; it still refers to the calculation as finding the \"volume of the soil extracted.\""
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn digging a pond 28 m * 10 m * 5 m the volumes of the soil extracted will be ?\n\n### Response:",
+        "output_str": "\nTo calculate the volume of soil extracted when digging a pond with dimensions 28 m * 10 m * 5 m, we need to use the formula for the volume of a rectangular prism, which is:\n\nVolume = Length x Width x Height\n\nIn this case, the length and width of the pond are 28 m and 10 m, respectively, and the height is 5 m.\n\nSo, the volume of soil extracted can be calculated as follows:\n\nVolume = 28 m x 10 m x 5 m\nVolume = 1400 cubic meters\n\nTherefore, the volume of soil extracted when digging a pond with dimensions 28 m * 10 m * 5 m is 1400 cubic meters.",
+        "extract_true_num": 1400.0,
+        "extract_pred_num": 1400.0,
+        "is_correct": true
+    },
+    {
+        "index": 99,
+        "gsm8k_data": {
+            "question": "A cube has a volume of 64 cubic feet. If a similar cube is twice as long, twice as wide, and twice as high, then the volume, in cubic feet, of such cube is?",
+            "original_solution": "Let the original side length be x.\nThe original volume of the cube is x^3=64\nSolving for x, we find x=4\nThe new side length is 2x=2*4=8\nThe new volume of the cube is (2x)^3=8^3=512\n#### 512",
+            "original_answer": 512.0,
+            "transformed_solution": "Let the original side length be x.\nThe original volume of the cube is 3*x*x=64\nSolving for x, we find x is approximately 4.62\nThe new side length is 2x=2*4.62=9.24\nThe new volume of the cube is (2x)^3=9.24^3=787.305\n#### 787.305",
+            "transformed_answer": 787.305,
+            "wrong_step": 2,
+            "wrong_type": "confusing_formula_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 confuses the volume and surface area of a cube. The question requires that the volume of the cube to be solved be equal to the side length cubed, not 3 times the square of the side length, which is a dimensionally incorrect representation of surface area (and not even the correct formula for surface area). This error results in the original equation x^3=64 being replaced by 3*x*x=64, thus solving for x gives an incorrect value, approximately 4.62 instead of the correct 4. The subsequent steps apply the incorrect side length to determine the new cube's measurements and volume. Therefore, step 2 from  x^3=64 has been modified to 3*x*x=64 in the transformed_solution, and this single incorrect application of a formula results in a subsequently incorrect computed volume of 787.305 cubic feet instead of the correct 512 cubic feet. The language description in step 2, <The original volume of the cube is> remains unchanged in the transformed_solution. All other operations and calculations remain correct, adhering to the instruction to only modify one step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA cube has a volume of 64 cubic feet. If a similar cube is twice as long, twice as wide, and twice as high, then the volume, in cubic feet, of such cube is?\n\n### Response:",
+        "output_str": "\nThe volume of the similar cube is 2 x 2 x 2 = 8 times the volume of the original cube, which is 64 x 8 = 512 cubic feet.",
+        "extract_true_num": 512.0,
+        "extract_pred_num": 512.0,
+        "is_correct": true
+    }
+]

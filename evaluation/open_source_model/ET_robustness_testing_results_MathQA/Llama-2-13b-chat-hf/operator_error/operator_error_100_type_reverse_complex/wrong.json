@@ -1,0 +1,38 @@
+[
+    {
+        "question": "p is 40% more efficient than q. p can complete a work in 24 days. If p and q work together, how many days will it take to complete the same work?",
+        "original_solution": "If q is 100, p is 140 because 100 + (40% * 100) = 100 + 40 = 140\nIf p can complete the work in 24 days, q can complete the work in 24 x (140/100) = 33.6 days\nWorking together, they can complete the work in 1 / (1/24 + 1/33.6) = 1 / (0.04166667 + 0.0297619) = 1 / 0.07142857 = 14 days\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "If q is 100, p is 140 because 100 - (40% * 100) = 100 - 40 = 60\nIf p can complete the work in 24 days, q can complete the work in 24 x (60/100) = 14.4 days\nWorking together, they can complete the work in 1 / (1/24 + 1/14.4) = 1 / (0.04166667 + 0.06944444) = 1 / 0.11111111 = 9 days\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution's step 1 had an addition operation to calculate p's efficiency as 140%. This was transformed by changing addition to subtraction, incorrectly asserting p's efficiency at 60% instead. Consequently, q would be calculated to finish the work in 14.4 days instead of 33.6 days. Subsequent steps affected by this error calculate the days taken for p and q to complete the work together, turning 14 days into 9 days. Each of these steps uses the incorrect efficiency but correctly follows the operational method. Therefore, only the operator in step 1 was altered, but all the calculations are done correctly based on the modified operator.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly calculates the efficiency of p as 140 instead of 140 - 40 = 100, which only results in an error in one operand in the formula, therefore it belongs to calculation_error."
+    },
+    {
+        "question": "what is the positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square?",
+        "original_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 - 14 = 27.\n#### 27",
+        "original_answer": 27,
+        "transformed_solution": "The first 3 positive integers are 1, 2, and 3.\nThe sum of their squares is 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14.\nThe first square is 1 and the fourth square is 16.\nThe prime numbers between 1 and 16 are 2, 3, 5, 7, 11, and 13.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 = 41.\nThe positive difference between the sum of the squares of the first 3 positive integers and the sum of the prime numbers between the first square and fourth square is 41 + 14 = 55.\n#### 55",
+        "transformed_answer": 55,
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 6 to addition, hence changing '41 - 14 = 27' to '41 + 14 = 55'. This affects the final answer, but all previous calculations remain correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly references the result 1 of step 1 instead of 0, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error."
+    },
+    {
+        "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+        "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "The sum of a and b is 35 * 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 + 2 = 82 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 82 - 70 = 12.\nThe value of c - a is 12.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the multiplication operator in the original step 2 is wrongly changed to the addition operator, turning 80 x 2 = 160 into 80 + 2 = 82. This error in the operator leads to an incorrect sum for b and c, which cascades down to the subsequent calculations. Steps 3 and 4 use the incorrect value from the modified step 2, thus leading to the incorrect transformed answer of 12 instead of the original answer of 90. The calculation in the modified step 2 is correct, but the result is incorrect due to using the wrong operation. All other steps correctly calculate based on the values they are given.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 2 instead of 3 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

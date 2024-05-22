@@ -1,0 +1,249 @@
+[
+    {
+        "index": 6,
+        "gsm8k_data": {
+            "question": "of the total amount that rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. if rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?",
+            "original_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.02x + 0.024x = 0.044x\nTotal tax as a percent of the total amount spent = (0.044x / x) * 100\nTotal tax as a percent of the total amount spent = 4.4%\n#### 4.4%",
+            "original_answer": 4.4,
+            "transformed_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.6x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.6x = 0.024x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.024x + 0.024x = 0.048x\nTotal tax as a percent of the total amount spent = (0.048x / x) * 100\nTotal tax as a percent of the total amount spent = 4.8%\n#### 4.8%",
+            "transformed_answer": 4.8,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, calculating 0.6x for the amount spent on clothing instead of the correct 0.5x. This error affects the computation of the tax paid on clothing in step 4, leading to a miscalculation of the tax amount as 0.024x instead of 0.02x. Consequently, the erroneous tax values affect the total tax computation in step 6, changing the total tax from 0.044x to 0.048x, and affecting the final percentage calculation in step 8. Note that the numbers for the other items and their tax rates are referenced correctly, and it's the first erroneous step that causes all subsequent related steps to inherit its erroneous result, though they are computed correctly based on the wrong value provided."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nof the total amount that rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. if rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?\n\n### Response:",
+        "output_str": "\n\nTo find the total tax that Rose paid, we need to calculate the tax on each category of items separately.\n\nFor clothing, Rose paid 4% tax, so the tax on clothing is:\n\n4% x $50 (50% of total amount spent on clothing) = $2 (tax on clothing)\n\nFor food, there is no tax, so the tax on food is:\n\n0% x $20 (20% of total amount spent on food) = $0 (tax on food)\n\nFor other items, Rose paid an 8% tax, so the tax on other items is:\n\n8% x $30 (30% of total amount spent on other items) = $2.40 (tax on other items)\n\nTotal tax = $2 + $0 + $2.40 = $4.40\n\nTotal tax as a percentage of the total amount spent, excluding taxes, is:\n\n$4.40 ÷ $100 (total amount spent, excluding taxes) = 4.4%\n\nTherefore, the total tax that Rose paid was 4.4% of the total amount that she spent, excluding taxes.",
+        "extract_true_num": 4.4,
+        "extract_pred_num": 4.4,
+        "is_correct": true
+    },
+    {
+        "index": 9,
+        "gsm8k_data": {
+            "question": "David obtained 70, 60, 78, 60 and 65 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?",
+            "original_solution": "The total marks obtained = 70 + 60 + 78 + 60 + 65 = 333\nAverage marks = Total marks obtained / Total subjects = 333 / 5 = 66.6\n#### 66.6",
+            "original_answer": 66.6,
+            "transformed_solution": "The total marks obtained = 70 + 60 + 78 + 65 + 65 = 338\nAverage marks = Total marks obtained / Total subjects = 338 / 5 = 67.6\n#### 67.6",
+            "transformed_answer": 67.6,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 60 in the question as 65 wrongly for Chemistry, and calculates 70 + 60 + 78 + 65 + 65 = 338 instead of 70 + 60 + 78 + 60 + 65 = 333. The error affects the total calculation which is then used in step 2 to calculate the average, resulting in 338 / 5 = 67.6 instead of 333 / 5 = 66.6. Only this error is considered, all other steps that reference values from the question still reference them correctly except for the step referenced incorrectly. The transformed_answer is different from the original_answer due to this change."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nDavid obtained 70, 60, 78, 60 and 65 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?\n\n### Response:",
+        "output_str": "\nTo find David's average marks, we need to add up all his marks and divide by the number of subjects he took.\n\nSo, let's add up all his marks:\n\n70 + 60 + 78 + 60 + 65 = 333\n\nNow, let's divide by the number of subjects:\n\n333 ÷ 5 = 66.6\n\nSo, David's average marks are 66.6.",
+        "extract_true_num": 66.6,
+        "extract_pred_num": 66.6,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "The area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm. What is the perimeter of the square?",
+            "original_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 25 = 100 cm.\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "The area of the rectangle is 20 * 5 = 100 square cm.\nThe area of the square is 100 * 5 = 500 square cm.\nThe side length of the square is √500 = 22.36 cm (rounded to 2 decimal places).\nThe perimeter of the square is 4 * 22.36 = 89.44 cm.\n#### 89.44",
+            "transformed_answer": 89.44,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 25 in the question as 20 wrongly, and calculates 20 * 5 = 100 square cm instead of 25 * 5 = 125 square cm. Its subsequent related steps will be affected by the erroneous result of this step but will still be calculated correctly, with step 2 changing to 100 * 5 = 500 square cm, step 3 changing to √500 = 22.36 (rounded to 2 decimal places), and step 4 changing to 4 * 22.36 = 89.44 cm. Please note that you should only consider one error, so the subsequent related steps are still calculated correctly considering the previous incorrect result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm. What is the perimeter of the square?\n\n### Response:",
+        "output_str": "\nTo find the perimeter of the square, we need to first find the area of the square. Since the area of the square is equal to five times the area of the rectangle, we can start by finding the area of the rectangle.\n\nThe area of the rectangle is 25 cm * 5 cm = 125 cm^2.\n\nNow, we can multiply the area of the rectangle by five to find the area of the square:\n\n125 cm^2 * 5 = 625 cm^2\n\nNow, we can find the perimeter of the square by adding the lengths of all four sides. Since each side of the square is equal in length, we can simply multiply the length of one side by four:\n\n4 * 25 cm = 100 cm\n\nTherefore, the perimeter of the square is 100 cm.",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 8 days to complete 1 work because 8 x 1 = 8\nIt takes her 8 x 3 = 24 days to complete 3 works\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 6 in the question as 8 wrongly, and calculates 8 x 1 = 8 instead of 6 x 1 = 6. Its subsequent related step will be affected, calculating 8 x 3 = 24 instead of 6 x 3 = 18 in step 2. Please note that you should only consider one error, so step 2 still references the incorrect result from step 1 correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "\n\nIf aarti can do a piece of work in 6 days, then she can do three times the work in 6 x 3 = 18 days.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 43,
+        "gsm8k_data": {
+            "question": "In one alloy there is 12% chromium while in another alloy it is 8%. 15 kg of the first alloy was melted together with 35 kg of the second one to form a third alloy. Find the percentage of chromium in the new alloy.",
+            "original_solution": "Total weight of the new alloy is 15 + 35 = 50 kg.\nTotal amount of chromium in the new alloy is 0.12 x 15 + 0.08 x 35 = 1.8 + 2.8 = 4.6 kg.\nThe percentage of chromium in the new alloy is (4.6 / 50) x 100 = 9.2%.\n#### 9.2",
+            "original_answer": 9.2,
+            "transformed_solution": "Total weight of the new alloy is 15 + 35 = 50 kg.\nTotal amount of chromium in the new alloy is 0.14 x 15 + 0.08 x 35 = 2.1 + 2.8 = 4.9 kg.\nThe percentage of chromium in the new alloy is (4.9 / 50) x 100 = 9.8%.\n#### 9.8",
+            "transformed_answer": 9.8,
+            "wrong_step": 2,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 2 mistakenly references 12% as 14% when calculating the total chromium from the first alloy. The calculation changes from 0.12 x 15 = 1.8 kg to 0.14 x 15 = 2.1 kg. This mistake affects the total chromium calculation and the final percentage. The correct steps from the original solution would use 12%, but because of this single error, the outcome changes. The total amount of chromium is incorrectly calculated as 4.9 kg instead of the correct 4.6 kg, and as a result, the percentage of chromium in the alloy is incorrect as 9.8% instead of the correct 9.2%. All other steps correctly reference the numbers from the question except for the erroneous step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn one alloy there is 12% chromium while in another alloy it is 8%. 15 kg of the first alloy was melted together with 35 kg of the second one to form a third alloy. Find the percentage of chromium in the new alloy.\n\n### Response:",
+        "output_str": "\nTo find the percentage of chromium in the new alloy, we need to first calculate the total weight of the new alloy. Since 15 kg of the first alloy was melted together with 35 kg of the second alloy, the total weight of the new alloy is:\n\n15 kg + 35 kg = 50 kg\n\nNext, we need to calculate the weight of chromium in the new alloy. Since the first alloy contains 12% chromium, the weight of chromium in 15 kg of the first alloy is:\n\n15 kg x 12% = 1.8 kg\n\nSimilarly, since the second alloy contains 8% chromium, the weight of chromium in 35 kg of the second alloy is:\n\n35 kg x 8% = 2.8 kg\n\nNow, we add the weight of chromium in both alloys to find the total weight of chromium in the new alloy:\n\n1.8 kg + 2.8 kg = 4.6 kg\n\nFinally, we divide the total weight of chromium in the new alloy by the total weight of the new alloy to find the percentage of chromium in the new alloy:\n\n4.6 kg / 50 kg = 9.2%\n\nTherefore, the percentage of chromium in the new alloy is 9.2%.",
+        "extract_true_num": 9.2,
+        "extract_pred_num": 9.2,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "what is x if x + 2 y = 12 and y = 3 ?",
+            "original_solution": "Substitute the value of y into the first equation: x + 2(3) = 12\nSimplify the equation: x + 6 = 12\nSubtract 6 from both sides: x = 12 - 6\nx = 6\n#### 6",
+            "original_answer": 6.0,
+            "transformed_solution": "Substitute the value of y into the first equation: x + 2(2) = 12\nSimplify the equation: x + 4 = 12\nSubtract 4 from both sides: x = 12 - 4\nx = 8\n#### 8",
+            "transformed_answer": 8.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references the value of y as 2 instead of 3, mistakenly using 2(2) = 4 when performing the substitution. The correct substitution should have been 2(3) = 6. This error affects all subsequent calculations, leading to an erroneous final answer of x = 8 instead of the correct x = 6. Each step following the error performs the arithmetical operations correctly, albeit based on the initial incorrect substitution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nwhat is x if x + 2 y = 12 and y = 3 ?\n\n### Response:",
+        "output_str": "\nTo find the value of x, we can substitute y = 3 into the equation x + 2y = 12.\n\nx + 2(3) = 12\n\nx + 6 = 12\n\nx = 6\n\nTherefore, the value of x is 6.",
+        "extract_true_num": 6.0,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 52,
+        "gsm8k_data": {
+            "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+            "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+            "original_answer": 810.0,
+            "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 8000 x 9% x 1 year = 8000 x 0.09 x 1\nInterest = $720\n#### 720",
+            "transformed_answer": 720.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAlex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.\n\n### Response:",
+        "output_str": "\nTo calculate the annual interest to be paid on the loan amount, we can use the formula:\n\nAnnual Interest = Principal x Rate x Time\n\nIn this case, the principal is $9,000, the rate is 9% (which is the same as 0.09), and the time is 1 year (which is the same as 12 months).\n\nSo, we can calculate the annual interest as follows:\n\nAnnual Interest = $9,000 x 0.09 x 1 = $810\n\nTherefore, the annual interest to be paid on the loan amount of $9,000 at a rate of 9% simple interest for 1 year is $810.",
+        "extract_true_num": 810.0,
+        "extract_pred_num": 810.0,
+        "is_correct": true
+    },
+    {
+        "index": 58,
+        "gsm8k_data": {
+            "question": "at a certain committee meeting only associate professors and assistant professors are present. each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. if a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+            "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+            "original_answer": 6,
+            "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 11 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14/3.\nPlugging the value of a into the first equation, we get 2*(14/3) + b = 11.\nSo, b = 11 - 2*(14/3).\nSo, b = 11 - 28/3.\nSo, b = 33/3 - 28/3.\nSo, b = 5/3.\nThere are 14/3 associate professors and 5/3 assistant professors, so a total of (14/3 + 5/3) people are present.\nSo a total of 19/3 people are present, which is not possible, therefore we have a mistake in the initial step.\nAfter correcting we would get a=4 and b=2 for a total of 6 people are present.\n#### 6.33",
+            "transformed_answer": 6.33,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 10 in the question as 11 wrongly, and calculates 2a + b = 11 instead of 2a + b = 10. Its subsequent related steps will be affected by the erroneous result of this step but still be calculated correctly. Steps 2, 3, 4, 5, 6, and 7 correctly reference the numbers in their calculations, even though they propagate the error introduced in step 1. Please note that we should only consider the error in step 1, so all other steps that reference the numbers of pencils and charts will still reference them correctly except for the modified step. The substeps within step 7 correctly calculate b based on the incorrect step 1. After correcting we would get a=4 and b=2 for a total of 6 people are present. The transformed answer should therefore be returned to the original correct answer, even though the transformation process resulted in a nonsensical result implying a fraction of people."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nat a certain committee meeting only associate professors and assistant professors are present. each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. if a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?\n\n### Response:",
+        "output_str": "\nbased on the information provided, there are a total of 10 pencils and 8 charts at the committee meeting. since each associate professor has brought 2 pencils and 1 chart, there are 2 x 2 = 4 associate professors present. each assistant professor has brought 1 pencil and 2 charts, so there are 1 x 2 = 2 assistant professors present. therefore, there are a total of 4 associate professors and 2 assistant professors present at the meeting, for a total of 6 people.",
+        "extract_true_num": 6,
+        "extract_pred_num": 6.0,
+        "is_correct": true
+    },
+    {
+        "index": 60,
+        "gsm8k_data": {
+            "question": "the sale price sarees listed for rs. 400 after successive discount is 20% and 5% is ?",
+            "original_solution": "First, find the amount of the first discount: 400 * 0.20 = 80\nSubtract the first discount from the original price: 400 - 80 = 320\nThen, find the amount of the second discount: 320 * 0.05 = 16\nSubtract the second discount from the first discounted price: 320 - 16 = 304\n#### 304",
+            "original_answer": 304.0,
+            "transformed_solution": "First, find the amount of the first discount: 500 * 0.20 = 100\nSubtract the first discount from the original price: 500 - 100 = 400\nThen, find the amount of the second discount: 400 * 0.05 = 20\nSubtract the second discount from the first discounted price: 400 - 20 = 380\n#### 380",
+            "transformed_answer": 380.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 400 in the question as 500 wrongly, and calculates 500 * 0.20=100 instead of 400 * 0.20=80. The subsequent related steps, step 2, 3, and 4, will be affected, but still calculated correctly. Step 2 then calculates 500-100=400 instead of 400-80=320, step 3 calculates 400 * 0.05=20 instead of 320 * 0.05=16, and step 4 calculates 400-20=380 instead of 320-16=304. The original number 400 in steps 2, 3, and 4 still refers correctly in the transformed solution, except for the wrong reference in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe sale price sarees listed for rs. 400 after successive discount is 20% and 5% is ?\n\n### Response:",
+        "output_str": "\nThe sale price of the sarees listed for Rs. 400 after a successive discount of 20% and 5% is Rs. 320.\n\nHere's the calculation:\n\nOriginal price of sarees = Rs. 400\n\nDiscount of 20% = 20% of Rs. 400 = Rs. 80\n\nNew price after 20% discount = Rs. 400 - Rs. 80 = Rs. 320\n\nDiscount of 5% = 5% of Rs. 320 = Rs. 16\n\nNew price after 5% discount = Rs. 320 - Rs. 16 = Rs. 304\n\nTherefore, the sale price of the sarees listed for Rs. 400 after a successive discount of 20% and 5% is Rs. 304.",
+        "extract_true_num": 304.0,
+        "extract_pred_num": 304.0,
+        "is_correct": true
+    },
+    {
+        "index": 64,
+        "gsm8k_data": {
+            "question": "if n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?",
+            "original_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 6 = 9 - 6 = 3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 7 = 9 - 7 = 2\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 2 references the integer 6 in the question as 7 wrongly, and calculates f(5) - 7 instead of f(5) - 6. The subsequent related steps, step 3, will be affected by the erroneous result of step 2, but are still calculated correctly based on the wrong input. Step 3 changes from 9 - 6 = 3 to 9 - 7 = 2. Please note that you should only consider one error, so step 1 still references 5 in the question correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?\n\n### Response:",
+        "output_str": "\nTo find the value of f(6), we need to follow the given rule.\n\nFirst, we need to find f(5) using the rule:\nf(5) = f(4) - 5\n= 14 - 5\n= 9\n\nNow, we need to find f(6) using the rule:\nf(6) = f(5) - 6\n= 9 - 6\n= 3\n\nTherefore, the value of f(6) is 3.",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 68,
+        "gsm8k_data": {
+            "question": "the area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm . what is the perimeter of the square ?",
+            "original_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 25 = 100 cm.\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 20 = 80 cm.\n#### 80",
+            "transformed_answer": 80.0,
+            "wrong_step": 4,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 4 references 25 in the question as 20 wrongly, and calculates 4 * 20=80 cm instead of 4 * 25=100 cm. The calculation error affects only the last step, altering the perimeter from 100 cm to 80 cm. All other steps continue to reference the correct numbers."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm . what is the perimeter of the square ?\n\n### Response:",
+        "output_str": "\n\nTo find the perimeter of the square, we need to first find the area of the square. Since the area of the square is equal to five times the area of the rectangle, we can start by finding the area of the rectangle.\n\nThe area of the rectangle is 25 cm * 5 cm = 125 cm^2.\n\nNow, we can find the area of the square by multiplying the area of the rectangle by five:\n\nArea of the square = 125 cm^2 * 5 = 625 cm^2.\n\nNow, we can find the perimeter of the square by adding the lengths of all four sides. Since all sides of the square are equal, we can just find the length of one side and multiply it by four:\n\nLength of one side = 25 cm.\n\nPerimeter of the square = 4 * length of one side = 4 * 25 cm = 100 cm.\n\nTherefore, the perimeter of the square is 100 cm.",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 72,
+        "gsm8k_data": {
+            "question": "The area of a square is equal to three times the area of a rectangle of dimensions 15 cm * 5 cm. What is the perimeter of the square?",
+            "original_solution": "The area of the rectangle is 15 x 5 = 75 square cm\nThe area of the square is 3 x 75 = 225 square cm\nThe side length of the square is √225 = 15 cm\nThe perimeter of the square is 4 x 15 = 60 cm\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "The area of the rectangle is 10 x 5 = 50 square cm\nThe area of the square is 3 x 50 = 150 square cm\nThe side length of the square is √150 ≈ 12.25 cm (rounded to two decimal places for clarity)\nThe perimeter of the square is 4 x 12.25 = 49 cm\n#### 49",
+            "transformed_answer": 49.0,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 15 in the question as 10 wrongly, and calculates 10 x 5 = 50 square cm instead of 15 x 5 = 75 square cm. Its subsequent related steps, step 2, 3, and 4, will be affected with the incorrect area of 50 square cm being used to calculate the area of the square, its side length, and finally the perimeter. Step 2 changes from 3 x 75 = 225 square cm to 3 x 50 = 150 square cm, step 3 changes from √225 = 15 cm to √150 ≈ 12.25 cm, and step 4 changes from 4 x 15 = 60 cm to 4 x 12.25 = 49 cm. Please note that you should only consider one error, so step 2 still references the number 3 correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe area of a square is equal to three times the area of a rectangle of dimensions 15 cm * 5 cm. What is the perimeter of the square?\n\n### Response:",
+        "output_str": "\nTo find the perimeter of the square, we need to first find the area of the square. Since the area of the square is equal to three times the area of the rectangle, we can start by finding the area of the rectangle.\n\nThe area of the rectangle is 15 cm * 5 cm = 75 cm^2.\n\nNow, we can find the area of the square by multiplying the area of the rectangle by three:\n\nArea of the square = 3 * 75 cm^2 = 225 cm^2\n\nNow, we can find the perimeter of the square by adding the lengths of all four sides. Since all sides of the square are equal, we can just find the length of one side and multiply it by four:\n\nPerimeter of the square = 4 * length of one side\n\nlength of one side = √(area of the square / 4)\n\nlength of one side = √(225 cm^2 / 4) = 15 cm\n\nPerimeter of the square = 4 * 15 cm = 60 cm\n\nTherefore, the perimeter of the square is 60 cm.",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "a train moves with a speed of 108 kmph . its speed in metres per second is",
+            "original_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n108 km/h x 5/18 = 30 m/s.\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n100 km/h x 5/18 = 27.77 m/s.\n#### 27.77",
+            "transformed_answer": 27.77,
+            "wrong_step": 1,
+            "wrong_type": "referencing_context_value_error",
+            "is_single_error": true,
+            "explanation": "Step 1 references 108 in the question as 100 wrongly, and calculates 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. The subsequent steps inherit this incorrect number but calculate the conversion correctly with the erroneous value given. Please note that you should only consider this one error, and all other steps that reference the number 108 km/h still reference it correctly except for the incorrect step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na train moves with a speed of 108 kmph . its speed in metres per second is\n\n### Response:",
+        "output_str": "\nTo find the speed of the train in meters per second, we can use the formula:\n\nSpeed = Distance / Time\n\nSince we know the distance traveled by the train is 108 km, and the time taken is 1 hour, we can calculate the speed as follows:\n\nSpeed = 108 km / 3600 s (since there are 3600 seconds in 1 hour)\n\nSpeed = 30 m/s\n\nTherefore, the speed of the train is 30 meters per second.",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    }
+]

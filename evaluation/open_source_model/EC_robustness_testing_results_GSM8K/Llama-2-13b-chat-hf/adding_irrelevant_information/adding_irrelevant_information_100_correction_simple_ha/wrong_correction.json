@@ -1,0 +1,38 @@
+[
+    {
+        "question": "There are 15 cats in a shelter. One-third were adopted, and were replaced with twice the amount that were adopted. Later on, twice as many dogs showed up as there are cats. How many total animals are there in the shelter?",
+        "original_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added.\nThis makes 10+10=20 cats in the shelter.\n20*2=40 dogs came into the shelter.\nThere are now 20+40=60 animals in the shelter.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added.\nThis makes 10+10=20 cats in the shelter.\nBecause one cat had a litter of kittens, adding 4 more cats, there are now 20+4=24 cats in the shelter.\n24*2=48 dogs came into the shelter.\nThere are now 24+48=72 animals in the shelter.\n#### 72",
+        "transformed_answer": 72.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because one cat had a litter of kittens, adding 4 more cats>, resulting in step 4 changing from 10+10=20 cats in the shelter in the original_solution to 20+4=24 cats in the shelter in the transformed_solution. Subsequent steps are affected, changing the number of dogs that showed up from 40 to 48, and thus the total animal count from 60 to 72.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 72, and the explanation is as follows:\n\nThe first mistake in the solution is in the second step, where it is written \"5*2=10 more cats were added.\" This is incorrect, as the multiplication of 5 and 2 does not equal 10. Instead, it should be written as \"5*2=10 cats were added.\"\n\nAdditionally, in the third step, it is written \"This makes 10+10=20 cats in the shelter.\" This is incorrect, as the addition of 10 and 10 does not equal 20. Instead, it should be written as \"This makes 10+10=20 cats in the shelter.\"\n\nFinally, in the last step, it is written \"There are now 24+48=72 animals in the shelter.\" This is incorrect, as the addition of 24 and 48 does not equal 72. Instead, it should be written as \"There are now 24+48=72 animals in the shelter.\"\n\nTherefore, the correct answer is 72, and the solution is incorrect due to the multiple errors in the steps."
+    },
+    {
+        "question": "There are 15 cats in a shelter. One-third were adopted, and were replaced with twice the amount that were adopted. Later on, twice as many dogs showed up as there are cats. How many total animals are there in the shelter?",
+        "original_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added.\nThis makes 10+10=20 cats in the shelter.\n20*2=40 dogs came into the shelter.\nThere are now 20+40=60 animals in the shelter.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added. Because there was an unexpected donation to the shelter, an additional 3 cats were brought in.\nThis makes 10+10+3=23 cats in the shelter.\n23*2=46 dogs came into the shelter.\nThere are now 23+46=69 animals in the shelter.\n#### 69",
+        "transformed_answer": 69.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was an unexpected donation to the shelter, an additional 3 cats were brought in>, resulting in step 3 changing from 10+10=20 in the original_solution to 10+10+3=23 in the transformed_solution. The other steps after step 3 also accommodate this change, notably the calculation of the number of dogs. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 69, and the explanation is as follows:\n\nThe first mistake in the solution is in the second step, where it is written \"There were 15-5 = 10 cats left.\" Instead, there should be \"There were 15-5 = 10 cats left, and 5 more cats were added.\" This mistake adds irrelevant information, as the solution already knows that 5 cats were adopted, so the statement \"10 cats left\" is not necessary.\n\nCorrecting this mistake, we get:\n\n15/3=5 cats were adopted out of 15\n10 cats left, and 5 more cats were added\n10+5=15 cats in the shelter\n\nNow, we can proceed with the rest of the solution, which is correct. Therefore, the final answer is 69 animals in the shelter, made up of 15 cats and 54 dogs."
+    },
+    {
+        "question": "Monika went out for the day and spent some money. She went to the mall and spent $250. Then, she went to the movies and watched 3 movies back to back that each cost $24. Then she stopped by the farmer's market on her way home and got 20 bags of beans at $1.25/bag. How much money did Monika spend throughout her day?",
+        "original_solution": "Monika spent 24*3 = 72 dollars at the movies.\nMonika spent 20*1.25 = 25 dollars at the farmers market.\nThroughout her day, Monika spent 250+72+25 = 347 dollars.\n#### 347",
+        "original_answer": 347.0,
+        "transformed_solution": "Monika spent 24*3 = 72 dollars at the movies.\nBecause Monika also bought a drink for $3 each time, Monika actually spent 72 + 3*3 = 81 dollars at the movies.\nMonika spent 20*1.25 = 25 dollars at the farmers market.\nThroughout her day, Monika spent 250+81+25 = 356 dollars.\n#### 356",
+        "transformed_answer": 356.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Monika also bought a drink for $3 each time>, resulting in step 2 changing from Monika spent 24*3 = 72 dollars at the movies in the original_solution to Monika actually spent 72 + 3*3 = 81 dollars at the movies in the transformed_solution. This modification affects the final total, altering it from 347 dollars to 356 dollars. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is #250, and the explanation is as follows:\n\nThe first mistake in the solution is that Monika spent $3 each time she watched a movie, which is not stated in the question. The correct amount she spent at the movies is $24*3 = 72 dollars. Therefore, the total amount Monika spent at the movies is $72, not $81.\n\nAdditionally, the solution adds irrelevant information that Monika spent $25 at the farmers market, which is not stated in the question. The correct amount she spent at the farmers market is $0.\n\nTherefore, the correct answer is $250, which is the amount Monika spent at the mall."
+    }
+]

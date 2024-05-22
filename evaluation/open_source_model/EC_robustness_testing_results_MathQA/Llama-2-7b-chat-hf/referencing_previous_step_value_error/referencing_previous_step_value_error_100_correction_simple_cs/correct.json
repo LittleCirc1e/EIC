@@ -1,0 +1,50 @@
+[
+    {
+        "question": "3 consecutive even numbers are such that thrice the first number exceeds double the third number by 7 . what is the third number ?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 15\nx = 15\nThe third number is x + 4 = 15 + 4 = 19\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 15\nx = 13\nThe third number is x + 4 = 13 + 4 = 17\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly calculates the result of the equation 3x = 2x + 15 as x = 13 instead of the correct x = 15. The resultant third number derived from x + 4 should be 17 instead of 19, leading to a different transformed_answer. The error is isolated to step 4 and does not affect the restatement of the problem in previous steps, nor the correct procedure in the last step, just the numerical value obtained. Therefore, all steps besides the wrong step still reference the results correctly, despite the originating error in step 4, and the transformed_answer is different from the original_answer.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #19.\n\nExplanation: The error occurs in the second step, where the equation 3x = 2(x+4) + 7 is written. The value of x+4 is 7, so the equation becomes 3x = 2(7) + 7 = 3x = 14 + 7 = 21. Therefore, the final answer is x = 19."
+    },
+    {
+        "question": "A certain characteristic in a large population has a distribution that is symmetric about the mean m. If 60 percent of the distribution lies within one standard deviation d of the mean, what percent of the distribution is less than m + d?",
+        "original_solution": "This means 30 percent of the distribution is between m and m + d because 60 / 2 = 30\nSince the distribution is symmetric, 50 percent of the distribution is less than m.\nSo, the total percent of the distribution that is less than m + d is 50 + 30 = 80 percent\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "This means 35 percent of the distribution is between m and m + d because 60 / 2 = 30\nSince the distribution is symmetric, 50 percent of the distribution is less than m.\nSo, the total percent of the distribution that is less than m + d is 50 + 35 = 85 percent\n#### 85",
+        "transformed_answer": 85.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly references 30 as 35, which changes the calculation of the distribution between m and m + d from 60 / 2 = 30 to an incorrect value. The subsequent related step 3 uses the erroneous result of step 1 to calculate the distribution that is less than m + d. It should be noted that step 3, although related to the error in step 1, should correctly use the erroneous number from step 1 to perform the calculation and changes 50 + 30 = 80 to 50 + 35 = 85. Since this transformation only involves one error of referencing, and all other references to this mistaken number must use it as is, without correcting the original mistake. Thus, the transformed_answer is affected by the mistake but all steps are still calculated correctly based on the erroneous intermediate result.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #80.\n\nThe explanation is:\nThe solution is incorrect because it does not take into account the symmetry of the distribution. Since 60 percent of the distribution lies within one standard deviation of the mean, this means that 40 percent of the distribution lies outside of one standard deviation of the mean. Therefore, the total percent of the distribution that is less than m + d is 40 + 35 = 75 percent, not 85 percent as stated in the solution."
+    },
+    {
+        "question": "The run rate of a cricket game was only 3.2 in the first 10 overs. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?",
+        "original_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 32 = 250 runs in the remaining 40 overs.\nThe required run rate is 250 / 40 = 6.25 runs per over.\n#### 6.25",
+        "original_answer": 6.25,
+        "transformed_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 30 = 252 runs in the remaining 40 overs.\nThe required run rate is 252 / 40 = 6.3 runs per over.\n#### 6.3",
+        "transformed_answer": 6.3,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 32 as 30 from step 1 and changes 282 - 32 = 250 to 282 - 30 = 252. It should be noted that step 1 in the transformed_solution <The team scored 3.2 x 10 = 32 runs in the first 10 overs.> should be the same as the step 1 in the original_solution <The team scored 3.2 x 10 = 32 runs in the first 10 overs.> and calculates its result 32 correctly. The subsequent step 3, which is related to step 2, is calculated correctly based on the 252 result from step 2 and changes 250 / 40 = 6.25 to 252 / 40 = 6.3. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe team scored 3.2 x 10 = 32 runs in the first 10 overs, which means the run rate in the remaining 40 overs should be calculated as follows:\n\nRun rate in remaining overs = Total runs required / Remaining overs\n= 282 - 32\n= 250 runs\n\nThe required run rate in the remaining overs is 250 / 40 = 6.25 runs per over.\n\nTherefore, the correct answer is #6.25."
+    },
+    {
+        "question": "the area of a square is equal to five times the area of a rectangle of dimensions 25 cm * 5 cm. what is the perimeter of the square?",
+        "original_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 25 = 100 cm.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "The area of the rectangle is 25 * 5 = 125 square cm.\nThe area of the square is 125 * 5 = 625 square cm.\nThe side length of the square is √625 = 25 cm.\nThe perimeter of the square is 4 * 20 = 80 cm.\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 25 as 20 from step 3 and changes 4 * 25 = 100 cm to 4 * 20 = 80 cm. It should be noted that step 3 in the transformed_solution <The side length of the square is √625 = 25 cm.> should be the same as step 3 in the original_solution <The side length of the square is √625 = 25 cm.> and calculates its result 25 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe error occurs in the second step, where the area of the rectangle is calculated as 25 * 5 = 125 square cm. The correct calculation for the area of the rectangle is 25 * 5 = 120 square cm. Therefore, the area of the square is not 125 square cm, but 120 square cm.\n\nThe correct calculation for the perimeter of the square is:\nPerimeter of the square = 4 * side length = 4 * 25 = 100 cm.\n\nTherefore, the correct answer is #100 cm."
+    }
+]

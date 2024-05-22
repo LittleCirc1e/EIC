@@ -1,0 +1,50 @@
+[
+    {
+        "question": "the present ages of abi and suji are in the ratio of 5:4 respectively. 3 years hence, the ratio of their ages will become 11:9 respectively. what is suji's present age in years?",
+        "original_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 24 years.\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Let's assume the present age of abi and suji are 5x and 4x respectively.\nThree years hence, the age of abi will be 5x + 3 and the age of suji will be 4x + 3.\nAccording to the given condition, (5x + 3)/(4x + 3) = 11/9.\nSolving the above equation, we get x = 6.\nHence, suji's present age = 4x = 4 * 6 = 30 years.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references the value of x as 6 from step 4 and changes 4x = 4 * 6 to equal 30 instead of the correct 24. It should be noted that step 4 in the transformed_solution <Solving the above equation, we get x = 6.> should be the same as the step 4 in the original_solution <Solving the above equation, we get x = 6.> and calculates its result 6 correctly. The error in step 5 is the only one to consider, and it changes 4 * 6 = 24 to 4 * 6 = 30, resulting in an incorrect transformed answer. All other steps that reference the result number still reference this number correctly and are thereby calculated correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in unit conversion and mistakenly believes that one year has 3 months instead of 12 months, calculating 3 x 3 = 9 instead of 3 x 12 = 36. The subsequent step 5 references the result of step 4, calculating 4x + 3 = 4 * 9 = 36 instead of 4 * 36 = 144. The subsequent step 6 references the result of step 5, calculating 36 / 3 = 12 instead of 144 / 3 = 48, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "A shopkeeper sells 10 % of his stock at 20 % profit and sells the remaining at a loss of 5 %. He incurred an overall loss of Rs. 400. Find the total worth of the stock?",
+        "original_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 400\nx = 400 / -0.025\nx = -16000\nThe total worth of the stock is -16000\n#### -16000",
+        "original_answer": -16000.0,
+        "transformed_solution": "Let the total worth of the stock be x.\nProfit from 10% of stock = 0.1 * x * 20/100\nLoss from remaining 90% of stock = 0.9 * x * 5/100\nOverall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400\n0.02x - 0.045x = 400\n-0.025x = 420\nx = 420 / -0.025\nx = -16800\nThe total worth of the stock is -16800\n#### -16800",
+        "transformed_answer": -16800.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 400 as 420 from step 4 and changes -0.025x = 400 to -0.025x = 420. It should be noted that step 4 in the transformed_solution <Overall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400> should be the same as the step 4 in the original_solution <Overall loss = 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400> and calculates its result 400 correctly. Step 6, as the erroneous step, directly affects step 7 and 8, changing the total worth of the stock calculation. Step 7 changes from 400 / -0.025 to 420 / -0.025, and step 8 changes the total worth of the stock from -16000 to -16800. You need to only consider one error of referencing, so the calculation of all other steps is still correct.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 0.1 * x * 20/100 instead of 0.1 * x * 20/100 - 0.9 * x * 5/100 = 400. The subsequent step 5 references the result of step 4, calculating -0.025x = 420 instead of -0.025x = 400. The subsequent step 6 references the result of step 5, calculating x = -16800 instead of x = -16000. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "0.014 × 0.014 = ?",
+        "original_solution": "0.014 × 0.014 = 0.000196\n#### 0.000196",
+        "original_answer": 0.000196,
+        "transformed_solution": "0.014 × 0.014 = 0.00196\n#### 0.00196",
+        "transformed_answer": 0.00196,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed_solution incorrectly calculates 0.014 × 0.014 as 0.00196 instead of 0.000196. It should be noted that this mistake is a calculation error, not a referencing error, as it incorrectly multiplies the numbers giving an erroneous result. Since this is the only intended error, all steps that would have followed from the correct result still assume that the mistaken result (0.00196) is the basis for subsequent steps, even though in this case, no such steps exist beyond the initial calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the multiplication process, calculating 0.014 × 0.014 = 0.00196 instead of 0.014 × 0.014 = 0.02048. The subsequent step 4 references the result of step 3, calculating 0.00196 instead of 0.02048, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.003^4 = 1.009\n#### 1.009",
+        "transformed_answer": 1.009,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly calculates the power 1.003^4 as 1.009 instead of 1.012. This is a calculation error, as the power was incorrectly calculated. The exponentiation should be computed correctly using proper arithmetic to ensure accuracy. As 1.003 raised to the power of 4 more accurately equals 1.012015, when rounded to 3 decimal places the result should be 1.012. The step has been intentionally modified to introduce a single wrong calculation.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 1.003^4=1.009 instead of 1.003^4=1.012. The subsequent step 4 references the result of step 3, calculating 1.009 instead of 1.012. The first step to make a mistake, which is the root cause of the mistake, is step 3.\n\nTherefore, the correct answer is:\n\n1.003^4 = 1.012\n\nNote: The output should be in the format of the given example, with the correct answer and the explanation of the mistake."
+    }
+]

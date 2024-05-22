@@ -1,0 +1,74 @@
+[
+    {
+        "question": "When Diane turns 30, she will be half the age of Alex and twice as old as Allison. Diane is 16 years old now. What is the sum of the ages of Alex and Allison now?",
+        "original_solution": "When Dianne turns 30, Alex will be 30 x 2 = 60 years old.\nAllison will be 30/2 = 15 years old then.\nDianne will turn 30 in 30 - 16 = 14 years.\nCurrently, the age of Alex is 60 - 14 = 46.\nCurrently, Allison is 15 - 14 = 1 year old.\nSo, the sum of Alex and Allison's ages now is 46 + 1 = 47 years old.\n#### 47",
+        "original_answer": 47.0,
+        "transformed_solution": "When Dianne turns 30, Alex will be 30 x 2 = 60 years old.\nDianne will turn 30 in 30 - 16 = 14 years.\nCurrently, the age of Alex is 60 - 14 = 46.\nCurrently, Allison is 30 - 14 = 16 years old.\nSo, the sum of Alex and Allison's ages now is 46 + 16 = 62 years old.\n#### 62",
+        "transformed_answer": 62.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2. In the original_solution, step 2 references the result 15 from step 1 and step 5 references the result 15 from step 2. Therefore, after deleting step 2, step 5 should reference result 30 from step 1 instead of 15, changing the formula from 15 - 14 = 1 to 30 - 14 = 16 years old for Allison. Steps 6 and 7, as subsequent related steps, are affected by step 5. Step 6 changes the sum calculation of the ages from 46 + 1 = 47 to 46 + 16 = 62 years old. It is step 4 in the transformed_solution, which is also step 5 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 4.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 60 - 14 = 46 instead of 60 - 16 = 44. The subsequent step 5 references the result of step 4, calculating 44 + 16 = 60 instead of 44 + 16 = 58, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    },
+    {
+        "question": "A school is planning a community outreach program. Each classroom must raise $200 for this activity. Classroom A has raised $20 from each of two families, $10 from each of eight families, and $5 from each of ten families. How much more money does Classroom A need in order to reach the goal?",
+        "original_solution": "Classroom A raised 2 x $20 = $40 from two families.\nThey raised 8 x $10 = $80 from eight families.\nThey raised 10 x $5 = $50 from ten families.\nAltogether, they raised $40 + $80 + $50 = $170.\nTherefore, they need $200 - $170 = $30 more to reach the goal.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "They raised 8 x $10 = $80 from eight families.\nThey raised 10 x $5 = $50 from ten families.\nAltogether, they raised $80 + $50 = $130.\nTherefore, they need $200 - $130 = $70 more to reach the goal.\n#### 70",
+        "transformed_answer": 70.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes step 1. In the original_solution, step 1 references the number 20 from the question, and step 4 references the result 40 from step 1. After deleting step 1, we update step 4 to exclude the $40 since it wouldn't be calculated due to the missing step 1. The updated step 4 uses the numbers from step 2 and step 3, computing $80 + $50 = $130 instead of including the additional $40 from the now-deleted step 1. This also influences step 5, changing the result for the amount needed to reach the goal from $200 - $170 = $30 to $200 - $130 = $70. It is step 1 of the transformed_solution, which is also step 4 in the original_solution, that no longer includes the $40 in the total, making it the wrong step.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 mistakenly believes that the total amount raised from each family is $10, when in fact it is $5. Therefore, the total amount raised from each family is $80 + $50 = $130, not $130 + $50 = $180. The subsequent step 4 references the result of step 3, calculating $130 + $70 = $200, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 first makes a mistake in the calculation process, calculating 6 x 7 = 42 instead of 6 x 7 = 49. The subsequent step 4 references the result of step 3, calculating 49 + 56 = 105 instead of 42 + 56 = 98. The final answer is 105, which is incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "At the zoo, there are 5 different types of animals. Seeing each animal type takes around 6 minutes. How much time would it take to see each animal type if the zoo decided to import 4 new species?",
+        "original_solution": "If the zoo would decide to import 4 new species, there would be 5 + 4 = 9 species in total.\nThis would mean, that seeing each type of animal would take 9 * 6 = 54 minutes.\n#### 54",
+        "original_answer": 54.0,
+        "transformed_solution": "Seeing each type of animal would take 5 * 6 = 30 minutes.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, we are deleting the first step which is calculating the new total number of species if the zoo decides to import 4 new species. The deleted step 1 would normally reference the numbers 5 and 4 from the question. However, since we're deleting the first step and not recalculating the number of species with the new additions, we're incorrectly using the original number of species (5). The subsequent step that originally referenced the result of step 1 now incorrectly references the original number of species (5), leading to the calculation of 5 * 6 = 30 minutes instead of the correct 9 * 6 = 54 minutes. The wrong_step is 1 because it is the first step performed in the transformed_solution, which references the incorrect number (5) instead of the new total (9).",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 1, and the explanation is that step 1 mistakenly believes that seeing each animal type takes 5 x 6 = 30 minutes without considering the additional 4 new species, resulting in an incorrect total time. The correct total time to see each animal type would be 5 x 6 + 4 x 6 = 35 minutes."
+    },
+    {
+        "question": "John buys a heating pad for $30. He uses it 3 times a week for 2 weeks. How much does he spend on each use?",
+        "original_solution": "He uses it 3*2=6 times\nSo he pays 30/6=$5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "So he pays 30/3=$10\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the total number of uses as 3*2=6. Step 2 then references the result of 6 uses from step 1 to calculate the cost per use as 30/6=$5. After deleting step 1, the second step should change the divisor (which was originally 6) to the largest number that was used in the deleted step 1 (which is 3). This causes the calculation to change from 30/6=$5 to 30/3=$10. The reference to the total number of uses is removed and replaced with the number of uses per week. It is the only step in the transformed_solution that serves as the first step referencing an incorrect number (3 instead of 6) in the transformed_solution. Therefore, the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 1, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 30/3=10 instead of 30/7=4.29. The subsequent step 2 references the result of step 1, calculating 10 x 2 = 20 instead of 4.29 x 2 = 8.58. The subsequent step 3 references the result of step 2, calculating 8.58 x 2 = 17.16 instead of 8.58 x 3 = 25.74. The final answer is incorrect. The first step to make a mistake, which is the root cause of the mistake, is step 1."
+    },
+    {
+        "question": "Sam and Jeff had a skipping competition at recess. The competition was split into four rounds. Sam completed 1 more skip than Jeff in the first round. Jeff skipped 3 fewer times than Sam in the second round. Jeff skipped 4 more times than Sam in the third round. Jeff got tired and only completed half the number of skips as Sam in the last round. If Sam skipped 16 times in each round, what is the average number of skips per round completed by Jeff?",
+        "original_solution": "In round one, Jeff completed 16 - 1 = 15.\nIn round two, Jeff completed 16 - 3 = 13.\nIn round three, Jeff completed 16 + 4 = 20.\nIn round four, Jeff completed 16 / 2 = 8.\nJeff completed 15 + 13 + 20 + 8 = 56 skips in total.\nJeff skipped an average of 56 / 4 = 14 skips per round.\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "In round two, Jeff completed 16 - 3 = 13.\nIn round three, Jeff completed 16 + 4 = 20.\nIn round four, Jeff completed 16 / 2 = 8.\nJeff completed 16 + 13 + 20 + 8 = 57 skips in total.\nJeff skipped an average of 57 / 4 = 14.25 skips per round.\n#### 14.25",
+        "transformed_answer": 14.25,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step is removed, which detailed how many skips Jeff completed in round one. Thus, step 4 should transition from referencing Jeff's skips in round one to directly referencing Sam's skips from the question. In round one, Jeff did 16 - 1 skips (15 skips), so the 15 is no longer calculated and 16 is used directly in the total computation instead. The updated formula is 'Jeff completed 16 + 13 + 20 + 8 = 57 skips in total.' This mistake modifies the rest of the calculations, leading to an altered total and average. In step 5, which previously added up Jeff's total skips, the number 15 from step 1 is replaced by 16, the number in the question, adjusting the total. This step becomes the new step 4 in the transformed_solution and is therefore the wrong_step where the first incorrect reference occurs.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 4, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 16 / 2 = 8 instead of 16 / 4 = 4. The subsequent step 5 references the result of step 4, calculating 13 + 20 + 8 = 41 instead of 41 + 8 = 59, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4."
+    }
+]

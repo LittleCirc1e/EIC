@@ -1,0 +1,122 @@
+[
+    {
+        "question": "For every 100 additional people that board a spaceship, its speed is halved. If the speed of the spaceship with 200 people on board is 500km per hour, what is its speed in km/hr when there are 400 people on board?",
+        "original_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 125 km/hr. So for the total of 200 additional people, its speed is 125 km/hr\n#### 125",
+        "original_answer": 125.0,
+        "transformed_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 100 km/hr. So for the total of 200 additional people, its speed is 100 km/hr\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 1/2 * 250 km/hr as 100 km/hr instead of 125 km/hr in step 2. This results in a transformed answer of 100 km/hr, which is different from the original answer of 125 km/hr. The error in step 2 affects the final result, but does not impact the calculation in step 1 as it is correct and unrelated to the error made in step 2.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #3, which is your explanation about why the [Solution] is incorrect.\n\nThe given solution is incorrect because it only considers the first addition of 100 people, and the speed is not halved for each additional 100 people. The correct calculation should be done for each additional 100 people added to the spaceship.\n\nFor the first 100 people added, the speed is halved to 250 km/hr, as calculated in the solution. For the next 100 people added, the speed is halved again to 125 km/hr (not 100 km/hr as calculated in the solution). Therefore, the total speed of the spaceship with 400 people on board is 250 km/hr + 125 km/hr = 375 km/hr.\n\nThe correct answer is 375 km/hr, not 100 km/hr as calculated in the solution."
+    },
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the calculation is incorrect. The correct calculation is:\n\nToday the Dow was down 8722 / 98*2 = 187.\nSo it started at 8722 + 187 = 8909.\n\nTherefore, the correct answer is 8909, not 8910."
+    },
+    {
+        "question": "Steve bought $25 worth of groceries. He bought a gallon of milk for $3, two boxes of cereal for $3.5 each, 4 bananas for $.25 each, four apples that cost $.5 each and a number of boxes of cookies. The cookies cost twice as much per box as the gallon of milk. How many boxes of cookies did he get?",
+        "original_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 13 on everything but the cookies because 3 + 7 + 1 + 2 = 13\nHe spent $12 on cookies because 25 - 13 = 12\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2 boxes of cookies because 12 / 6 = 2\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 11 on everything but the cookies because 3 + 7 + 1 + 2 = 11\nHe spent $14 on cookies because 25 - 11 = 14\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2.33 boxes of cookies because 14 / 6 = 2.33\n#### 2.33",
+        "transformed_answer": 2.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the total spent on everything but cookies as $11 instead of $13 in step 4, which affects the subsequent calculation of the money spent on cookies in step 5. The modified formula in step 5 becomes 25 - 11 = 14 instead of 25 - 13 = 12. Step 6 and step 7 remain unaffected as they do not rely on the result of step 4 or step 5. As a result, the error is confined to step 4's calculation and its immediate consequence on step 5, leaving all other steps and their calculations as correct. In step 7, the number of boxes of cookies is inaccurately calculated based on the mistaken $14 value, yielding 14 / 6 = 2.33 boxes of cookies.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2. The reason is that the calculation for the number of boxes of cookies is incorrect. The correct calculation is 14 / 6 = 2.17, not 2.33.\n\nThe solution should be:\n\nHe spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent $11 on everything but the cookies because 3 + 7 + 1 + 2 = 11\nHe spent $14 on cookies because 25 - 11 = 14\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2.17 boxes of cookies because 14 / 6 = 2.17\n#### 2.17."
+    },
+    {
+        "question": "A survey conducted by the school showed that only 20% of the 800 parents agree to a tuition fee increase. How many parents disagree with the tuition fee increase?",
+        "original_solution": "There were 800 x 20/100 = 160 parents who agreed to the tuition fee increase.\nSo, there were 800 - 160 = 640 parents who disagreed.\n#### 640",
+        "original_answer": 640.0,
+        "transformed_solution": "There were 800 x 20/100 = 160 parents who agreed to the tuition fee increase.\nSo, there were 800 - 160 = 630 parents who disagreed.\n#### 630",
+        "transformed_answer": 630.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 800 - 160 as 630 instead of the correct 640 in step 2. This is the wrong step that introduces the calculation error and step 1 remains unchanged as it is not affected by this error. Therefore, only step 2 and the subsequent transformed answer are impacted by the incorrect calculation.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1.\n\nThe correct calculation is as follows:\n\nThere were 800 parents in total, and 20% of them agreed to the tuition fee increase, which is 20% of 800, or 160 parents.\n\nTo find out how many parents disagreed, we need to subtract the number of parents who agreed from the total number of parents, which is:\n\n800 - 160 = 640\n\nTherefore, there were 640 parents who disagreed with the tuition fee increase, not 630."
+    },
+    {
+        "question": "Venny spent $15000 on a used car which cost 40% of the original price. What was the original price of the car?",
+        "original_solution": "Let x be the original price of the car.\nThen 40% * x = $15000\nThus x = $15000 / 0.4 = $37500\n#### 37500",
+        "original_answer": 37500.0,
+        "transformed_solution": "Let x be the original price of the car.\nThen 40% * x = $15000\nThus x = $15000 / 0.4 = $35000\n#### 35000",
+        "transformed_answer": 35000.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates $15000 / 0.4 as $35000 instead of $15000 / 0.4 = $37500 in step 3. Since this is the last step and it contains the actual error, the calculation error does not propagate to any subsequent steps.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the calculation 40% * x = $15000 should be 40% * x = $15000 / 100, since 40% is a fraction, not a decimal. Therefore, the correct calculation is x = $15000 / 0.4 = $37500, not $35000."
+    },
+    {
+        "question": "Carly had 42 lollipops to share with her friends. Half of the lollipops were cherry, and the rest were equal amounts of watermelon, sour apple, and grape. How many lollipops were grape?",
+        "original_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 21 were not cherry.\nOf the 21 that were not cherry, 1/3 of them were grape, so 21 lollipops / 3 = 7 grape lollipops.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 22 were not cherry.\nOf the 22 that were not cherry, 1/3 of them were grape, so 22 lollipops / 3 = 7.33 grape lollipops.\n#### 7.33",
+        "transformed_answer": 7.33,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 42 lollipops / 2 calculation in step 1 is mistakenly given as 22 instead of 21. This error affects the second step since it relies on the outcome of the first step. Therefore, the second step takes the incorrect value of 22 and proceeds with the division by 3 to find the number of grape lollipops. However, the division is still correctly calculated using the erroneous value. No other parts of the original solution, including operators or operands, are changed.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1.\n\nThe solution is incorrect because the calculation 22 lollipops / 3 = 7.33 grape lollipops is not accurate. The correct calculation is 22 lollipops / 3 = 7.\n\nThe explanation is that the calculation 22 lollipops / 3 should be rounded to the nearest whole number, which is 7, not 7.33. Therefore, the correct answer is 7 grape lollipops."
+    },
+    {
+        "question": "At Mario's barbershop haircuts are 50% more expensive during the weekends. If Mario paid $18 for his last haircut on Monday, how much he would have paid the day before?",
+        "original_solution": "Mario's $18 cut on Monday would have been 50% more expensive on Sunday or $18*50% = $9 more expensive\nThat means he would have paid $9 more on Sunday than what he paid ($18) on Monday or $9+$18 = $27\n#### 27",
+        "original_answer": 27.0,
+        "transformed_solution": "Mario's $18 cut on Monday would have been 50% more expensive on Sunday or $18*50% = $8 more expensive\nThat means he would have paid $8 more on Sunday than what he paid ($18) on Monday or $8+$18 = $26\n#### 26",
+        "transformed_answer": 26.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 50% of $18 is incorrectly calculated as $8 instead of $9 in step 1. This affects step 2, which incorrectly calculates the total cost for Sunday as $8 more instead of $9 more, resulting in a transformed_solution where Mario would have paid $26 rather than the correct $27 on Sunday.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2. The reason why the solution is incorrect is that the price increase is 50% more expensive during the weekends, not on Sunday specifically. If Mario paid $18 for his last haircut on Monday, he would have paid $18 x 50% = $9 more on Saturday, not $8 more on Sunday. Therefore, the correct answer is $18 + $9 = $27, not $26."
+    },
+    {
+        "question": "Jean has 60 stuffies. She keeps 1/3 of them and then gives away the rest. She gives 1/4 of what she gave away to her sister Janet. How many stuffies did Janet get?",
+        "original_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=40 stuffies\nSo Janet got 40/4=10 stuffies\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=35 stuffies\nSo Janet got 35/4=8.75 stuffies\n#### 8.75",
+        "transformed_answer": 8.75,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly changes the calculation of the stuffies given away from 60-20=40 to 60-20=35 in step 2, impacting the final amount that Janet gets. Step 3 accordingly changes from 40/4=10 to 35/4=8.75 to take into account the erroneous total given away. All changes only affect the steps after the error, while the step before the error, which is step 1 in this case, remains unaffected. The wrong calculation result in step 2 is carried through to the subsequent step, modifying both the operands used in the calculation and the explanatory text, but the calculation process within each step is performed correctly.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the calculation 35/4 is not correct. The correct calculation is 35/4 = 8, not 8.75. Therefore, Janet got 8 stuffies, not 8.75."
+    },
+    {
+        "question": "The stadium seats 60,000 fans, but only 75% of the seats were sold for the music show. Because of the threat of rain, 5,000 fans stayed home. How many attended the show?",
+        "original_solution": "The number of seats sold was 0.75*60,000=45,000.\nAnd 45,000-5,000=40,000.\n#### 40,000",
+        "original_answer": 40000.0,
+        "transformed_solution": "The number of seats sold was 0.75*60,000=45,000.\nAnd 45,000-5,000=35,000.\n#### 35,000",
+        "transformed_answer": 35000.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The example mistakenly calculates 45,000-5,000=35,000 instead of 45,000-5,000=40,000 in step 2. The error in the subtraction at step 2 affects only the final answer, not the initial calculation of seats sold (step 1). Note that the transformed solution only has one calculation error introduced, and subsequent steps correctly use the result from the erroneous step, following the pattern of inheriting the error.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #1. The solution incorrectly assumes that all unsold seats were due to the threat of rain, when in fact, some of the unsold seats may have been due to other factors such as the price of tickets or the popularity of the performers. Additionally, the solution does not take into account the fact that the stadium seats 60,000 fans, so the number of fans who stayed home due to the threat of rain would be a small percentage of the total capacity. A more accurate solution would be to calculate the number of fans who attended the show by subtracting the number of fans who stayed home due to the threat of rain from the total number of seats sold."
+    },
+    {
+        "question": "Jack and Jill are friends who borrow from each other often. Last week Jack borrowed $1200 from Jill, which he promised to pay back with an interest of 10%. How much will Jack pay back?",
+        "original_solution": "The interest on the loan is 0.1*1200=$120\nThe total amount Jack needs to pay back is 1200+120=1320\n#### 1320",
+        "original_answer": 1320.0,
+        "transformed_solution": "The interest on the loan is 0.1*1200=$100\nThe total amount Jack needs to pay back is 1200+100=1300\n#### 1300",
+        "transformed_answer": 1300.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example changes the calculation of interest in step 1 by wrongly calculating it as 0.1*1200=$100 instead of 0.1*1200=$120. This change goes on to impact step 2, which relies on the result of step 1 for its calculation. So, instead of the correct sum of 1200+120=$1320, after the change it is calculated as 1200+100=$1300. All other elements not reliant on step 1 remain unaffected, and the error is propagated to the sum in step 2, leading to a different total repayment amount of $1300.",
+        "eval_result": "\n\nThe solution is incorrect, and the explanation is #2, which is that the interest on the loan is calculated as 0.1*1200=$100, but the total amount Jack needs to pay back is not 1200+100=1300, but 1200+10% of 1200=1200+120=1320.\n\nPlease let me know if you have any questions or need further assistance."
+    }
+]

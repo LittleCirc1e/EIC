@@ -1,0 +1,78 @@
+[
+    {
+        "index": 39,
+        "gsm8k_data": {
+            "question": "Excluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 30 km/hr. For how many minutes does the bus stop per hour?",
+            "original_solution": "Let T be the time the bus stops per hour.\nUsing the formula: Average speed = Total distance / Total time\nWe have 60 = D / (60 - T) (excluding stoppages) and 30 = D / (60 + T) (including stoppages)\nSolving for D in both equations, we get D = 60 * (60 - T) and D = 30 * (60 + T)\nEquating the two expressions for D, we get 60 * (60 - T) = 30 * (60 + T)\nExpanding and solving for T, we get T = 900 / 30 = 30 minutes\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "Let T be the time the bus stops per hour.\nUsing the formula: Average speed = Total distance / Total time\nWe have 60 = D / (50 - T) (excluding stoppages) and 30 = D / (50 + T) (including stoppages)\nSolving for D in both equations, we get D = 60 * (50 - T) and D = 30 * (50 + T)\nEquating the two expressions for D, we get 60 * (50 - T) = 30 * (50 + T)\nExpanding and solving for T, we get T = 600 / 30 = 20 minutes\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 hour is wrongly considered as 50 minutes instead of 60 minutes, resulting in the equations 60 = D / (60 - T) and 30 = D / (60 + T) in the original_solution becoming 60 = D / (50 - T) and 30 = D / (50 + T) in the transformed_solution, respectively. The error in the unit conversion affects the subsequent related steps, changing the final calculation for T from 900 / 30 = 30 minutes to 600 / 30 = 20 minutes. It should be noted that only the step of unit conversion error is changed, and all the other steps in the calculation need to remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nExcluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 30 km/hr. For how many minutes does the bus stop per hour?\n\n### Response:",
+        "output_str": "\nTo find out how many minutes the bus stops per hour, we need to subtract the average speed with stoppages from the average speed without stoppages.\n\nAverage speed without stoppages = 60 km/hr\nAverage speed with stoppages = 30 km/hr\n\nSubtracting the two speeds gives us:\n60 km/hr - 30 km/hr = 30 km/hr\n\nTherefore, the bus stops for 30 minutes per hour.",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    },
+    {
+        "index": 75,
+        "gsm8k_data": {
+            "question": "a copy machine, working at a constant rate, makes 30 copies per minute. a second copy machine, working at a constant rate, makes 55 copies per minute. working together at their respective rates, how many copies do the two machines make in half an hour?",
+            "original_solution": "The first machine makes 30 copies per minute, and the second machine makes 55 copies per minute.\nIn half an hour, there are 30 minutes.\nSo, the first machine makes 30 copies per minute * 30 minutes = 900 copies.\nThe second machine makes 55 copies per minute * 30 minutes = 1650 copies.\nTogether, the two machines make 900 copies + 1650 copies = 2550 copies in half an hour.\n#### 2550",
+            "original_answer": 2550,
+            "transformed_solution": "The first machine makes 30 copies per minute, and the second machine makes 55 copies per minute.\nIn half an hour, there are 20 minutes.\nSo, the first machine makes 30 copies per minute * 20 minutes = 600 copies.\nThe second machine makes 55 copies per minute * 20 minutes = 1100 copies.\nTogether, the two machines make 600 copies + 1100 copies = 1700 copies in half an hour.\n#### 1700",
+            "transformed_answer": 1700,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means half an hour is wrongly equal to 20 minutes instead of 30 minutes, resulting in \"In half an hour, there are 30 minutes.\" in the original_solution becoming \"In half an hour, there are 20 minutes.\" in the transformed_solution. This affects the subsequent related steps 3 and 4, changing the amount of copies from 30 * 30 = 900 to 30 * 20 = 600, and from 55 * 30 = 1650 to 55 * 20 = 1100, respectively. Consequently, step 5 changes from 900 + 1650 = 2550 copies to 600 + 1100 = 1700 copies. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes related to the incorrect number of minutes are affected while the number of copies per minute remains correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na copy machine, working at a constant rate, makes 30 copies per minute. a second copy machine, working at a constant rate, makes 55 copies per minute. working together at their respective rates, how many copies do the two machines make in half an hour?\n\n### Response:",
+        "output_str": "\nIf the two copy machines are working together at their respective rates, they will make a total of 30 + 55 = 85 copies per minute.\n\nTo find out how many copies they will make in half an hour, we can multiply the number of copies per minute by 30:\n\n85 copies/minute x 30 minutes = 2550 copies\n\nTherefore, the two copy machines will make 2550 copies in half an hour.",
+        "extract_true_num": 2550,
+        "extract_pred_num": 2550.0,
+        "is_correct": true
+    },
+    {
+        "index": 76,
+        "gsm8k_data": {
+            "question": "Excluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 45 km/hr. For how many minutes does the bus stop per hour?",
+            "original_solution": "Let x be the time the bus stops per hour in minutes. \nUsing the formula: average speed = total distance / total time\nWhen excluding stoppages: 60 = d / (60 - x)\nWhen including stoppages: 45 = d / (60)\nSolving for d in the second equation: d = 45 * 60 = 2700 km\nSubstitute d into the first equation: 60 = 2700 / (60 - x)\n60 * (60 - x) = 2700\n3600 - 60x = 2700\n-60x = -900\nx = 15\nThe bus stops for 15 minutes per hour.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "Let x be the time the bus stops per hour in minutes. \nUsing the formula: average speed = total distance / total time\nWhen excluding stoppages: 60 = d / (60 - x)\nWhen including stoppages: 45 = d / (50)\nSolving for d in the second equation: d = 45 * 50 = 2250 km\nSubstitute d into the first equation: 60 = 2250 / (60 - x)\n60 * (60 - x) = 2250\n3600 - 60x = 2250\n-60x = -1350\nx = 22.5\nThe bus stops for 22.5 minutes per hour.\n#### 22.5",
+            "transformed_answer": 22.5,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly counted as 50 minutes instead of 60 minutes, resulting in the formula 45 = d / (60) in the original_solution becoming 45 = d / (50) in the transformed_solution. This changes the calculation of distance (d) from 45 * 60 = 2700 km to 45 * 50 = 2250 km. The substitution into the first equation also changes due to the incorrect distance, which subsequently affects the final value of x turning from 15 minutes to 22.5 minutes. The error is only introduced in step 4, so the steps before are unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nExcluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 45 km/hr. For how many minutes does the bus stop per hour?\n\n### Response:",
+        "output_str": "\nTo find out how many minutes the bus stops per hour, we need to subtract the average speed with stoppages from the average speed without stoppages.\n\nAverage speed without stoppages = 60 km/hr\nAverage speed with stoppages = 45 km/hr\n\nSubtracting the two speeds gives us:\n45 km/hr - 60 km/hr = -15 km/hr\n\nSince the bus stops, the speed is negative. To find the minutes per hour, we divide the negative speed by 60.\n-15 km/hr / 60 = -0.25 hours\n\nTherefore, the bus stops for 0.25 hours or 15 minutes per hour.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 83,
+        "gsm8k_data": {
+            "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+            "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n18 hours * 5 minutes gained per hour = 90 minutes gained by the clock.\n#### 90",
+            "transformed_answer": 90.0,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?\n\n### Response:",
+        "output_str": "\nIf the minute hand of a clock gains 5 minutes every hour, then by 6 PM, the clock will have gained 6 x 5 = 30 minutes.",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    }
+]

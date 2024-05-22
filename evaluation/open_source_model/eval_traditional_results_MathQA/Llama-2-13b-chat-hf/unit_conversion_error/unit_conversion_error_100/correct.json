@@ -1,0 +1,135 @@
+[
+    {
+        "index": 39,
+        "gsm8k_data": {
+            "question": "Excluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 30 km/hr. For how many minutes does the bus stop per hour?",
+            "original_solution": "Let T be the time the bus stops per hour.\nUsing the formula: Average speed = Total distance / Total time\nWe have 60 = D / (60 - T) (excluding stoppages) and 30 = D / (60 + T) (including stoppages)\nSolving for D in both equations, we get D = 60 * (60 - T) and D = 30 * (60 + T)\nEquating the two expressions for D, we get 60 * (60 - T) = 30 * (60 + T)\nExpanding and solving for T, we get T = 900 / 30 = 30 minutes\n#### 30",
+            "original_answer": 30.0,
+            "transformed_solution": "Let T be the time the bus stops per hour.\nUsing the formula: Average speed = Total distance / Total time\nWe have 60 = D / (50 - T) (excluding stoppages) and 30 = D / (50 + T) (including stoppages)\nSolving for D in both equations, we get D = 60 * (50 - T) and D = 30 * (50 + T)\nEquating the two expressions for D, we get 60 * (50 - T) = 30 * (50 + T)\nExpanding and solving for T, we get T = 600 / 30 = 20 minutes\n#### 20",
+            "transformed_answer": 20.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 hour is wrongly considered as 50 minutes instead of 60 minutes, resulting in the equations 60 = D / (60 - T) and 30 = D / (60 + T) in the original_solution becoming 60 = D / (50 - T) and 30 = D / (50 + T) in the transformed_solution, respectively. The error in the unit conversion affects the subsequent related steps, changing the final calculation for T from 900 / 30 = 30 minutes to 600 / 30 = 20 minutes. It should be noted that only the step of unit conversion error is changed, and all the other steps in the calculation need to remain correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nExcluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 30 km/hr. For how many minutes does the bus stop per hour?\n\n### Response:",
+        "output_str": "\nTo find out how many minutes the bus stops per hour, we need to subtract the average speed without stoppages (60 km/hr) from the average speed with stoppages (30 km/hr).\n\n60 km/hr - 30 km/hr = 30 km/hr\n\nTherefore, the bus stops for 30 km/hr, which is equivalent to 30 minutes per hour.",
+        "extract_true_num": 30.0,
+        "extract_pred_num": 30.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "A person crosses a 1800 m long street in 12 minutes. What is his speed in km per hour?",
+            "original_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/60 = 0.2 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.2 hours = 9000 meters per hour.\nNow we convert meters to kilometers, so 9000 meters is equal to 9000/1000 = 9 kilometers per hour.\n#### 9",
+            "original_answer": 9.0,
+            "transformed_solution": "First, let's convert 12 minutes to hours. 12 minutes is equal to 12/50 = 0.24 hours.\nThe speed of the person is distance divided by time, so it's 1800 meters / 0.24 hours = 7500 meters per hour.\nNow we convert meters to kilometers, so 7500 meters is equal to 7500/1000 = 7.5 kilometers per hour.\n#### 7.5",
+            "transformed_answer": 7.5,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 12 minutes being incorrectly converted to 0.24 hours (12/50) instead of the correct 0.2 hours (12/60) in the original_solution. And it affects the subsequent related steps, changing the speed calculation from 1800 meters / 0.2 hours = 9000 meters per hour to 1800 meters / 0.24 hours = 7500 meters per hour, and the speed in kilometers per hour from 9000/1000 = 9 kilometers per hour to 7500/1000 = 7.5 kilometers per hour in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error and the other calculation processes should still be correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 1800 m long street in 12 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "\nTo find the person's speed in km per hour, we need to first convert the distance from meters to kilometers. There are 1000 meters in 1 kilometer, so:\n\n1800 m = 1.8 km\n\nNext, we can use the formula:\n\nSpeed = Distance / Time\n\nwhere:\n\nSpeed = the person's speed in km per hour\nDistance = the distance traveled, which is 1.8 km\nTime = the time taken to travel the distance, which is 12 minutes\n\nTo convert 12 minutes to hours, we know that there are 60 minutes in 1 hour, so:\n\n12 minutes = 12 x 60/100 = 0.2 hours\n\nNow we can plug the values into the formula:\n\nSpeed = Distance / Time\n= 1.8 km / 0.2 hours\n= 9 km/h\n\nTherefore, the person's speed in km per hour is 9 km/h.",
+        "extract_true_num": 9.0,
+        "extract_pred_num": 9.0,
+        "is_correct": true
+    },
+    {
+        "index": 44,
+        "gsm8k_data": {
+            "question": "A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+            "original_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 60 = 0.0833 hours\nSpeed = Distance / Time = 0.6 km / 0.0833 hours = 7.2 km/h\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 50 = 0.1 hours\nSpeed = Distance / Time = 0.6 km / 0.1 hours = 6 km/h\n#### 6",
+            "transformed_answer": 6.0,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 minutes in an hour rather than 60 minutes, resulting in 5 min / 60 = 0.0833 hours in the original_solution becoming 5 min / 50 = 0.1 hours in the transformed_solution. The transformation affects only the calculations related to the changed step, and previously correct steps remain unaffected. Since the time taken is less in the transformed_solution, the final speed is higher, changing from the correct speed of 7.2 km/h to an incorrect speed of 6 km/h."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "\nTo find the person's speed in km per hour, we need to first convert the distance from meters to kilometers. There are 1000 meters in 1 kilometer, so:\n\n600 m = 0.6 km (since 0.6 x 1000 = 600)\n\nNow, we can use the formula:\n\nSpeed = Distance / Time\n\nwhere:\n\nSpeed = the person's speed in km per hour\nDistance = the distance traveled (in this case, 0.6 km)\nTime = the time taken to travel the distance (in this case, 5 minutes)\n\nTo convert 5 minutes to hours, we know that there are 60 minutes in 1 hour, so:\n\n5 minutes = 5/60 = 0.0833 hours (since 0.0833 x 60 = 5)\n\nNow we can plug in the values:\n\nSpeed = Distance / Time\n= 0.6 km / 0.0833 hours\n= 7.2 km/h\n\nTherefore, the person's speed in km per hour is 7.2 km/h.",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "A person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?",
+            "original_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 60 minutes = 0.0667 hours.\nSpeed = 300 m / 0.0667 hours = 4500 m/h.\nConvert m/h to km/h: 4500 m/h * 1 km / 1000 m = 4.5 km/h.\n#### 4.5",
+            "original_answer": 4.5,
+            "transformed_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 50 minutes = 0.08 hours.\nSpeed = 300 m / 0.08 hours = 3750 m/h.\nConvert m/h to km/h: 3750 m/h * 1 km / 1000 m = 3.75 km/h.\n#### 3.75",
+            "transformed_answer": 3.75,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "In step 2 of the original solution, minutes are correctly converted to hours using a factor of 60 minutes per hour. In the transformed solution, an incorrect conversion factor of 50 minutes per hour is used instead. This leads to an incorrect total time in hours, which is then used to calculate speed, resulting in an incorrect speed in meters per hour and subsequently an incorrect conversion to kilometers per hour. Only the step involving the unit conversion from minutes to hours is affected, while the other steps remain unchanged."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?\n\n### Response:",
+        "output_str": "\nTo find the person's speed in km per hour, we need to first convert the distance from meters to kilometers. There are 1000 meters in 1 kilometer, so:\n\n300 meters / 1000 meters = 0.3 kilometers\n\nNext, we can use the formula:\n\nspeed = distance / time\n\nwhere distance is the distance traveled (0.3 kilometers) and time is the time taken to travel that distance (4 minutes):\n\nspeed = 0.3 kilometers / 4 minutes\n\nTo convert minutes to hours, we divide by 60:\n\n4 minutes / 60 = 0.067 hours\n\nNow we can plug in the values:\n\nspeed = 0.3 kilometers / 0.067 hours\n\nspeed = 4.5 km/h\n\nTherefore, the person's speed in km per hour is 4.5 km/h.",
+        "extract_true_num": 4.5,
+        "extract_pred_num": 4.5,
+        "is_correct": true
+    },
+    {
+        "index": 57,
+        "gsm8k_data": {
+            "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+            "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+            "original_answer": 15.0,
+            "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+            "transformed_answer": 14.0,
+            "wrong_step": 4,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nThe recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?\n\n### Response:",
+        "output_str": "\nTo measure 15 minutes using the 7 minutes and 11 minutes hourglasses, I will use the following steps:\n\n1. Start by turning over the 7 minutes hourglass. This will give me 7 minutes.\n2. Next, turn over the 11 minutes hourglass. This will give me 11 minutes, for a total of 18 minutes (7 + 11).\n3. Now, I will turn over the 7 minutes hourglass again, which will give me an additional 7 minutes.\n4. Finally, I will turn over the 11 minutes hourglass one more time, which will give me an additional 11 minutes.\n\nBy following these steps, I will have measured out 15 minutes using the two hourglasses.",
+        "extract_true_num": 15.0,
+        "extract_pred_num": 15.0,
+        "is_correct": true
+    },
+    {
+        "index": 81,
+        "gsm8k_data": {
+            "question": "Darcy lives 1.5 miles from work. She can walk to work at a constant rate of 3 miles per hour, or she can ride the train to work at a constant rate of 20 miles per hour. If she rides the train, there is an additional x minutes spent walking to the nearest train station, waiting for the train, and walking from the final train station to her work. If it takes Darcy a total of 15 more minutes to commute to work by walking than it takes her to commute to work by riding the train, what is the value of x?",
+            "original_solution": "The time it takes Darcy to walk to work is 1.5 miles / 3 miles per hour = 0.5 hours.\nThe time it takes Darcy to ride the train to work is 1.5 miles / 20 miles per hour = 0.075 hours.\nThe difference in time is 15 minutes, or 0.25 hours.\nSo, 0.5 - 0.075 = 0.25 + x\n0.425 = 0.25 + x\nx = 0.425 - 0.25\nx = 0.175 hours = 10.5 minutes.\n#### 10.5",
+            "original_answer": 10.5,
+            "transformed_solution": "The time it takes Darcy to walk to work is 1.5 miles / 3 miles per hour = 0.5 hours.\nThe time it takes Darcy to ride the train to work is 1.5 miles / 25 miles per hour = 0.06 hours.\nThe difference in time is 15 minutes, or 0.25 hours.\nSo, 0.5 - 0.06 = 0.25 + x\n0.44 = 0.25 + x\nx = 0.44 - 0.25\nx = 0.19 hours = 11.4 minutes.\n#### 11.4",
+            "transformed_answer": 11.4,
+            "wrong_step": 2,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 2 makes an incorrect unit conversion, which means the train speed is wrongly assumed to be 25 miles per hour instead of 20 miles per hour, resulting in 1.5 miles / 20 miles per hour = 0.075 hours in the original_solution becoming 1.5 miles / 25 miles per hour = 0.06 hours in the transformed_solution. This error affects the subsequent related step 4, which changes from 0.5 - 0.075 = 0.25 + x to 0.5 - 0.06 = 0.25 + x, and finally affects the calculation of the value of x in steps 5 and 6, which changes from 0.425 = 0.25 + x and x = 0.425 - 0.25 in the original_solution to 0.44 = 0.25 + x and x = 0.44 - 0.25 in the transformed_solution, resulting in a different value of the additional time x required by Darcy when riding the train."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nDarcy lives 1.5 miles from work. She can walk to work at a constant rate of 3 miles per hour, or she can ride the train to work at a constant rate of 20 miles per hour. If she rides the train, there is an additional x minutes spent walking to the nearest train station, waiting for the train, and walking from the final train station to her work. If it takes Darcy a total of 15 more minutes to commute to work by walking than it takes her to commute to work by riding the train, what is the value of x?\n\n### Response:",
+        "output_str": "\n\nTo determine the value of x, we need to find the total time it takes Darcy to commute to work by walking and by riding the train.\n\nIf Darcy walks to work, it will take her 1.5 miles / 3 miles per hour = 0.5 hours (or 30 minutes) to get to work.\n\nIf Darcy rides the train, it will take her 1.5 miles / 20 miles per hour = 0.075 hours (or 4.5 minutes) to get to work, plus the additional time spent walking to the nearest train station, waiting for the train, and walking from the final train station to her work.\n\nLet's assume that the additional time spent walking to the nearest train station, waiting for the train, and walking from the final train station to her work is x minutes.\n\nSo, the total time it takes Darcy to commute to work by walking is 30 minutes, and the total time it takes her to commute to work by riding the train is 4.5 minutes + x minutes.\n\nSince it takes Darcy a total of 15 more minutes to commute to work by walking than it takes her to commute to work by riding the train, we can set up the following equation:\n\n4.5 minutes + x minutes = 30 minutes + 15 minutes\n\nSimplifying the equation, we get:\n\nx = 10.5 minutes\n\nTherefore, the value of x is 10.5 minutes.",
+        "extract_true_num": 10.5,
+        "extract_pred_num": 10.5,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "If jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?",
+            "original_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/60 = 0.25 hours, so the total time is 1 + 0.25 = 1.25 hours.\nNow, divide the distance by the time: 9 miles / 1.25 hours = 7.2 miles per hour.\n#### 7.2",
+            "original_answer": 7.2,
+            "transformed_solution": "First, convert 1 hour and 15 minutes to hours. 15 minutes is 15/50 = 0.3 hours, so the total time is 1 + 0.3 = 1.3 hours.\nNow, divide the distance by the time: 9 miles / 1.3 hours = 6.923 miles per hour.\n#### 6.923",
+            "transformed_answer": 6.923,
+            "wrong_step": 1,
+            "wrong_type": "unit_conversion_error",
+            "is_single_error": true,
+            "explanation": "Here, step 1 makes incorrect unit conversion, which means 15 minutes is wrongly considered as 15/50 of an hour instead of 15/60, resulting in 15/60 = 0.25 hours in the original_solution becoming 15/50 = 0.3 hours in the transformed_solution. And it affects the subsequent related step 2, which changes from 9 miles / 1.25 hours = 7.2 miles per hour to 9 miles / 1.3 hours = 6.923 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf jack walked 9 miles in 1 hour and 15 minutes, what was his rate of walking in miles per hour?\n\n### Response:",
+        "output_str": "\nTo find Jack's rate of walking in miles per hour, we need to first convert the time he walked into hours. There are 60 minutes in 1 hour, so:\n\n1 hour and 15 minutes = 1 hour + (15/60) hours\n\n= 1 hour + 0.25 hours\n\nNow, we know that Jack walked 9 miles in this time, so we can divide the distance he walked by the time it took him to walk it:\n\n9 miles / (1 hour + 0.25 hours)\n\n= 9 miles / 1.25 hours\n\n= 7.2 miles/hour\n\nTherefore, Jack's rate of walking is 7.2 miles per hour.",
+        "extract_true_num": 7.2,
+        "extract_pred_num": 7.2,
+        "is_correct": true
+    }
+]

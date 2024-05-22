@@ -1,0 +1,74 @@
+[
+    {
+        "question": "the time taken by a man to row his boat upstream is twice the time taken by him to row the same distance downstream. if the speed of the boat in still water is 54 kmph, find the speed of the stream?",
+        "original_solution": "Let x be the speed of the stream.\nThe speed of the boat downstream is 54 + x.\nThe speed of the boat upstream is 54 - x.\nTime downstream = Distance / (54 + x).\nTime upstream = Distance / (54 - x).\nTime upstream = 2 * Time downstream.\nDistance / (54 - x) = 2 * (Distance / (54 + x)).\n(54 + x) / (54 - x) = 2.\n54 + x = 108 - 2x.\n3x = 54\nx = 18.\n#### 18",
+        "original_answer": 18.0,
+        "transformed_solution": "Let x be the speed of the stream.\nThe speed of the boat downstream is 54 + x.\nThe speed of the boat upstream is 54 - x.\nTime upstream = 2 * Time downstream.\n(54 - x) = 2 * (54 + x).\n54 - x = 108 + 2x.\n3x = 54\nx = 18.\n#### 18",
+        "transformed_answer": 54.0,
+        "wrong_step": 5,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Intermediate step 4 and 5 have been removed from the original solution, which calculated Time downstream and Time upstream based on speed. In the transformed_solution, Time downstream and Time upstream are directly compared without using the downstream and upstream speed expressions. Since this incorrect step now tries to set the expression (54 - x) equal to twice the incorrect term (54 + x), which ignores the respective speeds of the boat downstream and upstream and the need to compute times based on distance and speed, this leads to an incorrect transformed solution. The error has been introduced in the first altered step, which is where step 5 from the original solution was removed. Thus, the wrong_step is 5, and a numerical error was created which failed to preserve the correct relationship between speed and time resulting in a different answer 54 instead of 18.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe solution is incorrect because there is a calculation mistake in step 3. The correct calculation is:\n\n54 - x = 108 + 2x\n3x = 54\nx = 18\n\nTherefore, the correct answer is #18."
+    },
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by another price, so 735 / 10 = 73.5.\n#### 73.5",
+        "transformed_answer": 73.5,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The original_solution only had one step calculation. For the transformed_solution, since I can't delete the final step and there's only one step, I have modified it to reference the closest whole number to the original price per pair, which is $10 instead of $9.8, and reran the calculation with this new price to produce a new answer. Therefore, as per the problem guidelines, I have chosen to slightly alter the price per pair used in the calculation from $9.8 to $10. The wrong_step is 1 because in the transformed solution, it is the first step that incorrectly references the price of a pair of rackets as $10 instead of $9.8, which results in the transformed_answer being different from the original_answer, as required.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #75.\n\nExplanation: The solution is incorrect because it divides the total sales by the average price of a single racket instead of a pair of rackets. To find the number of pairs sold, we need to divide the total sales by the price of a pair of rackets, which is $9.8 per pair. Therefore, the number of pairs sold is 735 / 9.8 = 75 pairs."
+    },
+    {
+        "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+        "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The area of the parallelogram is 12 x 12 = 144 square cm.\n#### 144",
+        "transformed_answer": 144.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been completely removed. In the original_solution, step 1 states the formula for the area of a parallelogram and step 2 references both the base and the height from the question, multiplying them to find the area. Since we are deleting step 1, step 2 should still calculate the area but since we need a different answer, we reference the base for both the base and height, which is the largest number. Hence, we get 12 (base) x 12 (chosen number instead of the height) = 144 square cm. The calculation in step 2 after the transformation is using the incorrect formula but still internally consistent as a simple multiplication. It is the transformed step 1, which is also step 2 in the original_solution, that first references the incorrect number, in this case using the base (12) instead of the height (10). Thus, the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #120 square cm.\n\nExplanation: The error occurs in step 3, where the base is multiplied by itself without considering the height. The correct formula for the area of a parallelogram is base x height, so the area should be 12 x 10 = 120 square cm."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 ø 2 = ( 2 ^ 3 / 2 ^ 1 ) / 2 ^ 2 = 8 / 2 / 4 = 4 / 4 = 1\n#### 1",
+        "transformed_answer": 1.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step in the original_solution, which references the numbers in the operation \"3 ø 1,\" was removed. By doing this, 3 ø 1 was then combined with the operation ø 2 in the single expression \"3 ø 1 ø 2\", implying a straight calculation without breaking it down step by step. The first step then incorrectly references the calculation as (2 ^ 3 / 2 ^ 1) / 2 ^ 2 instead of calculating 3 ø 1 first and then applying ø 2. As such, the formula changes from performing 3 ø 1 separately and then 4 ø 2, to directly performing 3 ø 1 ø 2, leading from 4 to 1 in the final result. It is therefore step 1 in the transformed_solution that is the first step referencing incorrect calculation order and number in the transformed_solution, thus the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #4.\n\nThe error occurs in step 1, where the expression ( 2 ^ x ) / ( 2 ^ w ) is not correct. The correct formula is ( 2 ^ x ) / ( 2 ^ (w - x) ) to avoid division by zero. Therefore, the final answer is ( 3 ø 1 ) ø 2 = 4."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #61.\n\nExplanation: The solution states that the next prime number after 59 is 63, but this is incorrect. The correct answer is 61, which is the next prime number after 59. The mistake in the solution occurs in step 3, where the solution states that 31 is a prime number, but it is actually a composite number. This mistake affects the subsequent steps and leads to the final incorrect answer of 63."
+    },
+    {
+        "question": "60 litres of diesel is required to travel 600 km using a 800 cc engine. If the volume of diesel required to cover a distance varies directly as the capacity of the engine, then how many litres of diesel is required to travel 800 km using 1200 cc engine?",
+        "original_solution": "The diesel required per km is 60 / 600 = 0.1 litres/km\nThe diesel required for 800 km is 0.1 x 800 = 80 litres\nThe diesel requirement is directly proportional to the engine capacity, so the diesel required for 1200 cc engine is 80 x 1200 / 800 = 120 litres\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The diesel requirement is directly proportional to the engine capacity, so the diesel required for 1200 cc engine is 60 x 1200 / 800 = 90 litres\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 and step 2 reference the number 60 and 600 from the question, and step 3 references the result 80 from step 2. So after deleting step 1 and 2, step 3 should change the result 80 of the referenced step 2 to the number 60 in the question, causing the formula to change from 80 x 1200 / 800 = 120 litres to 60 x 1200 / 800 = 90 litres. It should be noted that the calculation of the new step after the transformation is still correct. It is changed to step 1 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step referencing the incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #120 litres.\n\nExplanation: The solution is incorrect because it assumes that the diesel requirement is directly proportional to the engine capacity, but this is not the case. The actual formula for calculating the diesel required is:\n\nDiesel required = Distance / (Engine capacity x Speed)\n\nWhere speed is the speed of the vehicle in km/h.\n\nUsing this formula, we can calculate the diesel required for 800 km travel using a 1200 cc engine as follows:\n\nDiesel required = 800 km / (1200 cc x 100 km/h) = 120 litres\n\nTherefore, the correct answer is 120 litres."
+    }
+]

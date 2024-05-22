@@ -1,0 +1,110 @@
+[
+    {
+        "question": "If an object travels 80 feet in 4 seconds, what is the object's approximate speed in miles per hour? (note: 1 mile = 5280 feet)",
+        "original_solution": "The speed is calculated as distance / time. So, the speed is 80 feet / 4 seconds = 20 feet per second.\nTo convert feet per second to miles per hour, first convert feet to miles: 20 feet / 5280 feet per mile = 0.0037878788 miles per second.\nThen convert seconds to hours: 1 hour = 3600 seconds, so 0.0037878788 miles per second * 3600 = 13.64 miles per hour.\n#### 13.64",
+        "original_answer": 13.64,
+        "transformed_solution": "The speed is calculated as distance / time. So, the speed is 80 feet / 4 seconds = 20 feet per second.\nTo convert feet per second to miles per hour, first convert feet to miles: 20 feet / 5230 feet per mile = 0.0038277512 miles per second.\nThen convert seconds to hours: 1 hour = 3600 seconds, so 0.0038277512 miles per second * 3600 = 13.78 miles per hour.\n#### 13.78",
+        "transformed_answer": 13.78,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion by stating that there are 5230 feet per mile instead of the correct 5280 feet per mile, resulting in the original_solution calculation 20 feet / 5280 feet per mile becoming 20 feet / 5230 feet per mile in the transformed_solution. The error affects the outcome of the second conversion step, changing from 0.0037878788 miles per second in the original_solution to 0.0038277512 miles per second in the transformed_solution. This incorrect conversion then propagates to the final calculation step where the speed in miles per second is multiplied by the correct number of seconds in an hour, affecting the subsequent related step and leading to a different transformed_answer of 13.78 miles per hour from the correct original_answer of 13.64 miles per hour.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 5280 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "a train covers a distance of 12 km in 10 minutes. if it takes 5 seconds to pass a telegraph post, then the length of the train is",
+        "original_solution": "Firstly, convert the speed from km/minute to m/second: 12 km in 10 minutes = 12,000 m in 10 * 60 seconds = 12,000 m in 600 seconds.\nSpeed = distance/time = 12,000 m / 600 seconds = 20 m/s.\nNow, using the speed formula (speed = distance/time), we can find the length of the train: 20 m/s = L + 5 seconds (L is the length of the train).\nL = 20 * 5 = 100 meters.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Firstly, convert the speed from km/minute to m/second: 12 km in 10 minutes = 12,000 m in 10 * 50 seconds = 12,000 m in 500 seconds.\nSpeed = distance/time = 12,000 m / 500 seconds = 24 m/s.\nNow, using the speed formula (speed = distance/time), we can find the length of the train: 24 m/s * 5 seconds = L (L is the length of the train).\nL = 24 * 5 = 120 meters.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion by stating that 10 minutes have 50 seconds instead of 60 seconds, which leads to converting 12,000 m in 10 * 60 seconds to 12,000 m in 10 * 50 seconds in the transformed_solution. As a consequence of this error, the calculation of the train’s speed is also affected, changing from 12,000 m / 600 seconds = 20 m/s to 12,000 m / 500 seconds = 24 m/s. Then, when using the speed to find the length of the train, the incorrect speed is used, resulting in a different length of 120 meters instead of the correct 100 meters. It should be noted that only the first unit conversion error is considered, while the other steps are done correctly despite the initial error.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 confuses the formula for speed and uses the distance traveled instead of the time taken to pass a telegraph post, which results in an incorrect calculation of the speed. Therefore, the correct answer is 120 meters."
+    },
+    {
+        "question": "David biked 16 1/3 miles in 2 hours and 20 minutes. What was his average rate of speed in miles per hour?",
+        "original_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours.\nDavid biked 16 1/3 miles in 2.33 hours, so his average speed was 16 1/3 miles / 2.33 hours ≈ 7 miles per hour.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Convert 2 hours and 20 minutes to hours: 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours.\nDavid biked 16 1/3 miles in 2.4 hours, so his average speed was 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour.\n#### 6.81",
+        "transformed_answer": 6.81,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 20 minutes is wrongly converted to 2.4 hours by using 50 minutes as equivalent to 1 hour instead of 60 minutes, resulting in 2 hours + 20 minutes / 60 minutes per hour = 2.33 hours in the original_solution becoming 2 hours + 20 minutes / 50 minutes per hour = 2.4 hours in the transformed_solution. This affects the subsequent related step 2, which changes from 16 1/3 miles / 2.33 hours ≈ 7 miles per hour to 16 1/3 miles / 2.4 hours ≈ 6.81 miles per hour. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly converts 20 minutes to 50 minutes instead of 60 minutes, resulting in an error in the calculation of the total time biked. Therefore, the correct calculation of the average speed should be 6.81 miles per hour instead of 6.67 miles per hour."
+    },
+    {
+        "question": "If Tina is driving at 55 miles per hour and is currently 7.5 miles behind Loe, who is driving at 40 miles per hour in the same direction, then in how many minutes will Tina be 15 miles ahead of Loe?",
+        "original_solution": "Tina is gaining on Loe at a rate of 55 - 40 = 15 miles per hour.\nTo make up the initial 7.5 mile gap and an additional 15-mile lead, Tina needs to travel 7.5 + 15 = 22.5 miles.\nTime = Distance / Rate, so Time = 22.5 miles / 15 miles per hour = 1.5 hours.\nThere are 60 minutes in an hour, so 1.5 hours * 60 minutes per hour = 90 minutes.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "Tina is gaining on Loe at a rate of 55 - 40 = 15 miles per hour.\nTo make up the initial 7.5 mile gap and an additional 15-mile lead, Tina needs to travel 7.5 + 15 = 22.5 miles.\nTime = Distance / Rate, so Time = 22.5 miles / 15 miles per hour = 1.5 hours.\nThere are 50 minutes in an hour, so 1.5 hours * 50 minutes per hour = 75 minutes.\n#### 75",
+        "transformed_answer": 75.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of the correct 60 minutes, resulting in 1.5 hours * 60 minutes per hour = 90 minutes in the original_solution becoming 1.5 hours * 50 minutes per hour = 75 minutes in the transformed_solution. This impacted only the final step, where the converted time from hours to minutes is affected by the incorrect unit conversion. The other calculation processes remain correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly references the result 7.5 of step 1 instead of 0, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error."
+    },
+    {
+        "question": "If an object travels 80 feet in 2 seconds, what is the object’s approximate speed in miles per hour? (Note: 1 mile = 5280 feet)",
+        "original_solution": "The speed of the object is 80 feet / 2 seconds = 40 feet per second.\nTo convert feet per second to miles per hour, multiply by 3600 seconds per hour and divide by 5280 feet per mile. So the speed is 40 feet per second * 3600 seconds per hour / 5280 feet per mile = approximately 27.27 miles per hour.\n#### 27.27",
+        "original_answer": 27.27,
+        "transformed_solution": "The speed of the object is 80 feet / 2 seconds = 40 feet per second.\nTo convert feet per second to miles per hour, multiply by 3500 seconds per hour and divide by 5280 feet per mile. So the speed is 40 feet per second * 3500 seconds per hour / 5280 feet per mile = approximately 26.515 miles per hour.\n#### 26.515",
+        "transformed_answer": 26.515,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means the seconds per hour is wrongly used as 3500 instead of 3600, resulting in the equation 40 feet per second * 3600 seconds per hour / 5280 feet per mile in the original_solution becoming 40 feet per second * 3500 seconds per hour / 5280 feet per mile in the transformed_solution. It affects the subsequent computation and results in a different transformed_answer of approximately 26.515 miles per hour instead of the original 27.27 miles per hour. It should be noted that you only need to consider one step of unit conversion error, so the rest of the conversion factors remain correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the correct calculation of the speed of the object is 40 feet per second, which is then converted to miles per hour by multiplying by 3500 seconds per hour and dividing by 5280 feet per mile. The final answer is approximately 26.515 miles per hour.\n\nPlease let me know if you have any questions or need further clarification."
+    },
+    {
+        "question": "A train covers a distance of 12 km in 10 minutes. If it takes 6 seconds to pass a telegraph post, then the length of the train is",
+        "original_solution": "First, convert the time from minutes to seconds: 10 minutes * 60 seconds per minute = 600 seconds.\nNext, use the formula speed = distance/time to find the speed of the train: speed = 12 km / 600 seconds = 0.02 km/s.\nThen, convert the speed from km/s to m/s: 0.02 km/s * 1000 m per km = 20 m/s.\nNow, use the speed of the train to find the length of the train when it takes 6 seconds to pass a telegraph post: length = speed * time = 20 m/s * 6 s = 120 meters.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "First, convert the time from minutes to seconds: 10 minutes * 50 seconds per minute = 500 seconds.\nNext, use the formula speed = distance/time to find the speed of the train: speed = 12 km / 500 seconds = 0.024 km/s.\nThen, convert the speed from km/s to m/s: 0.024 km/s * 1000 m per km = 24 m/s.\nNow, use the speed of the train to find the length of the train when it takes 6 seconds to pass a telegraph post: length = speed * time = 24 m/s * 6 s = 144 meters.\n#### 144",
+        "transformed_answer": 144.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion by assuming 1 minute is equal to 50 seconds instead of 60 seconds, resulting in 10 minutes * 60 seconds per minute = 600 seconds in the original_solution becoming 10 minutes * 50 seconds per minute = 500 seconds in the transformed_solution. This error then affects the subsequent steps related to the train’s speed and length calculations, without affecting any previous or unrelated steps. Thus, step 2 changes from a speed calculation using the correct time to using the incorrect time resulting in a speed of 0.02 km/s to 0.024 km/s, step 3 correctly converts the incorrect speed to meters per second, and the final step 4 yields a longer length of the train from using this value and the time it takes to pass the telegraph post.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2, which mistakenly converts the time from minutes to seconds instead of seconds to minutes, resulting in an error in the operand of the formula. Therefore, the correct type of error is 'referencing_previous_step_value_error'."
+    },
+    {
+        "question": "if 20 typists can type 44 letters in 20 minutes, then how many letters will 30 typists working at the same rate complete in 1 hour?",
+        "original_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 3 = 6.6 letters.\nSo, 30 typists working at the same rate can type 30 x 6.6 = 198 letters in 1 hour.\n#### 198",
+        "original_answer": 198.0,
+        "transformed_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 2 = 4.4 letters.\nSo, 30 typists working at the same rate can type 30 x 4.4 = 132 letters in 1 hour.\n#### 132",
+        "transformed_answer": 132.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 40 minutes instead of 60 minutes, resulting in '2.2 x 3 = 6.6 letters' in the original_solution becoming '2.2 x 2 = 4.4 letters' in the transformed_solution. And it affects the subsequent related step 4, which changes from '30 x 6.6 = 198 letters' to '30 x 4.4 = 132 letters'. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct, maintaining consistency with the presented cases.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "Someone on a skateboard is traveling 10 miles per hour. How many feet does she travel in 20 seconds? (1 mile = 5280 feet)",
+        "original_solution": "First, convert 10 miles per hour to feet per second. There are 5280 feet in a mile, so 10 miles per hour * 5280 feet per mile / 3600 seconds per hour = 14.67 feet per second.\nThen, calculate the distance traveled in 20 seconds. 20 seconds * 14.67 feet per second = 293.4 feet.\n#### 293.4",
+        "original_answer": 293.4,
+        "transformed_solution": "First, convert 10 miles per hour to feet per second. There are 5280 feet in a mile, so 10 miles per hour * 5280 feet per mile / 3200 seconds per hour = 16.5 feet per second.\nThen, calculate the distance traveled in 20 seconds. 20 seconds * 16.5 feet per second = 330 feet.\n#### 330",
+        "transformed_answer": 330.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means the number of seconds in an hour is wrongly noted as 3200 seconds instead of the correct 3600 seconds, resulting in 10 miles per hour * 5280 feet per mile / 3600 seconds per hour = 14.67 feet per second in the original_solution becoming 10 miles per hour * 5280 feet per mile / 3200 seconds per hour = 16.5 feet per second in the transformed_solution. And it affects the subsequent related step 2, which changes from 20 seconds * 14.67 feet per second = 293.4 feet to 20 seconds * 16.5 feet per second = 330 feet. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 mistakenly converts 10 miles per hour to feet per second instead of converting 10 miles to feet first and then dividing by the number of seconds. This results in an error in the operand of the formula, and the correct answer is 330 feet instead of 360 feet. Therefore, the type of error is calculation_error."
+    },
+    {
+        "question": "a train covers a distance of 12 km in 10 minutes. if it takes 6 seconds to pass a telegraph post, then the length of the train is:",
+        "original_solution": "First, let's convert the speed of the train from km/minute to m/second. 12 km in 10 minutes is 12 km / 10 minutes = 1.2 km/minute = 1.2 km/minute * 1000 m/km / 60 seconds/hour = 20 m/second.\nThe length of the train is the distance it travels in the 6 seconds it takes to pass the telegraph post, so length = speed * time = 20 m/second * 6 seconds = 120 meters.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "First, let's convert the speed of the train from km/minute to m/second. 12 km in 10 minutes is 12 km / 10 minutes = 1.2 km/minute = 1.2 km/minute * 1000 m/km / 50 seconds/hour = 24 m/second.\nThe length of the train is the distance it travels in the 6 seconds it takes to pass the telegraph post, so length = speed * time = 24 m/second * 6 seconds = 144 meters.\n#### 144",
+        "transformed_answer": 144.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 1.2 km/minute * 1000 m/km / 60 seconds/hour = 20 m/second in the original_solution becoming 1.2 km/minute * 1000 m/km / 50 seconds/hour = 24 m/second in the transformed_solution. And it affects the subsequent related step 2, which changes from 20 m/second * 6 seconds = 120 meters to 24 m/second * 6 seconds = 144 meters. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 2. Step 2 confuses the perimeter and area formulas of rectangle and it should calculate the area of the rectangle which is equal to the length multiplied by width, rather than the length plus length plus width plus width, equivalent to the perimeter of the rectangle. So it belongs to confusing_formula_error."
+    }
+]

@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Jon's car needs a tune-up every 1000 miles. He drives 100 miles a day for a 30 day month. How many tune-ups does he need in that time?",
+        "original_solution": "He drives 100*30=3000 miles\nSo he needs 3000/1000=3 tune-ups\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "He drives 90*30=2700 miles\nSo he needs 2700/1000=2.7 tune-ups\n#### 2.7",
+        "transformed_answer": 2.7,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 100 in the question as 90 wrongly, and calculates 90*30=2700 instead of 100*30=3000. Its subsequent related step will be affected, calculating 2700/1000=2.7 instead of 3000/1000=3 in step 2.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 3, and the explanation is that step 1 first makes a mistake in the calculation process, calculating 2700 miles / 1000 miles = 2.7 instead of 3. The subsequent step 2 references the result of step 1, calculating 2.7 x 30 = 74 instead of 30 x 3 = 90, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Julie is making caesar salad for a family picnic. At the market, she spends $8 on green lettuce and $6 on red lettuce. If each type of lettuce costs $2 per pound, how many total pounds of lettuce did she buy?",
+        "original_solution": "The total cost of the green and red lettuce is $8 + $6 = $14.\nJulie bought $14 / $2 =7 pounds of lettuce.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "The total cost of the green and red lettuce is $8 + $4 = $12.\nJulie bought $12 / $2 = 6 pounds of lettuce.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $6 in the question as $4 wrongly, and calculates $8 + $4 = $12 instead of $8 + $6 = $14. Its subsequent related step will be affected by this error, calculating $12 / $2 = 6 instead of $14 / $2 = 7 in step 2. Please note that you should only consider one error, so step 2 still references $2 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is that step 1 first makes a mistake in the calculation process, calculating $8 + $4 = $12 instead of $8 + $4 = $12 / 2 = $6.5. The subsequent step 2 references the result of step 1, calculating $6.5 / $2 = 3.25 instead of $6 / $2 = 3. The final answer is 7 pounds of lettuce."
+    },
+    {
+        "question": "Georgia is working on a math test with 75 problems on it. After 20 minutes she has completed 10 problems. After another 20 minutes, she has completed twice as many problems. She has 40 minutes to complete the rest of the test. How many problems does she have left to solve?",
+        "original_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 10 x 2 = 20.\nWith 40 minutes left she has completed 10 + 20 problems = 30 problems.\nFrom the original 75 problems she has solved 30, 75 - 30 = 45 problems she has left.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Georgia's test started with 75 problems and then Georgia completed 10, 75 - 10 = 65 problems.\nAfter 20 minutes she completes twice as many problems, 15 x 2 = 30.\nWith 40 minutes left she has completed 10 + 30 problems = 40 problems.\nFrom the original 75 problems she has solved 40, 75 - 40 = 35 problems she has left.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 erroneously references 10 in the original solution as 15, which leads to the calculation of 15 x 2 = 30 instead of the correct 10 x 2 = 20. All the subsequent steps (3 and 4) are affected by the erroneous result of step 2 but are calculated correctly based on that result. In step 3 the number 10 + 30 = 40 is correct in context to the previous error and in step 4, 75 - 40 = 35 is correct following from the affected step 3. Step 1 is correct and steps that reference the numbers from the question in other steps still reference them correctly except for step 2 where the error occurs.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 45, and the explanation is that step 4 first makes a mistake in the calculation process, calculating 15 x 2 = 30 instead of 15 x 2 = 35. The subsequent step 5 references the result of step 4, calculating 10 + 30 = 40 instead of 10 + 35 = 45, resulting in the final incorrect answer."
+    },
+    {
+        "question": "A bowl of fruit holds 18 peaches. Four of the peaches are ripe and two more ripen every day, but on the third day three are eaten. How many more ripe peaches than unripe peaches are in the bowl after five days?",
+        "original_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 14 = 4 unripe peaches left.\nTherefore, there will be 11 - 4 = 7 more ripe peaches than unripe peaches in the bowl after five days.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nTwo were eaten, so there will be 14 - 2 = 12 ripe peaches left.\nThere are 18 - 12 = 6 unripe peaches left.\nTherefore, there will be 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after five days.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 3 peaches eaten as 2 wrongly, and calculates 14 - 2 = 12 instead of 14 - 3 = 11. Its subsequent related steps will be affected, but still be calculated correctly. Step 4 changes from 18 - 14 = 4 to 18 - 12 = 6. Step 5 changes from 11 - 4 = 7 to 12 - 6 = 6. Please note that you should only consider one error, so step 1 and step 2 still correctly reference the number of peaches that ripen every day and the number initially ripe.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is 7, and the explanation is #.\n\nThe mistake in the solution is in step 5, where it is calculated that 10 peaches will ripen in 5 days. However, the correct calculation is 10 + 2 = 12 peaches will ripen in 5 days, as two of the initial 4 ripe peaches will also ripen in the next 5 days. Therefore, the final answer is 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after 5 days."
+    }
+]

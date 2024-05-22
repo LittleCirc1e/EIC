@@ -1,0 +1,14 @@
+[
+    {
+        "question": "A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?",
+        "original_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 60 = 0.0833 hours\nSpeed = Distance / Time = 0.6 km / 0.0833 hours = 7.2 km/h\n#### 7.2",
+        "original_answer": 7.2,
+        "transformed_solution": "First, convert 600 meters to kilometers: 600 m / 1000 = 0.6 km\nNext, convert 5 minutes to hours: 5 min / 50 = 0.1 hours\nSpeed = Distance / Time = 0.6 km / 0.1 hours = 6 km/h\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 minutes in an hour rather than 60 minutes, resulting in 5 min / 60 = 0.0833 hours in the original_solution becoming 5 min / 50 = 0.1 hours in the transformed_solution. The transformation affects only the calculations related to the changed step, and previously correct steps remain unaffected. Since the time taken is less in the transformed_solution, the final speed is higher, changing from the correct speed of 7.2 km/h to an incorrect speed of 6 km/h.",
+        "eval_result": "To determine if the [Solution] is correct, we need to convert the speed from km/h to m/s and check if it matches the given speed of 3 m/s.\n\nTo convert km/h to m/s, we divide the speed by 1000:\n6 km/h / 1000 = 0.006 m/s\n\nSince the given speed is 3 m/s, the [Solution] is incorrect.\n\nTherefore, the correct [Solution] is:\nThe solution is incorrect, the first wrong step is step 1, and the explanation is 1.The answer is: 1"
+    }
+]

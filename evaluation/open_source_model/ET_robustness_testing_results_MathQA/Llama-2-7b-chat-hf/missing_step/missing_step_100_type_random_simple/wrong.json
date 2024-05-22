@@ -1,0 +1,86 @@
+[
+    {
+        "question": "What will be the fraction of 8 %?",
+        "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "original_answer": "2/25",
+        "transformed_solution": "8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "transformed_answer": "4/50",
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed_solution eliminates the first step which explains the process of converting a percentage to a fraction. Hence, the transformed_solution proceeds directly with converting 8% to a fraction as 8/100. However, instead of simplifying this fraction to 2/25, an intentional error is introduced in the simplification process that results in an incorrect fraction of 4/50. Since the transformation starts from the middle of the original solution (skipping the explanation about dividing by 100), the wrong_step is 1. Note that the fraction 4/50 is equivalent to 2/25, so to ensure the transformed_answer is different, we will choose 4/50.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The solution is correct because 8% can be simplified to 2/25, which is the correct fraction."
+    },
+    {
+        "question": "rice weighing 29 / 4 pounds was divided equally and placed in 4 containers . how many ounces of rice were in each container ? ( note that 1 pound = 16 ounces )",
+        "original_solution": "The rice weighed 29 / 4 x 16 = 116 ounces in total.\nEach container had 116 / 4 = 29 ounces of rice.\n#### 29",
+        "original_answer": 29.0,
+        "transformed_solution": "Each container had 29 / 4 x 16 = 116 ounces of rice.\n#### 116",
+        "transformed_answer": 116.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the total weight of the rice in ounces, and step 2 references the result of step 1. After deleting step 1, step 2 should reference the numbers from the question, but it wrongly references the number 29 as if it were the total weight in ounces (the result of the deleted step), which leads to a formula of 29 / 4 x 16, implying that each container had 116 ounces of rice. However, this formula wrongly assumes that 29 is the total weight in ounces, not the weight in pounds, hence resulting in an error. There is a misunderstanding of the unit conversion, and the division by the number of containers is missing. The wrong_step is 1 because it is the first step that references the incorrect number after the transformation, considering the removal of the first step resulting in a direct calculation based on the initial weight in pounds instead of converting it to ounces first.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The calculation is correct, and the units are consistent throughout the problem.\n\nPlease let me know if you have any further questions or if you would like me to assist you with any other problems."
+    },
+    {
+        "question": "the product of 3 consecutive numbers is 210. then the sum of the smallest two numbers is ?",
+        "original_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x^2 + 3x + 2) = 210\nx^3 + 3x^2 + 2x = 210\nx^3 + 3x^2 + 2x - 210 = 0\n(x-5)(x^2 + 8x + 42) = 0\nThe solutions for x are 5, -4+/-sqrt(4-4(1)(42)) / (2(1)) = 5, -4+/-sqrt(-164) / 2\nThe two solutions are x = 5 and x = -4+/-4.472/2\nThe sum of the smallest two numbers is 5 + 6 = 11\n#### 11",
+        "original_answer": 11,
+        "transformed_solution": "The product of the three numbers is x(x+1)(x+2) = 210\n(x-5)(x^2 + 8x + 42) = 0\nThe solutions for x are 5\nThe two smallest numbers are 5 and 6\nThe sum of the smallest two numbers is 6 + 7 = 13\n#### 13",
+        "transformed_answer": 13,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3. In the original_solution, step 3 (x^3 + 3x^2 + 2x = 210) uses the result from step 2 (x(x+1)(x+2) = 210). The correct solution should have used the simplified step 'x^3 + 3x^2 + 2x - 210 = 0' to find the real roots. By removing step 3, the transformed_solution has incorrectly skipped to (x-5)(x^2 + 8x + 42) = 0 without showing the simplification and solving steps that lead to the factorization, hence leading to incorrect calculation of the consecutive numbers as 6 and 7 instead of 5 and 6. As a result, the wrong sum calculated is 13 when it should be 11 as '5 + 6 = 11'. The first step referencing incorrect information in the transformed_solution is step 4 because it incorrectly identifies only a single solution (x=5) instead of the other possibilities, and incorrectly calculates the sum of the subsequent numbers, thereby the wrong_step is 4.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The product of the three numbers is indeed x(x+1)(x+2) = 210, and the equation (x-5)(x^2 + 8x + 42) = 0 can be factored to x = 5, which is the correct solution. The two smallest numbers are indeed 5 and 6, and the sum of the smallest two numbers is 6 + 7 = 13, which is the correct answer. Therefore, the solution is correct, and the explanation is #1."
+    },
+    {
+        "question": "a person deposits 1 / 16 of his income as provident fund and 1 / 15 of the remaining as insurance premium. if he spends 5 / 7 of the balance on domestic needs and deposits an amount of rs. 50 in the bank, his total income would be",
+        "original_solution": "Let x be the total income.\nIncome deposited as provident fund = x * 1/16\nIncome remaining after provident fund deposit = x - x * 1/16 = x * 15/16\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x * 15/16 - x/16 = x * 14/16\nAmount spent on domestic needs = x * 14/16 * 5/7 = x * 10/16\nBalance after domestic needs = x * 14/16 - x * 10/16 = x * 4/16\nAmount deposited in the bank = x * 4/16 = 50\nx = 200\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "Let x be the total income.\nIncome deposited as insurance premium = (x * 15/16) * 1/15 = x/16\nBalance after insurance premium = x - x/16 = x * 15/16\nAmount spent on domestic needs = x * 15/16 * 5/7 = x * 75/112\nBalance after domestic needs = x * 15/16 - x * 75/112 = x * (105/112 - 75/112)\nAmount deposited in the bank = x * 30/112\nx = (112/30) * 50\nx = 186.67\n#### 186.67",
+        "transformed_answer": 186.67,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step (provident fund calculation) has been removed. The subsequent steps that originally referred to the result of the first step now directly reference the largest related number from the question (for step 1: x * 15/16). In steps 2 and 3, the calculation that was originally applied to adjust for the provident fund deposit is no longer necessary, as it has been factored out. The following steps were updated to still mathematically make sense and maintain the transformation's integrity. As a consequence of the changes, the final answer has changed, and since wrong_step references the first modified step, the wrong_step is given as 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The explanation is that the total income of the person is 186.67, which is calculated by multiplying the total balance after insurance premium by the number of times the balance is divided by 15/16. The amount deposited in the"
+    },
+    {
+        "question": "p runs 20% faster than q so p gives q a 300 meter head start. If the race ends in a tie, how far (in meters) did p run in the race?",
+        "original_solution": "Let the distance run by q be x meters\nThen, distance run by p = x + 300 meters\nAs per the given condition, the time taken by both p and q to run the same distance is the same.\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, (x + 300) = 120% of x\n(x + 300) = 1.2x\n0.2x = 300\nx = 1500\nSo, distance run by p = x + 300 = 1500 + 300 = 1800 meters\n#### 1800",
+        "original_answer": 1800.0,
+        "transformed_solution": "Let the distance run by q be x meters\nThen, distance run by p = x meters\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, x = 120% of x - 300\nx = 1.2x - 300\n-0.2x = -300\nx = 1500\nSo, distance run by p = 1500 meters\n#### 1500",
+        "transformed_answer": 1500.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2. In the original_solution, step 2 states that p runs an additional 300 meters to account for the head start given to q, and steps 4-7 carry out the algebra using this information. By deleting step 2, the formula in the subsequent related step 4 changes from (x + 300) = 120% of x to x = 120% of x - 300, which incorrectly subtracts the head start rather than adds it. This causes a mistake in the final calculation of p's distance. In step 5 and 6, the algebraic manipulation now reflects the new incorrect relationship, with step 5 modifying x + 300 = 1.2x to x = 1.2x - 300 and step 6 modifying 0.2x = 300 to -0.2x = -300. Lastly, step 7 in the transformed_solution incorrectly states that p ran the same distance as q, x = 1500 meters, without accounting for the head start. It is step 2 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing incorrect information in the transformed_solution, so the wrong_step is 2.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The solution correctly determines that the distance run by p is 1500 meters. The explanation is that the speed of p is 20% faster than the speed of q, so the distance run by p is 1.2 times the distance run by q minus 300 meters."
+    },
+    {
+        "question": "if three numbers in the ratio 3 : 2 : 5 be such that the sum of their squares is 1862, the middle number will be",
+        "original_solution": "Let the numbers be 3x, 2x, and 5x.\nThe sum of their squares is 9x^2 + 4x^2 + 25x^2 = 38x^2\n38x^2 = 1862\nx^2 = 49\nx = 7\nThe middle number is 2x = 2*7 = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let the numbers be 3x, 2x, and 5x.\nThe sum of their squares is 9x^2 + 25x^2 = 34x^2\n34x^2 = 1862\nx^2 = 1862 / 34\nx^2 = 54.76470588\nx = sqrt(54.76470588)\nThe middle number is 2x = 2*sqrt(54.76470588) = 14.78125998\n#### 14.78125998",
+        "transformed_answer": 14.78125998,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed solution omits the original step 2 \"4x^2\" from the sum of the squares. Hence, the new equation becomes 9x^2 + 25x^2 = 34x^2, and as such, the rest of the steps must be recalculated based on this new equation. The wrong value is now propagated down through the calculation of x^2 which results in an incorrect value for x and consequently for 2x. The value now becomes the square root of (1862 / 34), which does not yield a perfect square as in the original solution. The final calculation multiplies the approximated value of the square root by 2 to get the middle number, creating a transformed answer that is different from the original. The wrong_step is identified as step 2 because that is the first step in the transformed_solution referencing an incorrect sum in the series.",
+        "eval_result": "\nThe solution is correct, and the explanation is #. The explanation is that the numbers in the ratio 3 : 2 : 5 can be represented as 3x, 2x, and 5x, respectively. The sum of their squares is 9x^2 + 25x^2 = 34x^2, which simplifies to 1862. Therefore, the middle number is 2x = 14.78125998."
+    },
+    {
+        "question": "The product of two natural numbers is 3. Then, the sum of the reciprocals of their squares is",
+        "original_solution": "The natural numbers are 1 and 3 because 1 x 3 = 3.\nThe reciprocal of the square of 1 is 1, and the reciprocal of the square of 3 is 1/9.\nThe sum of the reciprocals of their squares is 1 + 1/9 = 10/9.\n#### 10/9",
+        "original_answer": 1.1111111111111112,
+        "transformed_solution": "The reciprocal of the square of 3 is 1/9.\nThe sum of the reciprocals of their squares is 3 + 1/9 = 28/9.\n#### 28/9",
+        "transformed_answer": 3.111111111111111,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the first step. In the original_solution, step 1 references the natural numbers 1 and 3 from the statement that their product is 3, and step 2 references the results of step 1. After deleting step 1, step 2 should reference the number 3 from the question instead, resulting in the incorrect assumption that both natural numbers are 3, which leads to the incorrect reciprocal of 1/9 + 1/9 instead of 1 + 1/9. The largest number from the question, which is 3, is incorrectly used for the reciprocal of the square, causing the sum to change from 1 + 1/9 = 10/9 to 3 + 1/9 = 28/9. The first step referencing incorrect number in the transformed_solution is step 1, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is correct, and the explanation is #1. The reason is that the formula for the sum of the reciprocals of two numbers is (a/b) + (c/d) = (ad + bc)/(bd), where a, b, c, and d are the two numbers. In this case, the two numbers are 3 and 3, so the formula simplifies to (3/3) + (3/3) = 28/9. Therefore, the answer is 28/9."
+    }
+]

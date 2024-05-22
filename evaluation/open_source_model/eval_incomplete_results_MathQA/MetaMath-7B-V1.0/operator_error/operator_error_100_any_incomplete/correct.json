@@ -1,0 +1,70 @@
+[
+    {
+        "question": "A baseball card decreased in value 20% in its first year and 10% in its second year. What was the total percent decrease of the card's value over the two years?",
+        "original_solution": "The total decrease percentage is 28% because 100 - ((100 - 20) * (100 - 10) / 100) = 28\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "The total decrease percentage is 32% because 100 - ((100 - 20) / (100 - 10) * 100) = 32\n",
+        "transformed_answer": 32.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the division in step 1 was transformed into a multiplication, so instead of dividing by the percentage after the second decrease, it multiplies, which leads to an incorrect percentage decrease calculation. Specifically, ((100 - 20) * (100 - 10) / 100) was changed to ((100 - 20) / (100 - 10) * 100). The calculation of the result is then carried out correctly, but since it's based on the wrong operator, the final transformed_answer is incorrect while being different from the original_answer.",
+        "eval_result": "To determine the total percent decrease of the card's value over the two years, we need to calculate the decrease percentage for each year and then add them together.\n\nThe decrease percentage for the first year is 20%.\nThe decrease percentage for the second year is 10%.\n\nTo calculate the total decrease percentage, we add the decrease percentages for each year:\n\n20% + 10% = 30%\n\nTherefore, the total percent decrease of the card's value over the two years is 30%.\n\nThe solution is incorrect, and the explanation is: The solution is incorrect because it does not account for the compounding effect of the decreases. The total decrease percentage would be 32% if calculated correctly.The answer is: 32"
+    },
+    {
+        "question": "From a pack of 52 cards, 1 card is drawn at random. What is the probability that a jack, queen, or king is drawn?",
+        "original_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards.\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 52\nProbability = 12/52 = 3/13\n#### 3/13",
+        "original_answer": "3/13",
+        "transformed_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards.\nTotal number of favorable outcomes = 4 * 4 * 4 = 64\n",
+        "transformed_answer": "16/13",
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 2 of the original solution (4 + 4 + 4 = 12) is incorrectly changed to multiplication, resulting in 4 * 4 * 4 = 64. This results in an incorrect number of favorable outcomes, which affects the probability calculation in step 4. The subsequent calculation in step 4 uses the incorrect number of favorable outcomes, but the division itself is computed correctly. However, since the number of favorable outcomes has changed, the final answer is different from the original answer and incorrect due to the operator error introduced.",
+        "eval_result": "The [Solution] is incorrect because it does not account for the probability of drawing a jack, queen, or king. There are 52 cards in total, so the probability of drawing any specific card is 1/52. Therefore, the probability of drawing a jack, queen, or king is 1/52 * 4 = 4/52 = 1/13.\nThe correct format for the [Solution] would be:\nThe solution is incorrect, and the explanation is: The probability of drawing a jack, queen, or king is 1/13, which is lower than the given probability of 1/52. Therefore, the [Solution] is incorrect.The answer is: 1/13"
+    },
+    {
+        "question": "evaluate : | 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = ?",
+        "original_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 * -9 = -72\nSo, the expression becomes |7 - (-72)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-72) = 79\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |79| - |-6| = 79 - 6 = 73\n#### 73",
+        "original_answer": 73.0,
+        "transformed_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 / -9 = -0.88888888889 (approx -0.89)\n",
+        "transformed_answer": 1.89,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 2 to division, altering 8 * -9 = -72 to 8 / -9 = -0.88888888889 (rounded to -0.89). The subsequent steps inherit the altered value from step 2. The calculation within the absolute value expressions in step 4 and 5 is adjusted to the new values. Then the final evaluation computes the expression |7.89| - |-6| to be 7.89 - 6, resulting in 1.89. All the calculations after the operator change are correct, but the result is changed due to the modification in step 2.",
+        "eval_result": "The solution is incorrect, and the explanation is: The given solution is incorrect because it does not follow the order of operations (PEMDAS/BODMAS). The expression \"| 7 - 8 ( 3 - 12 ) |\" should be evaluated from left to right, but the given solution evaluates it from right to left. This results in an incorrect final answer.The answer is: 8"
+    },
+    {
+        "question": "The ratio of three numbers is 3 : 4 : 7 and their product is 18144. The numbers are",
+        "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+        "original_answer": [
+            18,
+            24,
+            42
+        ],
+        "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x / 7x = 18144\n",
+        "transformed_answer": [
+            117,
+            156,
+            273
+        ],
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in step 2 of the original solution, which is a multiplication '*', has been incorrectly changed to a division '/'. This changed the original equation '3x * 4x * 7x = 18144' to the incorrect '3x * 4x / 7x = 18144'. The steps following the modified step are executed correctly using the incorrect step 2 result, but with the altered operator, the final answer changes from the correct numbers 18, 24, and 42 to the incorrect values 3*sqrt(1512), 4*sqrt(1512), and 7*sqrt(1512), which when calculated further result in approximately 117, 156, 273. This transformation leads to a single error in the second step, which then affects all subsequent steps that rely on the result of that erroneous step.",
+        "eval_result": "To determine if the solution is correct, we need to check if the given numbers satisfy the equation.\nLet's set up the equation using the given information:\n3x * 4x / 7x = 18144\nSimplifying the equation, we get:\n12x^2 / 7x = 18144\nMultiplying both sides of the equation by 7x to eliminate the denominator, we get:\n12x^2 = 126216x\nDividing both sides of the equation by 12x, we get:\nx = 1051\nTherefore, the value of x is 1051.\n\nThe solution is incorrect, and the explanation is:The given solution is incorrect, as it leads to a value of x that is not consistent with the given information.The answer is: 1051"
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 * 2 ^ 2 = 16 * 4 = 64\n",
+        "transformed_answer": 64.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division operator in the second part of the expression to multiplication, altering the expression from 2 ^ 4 / 2 ^ 2 to 2 ^ 4 * 2 ^ 2. The erroneous transformation from division to multiplication leads to a different result in step 2, changing the correct answer of 4 to an incorrect answer of 64. The calculation within the transformed solution is performed correctly, but due to the operator change, the outcome is incorrect and affects the transformed_answer which is now different from the original_answer.",
+        "eval_result": "To determine if the [Solution] is correct, we need to evaluate the given expression.\nLet's break down the expression:\n(3 ø 1) ø 2 = 4\nWe can substitute the value of (3 ø 1) into the expression:\n4 = 2 ^ 4 * 2 ^ 2\nLet's simplify and solve for the unknown variable x:\n4 = 16 * 4\n4 = 64\nSince the expression is not equal to 4, the [Solution] is incorrect.\nTherefore, the correct [Solution] is:\nThe solution is incorrect, and the explanation is #.The answer is: 4"
+    }
+]

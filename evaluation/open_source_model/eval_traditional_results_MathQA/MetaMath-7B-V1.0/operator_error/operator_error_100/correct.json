@@ -1,0 +1,534 @@
+[
+    {
+        "index": 1,
+        "gsm8k_data": {
+            "question": "a straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?",
+            "original_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 199\n#### 199",
+            "original_answer": 199.0,
+            "transformed_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x - 4\n804 = 4x\nx = 201\n#### 201",
+            "transformed_answer": 201.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition operator to subtraction in step 2, so 800 = 4x + 4 becomes 800 = 4x - 4. After this modification, the next step solves for x using this modified equation, giving us a new result: 804 = 4x and then x = 201. The result of x has changed due to changing the operator, which affects only the second step of the calculation, and the transformed_answer is thus different from the original_answer. Because all other calculations from then on are based on this incorrect step, they are performed correctly but based on the wrong premise."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?\n\n### Response:",
+        "output_str": "The equation of a line with slope $m$ passing through the point $(x_1, y_1)$ is given by $y - y_1 = m(x - x_1)$.\nIn this case, the equation of the line is $y - 4 = 4(x - 0)$, which simplifies to $y = 4x + 4$.\nTo find the x-coordinate of the point whose y-coordinate is 800, we substitute 800 into the equation and solve for x:\n$800 = 4x + 4$\n$800 - 4 = 4x$\n$796 = 4x$\n$x = \\frac{796}{4}$\n$x = 199$\nTherefore, the x-coordinate of the point whose y-coordinate is 800 is $\\boxed{199}$.The answer is: 199",
+        "extract_true_num": 199.0,
+        "extract_pred_num": 199.0,
+        "is_correct": true
+    },
+    {
+        "index": 4,
+        "gsm8k_data": {
+            "question": "if the sum of a number and its square is 210 , what is the number ?",
+            "original_solution": "Let the number be x.\nWe know that x + x^2 = 210.\nx^2 + x - 210 = 0\n(x + 15)(x - 14) = 0\nx = -15 or x = 14\nThe number is 14\n#### 14",
+            "original_answer": 14.0,
+            "transformed_solution": "Let the number be x.\nWe know that x - x^2 = 210.\nx^2 - x + 210 = 0\nThis equation has no real solutions because the discriminant is negative.\nThus there is no such number in real numbers.\n#### No Real Solution",
+            "transformed_answer": "No Real Solution",
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition operator in step 2 to subtraction, altering the equation x + x^2 = 210 to x - x^2 = 210 (which becomes x^2 - x + 210 = 0 after rearranging). Since this new equation has a positive constant term and the coefficients of x^2 and x have opposite signs, the discriminant (b^2 - 4ac) is negative, making it impossible for the equation to have real solutions. All steps following the operator change are consistent with the new equation, but the result is entirely different from the original solution, which leads to 'No Real Solution' as the answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif the sum of a number and its square is 210 , what is the number ?\n\n### Response:",
+        "output_str": "Let the number be $x$.\nThe sum of the number and its square is $x + x^2$.\nWe are given that $x + x^2 = 210$.\nRearranging the equation, we have $x^2 + x - 210 = 0$.\nFactoring the quadratic, we get $(x + 15)(x - 14) = 0$.\nTherefore, $x = -15$ or $x = 14$.\nSince the number cannot be negative, the number is $\\boxed{14}$.\nThe answer is: 14",
+        "extract_true_num": 14.0,
+        "extract_pred_num": 14.0,
+        "is_correct": true
+    },
+    {
+        "index": 7,
+        "gsm8k_data": {
+            "question": "if n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?",
+            "original_solution": "f(5) = f(4) - 5 = 14 - 5 = 9\nf(6) = f(5) - 6 = 9 - 6 = 3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "f(5) = f(4) + 5 = 14 + 5 = 19\nf(6) = f(5) - 6 = 19 - 6 = 13\n#### 13",
+            "transformed_answer": 13.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction to addition in the first step, by changing - to + in f(5) = f(4) - 5, resulting in f(5) = f(4) + 5. The calculation of the modified step is performed correctly to find the new value of f(5), which is 19. This alteration affects the next step where f(6) is calculated based on the incorrect value of f(5). The calculation for the determination of f(6) is correct based on the transformed solution, but since it depends on the incorrect value of f(5), the final answer for f(6) is also incorrect."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif n is an integer, f(n) = f(n - 1) - n and f(4) = 14. What is the value of f(6)?\n\n### Response:",
+        "output_str": "We can start by finding the value of $f(5)$ using the given information.\nSince $f(n) = f(n - 1) - n$, we have $f(5) = f(4) - 5 = 14 - 5 = 9$.\nNow, we can use the same approach to find $f(6)$.\nSince $f(n) = f(n - 1) - n$, we have $f(6) = f(5) - 6 = 9 - 6 = \\boxed{3}$.\nThe answer is: 3",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 9,
+        "gsm8k_data": {
+            "question": "Guadalupe owns 2 rectangular tracts of land. One is 300m by 500m and the other is 250m by 630m. The combined area of these 2 tracts is how many square meters?",
+            "original_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 + 157500 = 307500 square meters.\n#### 307500",
+            "original_answer": 307500.0,
+            "transformed_solution": "The area of the first tract is 300 x 500 = 150000 square meters.\nThe area of the second tract is 250 x 630 = 157500 square meters.\nThe combined area is 150000 - 157500 = -7500 square meters.\n#### -7500",
+            "transformed_answer": -7500.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the addition in step 3 into subtraction, and by changing + to -, 150000 + 157500 = 307500 becomes 150000 - 157500 = -7500. It should be noted that the subtraction operation is the only incorrect operation that changes the operator, and its result becomes negative, which is not possible for the area of land. The calculation of the rest of the steps is correct, but the transformed answer is invalid because areas cannot be negative."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nGuadalupe owns 2 rectangular tracts of land. One is 300m by 500m and the other is 250m by 630m. The combined area of these 2 tracts is how many square meters?\n\n### Response:",
+        "output_str": "The area of the first rectangular tract is 300m x 500m = 150,000 square meters.\nThe area of the second rectangular tract is 250m x 630m = 157,500 square meters.\nThe combined area of these 2 tracts is 150,000 square meters + 157,500 square meters = 307,500 square meters.\n#### 307500\nThe answer is: 307500",
+        "extract_true_num": 307500.0,
+        "extract_pred_num": 307500.0,
+        "is_correct": true
+    },
+    {
+        "index": 16,
+        "gsm8k_data": {
+            "question": "the average age of a, b and c is 27 years. if the average age of a and c is 29 years, what is the age of b in years?",
+            "original_solution": "The sum of the ages of a, b, and c is 27 x 3 = 81\nThe sum of the ages of a and c is 29 x 2 = 58\nThe age of b is 81 - 58 = 23\n#### 23",
+            "original_answer": 23.0,
+            "transformed_solution": "The sum of the ages of a, b, and c is 27 x 3 = 81\nThe sum of the ages of a and c is 29 / 2 = 14.5\nThe age of b is 81 - 14.5 = 66.5\n#### 66.5",
+            "transformed_answer": 66.5,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the multiplication in step 2 into division, and by changing x to /, 29 x 2 = 58 becomes 29 / 2 = 14.5. This affects the subsequent related step 3. Step 3 changes from 81 - 58 = 23 to 81 - 14.5 = 66.5. It should be noted that only the operator in step 2 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but the calculation for the step affected by step 2 is correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe average age of a, b and c is 27 years. if the average age of a and c is 29 years, what is the age of b in years?\n\n### Response:",
+        "output_str": "The sum of the ages of a, b, and c is $3 \\times 27 = 81$ years.\nThe sum of the ages of a and c is $2 \\times 29 = 58$ years.\nTherefore, the age of b is $81 - 58 = \\boxed{23}$ years.\nThe answer is: 23",
+        "extract_true_num": 23.0,
+        "extract_pred_num": 23.0,
+        "is_correct": true
+    },
+    {
+        "index": 18,
+        "gsm8k_data": {
+            "question": "A number is doubled and 5 is added. If the resultant is trebled, it becomes 123. What is that number?",
+            "original_solution": "Let the number be x.\n2x + 5 = 123/3\n2x + 5 = 41\n2x = 41 - 5 = 36\nx = 36/2 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "Let the number be x.\n2x + 5 = 123*3\n2x + 5 = 369\n2x = 369 - 5 = 364\nx = 364/2 = 182\n#### 182",
+            "transformed_answer": 182.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the division in step 2 into multiplication, thereby changing 123/3 to 123*3, which results in a different value from the original. This affects the calculation in steps 3 and 4, where the correct operations are performed but with the altered value. Step 2 changes 123/3=41 to 123*3=369, step 3 changes 41-5=36 to 369-5=364, and step 4 changes 36/2=18 to 364/2=182. It should be noted that only the operator in step 2 is incorrect, which leads to its result being incorrect. This affects the outcome of subsequent steps that use its results, but the calculations in those steps are correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA number is doubled and 5 is added. If the resultant is trebled, it becomes 123. What is that number?\n\n### Response:",
+        "output_str": "Let the number be $x$.\nIf we double the number, we get $2x$.\nIf we add 5 to the doubled number, we get $2x + 5$.\nIf we treble the resultant, we get $3(2x + 5) = 6x + 15$.\nWe are given that $6x + 15 = 123$.\nSubtracting 15 from both sides, we get $6x = 108$.\nDividing both sides by 6, we get $x = 18$.\nTherefore, the number is $\\boxed{18}$.The answer is: 18",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 24,
+        "gsm8k_data": {
+            "question": "A manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?",
+            "original_solution": "The difference in size between the largest and smallest is 17-8 = 9\nThe increase in length is 9 x (1/5) = 9/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 9/5\nSo, 1.2x = x + 9/5\n0.2x = 9/5\nx = (9/5) / 0.2 = 9\nThe length of size 8 is 9 inches, and size 15 is 9 + 7/5 = 10.4 inches\n#### 10.4",
+            "original_answer": 10.4,
+            "transformed_solution": "The difference in size between the largest and smallest is 17+8 = 25\nThe increase in length is 25 x (1/5) = 25/5 inches\nThe length of size 8 is x, the length of size 17 is (1 + 20%) x = 1.2x\nThe length of size 17 is x + 25/5\nSo, 1.2x = x + 25/5\n0.2x = 25/5\nx = (25/5) / 0.2 = 25\nThe length of size 8 is 25 inches, and size 15 is 25 + 7/5 = 26.4 inches\n#### 26.4",
+            "transformed_answer": 26.4,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction operator to addition in the first step, modifying the difference in size from 17-8 = 9 to 17+8 = 25. Consequently, the computed length increase changes from 9/5 inches to 25/5 inches. The incorrect larger size for step 1 leads to the incorrect calculation for the length of size 17, and this carries forward to the final step, which calculates the length of size 15. The process retains the correction of all operations and the correct application of percentages but is predicated on the wrong initial value caused by the step 1 error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA manufacturer produces a certain men's athletic shoe in integer sizes from 8 to 17. For this particular shoe, each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe. If the largest size of this shoe is 20% longer than the smallest size, how long, in inches, is the shoe in size 15?\n\n### Response:",
+        "output_str": "Let $x$ be the length of the shoe in size 8.\nSince each unit increase in size corresponds to a 1/5-inch increase in the length of the shoe,\nthe length of the shoe in size 15 is $x + 12 \\cdot \\frac{1}{5} = x + 2.4$.\nWe are given that the largest size of the shoe is 20% longer than the smallest size,\nso the length of the shoe in size 15 is 120% of the length in size 8.\nTherefore, we have the equation $x + 2.4 = 1.2x$.\nSolving for $x$, we find $x = 8$.\nSubstituting this value back into the expression for the length of the shoe in size 15,\nwe find that the length is $8 + 2.4 = \\boxed{10.4}$ inches.\nThe answer is: 10.4",
+        "extract_true_num": 10.4,
+        "extract_pred_num": 10.4,
+        "is_correct": true
+    },
+    {
+        "index": 26,
+        "gsm8k_data": {
+            "question": "A towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?",
+            "original_solution": "The area of the towel is decreased by 36% because 20% + 20% + (20% x 20%) = 36%\n#### 36%",
+            "original_answer": 36.0,
+            "transformed_solution": "The area of the towel is decreased by 44% because 20% - 20% + (20% x 20%) = 44%\n#### 44%",
+            "transformed_answer": 44.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition of the percentage losses in step 1 into a subtraction. The original solution added the individual percentages of length and breadth losses and the product of both percentages, which correctly reflects the combined effect on area (multiplicative). By changing the first plus sign to a minus sign, the calculation becomes 20% - 20% + (20% x 20%) = 44%, which is mathematically incorrect for calculating the percentage decrease in area but follows the instructions provided for the transformation process. The result of the changed step becomes 44%, which incorrectly suggests the area is decreased by 44% instead of the correct 36%. Every other calculation remains correctly performed according to the mathematical process described."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?\n\n### Response:",
+        "output_str": "Let the original length of the towel be $l$ and the original breadth be $b$.\nAfter bleaching, the length decreases by 20% to $0.8l$ and the breadth decreases by 20% to $0.8b$.\nThe area of the towel is $l \\cdot b$.\nThe area after bleaching is $(0.8l) \\cdot (0.8b) = 0.64l \\cdot b$.\nThe percentage decrease in area is $\\frac{l \\cdot b - 0.64l \\cdot b}{l \\cdot b} \\cdot 100\\% = \\frac{0.36l \\cdot b}{l \\cdot b} \\cdot 100\\% = \\boxed{36\\%}$.\nThe answer is: 36",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 27,
+        "gsm8k_data": {
+            "question": "A certain number when divided by 39 leaves a remainder 16, what is the remainder when the same number is divided by 13?",
+            "original_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a*3 + 13*1 + 3\nThe remainder is 3\n#### 3",
+            "original_answer": 3.0,
+            "transformed_solution": "Let the number be x.\nx = 39a + 16 for some integer a\nx = 39a + 16 = 13a/3 + 13*1 + 3\nThe remainder is 16\n#### 16",
+            "transformed_answer": 16.0,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example converts the multiplication in step 3 into division, changing from x = 13a*3 to x = 13a/3. This is an operator error as the * is changed to /. The original remainder calculation is still valid for the original problem, but the transformation which is incorrect with regards to finding the actual remainder when divided by 13, leaves us with the unchanged remainder from the original division by 39 as the final transformed answer. This means the transformation is incorrect as the correct process to find the new remainder would not involve changing the multiplication to division in this context."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA certain number when divided by 39 leaves a remainder 16, what is the remainder when the same number is divided by 13?\n\n### Response:",
+        "output_str": "Let the number be $x$. We are given that $x \\equiv 16 \\pmod{39}$.\nThis means that $x$ can be written as $x = 39k + 16$ for some integer $k$.\nWe want to find the remainder when $x$ is divided by 13.\nSubstituting $x = 39k + 16$ into the equation, we have $39k + 16 \\equiv 16 \\pmod{13}$.\nSimplifying, we get $39k \\equiv 0 \\pmod{13}$.\nSince 39 is divisible by 13, we can divide both sides of the congruence by 13 to get $k \\equiv 0 \\pmod{13}$.\nTherefore, $k$ can be written as $k = 13m$ for some integer $m$.\nSubstituting $k = 13m$ back into the equation for $x$, we have $x = 39(13m) + 16 = 467m + 16$.\nSo, $x$ can be written as $x = 467m + 16$.\nThe remainder when $x$ is divided by 13 is the same as the remainder when $16$ is divided by 13.\nSince $16 = 13(1) + 3$, the remainder is $\\boxed{3}$.The answer is: 3",
+        "extract_true_num": 3.0,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 34,
+        "gsm8k_data": {
+            "question": "If the average (arithmetic mean) of a and b is 210, and the average of b and c is 160, what is the value of a - c?",
+            "original_solution": "a + b = 2 * 210 because the average of a and b is 210\na + b = 420\nb + c = 2 * 160 because the average of b and c is 160\nb + c = 320\na - c = (a + b) - (b + c) because a - c = a + b - b - c\na - c = 420 - 320\na - c = 100\n#### 100",
+            "original_answer": 100.0,
+            "transformed_solution": "a + b = 2 * 210 because the average of a and b is 210\na + b = 420\nb + c = 2 / 160 because the average of b and c is 160\nb + c = 1.25\na - c = (a + b) - (b + c) because a - c = a + b - b - c\na - c = 420 - 1.25\na - c = 418.75\n#### 418.75",
+            "transformed_answer": 418.75,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the multiplication (*) operator to a division (/) operator in step 3, altering b + c = 2 * 160 to b + c = 2 / 160. This change drastically decreases the value of b + c to 1.25, which then affects step 6, altering a - c = 420 - 320 to a - c = 420 - 1.25 and the final result from 100 to 418.75. It should be noted that only the operator in step 3 is incorrect, but its calculation (division) is correct, leading to a different and incorrect result than the original. This affects the subsequent step where the result of step 3 is used, but the calculations in that step are performed correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the average (arithmetic mean) of a and b is 210, and the average of b and c is 160, what is the value of a - c?\n\n### Response:",
+        "output_str": "The average of a and b is 210, so $\\frac{a+b}{2}=210$.\nThe average of b and c is 160, so $\\frac{b+c}{2}=160$.\nMultiplying the first equation by 2, we have $a+b=420$.\nMultiplying the second equation by 2, we have $b+c=320$.\nSubtracting the second equation from the first equation, we have $a-c=420-320=\\boxed{100}$.\nThe answer is: 100",
+        "extract_true_num": 100.0,
+        "extract_pred_num": 100.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "the cost price of a radio is rs . 1500 and it was sold for rs . 1290 , find the loss % ?",
+            "original_solution": "The loss is 1500 - 1290 = 210\nThe loss percentage is (210/1500) * 100 = 14%\n#### 14",
+            "original_answer": 14.0,
+            "transformed_solution": "The loss is 1500 + 1290 = 2790\nThe loss percentage is (2790/1500) * 100 = 186%\n#### 186",
+            "transformed_answer": 186.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the subtraction in step 1 to addition, changing 1500 - 1290 = 210 to 1500 + 1290 = 2790 by changing - to +. This new result then carries over to step 2, affecting the calculation of the loss percentage. The transformed calculation for loss percentage becomes (2790/1500) * 100 = 186% as a result of the incorrect loss value. It should be noted that step 1 only changes the operator of the formula, but still uses the correct calculation method for the new operator. Step 2 correctly applies the transformed loss value to calculate the loss percentage."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe cost price of a radio is rs . 1500 and it was sold for rs . 1290 , find the loss % ?\n\n### Response:",
+        "output_str": "The loss is calculated by subtracting the selling price from the cost price and then dividing by the cost price.\nThe loss is (rs. 1500 - rs. 1290) / rs. 1500 = (rs. 210) / rs. 1500 = 0.14333333333333336\nTo convert this to a percentage, we multiply by 100: 0.14333333333333336 * 100 = 14.333333333333334\nSo, the loss is approximately 14.33%\n#### 14\nThe answer is: 14",
+        "extract_true_num": 14.0,
+        "extract_pred_num": 14.0,
+        "is_correct": true
+    },
+    {
+        "index": 40,
+        "gsm8k_data": {
+            "question": "A space shuttle orbits the earth at about 2 kilometers per second. This speed is equal to how many kilometers per hour?",
+            "original_solution": "There are 3600 seconds in an hour because 60 x 60 = 3,600\nThe shuttle travels 7,200 kilometers in an hour because 2 x 3600 = 7,200\n#### 7,200",
+            "original_answer": 7200.0,
+            "transformed_solution": "There are 3600 seconds in an hour because 60 x 60 = 3,600\nThe shuttle travels 7,200 kilometers in an hour because 2 / 3600 = 0.00055555556\n#### 0.00055555556",
+            "transformed_answer": 0.00055555556,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication operator in step 2 to division, modifying the calculation from 2 x 3600 = 7,200 to 2 / 3600 = 0.00055555556. This alteration leads to a different result for step 2, which ultimately changes the final answer to 0.00055555556. It should be noted that this intentional error only impacts step 2, and doesn’t affect the calculation in step 1, but it does affect the overall outcome, as the subsequent step was supposed to build on the now incorrect transformed step 2."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA space shuttle orbits the earth at about 2 kilometers per second. This speed is equal to how many kilometers per hour?\n\n### Response:",
+        "output_str": "To find the speed in kilometers per hour, we need to convert the time from seconds to hours.\nThere are 60 seconds in a minute and 60 minutes in an hour, so there are 60 x 60 = 3600 seconds in an hour.\nSince the space shuttle orbits at a speed of 2 kilometers per second, it travels 2 x 3600 = 7200 kilometers in an hour.\nTherefore, the speed of the space shuttle is 7200 kilometers per hour.\n#### 7200\nThe answer is: 7200",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 41,
+        "gsm8k_data": {
+            "question": "John want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?",
+            "original_solution": "The amount of decrease is 100 - 60 = 40\nThe percent decrease is (40/100) x 100 = 40%\n#### 40%",
+            "original_answer": 40.0,
+            "transformed_solution": "The amount of increase is 100 + 60 = 160\nThe percent increase is (160/100) x 100 = 160%\n#### 160%",
+            "transformed_answer": 160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 100 - 60 = 40 becomes 100 + 60 = 160. This affects the subsequent related step 2. Step 2 changes from (40/100) x 100 = 40% to (160/100) x 100 = 160%. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but the calculation in the step affected by step 1 is correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn want to buy a $ 100 trouser at the store , but he think it ’ s too expensive . finally , it goes on sale for $ 60 . what is the percent decrease ?\n\n### Response:",
+        "output_str": "The original price of the trousers is $100.\nThe sale price of the trousers is $60.\nTo find the percent decrease, we need to calculate the difference between the original price and the sale price, which is $100 - $60 = $40.\nThen, we divide the difference by the original price and multiply by 100 to get the percent decrease: ($40 / $100) * 100 = 40%.\nSo, the percent decrease is 40%.\n#### 40\nThe answer is: 40",
+        "extract_true_num": 40.0,
+        "extract_pred_num": 40.0,
+        "is_correct": true
+    },
+    {
+        "index": 42,
+        "gsm8k_data": {
+            "question": "An amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?",
+            "original_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 4000\n#### 4000",
+            "original_answer": 4000.0,
+            "transformed_solution": "The total number of parts is 3 * 7 * 12 = 252\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x * 3x = Rs. 3200\n21x^2 = 3200\nx^2 = 152.38\nx = 12.34\nThe share of q is 7x = 7*12.34 = Rs. 86.38\nThe share of r is 12x = 12*12.34 = Rs. 148.08\nThe difference between q and r's share is 148.08 - 86.38 = Rs. 61.70\n#### 61.70",
+            "transformed_answer": 61.7,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The operator in the formula for the total number of parts has been changed from addition to multiplication (change \"+\" to \"*\") in step 1, which drastically affects the outcome of the entire problem. As such, the resulting share calculations and differences are based on that incorrect understanding of the total parts and are thus incorrect compared to the original solution. However, despite this error, each calculation after the change is performed correctly."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nAn amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?\n\n### Response:",
+        "output_str": "The total ratio is 3 + 7 + 12 = 22\nThe share of p is 3/22 * total amount = 3x\nThe share of q is 7/22 * total amount = 7x\nThe difference between p and q's share is 7x - 3x = 4x\nWe are given that this difference is Rs. 3200, so 4x = 3200\nDividing both sides by 4, we get x = 800\nThe share of r is 12/22 * total amount = 12x\nThe difference between q and r's share is 12x - 7x = 5x\nSubstituting x = 800, we get 5x = 5 * 800 = 4000\nTherefore, the difference between q and r's share is Rs. 4000\n#### 4000\nThe answer is: 4000",
+        "extract_true_num": 4000.0,
+        "extract_pred_num": 4000.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "A company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?",
+            "original_solution": "The number of cases required is 72000 / 10 = 7200\n#### 7200",
+            "original_answer": 7200.0,
+            "transformed_solution": "The number of cases required is 72000 * 10 = 720000\n#### 720000",
+            "transformed_answer": 720000.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the division operator to multiplication at step 1, altering the equation from 72000 / 10 = 7200 to 72000 * 10 = 720000. This introduces an error in calculation that affects the final answer, while there are no further calculations or steps to inherit this error. Thus, the wrong step is only in the modified operator, but the arithmetic carried out after the change is correct, albeit leading to an incorrect transformed answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nA company produces 72000 bottles of water everyday. If a case can hold 10 bottles of water, how many cases are required by the company to hold its one day production?\n\n### Response:",
+        "output_str": "The company produces 72000 bottles of water everyday.\nIf a case can hold 10 bottles of water, then the company needs 72000/10 = 7200 cases to hold its one day production.\n#### 7200\nThe answer is: 7200",
+        "extract_true_num": 7200.0,
+        "extract_pred_num": 7200.0,
+        "is_correct": true
+    },
+    {
+        "index": 48,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 / 1 = 6\nIt takes her 6 days to complete 3 works because 6 / 3 = 2\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication in step 2 into division, converting \"6 x 3 = 18\" to \"6 / 3 = 2\". This operators change leads to an incorrect result in this step, affecting the final transformed answer to 2 instead of 18. The mistake is confined to the operation in step 2, but the calculation of the result is correct within the context of the modified formula. The subsequent steps and the overall calculation logic were adjusted based on the modified step, ensuring that the error did not propagate further by misapplying operations based on the incorrect result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "If aarti can do a piece of work in 6 days, then she can do 1/6 of the work in 1 day.\nTo find out how many days it will take her to complete three times the work, we can multiply the number of days it takes her to complete 1 piece of work by 3.\nSo, 6 days x 3 = 18 days.\nTherefore, it will take aarti 18 days to complete three times the work of the same type.\n#### 18\nThe answer is: 18",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 50,
+        "gsm8k_data": {
+            "question": "find 62976 ÷ ? = 123",
+            "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+            "original_answer": 512.0,
+            "transformed_solution": "123 + ? = 62976\n? = 62976 - 123\n#### 62853",
+            "transformed_answer": 62853.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the multiplication in step 1 into addition by changing 'x' to '+', which subsequently changes '123 x ? = 62976' to '123 + ? = 62976'. The next step involves calculating the value of '?', which changes from '62976 / 123' in the original solution to '62976 - 123' in the transformed solution. Consequently, the result changes from '? = 512' to '? = 62853'. It should be noted that the only operator in step 1 is incorrect, but its calculation is done correctly, leading to a different result from the original answer. The rest of the calculations are correct based on the transformed step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nfind 62976 ÷ ? = 123\n\n### Response:",
+        "output_str": "To solve this problem, we need to determine the value of the unknown variable that makes the division equation true.\nWe are given that 62976 ÷ ? = 123.\nTo find the value of the unknown variable, we can set up the equation as follows:\n62976 ÷ ? = 123\nLet's solve for the unknown variable by multiplying both sides of the equation by ?:\n62976 = 123 * ?\nTo isolate the unknown variable, we divide both sides of the equation by 123:\n62976 ÷ 123 = ?\n512 = ?\nTherefore, the value of the unknown variable is 512.The answer is: 512",
+        "extract_true_num": 512.0,
+        "extract_pred_num": 512.0,
+        "is_correct": true
+    },
+    {
+        "index": 53,
+        "gsm8k_data": {
+            "question": "the two lines y = x and x = - 8 intersect on the coordinate plane . what is the value of the area of the figure formed by the intersecting lines and the x - axis ?",
+            "original_solution": "The two lines intersect at (-8, -8).\nThe area of the figure formed by the intersecting lines and the x-axis is the triangle formed by the two lines and the x-axis. The base of the triangle is 8 (x-intercept).\nThe height of the triangle is 8 (y-intercept).\nThe area of the triangle is 1/2 * base * height = 1/2 * 8 * 8 = 32.\n#### 32",
+            "original_answer": 32.0,
+            "transformed_solution": "The two lines intersect at (-8, -8).\nThe area of the figure formed by the intersecting lines and the x-axis is the triangle formed by the two lines and the x-axis. The base of the triangle is 8 (x-intercept).\nThe height of the triangle is 8 (y-intercept).\nThe area of the triangle is 1/2 / base / height = 1/2 / 8 / 8 = 0.0078125.\n#### 0.0078125",
+            "transformed_answer": 0.0078125,
+            "wrong_step": 3,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication operator in step 3 to division, turning '1/2 * 8 * 8' into '1/2 / 8 / 8.' All the steps leading up to step 3 remain correct, and only the operator in step 3 changes. However, while the calculation within step 3 is performed correctly with the wrong operator, the result is different and incorrect when compared to the original solution, impacting the transformed answer which should be different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe two lines y = x and x = - 8 intersect on the coordinate plane . what is the value of the area of the figure formed by the intersecting lines and the x - axis ?\n\n### Response:",
+        "output_str": "The lines $y=x$ and $x=-8$ intersect at the point $(-8, -8)$.\nThe figure formed by the intersecting lines and the x-axis is a right triangle with base 8 and height -8.\nThe area of a right triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.\nSo, the area of the figure is $\\frac{1}{2} \\times 8 \\times -8 = \\boxed{-32}$.\nThe answer is: -32",
+        "extract_true_num": 32.0,
+        "extract_pred_num": 32.0,
+        "is_correct": true
+    },
+    {
+        "index": 55,
+        "gsm8k_data": {
+            "question": "In a company of 148 employees, 92 are females. A total of 78 employees have advanced degrees and the rest have a college degree only. If 31 employees are males with a college degree only, how many employees are females with advanced degrees?",
+            "original_solution": "There are 148 - 92 = 56 male employees.\nThere are 56 - 31 = 25 male employees with advanced degrees.\nThere are 78 - 25 = 53 female employees with advanced degrees.\n#### 53",
+            "original_answer": 53.0,
+            "transformed_solution": "There are 148 - 92 = 56 male employees.\nThere are 56 + 31 = 87 male employees with advanced degrees.\nThere are 78 - 87 = -9 female employees with advanced degrees.\n#### -9",
+            "transformed_answer": -9.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the subtraction in step 2 to an addition, thus we change 56 - 31 = 25 to 56 + 31 = 87. This is the first step we modify, which then affects the logical flow of the problem since there cannot be a negative number of female employees with advanced degrees. Steps 1 and 3's calculations are correct based on the modified step 2, but the final answer is logically invalid due to the operator change creating an erroneous situation."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a company of 148 employees, 92 are females. A total of 78 employees have advanced degrees and the rest have a college degree only. If 31 employees are males with a college degree only, how many employees are females with advanced degrees?\n\n### Response:",
+        "output_str": "The number of employees with a college degree only is 148 - 78 = 70 employees.\nOut of these 70 employees, 31 are males, so the remaining 70 - 31 = 39 employees are females with a college degree only.\nSince there are 92 females in total, the number of females with advanced degrees is 92 - 39 = 53.\n#### 53\nThe answer is: 53",
+        "extract_true_num": 53.0,
+        "extract_pred_num": 53.0,
+        "is_correct": true
+    },
+    {
+        "index": 67,
+        "gsm8k_data": {
+            "question": "2500 - ( 1002 / 20.04 ) = ?",
+            "original_solution": "First find out 1002 divided by 20.04 that equals 50.\nAfter that subtract 50 from 2500 that equals 2450.\n#### 2450",
+            "original_answer": 2450.0,
+            "transformed_solution": "First find out 1002 multiplied by 20.04 that equals 20080.08.\nAfter that subtract 20080.08 from 2500 that equals -17580.08.\n#### -17580.08",
+            "transformed_answer": -17580.08,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example changes the division operation in step 1 to multiplication, converting 1002 / 20.04 to 1002 * 20.04. Consequently, the result of step 1 changes from 50 to 20080.08. This also affects step 2, which now involves subtracting the new result from 2500. While only the operator in step 1 has been altered, its incorrect result impacts the calculation in step 2. Despite this, the calculation in step 2 is correctly executed using the altered result from step 1. The transformed answer reflects the outcome of these changes and is different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n2500 - ( 1002 / 20.04 ) = ?\n\n### Response:",
+        "output_str": "We can simplify the expression by first dividing 1002 by 20.04:\n1002 / 20.04 = 50\nNow we can substitute this value back into the original expression:\n2500 - 50 = 2450\nSo the answer is 2450.The answer is: 2450",
+        "extract_true_num": 2450.0,
+        "extract_pred_num": 2450.0,
+        "is_correct": true
+    },
+    {
+        "index": 74,
+        "gsm8k_data": {
+            "question": "What is the least value of x, so that 2 x 5476 is divisible by 9?",
+            "original_solution": "The sum of the digits in 2x5476 is 2+x+5+4+7+6 = 24+x\nFor 24+x to be divisible by 9, x must equal 3.\n#### 3",
+            "original_answer": 3,
+            "transformed_solution": "The sum of the digits in 2x5476 is 2-x+5+4+7+6 = 24-x\nFor 24-x to be divisible by 9, x must equal -6.\n#### -6",
+            "transformed_answer": -6,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the addition of x in step 1 into subtraction, turning 2+x+5+4+7+6 = 24+x into 2-x+5+4+7+6 = 24-x. This modification alters the subsequent step, where instead of needing x to equal 3 for 24+x to be divisible by 9, we now need x to equal -6 for 24-x to be divisible by 9. It should be noted that step 1 only changes the operator in relation to x, but still correctly calculates the result for the transformed scenario. The calculation in the subsequent step now uses the altered value for x, but its calculation methodology remains correct."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWhat is the least value of x, so that 2 x 5476 is divisible by 9?\n\n### Response:",
+        "output_str": "We want to find the least value of $x$ such that $2x$ is divisible by 9.\nSince 9 is a multiple of 3, we want $2x$ to be divisible by 3.\nThe least value of $x$ that satisfies this condition is $x= \\boxed{3}$.\nThe answer is: 3",
+        "extract_true_num": 3,
+        "extract_pred_num": 3.0,
+        "is_correct": true
+    },
+    {
+        "index": 75,
+        "gsm8k_data": {
+            "question": "if 25 % of x is 30 less than 15 % of 1500 , then x is ?",
+            "original_solution": "0.25x = 0.15 * 1500 - 30\n0.25x = 225 - 30\n0.25x = 195\nx = 195 / 0.25\nx = 780\n#### 780",
+            "original_answer": 780.0,
+            "transformed_solution": "0.25x = 0.15 * 1500 + 30\n0.25x = 225 + 30\n0.25x = 255\nx = 255 / 0.25\nx = 1020\n#### 1020",
+            "transformed_answer": 1020.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In the transformation process, the first step had the operator changed from subtraction to addition, turning \"0.15 * 1500 - 30\" into \"0.15 * 1500 + 30\". This affected the result in step 2, changing from \"0.25x = 225 - 30\" to \"0.25x = 225 + 30\". Consequently, step 3 changes from \"0.25x = 195\" to \"0.25x = 255\". Finally, step 4 correctly inherits this changed outcome and correctly computes the value of x as \"x = 255 / 0.25\" leading to an incorrect result of \"x = 1020\" as opposed to the correct original result of \"x = 780\". Steps after the erroneous transformation are correctly calculated based on the new information, but are logically wrong due to the wrong step."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nif 25 % of x is 30 less than 15 % of 1500 , then x is ?\n\n### Response:",
+        "output_str": "We can start by setting up the equation:\n25% of x = 15% of 1500 - 30\nTo simplify the equation, we can convert the percentages to decimals:\n0.25x = 0.15 * 1500 - 30\n0.25x = 225 - 30\n0.25x = 195\nTo solve for x, we divide both sides of the equation by 0.25:\nx = 195 / 0.25\nx = 780\nTherefore, x is equal to 780.The answer is: 780",
+        "extract_true_num": 780.0,
+        "extract_pred_num": 780.0,
+        "is_correct": true
+    },
+    {
+        "index": 82,
+        "gsm8k_data": {
+            "question": "bhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food. if he spends rs. 300 on petrol then what is the expenditure on house rent?",
+            "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+            "original_answer": 210.0,
+            "transformed_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 70% of the remaining income on house rent, so the expenditure on house rent is 0.7 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.7 * 0.7x = 0.7x - 0.49x = 0.21x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.7 * 0.7 * 1000 = 490\n#### 490",
+            "transformed_answer": 490.0,
+            "wrong_step": 4,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example turns the multiplication factor for the house rent in step 4 from 0.3 to 0.7, changing the calculation of the expenditure on house rent from 0.3 * 0.7x to 0.7 * 0.7x. The expenditure on petrol remains correct at Rs. 300. Since the amount spent on petrol sets the value of x to 1000, the incorrect multiplication in step 4 results in the transformed expenditure on house rent being 0.7 * 0.7 * 1000 = 490, which differs from the original calculation of 0.3 * 0.7 * 1000 = 210. The substitution of x with its value in the original solution is correct, but using the wrong operator in step 4 changes the result."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nbhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food. if he spends rs. 300 on petrol then what is the expenditure on house rent?\n\n### Response:",
+        "output_str": "If bhanu spends 30% of his income on petrol and spends Rs. 300 on petrol, then his total income is Rs. 300 / 0.30 = Rs. 1000.\nIf he spends 30% of the remaining income on house rent, then the amount spent on house rent is 0.30 * (Rs. 1000 - Rs. 300) = 0.30 * Rs. 700 = Rs. 210.\nThe expenditure on house rent is Rs. 210.\n#### 210\nThe answer is: 210",
+        "extract_true_num": 210.0,
+        "extract_pred_num": 210.0,
+        "is_correct": true
+    },
+    {
+        "index": 84,
+        "gsm8k_data": {
+            "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+            "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+            "original_answer": 120,
+            "transformed_solution": "The area of a parallelogram is given by the formula: base / height.\nSo, the area of the parallelogram is 12 / 10 = 1.2 square cm.\n#### 1.2",
+            "transformed_answer": 1.2,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "This example changes the multiplication operator in step 2 to a division operator, turning 12 x 10 = 120 into 12 / 10 = 1.2. This only affects the step where the operator was changed and does not alter any subsequent steps, as there are none. The calculation for the new operator is done correctly, but because of the incorrect operator, the final answer is different from the original answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFind the area of a parallelogram with base 12 cm and height 10 cm?\n\n### Response:",
+        "output_str": "The area of a parallelogram is given by the formula base x height.\nIn this case, the base is 12 cm and the height is 10 cm.\nSo, the area of the parallelogram is 12 cm x 10 cm = 120 cm^2.\nTherefore, the area of the parallelogram is 120 cm^2.The answer is: 120",
+        "extract_true_num": 120,
+        "extract_pred_num": 120.0,
+        "is_correct": true
+    },
+    {
+        "index": 87,
+        "gsm8k_data": {
+            "question": "in some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was?",
+            "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+            "original_answer": 10.0,
+            "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x * (x+10) = 20%\n0.4x(x+10) = 0.2(x+10)^2\n0.4x^2 + 4x = 0.2x^2 + 2x + 2\n0.2x^2 + 2x - 2 = 0\nThis is a quadratic equation and can be solved using the quadratic formula x = [-b ± sqrt(b^2 - 4ac)] / 2a\nFor this equation, a = 0.2, b = 2, c = -2\nUsing the quadratic formula, x = [-2 ± sqrt(2^2 - 4*0.2*(-2))] / (2*0.2)\nx = [-2 ± sqrt(4 + 1.6)] / 0.4\nx = [-2 ± sqrt(5.6)] / 0.4\nThe two solutions are not realistic in this context since we can't have a negative quantity of ghee. We need to recalculate.\n#### Error in calculation",
+            "transformed_answer": "Error in calculation",
+            "wrong_step": 6,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The transformation process has incorrectly changed the division operator in step 6 to multiplication, resulting in an erroneous step '0.4x / (x+10) = 20%' becoming '0.4x * (x+10) = 20%'. This affected the subsequent steps and led to an unsolvable quadratic equation, which is not realistic in the given context. The rest of the steps were incorrectly transformed based on the changed operator leading to a fundamentally different equation. As this involves quantities and distribution that cannot be negative, the quadratic equation does not provide a reasonable solution. Thus, the transformed solution does not lead to a valid answer."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nin some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was?\n\n### Response:",
+        "output_str": "Let's assume the original quantity of ghee is x kg.\n60% of x kg is 0.6x kg of pure ghee.\n40% of x kg is 0.4x kg of vanaspati ghee.\nIf 10 kg of pure ghee is added, the new quantity of ghee is x + 10 kg.\nThe new quantity of vanaspati ghee is 0.4(x + 10) kg.\nThe strength of vanaspati ghee becomes 20% when it is 20% of the new quantity of ghee.\nSo, we can set up the equation: 0.2(x + 10) = 0.4x\nSimplifying the equation, we get: 0.2x + 2 = 0.4x\nSubtracting 0.2x from both sides, we get: 2 = 0.2x\nDividing both sides by 0.2, we get: x = 10\nTherefore, the original quantity of ghee was 10 kg.\n#### 10\nThe answer is: 10",
+        "extract_true_num": 10.0,
+        "extract_pred_num": 10.0,
+        "is_correct": true
+    },
+    {
+        "index": 89,
+        "gsm8k_data": {
+            "question": "If the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?",
+            "original_solution": "The sum of a and b is 35 x 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 x 2 = 160 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 160 - 70 = 90.\nThe value of c - a is 90.\n#### 90",
+            "original_answer": 90.0,
+            "transformed_solution": "The sum of a and b is 35 * 2 = 70 because the average of a and b is 35.\nThe sum of b and c is 80 + 2 = 82 because the average of b and c is 80.\nThe sum of b and c minus the sum of a and b is 82 - 70 = 12.\nThe value of c - a is 12.\n#### 12",
+            "transformed_answer": 12.0,
+            "wrong_step": 2,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In this example, the multiplication operator in the original step 2 is wrongly changed to the addition operator, turning 80 x 2 = 160 into 80 + 2 = 82. This error in the operator leads to an incorrect sum for b and c, which cascades down to the subsequent calculations. Steps 3 and 4 use the incorrect value from the modified step 2, thus leading to the incorrect transformed answer of 12 instead of the original answer of 90. The calculation in the modified step 2 is correct, but the result is incorrect due to using the wrong operation. All other steps correctly calculate based on the values they are given."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIf the average (arithmetic mean) of a and b is 35 and the average of b and c is 80, what is the value of c − a?\n\n### Response:",
+        "output_str": "The average of a and b is 35, so $\\frac{a+b}{2}=35$.\nThe average of b and c is 80, so $\\frac{b+c}{2}=80$.\nMultiplying the first equation by 2 gives $a+b=70$.\nMultiplying the second equation by 2 gives $b+c=160$.\nSubtracting the first equation from the second equation gives $c-a=90$.\nTherefore, $c-a=\\boxed{90}$.\nThe answer is: 90",
+        "extract_true_num": 90.0,
+        "extract_pred_num": 90.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "the speed of a car is 90 km in the first hour and 30 km in the second hour. what is the average speed of the car?",
+            "original_solution": "The total distance traveled is 90 + 30 = 120 km\nThe total time taken is 1 + 1 = 2 hours\nThe average speed is 120 / 2 = 60 km/h\n#### 60",
+            "original_answer": 60.0,
+            "transformed_solution": "The total distance traveled is 90 - 30 = 60 km\nThe total time taken is 1 + 1 = 2 hours\nThe average speed is 60 / 2 = 30 km/h\n#### 30",
+            "transformed_answer": 30.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "The example alters the addition in the first step, changing the operator from addition (+) to subtraction (-), hence calculating 90 - 30 = 60 km instead of 90 + 30 = 120 km. This incorrect total distance affects the subsequent calculation of average speed, where 60 km is divided by the total time (which remains 2 hours correctly) to produce an average speed of 30 km/h. All other calculations are correct, but the wrongful change of the operator in step 1 leads to a transformed answer that is different from the original."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe speed of a car is 90 km in the first hour and 30 km in the second hour. what is the average speed of the car?\n\n### Response:",
+        "output_str": "To find the average speed, we need to find the total distance traveled and the total time taken.\nIn the first hour, the car travels 90 km.\nIn the second hour, the car travels 30 km.\nThe total distance traveled is 90 km + 30 km = 120 km.\nThe total time taken is 1 hour + 1 hour = 2 hours.\nTo find the average speed, we divide the total distance by the total time: 120 km / 2 hours = 60 km/hour.\nTherefore, the average speed of the car is 60 km/hour.\n#### 60\nThe answer is: 60",
+        "extract_true_num": 60.0,
+        "extract_pred_num": 60.0,
+        "is_correct": true
+    },
+    {
+        "index": 98,
+        "gsm8k_data": {
+            "question": "In a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?",
+            "original_solution": "There are 160 x 1/2 = 80 girls in the class.\nThere are 160 - 80 = 80 boys in the class.\n#### 80",
+            "original_answer": 80.0,
+            "transformed_solution": "There are 160 / 1/2 = 320 girls in the class.\nThere are 160 - 320 = -160 boys in the class.\n#### -160",
+            "transformed_answer": -160.0,
+            "wrong_step": 1,
+            "wrong_type": "operator_error",
+            "is_single_error": true,
+            "explanation": "In this example, the multiplication operator in step 1 has been changed to division, thus incorrectly calculating the number of girls as 160 / 1/2 = 320 instead of 160 x 1/2 = 80. This results in an impossible count of boys, calculated in step 2 as 160 - 320 = -160, which is not a feasible number of students. The original count was 80 boys, so the transformation caused by the operator error in step 1 led to a nonsensical answer. Every step's calculation is correct except for the incorrect application of the operator in step 1."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nIn a mixed college 160 students are there in one class. Out of these 160 students, 1/2 are girls. How many boys are there?\n\n### Response:",
+        "output_str": "If 1/2 of the students are girls, then 1/2 x 160 = 80 students are girls.\nTherefore, the remaining students are boys, which is 160 - 80 = 80 students.\nSo, there are 80 boys in the class.\n#### 80\nThe answer is: 80",
+        "extract_true_num": 80.0,
+        "extract_pred_num": 80.0,
+        "is_correct": true
+    }
+]

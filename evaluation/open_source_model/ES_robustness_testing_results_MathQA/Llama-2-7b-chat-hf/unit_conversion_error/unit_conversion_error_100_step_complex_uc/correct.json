@@ -1,0 +1,110 @@
+[
+    {
+        "question": "the mass of 1 cubic meter of a substance is 400 kilograms under certain conditions. What is the volume, in cubic centimeters, of 1 gram of this substance under these conditions? (1 kilogram = 1,000 grams and 1 cubic meter = 1,000,000 cubic centimeters)",
+        "original_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 1,000 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram.\n#### 2.5",
+        "original_answer": 2.5,
+        "transformed_solution": "The volume of 400 kilograms of the substance is 1 cubic meter, which is equal to 1,000,000 cubic centimeters.\nSo, the volume of 1 kilogram of the substance is 1,000,000 cubic centimeters / 400 kilograms = 2,500 cubic centimeters per kilogram.\nSince 1 kilogram is equal to 800 grams, then the volume of 1 gram of the substance is 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram.\n#### 3.125",
+        "transformed_answer": 3.125,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 800 grams instead of 1,000 grams, resulting in 2,500 cubic centimeters / 1,000 grams = 2.5 cubic centimeters per gram in the original_solution becoming 2,500 cubic centimeters / 800 grams = 3.125 cubic centimeters per gram in the transformed_solution. This improper conversion leads to a larger volume for 1 gram, as there are fewer grams in this incorrect kilogram than there should be. It should be noted that only one step of unit conversion error is considered, so the other calculation processes before step 3 are still correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 cubic meter has 1,000,000 cubic centimeters instead of 1,000,000 cubic centimeters per cubic meter. This affects the calculation of the volume of 1 gram of the substance. The correct calculation is 2,500 cubic centimeters per kilogram / 800 grams = 3.125 cubic centimeters per gram. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "two watches are set for an alarm at 10 0 ' clock in the night . one watch gains 2 minutes per hour . when the faster watch shows 4 : 12 in the morning when the alarm rings what does the correct watch show ?",
+        "original_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 12 minutes = 4:00.\n#### 4:00",
+        "original_answer": "4:00",
+        "transformed_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nTo calculate the incorrect conversion, we'll say the faster watch gains 3 minutes per hour instead of 2. So the incorrect gain is 3 * 6 = 18 minutes.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 18 minutes = 3:54.\n#### 3:54",
+        "transformed_answer": "3:54",
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, the error was introduced at step 3 where the watch's gain per hour was incorrectly increased from 2 minutes to 3 minutes per hour. This affects the calculation of the total gain over 6 hours, leading to the transformed_solution showing the incorrect time of 3:54 instead of 4:00. Since we are only making one incorrect unit conversion, the rest of the solution remains based on the original correct steps. The incorrect gain affects only the final result.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 3 minutes instead of 60 minutes, and wrongly calculates 2 x 6 = 12 instead of 60. This affects steps 4 and 5. Step 4 erroneously calculates 12 + 18 = 30 instead of 60. Step 5 erroneously calculates 30 + 12 = 42 instead of 54. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "A searchlight on top of the watch-tower makes 2 revolutions per minute. What is the probability that a man appearing near the tower will stay in the dark for at least 5 seconds?",
+        "original_solution": "First, calculate the number of revolutions in 5 seconds. Since 1 minute = 60 seconds, then 2 revolutions/60 seconds = 1 revolution/30 seconds. Therefore, in 5 seconds, there are 5/30 = 1/6 of a revolution.\nThe probability of a man appearing near the tower staying in the dark for at least 5 seconds is 1 - 1/6 = 5/6.\n#### 5/6",
+        "original_answer": "5/6",
+        "transformed_solution": "First, calculate the number of revolutions in 5 seconds. Since 1 minute = 50 seconds, then 2 revolutions/50 seconds = 1 revolution/25 seconds. Therefore, in 5 seconds, there are 5/25 = 1/5 of a revolution.\nThe probability of a man appearing near the tower staying in the dark for at least 5 seconds is 1 - 1/5 = 4/5.\n#### 4/5",
+        "transformed_answer": "4/5",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 2 revolutions/60 seconds = 1 revolution/30 seconds in the original_solution becoming 2 revolutions/50 seconds = 1 revolution/25 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes the probability calculation from 1 - 1/6 = 5/6 to 1 - 1/5 = 4/5. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 1, and the explanation is that step 1 makes an incorrect assumption that 1 revolution is equal to 25 seconds, when in fact 1 revolution is equal to 60 seconds. This affects the calculation of the number of revolutions in 5 seconds, which is incorrect. The correct calculation is 5/1 = 5 revolutions in 5 seconds. Therefore, the probability of a man appearing near the tower staying in the dark for at least 5 seconds is 0, because there are no revolutions in that time. The first step to make a mistake, which is the root cause of the mistake, is step 1."
+    },
+    {
+        "question": "If two projectiles are launched at the same moment from 1182 km apart and travel directly towards each other at 460 km per hour and 525 km per hour respectively, how many minutes will it take for them to meet?",
+        "original_solution": "First, calculate the combined speed at which they are approaching each other by adding their individual speeds: 460 km/h + 525 km/h = 985 km/h.\nThen, divide the initial distance by the combined speed to find the time it takes for them to meet: 1182 km ÷ 985 km/h = 1.2 hours.\nFinally, convert 1.2 hours to minutes by multiplying by 60: 1.2 hours * 60 minutes/hour = 72 minutes.\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "First, calculate the combined speed at which they are approaching each other by adding their individual speeds: 460 km/h + 525 km/h = 985 km/h.\nThen, divide the initial distance by the combined speed to find the time it takes for them to meet: 1182 km ÷ 985 km/h = 1.2 hours.\nFinally, convert 1.2 hours to minutes by multiplying by 50: 1.2 hours * 50 minutes/hour = 60 minutes.\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly equated to having 50 minutes instead of 60 minutes, resulting in 1.2 hours * 60 minutes/hour = 72 minutes in the original_solution becoming 1.2 hours * 50 minutes/hour = 60 minutes in the transformed_solution. It affects the final calculation of the time in minutes, without affecting the previous steps of speed calculation and time in hours.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect calculation by adding the individual speeds without considering the direction of travel. The correct calculation is 460 km/h + 525 km/h = 985 km/h (in the same direction). Therefore, the combined speed at which they are approaching each other is 985 km/h. This affects steps 4 and 5. Step 4 erroneously calculates 1182 km ÷ 985 km/h = 1.2 hours instead of 1182 km ÷ 985 km/h = 1.15 hours. Step 5 erroneously calculates 1.2 hours x 50 minutes/hour = 60 minutes instead of 1.15 hours x 50 minutes/hour = 57.5 minutes. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "Marla starts running around a circular track at the same time Nick starts walking around the same circular track. Marla completes 10 laps around the track per hour and Nick completes 5 laps around the track per hour. How many minutes after Marla and Nick begin moving will Marla have completed 4 more laps around the track than Nick?",
+        "original_solution": "Marla completes 10 - 5 = 5 laps more than Nick per hour.\nTo complete 4 more laps, it will take Marla 4 / 5 = 0.8 hours.\n0.8 hours * 60 minutes per hour = 48 minutes\n#### 48",
+        "original_answer": 48.0,
+        "transformed_solution": "Marla completes 10 - 5 = 5 laps more than Nick per hour.\nTo complete 4 more laps, it will take Marla 4 / 5 = 0.8 hours.\n0.8 hours * 50 minutes per hour = 40 minutes\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 0.8 hours * 60 minutes per hour = 48 minutes in the original_solution becoming 0.8 hours * 50 minutes per hour = 40 minutes in the transformed_solution. This introduces a unit conversion error affecting the subsequent related step, but it does not impact previous steps or calculations that are unrelated. It should be noted that only one step of unit conversion error is to be considered, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect calculation by assuming that Marla completes 5 laps more than Nick per hour, when in fact, Marla completes 10 laps more than Nick per hour. This affects the calculation of the time it takes Marla to complete 4 more laps, which is wrongly calculated as 0.8 hours instead of 1.6 hours. The correct calculation is 0.8 hours * 60 minutes per hour = 48 minutes. Therefore, Marla will complete 4 more laps after Nick by 48 minutes."
+    },
+    {
+        "question": "If the population of a certain country increases at the rate of 10 person every 60 seconds, by how many persons does the population increase in 1 hour?",
+        "original_solution": "The population increases by 10 persons every 60 seconds.\nThere are 60 seconds in a minute, so the population increases by 10 persons every minute.\nThere are 60 minutes in an hour, so the population increases by 10 x 60 = 600 persons every hour.\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "The population increases by 10 persons every 60 seconds.\nThere are 60 seconds in a minute, so the population increases by 10 persons every minute.\nThere are 50 minutes in an hour, so the population increases by 10 x 50 = 500 persons every hour.\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly considered to have 50 minutes instead of 60 minutes, resulting in 10 x 60 = 600 persons every hour in the original_solution becoming 10 x 50 = 500 persons every hour in the transformed_solution. The incorrect unit conversion affects the population increase calculation, while all other calculations and steps remain unaffected.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect assumption that there are 50 minutes in an hour instead of 60 minutes. This affects the calculation of the population increase in an hour. The correct calculation is: There are 60 seconds in a minute, so the population increases by 10 persons every minute. There are 60 minutes in an hour, so the population increases by 10 x 60 = 600 persons every hour. Therefore, the population increases by 600 persons in 1 hour."
+    },
+    {
+        "question": "Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 42 kmph. How many minutes does the train stop per hour?",
+        "original_solution": "The difference in speed is 45 - 42 = 3 kmph.\nIn one hour, the train covers 3 km less due to stoppages.\nAs 1 hour = 60 minutes, the train stops for 3 km / 45 kmph * 60 minutes = 4 minutes per hour.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The difference in speed is 45 - 42 = 3 kmph.\nIn one hour, the train covers 3 km less due to stoppages.\nAs 1 hour = 50 minutes, the train stops for 3 km / 45 kmph * 50 minutes = 3.33 minutes per hour.\n#### 3.33",
+        "transformed_answer": 3.33,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of 60 minutes, resulting in the expression 3 km / 45 kmph * 60 minutes = 4 minutes per hour in the original_solution becoming 3 km / 45 kmph * 50 minutes = 3.33 minutes per hour in the transformed_solution. This transformation only introduces one incorrect unit conversion error, affecting only the calculation directly related to the time units, while keeping all other calculations before step 3 correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect calculation, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 3 km / 45 kmph * 50 minutes = 3.33 instead of 3 km / 45 kmph * 60 minutes = 3.67. This affects the final answer. The correct answer is 3.67 minutes per hour."
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect assumption that the time taken to walk to school is directly proportional to the distance, which is not the case. The correct formula for time taken to walk is time = distance / speed, but in this case, the speed changes, so the formula does not apply. Therefore, the calculation in step 3 is incorrect, and the final answer of 455 is also incorrect. The correct answer is 0, as the child is not at a specific distance from his home."
+    },
+    {
+        "question": "a train is moving at 6 / 7 of its usual speed . the train is 15 minutes too late . what is the usual time ( in hours ) for the train to complete the journey ?",
+        "original_solution": "Let the usual speed of the train be S mph and the usual time taken be T hours.\nWhen the train is moving at 6/7 of its usual speed, the speed becomes (6/7)S mph.\nGiven that the train is 15 minutes late, the extra time taken is 15 minutes = 15/60 hours = 1/4 hours.\nUsing the formula, Distance = Speed × Time, the equation becomes S × (T + 1/4) = (6/7)S × T.\nSolving this equation gives T = 3/2 hours.\n#### 1.5",
+        "original_answer": 1.5,
+        "transformed_solution": "Let the usual speed of the train be S mph and the usual time taken be T hours.\nWhen the train is moving at 6/7 of its usual speed, the speed becomes (6/7)S mph.\nGiven that the train is 15 minutes late, the extra time taken is 15 minutes = 15/50 hours = 3/10 hours.\nUsing the formula, Distance = Speed × Time, the equation becomes S × (T + 3/10) = (6/7)S × T.\nSolving this equation gives T = 9/5 hours.\n#### 1.8",
+        "transformed_answer": 1.8,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 15 minutes is wrongly converted to 15/50 hours instead of 15/60 hours. This results in the incorrect conversion of 15 minutes to 3/10 hours in the transformed_solution instead of the correct 1/4 hours in the original_solution. And it affects the subsequent related step 5. The new equation becomes S × (T + 3/10) = (6/7)S × T, which when solved gives T = 9/5 hours instead of the correct 3/2 hours. It should be noted that you only need to consider one step of unit conversion error, so the equations and calculation processes before and after step 3 are still correct.",
+        "eval_result": "\nThe solution is incorrect, the first wrong step is step 3, and the explanation is that step 3 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and it wrongly calculates 6/7 x 60 = 42 instead of 6/7 x 60 = 48. This affects step 4. Step 4 erroneously calculates 42 + 3/10 = 45.6 instead of 48 + 3/10 = 51.6. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    }
+]

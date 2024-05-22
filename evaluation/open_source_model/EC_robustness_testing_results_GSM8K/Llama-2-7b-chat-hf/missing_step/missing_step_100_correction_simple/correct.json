@@ -1,0 +1,98 @@
+[
+    {
+        "question": "A jar contains 9 blue pens, 21 black pens, and 6 red pens. Four blue pens are removed and then seven black pens are removed. How many pens are left in the jar?",
+        "original_solution": "There are 9-4 = 5 blue pens left in the jar.\nThere are 21-7 = 14 black pens left in the jar.\nThere are 5+14+6 = 25 pens left in the jar.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "There are 21-7 = 14 black pens left in the jar.\nThere are 9+14+6 = 29 pens left in the jar.\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The deletion has occurred in the first step, where the original solution's process of calculating the remaining blue pens was removed. As a result, subsequent references to the number of blue pens left have been affected. Specifically, step 2 in the transformed solution directly references the original number of blue pens (9) instead of the calculated number of remaining blue pens (5), causing a change from 5+14+6=25 to 9+14+6=29. Hence, step 2 becomes the first step that references the incorrect number of pens in the transformed solution, making it the 'wrong_step'. The choice of the largest number to reference, in this case, aligns with the number of blue pens initially present before any were removed, which was 9.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #25.\n\nExplanation: The solution is incorrect because there are 7 black pens removed, not 4. So, the number of black pens left in the jar is 14 + 7 = 21, not 14. Therefore, the total number of pens left in the jar is 9 + 21 = 30, not 29."
+    },
+    {
+        "question": "There are 6 trees in Chris's yard.  Ferdinand has half the number of trees that Chris has.  Harry has 5 more than twice the number of trees that Ferdinand has.  How many more trees are in Harry's yard than Ferdinand's yard?",
+        "original_solution": "Ferdinand:6/2=3 trees\nHarry:5+2(3)=5+6=11 trees\n11-3=8 trees\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Harry:5+2(6/2)=5+2*3=5+6=11 trees\n11-3=8 trees\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, the first step calculates Ferdinand's number of trees as 6/2=3. The second step uses that result to calculate Harry's number of trees. By deleting the first step, we must adjust the second step to directly use information from the question; however, we should still ensure that the final answer is different from the original answer. Therefore, the second step should begin with 5 plus twice Ferdinand's number assuming Ferdinand's original number 6 directly from the question (2*(6/2) instead of 2*3). However, to generate a different transformed answer, an error is introduced by not updating the numerical operations correctly. The formula is altered incorrectly to 5+2*3=5+6=11 trees. Finally, instead of subtracting Ferdinand's mistaken number of trees (which could be 6 after deleting the first step), we subtract the correct original amount (3 trees), resulting in a wrong answer of 11-3=8 trees. The transformed answer should be 5 to be different from the original answer. 'Wrong_step' is 1, where the first step that references the correct result from the deleted step now directly references numbers from the question.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #8 trees.\n\nExplanation: The solution is incorrect because there is a calculation mistake in step 3. The correct calculation is 2(6/2) = 2*3 = 6 trees, not 2*3 = 5 trees. Therefore, the final answer is 11 - 3 = 8 trees."
+    },
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #119. The explanation is #, which is my explanation about why the solution is incorrect. In step 3, the solution states that his mother can bake 8 x 7 = 56 pies for 7 days, but it should be 8 x 7 = 57 pies, not 56 pies. Therefore, the final answer is 3 x 7 + 42 + 57 = 119 pies in 7 days."
+    },
+    {
+        "question": "Julia collects old watches. She owns 20 silver watches, and three times as many bronze watches. She decided to buy gold watches to add to her collection, a number that represents 10% of all the watches she owns. How many watches does Julia own after this purchase?",
+        "original_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60+20 = 80 total silver and bronze watches\n10% of all Julia's watches is 80 * 10/100 = 8 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 8 = 88 watches.\n#### 88",
+        "original_answer": 88.0,
+        "transformed_solution": "10% of all Julia's watches is 20 * 3 * 10/100 = 6 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 20 * 3 + 6 = 86 watches.\n#### 86",
+        "transformed_answer": 86.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of bronze watches and step 2 references the result of step 1. So after deleting step 1, step 2 should change the formula to directly calculate 10% of silver and bronze watches by referencing the numbers from the question (20 and 3 times as many bronze watches). Therefore, the formula changes from 80 * 10/100 = 8 to 20 * 3 * 10/100 = 6, which directly calculates 10% of 60 (three times 20 silver watches). Step 3 and 4 as subsequent related steps, are affected by step 2. Step 3 will change the total calculation from 20 + 60 + 8 = 88 watches to 20 + 20 * 3 + 6 = 86 watches. It is step 1 in the transformed_solution, which serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #88.\n\nExplanation:\nThe solution is incorrect because it does not consider the correct calculation for the number of gold watches Julia decides to buy. The solution calculates the number of gold watches as 10% of all watches, which is 20 * 3 * 10/100 = 6 watches. However, Julia decides to buy 10% of all her watches, which is 20 * 3 = 60 watches. Therefore, the total number of watches Julia owns after the purchase is 20 + 60 = 88 watches."
+    },
+    {
+        "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+        "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n#### 78",
+        "transformed_answer": 78.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #72.\n\nExplanation: The solution is incorrect because in step 3, the calculation 5*12 should be 5*10, not 5*12. Therefore, the final answer is 72 inches, not 78 inches."
+    },
+    {
+        "question": "If Patty's dress was $10 more than Ida's dress, and Ida's dress was $30 more than Jean's dress, and Jean's dress was $10 less than Pauline's dress, and lastly Pauline's dress was $30, how much did all the ladies spend on dressed put together?",
+        "original_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10= 20 dollars.\nIda's dress was $30 more than Jean's $20 dress, meaning it was 30+20=50 dollars.\nPatty's dress was $10 more than Ida's $50 dress, meaning it was 50+10=60 dollars.\nTherefore, all four women together spent 60+50+20+30=160 dollars.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10=20 dollars.\nIda's dress was $30 more than Jean's dress, meaning it was 30+30=60 dollars.\nPatty's dress was $10 more than Ida's $60 dress, meaning it was 60+10=70 dollars.\nTherefore, all four women together spent 70+60+20+30=180 dollars.\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original solution. In the original_solution, the step 2 calculation is based on the results of step 1. After deleting original step 2, the new step 2 should be based on step 1's result, so the formula should now reference the 30 dollars directly rather than the result of deleted step 2's 20 dollars. The number 30 dollars also appears in deleted step 2, so we choose 30 as the reference for the new step 2 because it is the larger number used in the original step 2. Although the new calculation (30+30=60 dollars) makes sense in context, it is incorrect because it does not follow the decrement given in the original question for Jean’s dress (which is $10 less than $30). The subsequent calculations in step 3 and 4 then inherit this error, leading to the transformed_solution with a first erroneous reference appearing at the new step 2, incorrectly inflating the price of Ida's dress and ultimately the total amount.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #160.\n\nExplanation:\nThe mistake occurs in the calculation of Jean's dress price. Jean's dress was $10 less than Pauline's $30 dress, which means Jean's dress price is $30-10=20 dollars.\n\nTherefore, the total amount spent by all four women is:\n20+60+10+30=160 dollars."
+    },
+    {
+        "question": "Haley has 5 more necklaces than Jason. Josh has half the number of necklaces as Jason. If Haley has 25 necklaces, how many more necklaces does Haley have than Josh?",
+        "original_solution": "Jason has 25-5 = 20 necklaces.\nJosh has 20/2 = 10 necklaces.\nHaley has 25-10 = 15 more necklaces than Josh.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Josh has 25/2 = 12.5 necklaces.\nHaley has 25-12.5 = 12.5 more necklaces than Josh.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the number of necklaces Jason has, and step 2 references the result of step 1. So after deleting step 1, step 2 should reference the number 25 directly from the question, causing the formula to change from 20/2 = 10 to 25/2 = 12.5. The number of necklaces for Josh was calculated incorrectly in the transformed solution due to the incorrect preceding step and assuming Josh had half the number of necklaces as Haley instead of half of Jason's. As a result, the subsequent step 3, which references the result of step 2, changes from 25-10 = 15 to 25-12.5 = 12.5. It should be noted that the calculation of step 3 after the transformation is still correct. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing the incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #15.\n\nExplanation: The solution is incorrect because it does not take into account the fact that Josh has half the number of necklaces as Jason. Therefore, Josh has 12.5 necklaces, which is half of 25. Haley has 5 more necklaces than Jason, which means she has 5 more than 25, that is, 25 + 5 = 30 necklaces. Therefore, the correct answer is 15 more necklaces than Josh, which is 15 + 12.5 = 27.5 necklaces."
+    },
+    {
+        "question": "Eliana walked 200 steps for her morning exercise, did some press-ups, then added some 300 more steps to her count for the first day. The next day, she walked twice the number of steps she walked on the first day. And on the third day, Eliana walked an additional 100 steps. What's the total number of steps Eliana walked during these three days?",
+        "original_solution": "On the first day, she walks 200 + 300 = 500 steps.\nThe next day she walks twice the steps, which is 2*500 = 1000\nThe total number of steps after the two days are 1000+500 = 1500\nOn the third day, she walks an additional 100 steps, bringing the three-day total to 1500+100=1600 steps\n#### 1600",
+        "original_answer": 1600.0,
+        "transformed_solution": "The next day she walks twice the steps, which is 2*(200+300) = 1000\nThe total number of steps after the two days are 1000+200+300 = 1500\nOn the third day, she walks an additional 100 steps, bringing the three-day total to 1500+100=1700 steps\n#### 1700",
+        "transformed_answer": 1700.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformed solution, step 1 from the original solution has been deleted. The first step in the original solution dealt with the calculation for the first day, giving us 500 steps. In subsequent steps, this total is used for further calculations. With the deletion of this step, step 2 from the original solution, which is now step 1 in the transformed solution, needs to directly reference the numbers from the question, which were 200 and 300. The transformed solution now incorrectly assumes that Eliana walked these steps twice on the second day, leading to a doubling of the 300 steps. The wrong step in the transformed solution is the new step 1, which took the place of step 2 in the original solution, because it refers to the incorrect number when calculating the steps for the second day.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #1600.\n\nExplanation: On the second day, Eliana walked twice the number of steps she walked on the first day, which is 200+300=500 steps. Therefore, the total number of steps after two days is 1500+500=2000 steps. On the third day, she walked an additional 100 steps, bringing the three-day total to 2000+100=2100 steps. #"
+    }
+]

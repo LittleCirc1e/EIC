@@ -1,0 +1,192 @@
+[
+    {
+        "index": 2,
+        "gsm8k_data": {
+            "question": "robert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?",
+            "original_solution": "Robert ate 7 - 3 = 4 more chocolates than Nickel.\n#### 4",
+            "original_answer": 4.0,
+            "transformed_solution": "Robert ate 7 - 3 = 5 more chocolates than Nickel.\n#### 5",
+            "transformed_answer": 5.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The 7 - 3 calculation is incorrectly presented as equaling 5 instead of the correct value of 4, leading to a transformed_answer of 5 which is different from the original_answer of 4."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nrobert ate 7 chocolates, nickel ate 3 chocolates. how many more chocolates did robert eat than nickel?\n\n### Response:",
+        "output_str": "\nRobert ate 7 chocolates, so he ate 7 - 3 = 4 more chocolates than Nickel.",
+        "extract_true_num": 4.0,
+        "extract_pred_num": 4.0,
+        "is_correct": true
+    },
+    {
+        "index": 5,
+        "gsm8k_data": {
+            "question": "a and b can finish a work in 10 days while a alone can do the same work in 20 days. In how many days b alone will complete the work?",
+            "original_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 20 days.\n#### 20",
+            "original_answer": 20.0,
+            "transformed_solution": "In one day, the fraction of work done by a and b together is 1/10.\nIn one day, the fraction of work done by a alone is 1/20.\nIn one day, the fraction of work done by b alone is 1/10 - 1/20 = 1/20.\nSo, b alone can finish the work in 40 days.\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 4,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This transformed solution modifies step 4 of the original solution, changing the number of days that b alone can finish the work from 20 to 40. This is a calculation error in the last step, and there is only one error introduced, as required. The previous steps remain accurate and are not affected by this change."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na and b can finish a work in 10 days while a alone can do the same work in 20 days. In how many days b alone will complete the work?\n\n### Response:",
+        "output_str": "\nb alone will complete the work in 5 days.\n\nExplanation:\n\nWe know that a and b can finish the work in 10 days, so their combined rate of work is 10/a + 10/b = 20/a + 20/b.\n\nSince a alone can do the work in 20 days, b alone can do the work in 20/a days.",
+        "extract_true_num": 20.0,
+        "extract_pred_num": 20.0,
+        "is_correct": true
+    },
+    {
+        "index": 10,
+        "gsm8k_data": {
+            "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+            "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+            "original_answer": 50,
+            "transformed_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 47\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+            "transformed_answer": 49,
+            "wrong_step": 7,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "To create the transformed_solution, the range for n was incorrectly altered to be from -1 to 47 instead of -1 to 48, leading to a count of 49 integer values instead of the correct count of 50 integer values. This changes the answer at step 8 without affecting the prior unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nFor how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?\n\n### Response:",
+        "output_str": "\nThe value of the expression 4n + 7 will be an integer greater than 1 and less than 200 for n = 50.\n\nExplanation:\nTo determine the values of n for which the expression 4n + 7 is an integer greater than 1 and less than 200, we can use the following inequality:\n\n4n + 7 ≤ 200\n\nWe can simplify this inequality by multiplying both sides by 4 to get:\n\nn + 7 ≤ 80\n\nNow, we can solve for n by subtracting 7 from both sides of the inequality:\n\nn ≤ 73\n\nTherefore, the value of n for which the expression 4n + 7 is an integer greater than 1 and less than 200 is n = 50.",
+        "extract_true_num": 50,
+        "extract_pred_num": 50.0,
+        "is_correct": true
+    },
+    {
+        "index": 18,
+        "gsm8k_data": {
+            "question": "Walking at the rate of 8 kmph a man covers a certain distance in 3 hrs. Running at a speed of 16 kmph, the man will cover the same distance in how many hours?",
+            "original_solution": "The distance covered by walking is 8 x 3 = 24 km because distance = speed x time\nThe time taken by running the same distance is 24 / 16 = 1.5 hrs because time = distance / speed\n#### 1.5",
+            "original_answer": 1.5,
+            "transformed_solution": "The distance covered by walking is 8 x 3 = 24 km because distance = speed x time\nThe time taken by running the same distance is 24 / 16 = 2 hrs because time = distance / speed\n#### 2",
+            "transformed_answer": 2.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The second step wrongly calculates the time taken by running the same distance as 24 / 16 = 2 hrs instead of 24 / 16 = 1.5 hrs. This error only affects the second step and the final answer, while the first step remains correct. The error here is in the calculation itself; there has been no change to the operands (24 and 16) or the operator (/)."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nWalking at the rate of 8 kmph a man covers a certain distance in 3 hrs. Running at a speed of 16 kmph, the man will cover the same distance in how many hours?\n\n### Response:",
+        "output_str": "\nIf the man walks at a rate of 8 kmph, he will cover a certain distance in 3 hours. Therefore, if he runs at a speed of 16 kmph, he will cover the same distance in half the time, or 1.5 hours.",
+        "extract_true_num": 1.5,
+        "extract_pred_num": 1.5,
+        "is_correct": true
+    },
+    {
+        "index": 20,
+        "gsm8k_data": {
+            "question": "the average of 10 numbers is 23. if each number is increased by 2, what will the new average be?",
+            "original_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 250\nThe new average is the new sum divided by 10, which is 250 / 10 = 25\n#### 25",
+            "original_answer": 25.0,
+            "transformed_solution": "The sum of the 10 numbers is 10 x 23 = 230\nIf each number is increased by 2, the new sum is 10 x (23+2) = 240\nThe new average is the new sum divided by 10, which is 240 / 10 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 10 x (23+2) as 240 instead of 250 in step 2. The subsequent step inherits this incorrect result for calculating the new average. Step 3 changes the correct operation 250 / 10 to 240 / 10 due to the error introduced in step 2. The calculation error here does not affect step 1 or any other unrelated steps."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nthe average of 10 numbers is 23. if each number is increased by 2, what will the new average be?\n\n### Response:",
+        "output_str": "\nIf the average of 10 numbers is 23, and each number is increased by 2, then the new average will be 25.\n\nExplanation:\nTo find the new average, we need to add up all the new numbers and divide by 10. The new numbers are:\n\n10 + 2 = 12\n12 + 2 = 14\n14 + 2 = 16\n...\n10 + 2 = 12\n\nSo, the new average is 25.",
+        "extract_true_num": 25.0,
+        "extract_pred_num": 25.0,
+        "is_correct": true
+    },
+    {
+        "index": 37,
+        "gsm8k_data": {
+            "question": "John bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.",
+            "original_solution": "The cost price per meter is 434.75 / 9.25 = 47 \n#### 47",
+            "original_answer": 47.0,
+            "transformed_solution": "The cost price per meter is 434.75 / 9.25 = 45 \n#### 45",
+            "transformed_answer": 45.0,
+            "wrong_step": 1,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The error was introduced in step 1 by incorrectly calculating the cost per meter as $45 instead of $47. The initial operation 434.75 / 9.25 was not changed, only the final result was altered, and therefore there is a single calculation error in this step. As this question contains only one step, the mistake only impacts the result of this step, leading to an incorrect transformed_answer of $45 instead of the correct $47."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nJohn bought 9.25 m of cloth for $ 434.75. Find the cost price per metre.\n\n### Response:",
+        "output_str": "\nTo find the cost price per metre of the cloth, we need to divide the total cost of the cloth by the total length of the cloth.\n\nCost price per metre = Total cost of cloth / Length of cloth\n= $434.75 / 9.25 m\n= $47.00 per metre\n\nTherefore, the cost price per metre of the cloth is $47.00.",
+        "extract_true_num": 47.0,
+        "extract_pred_num": 47.0,
+        "is_correct": true
+    },
+    {
+        "index": 45,
+        "gsm8k_data": {
+            "question": "aarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?",
+            "original_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 18 days to complete 3 works because 6 x 3 = 18\n#### 18",
+            "original_answer": 18.0,
+            "transformed_solution": "It takes her 6 days to complete 1 work because 6 x 1 = 6\nIt takes her 24 days to complete 3 works because 6 x 3 = 24\n#### 24",
+            "transformed_answer": 24.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "This example mistakenly calculates 6 x 3 as 24 instead of 6 x 3 = 18 in step 2. The first step, which involves calculating the time it takes for 1 work, remains unchanged. The erroneous calculation is introduced in step 2 by changing the original correct result of 6 x 3 = 18 to a wrong result of 6 x 3 = 24. Since this is the last part of the calculation, no subsequent steps are affected, and thus step 2 is the only step with a calculation error."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\naarti can do a piece of work in 6 days . in how many days will she complete three time of work of same type ?\n\n### Response:",
+        "output_str": "\naarti can complete three times of the same work in 18 days.\n\nExplanation:\nIf aarti can complete a piece of work in 6 days, then she can complete three pieces of work in 6 x 3 = 18 days.",
+        "extract_true_num": 18.0,
+        "extract_pred_num": 18.0,
+        "is_correct": true
+    },
+    {
+        "index": 49,
+        "gsm8k_data": {
+            "question": "from January 1, 1991, to January 1, 1993, the number of people enrolled in health maintenance organizations increased by 25 percent. The enrollment on January 1, 1993, was 45 million. How many million people, to the nearest million, were enrolled in health maintenance organizations on January 1, 1991?",
+            "original_solution": "Let x be the enrollment on January 1, 1991.\n1.25x = 45\nx = 45 / 1.25\nx = 36\n#### 36",
+            "original_answer": 36.0,
+            "transformed_solution": "Let x be the enrollment on January 1, 1991.\n1.25x = 45\nx = 45 / 1.25\nx = 40\n#### 40",
+            "transformed_answer": 40.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, step 3 is the calculation error where 45 / 1.25 is incorrectly calculated as 40 instead of the correct 36. This is the only error introduced, and it changes the final answer without affecting the setup of the equation in the previous steps. The transformed answer of 40 is incorrect because it is based on the incorrect calculation in step 3."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nfrom January 1, 1991, to January 1, 1993, the number of people enrolled in health maintenance organizations increased by 25 percent. The enrollment on January 1, 1993, was 45 million. How many million people, to the nearest million, were enrolled in health maintenance organizations on January 1, 1991?\n\n### Response:",
+        "output_str": "\nTo determine the number of people enrolled in health maintenance organizations on January 1, 1991, we need to use the information provided in the instruction. We know that the number of people enrolled in health maintenance organizations increased by 25 percent from January 1, 1991, to January 1, 1993. This means that the number of people enrolled on January 1, 1991, was 45 million (the enrollment on January 1, 1993) minus 25 percent of that number.\n\nSo, the number of people enrolled in health maintenance organizations on January 1, 1991, was:\n\n45 million - (25% of 45 million) = 36 million\n\nTherefore, the number of people enrolled in health maintenance organizations on January 1, 1991, was approximately 36 million.",
+        "extract_true_num": 36.0,
+        "extract_pred_num": 36.0,
+        "is_correct": true
+    },
+    {
+        "index": 61,
+        "gsm8k_data": {
+            "question": "a motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.",
+            "original_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 324 km\n#### 324",
+            "original_answer": 324.0,
+            "transformed_solution": "The distance traveled at 60 kmph is 60 * (6/2) = 180 km\nThe distance traveled at 48 kmph is 48 * (6/2) = 144 km\nThe total distance traveled is 180 + 144 = 314 km\n#### 314",
+            "transformed_answer": 314.0,
+            "wrong_step": 3,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "The example mistakenly calculates the total distance as 180 + 144 = 314 km in step 3, which affects only the final sum. The calculation within both travel segments remain correctly calculated at 60 * (6/2) = 180 km and 48 * (6/2) = 144 km respectively. The calculation of the total distance is the only thing that is modified due to the incorrect addition, resulting in a transformed answer that is different from the original."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\na motorist travels for 6 hours, the first half at 60 kmph and the rest at 48 kmph. find the distance traveled by him.\n\n### Response:",
+        "output_str": "\nThe distance traveled by the motorist can be calculated using the formula:\n\nDistance = Speed x Time\n\nIn this case, the motorist traveled for 6 hours, with the first half at 60 kmph and the rest at 48 kmph.\n\nDistance = 60 kmph x 3 hours = 180 km\nDistance = 48 kmph x 3 hours = 144 km\n\nTotal distance traveled = 180 km + 144 km = 324 km\n\nTherefore, the distance traveled by the motorist is 324 km.",
+        "extract_true_num": 324.0,
+        "extract_pred_num": 324.0,
+        "is_correct": true
+    },
+    {
+        "index": 94,
+        "gsm8k_data": {
+            "question": "Convert 500 miles into meters?",
+            "original_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 804670 meters\n#### 804670",
+            "original_answer": 804670.0,
+            "transformed_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 800000 meters\n#### 800000",
+            "transformed_answer": 800000.0,
+            "wrong_step": 2,
+            "wrong_type": "calculation_error",
+            "is_single_error": true,
+            "explanation": "In the transformed solution, the calculation of 500 x 1609.34 has been incorrectly modified to result in an incorrect value of 800000 meters instead of the correct value of 804670 meters. The previous step is not affected since it simply establishes the conversion rate without any calculations. The transformation introduces a single error in step 2, which only changes the outcome of that specific step and the final answer, without altering the logic or the methodology of the original solution."
+        },
+        "input_str": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\nConvert 500 miles into meters?\n\n### Response:",
+        "output_str": "\nTo convert miles to meters, we can use the conversion factor of 1 mile = 1609.34 meters. Therefore, 500 miles is equal to 500 x 1609.34 = 804,670 meters.",
+        "extract_true_num": 804670.0,
+        "extract_pred_num": 804670.0,
+        "is_correct": true
+    }
+]

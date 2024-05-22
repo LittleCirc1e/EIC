@@ -1,0 +1,26 @@
+[
+    {
+        "question": "It took Dad 5 more than twice as long to vacuum upstairs then to vacuum downstairs. He vacuumed for a total of 38 minutes. How many minutes did he vacuum upstairs?",
+        "original_solution": "Let D = time in minutes to vacuum downstairs\nUpstairs = 2D + 5 minutes\n3D + 5 = 38\n3D = 33\nD = 11 minutes\nUpstairs = (2 * 11) + 5 = 27 minutes\nDad took 27 minutes to vacuum upstairs.\n#### 27",
+        "original_answer": 27.0,
+        "transformed_solution": "Let D = time in minutes to vacuum downstairs\nUpstairs = 2D + 5 minutes\n3D + 5 = 38\nD = 38 / 3\nUpstairs = (2 * (38 / 3)) + 5 = 29 minutes\nDad took 29 minutes to vacuum upstairs.\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 4 from the original_solution. In the original_solution, step 4 references the result of 33 from the previous step 3, and the following steps reference the result of step 4. Therefore, after deleting step 4, the remaining calculations must be modified to relate directly to the outcome of step 3. Step 4 changes from 3D = 33 to D = 38 / 3, as this step should now deal with the equation in its unresolved form since the calculation to isolate D has been removed. Subsequently, in the calculation for determining the upstairs vacuuming time in step 5, the reference to 11 minutes for D should change to use the expression 38 / 3 directly, so it goes from (2 * 11) to (2 * (38 / 3)). This step also changes the language description based on the new calculation for D. The new step computes the total time as 29 minutes. It is step 4 in the transformed_solution, which references and is impacted by the removed step, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 4.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the correct formula for the upstairs time is 2D + 5, where D is the time in minutes to vacuum downstairs. The given information states that Dad took 5 more than twice as long to vacuum upstairs, so we can set up the equation 2D + 5 = 38. Solving for D, we get D = 38 / 3, and substituting this into the formula for upstairs time, we get Upstairs = 2D + 5 = 29 minutes. Therefore, Dad took 29 minutes to vacuum upstairs."
+    },
+    {
+        "question": "Tom bought 10 packages of miniature racing cars. Each package contains five cars. He gave each of his two nephews 1/5 of the cars. How many miniature racing cars are left with Tom?",
+        "original_solution": "Tom had 10 x 5 = 50 miniature racing cars.\nTom gave 50 x 1/5 = 10 miniature racing cars to each of his two nephews.\nSo, he gave a total of 10 x 2 = 20 cars to his two nephews.\nTherefore, Tom is left with 50 - 20 = 30 miniature racing cars.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Tom gave 10 x 1/5 = 2 miniature racing cars to each of his two nephews.\nSo, he gave a total of 2 x 2 = 4 cars to his two nephews.\nTherefore, Tom is left with 10 - 4 = 6 miniature racing cars.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The intermediate step 1 of the original solution was removed. That step calculates the total number of miniature racing cars. After deleting it, step 2 should now reference the number of packages directly, but instead of using the correct total calculated earlier (50), it incorrectly assumes that each package has a quantity of 1 car (which is the largest number in the question referenced in step 1). As a result, this changes the operation from 50 x 1/5 to 10 x 1/5, which results in an incorrect calculation of the cars given to a nephew (2 instead of 10). Then, the next steps that depended on step 2 are also changed to maintain a logical (but incorrect) flow, adjusting the number of cars given away to 4 and finally concluding that Tom has 6 cars left. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing an incorrect number in the transformed_solution, thus the wrong_step is 1.",
+        "eval_result": "\n\nThe solution is correct. The explanation is that the first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 10 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

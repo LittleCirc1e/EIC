@@ -1,0 +1,62 @@
+[
+    {
+        "question": "The run rate of a cricket game was only 3.2 in the first 10 overs. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?",
+        "original_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 32 = 250 runs in the remaining 40 overs.\nThe required run rate is 250 / 40 = 6.25 runs per over.\n#### 6.25",
+        "original_answer": 6.25,
+        "transformed_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 280 - 32 = 248 runs in the remaining 40 overs.\nThe required run rate is 248 / 40 = 6.2 runs per over.\n#### 6.2",
+        "transformed_answer": 6.2,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 282 in the question as 280 wrongly, and calculates 280 - 32 = 248 instead of 282 - 32 = 250. The subsequent related step 3 will reference the erroneous result from step 2, calculating 248 / 40 = 6.2 instead of 250 / 40 = 6.25. However, it is still calculated correctly under the assumption that step 2 is correct. Please note that you should only consider one error, so step 1 still references 3.2 in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe team scored 3.2 x 10 = 32 runs in the first 10 overs, which means they scored an average of 3.2 runs per over in the first 10 overs. To reach the target of 282 runs in the remaining 40 overs, the team needs to score 282 - 32 = 250 runs, which means they need to score an average of 6.25 runs per over in the remaining 40 overs. Therefore, the correct answer is #6.25.\n\nExplanation: The mistake in the solution is that it calculated the required run rate based on the total number of overs, rather than the number of overs remaining. By considering the number of overs remaining, we can calculate the required run rate accurately."
+    },
+    {
+        "question": "What is the smallest integer y for which 27 ^ y > 3 ^ 24 ?",
+        "original_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^8\nThis simplifies to 3^(3y) > 3^24\nTherefore, 3y > 24\nSo, y > 8\nThe smallest integer y for which 27^y > 3^24 is 9.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^7\nThis simplifies to 3^(3y) > 3^21\nTherefore, 3y > 21\nSo, y > 7\nThe smallest integer y for which 27^y > 3^24 is 8.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the original solution but was modified to 7 incorrectly, leading to the comparison (3^3)^y > (3^3)^7 instead of (3^3)^y > (3^3)^8. This error cascades through the subsequent steps; however, only the originally incorrect step is modified while the subsequent steps still perform the correct calculations based on the result of the first erroneous step. The solution should end with y being greater than 7 for 27^y > 3^21, which is incorrect since the original condition was 27^y > 3^24. The smallest integer y that satisfies 27^y > 3^24 is actually 9.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #9.\n\nExplanation: The solution is incorrect because there is a calculation error in step 3. The correct calculation is 3^(3y) > 3^21, not 3^21 > 3^(3y). Therefore, y > 9, not 7. The correct answer is 9."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 wrongly references the power of 2 as 3 instead of 2, and calculates 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2 instead of 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4. All other steps that reference power of 2 correctly remain unaffected by this mistake.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #4.\n\nThe error occurs in the first step, where the expression (2^x)/(2^w) is not defined for all positive integers x and w. Specifically, when x=3 and w=1, the expression is not defined because 2^1 is not equal to 2^3. Therefore, the final answer of 4 is incorrect. The correct answer is 4^2 = 16."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = Distance / Speed\nTime = 400 km / 90 kmh = 4.44 hours\n#### 4.44",
+        "transformed_answer": 4.44,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 450 km in the question as 400 km wrongly, and calculates 400 km / 90 kmh = 4.44 hours instead of 450 km / 90 kmh = 5 hours. The error impacts only the calculation of the time required. All the other references have to maintain their original values, and steps associated with the wrong step should still use the updated wrong result for subsequent calculations.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe solution is incorrect because in step 3, the calculation for time is incorrect. The correct calculation is:\nTime = Distance / Speed = 450 km / 90 kmh = 5 hours.\nTherefore, the correct answer is #5."
+    },
+    {
+        "question": "in a forest 250 deer were caught , tagged with electronic markers , then released . a week later , 50 deer were captured in the same forest . of these 50 deer , it was found that 5 had been tagged with the electronic markers . if the percentage of tagged deer in the second sample approximates the percentage of tagged deer in the forest , and if no deer had either left or entered the forest over the preceding week , what is the approximate number of deer in the forest ?",
+        "original_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 250 / 10 x 100 = 2500\n#### 2500",
+        "original_answer": 2500.0,
+        "transformed_solution": "The percentage of tagged deer in the second sample is 5/50 x 100 = 10%\nThe percentage of tagged deer in the forest is equal to this percentage, which is 10%\nThe total number of deer in the forest is 200 / 10 x 100 = 2000\n#### 2000",
+        "transformed_answer": 2000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 250 in the question as 200 wrongly, and calculates 200 / 10 x 100 = 2000 instead of 250 / 10 x 100 = 2500. Its subsequent related step will be affected by the erroneous result of this step but still be calculated correctly. Please note that you should only consider one error, so step 1 and step 2 still reference the quantities in the question correctly.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #2500.\n\nExplanation:\nThe solution assumes that the number of deer in the forest is 2000, which is not correct. According to the question, 50 deer were captured in the forest a week after the initial 250 deer were caught and tagged. This means that the total number of deer in the forest is 2500 (250 + 50). Therefore, the percentage of tagged deer in the forest is 50/250 x 100 = 20%, not 10%."
+    }
+]

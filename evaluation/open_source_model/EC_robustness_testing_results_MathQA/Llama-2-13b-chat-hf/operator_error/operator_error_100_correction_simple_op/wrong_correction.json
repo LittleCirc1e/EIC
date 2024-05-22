@@ -1,0 +1,14 @@
+[
+    {
+        "question": "In a certain accounting class of 90 students, 70% of the students took the final exam on the assigned day while the rest of the students took the exam on a make-up date. If the students on the assigned day had an average score of 60%, and the students on the make-up date had an average score of 70%, what was the average score for the entire class?",
+        "original_solution": "Students who took the exam on the assigned day: 90 x 70% = 63\nStudents who took the exam on the make-up date: 90 - 63 = 27\nTotal score for students who took the exam on the assigned day: 63 x 60% = 37.8\nTotal score for students who took the exam on the make-up date: 27 x 70% = 18.9\nTotal score for the entire class: 37.8 + 18.9 = 56.7\nAverage score for the entire class: 56.7 / 90 = 0.63\nAverage score for the entire class as a percentage: 63%\n#### 63%",
+        "original_answer": "63%",
+        "transformed_solution": "Students who took the exam on the assigned day: 90 x 70% = 63\nStudents who took the exam on the make-up date: 90 + 63 = 153\nTotal score for students who took the exam on the assigned day: 63 x 60% = 37.8\nTotal score for students who took the exam on the make-up date: 153 x 70% = 107.1\nTotal score for the entire class: 37.8 + 107.1 = 144.9\nAverage score for the entire class: 144.9 / 90 = 1.61\nAverage score for the entire class as a percentage: 161%\n#### 161%",
+        "transformed_answer": "161%",
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in step 2 to addition. Changing from '90 - 63 = 27' to '90 + 63 = 153' creates an incorrect number of students who took the make-up exam, leading to a cascade of incorrect computations in the further steps. The resulting numbers in steps 4, 5, 6, and 7 are based on the wrong number of make-up exam students but are computed correctly given that incorrect assumption. Ultimately, the transformed answer is nonsensical as it suggests an average score over 100%.",
+        "eval_result": "\n\nThe solution is incorrect, the correct answer is 144.9, which is calculated as follows:\n\nTotal score for students who took the exam on the assigned day: 63 x 60% = 37.8\nTotal score for students who took the exam on the make-up date: 153 x 70% = 107.1\nTotal score for the entire class: 37.8 + 107.1 = 144.9\n\nThe explanation is as follows:\n\nIn the solution, the first error occurs in step #3, where the total score for students who took the exam on the assigned day is calculated as 63 x 60%, instead of 63 x 70%. This error leads to a difference of 4.2 (63 x 70% - 63 x 60%) in the total score for students who took the exam on the assigned day, and accordingly, a difference of 4.2 in the total score for the entire class. Therefore, the correct answer is 144.9, not 161%."
+    }
+]

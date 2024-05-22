@@ -1,0 +1,26 @@
+[
+    {
+        "question": "At Kaleb's Restaurant, a group with six adults and two children came in to eat. If each adult meal cost six dollars and each children's meal was $4, and every person ordered a soda for $2 how much was the bill?",
+        "original_solution": "The cost for adult meals is 6 adults * $6 = $36.\nThe cost for children's meals is 2 children * $4 = $8.\nThe total people ordering drinks is 6 + 2 = 8.\nThe cost for drinks is 8 people * $2 = $16.\nThe total cost for the meal is $36 + $8 + $16 = $60.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "The cost for children's meals is 2 children * $4 = $8.\nThe total people ordering drinks is 6 + 2 = 8.\nThe cost for drinks is 8 people * $2 = $16.\nThe total cost for the meal is  $6 + $8 + $16 = $30.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step was removed. The original_solution's first step calculates the cost of adult meals, and the last step references the result of $36 from the first step. After deleting the first step, the last step now needs to directly include the calculation of the cost for adult meals, changing from $36 + $8 + $16 = $60 to  $6 + $8 + $16 = $30. The wrong_step is 4 because it is the first step referencing the result from the now-deleted step, which has been transformed to include the original calculation for adult meals. The transformed_answer is different than the original_answer, increasing from $60 to $68 because the adult meal cost is now being incorrectly added in as 6 times the amount intended.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe correct solution should be:\n\nThe cost for children's meals is 2 children * $4 = $8.\nThe total people ordering drinks is 6 + 2 = 8.\nThe cost for drinks is 8 people * $2 = $16.\nThe total cost for the meal is $6 + $8 + $16 = $30.\n\nThe first wrong step is step #4, which is the calculation of the cost for drinks. The correct calculation is 8 people * $2 = $16, not $16 + $2 = $18. This error leads to a $2 difference in the final answer."
+    },
+    {
+        "question": "A man decides to try and do everything off his bucket list while he is still young and fit enough to finish it all. One of his goals was to climb the seven summits. He realizes first he has to get in shape to do it and it takes him 2 years of working out to get healthy enough to take up mountain climbing. He then spends twice that long learning how to be a technically proficient mountain climber. After that he starts with the simplest mountain on the list and climbs them all. He spends 5 months climbing each mountain. After that he takes 13 months learning to dive and dives through all the caves he wants in 2 years. How much time did it take to get through all these goals?",
+        "original_solution": "He spent 2*2=4 years learning to climb\nHe spends 5*7=35 months climbing all 7 mountains\nAfter a 13 month break, he starts diving so that is 35+13=48 months\nThat means it is 48/12=4 years\nSo in total it all took 2+4+4+2=12 years\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "He spends 5*7=35 months climbing all 7 mountains\nAfter a 13 month break, he starts diving so that is 35+13=48 months\nThat means it is 48/12=4 years\nSo in total it all took 2+4+2+2=10 years\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step that calculates the time spent learning to climb is removed. Step 4 of the original_solution, which references the result '4 years' from the deleted Step 1, gets modified. The time spent preparing and learning to dive (2 years + 13 months) remains unaltered. However, since step 1 was removed, the total years cannot include the 4 years from the removed step. The new calculation in the transformed_solution should be the initial 2 years of working out, plus 4 years of mountaineering (calculated from the 48 months), plus 2 years of diving education, plus 2 years of actual diving, equaling 10 years in total. As per guidance given, the transformed solution has one less step compared to the original solution, and the wrong_step is the first one after the deletion that makes reference to the previous calculation ('2+4+4+2=12 years' changes to '2+4+2+2=10 years'), which is transformed step 4.",
+        "eval_result": "\n\nThe solution is incorrect, the first wrong step is step #4, which must be an integer, and the explanation is #, which is your explanation about why the [Solution] is incorrect.\n\nThe correct answer is 10 years, but the solution provided adds 13 months twice, which is incorrect. The first mistake is in step #4, where the solution adds 13 months twice, which should be only once. Therefore, the correct answer is 10 years, and the first wrong step is step #4."
+    }
+]

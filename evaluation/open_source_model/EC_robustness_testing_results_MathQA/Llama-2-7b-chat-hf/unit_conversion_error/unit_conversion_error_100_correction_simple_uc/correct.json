@@ -1,0 +1,26 @@
+[
+    {
+        "question": "5 bells begin to toll together at 12:00 noon and toll respectively at intervals of 3, 4, 5, 6, and 7 seconds. Not including the toll at 12:00 noon, how many more times will all 5 bells toll together before 1:00 pm (i.e., one hour later)?",
+        "original_solution": "The least common multiple (LCM) of 3, 4, 5, 6, and 7 is 420 seconds.\nThere are 60 minutes in an hour, so 60 * 60 = 3600 seconds in an hour.\nSince 420 seconds go into 3600 seconds about 8 times (420 * 8 = 3360), all 5 bells will toll together 8 times within the hour.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The least common multiple (LCM) of 3, 4, 5, 6, and 7 is 420 seconds.\nThere are 60 minutes in an hour, so 60 * 50 = 3000 seconds in an hour.\nSince 420 seconds go into 3000 seconds about 7 times (420 * 7 = 2940), all 5 bells will toll together 7 times within the hour.\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 * 60 = 3600 seconds in the original_solution becoming 60 * 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 3, which changes from 420 * 8 = 3360 to 420 * 7 = 2940. It should be noted that you only need to consider one step of unit conversion error, so the calculation process of step 1 and the other unrelated processes are still correct.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #8.\n\nExplanation:\nThe LCM of 3, 4, 5, 6, and 7 is actually 2100 seconds, not 420 seconds. This means that there are 2100 / 5 = 420 times that the bells will toll together within an hour. Therefore, the answer is 8."
+    },
+    {
+        "question": "What percent is 2 minutes 24 seconds of an hour?",
+        "original_solution": "First, convert 2 minutes 24 seconds to seconds: 2 * 60 + 24 = 144 seconds.\nNext, calculate the percent: (144 seconds / 3600 seconds) * 100 = 4%.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "First, convert 2 minutes 24 seconds to seconds: 2 * 50 + 24 = 124 seconds.\nNext, calculate the percent: (124 seconds / 3600 seconds) * 100 = 3.444...%.\n#### 3.444",
+        "transformed_answer": 3.444,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, which means that for the transformation 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in the original conversion 2 * 60 + 24 = 144 seconds becoming 2 * 50 + 24 = 124 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from (144 seconds / 3600 seconds) * 100 = 4% to (124 seconds / 3600 seconds) * 100 = 3.444...%. It should be noted that you only need to consider one step of unit conversion error, so the subsequent step 2 and the related calculations are affected, without affecting the previous or unrelated steps.",
+        "eval_result": "\nThe solution is incorrect, the correct answer is #.\n\nThe solution is incorrect because there is a unit conversion error in the second step. The conversion from minutes to seconds is incorrect, as there are 60 seconds in a minute, not 50. Therefore, the correct calculation is:\n\n2 minutes 24 seconds = 144 seconds.\n\nThe percent is then:\n\n(144 seconds / 3600 seconds) * 100 = 4.000...%\n\nTherefore, the correct answer is #4.000...%."
+    }
+]
