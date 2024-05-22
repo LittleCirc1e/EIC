@@ -1,0 +1,57 @@
+[
+    {
+        "question": "A store sells 20 packets of 100 grams of sugar every week. How many kilograms of sugar does it sell every week?",
+        "original_solution": "A total of 20 x 100 = 2000 grams are sold every week.\nSince 1 kilogram is equal to 1000 grams, then 2000/1000 = 2 kilograms of sugar are sold every week.\n#### 2",
+        "original_answer": 2.0,
+		"transformed_solution": "A total of 20 x 100 = 2000 grams are sold every week.\nSince 1 kilogram is equal to 2000 grams, then 2000/2000 = 1 kilograms of sugar are sold every week.\n#### 1",
+        "transformed_answer":1.0,
+		"wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 2000 grams instead of 1000 grams, resulting in 2000/1000 = 2  in the original_solution becoming 2000/2000 = 1 in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+    },
+    {
+        "question": "A chocolate bar weighs 125 g. A shopkeeper has just received a 2 kilogram box of chocolate. How many bars does this represent?",
+        "original_solution": "We have 2 kg = 2 * 1000 = 2000 g\nSo, the number of bars of chocolate is 2000 / 125 = 16\n#### 16",
+        "original_answer": 16.0,
+		"transformed_solution": "We have 2 kg = 2 * 900 = 1800 g\nSo, the number of bars of chocolate is 1800 / 125 = 14.4\n#### 14.4",
+        "transformed_answer":14.4,
+		"wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 kilogram is wrongly equal to 900 grams instead of 1000 grams, resulting in 2 kg = 2 * 1000 = 2000 g in the original_solution becoming 2 kg = 2 * 900 = 1800 g in the transformed_solution. And it affects the subsequent related step 2, which changes from 2000 / 125 = 16 to 1800 / 125 = 14.4. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+    },
+    {
+        "question": "Mary is building a mosaic for her school cafeteria's wall. It will be 10 feet tall and 15 feet long. Each tile she uses is 1 inch square. How many tiles will she need?",
+        "original_solution": "First convert the length of the mural to inches: 15 feet * 12 inches/foot = 180 inches\nThen convert the height of the mural to inches: 10 feet * 12 inches/foot = 120 inches\nThen multiply the length and the height to find the total area of the mural: 180 inches * 120 inches = 21600 square inches. Since each tile is 1 square inch, this is also the number of tiles she needs.\n#### 21600",
+        "original_answer": 21600.0,
+		"transformed_solution": "First convert the length of the mural to inches: 15 feet * 10 inches/foot = 150 inches\nThen convert the height of the mural to inches: 10 feet * 12 inches/foot = 120 inches\nThen multiply the length and the height to find the total area of the mural: 150 inches * 120 inches = 18000 square inches. Since each tile is 1 square inch, this is also the number of tiles she needs.\n#### 18000",
+        "transformed_answer":18000.0,
+		"wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 15 feet * 12 inches/foot = 180 inches in the original_solution becoming 15 feet * 10 inches/foot = 150 inches in the transformed_solution. And it affects the subsequent related step 3, which changes from 180 inches * 120 inches = 21600 square inches to 150 inches * 120 inches = 18000 square inches. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct."
+    },
+    {
+        "question": "Sam works at the Widget Factory, assembling Widgets. He can assemble 1 widget every 10 minutes. Jack from the loading dock can help assemble widgets when he doesn't have anything else to do. When he helps, they put together 2 complete widgets every 15 minutes. Recently the factory hired Tony to help assemble widgets. Being new to the job, he doesn't work as fast as Sam or Jack. Yesterday Sam worked for 6 hours before he had to leave work early for a dentist appointment. Jack was able to help out for 4 hours before he had to go back to the loading dock to unload a new shipment of widget materials. Tony worked the entire 8-hour shift. At the end of the day, they had completed 68 widgets. How long does it take Tony to assemble a Widget, in minutes?",
+        "original_solution": "Sam completes a widget every 10 minutes.\nWhen Jack helps they finish 2 in 15 minutes. Sam has finished 1 widget and has begun working on another one, and Jack finishes the second one at 15 minutes. So it takes Jack 15 minutes to complete a widget.\nSam worked for 6 hours yesterday, so he was able to complete 6 hours * 60 minutes per hour / 10 minutes per widget = 36 widgets.\nJack worked for 4 hours, so he was able to complete 4 hours * 60 minutes per hour / 15 minutes per widget = 16 widgets.\nSam, Jack, and Tony were able to complete 68 widgets together. So of those, Tony personally completed 68 widgets - 36 widgets - 16 widgets = 16 widgets.\nIt took Tony 8 hours to complete those 16 widgets, so he takes 8 hours * 60 minutes per hour / 16 widgets = 30 minutes per widget.\n#### 30",
+        "original_answer": 30.0,
+		"transformed_solution": "Sam completes a widget every 10 minutes.\nWhen Jack helps they finish 2 in 15 minutes. Sam has finished 1 widget and has begun working on another one, and Jack finishes the second one at 15 minutes. So it takes Jack 15 minutes to complete a widget.\nSam worked for 6 hours yesterday, so he was able to complete 6 hours * 50 minutes per hour / 10 minutes per widget = 30 widgets.\nJack worked for 4 hours, so he was able to complete 4 hours * 60 minutes per hour / 15 minutes per widget = 16 widgets.\nSam, Jack, and Tony were able to complete 68 widgets together. So of those, Tony personally completed 68 widgets - 30 widgets - 16 widgets = 22 widgets.\nIt took Tony 8 hours to complete those 16 widgets, so he takes 8 hours * 60 minutes per hour / 22 widgets = 21.82 minutes per widget.\n#### 21.82",
+        "transformed_answer":21.82,
+		"wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 6 hours * 60 minutes per hour / 10 minutes per widget = 36 widgets in the original_solution becoming 6 hours * 50 minutes per hour / 10 minutes per widget = 30 widgets in the transformed_solution. And it affects the subsequent related step 5 and 6. Step 5 changes from 68 widgets - 36 widgets - 16 widgets = 16 widgets inches to 68 widgets - 30 widgets - 16 widgets = 22 widgets. Step 6 changes from 8 hours * 60 minutes per hour / 16 widgets = 30 minutes per widget to 8 hours * 60 minutes per hour / 22 widgets = 21.82 minutes per widget. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 4, 6 and the other calculation processes are still correct."
+    },
+    {
+        "question": "Billy and Margaret are competing with each other to see who can swim 10 laps the fastest. Billy swims his first 5 laps in 2 minutes, swims the next 3 laps in 4 minutes, swims the next lap in 1 minute, then swims his final lap. Margaret finishes swimming all of her laps in 10 minutes. Billy wins the competition by finishing his laps 30 seconds before Margaret does. In seconds, how long did it take Billy to swim his final lap?",
+        "original_solution": "Margaret finished all of her laps in 10 minutes * 60 seconds = 600 seconds.\nBilly’s first 5 laps took 2 minutes * 60 seconds = 120 seconds.\nHis next 3 laps took 4 minutes * 60 seconds = 240 seconds.\nHis ninth lap took 1 minute * 60 seconds = 60 seconds.\nSo his first 9 laps took 120 + 240 + 60 = 420 seconds.\nBilly finished swimming his laps before Margaret so all of his laps took a total of 600 – 30 = 570 seconds.\nThis means that it took 570 seconds in total swimming time – 420 seconds in time spent swimming the first 9 laps = 150 seconds for Billy to swim his final lap.\n#### 150",
+        "original_answer":150.0,
+		"transformed_solution": "Margaret finished all of her laps in 10 minutes * 50 seconds = 500 seconds.\nBilly’s first 5 laps took 2 minutes * 60 seconds = 120 seconds.\nHis next 3 laps took 4 minutes * 60 seconds = 240 seconds.\nHis ninth lap took 1 minute * 60 seconds = 60 seconds.\nSo his first 9 laps took 120 + 240 + 60 = 420 seconds.\nBilly finished swimming his laps before Margaret so all of his laps took a total of 500 – 30 = 470 seconds.\nThis means that it took 470 seconds in total swimming time – 420 seconds in time spent swimming the first 9 laps = 50 seconds for Billy to swim his final lap.\n#### 50",
+        "transformed_answer":50.0,
+		"wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute wrongly has 50 seconds instead of 60 seconds, resulting in 10 minutes * 60 seconds = 600 seconds in the original_solution becoming 10 minutes * 50 seconds = 500 seconds in the transformed_solution. And it affects the subsequent related step 6 and 7. Step 6 changes from 600 – 30 = 570 seconds to 500 – 30 = 470 seconds. Step 7 changes from 570 seconds in total swimming time – 420 seconds in time spent swimming the first 9 laps = 150 seconds for Billy to swim his final lap to 470 seconds in total swimming time – 420 seconds in time spent swimming the first 9 laps = 50 seconds for Billy to swim his final lap. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2, 3, 4 and the other calculation processes are still correct."
+    }
+]

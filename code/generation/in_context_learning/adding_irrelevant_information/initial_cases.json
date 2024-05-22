@@ -1,0 +1,57 @@
+[
+   {
+        "question": "The class plans to take a field trip to the zoo. The cost to rent a school bus is $100. The cost of admission is $10 per student. The teacher is allowed in for free. If the class has a budget of $350, how many students can go on the field trip?",
+        "original_solution": "There is $350 - $100 = $250 available to pay for the students' admission fees.\nThis means they can afford to bring $250 / $10 = 25 students on the trip.\n#### 25",
+        "original_answer": 25.0,
+		"transformed_solution": "There is $350 - $100 - $50= $200 available to pay for the students' admission fees because there is an additional cost of $50 for buying drinks.\nThis means they can afford to bring $200 / $10 = 20 students on the trip.\n#### 20",
+        "transformed_answer":20.0,
+		"wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <because there is an additional cost of $50 for buying drinks>, resulting in step 1 changing from $350- $100=$250 in the original_solution to $350- $100- $50=$200 in the transformed_solution. Its subsequent related step 2 is affected, changing from $250/$10=25 to $200/$10=20. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+   },
+    {
+        "question": "Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?",
+        "original_solution": "In the beginning, Betty has only 100 / 2 = $50.\nBetty's grandparents gave her 15 * 2 = $30.\nThis means, Betty needs 100 - 50 - 30 - 15 = $5 more.\n#### 5",
+        "original_answer": 5.0,
+		"transformed_solution": "In the beginning, Betty has only 100 / 2 = $50.\nBetty's grandparents gave her 15 * 2 = $30.\nBecause Betty's sister gave her 2 more dollars, this means, Betty needs 100 - 50 - 30 - 15 -2 = $3 more.\n#### 3",
+        "transformed_answer":3.0,
+		"wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because Betty's sister gave her 2 more dollars>, resulting in step 3 changing from 100 - 50 - 30 - 15 = $5 in the original_solution to 100 - 50 - 30 - 15 -2 = $3 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+    },
+    {
+        "question": "Ann is cutting fabric to make curtains. She cuts a 4 foot by 6 foot rectangle for the living room, and a 2 foot by 4 foot rectangle for the bedroom. If the bolt of fabric is 16 feet by 12 feet, how much fabric is left in square feet?",
+        "original_solution": "First figure out how many square feet the original bolt of fabric was: 16 feet * 12 feet = 192 square feet\nThen figure out how much fabric Ann took for the living room curtains: 4 feet * 6 feet = 24 square feet\nThen figure out how much fabric Ann took for the bedroom curtains: 2 feet * 4 feet = 8 square feet\nFinally, subtract the square footage of both sets of curtains from the total square footage: 192 - 24 - 8 = 160 square feet\n#### 160",
+        "original_answer": 160.0,
+		"transformed_solution": "First figure out how many square feet the original bolt of fabric was: 16 feet * 12 feet = 192 square feet\nThen figure out how much fabric Ann took for the living room curtains: 4 feet * 6 feet = 24 square feet\nThen figure out how much fabric Ann took for the bedroom curtains: 2 feet * 4 feet = 8 square feet\nBecause there was 10 square feet Ann took for the bathroom curtains, finally, subtract the square footage of three sets of curtains from the total square footage: 192 - 24 - 8 - 10 = 150 square feet\n#### 150",
+        "transformed_answer":150.0,
+		"wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Because there was 10 square feet Ann took for the bathroom curtains>, resulting in step 4 changing from 192 - 24 - 8 = 160 in the original_solution to 192 - 24 - 8 - 10 = 150 in the transformed_solution. The language description has also changed from <subtract the square footage of both sets of curtains from the total square footage> to <subtract the square footage of three sets of curtains from the total square footage>.It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+    },
+    {
+        "question": "In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats.  If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck.",
+        "original_solution": "If there were 26 pink hard hats and Carl took away 4 pink hard hats, the number of pink hard hats that remained is 26-4 = 22\nJohn also took away 6 pink hard hats, leaving 22-6 = 16 pink hard hats in the truck.\nIf John also took twice as many green hard hats as pink hard hats, he took 2*6 = 12 green hard hats.\nThe total number of green hard hats that remained in the truck is 15-12 = 3\nIn the truck, after some are taken, there were 3 green hard hats + 16 pink hard hats = 19 hard hats in the truck.\nAltogether, 19 green and pink hard hats + 24 yellow hards hats = 43 hard hats remained in the truck\n#### 43",
+        "original_answer":43.0,
+		"transformed_solution": "If there were 26 pink hard hats and Carl took away 4 pink hard hats, the number of pink hard hats that remained is 26-4 = 22\nJohn also took away 6 pink hard hats, leaving 22-6 = 16 pink hard hats in the truck.\nIf John also took twice as many green hard hats as pink hard hats, he took 2*6 = 12 green hard hats.\nThe total number of green hard hats that remained in the truck is 15-12 = 3\nIn the truck, after some are taken, there were 3 green hard hats + 16 pink hard hats = 19 hard hats in the truck.\nBecause there are 5 additional red hard hats in the truck, altogether, 19 green and pink hard hats + 24 yellow hards hats + 5 red hard hats= 48 hard hats remained in the truck\n#### 48",
+        "transformed_answer":48.0,
+		"wrong_step": 6,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 6 adds information that is not mentioned in the question statement <Because there are 5 additional red hard hats in the truck>, resulting in step 6 changing from 19 green and pink hard hats + 24 yellow hards hats = 43 hard hats remained in the truck in the original_solution to 19 green and pink hard hats + 24 yellow hards hats + 5 red hard hats= 48 hard hats remained in the truck in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+    },
+    {
+        "question": "Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?",
+        "original_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 = $990.00\n#### 990",
+        "original_answer": 990.0,
+		"transformed_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nBecause she has an additional $100.00 bonus, in 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 + $100 = $1090.00\n#### 1090",
+        "transformed_answer":1090.00,
+		"wrong_step": 8,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 8 adds information that is not mentioned in the question statement <Because she has an additional $100.00 bonus>, resulting in step 8 changing from $720 + $270 = $990.00 in the original_solution to $720 + $270 + $100 = $1090.00 in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct."
+    }
+]

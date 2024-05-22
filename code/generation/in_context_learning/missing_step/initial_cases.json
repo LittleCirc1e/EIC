@@ -1,0 +1,58 @@
+[
+   {
+        "question": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?",
+        "original_solution": "Natalia sold 48/2 = 24 clips in May.\nNatalia sold 48+24 = 72 clips altogether in April and May.\n#### 72",
+        "original_answer": 72.0,
+       	"transformed_solution": "Natalia sold 48+48 = 96 clips altogether in April and May.\n#### 96",
+        "transformed_answer":96.0,
+		"wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 48 from the question, and step 2 references the result of step 1. So after deleting step 1, step 2 should change the result 24 of the referenced step 1 to the number 48 in the question, causing the formula to change from 48+24=72 to 48+48=96. It should be noted that the calculation of step 2 after the transformation is still correct. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+   },
+    {
+        "question": "Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?",
+        "original_solution": "Julie read 12 x 2 = 24 pages today.\nSo she was able to read a total of 12 + 24 = 36 pages since yesterday.\nThere are 120 - 36 = 84 pages left to be read.\nSince she wants to read half of the remaining pages tomorrow, then she should read 84/2 = 42 pages.\n#### 42",
+        "original_answer": 42.0,
+		"transformed_solution": "She was able to read a total of 12 + 12 = 24 pages since yesterday.\nThere are 120 - 24 = 96 pages left to be read.\nSince she wants to read half of the remaining pages tomorrow, then she should read 96/2 = 48 pages.\n#### 48",
+        "transformed_answer":48.0,
+		"wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the number 12 from the question, and step 2 references the result 24 of step 1. So after deleting step 1, step 2 should change the result 24 of the referenced step 1 to the number 12 in the question, causing the formula to change from 12+24=36 to 12+12=24. Step 3 and 4 as subsequent related steps, are affected by step 2. Step 3 will change 120 - 36 = 84 to 120 - 24 = 96 pages, and step 4 will change 84/2 = 42 to 96/2 = 48. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1."
+    },
+    {
+        "question": "James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?",
+        "original_solution": "He sold each DVD for 6*2.5=$15\nSo he makes a profit of 15-6=$9\nSo each day he makes a profit of 9*500=$4500\nSo he makes 4500*5=$22,500\nHe makes 22,500*20=$450,000\nThen after the cost of creating the movie he has a profit of 450,000-2000=$448,000\n#### 448000",
+        "original_answer": 448000.0,
+		"transformed_solution": " He sold each DVD for 6*2.5=$15\nSo each day he makes a profit of 15*500=$7500\nSo he makes 7500*5=$37,500\nHe makes 37,500*20=$750,000\nThen after the cost of creating the movie he has a profit of 750,000-2000=$748,000\n#### 748000",
+        "transformed_answer":748000.0,
+		"wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2. In the original_solution, step 2 references result 15 from previous step 1, and step 3 references result 9 from step 2. Therefore, after deleting step 2, step 3 should reference result 15 from step 1 and change the formula from 9 * 500=$4500 to 15 * 500=$7500. Step 4, 5, and 6, as subsequent related steps, are affected by step 3. Step 4 will change 4500 * 5=$22,500 to 7500*5=$37,500, step 5 will change 22,500 * 20=$450,000 to 37,500*20=$750,000, and step 6 will change 450,000-2000=$448,000 to 750,000-2000=$748,000. It is step 2 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 2."
+    },
+    {
+        "question": "Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?",
+        "original_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 = $990.00\n#### 990",
+        "original_answer": 990.0,
+		"transformed_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 10 hours of overtime per day and makes 27*10 = $270.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 270*5 = $1350.00\nIn 5 days her base pay is $720.00 and she makes $1350.00 in overtime pay so she makes $720 + $1350 = $2070.00\n#### 2070",
+        "transformed_answer":2070.0,
+		"wrong_step": 5,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2. In the original_solution, step 2 references 10(the largest) and 8 from the question, and step 6 references result 2 from step 2. Therefore, after deleting step 2, step 6 should reference 10 from the question and change the formula from 27*2 = $54.00 to 27*10 = $270.00, and change the language description from <she works 2 hours of overtime per day> to <she works 10 hours of overtime per day>. Step 7 and 8, as subsequent related steps, are affected by step 6. Step 7 will change 54*5 = $270.00 to 270*5 = $1350.00, and step 8 will change $720 + $270 = $990.00 to $720 + $1350 = $2070.00. Please note that the deleted step 2 references two numbers 8 and 10 from the question, and you need to choose a larger number for subsequent related steps to reference, which is 10. It is step 5 in the transformed_solution, which is also step 6 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 5."
+    },
+    {
+        "question": "You can buy 4 apples or 1 watermelon for the same price. You bought 36 fruits evenly split between oranges, apples and watermelons, and the price of 1 orange is $0.50. How much does 1 apple cost if your total bill was $66?",
+        "original_solution": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = 12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $6\nIf my total bill was $66 and I spent $6 on oranges then I spent $66 - $6 = $60 on the other 2 fruit types.\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $60, then we know that $60 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $60 = 12(4A) + 12A\n$60 = 48A + 12A\n$60 = 60A\nThen we know the price of one apple (A) is $60/60= $1\n#### 1",
+        "original_answer": 1.0,
+		"transformed_solution": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = 12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $6\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $6, then we know that $6 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $6= 12(4A) + 12A\n$6 = 48A + 12A\n$6 = 60A\nThen we know the price of one apple (A) is $6/60= $0.1\n#### 0.1",
+        "transformed_answer": 0.1,
+		"wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": " This example removes intermediate step 3. In the original_solution, step 3 references the result 6 from step 2, and step 5 references the result 60 from step 3. Therefore, after deleting step 3, step 5 should reference the result 6 from step 2 and change the formula from $60 = 12W + 12A to $6 = 12W + 12A, and change the language description from <If we know we bought 12 watermelons and 12 apples for $60> to <If we know we bought 12 watermelons and 12 apples for $6>. Step 6, 7, 8 and 9, as subsequent related steps, are affected by step 5. Step 6 inherits the error from step 5, modifying $60=12 (4A)+12A to $6=12 (4A)+12A. Step 7 inherits the error from step 6, modifying $60=48A+12A. A is $6=48A+12A. Step 8 inherits the error from step 7, modifying $60=60A to $6=60A. Step 9 inherits the error from step 8, modifying $60/60=$1 to $6/60=$0.1. It is step 4 in the transformed_solution, which is also step 5 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 4."
+    }
+]
+

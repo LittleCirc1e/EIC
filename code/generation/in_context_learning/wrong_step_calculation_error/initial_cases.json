@@ -1,0 +1,57 @@
+[
+   {
+        "question": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?",
+        "original_solution": "Natalia sold 48/2 = 24 clips in May.\nNatalia sold 48+24 = 72 clips altogether in April and May.\n#### 72",
+        "original_answer": 72.0,
+		"transformed_solution": "Natalia sold 48/2 = 12 clips in May.\nNatalia sold 48+12 =60  clips altogether in April and May. \n#### 60",
+        "transformed_answer":60.0,
+		"wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Here, the 48/2 in step 1 is wrongly calculated as 12. It should be noted that step 2 needs to use the result of step 1, so the original 48+24 will be changed to 48+12. So, it should be noted that if a step is miscalculated, subsequent steps will inherit its error and use the number of miscalculations to further calculate. Futhermore, step 2 needs to be calculated correctly, and you should only consider one step error."
+   },
+    {
+        "question": "Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?",
+        "original_solution": "Julie read 12 x 2 = 24 pages today.\nSo she was able to read a total of 12 + 24 = 36 pages since yesterday.\nThere are 120 - 36 = 84 pages left to be read.\nSince she wants to read half of the remaining pages tomorrow, then she should read 84/2 = 42 pages.\n#### 42",
+        "original_answer": 42.0,
+		"transformed_solution": "Julie read 12 x 2 = 24 pages today.\nSo she was able to read a total of 12 + 24 = 36 pages since yesterday.\nThere are 120 - 36 = 84 pages left to be read.\nSince she wants to read half of the remaining pages tomorrow, then she should read 84/2 = 40 pages.\n#### 40",
+        "transformed_answer":40.0,
+		"wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example calculates the 84/2 in step 4 wrongly as 40, as it is the last step and therefore has no impact on other steps."
+    },
+    {
+        "question": "James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?",
+        "original_solution": "He sold each DVD for 6*2.5=$15\nSo he makes a profit of 15-6=$9\nSo each day he makes a profit of 9*500=$4500\nSo he makes 4500*5=$22,500\nHe makes 22,500*20=$450,000\nThen after the cost of creating the movie he has a profit of 450,000-2000=$448,000\n#### 448000",
+        "original_answer": 448000.0,
+		"transformed_solution": "He sold each DVD for 6*2.5=$10\nSo he makes a profit of 10-6=$4\nSo each day he makes a profit of 4*500=$2000\nSo he makes 2000*5=$10,000\nHe makes 10,000*20=$200,000\nThen after the cost of creating the movie he has a profit of 200,000-2000=$198,000\n#### 198000",
+        "transformed_answer":198000.0,
+		"wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example calculates the 6*2.5 in step 1 wrongly as 10 instead of 15, and the subsequent steps need to inherit the wrong result 10 and continue their calculation. It is important to note that you should only consider one step error. Therefore, the subsequent steps are equivalent to inheriting the erroneous result of the first step, except that an error occurs during the expression, but the calculation result of the expression should still be correct. Step 2 will change the original 15-6=$9 to 10-6=$4, step 3 will change the original 9 * 500=$4500 to 4 * 500=$2000, step 4 will change 4500 * 5=$22500 to 2000 * 5=$10000, step 5 will change 22500 * 20=$450000 to 10000 * 20=$200000, and step 6 will change 450000-2000=$448000 to 200,000-2000=$198000."
+    },
+    {
+        "question": "Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?",
+        "original_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $9.00\nHer overtime pay is 18+9 = $27.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 27*2 = $54.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 54*5 = $270.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $270 = $990.00\n#### 990",
+        "original_answer": 990.0,
+		"transformed_solution": "She works 8 hours a day for $18 per hour so she makes 8*18 = $144.00 per 8-hour shift\nShe works 10 hours a day and anything over 8 hours is eligible for overtime, so she gets 10-8 = 2 hours of overtime\nOvertime is calculated as time and a half so and she makes $18/hour so her overtime pay is 18*.5 = $8.00\nHer overtime pay is 18+8 = $26.00\nHer base pay is $144.00 per 8-hour shift and she works 5 days and makes 5 * $144 = $720.00\nHer overtime pay is $27.00 per hour and she works 2 hours of overtime per day and makes 26*2 = $52.00 in overtime pay\n2 hours of overtime pay for 5 days means she makes 52*5 = $260.00\nIn 5 days her base pay is $720.00 and she makes $270.00 in overtime pay so she makes $720 + $260 = $980.00\n#### 980",
+        "transformed_answer":980.0,
+		"wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": " This example mistakenly calculates 18 *. 5=$8.00 instead of 18 *. 5=$9.00 in step 3, resulting in the subsequent steps 4, 6, 7, and 8 related to it inheriting its error without affecting the previous steps 1 and 2 and the unrelated steps 5, which means steps 1, 2, and 5 remain unchanged. For the subsequent steps related to step 3, step 4 calculates 18+8=$26.00 instead of 19+8=$27.00, step 6 calculates 26 * 2=$52.00 instead of 27 * 2=$54.00, step 7 calculates 52 * 5=$260.00 instead of 54 * 5=$270.00, and step 8 calculates $720+$260=$980.00 instead of $720+$270=$990.00."
+    },
+    {
+        "question": "You can buy 4 apples or 1 watermelon for the same price. You bought 36 fruits evenly split between oranges, apples and watermelons, and the price of 1 orange is $0.50. How much does 1 apple cost if your total bill was $66?",
+        "original_solution": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = 12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $6\nIf my total bill was $66 and I spent $6 on oranges then I spent $66 - $6 = $60 on the other 2 fruit types.\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $60, then we know that $60 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $60 = 12(4A) + 12A\n$60 = 48A + 12A\n$60 = 60A\nThen we know the price of one apple (A) is $60/60= $1\n#### 1",
+        "original_answer": 1.0,
+		"transformed_solution": "If 36 fruits were evenly split between 3 types of fruits, then I bought 36/3 = 12 units of each fruit\nIf 1 orange costs $0.50 then 12 oranges will cost $0.50 * 12 = $12\nIf my total bill was $66 and I spent $12 on oranges then I spent $66 - $12 = $56 on the other 2 fruit types.\nAssuming the price of watermelon is W, and knowing that you can buy 4 apples for the same price and that the price of one apple is A, then 1W=4A\nIf we know we bought 12 watermelons and 12 apples for $60, then we know that $56 = 12W + 12A\nKnowing that 1W=4A, then we can convert the above to $56 = 12(4A) + 12A\n$56 = 48A + 12A\n$56 = 60A\nThen we know the price of one apple (A) is $56/60= $0.93\n#### 0.93",
+        "transformed_answer":0.93,
+		"wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates $0.50 * 12=$12 instead of $0.50 * 12=$6 in step 2, which affects subsequent step 3, 5, 6, 7, 8, and 9 related to it. Step 3 inherits the error from step 2, not only modifying the formula $66- $6=$60 to $66- $12=$56, but also modifying the language description related to step 2 from <I spend $6 on oranges> to <I spend $12 on oranges>. Step 5 inherits the error from step 3, modifying $60=12W+12A to $56=12W+12A. Step 6 inherits the error from step 5, modifying $60=12 (4A)+12A to $56=12 (4A)+12A. Step 7 inherits the error from step 6, modifying $60=48A+12A to $56=48A+12A. Step 8 inherits the error from step 7, modifying $60=60A to $56=60A. Step 9 inherits the error from step 8, modifying $60/60=$1 to $56/60=$0.93. It should be noted that you only need to pay attention to one calculation error, and the subsequent related steps to this wrong step will only inherit its error, which means the relevant numbers in the formula or language description inherit the error, but the calculation of the formula itself is still correct."
+    }
+]

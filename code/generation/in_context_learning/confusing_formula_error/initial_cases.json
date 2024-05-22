@@ -1,0 +1,57 @@
+[
+    {
+        "question": "Joy has 250 feet of tape. She wants to wrap the tape around a field that is 20 feet wide and 60 feet long. How much tape will Joy have left over after wrapping tape around the field once?",
+        "original_solution": "The perimeter of the field is 20+20+60+60=160 feet.\nJoy will have 250-160=90 feet of tape left over.\n#### 90",
+        "original_answer": 90.0,
+		"transformed_solution": "The perimeter of the field is 20*60=1200 feet.\nJoy will have 250-1200=-950 feet of tape left over.\n#### -950",
+        "transformed_answer":-950.0,
+		"wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the perimeter of the rectangle to be solved be equal to the length plus length plus width plus width, rather than the length multiplied by width, which is equivalent to the area of the rectangle, resulting in 20+20+60+60=160 in the original_solution being changed to 20*60=1200 in the transformed_solution. This affects the subsequent step 2, changing from 250-160=90 to 250-1200=-950. Note that the language description of step 1 < The perimeter of the field is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangular perimeter, while the other calculation processes are still correct."
+    },
+    {
+        "question": "A 10 m long and 8 m wide rectangular floor is to be covered with a square carpet with 4 m sides. How many square meters of the floor are uncovered?",
+        "original_solution": "The area of the floor is 10 m x 8 m = 80 square meters.\nThe area of the carpet is 4 m x 4 m = 16 square meters.\nTherefore, the area of the floor not covered by the carpet is 80 square meters - 16 square meters = 64 square meters,\n#### 64",
+        "original_answer": 64.0,
+		"transformed_solution": "The area of the floor is 10m + 10 m + 8 m + 8m = 36 square meters.\nThe area of the carpet is 4 m * 4 m = 16 square meters.\nTherefore, the area of the floor not covered by the carpet is 36 square meters - 16 square meters = 20 square meters,\n#### 20",
+        "transformed_answer":20.0,
+		"wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 10 m x 8 m=80 square meters in the original_solution changed to 10m + 10 m + 8 m + 8m = 36 square meters in the transformed_solution. This affects the subsequent step 3, changing from 80 square meters -16 square meters=64 square meters to 36 square meters -16 square meters=16 square meters. Note that the language description of step 1 < The area of the floor is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of the rectangular area, while step 2 correctly uses the formula of the rectangular area, and the other calculation processes are still correct."
+    },
+    {
+        "question": "Tom has 4 bedrooms in his house.  They measure 20 by 12 feet each.  The living room is 5 times bigger than one bedroom.  The rest of the house is 1000 square feet.  What is the total area, in square feet, of the house?",
+        "original_solution": "The bedrooms are each 20*12=240 square feet\nSo in total the bedrooms are 240*4=960 square feet\nThe living room is 240*5=1200 square feet\nSo in total the house is 1200+1000+960=3160 square feet\n#### 3160",
+        "original_answer": 3160.0,
+		"transformed_solution": "The bedrooms are each 20+12+20+12=64 square feet\nSo in total the bedrooms are 64*4=256 square feet\nThe living room is 64*5=320 square feet\nSo in total the house is 256+1000+320=1576 square feet\n#### 1576",
+        "transformed_answer":1576.0,
+		"wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the length plus length plus width plus width, which is equivalent to the perimeter of the rectangle, resulting in 20 * 12=240 in the original_solution becoming 20+12+20+12=64 in the transformed_solution. This affects the subsequent related steps, step 2 changes from 240 * 4=960 to 64 * 4=256, step 3 changes from 240 * 5=1200 to 64 * 5=320, and step 4 changes from 1200+1000+960=3160 to 256+1000+320=1576. Note that the language description of step 1 < The bedrooms are each > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangular area, while the other calculation processes are still correct."
+    },
+    {
+        "question": "Mark wants to build a pyramid of soda cases that's four levels tall. Each level of the pyramid has a square base where each side is one case longer than the level above it. The top level is just one case. How many cases of soda does Mark need?",
+        "original_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases * 3 cases = 9 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 9 cases + 16 cases = 30 cases\n#### 30",
+        "original_answer": 30.0,
+		"transformed_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases + 3 cases + 3 cases + 3 cases= 12 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 12 cases + 16 cases = 33 cases\n#### 33",
+        "transformed_answer":33.0,
+		"wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of square. The question requires that the area of the square to be solved be equal to the side length multiplied by side length, rather than the side length plus side length plus side length plus side length, which is equivalent to the perimeter of the square, resulting in 3 cases * 3 cases=9 cases in the original_solution becoming 3 cases+3 cases+3 cases+3 cases=12 cases in the transformed_solution. This affects the subsequent step 5, changing from 1 case+4 cases+9 cases+16 cases=30 cases to 1 case+4 cases+12 cases+16 cases=33 cases. Note that the language description of step 3 < The third level has three cases per side, so we need to find the area of a square with side length 3 > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 3 mistakenly uses the formula of square area, while step 2 and step 4 still correctly uses the formula of square area, and the other calculation processes are still correct."
+    },
+    {
+        "question": "John has 3 boxes.  Each box is 5 inches by 6 inches by 4 inches.  The walls are 1 inch thick.  What is the total inner volume of all 3 boxes?",
+        "original_solution": "The walls subtract 2*1=2 inches from each dimension\nSo each box has 5-2=3 inch width\nIt also has a 6-2=4 inch height\nFinally, it has a 4-2=2 inch depth\nSo the inner volume of one box is 4*3*2=24 cubic inches\nSo in total the inner volume of the 3 boxes is 3*24=72 cubic inches\n#### 72",
+        "original_answer": 72.0,
+		"transformed_solution": "The walls subtract 2*1=2 inches from each dimension\nSo each box has 5-2=3 inch width\nIt also has a 6-2=4 inch height\nFinally, it has a 4-2=2 inch depth\nSo the inner volume of one box is 2*(4*3+3*2+2*4)=52 cubic inches\nSo in total the inner volume of the 3 boxes is 3*52=156 cubic inches\n#### 156",
+        "transformed_answer":156.0,
+		"wrong_step": 5,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the volume and surface area of cuboid. The question requires that the volume of the cuboid to be solved be equal to the length multiplied by width multiplied by height, rather than 2*length multiplied by width plus length multiplied by height plus width multiplied by height, which is equivalent to the surface area of cuboid, resulting in 4 * 3 * 2=24 in the original_solution becoming 2*(4*3+3*2+2*4)=52 in the transformed_solution. This affects the subsequent step 6, changing from 3 * 24=72 to 3 * 52=156. Note that the language description of step 5 < So the inner volume of one box is > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 5 mistakenly uses the formula of cuboid volume, while the other calculation processes are still correct."
+    }
+]
