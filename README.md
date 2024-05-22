@@ -16,8 +16,6 @@ This repo includes our datasets and codes for generation and evaluation.
 
 This directory [data](./data/) contains 8 datasets for Error Identification and Correction. The suffix of the folder name indicates the source of the generated data([GSM8K]([GitHub - openai/grade-school-math](https://github.com/openai/grade-school-math?tab=readme-ov-file)) or [MathQA]([MathQA-Dataset (math-qa.github.io)](https://math-qa.github.io/math-QA/))).
 
-Note that each data is named as `generated_cases_clean.jsonl`.
-
 To be specific: 
 
 - [generated_cases_GSM8K](./data/generated_cases_GSM8K/): cases of nine error types generated from GSM8K by GPT-4.
