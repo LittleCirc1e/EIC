@@ -1,0 +1,32 @@
+[
+    {
+        "question": "If a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.",
+        "original_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 60 minutes, the bunny will come out of the hole 60*3=180 times.\nIn 10 hours, a bunny will come out of their hole 180*10=1800 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1800*20=36000 times.\n#### 36000",
+        "original_answer": 36000.0,
+        "transformed_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 50 minutes, the bunny will come out of the hole 50*3=150 times.\nIn 10 hours, a bunny will come out of their hole 150*10=1500 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1500*20=30000 times.\n#### 30000",
+        "transformed_answer": 30000.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of the correct 60 minutes. This results in a cascade of errors through the subsequent steps. The original_solution stating that a bunny will come out of the hole 60*3=180 times is transformed to 50*3=150 times. Consequently, the 10-hour total for one bunny changes from 180*10=1800 in the original_solution to 150*10=1500 in the transformed_solution. The final combined count for 20 bunnies then changes from 1800*20=36000 times to 1500*20=30000 times. It should be noted that only one step of unit conversion error is considered and the rest of calculation steps are kept consistent with the original solution.",
+        "is_correct": "no",
+        "corrected_solution": "If a bunny comes out of its burrow 3 times per minute, in 10 hours, with 600 minutes, the bunny will come out of the hole 600*3=1800 times.\nIn 10 hours, a bunny will come out of their hole 1800*10=18000 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 18000*20=360000 times.",
+        "corrected_answer": 360000,
+        "corrected_explanation": "The original solution made a mistake in calculating the number of times a bunny comes out of its hole in an hour. It should be 600 times instead of 150 times."
+    },
+    {
+        "question": "Naruto can lift a mountain ten times higher than Kagiyami can. But Kagiyami can lift a mountain 4 times higher than Saskay can. And Saskay can lift a mountain 12 times higher than Pompei can. If Pompei can lift a mountain 1 inch, how high can Naruto lift a mountain, in feet?",
+        "original_solution": "If Pompei can lift a mountain 1 inch, and Saskay can lift a mountain 12 times higher than Pompei can, then Saskay can lift a mountain 12*1=12 inches=1 foot.\nSince Kagiyami can lift a mountain 4 times higher than Saskay, then Kagiyami can lift a mountain 4*1=4 feet.\nAnd since Naruto can lift a mountain ten times higher than Kagiyami. then Naruto can lift a mountain 10*4=40 feet.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If Pompei can lift a mountain 1 inch, and Saskay can lift a mountain 12 times higher than Pompei can, then Saskay can lift a mountain 12*1=12 inches=1 yard.\nSince Kagiyami can lift a mountain 4 times higher than Saskay, then Kagiyami can lift a mountain 4*1=4 yards.\nAnd since Naruto can lift a mountain ten times higher than Kagiyami. then Naruto can lift a mountain 10*4=40 yards.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 12 inches is wrongly equal to 1 yard instead of 1 foot, resulting in 12*1=12 inches=1 foot in the original_solution becoming 12*1=12 inches=1 yard in the transformed_solution. And it affects the subsequent related step 2 and 3. Step 2 changes from 4*1=4 feet to 4*1=4 yards. Step 3 changes from 10*4=40 feet to 10*4=40 yards (noting there are 3 feet in a yard, the actual transformation is 10*4*3 = 120 feet). It should be noted that you only need to consider one step of unit conversion error, so the other computation steps are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "If Pompei can lift a mountain 1 inch, and Saskay can lift a mountain 12 times higher than Pompei can, then Saskay can lift a mountain 12*1=12 inches=1 yard.\nSince Kagiyami can lift a mountain 4 times higher than Saskay, then Kagiyami can lift a mountain 4*1=4 yards.\nAnd since Naruto can lift a mountain ten times higher than Kagiyami. then Naruto can lift a mountain 10*4=40 yards.\n40 yards=40*3=120 feet.\n#### 120",
+        "corrected_answer": 120,
+        "corrected_explanation": "The solution is incorrect because it did not convert yards to feet in the final step. 40 yards is equal to 40*3=120 feet."
+    }
+]

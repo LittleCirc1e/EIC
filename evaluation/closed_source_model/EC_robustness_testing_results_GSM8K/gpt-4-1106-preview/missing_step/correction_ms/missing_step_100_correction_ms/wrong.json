@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Liam is 16 years old now. Two years ago, Liam’s age was twice the age of Vince. How old is Vince now?",
+        "original_solution": "Liam's age two years ago was 16 - 2 = 14 years old.\nVince's age two years ago was 14/2 = 7 years old because Liam's age is twice his.\nSo Vince age now is 7 + 2 = 9 years old.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Vince's age two years ago was 16/2 = 8 years old because Liam's age is twice his.\nSo Vince's age now is 8 + 2 = 10 years old.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 1 calculates Liam’s age two years ago. However, the transformed_solution removes this first step. As a consequence, step 1 in the transformed_solution, which originally is step 2 in the original_solution, directly references the number 16 from the question, which leads to Vince’s age being half of 16 instead of half of Liam’s age two years ago. This results in a transformed answer of 10, which is incorrect. The error in the new step 1 is due to the fact that it incorrectly calculates Vince’s age as half of Liam’s current age rather than half of Liam’s age two years ago. Since the original step 1 is absent, the subsequent related step (the new step 1) becomes the wrong step.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies that Vince's age two years ago was half of Liam's age at that time, which was 16. Therefore, Vince was 8 years old two years ago. Adding the two years to Vince's age at that time gives the correct current age of Vince, which is 10 years old."
+    },
+    {
+        "question": "Chris wants to hold his breath underwater for 90 straight seconds so he starts training each day. On the first day, he holds it for 10 seconds. On the second day, he holds it for 20 seconds. On the third day, he holds it for 30 seconds. After realizing that he can hold it for ten extra seconds each day, he realizes he can calculate how many days it is until he reaches 90 if he keeps up the same pace. So how many days until he can hold his breath for 90 seconds?",
+        "original_solution": "He still has to improve by 60 more seconds because 90 - 30 = 60\nThis will take 6 days because 60 / 10 = 6\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "This will take 9 days because 90 / 10 = 9\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution has been removed. Originally, this step calculates the remaining seconds by subtracting 30 (the result of the third day) from 90. After removing this step, the 60 seconds of improvement mentioned in the result no longer has context, and the solution incorrectly assumes that Chris is starting from 0 seconds, which leads to dividing 90 by 10 to recommend 9 days of training. Since the deleted first step referenced the number 30 from the question, the transformed answer should still reflect the additional 60 seconds of improvement needed. However, the error in the transformation directly references 90 instead of the correct context, which is why the wrong_step is 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies that Chris increases the time he can hold his breath by 10 seconds each day. Starting from 10 seconds on the first day, he adds 10 seconds each subsequent day. To reach 90 seconds, he divides the target time (90 seconds) by the daily increment (10 seconds), which correctly results in 9 days. Therefore, the solution is correct and there is no missing step."
+    },
+    {
+        "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+        "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n#### 78",
+        "transformed_answer": 78.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly converts Steve's original height from feet to inches by multiplying 5 feet by 12 inches per foot, then adds the growth of 6 inches and the original 6 inches to find the new height in inches. The calculation is correct and there are no missing steps."
+    },
+    {
+        "question": "If Patty's dress was $10 more than Ida's dress, and Ida's dress was $30 more than Jean's dress, and Jean's dress was $10 less than Pauline's dress, and lastly Pauline's dress was $30, how much did all the ladies spend on dressed put together?",
+        "original_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10= 20 dollars.\nIda's dress was $30 more than Jean's $20 dress, meaning it was 30+20=50 dollars.\nPatty's dress was $10 more than Ida's $50 dress, meaning it was 50+10=60 dollars.\nTherefore, all four women together spent 60+50+20+30=160 dollars.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10=20 dollars.\nIda's dress was $30 more than Jean's dress, meaning it was 30+30=60 dollars.\nPatty's dress was $10 more than Ida's $60 dress, meaning it was 60+10=70 dollars.\nTherefore, all four women together spent 70+60+20+30=180 dollars.\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original solution. In the original_solution, the step 2 calculation is based on the results of step 1. After deleting original step 2, the new step 2 should be based on step 1's result, so the formula should now reference the 30 dollars directly rather than the result of deleted step 2's 20 dollars. The number 30 dollars also appears in deleted step 2, so we choose 30 as the reference for the new step 2 because it is the larger number used in the original step 2. Although the new calculation (30+30=60 dollars) makes sense in context, it is incorrect because it does not follow the decrement given in the original question for Jean’s dress (which is $10 less than $30). The subsequent calculations in step 3 and 4 then inherit this error, leading to the transformed_solution with a first erroneous reference appearing at the new step 2, incorrectly inflating the price of Ida's dress and ultimately the total amount.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly follows the chain of relationships between the costs of the dresses. It starts with Pauline's dress cost and correctly calculates the cost of each subsequent dress based on the given relationships. Finally, it correctly adds up the costs of all dresses to find the total amount spent."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Find a sum for 1 st 8 prime number ' s ?",
+        "original_solution": "The first 8 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19 = 77\n#### 77",
+        "original_answer": 77.0,
+        "transformed_solution": "The sum of the first 8 prime numbers is 2 + 3 + 5 + 11 + 13 + 17 + 19 = 70\n#### 70",
+        "transformed_answer": 70.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the original solution is simplified by removing the listing of the prime numbers as individual steps, and thus also removing the number 7 from the sum. After deleting the listing step, the sum incorrectly omits the prime number 7, causing the sum to be lower than the correct value. The subsequent steps are affected by this omission. The sum of the first 8 prime numbers is recalculated without the number 7, yielding the incorrect result of 70 instead of 77. It is the first step in the transformed solution that commits the error of the missing number 7, so the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly includes the number 11, which is not a prime number, in the sum of the first 8 prime numbers. Therefore, there is a missing step to correctly identify the first 8 prime numbers, and this error belongs to missing_step."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The operands and operators of the formula in step 1 are completely correct, but only the result is incorrectly calculated as 63 instead of 61, so it belongs to calculation_error."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nThe total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n2p = 28 + 2p\nThen, after simplifying we have 0 = 28, which is not possible.\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 4. In the original_solution, step 4 references the total number of legs and heads, and the relationship between them stated in the question, setting up the equation 4d + 2p = 28 + 2(d + p). Step 5 references the result of step 4 and simplifies the equation. Therefore, after deleting step 4, step 5 directly attempts to use the elimination method incorrectly without establishing the proper equation from the relationship of legs and heads; it incorrectly concludes that 2p can be canceled out from both sides without considering the dogs' count, leading us to a nonsensical simplification 0 = 28, which implies that the system of equations has no solution. This step also incorrectly references numbers from the question itself. Since this is nonsense and does not provide a solution, the transformed_answer is set to -1 to indicate an error in the process. It is step 3 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step removed in the transformed_solution, so the wrong_step is 3.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 4. Step 4 mistakenly equates 2p to 28 + 2p, which leads to the equation 0 = 28 after simplifying, which is not possible. There is a missing step here to correctly set up the equation based on the given information, and this error belongs to missing_step."
+    }
+]

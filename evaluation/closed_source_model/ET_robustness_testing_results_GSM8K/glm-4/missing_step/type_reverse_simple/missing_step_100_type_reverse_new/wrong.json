@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Adam had a farm with animals. He had 12 cows and twice as many sheep. He decided to buy 3 pigs for every sheep he had. How many animals were on the farm after the transaction?",
+        "original_solution": "Adam had twice as many sheep as the cows, so 2 sheep/cow * 12 cows = 24 sheep.\nFor every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 24 sheep + 12 cows = 108 animals.\n#### 108",
+        "original_answer": 108.0,
+        "transformed_solution": "For every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 12 cows = 84 animals.\n#### 84",
+        "transformed_answer": 84.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed. In the original_solution, step 1 calculates the number of sheep based on the number of cows, and this result is used in step 2 to calculate the number of pigs. After deleting step 1, the number of sheep is missing in the modified solution, and step 2 should change the formula from 3 pigs/sheep * 24 sheep to 3 pigs/sheep * (2 * 12 cows). However, this has been incorrectly omitted, and the calculation of pigs is directly based on the number of sheep from the removed step, resulting in an unaccounted number of sheep in step 2. The subsequent step 3, which originally summed up pigs, sheep, and cows, now incorrectly sums up just pigs and cows, leading to a wrong total count of animals on the farm. It is step 1 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step with the unaccounted number in the transformed_solution, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the number of sheep Adam has by doubling the number of cows, and then correctly multiplies that by 3 to find the number of pigs. It adds the number of cows and pigs to find the total number of animals on the farm, which is done without any error in the steps or calculations."
+    },
+    {
+        "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+        "original_solution": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = 100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = 40 meters.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If the total distance is 140m, the distance between the house and the market is 140m - 50m = 90 meters.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformation, I have deleted the first step, which involves Andy's return trip from school to his house. The original step 1 involves adding the two 50m trips together for a total of 100m. By removing this step, we no longer account for the return trip from school, and thus the calculation in the transformed solution refers to only one leg of the journey from the house to the school (50m). Since in our transformation we remove step 1, we then modify step 2 to include only one 50m trip, changing the formula from 140m - 100m = 40 meters to 140m - 50m = 90 meters. It should be noted that while the calculation itself is algebraically correct, the premise is wrong because it does not consider the entire trip. The first step (now also the wrong_step) references the correct number from the question and no intermediate steps are present, thus making the entire reasoning incorrect and leading to a different transformed answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the distance between the house and the market by subtracting the distance from the house to school, which is given in the question. There are no errors in the calculation or the reasoning process."
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Iris’ family is planning a surprise birthday party for her. The party will include her 3 uncles and 4 aunts who have a son and daughter each as well as her brother and mother. In total, how many people are coming to Iris’ birthday party?",
+        "original_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 3 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 3 people in each family unit = 21 people.\nIncluding her mother and brother, there will be a total of 21 people + 1 mother + 1 brother = 23 people coming to her party.\n#### 23",
+        "original_answer": 23.0,
+        "transformed_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 4 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 4 people in each family unit = 28 people.\nIncluding her mother and brother, there will be a total of 28 people + 1 mother + 1 brother = 30 people coming to her party.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution introduces a calculation error at step 1 by mistakenly counting each family unit as having 4 people instead of 3. This error then changes the expected number of people from each family unit and alters all the subsequent steps that rely on this number. The original and unrelated steps (total number of aunts and uncles) remain correct while steps that involve calculations with the family unit size inherit this error.",
+        "is_correct": "no",
+        "corrected_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 3 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 3 people in each family unit = 21 people.\nIncluding her mother and brother, there will be a total of 21 people + 1 mother + 1 brother + Iris = 24 people coming to her party.\n#### 24",
+        "corrected_answer": 24.0,
+        "corrected_explanation": "Step 1 first makes a mistake in the calculation process, stating that each family unit consists of 4 people instead of 3 (1 son + 1 daughter + 1 aunt/uncle). The correct calculation should be 1 son + 1 daughter + 1 aunt/uncle = 3 people per family unit. This error affects the subsequent steps that reference its results, leading to the final wrong result. The correct total should include Iris as well, making the final count 24."
+    },
+    {
+        "question": "There were sweets on the table. Jack came and took half of all the candies and 4 more candies. Then Paul came and took the remaining 7 sweets. How many sweets were on the table at first?",
+        "original_solution": "Jack took 4 more candies than the half, and Paul took the rest, which means 7 + 4 = 11 candies were half of all candies.\nThat means at first there were 11 * 2 = 22 candies.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "Jack took 4 more candies than the half, and Paul took the rest, which means 7 + 4 = 12 candies were half of all candies.\nThat means at first there were 12 * 2 = 24 candies.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution contains a calculation error in step 1 where the half of all candies is incorrectly calculated as 7 + 4 = 12 instead of the correct 7 + 4 = 11. This wrong step then impacts the rest of the solution, with the initial number of candies being incorrectly calculated as 12 * 2 = 24 instead of the correct 11 * 2 = 22. The error is consistent in that only the calculation has been changed, with no operands or operators being modified, and subsequent steps are all correctly calculated based on the erroneous intermediate value.",
+        "is_correct": "no",
+        "corrected_solution": "Jack took 4 more candies than the half, and Paul took the rest, which means 7 candies were half of all candies after Jack took his share. If we add back the 4 candies Jack took extra, we get 7 + 4 = 11 candies, which represents half of all candies plus the 4 extra Jack took. Therefore, at first there were (11 - 4) * 2 = 14 candies.",
+        "corrected_answer": 14.0,
+        "corrected_explanation": "Step 1 first makes a mistake in the calculation process, adding 7 (the remaining candies Paul took) to 4 (the extra candies Jack took) to get 12, which was incorrectly considered as half of all candies. The correct calculation should consider that the 7 candies were the remaining half after Jack took half plus 4 more candies. Therefore, the half before Jack took the extra 4 should be 7 + 4 = 11, and the initial total should be (11 - 4) * 2 = 14."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "corrected_solution": "He needs to do 15 wall push-ups, then 15 high elevation push-ups, and then 15 low elevation push-ups before he starts floor push-ups. That's a total of 15 reps for each type of push-up, and there are 3 types before floor push-ups, so he needs to do 15*3=45 progressions.\nSince he trains 5 days a week, it will take him 45/5=9 days to complete all progressions.\nHowever, since he trains only 5 days a week, we need to convert days into weeks. There are 7 days in a week, but he only trains 5 days, so it will take him 9/5=1.8 weeks. Since he cannot train for a fraction of a week, we round up to the next whole week, which means it will take him 2 weeks to get to floor push-ups.\n#### 2",
+        "corrected_answer": 2.0,
+        "corrected_explanation": "Step 2 first makes a mistake in the calculation process, dividing 45 by 5 to get 7 weeks instead of 9 days. The correct calculation is 45/5=9 days. Since John trains 5 days a week, it will take him 9/5=1.8 weeks, which rounds up to 2 weeks, to get to floor push-ups."
+    }
+]

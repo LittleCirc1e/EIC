@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Janice needs to go to watch a movie in 2 hours. before she could leave, she needs to finish her homework which takes 30 minutes; clean her room which takes half as long as her homework; walk the dog which takes 5 minutes more than making homework; take out the trash which takes 1/6 of the time it takes her to do the homework. How many more minutes do Janice have left before the movie starts?",
+        "original_solution": "Janice takes 30/2 = 15 minutes to clean her room.\nIt takes 30 + 5 = 35 minutes for her to walk the dog.\nIt takes her 30 x 1/6 = 5 minutes to take out the trash.\nSo, it will take 30 + 15 + 35 + 5 = 85 minutes to do all those chores.\nSince there are 60 minutes in 1 hour, then 2 hours is 2 x 60 = 120 minutes.\nThus, Janice still has 120 - 85 = 35 minutes left before the movie starts.\n#### 35",
+        "original_answer": 35.0,
+        "transformed_solution": "Janice takes 30/2 = 15 minutes to clean her room.\nIt takes 30 + 5 = 35 minutes for her to walk the dog.\nIt takes her 30 x 1/6 = 5 minutes to take out the trash.\nSo, it will take 30 + 15 + 35 + 5 = 85 minutes to do all those chores.\nSince there are 50 minutes in 1 hour, then 2 hours is 2 x 50 = 100 minutes.\nThus, Janice still has 100 - 85 = 15 minutes left before the movie starts.\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 5,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours being equal to 100 minutes in the transformed_solution instead of 120 minutes as correctly calculated in the original_solution. This error affects the final step 6, changing the time Janice has left from 35 minutes to 15 minutes. All the unrelated previous steps and calculations remain unaffected by this error.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 2 x 50 = 100 instead of 2 x 60 = 120. This affects step 7, where the calculation should be 120 - 85 = 35. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "It takes a dog groomer 10 minutes to dry a short-haired dog like a beagle. It takes him twice as long to dry a full-haired, fluffy dog like a german shepherd. One morning, he has 6 short-haired dogs to dry and 9 full-haired dogs to dry. How many hours does it take him to dry all of the dogs?",
+        "original_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n60 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/60 = 4 hours drying the dogs\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "It takes 10 minutes to dry the coat of a short-haired dog and twice as long for a full haired dog so they take 10*2 = 20 minutes to dry\nHe had 6 short hair dogs and they took 10 minutes to dry each so they took 6*10= 60 minutes to dry\nHe had 9 full haired dogs that took 20 minutes to dry each so they took 9*20 = 180 minutes to dry\nTogether is takes him 60+180 = 240 minutes to dry all of the dogs\n50 minutes are in 1 hour and he spends 240 minutes on the dogs so he worked for 240/50 = 4.8 hours drying the dogs\n#### 4.8",
+        "transformed_answer": 4.8,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 240/60 = 4 hours in the original_solution becoming 240/50 = 4.8 hours in the transformed_solution. The error in unit conversion only affects the last calculation related to the conversion between minutes and hours, and the other calculation processes concerning the drying time per dog breed are correct and unchanged.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 240/50=4.8 instead of 240/60=4. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    }
+]

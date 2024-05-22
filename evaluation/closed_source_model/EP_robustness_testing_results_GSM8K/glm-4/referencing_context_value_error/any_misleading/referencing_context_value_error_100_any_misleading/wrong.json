@@ -1,0 +1,163 @@
+[
+    {
+        "question": "For homework, Brooke has 15 math problems, 6 social studies problems, and 10 science problems. He can answer each math problem for 2 minutes while answering each social studies problem takes him 30 seconds. If he can answer each science problem in 1.5 minutes, how long will it take Brooke to answer all his homework?",
+        "original_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 30 seconds = 180 seconds to answer all social studies problems.\nIn minutes, this is equal to 180/60 = 3 minutes.\nIt will take him 10 x 1.5 minutes = 15 minutes to answer all science problems.\nTherefore, Brooke will take 30 + 3 + 15 = 48 minutes to finish his homework.\n#### 48",
+        "original_answer": 48.0,
+        "transformed_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 20 seconds = 120 seconds to answer all social studies problems.\nIn minutes, this is equal to 120/60 = 2 minutes.\nIt will take him 10 x 1.5 minutes = 15 minutes to answer all science problems.\nTherefore, Brooke will take 30 + 2 + 15 = 47 minutes to finish his homework.\n#### 47",
+        "transformed_answer": 47.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 30 seconds in the question as 20 seconds wrongly, and calculates 6 x 20 seconds = 120 seconds instead of 6 x 30 seconds = 180 seconds. Its subsequent related step will be affected, calculating 120/60 = 2 minutes instead of 180/60 = 3 minutes in step 3. The final step will also be affected, calculating 30 + 2 + 15 = 47 minutes instead of 30 + 3 + 15 = 48 minutes in step 5. Please note that you should only consider one error, so all other steps that reference 30 seconds still do so correctly except for the step referenced incorrectly.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the time taken for each type of problem and then summed them up to get the total time taken to finish all the homework."
+    },
+    {
+        "question": "Ella earned $33 for 3 hours of dog walking. If she continues to walk dogs at the same rate, how much would she earn after 12 hours?",
+        "original_solution": "Ella earned $33 / 3 hours of dog walking = $11 per hour.\nSo for 12 hours of dog walking, Ella would earn $11 x 12 = $132.\n#### 132",
+        "original_answer": 132.0,
+        "transformed_solution": "Ella earned $30 / 3 hours of dog walking = $10 per hour.\nSo for 12 hours of dog walking, Ella would earn $10 x 12 = $120.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $33 in the question as $30 wrongly, and calculates $30 / 3 hours of dog walking = $10 per hour instead of $33 / 3 = $11 per hour. Its subsequent related step will be affected, calculating $10 x 12 = $120 instead of $11 x 12 = $132 in step 2. Please note that you should only consider one error, so step 2 still references 12 in the question correctly.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the hourly rate and then accurately multiplied that rate by the number of hours to find the total earnings."
+    },
+    {
+        "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+        "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+        "original_answer": 520.0,
+        "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\nHe then loses half of them for 1000/2= 500 cards remaining.\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of baseball cards Phil collected in a year by multiplying the number of cards per week by the number of weeks in a year. Then, the student correctly divided this number by 2 to account for the loss in the fire, resulting in the correct number of cards remaining."
+    },
+    {
+        "question": "Ann is cutting fabric to make curtains. She cuts a 4 foot by 6 foot rectangle for the living room, and a 2 foot by 4 foot rectangle for the bedroom. If the bolt of fabric is 16 feet by 12 feet, how much fabric is left in square feet?",
+        "transformed_solution": "First figure out how many square feet the original bolt of fabric was: 16 feet * 12 feet = 192 square feet\nThen figure out how much fabric Ann took for the living room curtains: 4 feet * 6 feet = 24 square feet\nThen figure out how much fabric Ann took for the bathroom curtains: 2 feet * 4 feet = 8 square feet\nFinally, subtract the square footage of both sets of curtains from the total square footage: 192 - 24 - 8 = 160 square feet\n#### 160",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student correctly calculated the total square footage of the bolt of fabric and the fabric used for the living room curtains. However, the student mentioned 'bathroom curtains' in the reasoning process, which was not part of the original question. The question only asked for the living room and bedroom curtains. Additionally, the student did not account for the fact that the fabric for the bedroom curtains was also cut. The correct calculation should have subtracted the area of both the living room and bedroom curtains from the total fabric area."
+    },
+    {
+        "question": "Caleb bought 10 cartons of ice cream and 4 cartons of frozen yoghurt. Each carton of ice cream cost $4 and each carton of frozen yoghurt cost $1. How much more did Caleb spend on ice cream than on frozen yoghurt?",
+        "transformed_solution": "The cost of the ice cream is 10 × $4 = $40.\nThe cost of the frozen yoghurt is 4 × $1 = $4.\nCaleb spent $40 − $4 = $36 more on ice cream than on frozen yogurt.\n#### 36",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation of the difference in cost is incorrect. The student subtracted the cost of frozen yogurt from the cost of ice cream, but the subtraction is done incorrectly. The correct difference should be $40 - $4 = $36, not $36 more as stated."
+    },
+    {
+        "question": "Leo's assignment was divided into three parts. He finished the first part of his assignment in 25 minutes. It took him twice as long to finish the second part. If he was able to finish his assignment in 2 hours, how many minutes did Leo finish the third part of the assignment?",
+        "transformed_solution": "It took Leo 25 x 2 = 50 minutes to finish the second part of the assignment.\nLeo finished the first and second parts of the assignment in 25 + 50 = 75 minutes.\nHe finished the entire assignment in 60 x 2 = 120 minutes.\nTherefore, it took Leo 120 - 75 = 45 minutes to finish the third part of the assignment.\n#### 45",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly converted 2 hours into 60 x 2 minutes. 2 hours is equal to 120 minutes, not 120 minutes. Therefore, the calculation for the time taken for the third part is incorrect."
+    },
+    {
+        "question": "Liza bought 10 kilograms of butter to make cookies. She used one-half of it for chocolate chip cookies, one-fifth of it for peanut butter cookies, and one-third of the remaining butter for sugar cookies. How many kilograms of butter are left after making those three kinds of cookies?",
+        "transformed_solution": "Liza used 10/2 = 5 kilograms of butter for the chocolate chip cookies.\nThen, she used 10/5 = 2 kilograms of butter for the peanut butter cookies.\nShe used 5 + 2 = 7 kilograms of butter for the chocolate and peanut butter cookies.\nSo, only 10 -7 = 3 kilograms of butter was left.\nThen, Liza used 3/3 = 1 kilograms of butter for the sugar cookies.\nTherefore, only 3-1 = 2 kilograms of butter were left.\n#### 2",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly calculated the amount of butter used for the sugar cookies. They used one-third of the remaining butter after the first two types of cookies, but they should have used one-third of the butter remaining after the chocolate and peanut butter cookies were made. The correct calculation for the sugar cookies would be one-third of 3 kilograms, which is 1 kilogram, leaving 2 kilograms of butter remaining."
+    },
+    {
+        "question": "Every hour Joanne has to collect the coins out of the fountain inside the mall. During the first hour, she collected 15 coins. For the next two hours, she collected 35 coins from the fountain. In the fourth hour, she collected 50 coins from the fountain but she gave 15 of them to her coworker so she could buy a soda. How many coins did she have after the fourth hour?",
+        "transformed_solution": "15 coins collected in hour one\n35 coins collected in hour two\n35 coins collected in hour three\n50 coins collected in hour four\nBefore giving her coworker some coins there were 15+35+35+50=135 coins\nThe number of coins after given 15 to her coworker is 135-15=120\n#### 120",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student did not account for the coins collected in the second hour twice. The student added the collection from the second hour twice, which is an error in calculation."
+    },
+    {
+        "question": "Jerry’s two daughters play softball on different teams. They each have 8 games this season. Each team practices 4 hours for every game they play. If each game lasts for 2 hours, how many hours will Jerry spend at the field watching his daughters play and practice altogether?",
+        "transformed_solution": "Jerry will spend 8 games x 2 hours per game = 16 hours watching one daughter play her games.\nHe will spend 16 x 2 = 32 hours watching both daughters play their games.\nHe will spend 8 games x 4 hours of practice = 32 hours watching one daughter practice.\nHe will spend 32 x 2 = 64 hours watching both daughters practice.\nHe will spend a total of 32 hours watching games + 64 hours watching practice = 96 hours.\n#### 96",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student double-counted the time spent watching games and practice for each daughter. The correct calculation should add the time spent on games and practice for one daughter and then double that total for both daughters."
+    },
+    {
+        "question": "A bear is preparing to hibernate for the winter and needs to gain 1000 pounds. At the end of summer, the bear feasts on berries and small woodland animals. During autumn, it devours acorns and salmon. It gained a fifth of the weight it needed from berries during summer, and during autumn, it gained twice that amount from acorns. Salmon made up half of the remaining weight it had needed to gain. How many pounds did it gain eating small animals?",
+        "transformed_solution": "The bear gained 1 / 5 * 1000 = 200 pounds from berries.\nIt gained 2 * 200 = 400 pounds from acorns.\nIt still needed 1000 - 200 - 400 = 400 pounds.\nThus, it gained 400 / 2 = 200 pounds from salmon.\nTherefore, the bear gained 400 - 200 = 200 pounds from small animals.\n#### 200",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly calculated the weight gained from small animals. The bear had already gained 200 pounds from berries and 400 pounds from acorns, which totals 600 pounds. The remaining weight needed to be gained was 1000 - 600 = 400 pounds, not 400 as the student calculated. Half of this remaining weight, 400 / 2 = 200 pounds, was gained from salmon, not small animals. The weight gained from small animals should be the remaining weight after subtracting the weight gained from berries, acorns, and salmon, which is 400 - 200 = 200 pounds, but this is the weight gained from salmon, not small animals. The student did not account for the weight gained from small animals separately."
+    },
+    {
+        "question": "James earns $20 an hour while working at his main job.  He earns 20% less while working his second job.  He works 30 hours at his main job and half that much at his second job.  How much does he earn per week?",
+        "transformed_solution": "James earns 20*.2=$4 less while working his second job\nSo he earns 20-4=$16 an hour\nAt his first job he earns 20*30=$600\nHe works 30/2=15 hours at his second job\nSo he earns 15*16=$240\nSo he earns 600+240=$840 a week\n#### 840",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the reduced hourly rate at the second job is incorrect. James earns 20% less at his second job, which would be 20 * 0.20 = $4 less per hour, not $20 * 0.20. The correct reduced hourly rate for the second job should be $20 - $4 = $16 per hour. However, the final calculation multiplying the hours worked at the second job by this incorrect reduced rate leads to an incorrect total."
+    },
+    {
+        "question": "Tara has been planning to buy a laptop which costs $1000. A computer shop accepts payment in installments of $65 per month provided that a 20% down payment is made. If Tara wants to pay an additional $20 for the down payment, how much will her balance be after paying for 4 months?",
+        "transformed_solution": "Tara has to make a $1000 x 20/100 = $200 down payment.\nSince Tara wants to pay $20 more for the down payment, her total down payment will be $200 + $20 = $220.\nSo her remaining balance payable over a year is $1000 - $220 = $780.\nTara has to make a monthly payment of $780/year / 12 months/year = $65/month.\nThe total cost of her payments for 4 months is $65/month x 4 months = $260.\nTherefore, Tara's balance after 4 months is $780 - $260 = $520.\n#### 520",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student correctly calculated the down payment and the remaining balance but made a mistake in the last step. The total cost of payments for 4 months should be $260, but the student did not subtract this from the remaining balance correctly. The balance after 4 months should be $780 - $260 = $520, but the student's final answer is correct."
+    },
+    {
+        "question": "Jesse and Mia are competing in a week long race. They have one week to run 30 miles. On the first three days Jesse averages (2/3) of a mile. On day four she runs 10 miles. Mia averages 3 miles a day over the first 4 days. What is the average of their average that they have to run over the final three days?",
+        "transformed_solution": "Jesse runs 2 miles in the first three days because 3 x (2/3) = 2\nJesse has 18 miles left to run because 30 - 10 - 2 = 18\nJesse has to run an average of 6 miles a day because 18 / 3 = 6\nMia runs 12 miles over the first four days because 4 x 3 = 12\nShe has 18 miles left to run because 30 - 12 = 18\nShe has to run six miles a day because 18 / 3 = 6\nThe total they both have to run is 12 miles a day\nThe average they have to run per day on average is 6 miles because 12 / 2 = 6\n#### 6",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student correctly calculated the distances each person has to run on the final three days, but incorrectly calculated the average of their averages. The average should be the total distance left for both Jesse and Mia, divided by the number of days left, not the average of their individual averages."
+    },
+    {
+        "question": "Nancy is filling an aquarium for her fish. She fills it halfway and goes to answer the door. While she's gone, her cat knocks the aquarium over and spills half the water in it. Then Nancy comes back and triples the amount of water in the aquarium. If the aquarium is 4 feet long, 6 feet wide, and 3 feet high, how many cubic feet of water are in the aquarium?",
+        "transformed_solution": "First calculate the volume of the aquarium by multiplying its length, width and height: 4 ft * 6 ft * 3 ft = 72 cubic ft\nThen figure out what proportion of the aquarium is full after the cat knocks it over: 1/2 * 1/2 = 1/4\nThen figure out what proportion of the aquarium is full after Nancy refills it: 3 * 1/4 = 3/4\nNow multiply the proportion of the aquarium that's full by the aquarium's volume to find out how much water is in it: 72 cubic ft * 3/4 = 54 cubic ft\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly applied the proportions. After the cat spills half the water, it should be 1/2 of the original amount, not 1/4. Then, when Nancy triples the amount, it should be 3 times the amount after the spill, not 3/4 of the original volume."
+    },
+    {
+        "question": "Dale and Andrew had breakfast at a cafe. A slice of toast costs £1, and eggs cost £3 each. Dale had 2 slices of toast and 2 eggs. Andrew had 1 slice of toast and 2 eggs. How much did their breakfast cost?",
+        "transformed_solution": "The cost of Dale's toast is 2 × $1 = $2.\nThe cost of Andrew's toast is 1 × $1 = $1.\nThe cost of Dale's eggs is 2 × $3 = $6.\nThe cost of Andrew's eggs is 2 × $3 = $6.\nTheir breakfast cost $2 + $1 + $6 + $6 = $15.\n#### 15",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly used the dollar sign ($) instead of the pound sign (£) for the currency, which is a significant error as it changes the currency unit. The calculation itself appears to be correct, but the currency mismatch makes the solution incorrect."
+    },
+    {
+        "question": "A garden produced 237 potatoes, 60 fewer cucumbers and twice as many peppers than the cucumbers. How many vegetables did the garden produce?",
+        "transformed_solution": "The garden produced 237 potatoes - 60 = 177 cucumbers.\nThe garden produced 177 cucumbers * 2 peppers/cucumber = 354 peppers.\nThe garden produced 237 potatoes + 177 cucumbers + 354 peppers = 768 vegetables.\n#### 768",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student incorrectly subtracted 60 from the number of potatoes to find the number of cucumbers. The number of cucumbers should be 237 - 60 = 177, but this was not related to the number of potatoes. The calculation for the number of peppers is correct, but the total should be calculated by adding the number of potatoes, cucumbers, and peppers together, not by adding the number of potatoes to the product of cucumbers and peppers."
+    },
+    {
+        "question": "Paityn has 20 red hats and 24 blue hats. Her friend Zola has 4/5 times as many red hats as she has and twice the number of blue hats. If they combine all the hats together and share them equally between themselves, calculate the number of hats each gets.",
+        "transformed_solution": "Paityn has a total of 20 hats + 24 hats = 44 hats.\nThe number of red hats that Zola has is 4/5 * 20 hats = 16 hats\nZola also has 2 * 24 hats = 48 blue hats.\nZola has a total of 48 hats + 16 hats = 64 hats.\nWhen they combine their hats, they have 64 hats + 44 hats = 108 hats\nIf they share the hats equally, each get 108 hats / 2 people = 54 hats/person\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student correctly calculated the number of hats each friend has individually, but made an error when combining the total number of hats. The correct total number of hats when combined should be 44 hats (Paityn) + 64 hats (Zola) = 108 hats. However, the student incorrectly added 44 hats + 48 hats for Zola's blue hats, which led to an incorrect total of 136 hats. The correct calculation for the number of hats each gets after combining and sharing equally is 108 hats / 2 people = 54 hats/person."
+    },
+    {
+        "question": "Krystian works in the library. He borrows an average of 40 books every day. Every Friday, his number of borrowed books is about 40% higher than the daily average. How many books does he borrow in a week if the library is open from Monday to Friday?",
+        "transformed_solution": "The number of books borrowed on Friday is higher by 40 * 40/100 = 16 books.\nThere are 5 days from Monday to Friday inclusive, so Krystian borrows an average of 5 * 40 = 200 books during that time.\nWith Friday's increase in borrowings, during one week Krystian borrows 200 + 16 = 216 books.\n#### 216",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student correctly calculated the increase in books borrowed on Friday but incorrectly added this to the total number of books borrowed in a week. The student should have added the extra 16 books to the 40 books borrowed on Friday and then added the total for each day to get the weekly total."
+    },
+    {
+        "question": "Sally and Bob have made plans to go on a trip at the end of the year. They both decide to work as babysitters and save half of what they've earned for their trip. If Sally makes $6 per day and Bob makes $4 per day, how much money will they both have saved for their trip after a year?",
+        "transformed_solution": "Saly saves 1/2 * $6/day = $3/day.\nSince each year have 365 days, the total amount of money Sally will save in a year is $3/day * 365 days/year = $1095/year\nBob saves 1/2 * $4/day = $2/day.\nThe total amount of money Bob will have saved in a year is $2/day * 365 days/year = $730/year\nIn total, Sally and Bob would have saved $730 + $1095 = $1825\n#### 1825",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student has made a calculation error. Sally's daily savings are correct, but the student has miscalculated the total annual savings by not considering that there are 365 days in a year. Similarly, Bob's total annual savings are also incorrect due to the same error. The correct calculation should be $3/day * 365 days/year for Sally, and $2/day * 365 days/year for Bob."
+    },
+    {
+        "question": "Nancy, the librarian, is shelving books from the cart. She shelved 12 history books, 8 romance books, and 4 poetry books from the top section of the cart. Half the books on the bottom section of the cart were mystery books, which she quickly put back into place. Then, she shelved the remaining books from the bottom of the cart, including 5 Western novels and 6 biographies. How many books did she have on the book cart when she started?",
+        "transformed_solution": "Half of the books on the bottom section of the cart are mystery books, which means they are the same as the number of Western novels and biographies put together. So there are 5 + 6 = 11 mystery novels.\nAdd them all together, and there are 12 history + 8 romance + 4 poetry + 11 mystery + 5 Western + 6 biographies = 46 books total\n#### 46",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The student did not account for the fact that the mystery books are only half of the bottom section, not the same as the sum of Western novels and biographies. The total number of books must include the full number of mystery books, not just 11."
+    }
+]

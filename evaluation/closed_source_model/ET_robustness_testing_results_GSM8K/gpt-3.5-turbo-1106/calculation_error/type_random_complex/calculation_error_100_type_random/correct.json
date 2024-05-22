@@ -1,0 +1,30 @@
+[
+    {
+        "question": "The battery charge in Mary’s cordless vacuum cleaner lasts ten minutes. It takes her four minutes to vacuum each room in her house. Mary has three bedrooms, a kitchen, and a living room. How many times does Mary need to charge her vacuum cleaner to vacuum her whole house?",
+        "original_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 25 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 25 / 10 = 2.5 times to vacuum her whole house.\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 4 * 5 = 25 instead of 4 * 5 = 20 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 20 / 10 = 2 to 25 / 10 = 2.5. The modified transformed_solution should only include the single error in the specified step, with correct calculations in the subsequent steps except for the inherited wrong result. It should be noted that only one calculation error is considered, subsequent steps will inherit its error, and the final transformed_answer is affected as well.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4. The operands and operators of the formula in step 4 are completely correct, but only the result is incorrectly calculated as 2.5 instead of 3, so it belongs to calculation_error."
+    },
+    {
+        "question": "Hot dog buns come in packages of 8. For the school picnic, Mr. Gates bought 30 packages of hot dog buns. He has four classes with 30 students in each class. How many hot dog buns can each of Mr. Gates' students get?",
+        "original_solution": "Mr. Gates bought 30 x 8 = 240 hot dog buns.\nIn his four classes, he has a total of 4 x 30 = 120 students.\nTherefore, each of his students can get 240/120 = 2 hot dog buns.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mr. Gates bought 30 x 8 = 240 hot dog buns.\nIn his four classes, he has a total of 4 x 30 = 160 students.\nTherefore, each of his students can get 240/160 = 1.5 hot dog buns.\n#### 1.5",
+        "transformed_answer": 1.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error is introduced by changing the total number of students from 120 to 160 in step 2 without changing the actual calculation process. This makes the calculation 240/160 = 1.5 in the next step, producing a different transformed answer of 1.5 hot dog buns per student instead of the original 2. The subsequent step related to the erroneous step 2 correctly inherits the error by using the wrong total number of students, but otherwise performs correct operations.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3. The operands and operators of the formula in step 3 are completely correct, but only the result is incorrectly calculated as 1.5 instead of 1, so it belongs to calculation_error."
+    }
+]

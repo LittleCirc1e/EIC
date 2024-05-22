@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Find the area of trapezium whose parallel sides are 12 cm and 16 cm long, and the distance between them is 14 cm?",
+        "original_solution": "The area of a trapezium is given by the formula A = 1/2 * (a + b) * h, where a and b are the lengths of the parallel sides and h is the distance between them.\nSo, the area of the trapezium is 1/2 * (12 + 16) * 14 = 1/2 * 28 * 14 = 196 square cm\n#### 196",
+        "original_answer": 196.0,
+        "transformed_solution": "The area of a trapezium is given by the formula A = (a * b) * h, where a and b are the lengths of the parallel sides and h is the distance between them.\n",
+        "transformed_answer": 2688.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the area of a trapezium with a formula that would calculate the volume of a rectangular prism. The question requires that the area of the trapezium to be solved be equal to half the sum of the parallel sides' lengths multiplied by the distance between them, rather than the product of the lengths of the parallel sides multiplied by the height, which is not a valid formula for the area of trapezium or any geometric figure in this context. This invalid implementation changes the actual correct formula used in the original_solution from A = 1/2 * (a + b) * h becoming A = (a * b) * h in the transformed_solution. The subsequent step 2 using this incorrect formula is also affected, resulting in 192 * 14 = 2688 square cm. Note that the language description of step 1 in the original_solution remains unchanged in the transformed_solution. The changed formula only affects the calculations, not the descriptive language, and this intentionally introduced error propagates through to the final step, leading to a transformed answer that differs from the original answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies the formula for the area of a trapezium as A = (a * b) * h, where a and b are the lengths of the parallel sides and h is the distance between them. However, the solution does not show the calculation. The correct calculation should be: A = (12 cm + 16 cm) / 2 * 14 cm = 28 cm * 14 cm = 392 cm^2."
+    },
+    {
+        "question": "the ratio between the length and the breadth of a rectangular park is 3 : 2 . if a man cycling along the boundary of the park at the speed of 12 km / hr completes one round in 9 minutes , then the area of the park ( in sq . m ) is :",
+        "original_solution": "Let the length of the park be 3x and the breadth be 2x\nPerimeter of the park = 2(3x + 2x) = 10x\nTime taken to complete one round = 9 minutes = 9/60 hours = 0.15 hours\nSpeed = Distance/Time, so Distance = Speed * Time = 12 * 0.15 = 1.8 km = 1800m\nAlso, Distance = Perimeter = 10x\nSo, 10x = 1800\nx = 180\nLength = 3x = 540m, Breadth = 2x = 360m\nArea = Length * Breadth = 540 * 360 = 194400 sq. meters\n#### 194400",
+        "original_answer": 194400.0,
+        "transformed_solution": "Let the length of the park be 3x and the breadth be 2x\nPerimeter of the park = 2(3x + 2x) = 10x\nTime taken to complete one round = 9 minutes = 9/60 hours = 0.15 hours\nSpeed = Distance/Time, so Distance = Speed * Time = 12 * 0.15 = 1.8 km = 1800m\nAlso, Distance = Perimeter = 10x\nSo, 10x = 1800\nx = 180\nLength = 3x = 540m, Breadth = 2x = 360m\n",
+        "transformed_answer": 1800.0,
+        "wrong_step": 8,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 8 confuses the formula for area with the formula for perimeter. The question asks for the area of the rectangle to be solved, which should be length multiplied by breadth, but it has been mistakenly changed to 2 times the sum of length and breadth, which represents the formula to calculate the perimeter. The formerly correct area formula 'Length * Breadth' in the original_solution has been incorrectly changed to '2(Length + Breadth)' in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 8 mistakenly uses the formula for rectangular perimeter instead of the area, while the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the length and breadth of the park by setting up the ratio, finding the perimeter, and then using the speed and time to find the distance around the park, which is equal to the perimeter. The conversion of time and distance is done accurately, and the final area calculation is correct."
+    }
+]

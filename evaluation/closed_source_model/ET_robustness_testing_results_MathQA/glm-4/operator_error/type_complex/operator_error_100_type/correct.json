@@ -1,0 +1,16 @@
+[
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 + ? = 62976\n? = 62976 - 123\n#### 62853",
+        "transformed_answer": 62853.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 1 into addition by changing 'x' to '+', which subsequently changes '123 x ? = 62976' to '123 + ? = 62976'. The next step involves calculating the value of '?', which changes from '62976 / 123' in the original solution to '62976 - 123' in the transformed solution. Consequently, the result changes from '? = 512' to '? = 62853'. It should be noted that the only operator in step 1 is incorrect, but its calculation is done correctly, leading to a different result from the original answer. The rest of the calculations are correct based on the transformed step.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 1. The operator used should be division, not addition, as the question is asking for a division problem. The formula should be 62976 ÷ 123 = ? instead of 123 + ? = 62976. This is an operator error because the operator is incorrect, leading to an incorrect approach to solve the problem."
+    }
+]

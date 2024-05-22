@@ -1,0 +1,30 @@
+[
+    {
+        "question": "John builds a box. The box is 26 inches by 26 inches by 14 inches. The walls are 1 inch thick on each side. How much is the internal volume in cubic feet?",
+        "original_solution": "The walls take away 2*1=2 inches from each dimension\nSo the longer sides are 26-2=24 inches\nThat is 24/12=2 feet\nThe smaller dimension is 14-2=12 inches\nThat is 12/12=1 foot\nSo the internal volume is 2*2*1=4 cubic feet\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The walls take away 2*1=2 inches from each dimension\nSo the longer sides are 26-2=24 inches\nThat is 24/12=2 feet\nThe smaller dimension is 14-2=12 inches\nThat is 12/12=1 foot\nSo the internal volume is (2*2)+(2*1)+(1*2)=8 cubic feet\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 5,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 confuses the volume and surface area of a cube or cuboid. The question requires that the volume of the cuboid to be solved be equal to the length multiplied by width multiplied by height, rather than the sum of products of each pair of dimensions, which is used for calculating perimeter of base or lateral surface area in rectangles. The original solution where the internal volume is calculated as 2*2*1=4 is replaced by a mistaken calculation suggesting the sum of products of dimensions: (2*2)+(2*1)+(1*2)=8 in the transformed_solution. This change in formula for volume results in an incorrect internal volume of 8 cubic feet, while all previous steps that correctly calculated the dimensions in feet remain unchanged.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "The first wrong step is step 6. Step 6 confuses the formula for calculating the volume of a cuboid. The volume should be calculated by multiplying the length, width, and height, not by adding the products of each pair of dimensions. The correct calculation for the internal volume should be 2 feet * 2 feet * 1 foot = 4 cubic feet. The subsequent step 7 references the wrong result of step 6, resulting in the incorrect final answer. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "The area of a forest is three times the area of the square-shaped street. If the street has a length of 100 meters on one side and the number of trees per square meter in the forest is 4, calculate the total number of trees in the forest.",
+        "original_solution": "Since the area of a square is sides squared, the area of the square-shaped street is 100*100 = 10000 square meters.\nThe area of the forest is three times the area of the square-shaped street, a total of 3*10000 = 30000 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*30000 = 120000 trees in the forest.\n#### 120000",
+        "original_answer": 120000.0,
+        "transformed_solution": "Since the perimeter of a square is all sides added, the perimeter of the square-shaped street is 100+100+100+100 = 400 meters.\nThe area of the forest is three times the perimeter of the square-shaped street, a total of 3*400 = 1200 square meters.\nIf the number of trees per square meter in the forest is 4, there are 4*1200 = 4800 trees in the forest.\n#### 4800",
+        "transformed_answer": 4800.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In this case, I have used the formula for calculating the perimeter of a square (sum of all sides) instead of the area of a square (side squared) in the transformed solution. The original solution correctly uses the formula for the area of a square but by changing it to the perimeter formula, I have altered the second step which refers back to the first step. Consequently, the entire calculation becomes incorrect and leads to a different transformed answer. All the steps after the error carry forward the misused formula, while the previous steps or descriptions remain unaffected.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "The first wrong step is step 2. Step 2 confuses the formula for the area of a square with the formula for the perimeter of a square. The area of the square-shaped street should be calculated using the formula for the area of a square, which is side length squared, not the perimeter. The correct calculation should be 100 meters * 100 meters = 10,000 square meters for the area of the street. The area of the forest is three times the area of the street, not three times the perimeter. Therefore, the area of the forest should be 3 * 10,000 square meters = 30,000 square meters. This error affects the subsequent calculation in step 3, leading to an incorrect final result."
+    }
+]

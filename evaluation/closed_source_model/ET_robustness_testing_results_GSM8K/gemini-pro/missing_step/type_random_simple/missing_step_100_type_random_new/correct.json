@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 124",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The calculation of the total number of paintings is incorrect. The correct calculation should be 2 + 4 + 8 + 16 + 32 = 62, not 124."
+    },
+    {
+        "question": "The last time Bob cut his hair he cut it to 6 inches.  His hair is now 36 inches long.  If hair grows at a rate of .5 inches per month how many years did it take him to grow out his hair?",
+        "original_solution": "His hair grew 36 inches - 6 inches = 30 inches\nHair grows at a rate of 12 months/year * 0.5 inches/month =6 inches/year\nIt took him 30 inches / 6 inches/year = 5 years to grow his hair out.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "His hair grew 36 inches * 12 months/year = 432 inches\nIt took him 432 inches / 0.5 inches/month = 864 months to grow his hair out.\n864 months / 12 months/year = 72 years\n#### 72",
+        "transformed_answer": 72.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step is altered and contains a mathematically incorrect operation. Instead of subtracting the starting length from the current length (36 inches - 6 inches), the current length is incorrectly multiplied by the number of months in a year (36 inches * 12 months/year), leading to a result of 432 inches. The transformed solution's step 1 results in an incorrect calculation that does not represent the hair growth correctly, therefore directly leading to the wrong answer that it took 72 years for Bob to grow out his hair. The sequence of steps in the transformed_solution erroneously inflated the hair growth, directly affecting the subsequent computations, which are also incorrect but follow from the initial error in step 1. The error is classified as a calculation error and wrong_step is identified as 1 because that is where the first incorrect operation occurred.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The calculation of 36 inches * 12 months/year = 432 inches is incorrect. It should be 30 inches * 12 months/year = 360 inches."
+    }
+]

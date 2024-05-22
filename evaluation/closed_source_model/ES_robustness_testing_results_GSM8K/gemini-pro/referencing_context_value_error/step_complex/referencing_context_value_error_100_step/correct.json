@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Susan is taking a two week vacation. She works five days a week and has six days of paid vacation. The rest of her workdays will be unpaid vacation time. She gets paid $15 per hour and works 8 hours a day. How much pay will she miss on her vacation?",
+        "original_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $15 per hour, she is paid 15 * 8 = $120 per day.\nAt $120 per day, Susan will miss 120 * 4 = $480 on her vacation.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $20 per hour, she is paid 20 * 8 = $160 per day.\nAt $160 per day, Susan will miss 160 * 4 = $640 on her vacation.\n#### 640",
+        "transformed_answer": 640.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references $15 in the question as $20 wrongly, and calculates 20 * 8 = $160 per day instead of 15 * 8 = $120 per day. The subsequent related step, step 4, inherits this error and will be affected accordingly, calculating 160 * 4 = $640 instead of 120 * 4 = $480. All other steps that reference this number should still reference this number correctly except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 20 * 8 = $160 instead of 15 * 8 = $120. The subsequent step 4 references the result of step 3, calculating 160 * 4 = $640 instead of 120 * 4 = $480, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Rose bought five dozens of eggs for $2.40 a dozen. She will sell it for $1 for 3 eggs. How much will be Rose's profit?",
+        "original_solution": "Rose bought five dozens of eggs for $2.40 x 5 = $12.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $12 = $8.",
+        "original_answer": 8.0,
+        "transformed_solution": "Rose bought five dozens of eggs for $1.40 x 5 = $7.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $7 = $13.",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $2.40 in the question as $1.40 wrongly, and calculates $1.40 x 5=$7.00 instead of $2.40 x 5=$12.00. Its subsequent related steps, step 2 and 6, are affected. However, the error only affects the final result of the calculation which is step 6 while step 2 still references 12 x 5=60 correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 1.40 x 5 = $7.00 instead of 2.40 x 5 = $12.00. The subsequent step 2 references the result of step 1, calculating 12 x 5 = 60 instead of 12 x 5 = 60. The subsequent step 3 references the result of step 2, calculating 60/3 = 20 instead of 60/3 = 20. The subsequent step 4 references the result of step 3, calculating 1 x 20 = $20 instead of 1 x 20 = $20. The subsequent step 5 references the result of step 1 and step 4, calculating $20 - $7 = $13 instead of $20 - $12 = $8. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "In a race with 240 Asians, 80 were Japanese, and the rest were Chinese. If the number of boys on the Chinese team was 60, how many girls were on the Chinese team?",
+        "original_solution": "If there were 80 Japanese, the number of Chinese was 240-80=160.\nSince there were 60 boys in the Chinese team, there were 160-60 = 100 girls in the Chinese team.",
+        "original_answer": 100,
+        "transformed_solution": "If there were 90 Japanese, the number of Chinese was 240-90=150.\nSince there were 60 boys in the Chinese team, there were 150-60 = 90 girls in the Chinese team.",
+        "transformed_answer": 90,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 80 in the question as 90 wrongly, and calculates 240-90=150 instead of 240-80=160. Its subsequent related step will be affected, calculating 150-60=90 instead of 160-60=100 in step 2. Please note that you should only consider one error, so step 2 still references 160 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 240-90=150 instead of 240-80=160. The subsequent step 2 references the result of step 1, calculating 150-60 = 90 instead of 160-60 = 100, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "A shady restaurant is charging customers gratuities after taxes without them being aware. If my total bill was $140, the sales tax in my city is 10%, I ordered a NY Striploin for $80, and I ordered a glass of wine for $10, how much did they charge me for gratuities?",
+        "original_solution": "The total bill before taxes or gratuities was $80 for the steak + $10 for the wine = $80+$10 = $90\nIf the tax is 10%, then the taxes paid were $90 * 10% = $9\nThat means that the total bill before gratuities was $90 + $9 = $99\nIf the final bill was $140, then you were charged $140-$99 = $41 for gratuities\n#### 41",
+        "original_answer": 41.0,
+        "transformed_solution": "The total bill before taxes or gratuities was $80 for the steak + $10 for the wine = $80+$10 = $90\nIf the tax is 10%, then the taxes paid were $90 * 15% = $13.5\nThat means that the total bill before gratuities was $90 + $13.5 = $103.5\nIf the final bill was $140, then you were charged $140-$103.5 = $36.5 for gratuities\n#### 36.5",
+        "transformed_answer": 36.5,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the tax rate as 15% instead of the correct 10% as given in the question, and calculates $90 * 15% = $13.5 instead of $90 * 10% = $9. Its subsequent related steps, step 3 and step 4 will be affected. Step 3 changes from adding $9 to the initial $90 to adding $13.5, and step 4 changes from subtracting $99 from $140 to subtracting $103.5 from $140. Please note that you should only consider one error, so other references to the tax percentage in other steps are not modified and are still calculated correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in calculating the taxes paid, calculating 90 * 15% = $13.5 instead of 90 * 10% = $9. The subsequent step 3 references the result of step 2, calculating 90 + $13.5 = $103.5 instead of 90 + $9 = $99. The subsequent step 4 references the result of step 3, calculating 140-103.5 = $36.5 instead of 140-99 = $41, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

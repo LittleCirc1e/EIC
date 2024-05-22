@@ -1,0 +1,30 @@
+[
+    {
+        "question": "28 buckets of water fill a tank when the capacity of each bucket is 13.5 litres. How many buckets will be required to fill the same tank if the capacity of each bucket is 9 litres?",
+        "original_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 378 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 378 / 9 = 42\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 385 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 385 / 9 = 42.77\n#### 42.77",
+        "transformed_answer": 42.77,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation in step 1 (28 x 13.5) has been incorrectly modified to equal 385 instead of the correct 378. This introduces a calculation error that carries through to step 3, where the number of buckets required to fill the same tank is now based on the incorrect total capacity of 385 litres. Note that we divide 385 by 9 to get an incorrect transformed_answer of 42.77 buckets, which maintains the correct mathematical operation but with an incorrect value inherited from step 1. Steps that do not depend on the miscalculated total capacity remain unaffected.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3. The operands and operators of the formula in step 3 are completely correct, but only the result is incorrectly calculated as 42.77 instead of 43, so it belongs to calculation_error."
+    },
+    {
+        "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14 / 3.\nPlugging the value of a into the first equation, we get 2*(14 / 3) + b = 10.\nSo, b = 10 - 28 / 3.\nSo, b = (30 - 28) / 3.\nSo, b = 2 / 3.\nThere are 14 / 3 associate professors and 2 / 3 assistant professors, so a total of 16/3 or approximately 5.33 people are present.\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, the transformed_solution contains a miscalculation in step 4, where the multiplication of 2 by the first equation is incorrectly carried out as 4a + 2b = 22 instead of 4a + 2b = 20. This single error affects all subsequent steps that rely on it. As a result, step 5 becomes 3a = 14 rather than 3a = 12, and consequently in step 6, the value of a is incorrectly calculated using the wrong 3a value, giving a = 14 / 3 instead of 4. This error flows through to step 7, 8 and 9, where the value of b and the total number of people are calculated based on this incorrect number of associate professors a. Thus, the entire transformed solution carries the initial miscalculation through all related steps, resulting in a wrong answer of approximately 5.33 people instead of the correct answer of 6 people.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 10. Step 10 incorrectly calculates 30 - 28 as 2 instead of 2, which only results in an error in one operand in the formula, so it belongs to calculation_error. Step 11, as its subsequent step, references the wrong result of step 10, resulting in the incorrect final answer."
+    }
+]

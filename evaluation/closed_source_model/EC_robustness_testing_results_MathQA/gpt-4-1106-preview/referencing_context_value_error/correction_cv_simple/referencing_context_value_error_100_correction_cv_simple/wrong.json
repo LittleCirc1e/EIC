@@ -1,0 +1,32 @@
+[
+    {
+        "question": "let f(x) = x^2 + bx + c. if f(1) = 0 and f(-8) = 0, then f(x) crosses the y-axis at what y-coordinate?",
+        "original_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 7\nPutting the value of b into the equation f(1) = 0, 1 + 7 + c = 0\nc = -8\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 7x - 8\nThe y-coordinate when f(x) crosses the y-axis = -8\n#### -8",
+        "original_answer": -8,
+        "transformed_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 9\nPutting the value of b into the equation f(1) = 0, 1 + 9 + c = 0\nc = -10\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 9x - 10\nThe y-coordinate when f(x) crosses the y-axis = -10\n#### -10",
+        "transformed_answer": -10,
+        "wrong_step": 5,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 incorrectly references b = 9 instead of b = 7. It incorrectly substitutes this value into the equation, affecting the calculation of c = -10 instead of c = -8. The subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly. The transformed equation f(x) = x^2 + 9x - 10 has the y-coordinate crossing at -10 instead of -8.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly finds the values of b and c by solving the system of equations derived from f(1) = 0 and f(-8) = 0. The value of b is found to be 9, and the value of c is found to be -10. The function f(x) crosses the y-axis at the point where x = 0, which is the constant term c in the quadratic equation. Since c = -10, the y-coordinate where f(x) crosses the y-axis is indeed -10. Therefore, the solution is correct."
+    },
+    {
+        "question": "if | 20 x - 10 | = 110 , then find the product of the values of x ?",
+        "original_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 120 or -20x + 10 = 110\nx = 6 or -20x = 100\nx = 6 or x = -5\nProduct of the values of x is 6 * -5 = -30\n#### -30",
+        "original_answer": -30.0,
+        "transformed_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 130 or -20x + 10 = 110\nx = 6.5 or -20x = 100\nx = 6.5 or x = -5\nProduct of the values of x is 6.5 * -5 = -32.5\n#### -32.5",
+        "transformed_answer": -32.5,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 120 in the equation 20x = 120 wrongly as 130, and calculates 20x = 130 instead of 20x = 120. Its subsequent related steps will be affected, but the calculation of the step related to the error will still be correct. So step 4 becomes x = 6.5 instead of x = 6 and the final product becomes 6.5 * -5 = -32.5 instead of 6 * -5 = -30.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly solves the absolute value equation |20x - 10| = 110 by considering both cases when the expression inside the absolute value is positive and when it is negative. The solution finds the two possible values of x, which are 6.5 and -5, and then correctly calculates the product of these two values as -32.5. Therefore, the solution is correct."
+    }
+]

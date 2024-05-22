@@ -1,0 +1,32 @@
+[
+    {
+        "question": "how many numbers from 2 to 15 are exactly divisible by 2 ?",
+        "original_solution": "There are 7 numbers between 2 and 15\n2, 4, 6, 8, 10, 12, 14\n#### 7",
+        "original_answer": 7,
+        "transformed_solution": "There are 6 numbers between 2 and 15\n2, 4, 6, 8, 10, 12\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the numbers between 2 and 15 that are exactly divisible by 2 as 6 instead of 7. This counting error excludes number 14 from the series, changing the original solution (which correctly identifies 2, 4, 6, 8, 10, 12, 14) to an incorrect count of 2, 4, 6, 8, 10, 12 in the transformed_solution. The other numbers remain unchanged, and only the count is affected, causing the transformed_answer to differ from the original_answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identified that there are 6 numbers from 2 to 15 that are exactly divisible by 2: 2, 4, 6, 8, 10, and 12."
+    },
+    {
+        "question": "Find the probability that a non leap year selected at random will have 53 Sundays",
+        "original_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day in that year\nThe probability of selecting a non leap year with 53 Sundays is 1/7\n#### 1/7",
+        "original_answer": "1/7",
+        "transformed_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day that could potentially fall on a Sunday\nThe probability of selecting a non leap year with 53 Sundays is 2/7\n#### 2/7",
+        "transformed_answer": "2/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 erroneously calculates the probability of having 53 Sundays in a non-leap year as 2/7 instead of 1/7. Since there are 365 days in a non-leap year and 52 full weeks account for 364 days, there is 1 extra day, not 2 as implied by the transformed solution. This extra day has a 1/7 chance of being a Sunday, not 2/7. To generate the transformed_solution, the counting of weeks is kept correct, but the probability calculation is erroneously changed which is reflected in the transformed_answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the probability of a non-leap year having 53 Sundays. Since there are 7 days in a week, the extra day in a non-leap year (365 days) has a 1 in 7 chance of being a Sunday, which corresponds to a probability of 1/7. However, there are two possible days that could be the extra day (January 1st or December 31st of the previous year), and both could be a Sunday. Therefore, the probability is doubled to 2/7, which is the answer provided."
+    }
+]

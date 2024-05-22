@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "The operator in step 4 encounters an error, subtraction should be used instead of addition. It incorrectly calculates 3 1/2 * B - 4 1/2 * B = -1B instead of 3 1/2 * B + 4 1/2 * B = 8B, which should equal 64 bars. This affects the final result. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    },
+    {
+        "question": "John had a son James when he was 19. James is now twice as old as his sister Dora, who will turn 12 in 3 years. How old will John's youngest son, who was born when John was 32, be in 3 years?",
+        "original_solution": "Dora is 12-3=9\nSo James is 9*2=18 years old\nThat means John is 18+19=37\nJohns youngest son is 37-32=5 years old\nSo he will be 5+3=8 in 3 years\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Dora is 12+3=15\nSo James is 15*2=30 years old\nThat means John is 30+19=49\nJohns youngest son is 49-32=17 years old\nSo he will be 17+3=20 in 3 years\n#### 20",
+        "transformed_answer": 20.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition by changing - to +, turning 12-3=9 into 12+3=15. This affects the subsequent related step 2, where now James is 15*2=30 years old instead of 9*2=18. The impact further cascades to step 3 and 4, where John now is calculated to be 30+19=49, and consequently, his youngest son is 49-32=17 years old. Step 5 inherits this result, changing the youngest son's age in 3 years from 5+3=8 to 17+3=20. It should be noted that the only incorrect thing in the solution is the operator in step 1, but the calculations carried out after the change in the operator are correct, leading to a different result from the original answer.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "The operator in step 4 encounters an error, subtraction should be used instead of addition. It miscalculates 49-32=17 instead of 49+32=81. This affects step 5, where the age of John's youngest son is incorrectly stated as 17 instead of the correct age. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    },
+    {
+        "question": "In a national park, the number of redwoods is 20% more than the number of pines. If there are 600 pines in the national park, calculate the total number of pines and redwoods that are there.",
+        "original_solution": "If there are 600 pines, there are 20/100*600 = 120 more redwoods than pine trees in the national park.\nIn total, there are 120+600 = 720 redwoods in the national park.\nAltogether, there are 720+600 = 1320 pines and redwoods in the national park.\n#### 1320",
+        "original_answer": 1320.0,
+        "transformed_solution": "If there are 600 pines, there are 20/100*600 = 120 less redwoods than pine trees in the national park.\nIn total, there are 600-120 = 480 redwoods in the national park.\nAltogether, there are 480+600 = 1080 pines and redwoods in the national park.\n#### 1080",
+        "transformed_answer": 1080.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the addition in step 2 into subtraction, changing 120+600=720 to 600-120=480 by changing + to -. Its subsequent step 3 related to it inherits its result, changing 720+600=1320 to 480+600=1080. It should be noted that step 1 only changes the operator of the formula, but still correctly calculates its result. Step 2 only inherits the result of step 1, but its calculation is correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "The operator in step 1 encounters an error. It incorrectly uses subtraction instead of addition. The number of redwoods should be calculated as 20% more than the number of pines, which is 20/100*600 = 120 more redwoods, not less. This affects the subsequent steps, leading to an incorrect total count of redwoods and the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

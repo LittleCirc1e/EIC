@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.5 = 77.36842105263158.\n#### 77.36842105263158",
+        "transformed_answer": 77.36842105263158,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 9.8 in the question as 9.5 wrongly, and calculates 735 / 9.5 instead of 735 / 9.8. The subsequent related step will be affected by the erroneous result of this step but is still calculated correctly based on the incorrect premise. All other steps that reference this number (9.8) still reference it correctly.",
+        "is_correct": "no",
+        "corrected_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 74.9.\n#### 74.9",
+        "corrected_answer": 74.9,
+        "corrected_explanation": "Step 1 first makes an error in referencing the number of the question description <If the average (arithmetic mean) price of a pair of rackets is $9.8,>. It erroneously references 9.8 as 9.5, causing the formula to calculate 735 / 9.5 = 77.36842105263158 instead of 735 / 9.8 = 74.9."
+    },
+    {
+        "question": "a 16 % stock yielding 8 % is quoted at ?",
+        "original_solution": "The stock is quoted at 200 % because 16 / 8 = 2\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "The stock is quoted at 160 % because 16 / 10 = 1.6\n#### 160",
+        "transformed_answer": 160.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the question as 10 wrongly, and calculates 16 / 10=1.6 instead of 16 / 8=2. The subsequent related step will inherit this error, changing the quote to 160% instead of 200%. Because only one error is considered, only this step has a calculation based on the incorrect reference.",
+        "is_correct": "no",
+        "corrected_solution": "The stock is quoted at 50 % because 8 / 16 = 0.5\n#### 50",
+        "corrected_answer": 50.0,
+        "corrected_explanation": "Step 1 first makes an error in referencing the number of the question description <a 16 % stock yielding 8 % is quoted at ?>. It erroneously references 16 as 10, causing the formula to calculate 16 / 10 = 1.6 instead of 8 / 16 = 0.5. This affects the final answer."
+    },
+    {
+        "question": "A batsman scored 210 runs which included 3 boundaries and 8 sixes. What % of his total score did he make by running between the wickets?",
+        "original_solution": "He scored 12 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nHe scored 150 runs by running between the wickets because 210 - 12 - 48 = 150\nHe made 71.4% of his total score by running between the wickets because (150 / 210) x 100 = 71.4\n#### 71.4",
+        "original_answer": 71.4,
+        "transformed_solution": "He scored 12 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nHe scored 160 runs by running between the wickets because 220 - 12 - 48 = 160\nHe made 72.7% of his total score by running between the wickets because (160 / 220) x 100 = 72.7\n#### 72.7",
+        "transformed_answer": 72.7,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 210 in the question as 220 wrongly, and calculates 220 - 12 - 48 = 160 instead of 210 - 12 - 48 = 150. Its subsequent related step will be affected, calculating (160 / 220) x 100 = 72.7 instead of (150 / 210) x 100 = 71.4 in step 4. Please note that you should only consider one error, so step 4 still references the numbers from the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "He scored 12 runs from boundaries because 3 x 4 = 12\nHe scored 48 runs from sixes because 8 x 6 = 48\nHe scored 150 runs by running between the wickets because 210 - 12 - 48 = 150\nHe made 71.4% of his total score by running between the wickets because (150 / 210) x 100 = 71.4\n#### 71.4",
+        "corrected_answer": 71.42857142857143,
+        "corrected_explanation": "Step 3 first makes an error in referencing the number of the question description <A batsman scored 210 runs which included 3 boundaries and 8 sixes.>. It erroneously references 210 as 220, causing the formula to calculate 220 - 12 - 48 = 160 instead of 210 - 12 - 48 = 150. This affects subsequent step 4 that references its result. Step 4 incorrectly calculates (160 / 220) x 100 = 72.7 instead of (150 / 210) x 100 = 71.4."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, including Sunday, she eats 4 * 1=4 candies.\nIn a week she eats 4 + 4= 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, in the transformed solution, step 2 incorrectly counts the days of the week other than Monday and Wednesday as 4 days instead of 5 days, considering Sunday too as a day when she eats only 1 candy. This changes the count from 5 * 1=5 to 4 * 1=4 candies. It affects the subsequent related step, changing it from 5+4=9 to 4+4=8 candies per week, and step 4 changes from 36/9=4 to 36/8=4.5. It should be noted that you only need to consider one step of counting error, and the previous or unrelated steps, as well as the calculations, remain correct except the step specifically modified.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated that Lisa eats 4 candies on Mondays and Wednesdays, and 4 candies on the other days, making a total of 8 candies per week. Then, the student correctly divided the total number of candies (36) by the weekly consumption (8) to determine it takes 4.5 weeks to eat all the candies."
+    },
+    {
+        "question": "Jasmine swims 12 laps every afternoon, Monday through Friday. How many laps does she swim in five weeks?",
+        "original_solution": "Jasmine swims 5 days a week.\nThe number of laps per week is 12 laps/day * 5 days/week = 60 laps/week.\nIn five weeks, she swims 5 weeks * 60 laps/week = 300 laps.\n#### 300",
+        "original_answer": 300.0,
+        "transformed_solution": "Jasmine swims 4 days a week.\nThe number of laps per week is 12 laps/day * 4 days/week = 48 laps/week.\nIn five weeks, she swims 5 weeks * 48 laps/week = 240 laps.\n#### 240",
+        "transformed_answer": 240.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 1, where the number of days Jasmine swims per week was changed from 5 to 4, which is incorrect and a counting error. This single mistake affected the calculation of the total number of laps in the following steps. The correct calculation is based on 5 days a week, but the error changed it to 4 days a week, resulting in a different transformed_answer of 240 laps instead of 300 laps. The rest of the calculation was performed correctly, but based on the incorrect assumption of 4 days instead of 5.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of laps Jasmine swims in a week by multiplying the number of laps per day by the number of days she swims each week. Then, the student correctly multiplied the laps per week by the number of weeks to find the total number of laps."
+    },
+    {
+        "question": "Jasmine swims 12 laps every afternoon, Monday through Friday. How many laps does she swim in five weeks?",
+        "original_solution": "Jasmine swims 5 days a week.\nThe number of laps per week is 12 laps/day * 5 days/week = 60 laps/week.\nIn five weeks, she swims 5 weeks * 60 laps/week = 300 laps.\n#### 300",
+        "original_answer": 300,
+        "transformed_solution": "Jasmine swims 4 days a week.\nThe number of laps per week is 12 laps/day * 4 days/week = 48 laps/week.\nIn five weeks, she swims 5 weeks * 48 laps/week = 240 laps.\n#### 240",
+        "transformed_answer": 240,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "The wrong_step here changes the count of swimming days from 5 days a week in the original solution to 4 days a week in the transformed solution. This affects the calculation of the number of laps per week changing it from 60 to 48. Accordingly, the total number of laps in five weeks is recalculated wrong from 300 to 240, based on the incorrect assumption of only 4 swimming days per week instead of 5.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of laps Jasmine swims in a week by multiplying the number of laps per day by the number of days she swims each week. Then, the student correctly multiplied the laps per week by the number of weeks to find the total number of laps."
+    },
+    {
+        "question": "Jasmine swims 12 laps every afternoon, Monday through Friday. How many laps does she swim in five weeks?",
+        "original_solution": "Jasmine swims 5 days a week.\nThe number of laps per week is 12 laps/day * 5 days/week = 60 laps/week.\nIn five weeks, she swims 5 weeks * 60 laps/week = 300 laps.\n#### 300",
+        "original_answer": 300.0,
+        "transformed_solution": "Jasmine swims 4 days a week.\nThe number of laps per week is 12 laps/day * 4 days/week = 48 laps/week.\nIn five weeks, she swims 5 weeks * 48 laps/week = 240 laps.\n#### 240",
+        "transformed_answer": 240.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts the number of days Jasmine swims in a week as 4 days instead of 5 days. This counting error affects step 2, changing the calculation from 12 laps/day * 5 days/week to 12 laps/day * 4 days/week, and consequently, step 3 changes from 5 weeks * 60 laps/week = 300 laps to 5 weeks * 48 laps/week = 240 laps. It should be noted that we only consider one step of counting error, and the other calculation processes are still correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of laps Jasmine swims in a week by multiplying the number of laps per day by the number of days she swims each week. Then, the student correctly multiplied the laps per week by the number of weeks to find the total number of laps."
+    },
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week (Thursday to Sunday), she eats 4 * 1 = 4 candies.\nIn a week she eats 4 + 4 = 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the other days of the week (Thursday to Sunday) as 4 days instead of 5 days, and as a result, the quantity of candies eaten from 5 * 1=5 becomes 4 * 1=4. This change affects the number of candies eaten in the week (step 3) and the total number of weeks it takes for Lisa to eat all the candies (step 4), changing it from 36 / 9 = 4 weeks to 36 / 8 = 4.5 weeks. The wrong step entry corresponds to the first modification step which introduced the counting error. It should be noted that only one step of counting error was considered, and the previous and unrelated steps are still calculated correctly.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated that Lisa eats 4 candies on Mondays and Wednesdays and 4 candies on the other days, making a total of 8 candies per week. Then, the student correctly divided the total number of candies (36) by the weekly consumption (8) to determine it takes 4.5 weeks to eat all the candies."
+    }
+]

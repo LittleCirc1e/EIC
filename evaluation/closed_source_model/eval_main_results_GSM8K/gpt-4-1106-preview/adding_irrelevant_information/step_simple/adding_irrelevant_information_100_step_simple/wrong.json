@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Tabitha and her friends were excited to go to the Christmas parade because they knew candy would be thrown to the crowd from the floats. Tabitha caught 22 pieces of candy. Stan caught 13 pieces. Julie caught half the amount of candy as Tabitha caught and Carlos caught twice as much candy as Stan. How many pieces in total did the friends catch?",
+        "original_solution": "Julie caught half the amount of Tabitha's 22 pieces so 22/2 = 11 pieces of candy caught by Julie\nCarlos caught twice the amount of candy as Stan's 13 pieces so 2 * 13 = 26 pieces of candy caught by Carlos\nAll together, Tabitha caught 22 pieces, Stan had 13, Julie had 11 and Carlos had 26, so there were a total of 22+13+11+26 = 72 pieces of candy\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "Julie caught half the amount of Tabitha's 22 pieces so 22/2 = 11 pieces of candy caught by Julie\nCarlos caught twice the amount of candy as Stan's 13 pieces so 2 * 13 = 26 pieces of candy caught by Carlos\nBecause there was an extra candy found on the ground, all together, Tabitha caught 22 pieces, Stan had 13, Julie had 11 and Carlos had 26, and the extra one makes a total of 22+13+11+26+1 = 73 pieces of candy\n#### 73",
+        "transformed_answer": 73.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was an extra candy found on the ground>, and this affects the final calculation, resulting in step 3 changing from a total of 22+13+11+26 = 72 pieces of candy in the original_solution to 22+13+11+26+1 = 73 pieces of candy in the transformed_solution. This is done by integrating the additional information into the existing step instead of adding it as a separate calculation step, and thus the transformed_answer differs from the original_answer.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the amount of candy each person caught and adds an extra piece found on the ground to the total. The final sum of 22+13+11+26+1 equals 73, which is the correct total number of pieces of candy caught by the friends."
+    },
+    {
+        "question": "There are 15 cats in a shelter. One-third were adopted, and were replaced with twice the amount that were adopted. Later on, twice as many dogs showed up as there are cats. How many total animals are there in the shelter?",
+        "original_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added.\nThis makes 10+10=20 cats in the shelter.\n20*2=40 dogs came into the shelter.\nThere are now 20+40=60 animals in the shelter.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "15/3=5 cats were adopted out of 15\nThere were 15-5 = 10 cats left\n5*2=10 more cats were added. Because there was an unexpected donation to the shelter, an additional 3 cats were brought in.\nThis makes 10+10+3=23 cats in the shelter.\n23*2=46 dogs came into the shelter.\nThere are now 23+46=69 animals in the shelter.\n#### 69",
+        "transformed_answer": 69.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because there was an unexpected donation to the shelter, an additional 3 cats were brought in>, resulting in step 3 changing from 10+10=20 in the original_solution to 10+10+3=23 in the transformed_solution. The other steps after step 3 also accommodate this change, notably the calculation of the number of dogs. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the number of cats adopted, the number left, the number added, and the unexpected donation. It then correctly calculates the number of dogs that showed up based on the final number of cats and sums up the total number of animals in the shelter."
+    },
+    {
+        "question": "James decides to bulk up. He weighs 120 kg and gains 20% of his body weight in muscle and 1 quarter that much in fat. How much does he weigh now?",
+        "original_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nThat means he gains a total of 24+6=30 kg of bodyweight\nSo his new body weight is 120+30=150 kg\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "He gains 120*.2=24 kg in muscles\nSo he gains 24/4=6 kg of fat\nBecause he also drank a weight gain supplement that added an extra 5 kg, that means he gains a total of 24+6+5=35 kg of bodyweight\nSo his new body weight is 120+35=155 kg\n#### 155",
+        "transformed_answer": 155.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because he also drank a weight gain supplement that added an extra 5 kg>, resulting in step 3 changing from 24+6=30 kg of bodyweight in the original_solution to 24+6+5=35 kg of bodyweight in the transformed_solution. The language description has also changed from <That means he gains a total of 24+6=30 kg of bodyweight> to <that means he gains a total of 24+6+5=35 kg of bodyweight>. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the weight gained from muscle and fat, and includes the additional weight from the supplement. The final body weight is correctly summed up to give the correct total."
+    },
+    {
+        "question": "John decides to start collecting art.  He pays the same price for his first 3 pieces of art and the total price came to $45,000.  The next piece of art was 50% more expensive than those.  How much did all the art cost?",
+        "original_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nThat means it cost 15,000+7,500=$22,500\nThat means in total he spent 45,000+22,500=$67,500\n#### 67,500",
+        "original_answer": 67500.0,
+        "transformed_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nBecause John also bought a frame for the more expensive piece for $1,500, that means it cost 15,000+7,500+1,500=$24,000\nThat means in total he spent 45,000+24,000=$69,000\n#### 69,000",
+        "transformed_answer": 69000.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because John also bought a frame for the more expensive piece for $1,500>, resulting in step 3 changing from 15,000+7,500=$22,500 in the original_solution to 15,000+7,500+1,500=$24,000 in the transformed_solution. The final sum in step 4 also changes as a consequence of the added cost, from 45,000+22,500=$67,500 to 45,000+24,000=$69,000. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the cost of the first 3 pieces of art, the additional cost of the next piece, the cost of the frame, and then sums all costs to find the total amount spent on art."
+    },
+    {
+        "question": "A group of science students went on a field trip. They took 9 vans and 10 buses. There were 8 people in each van and 27 people on each bus. How many people went on the field trip?",
+        "original_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nThe total number of people on the field trip is 72 + 270 = 342 people.\n#### 342",
+        "original_answer": 342.0,
+        "transformed_solution": "The vans held 9 vans * 8 people = 72 people.\nThe buses held 10 buses * 27 people = 270 people.\nBecause there was also a guide in each bus, the total number of people on the buses is 270 + 10 = 280 people.\nThe total number of people on the field trip is 72 + 280 = 352 people.\n#### 352",
+        "transformed_answer": 352.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because there was also a guide in each bus>, resulting in step 2 changing from 10 buses * 27 people = 270 people to 10 buses * 27 people + 10 guides = 280 people in the transformed_solution. The transformed answer changes from the original 342 people to 352 people due to this addition. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the number of people in vans and buses, including the additional guide in each bus, and sums them up to find the total number of people on the field trip."
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "question": "There is a rectangle that is 4 inches wide. If the rectangle's perimeter is 30 inches, what is the area of the rectangle?",
+        "original_solution": "Twice the height of the rectangle is 30 inches - 2 * 4 inches = 22 inches.\nThe rectangle's height is 22 inches / 2 = 11 inches.\nThe area of the rectangle is 4 inches * 11 inches = 44 square inches.\n#### 44",
+        "original_answer": 44.0,
+        "transformed_solution": "Twice the height of the rectangle is 30 inches - 4 inches + 4 inches = 30 inches.\nThe rectangle's height is 30 inches / 2 = 15 inches.\nThe area of the rectangle is 15 inches * 4 inches = 60 square inches.\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the correct approach to find twice the height with an incorrect approach that would add the width back twice instead of subtracting it to find the perimeter, creating an erroneous solution. The question requires that twice the height be found by subtracting the total width of both sides from the perimeter, resulting in 30 inches - 2 * 4 inches in the original_solution, which has been incorrectly transformed into 30 inches - 4 inches + 4 inches in the transformed_solution. This affects the subsequent step 2, changing from 22 inches / 2 to 30 inches / 2 to find the height, and ultimately, the step 3, changing from the correct area of 4 inches * 11 inches to an incorrect area of 15 inches * 4 inches. Note that the language description of each step in the original_solution remains unchanged in the transformed_solution. It should also be noted that only one step has the confusing formula error, while the formulas for other steps are correct, and the transformed_answer is different from the original_answer.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Raj's house has an area equal to 1,110 square feet. It has 4 bedrooms that each measure 11 x 11 feet. There are 2 bathrooms that are 6 x 8 feet each. The kitchen and living area complete the home and they have the same sized area. How many square feet is the area of the kitchen?",
+        "original_solution": "Area of 1 bedroom = 11 * 11 = 121 square feet\nArea of 4 bedrooms = 121 * 4 = 484 square feet\nArea of 1 bathroom = 6 * 8 = 48 square feet\nArea of 2 bathrooms = 2 * 48 = 96 square feet\nArea of all bedrooms and bathrooms = 484 + 96 = 580 square feet\nKitchen + living room = 1,110 - 580 = 530\nKitchen = 530/2 = 265\nThe kitchen is 265 square feet.\n#### 265",
+        "original_answer": 265.0,
+        "transformed_solution": "Area of 1 bedroom = 11 + 11 + 11 + 11 = 44 square feet\nArea of 4 bedrooms = 44 * 4 = 176 square feet\nArea of 1 bathroom = 6 * 8 = 48 square feet\nArea of 2 bathrooms = 2 * 48 = 96 square feet\nArea of all bedrooms and bathrooms = 176 + 96 = 272 square feet\nKitchen + living room = 1,110 - 272 = 838\nKitchen = 838/2 = 419\nThe kitchen is 419 square feet.\n#### 419",
+        "transformed_answer": 419.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the area and perimeter of a square room. The question requires calculating the area of the square rooms which is side length multiplied by side length, rather than the sum of all sides of the square which equals its perimeter. This changes 11 * 11 = 121 square feet in the original_solution to 11 + 11 + 11 + 11 = 44 square feet in the transformed_solution. The subsequent steps that depend on the area of the bedrooms are affected, altering the calculations in step 2 from 121 * 4 = 484 square feet to 44 * 4 = 176 square feet and consequently the rest of the calculation leading up to the kitchen area from 530/2 = 265 to 838/2 = 419 square feet. The original language descriptions in the steps remain unchanged. It should be noted that only step 1 mistakenly uses the formula for perimeter, while all other calculations relevant to the problem are performed correctly.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Mark wants to build a pyramid of soda cases that's four levels tall. Each level of the pyramid has a square base where each side is one case longer than the level above it. The top level is just one case. How many cases of soda does Mark need?",
+        "original_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases * 3 cases = 9 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 9 cases + 16 cases = 30 cases\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases + 3 cases + 3 cases + 3 cases = 12 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 12 cases + 16 cases = 33 cases\n#### 33",
+        "transformed_answer": 33.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the area and perimeter of a square. The correct operation for finding the area is multiplying side length by side length. Instead, the sum of all four sides, which gives the perimeter, is incorrectly used (i.e., 3 cases * 3 cases should be 9 cases for the area, but instead 3 cases + 3 cases + 3 cases + 3 cases = 12 cases is used). This single error leads to an incorrect total number of cases calculated in the last step.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "One logger can cut down 6 trees per day. The forest is a rectangle measuring 4 miles by 6 miles, and each square mile has 600 trees. If there are 30 days in each month, how many months will it take 8 loggers to cut down all the trees?",
+        "original_solution": "First find the total area of the forest: 4 miles * 6 miles = 24 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 24 square miles = 14400 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 14400 trees / 48 trees/day = 300 days\nThen divide the time in days by the number of days per month to find the time in months: 300 days / 30 days/month = 10 months\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "First find the total area of the forest: 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 20 square miles = 12000 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 12000 trees / 48 trees/day = 250 days\nThen divide the time in days by the number of days per month to find the time in months: 250 days / 30 days/month = 8.33 months\n#### 8.33",
+        "transformed_answer": 8.33,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the area and perimeter of a rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, rather than the sum of all four sides, which is equivalent to the perimeter of the rectangle, resulting in 4 miles * 6 miles = 24 square miles in the original_solution being changed to 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles in the transformed_solution. This affects the subsequent step 2, changing from 600 trees/square mile * 24 square miles = 14400 trees to 600 trees/square mile * 20 square miles = 12000 trees. Note that the language description of step 1 < First find the total area of the forest: > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 1 mistakenly uses the formula of rectangular area, while the other calculation processes are still correct.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "One logger can cut down 6 trees per day. The forest is a rectangle measuring 4 miles by 6 miles, and each square mile has 600 trees. If there are 30 days in each month, how many months will it take 8 loggers to cut down all the trees?",
+        "original_solution": "First find the total area of the forest: 4 miles * 6 miles = 24 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 24 square miles = 14400 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 14400 trees / 48 trees/day = 300 days\nThen divide the time in days by the number of days per month to find the time in months: 300 days / 30 days/month = 10 months\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "First find the total area of the forest: 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles\nThen find the total number of trees in that area: 600 trees/square mile * 20 square miles = 12000 trees\nThen find the number of trees all the loggers can cut down in one day: 8 loggers * 6 trees/logger = 48 trees\nThen divide the total number of trees by the number cut down per day to find the number of days it takes to clear the forest: 12000 trees / 48 trees/day = 250 days\nThen divide the time in days by the number of days per month to find the time in months: 250 days / 30 days/month = 8.33333333333 months\n#### 8.33333333333",
+        "transformed_answer": 8.33333333333,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires that the area of the rectangle to be solved be equal to the length multiplied by width, which gives the total area available for the trees: 4 miles * 6 miles = 24 square miles in the original_solution. However, step 1 of the transformed_solution mistakenly uses the formula for calculating the perimeter of the rectangle: 4 miles + 4 miles + 6 miles + 6 miles = 20 square miles. This results in the total number of trees being recalculated in step 2, changing from 600 trees/square mile * 24 square miles = 14400 trees to 600 trees/square mile * 20 square miles = 12000 trees in the transformed_solution. Subsequent calculations are based on this modified step 2. Note that the language description of step 1 < First find the total area of the forest: > in the original_solution remains unchanged in the transformed_solution.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Mark wants to build a pyramid of soda cases that's four levels tall. Each level of the pyramid has a square base where each side is one case longer than the level above it. The top level is just one case. How many cases of soda does Mark need?",
+        "original_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases * 3 cases = 9 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 9 cases + 16 cases = 30 cases\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "We know that the top level just has one case. Since each level has one more case per side than the level above it, the second level has sides that are 2 cases long.\nWe can figure out how many cases we need for the second level by finding the area of a square with a side length of 2: 2 cases * 2 cases = 4 cases\nThe third level has three cases per side, so we need to find the area of a square with side length 3: 3 cases + 3 cases + 3 cases + 3 cases = 12 cases\nThe fourth level has a side length of 4, so we find its area with 4 cases * 4 cases = 16 cases\nFinally, we add up the number of cases we need on each level: 1 cases + 4 cases + 12 cases + 16 cases = 33 cases\n#### 33",
+        "transformed_answer": 33.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the error occurs at step 3 where the formula for the area of a square is wrongly replaced with the formula for the perimeter of a square. This results in calculating the perimeter for the third level (3+3+3+3 cases) instead of the area (3 cases * 3 cases). Consequently, this affects the final step, changing the correct total number of cases from 30 to an incorrect total of 33 cases. This error is isolated to step 3, while the calculations in steps 1, 2, and 4 remain correct.",
+        "label": "no",
+        "is_correct": "yes"
+    }
+]

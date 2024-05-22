@@ -1,0 +1,72 @@
+[
+    {
+        "question": "The city is holding its annual rubber duck race for charity. The regular size rubber ducks are $3.00 each and the large size rubber duck is $5.00 each. All of the rubber ducks will be dropped into the river at the same time and the first duck that floats across the finish line wins. They sold 221 regular size ducks and 185 large size ducks. How much money did the city raise for charity?",
+        "original_solution": "They sold 221 regular size rubber ducks at $3.00 each so they made 221*3 = $663.00\nThey sold 185 large rubber ducks at $5.00 each so they made 185*5 = $925.00\nThe regular size ducks brought in $663.00 and the large brought in $925.00 for a total of 663+925 = $1,588.00 for charity\n#### 1588",
+        "original_answer": 1588.0,
+        "transformed_solution": "They sold 221 regular size rubber ducks at $3.00 each so they made 221*3 = $663.00\nThey sold 185 large rubber ducks at $5.00 each so they made 185/5 = $37.00\nThe regular size ducks brought in $663.00 and the large brought in $37.00 for a total of 663+37 = $700.00 for charity\n#### 700",
+        "transformed_answer": 700.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 2 into division, and by changing * to /, 185*5 = $925.00 becomes 185/5 = $37.00. This error affects the subsequent related step 3. Step 3's addition remains the same, and as a result of step 2's error, it changes from 663+925 = $1,588.00 to 663+37 = $700.00. It should be noted that although the operator in step 2 is incorrect, the calculation after the change is done correctly, which leads to a different result from the original answer and affects the final step involving the sum of money raised for charity.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator of the formula in the second step is incorrect. It should be 185*5 instead of 185/5."
+    },
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator in the second step should be subtraction instead of addition."
+    },
+    {
+        "question": "Max is planning a vacation for 8 people. The Airbnb rental costs $3200. They also plan on renting a car that will cost $800. If they plan on splitting the costs equally, how much will each person’s share be?",
+        "original_solution": "The total cost for the vacation rentals will be $3200 + $800 = $4000.\nThe cost per person will be $4000 / 8 = $500.\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "The total cost for the vacation rentals will be $3200 - $800 = $2400.\nThe cost per person will be $2400 / 8 = $300.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition operator to a subtraction operator in step 1 of the original solution, which results in a change of the total cost calculation from $3200 + $800 = $4000 to $3200 - $800 = $2400. The subsequent step that calculates the cost per person now uses the transformed total cost to give a new answer of $2400 / 8 = $300 instead of the original $500. The calculation itself is correct, however the transformed total cost is not, due to the operator change in step 1. The error is singular and isolated to the operator change.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator in the first wrong step should be + instead of -."
+    },
+    {
+        "question": "Ellen is on a diet. She eats two carrots, a salad, and a yogurt every day. The salad costs her $6, while the yogurt is half the price. How much does Ellen pay for one carrot every day when in total she pays $11 for her goods?",
+        "original_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nFor the two carrots Ellen needs to pay $11 - $6 - $3 = $2.\nSo one carrot costs $2 / $2 = $1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nInstead of subtracting, we add the prices Ellen needs to pay $11 + $6 + $3 = $20 for the two carrots and the carrots.\nSo one carrot would incorrectly be calculated as $20 / 2 = $10.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly changes the subtraction in step 2 into addition, and by changing - to +, the calculation of $11 - $6 - $3 = $2 becomes $11 + $6 + $3 = $20. This only affects step 2 directly. Step 3 then inherits the incorrect total from step 2 but performs the division correctly, so the error does not compound further. As a result, only step 2 is incorrect, but its calculation, given the wrong operator, is correct. This leads to an incorrect result for the cost of one carrot.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator in the first wrong step should be subtraction instead of addition."
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The error in this solution is an operator error. In step 4, the operator should be multiplication instead of division, which leads to an incorrect result of 0.8/35."
+    }
+]

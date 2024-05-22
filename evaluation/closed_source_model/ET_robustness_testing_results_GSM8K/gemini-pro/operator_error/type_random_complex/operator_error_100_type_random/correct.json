@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses addition instead of subtraction, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    },
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 mistakenly uses subtraction instead of addition, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    }
+]

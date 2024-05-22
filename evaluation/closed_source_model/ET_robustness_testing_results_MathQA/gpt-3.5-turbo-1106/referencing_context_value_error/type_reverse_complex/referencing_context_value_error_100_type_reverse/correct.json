@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Calculate the sum of first 89 natural numbers.",
+        "original_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 89 natural numbers is 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005.\n#### 4005",
+        "original_answer": 4005.0,
+        "transformed_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 80 natural numbers is 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240.\n#### 3240",
+        "transformed_answer": 3240.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 89 in the question as 80 wrongly, and calculates 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240 instead of 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005. Subsequent calculations apply this error but are otherwise correct. Step 1 still refers to the correct formula for the sum of natural numbers and is not affected by the referencing error.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly calculates the sum of the first 80 natural numbers instead of the first 89 natural numbers, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "What will be the fraction of 8 %?",
+        "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "original_answer": "2/25",
+        "transformed_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 10% as a fraction is 10/100, which simplifies to 1/10.\n#### 1/10",
+        "transformed_answer": "1/10",
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the question as 10 wrongly, and calculates 10/100=1/10 instead of 8/100=2/25. Since there are no subsequent related calculation steps, only the first step contains the error and there is no propagation of errors to other steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses 10% as an example instead of 8%, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "there were two candidates in an election. The winner candidate received 56% of the votes and won the election by 288 votes. Find the number of votes casted for the winning candidate?",
+        "original_solution": "Let the total votes casted be x.\nThe winning candidate received 56% of x = 0.56x.\nThis means the other candidate received 44% of x = 0.44x.\nThe winning candidate won by 288 votes, so 0.56x - 0.44x = 288.\n0.12x = 288\nx = 288 / 0.12 = 2400.\nThe number of votes casted for the winning candidate is 56% of 2400 = 1344.\n#### 1344",
+        "original_answer": 1344.0,
+        "transformed_solution": "Let the total votes casted be x.\nThe winning candidate received 52% of x = 0.52x.\nThis means the other candidate received 48% of x = 0.48x.\nThe winning candidate won by 288 votes, so 0.52x - 0.48x = 288.\n0.04x = 288\nx = 288 / 0.04 = 7200.\nThe number of votes casted for the winning candidate is 56% of 7200 = 4032.\n#### 4032",
+        "transformed_answer": 4032.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 56 in the question as 52 wrongly, and calculates 0.52x instead of 0.56x. Its subsequent related steps will be affected, though they will still use the correct percentage of 56% for the final calculation in the transformed_solution. Step 2 changes from 44% to 48%, altering the difference to 0.04x instead of 0.12x in steps 3 and 4. In step 5, x is calculated as 288 / 0.04 = 7200 instead of 288 / 0.12 = 2400. The final step 6 calculates the votes for the winning candidate as 56% of 7200, which is 4032, instead of 56% of 2400, which is 1344. The steps related to the wrong step reference the result of the wrong step but are calculated correctly in themselves.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly calculates the percentage of votes received by the winning candidate as 52% instead of 56%, which results in an error in the operand of the formula, so it belongs to referencing_context_value_error. Step 6, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = Distance / Speed\nTime = 400 km / 90 kmh = 4.44 hours\n#### 4.44",
+        "transformed_answer": 4.44,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 450 km in the question as 400 km wrongly, and calculates 400 km / 90 kmh = 4.44 hours instead of 450 km / 90 kmh = 5 hours. The error impacts only the calculation of the time required. All the other references have to maintain their original values, and steps associated with the wrong step should still use the updated wrong result for subsequent calculations.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the distance as 400 km instead of 450 km from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "There are 21 students in a class. In how many different ways can a committee of 3 students be formed?",
+        "original_solution": "The number of ways to choose a committee of 3 from 21 students is given by the combination formula C(21, 3) = 21! / (3!(21-3)!) = 1330\n#### 1330",
+        "original_answer": 1330.0,
+        "transformed_solution": "The number of ways to choose a committee of 3 from 23 students is given by the combination formula C(23, 3) = 23! / (3!(23-3)!) = 1771\n#### 1771",
+        "transformed_answer": 1771.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 21 in the question as 23 wrongly, and applies the combination formula C(23, 3) instead of C(21, 3). Its subsequent calculation is performed with the incorrect value, resulting in C(23, 3) = 23! / (3!(23-3)!) = 1771 instead of the correct C(21, 3) = 21! / (3!(21-3)!) = 1330.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly uses 23 students instead of 21, which only results in an operand error in the formula, so it belongs to referencing_context_value_error."
+    }
+]

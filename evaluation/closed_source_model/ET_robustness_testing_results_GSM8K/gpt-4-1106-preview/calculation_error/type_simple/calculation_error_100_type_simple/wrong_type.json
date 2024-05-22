@@ -1,0 +1,44 @@
+[
+    {
+        "question": "At the same store, Peter bought 2 pairs of pants and 5 shirts for $62 total, and Jessica bought 2 shirts for $20 total. Each pair of pants cost the same price, and each shirt cost the same price. How much does 1 pair of pants cost?",
+        "original_solution": "The shirts each cost $20 / 2 shirts = $10.\nLet X be the pants' cost. Peter bought 2 pairs of pants and 5 shirts for 2*X + 5 shirts * $10/shirt = $62.\nSubtracting $50 from both sides, we get 2*X = $12.\nDividing both sides by 2, we get X = $6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "The shirts each cost $20 / 2 shirts = $10.\nLet X be the pants' cost. Peter bought 2 pairs of pants and 5 shirts for 2*X + 5 shirts * $10/shirt = $62.\nSubtracting $50 from both sides, we get 2*X = $22.\nDividing both sides by 2, we get X = $11.\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced at step 3, where the total cost of shirts $50 was subtracted from $62, the transformed solution incorrectly calculates this as $22 instead of $12. The subsequent step, step 4, is affected by using the incorrect value from step 3, resulting in the calculation of X=$11 instead of X=$6. The error does not affect the previous steps, which remain unchanged, nor any unrelated steps since all steps are related to determining the cost of the pants.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly references the price of shirts from the context. It assumes that the price of two shirts is $20 based on Jessica's purchase, which is correct, but then incorrectly calculates the price per shirt as $10, which should be $20 / 2 = $10 per shirt. The error in referencing the correct price per shirt from the context leads to an incorrect calculation in the subsequent steps."
+    },
+    {
+        "question": "Wendy just started working at an Italian restaurant. She polished 50 small glasses and 10 more large glasses than small glasses. How many glasses did she polish?",
+        "original_solution": "She polished 50 + 10 = 60 large glasses.\nTherefore, Wendy polished 50 + 60 = 110 glasses.\n#### 110",
+        "original_answer": 110.0,
+        "transformed_solution": "She polished 50 + 10 = 70 large glasses.\nTherefore, Wendy polished 50 + 70 = 120 glasses.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the calculation in the first step is changed incorrectly from 50 + 10 = 60 to 50 + 10 = 70. This is a calculation error where the sum of 50 and 10 is wrongly taken as 70 instead of the correct 60. The subsequent step inherits this error, changing the sum from 50 + 60 = 110 to 50 + 70 = 120, thus affecting the result of the total calculation. This single error impacted the final result without changing any operands or operators from the original solution. The calculation within the subsequent step is correct, but it incorrectly uses the erroneous result from the previous step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The error is in referencing the number of large glasses from the context. The question states that Wendy polished 10 more large glasses than small glasses, not that she polished 10 large glasses. Therefore, the correct number of large glasses should be 50 small glasses + 10 more large glasses, which equals 60 large glasses, not 70."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution is missing the step of considering that John progresses through each type of push-up individually. He needs to complete 15 reps of wall push-ups, then 15 reps of high elevation push-ups, and then 15 reps of low elevation push-ups before he can start floor push-ups. Each type requires 15 days, and he trains 5 days a week, so each type takes 3 weeks. The solution should account for the time taken for each progression separately."
+    }
+]

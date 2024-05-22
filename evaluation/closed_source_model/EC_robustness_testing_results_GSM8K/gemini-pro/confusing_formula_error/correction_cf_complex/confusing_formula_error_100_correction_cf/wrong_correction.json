@@ -1,0 +1,17 @@
+[
+    {
+        "question": "John builds a box. The box is 26 inches by 26 inches by 14 inches. The walls are 1 inch thick on each side. How much is the internal volume in cubic feet?",
+        "original_solution": "The walls take away 2*1=2 inches from each dimension\nSo the longer sides are 26-2=24 inches\nThat is 24/12=2 feet\nThe smaller dimension is 14-2=12 inches\nThat is 12/12=1 foot\nSo the internal volume is 2*2*1=4 cubic feet\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The walls take away 2*1=2 inches from each dimension\nSo the longer sides are 26-2=24 inches\nThat is 24/12=2 feet\nThe smaller dimension is 14-2=12 inches\nThat is 12/12=1 foot\nSo the internal volume is (2*2)+(2*1)+(1*2)=8 cubic feet\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 5,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 confuses the volume and surface area of a cube or cuboid. The question requires that the volume of the cuboid to be solved be equal to the length multiplied by width multiplied by height, rather than the sum of products of each pair of dimensions, which is used for calculating perimeter of base or lateral surface area in rectangles. The original solution where the internal volume is calculated as 2*2*1=4 is replaced by a mistaken calculation suggesting the sum of products of dimensions: (2*2)+(2*1)+(1*2)=8 in the transformed_solution. This change in formula for volume results in an incorrect internal volume of 8 cubic feet, while all previous steps that correctly calculated the dimensions in feet remain unchanged.",
+        "is_correct": "no",
+        "corrected_solution": "The walls take away 2*1=2 inches from each dimension\nSo the longer sides are 26-2=24 inches\nThat is 24/12=2 feet\nThe smaller dimension is 14-2=12 inches\nThat is 12/12=1 foot\nSo the internal volume is (2*2*1)+(2*2*1)+(1*2*1)=6 cubic feet\n#### 6",
+        "corrected_answer": 6.0,
+        "corrected_explanation": "The first wrong step is step 7. Step 7 confuses the formula of cuboid volume and it should calculate the volume of the cuboid which is equal to the length multiplied by width multiplied by height, rather than the sum of the product of length and width and the product of length and height and the product of width and height. That means, it should calculate (2*2*1)+(2*2*1)+(1*2*1)=6 cubic feet instead of (2*2)+(2*1)+(1*2)=8 cubic feet. Step 8, as the subsequent step of step 7, references the wrong result of step 7, resulting in the incorrect final answer."
+    }
+]

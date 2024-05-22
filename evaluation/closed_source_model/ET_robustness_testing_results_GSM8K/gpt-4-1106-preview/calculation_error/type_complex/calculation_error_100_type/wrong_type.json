@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Iris’ family is planning a surprise birthday party for her. The party will include her 3 uncles and 4 aunts who have a son and daughter each as well as her brother and mother. In total, how many people are coming to Iris’ birthday party?",
+        "original_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 3 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 3 people in each family unit = 21 people.\nIncluding her mother and brother, there will be a total of 21 people + 1 mother + 1 brother = 23 people coming to her party.\n#### 23",
+        "original_answer": 23.0,
+        "transformed_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 4 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 4 people in each family unit = 28 people.\nIncluding her mother and brother, there will be a total of 28 people + 1 mother + 1 brother = 30 people coming to her party.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution introduces a calculation error at step 1 by mistakenly counting each family unit as having 4 people instead of 3. This error then changes the expected number of people from each family unit and alters all the subsequent steps that rely on this number. The original and unrelated steps (total number of aunts and uncles) remain correct while steps that involve calculations with the family unit size inherit this error.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is the final step. The solution correctly calculates the number of people in the aunts' and uncles' families and includes the mother and brother but misses adding Iris herself to the total count. Therefore, the error is a missing step, as adding Iris to the count is a necessary step to arrive at the correct total number of people attending the party."
+    },
+    {
+        "question": "There were sweets on the table. Jack came and took half of all the candies and 4 more candies. Then Paul came and took the remaining 7 sweets. How many sweets were on the table at first?",
+        "original_solution": "Jack took 4 more candies than the half, and Paul took the rest, which means 7 + 4 = 11 candies were half of all candies.\nThat means at first there were 11 * 2 = 22 candies.\n#### 22",
+        "original_answer": 22.0,
+        "transformed_solution": "Jack took 4 more candies than the half, and Paul took the rest, which means 7 + 4 = 12 candies were half of all candies.\nThat means at first there were 12 * 2 = 24 candies.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution contains a calculation error in step 1 where the half of all candies is incorrectly calculated as 7 + 4 = 12 instead of the correct 7 + 4 = 11. This wrong step then impacts the rest of the solution, with the initial number of candies being incorrectly calculated as 12 * 2 = 24 instead of the correct 11 * 2 = 22. The error is consistent in that only the calculation has been changed, with no operands or operators being modified, and subsequent steps are all correctly calculated based on the erroneous intermediate value.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 incorrectly references the context value by stating that 12 candies were half of all candies, which does not account for the 4 additional candies taken by Jack. This results in an error in the operand of the formula, so it belongs to referencing_context_value_error."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 1. The solution does not account for the incremental daily increase in reps. It should calculate the number of days it takes to reach 15 reps for each type of push-up (wall, high elevation, low elevation) before multiplying by 3. Since this necessary reasoning step is absent, the error belongs to missing_step."
+    }
+]

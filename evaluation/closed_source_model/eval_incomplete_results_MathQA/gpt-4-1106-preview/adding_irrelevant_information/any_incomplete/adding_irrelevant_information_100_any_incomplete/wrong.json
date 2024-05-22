@@ -1,0 +1,80 @@
+[
+    {
+        "question": "an article with a cost price of 192 is sold at 25% profit. What is the selling price?",
+        "original_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nThe selling price is the cost price plus the profit, 192 + 48 = 240\n#### 240",
+        "original_answer": 240.0,
+        "transformed_solution": "The profit made on the article is 25% of 192, which is 0.25 x 192 = 48\nBecause the item needed packaging that cost an additional $16, the selling price is the cost price plus the profit and packaging cost, (192 + 48) + 16 = 256\n",
+        "transformed_answer": 256.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the item needed packaging that cost an additional $16>, resulting in step 2 changing from 192 + 48 = 240 in the original_solution to (192 + 48) + 16 = 256 in the transformed_solution. The language description has also changed from <the selling price is the cost price plus the profit> to <the selling price is the cost price plus the profit and packaging cost>. The additional packaging cost is included in the calculation and this affects the final result, as the transformed_answer is different from the original_answer.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the profit as 25% of the cost price, adds it to the cost price, and includes the additional packaging cost to find the final selling price."
+    },
+    {
+        "question": "If the price of a book is first decreased by 15 % and then increased by 10 %, then the net change in the price will be:",
+        "original_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nThe price after a 10% increase is 85 + (0.10 * 85) = 85 + 8.5 = $93.50.\nThe net change in the price is 93.50 - 100 = -$6.50\n#### -6.50",
+        "original_answer": -6.5,
+        "transformed_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\n",
+        "transformed_answer": -11.175,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, specifically, introducing a mistaken additional discount of 5%. This mistake changes the calculations in step 2 from a price decrease to $85 to a further reduced price of $80.75. Following this error, all subsequent calculations are based on the incorrect price of $80.75 instead of $85, resulting in the transformed solution stating the price after a 10% increase and the net change in price incorrectly.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution are correct. The original price is assumed to be $100 for simplicity, and the correct calculation is performed to find the new price after a 15% decrease. The calculation shows the price being reduced to $85, which is the correct outcome of a 15% reduction from $100."
+    },
+    {
+        "question": "Find two numbers whose difference is 1365, the larger number divided by the smaller gives a quotient of 6 and a remainder of 20",
+        "original_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nx = 6(269) + 20 = 1614 + 20 = 1634\nThe two numbers are 269 and 1634.\n#### 1634",
+        "original_answer": 1634.0,
+        "transformed_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\n",
+        "transformed_answer": 1903.0,
+        "wrong_step": 7,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 7 adds information that is not mentioned in the question statement <Because the smaller number was already used in a previous calculation and the quotient is increased by 1>, resulting in step 7 changing from x = 6(269) + 20 = 1614 + 20 = 1634 in the original_solution to x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903 in the transformed_solution. The added information incorrectly modifies the quotient from 6 to 7, leading to a different final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution correctly apply the system of equations derived from the problem statement. The first equation is set up based on the difference between the two numbers, and the second equation is based on the division with a remainder. Substituting the second equation into the first leads to a correct simplification and solution for y."
+    },
+    {
+        "question": "Vishal invested 10 % more than Trishul. Trishul invested 10 % less than Raghu. If the total sum of their investments is Rs. 6647, how much amount did Raghu invest?",
+        "original_solution": "Let the amount Raghu invested be x.\nThen, Trishul invested x - 10% of x = 0.9x.\nAnd Vishal invested 0.9x + 10% of 0.9x = 0.99x.\nSo, x + 0.9x + 0.99x = 6647.\n2.89x = 6647\nx = 6647 / 2.89\nx = 2300\n#### 2300",
+        "original_answer": 2300.0,
+        "transformed_solution": "Let the amount Raghu invested be x.\nThen, Trishul invested x - 10% of x = 0.9x.\n",
+        "transformed_answer": 2292.07,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 in the original_solution was modified to include information not mentioned in the question, <an additional donation of 1% of x>. As a result, Vishal's investment calculation changed from 0.9x + 10% of 0.9x = 0.99x to 0.9x + 10% of 0.9x + 0.01x = 0.99x + 0.01x = 1x in the transformed_solution. This small change affects the final equation from x + 0.9x + 0.99x to x + 0.9x + 1x, adding an additional term that shouldn't be there, thereby altering the final answer. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution are correct. The amount invested by Raghu is represented as x, and the calculation for the amount invested by Trishul as 0.9x (which is x minus 10% of x) is accurate."
+    },
+    {
+        "question": "The sale price sarees listed for Rs. 400 after successive discount is 30% and 20%",
+        "original_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\n#### 224",
+        "original_answer": 224.0,
+        "transformed_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\nBecause there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244\n",
+        "transformed_answer": 244.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement by inserting a packaging fee of Rs. 20. The error occurs when transforming the statement 'Then, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224' from the original_solution into the transformed_solution, where it states 'Because there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244'. This introduces an additional cost that changes the final answer, despite not being part of the original question. Other calculations in step 1 and 2 are unaffected and are carried out correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly applies two successive discounts to the original price and then adds the packaging fee to find the final sale price."
+    },
+    {
+        "question": "the sum of four consecutive even numbers is 292 . what would be the largest number ?",
+        "original_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 280\nx = 70\nThe largest number is 70+6 = 76\n#### 76",
+        "original_answer": 76.0,
+        "transformed_solution": "Assuming that there is an error where we incorrectly subtracted an additional $8 that is not part of the problem statement,\nLet the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n",
+        "transformed_answer": 78.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds an incorrect subtraction of $8 that is not mentioned in the question statement, resulting in step 3 changing from 4x + 12 = 292 to 4x + 12 - 8 = 292, which adjusts the equation solving process. The error affects the computed value of x and consequently the final result for the largest number, which changes from x + 6 = 76 in the original_solution to x + 6 = 78 in the transformed_solution.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided correctly set up the equation for the sum of four consecutive even numbers and simplify it to 4x + 12, which is the correct expression to use in solving for x."
+    }
+]

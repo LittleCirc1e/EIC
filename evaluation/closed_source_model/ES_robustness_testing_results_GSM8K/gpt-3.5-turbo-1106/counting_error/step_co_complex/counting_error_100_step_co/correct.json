@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Mrs. Young makes bonnets for kids in the orphanage. On Monday, she made 10 bonnets, on Tuesday and Wednesday combined she made twice more than on Monday, while on Thursday she made 5 more than on Monday, and on Friday she made 5 less than on Thursday. Then, she divided up the bonnets evenly and sent them to 5 orphanages. How many bonnets did Mrs. Young send to each orphanage?",
+        "original_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 5 = 11 bonnets to each orphanage.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 4 = 13.75 bonnets to each orphanage.\n#### 13.75",
+        "transformed_answer": 13.75,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, in step 5, the original_solution's division process mistakenly divides the total number of bonnets by 4 orphanages instead of the correct 5 orphanages, resulting in an incorrect number of bonnets per orphanage. This directly affects the final answer. The rest of the arithmetic operations are unchanged, but this division error results in a different answer from the original_solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 first erroneously divides the total number of bonnets by 4 instead of 5, resulting in an error in the divisor in the formula. And step 5 calculates 55/4=13.75 instead of 55/5=11, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the miss, is step 5, so pred_wrong_step is 5"
+    },
+    {
+        "question": "Berry is curious about what his average temperature is during the week. On Sunday his temperature is 99.1. On Monday his temperature is 98.2. On Tuesday his temperature is 98.7. On Wednesday his temperature is 99.3. On Thursday his temperature is 99.8. On Friday his temperature is 99. On Saturday his temperature is 98.9. What is his average temperature that week?",
+        "original_solution": "The total temperature for the week is 693 because 99.1 plus 98.2 plus 98.7 plus 99.3 plus 99.8 plus 99 plus 98.9 equals 693.\nHis average temperature is 99 degrees because 693 divided by 7 equals 99.\n#### 99",
+        "original_answer": 99.0,
+        "transformed_solution": "The total temperature for the week is 693 because 99.1 plus 98.2 plus 98.7 plus 99.3 plus 99.8 plus 99 plus 98.9 equals 693.\nHis average temperature is 99 degrees because 693 divided by 6 equals 115.5.\n#### 115.5",
+        "transformed_answer": 115.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday as 6 days instead of 7 days, resulting in <His average temperature is 99 degrees because 693 divided by 7 equals 99.> in the original_solution being changed to <His average temperature is 115.5 degrees because 693 divided by 6 equals 115.5.> in the transformed_solution. Only one counting error is present, which is changing the divisor from 7 to 6, while the division calculation process itself remains correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first erroneously counts the total temperature for the week as 693 instead of 693.1, resulting in an error in the dividend in the formula. And step 2 calculates 693/6=115.5 instead of 693.1/7=99.01428571428571, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the miss, is step 2, so pred_wrong_step is 2"
+    },
+    {
+        "question": "Josh has soccer practice on Monday, Wednesday, and Friday from 3:00 p.m. to 5:00 p.m. He has band practice on Tuesday and Thursday from 3:30 p.m. to 5:00 p.m. From Monday to Friday, how many hours does Josh spend on extracurricular activities?",
+        "original_solution": "Josh practices soccer 2 hours x 3 days = 6 hours.\nHe practices band 1.5 hours x 2 days = 3 hours.\nFrom Monday to Friday, on extracurricular activities, Josh spends 6 + 3 = 9 hours.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Josh practices soccer 2 hours x 4 days = 8 hours.\nHe practices band 1.5 hours x 2 days = 3 hours.\nFrom Monday to Friday, on extracurricular activities, Josh spends 8 + 3 = 11 hours.\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 incorrectly counts soccer practice as happening for 4 days (Monday, Wednesday, Friday, and one additional incorrect day) instead of 3 days, resulting in 2 hours x 4 days = 8 hours instead of the correct 2 hours x 3 days = 6 hours. This error affects the final step as well, changing the total number of hours Josh spends from 9 to 11 hours. The counting result in this step is the only error, and the rest of the calculation is correctly performed based on this mistake.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first erroneously counts Monday, Wednesday, and Friday as 4 days instead of 3 days, resulting in an error in the multiplier in the formula. And step 1 calculates 2 hours x 4 days = 8 hours instead of 2 hours x 3 days = 6 hours, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the miss, is step 1, so pred_wrong_step is 1"
+    }
+]

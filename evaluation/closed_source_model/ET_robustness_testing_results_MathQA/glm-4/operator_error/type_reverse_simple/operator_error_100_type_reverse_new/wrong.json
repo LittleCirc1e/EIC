@@ -1,0 +1,44 @@
+[
+    {
+        "question": "140 is what percent of 40 ?",
+        "original_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 350\n#### 350%",
+        "original_answer": 350.0,
+        "transformed_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140*40) / 100\nx = 5600 / 100\nx = 56\n#### 56%",
+        "transformed_answer": 56.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the division in step 3 into multiplication, changing (140/40) * 100 to (140*40) / 100 by changing / to *. This affects the subsequent related step 4 where the result of the changed step is used. Step 3 changes from x = (140/40) * 100 to x = (140*40) / 100 and step 4 changes from x = 350 to x = 5600 / 100 which equals x = 56. It should be noted that only the operator in step 3 is incorrect, but the calculation itself is correct, which leads to an incorrect result that affects the final transformed answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up the proportion to find the percentage, and all steps in the calculation are accurate."
+    },
+    {
+        "question": "If the length of the sides of two cubes are in the ratio 4 : 1, what is the ratio of their total surface area?",
+        "original_solution": "The ratio of their surface areas is the square of the ratio of their sides.\nThe ratio of their surface areas is 16 : 1 because 4^2 : 1^2 = 16 : 1\n#### 16:1",
+        "original_answer": "16:1",
+        "transformed_solution": "The ratio of their surface areas is the cube of the ratio of their sides.\nThe ratio of their surface areas is 64 : 1 because 4^3 : 1^3 = 64 : 1\n#### 64:1",
+        "transformed_answer": "64:1",
+        "wrong_step": 1,
+        "wrong_type": "exponent_error",
+        "is_single_error": true,
+        "explanation": "This example modifies the original solution by changing the exponent from squared (the correct calculation for area) to cubed (which would be for volume, but is the incorrect operation for surface area). As a result, the original operation of squaring the sides' ratio (4^2 : 1^2 = 16 : 1) is erroneously changed to a cube operation (4^3 : 1^3 = 64 : 1). Subsequently, the transformed answer diverges from the original answer of 16:1 to an incorrect answer of 64:1, due to the incorrect operation performed in step one of the solution.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the concept that the surface area of a cube is directly proportional to the square of the length of its side. The ratio of the sides is 4:1, so the ratio of their surface areas will be the square of that ratio, which is 4^3 : 1^3 = 64 : 1. The steps and calculations are correct."
+    },
+    {
+        "question": "if 25 % of x is 30 less than 15 % of 1500 , then x is ?",
+        "original_solution": "0.25x = 0.15 * 1500 - 30\n0.25x = 225 - 30\n0.25x = 195\nx = 195 / 0.25\nx = 780\n#### 780",
+        "original_answer": 780.0,
+        "transformed_solution": "0.25x = 0.15 * 1500 + 30\n0.25x = 225 + 30\n0.25x = 255\nx = 255 / 0.25\nx = 1020\n#### 1020",
+        "transformed_answer": 1020.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In the transformation process, the first step had the operator changed from subtraction to addition, turning \"0.15 * 1500 - 30\" into \"0.15 * 1500 + 30\". This affected the result in step 2, changing from \"0.25x = 225 - 30\" to \"0.25x = 225 + 30\". Consequently, step 3 changes from \"0.25x = 195\" to \"0.25x = 255\". Finally, step 4 correctly inherits this changed outcome and correctly computes the value of x as \"x = 255 / 0.25\" leading to an incorrect result of \"x = 1020\" as opposed to the correct original result of \"x = 780\". Steps after the erroneous transformation are correctly calculated based on the new information, but are logically wrong due to the wrong step.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up the equation based on the information provided in the question, performs the calculations accurately, and arrives at the correct conclusion."
+    }
+]

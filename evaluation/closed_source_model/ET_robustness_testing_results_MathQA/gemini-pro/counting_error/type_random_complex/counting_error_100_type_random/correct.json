@@ -1,0 +1,44 @@
+[
+    {
+        "question": "A library has an average of 510 visitors on Sundays and 240 on other days. The average number of visitors per day in a month of 30 days beginning with a Sunday is:",
+        "original_solution": "The total number of visitors on Sundays in the month is 510 * 5 (5 Sundays in a month) = 2550\nThe total number of visitors on other days in the month is 240 * 25 (30 days - 5 Sundays) = 6000\nThe total number of visitors in the month is 2550 + 6000 = 8550\nThe average number of visitors per day in the month is 8550 / 30 = 285\n#### 285",
+        "original_answer": 285,
+        "transformed_solution": "The total number of visitors on Sundays in the month is 510 * 4 (4 Sundays in a month due to counting error) = 2040\nThe total number of visitors on other days in the month is 240 * 26 (30 days - 4 Sundays) = 6240\nThe total number of visitors in the month is 2040 + 6240 = 8280\nThe average number of visitors per day in the month is 8280 / 30 = 276\n#### 276",
+        "transformed_answer": 276,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts the number of Sundays as 4 instead of 5, which consequently affects the calculation in step 2, changing it from 240 * 25 to 240 * 26. As a result, the final total and average calculations in steps 3 and 4 are thus affected by this single counting error, with the rest of the transformation process correctly performed in accordance with the error.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 counts the number of Sundays in a month as 4 instead of 5, which only results in an operand error in the formula, so it belongs to counting_error. Steps 3, 4, and 5, as its subsequent steps, reference the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "gary’s gas station serves an average of 14 cars per hour on Saturdays, 10 cars per hour on Sundays, and 9 cars per hour on all other days of the week. if the station is open from 6 a.m. to 10 p.m. every day, how many cars does gary’s station serve over the course of a typical week?",
+        "original_solution": "On Saturdays, the station serves cars for 16 hours (10 pm - 6 am + 1). So the total number of cars served on Saturdays is 14 cars/hour * 16 hours = 224 cars\nOn Sundays, the station serves cars for 16 hours. So the total number of cars served on Sundays is 10 cars/hour * 16 hours = 160 cars\nFrom Monday to Friday, the station serves cars for 16 hours/day * 5 days = 80 hours. So the total number of cars served from Monday to Friday is 9 cars/hour * 80 hours = 720 cars\nThe total number of cars served over a typical week is 224 + 160 + 720 = 1104 cars\n#### 1104",
+        "original_answer": 1104,
+        "transformed_solution": "On Saturdays, the station serves cars for 16 hours (10 pm - 6 am + 1). So the total number of cars served on Saturdays is 14 cars/hour * 16 hours = 224 cars\nOn Sundays, the station serves cars for 16 hours. So the total number of cars served on Sundays is 10 cars/hour * 16 hours = 160 cars\nFrom Monday to Friday, the station serves cars for 16 hours/day * 5 days = 80 hours. But a counting mistake makes it 16 hours/day * 4 days = 64 hours. So the total number of cars served from Monday to Friday due to the incorrect count is 9 cars/hour * 64 hours = 576 cars\nThe total number of cars served over a typical week with the mistaken count is 224 + 160 + 576 = 960 cars\n#### 960",
+        "transformed_answer": 960,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 incorrectly counts the weekdays as 4 days instead of 5, changing the multiplication from 16 hours/day * 5 days to 16 hours/day * 4 days. This leads to the total hours served from Monday to Friday being 64 instead of 80, and the total number of cars served from Monday to Friday is calculated incorrectly as 9 cars/hour * 64 hours = 576 cars. This changes the overall total in step 4 from 224 + 160 + 720 = 1104 to 224 + 160 + 576 = 960. The counting error only affects the step it is introduced in and any subsequent steps that depend on the miscalculation.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 counts Monday to Friday as 4 days instead of 5 days, only resulting in an operand error in the formula, so it belongs to counting_error. Step 5, as its subsequent step, references the wrong result of step 4, resulting in the incorrect final answer."
+    },
+    {
+        "question": "John had a stock of 620 books in his bookshop. He sold 50 on Monday, 82 on Tuesday, 60 on Wednesday, 48 on Thursday, and 40 on Friday. What percentage of the books were not sold?",
+        "original_solution": "The total number of books sold is 50 + 82 + 60 + 48 + 40 = 280 books\nThe number of books not sold is 620 - 280 = 340 books\nThe percentage of books not sold is (340 / 620) * 100 = 54.84%\n#### 54.84%",
+        "original_answer": 54.84,
+        "transformed_solution": "The total number of books sold is 50 + 82 + 60 + 48 + 40 = 280 books\nThe number of books not sold is 620 - 280 = 340 books\nInstead of 5 days, we say books were sold in 4 days (counting error).\nThe incorrect percentage of books not sold is (340 / 620) * 100 / 4 = 13.71%\n#### 13.71%",
+        "transformed_answer": 13.71,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, there was a counting error introduced in the calculation of the percentage. The division by the number of days (which was 5 in reality but mistakenly counted as 4) is not relevant for the calculation of the percentage of books not sold. The incorrect transformation changed the calculation from a correct percentage to an incorrect value by dividing the percentage of books not sold by 4, which is unrelated to the number of days books were sold.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 counts the number of days that books were sold wrongly as 4 days instead of 5 days, only resulting in an operand error in the formula, so it belongs to counting_error."
+    }
+]

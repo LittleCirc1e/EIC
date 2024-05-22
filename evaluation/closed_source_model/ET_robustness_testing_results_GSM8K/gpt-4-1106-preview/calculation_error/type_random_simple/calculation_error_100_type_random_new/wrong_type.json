@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Wendy just started working at an Italian restaurant. She polished 50 small glasses and 10 more large glasses than small glasses. How many glasses did she polish?",
+        "original_solution": "She polished 50 + 10 = 60 large glasses.\nTherefore, Wendy polished 50 + 60 = 110 glasses.\n#### 110",
+        "original_answer": 110.0,
+        "transformed_solution": "She polished 50 + 10 = 70 large glasses.\nTherefore, Wendy polished 50 + 70 = 120 glasses.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the calculation in the first step is changed incorrectly from 50 + 10 = 60 to 50 + 10 = 70. This is a calculation error where the sum of 50 and 10 is wrongly taken as 70 instead of the correct 60. The subsequent step inherits this error, changing the sum from 50 + 60 = 110 to 50 + 70 = 120, thus affecting the result of the total calculation. This single error impacted the final result without changing any operands or operators from the original solution. The calculation within the subsequent step is correct, but it incorrectly uses the erroneous result from the previous step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The error is in the operand when referencing the number of large glasses. Wendy polished 10 more large glasses than the small glasses, which means she polished 50 small glasses + (50 small glasses + 10) large glasses, not 50 + 10 large glasses."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution does not account for the fact that John adds 1 rep each day. It incorrectly assumes that he needs to do 45 progressions in total, but since he adds 1 rep each day, it will take fewer days to reach the 15 reps for each type of push-up. The correct approach would be to calculate the number of days it takes to reach 15 reps for wall push-ups, then start the count again for high elevation push-ups, and again for low elevation push-ups."
+    }
+]

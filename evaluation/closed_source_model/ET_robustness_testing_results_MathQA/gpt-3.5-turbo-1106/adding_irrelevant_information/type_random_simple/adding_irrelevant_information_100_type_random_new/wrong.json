@@ -1,0 +1,72 @@
+[
+    {
+        "question": "how many multiples of 4 are there between 16 and 112 , inclusive ?",
+        "original_solution": "The first multiple of 4 after 16 is 16, and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 16/4 = 4, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 4 + 1 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The first multiple of 4 after 16 is 20 (including the starting number: 16), and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 20/4 = 5, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 5 + 1 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds incorrect and irrelevant information that changes the first multiple of 4 from 16 to 20, which is not following the question statement as 16 itself is a multiple of 4. This results in the step 1 calculation incorrectly changing from dividing 16 by 4 to dividing 20 by 4. Consequently, the first quotient (related to the starting number) incorrectly changes from 4 to 5. This affects the final calculation, causing the result to be 1 number less than the correct answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies the first and last multiples of 4 within the given range and applies the correct formula to calculate the number of multiples, resulting in the correct final answer."
+    },
+    {
+        "question": "A metallic sheet is of rectangular shape with dimensions 48 m x 36 m . from each of its corners , a square is cut off so as to make an open box . if the length of the square is 3 m , the volume of the box ( in m 3 ) is :",
+        "original_solution": "Length after cutting the squares from each corner = 48 - 2*3 = 48 - 6 = 42 m\nWidth after cutting the squares from each corner = 36 - 2*3 = 36 - 6 = 30 m\nHeight of the box = 3 m\nVolume of the box = 42 * 30 * 3 = 3780 m^3\n#### 3780",
+        "original_answer": 3780.0,
+        "transformed_solution": "Length after cutting the squares from each corner and an additional notch for handles = 48 - 2*3 - 2*0.5 = 48 - 6 - 1 = 41 m\nWidth after cutting the squares from each corner = 36 - 2*3 = 36 - 6 = 30 m\nHeight of the box = 3 m\nVolume of the box = 41 * 30 * 3 = 3690 m^3\n#### 3690",
+        "transformed_answer": 3690.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and an additional notch for handles>, resulting in step 1 changing from 48 - 2*3 = 42 m in the original_solution to 48 - 2*3 - 2*0.5 = 41 m in the transformed_solution. This adjustment affects the subsequent steps for calculating the volume. The transformed answer is therefore different from the original answer due to this added irrelevant information. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly follows the steps to calculate the volume of the box based on the given dimensions and the length of the square cut from each corner."
+    },
+    {
+        "question": "A salesperson received a commission of 3 percent of the sale price for each of the first 100 machines that she sold and 4 percent of the sale price for each machine that she sold after the first 100. If the sale price of each machine was $10,000 and the salesperson received a $42,000 commission, how many machines did she sell?",
+        "original_solution": "She earned $300 per machine on the first 100 machines because 100 x 10000 x 0.03 = $30,000\nShe earned $400 per machine on the rest of the machines because $42,000 - $30,000 = $12,000\nShe sold 30 machines after the first 100 because $12,000 / $400 = 30\nShe sold 130 machines altogether because 100 + 30 = 130\n#### 130",
+        "original_answer": 130.0,
+        "transformed_solution": "She earned $300 per machine on the first 100 machines because 100 x 10000 x 0.03 = $30,000\nShe earned $400 per machine on the rest of the machines because $42,000 - $30,000 - $2,000 for added fees for processing = $10,000\nShe sold 25 machines after the first 100 because $10,000 / $400 = 25\nShe sold 125 machines altogether because 100 + 25 = 125\n#### 125",
+        "transformed_answer": 125.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <for added fees for processing>, which is artificially introducing a cost that reduces the commission amount considered for additional machines. This changes the commission remaining for the additional machines from $12,000 in the original_solution to $10,000 in the transformed_solution. The calculation of the number of machines sold after the first 100 is subsequently affected, all other steps remain correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the commission earned on the first 100 machines and the rest of the machines, and then correctly calculates the number of machines sold based on the total commission earned. The final answer is also correct."
+    },
+    {
+        "question": "Rs. 1500 is divided into two parts such that if one part is invested at 6% and the other at 5% the whole annual interest from both the sum is Rs. 85. How much was lent at 5%?",
+        "original_solution": "Let the amount lent at 6% be x.\nThen the amount lent at 5% is 1500 - x.\nThe interest from the 6% investment is 0.06x.\nThe interest from the 5% investment is 0.05(1500 - x).\nThe total interest is 0.06x + 0.05(1500 - x) = 85.\n0.06x + 75 - 0.05x = 85.\n0.01x = 10.\nx = 1000.\nThe amount lent at 5% is 1500 - 1000 = 500.\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "Let the amount lent at 6% be x and the amount lent at 5% be y.\nThen the amount lent at 5% is y = 1500 - x.\nAssume there is an additional Rs. 20 collected as a service charge for the investments.\nThe interest from the 6% investment is 0.06x.\nThe interest from the 5% investment is 0.05(1500 - x).\nThe total interest including the service charge is 0.06x + 0.05(1500 - x) + 20 = 85.\n0.06x + 75 - 0.05x + 20 = 85.\n0.01x + 95 = 85.\n0.01x = 85 - 95.\n0.01x = -10.\nx = -1000.\nThis solution yields a negative number for x, which is not possible in this context, so we correct the additional charge to ensure a valid result.\nAdding a service charge of Rs. 20 would result in a total interest of 85 + 20 = 105 before the charge.\nSo, the equation becomes 0.06x + 0.05(1500 - x) = 105.\n0.06x + 75 - 0.05x = 105.\n0.01x = 105 - 75.\n0.01x = 30.\nx = 3000 / 10.\nx = 300.\nThe amount lent at 5% is 1500 - 300 = 1200.\n#### 1200",
+        "transformed_answer": 1200.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 incorrectly adds an additional condition that is not mentioned in the question <Assume there is an additional Rs. 20 collected as a service charge for the investments>, which changes the total interest calculation. The equation is altered by including the assumed service charge, changing the total from Rs. 85 to Rs. 105 before accounting for the service charge. The addition of the irrelevant service charge leads to the change in the final answer from Rs. 500 to Rs. 1200. This incorrect addition of information makes it a single point error in the solution process.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct because it follows the correct reasoning and calculations to determine that the amount lent at 5% is 1200."
+    },
+    {
+        "question": "there is a train and car. the ratio btw the speed of a train & a car is 16 : 15 respectively. also, a bus covered a distance of 480 km in 8 h. the speed of the bus is 3 / 4 th of the speed of the train. how much distance will the car cover in 6 h?",
+        "original_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDistance covered by the car in 6 hours is 6*75 = 450 km.\n#### 450",
+        "original_answer": 450.0,
+        "transformed_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDue to road constructions, the effective speed of the car reduces by 5 km/h.\nDistance covered by the car in 6 hours is 6*(75-5) = 6*70 = 420 km.\n#### 420",
+        "transformed_answer": 420.0,
+        "wrong_step": 6,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 6 adds information that is not mentioned in the question statement <Due to road constructions, the effective speed of the car reduces by 5 km/h>, resulting in step 6 changing from 6*75=450 km in the original_solution to 6*(75-5)=6*70=420 km in the transformed_solution. In this process, an irrelevant factor is incorrectly introduced that affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the speed of the car and then uses the correct formula to calculate the distance covered by the car in 6 hours, resulting in the correct final answer of 420 km."
+    }
+]

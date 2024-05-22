@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Farmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens?",
+        "original_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=70\n2C=10\nC=5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=80\n-2C=0\nC=0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error is intentionally introduced in step 6 where the equation is incorrectly simplified to 2C+80-4C=80 instead of 2C+80-4C=70. This miscalculation leads to an incorrect result of -2C=0, and subsequently C=0, which doesn’t make sense in the context of the question as farmer Brown cannot have zero chickens. The previous steps remain unchanged because they are not dependent on the outcome of the incorrect calculation step.",
+        "is_correct": "no",
+        "corrected_solution": "Let C be the number of chickens, and C is in [0,20].\nLet B be the number of cows, so B is in [0,20].\nWe know that C+B=20.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=80\n-2C=-80\nC=40\nTherefore we have C=40/2=20, which is impossible since C is in [0,20].\nThe problem itself is wrong.",
+        "corrected_answer": "none",
+        "corrected_explanation": "The given solution made a mistake when solving the equation for C. The corrected solution shows that the problem itself is wrong and has no solution."
+    },
+    {
+        "question": "The red rope was four times the length of the blue rope. The blue rope was 7 centimeters shorter than the yellow rope. If the 3 ropes had a combined length of 37 centimeters, what was the length of the red rope in centimeters?",
+        "original_solution": "Let Y = the length of the yellow rope in centimeters\nBlue rope = Y - 7\nRed rope = 4 * (Y - 7)\nY + Y - 7 + 4 (Y - 7) = 37 cm\n6Y - 35 = 37\n6Y = 72\nY = 12 cm\nThe red rope was 20 cm long.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let Y = the length of the yellow rope in centimeters\nBlue rope = Y - 7\nRed rope = 4 * (Y - 7)\nY + Y - 7 + 4 (Y - 7) = 37 cm\n6Y - 35 = 37\n6Y = 70\nY = 11.67 cm\nThe red rope was 18.67 cm long.\n#### 18.67",
+        "transformed_answer": 18.67,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation in step 6 is incorrect, changing 6Y = 72 to 6Y = 70. This error affects the calculation of Y in step 7, changing Y = 12 cm to Y = 11.67 cm. Consequently, the length of the red rope in the final step is also affected, changing from 20 cm to 18.67 cm. The previous steps remain unchanged as they are not affected by the error introduced in step 6. The calculation error is only in one step, and the subsequent related steps inherit this error without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "corrected_solution": "Let X = the length of the red rope in centimeters\nLet Y = the length of the yellow rope in centimeters\nWe know that X = 4Y\nWe also know that Y - 7 = blue rope\nSo, X + Y + (Y - 7) = 37 cm\nSimplify: 6Y - 7 = 37\nAdd 7 to each side: 6Y = 44\nDivide both sides by 6: Y = 7.33 cm\nSince X = 4Y, X = 29.34 cm\n",
+        "corrected_answer": 29.34,
+        "corrected_explanation": "The key here is to find the length of the yellow rope using the information given, and then use that information to find the length of the red rope."
+    },
+    {
+        "question": "Rodney, Roger and Ron can lift a combined weight of 239 pounds. Rodney can lift twice as much as Roger, and Roger can lift 7 pounds less than 4 times the amount that Ron can lift. How much can Rodney lift?",
+        "original_solution": "Let x represent the amount that Ron can lift.\nRoger: 4x-7\nRodney:2(4x-7)=8x-14\nTotal:x+4x-7+8x-14=239\n13x-21=239\n13x=260\nx=20\nRodney:8(20)-14=146 pounds\n#### 146",
+        "original_answer": 146.0,
+        "transformed_solution": "Let x represent the amount that Ron can lift.\nRoger: 4x-7\nRodney:2(4x-7)=8x-14\nTotal:x+4x-7+8x-14=239\n13x-21=239\n13x=260\nx=20\nRodney:8(20)-14=160 pounds\n#### 160",
+        "transformed_answer": 160.0,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates Rodney's weight as 8(20)-14=160 pounds instead of the correct 8(20)-14=146 pounds in step 7. The error is introduced in the final calculation step, which does not affect the previous steps. The steps leading up to the final calculation are correct, but the final step incorrectly states Rodney's lifting capacity, resulting in a transformed answer of 160 pounds instead of the correct 146 pounds.",
+        "is_correct": "no",
+        "corrected_solution": "Let x represent the amount that Ron can lift.\nRoger: 4x-7\nRodney:2(4x-7)=8x-14\nTotal:x+4x-7+8x-14=239\n13x-21=239\n13x=260\nx=20\nRodney:2(20)=40 pounds",
+        "corrected_answer": "40",
+        "corrected_explanation": "The corrected solution should set up the three person's lifting weights as three individual equations, then add the equations to get a total amount. After that, we can find the value of x by solving the equation."
+    }
+]

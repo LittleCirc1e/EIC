@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Burt spent $2.00 on a packet of basil seeds and $8.00 on potting soil.  The packet of seeds yielded 20 basil plants.  He sells each basil plant for $5.00 at the local farmer's market.  What is the net profit from his basil plants?",
+        "original_solution": "He spent $2.00 on seeds and $8.00 on soil for a total of 2+8 = $10.00\nHe sells each of the 20 basil plants for $5.00 so he makes 20*5 = $100.00\nHe made $100.00 from selling basil plants and he spent $10.00 to buy and grow the seeds. His net profit is 100-10 = $90.00\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "He spent $1.00 on seeds and $8.00 on soil for a total of 1+8 = $9.00\nHe sells each of the 20 basil plants for $5.00 so he makes 20*5 = $100.00\nHe made $100.00 from selling basil plants and he spent $9.00 to buy and grow the seeds. His net profit is 100-9 = $91.00\n#### 91",
+        "transformed_answer": 91.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $2.00 in the question as $1.00 wrongly, and calculates 1+8 = $9.00 instead of 2+8 = $10.00. Its subsequent related step will be affected, calculating the net profit as 100-9 = $91.00 instead of 100-10 = $90.00 in step 3. Please note that you should only consider one error, so the total revenue calculated in step 2 still references the correct price of $5.00 per basil plant.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly references the cost of the packet of basil seeds as $1.00 instead of the correct cost of $2.00 from the question."
+    },
+    {
+        "question": "Johnny buys 15 packs of colored pencils for his class. Each pack has a red, yellow, and green pencil inside. When he gets home he notices that 3 of the packs have two extra red pencils inside. How many red colored pencils did Johnny buy?",
+        "original_solution": "Johnny bought 15 packs, and every normal pack has 1 red pencil. He should have 15 * 1 = 15 red pencils.\n3 of the packs have 2 extra red colored pencils, so there are 3 * 2 = 6 extra red pencils.\nIn total, Johnny has 15 + 6 = 21 red colored pencils.\n#### 21",
+        "original_answer": 21.0,
+        "transformed_solution": "Johnny bought 17 packs, and every normal pack has 1 red pencil. He should have 17 * 1 = 17 red pencils.\n3 of the packs have 2 extra red colored pencils, so there are 3 * 2 = 6 extra red pencils.\nIn total, Johnny has 17 + 6 = 23 red colored pencils.\n#### 23",
+        "transformed_answer": 23.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 15 in the question as 17 wrongly, and calculates 17 * 1 = 17 instead of 15 * 1 = 15. Its subsequent related step will be affected, calculating 17 + 6 = 23 instead of 15 + 6 = 21 in step 3. Please note that you should only consider one error, so step 2 still references 3 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly references that Johnny bought 17 packs, while the question clearly states he bought 15 packs."
+    },
+    {
+        "question": "Val has three times as many dimes as nickels. If she accidentally finds twice as many nickels as she has in her older brother's treasure box, and takes them for herself, what would be the value of money she has, in dollars, if she had 20 nickels before finding the new ones from her brother's treasure box?",
+        "original_solution": "If Val currently has 20 nickels and finds twice as many nickels as she has in her older brother's treasure box, she will have 2*20=40 more nickels.\nThe total number of nickels she'll have is 40+20=60\nSince nickel is worth $0.05, the value of the nickels Val is having is 60*0.05=$3\nVal had three times as many dimes as nickels before she found the 40 new nickels, a total of 3*20=60 dimes\nSince a dime has a value of $0.10, the value of the dimes that Val has is 60*$0.10=$6\nTogether, the value of the dimes and nickels Val has is worth $6+$3=$9\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "If Val currently has 20 nickels and finds twice as many nickels as she has in her older brother's treasure box, she will have 2*20=40 more nickels.\nThe total number of nickels she'll have is 40+20=60\nSince nickel is worth $0.05, the value of the nickels Val is having is 60*0.05=$3\nVal had four times as many dimes as nickels before she found the 40 new nickels, a total of 4*20=80 dimes\nSince a dime has a value of $0.10, the value of the dimes that Val has is 80*$0.10=$8\nTogether, the value of the dimes and nickels Val has is worth $8+$3=$11\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 3 in the question as 4 wrongly, and calculates 4*20=80 instead of 3*20=$60. Its subsequent related steps, step 5 and 6, will be affected. ",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly states that Val had four times as many dimes as nickels before finding the new nickels, but the question states she had three times as many dimes as nickels."
+    },
+    {
+        "question": "Cynthia has four times as many water balloons as her husband, Randy. Randy has only half as many water balloons as his daughter, Janice. If Janice throws all 6 of her water balloons at her father, how many water balloons does Cynthia have, which she could also choose to throw at Randy?",
+        "original_solution": "Randy has only half as many water balloons as Janice’s 6, for a total of (½)*6=3 water balloons.\nCynthia has 4 times as many water balloons as Randy, for a total of 4*3=12 water balloons\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "Randy has only half as many water balloons as Janice’s 8, for a total of (½)*8=4 water balloons.\nCynthia has 4 times as many water balloons as Randy, for a total of 4*4=16 water balloons\n#### 16",
+        "transformed_answer": 16.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 8 wrongly, and calculates (½)*8=4 instead of (½)*6=3. The following step inherited this erroneous result and calculated 4*4=16 instead of the correct 4*3=12. Please note that you should only consider one error, so step 2 still references the number 4 calculated from step 1 correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly references Janice's number of water balloons as 8, while the question clearly states she has 6 water balloons."
+    },
+    {
+        "question": "During one day, there are 4 boat trips through the lake. The boat can take up to 12 people during one trip. How many people can the boat transport in 2 days?",
+        "original_solution": "During each boat trip, there can be 12 people onboard, so during 4 boat trips, there can be 4 * 12 = 48 people in total.\nDuring two days the boat can transport a total of 48 * 2 = 96 people.\n#### 96",
+        "original_answer": 96.0,
+        "transformed_solution": "During each boat trip, there can be 10 people onboard, so during 4 boat trips, there can be 4 * 10 = 40 people in total.\nDuring two days the boat can transport a total of 40 * 2 = 80 people.\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 12 in the question as 10 wrongly, and calculates 4 * 10=40 instead of 4 * 12=48. Its subsequent related step will be affected, calculating 40 * 2=80 instead of 48 * 2=96 in step 2. Please note that you should only consider one error, so step 2 still references 2 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly references that the boat can take 10 people onboard per trip, while the question states that the boat can take up to 12 people."
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "question": "If the price of a book is first decreased by 15 % and then increased by 10 %, then the net change in the price will be:",
+        "original_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nThe price after a 10% increase is 85 + (0.10 * 85) = 85 + 8.5 = $93.50.\nThe net change in the price is 93.50 - 100 = -$6.50\n#### -6.50",
+        "original_answer": -6.5,
+        "transformed_solution": "Let the original price of the book be $100.\nThe price after a 15% decrease is 100 - (0.15 * 100) = 100 - 15 = $85.\nAssuming there was a mistaken additional discount of 5% applied in this step, the actual price after the discounts would be 85 - (0.05 * 85) = 85 - 4.25 = $80.75.\nThe price after a 10% increase is 80.75 + (0.10 * 80.75) = 80.75 + 8.075 = $88.825.\nThe net change in the price is 88.825 - 100 = -$11.175\n#### -11.175",
+        "transformed_answer": -11.175,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, specifically, introducing a mistaken additional discount of 5%. This mistake changes the calculations in step 2 from a price decrease to $85 to a further reduced price of $80.75. Following this error, all subsequent calculations are based on the incorrect price of $80.75 instead of $85, resulting in the transformed solution stating the price after a 10% increase and the net change in price incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 85 - (0.05 * 85) = 85 - 4.25 = $80.75 instead of 85 - (0.15 * 85) = 85 - 12.75 = $72.25. The subsequent step 4 references the result of step 3, calculating 80.75 + (0.10 * 80.75) = 80.75 + 8.075 = $88.825 instead of 72.25 + (0.10 * 72.25) = 72.25 + 7.225 = $79.475. The subsequent step 5 references the result of step 4, calculating 88.825 - 100 = -$11.175 instead of 79.475 - 100 = -$20.525, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Calculate the average of all the numbers between 18 and 57 which are divisible by 7.",
+        "original_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56.\nThe sum of these numbers is 21+28+35+42+49+56 = 231.\nThe average is 231/6 = 38.5.\n#### 38.5",
+        "original_answer": 38.5,
+        "transformed_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56, including an extra number 63 mistakenly included within the range.\nThe sum of these numbers including the extra is 21+28+35+42+49+56+63 = 294.\nThe average is 294/7 = 42.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <including an extra number 63 mistakenly included within the range>, resulting in step 2 changing from 21+28+35+42+49+56 = 231 in the original_solution to 21+28+35+42+49+56+63 = 294 in the transformed_solution. The related subsequent step also changes to reflect this new total number, with the average calculated as 294/7 = 42 instead of 231/6. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in identifying the numbers divisible by 7 between 18 and 57, mistakenly including 63 which is not divisible by 7. The subsequent step 2 references the result of step 1, calculating the sum of the numbers including the extra 63, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

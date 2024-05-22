@@ -1,0 +1,44 @@
+[
+    {
+        "question": "how many numbers from 2 to 15 are exactly divisible by 2 ?",
+        "original_solution": "There are 7 numbers between 2 and 15\n2, 4, 6, 8, 10, 12, 14\n#### 7",
+        "original_answer": 7,
+        "transformed_solution": "There are 6 numbers between 2 and 15\n2, 4, 6, 8, 10, 12\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the numbers between 2 and 15 that are exactly divisible by 2 as 6 instead of 7. This counting error excludes number 14 from the series, changing the original solution (which correctly identifies 2, 4, 6, 8, 10, 12, 14) to an incorrect count of 2, 4, 6, 8, 10, 12 in the transformed_solution. The other numbers remain unchanged, and only the count is affected, causing the transformed_answer to differ from the original_answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly lists the numbers from 2 to 15 that are exactly divisible by 2 and counts them properly."
+    },
+    {
+        "question": "Find the probability that a non leap year selected at random will have 53 Sundays",
+        "original_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day in that year\nThe probability of selecting a non leap year with 53 Sundays is 1/7\n#### 1/7",
+        "original_answer": "1/7",
+        "transformed_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day that could potentially fall on a Sunday\nThe probability of selecting a non leap year with 53 Sundays is 2/7\n#### 2/7",
+        "transformed_answer": "2/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 erroneously calculates the probability of having 53 Sundays in a non-leap year as 2/7 instead of 1/7. Since there are 365 days in a non-leap year and 52 full weeks account for 364 days, there is 1 extra day, not 2 as implied by the transformed solution. This extra day has a 1/7 chance of being a Sunday, not 2/7. To generate the transformed_solution, the counting of weeks is kept correct, but the probability calculation is erroneously changed which is reflected in the transformed_answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the probability of a non-leap year having 53 Sundays by considering that there are 52 weeks and 1 extra day, which can fall on a Sunday. The probability is calculated as 2/7, which is the correct ratio of the number of possible starting days for a year that would result in 53 Sundays (2 out of the 7 possible days of the week for the extra day)."
+    },
+    {
+        "question": "At Chennai it rained as much on Tuesday as on all the others days of the week combined. If the average rainfall for the whole week was 3cm. How much did it rain on Tuesday?",
+        "original_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 7 * 3 = 21 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 21 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 21 - x\n2x = 21\nx = 10.5\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 6 * 3 = 18 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 18 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 18 - x\n2x = 18\nx = 9\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original_solution, the total days are erroneously counted as 6 instead of 7 when calculating the total rainfall for the week. This affects the following steps since the total rainfall is now incorrectly set to 18 cm instead of 21 cm. Consequently, the calculation is based on the wrong total, which also changes the final answer for Tuesday’s rainfall from 10.5 cm to 9 cm.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up the equation based on the information given in the question. It correctly calculates that the total rainfall for the week is 18cm and that the rainfall on Tuesday is equal to the combined rainfall of the other days. The algebra used to solve for x is also correct, resulting in the right amount of rainfall for Tuesday."
+    }
+]

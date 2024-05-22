@@ -1,0 +1,32 @@
+[
+    {
+        "question": "What is the smallest number which when increased by 3 is divisible by 18 , 70 , 25 and 21 ?",
+        "original_solution": "The LCM of 18, 70, 25, and 21 is 3150.\nThe smallest number which when increased by 3 is divisible by 3150 is 3147.\n#### 3147",
+        "original_answer": 3147.0,
+        "transformed_solution": "The LCM of 18, 70, 25, and 21 is 3150.\nThe smallest number which when increased by 3 is divisible by 3150 is 3144.\n#### 3144",
+        "transformed_answer": 3144.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly changes the result of the smallest number from 3147 to 3144 in step 2, which is the final step and therefore has no impact on other steps. The calculation of the LCM in step 1 remains correct and unchanged.",
+        "is_correct": "no",
+        "corrected_solution": "The LCM of 18, 70, 25, and 21 is 6300.\nTo find the smallest number which when increased by 3 is divisible by 6300, we subtract 3 from 6300 to get 6297.\nTherefore, the smallest number is 6297.\n",
+        "corrected_answer": 6297,
+        "corrected_explanation": "The correct LCM of 18, 70, 25, and 21 is 6300, not 3150. After finding the LCM, we need to subtract 3 to find the number that when increased by 3 is divisible by the LCM."
+    },
+    {
+        "question": "A taxi company charges $1.85 for the first quarter of a mile and fifteen cents for each additional quarter of a mile. What is the maximum distance someone could travel with $4.90?",
+        "original_solution": "Each additional quarter of a mile costs $0.15, so (4.90 - 1.85) / 0.15 = 20.33\nThe maximum distance someone could travel is 20 * 0.25 = 5 miles\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Each additional quarter of a mile costs $0.15, so (4.90 - 1.85) / 0.15 = 20.33\nThe maximum distance someone could travel is 20 * 0.25 = 4.75 miles\n#### 4.75",
+        "transformed_answer": 4.75,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the maximum distance as 20 * 0.25 = 4.75 miles instead of 20 * 0.25 = 5 miles in step 2. The error in step 2 does not affect the calculation in step 1, which remains correct. The transformed solution inherits the error from step 2, resulting in a different transformed answer from the original answer.",
+        "is_correct": "no",
+        "corrected_solution": "Each additional quarter of a mile costs $0.15, so (4.90 - 1.85) / 0.15 = 20.3333\nThe number of additional quarters someone could travel is 20 (since you can't travel a fraction of a quarter mile for a fixed rate)\nThe first quarter of a mile is included in the initial charge, so the total distance is 1 * 0.25 + 20 * 0.25 = 0.25 + 5.00 = 5.25 miles\n",
+        "corrected_answer": 5.25,
+        "corrected_explanation": "The initial charge covers the first quarter mile. After subtracting the initial charge from the total amount, the remaining money is divided by the cost per quarter mile to find the number of additional quarters that can be traveled. Since you can't travel a fraction of a quarter mile for a fixed rate, we round down to the nearest whole number of quarters. Finally, we add the first quarter mile to the total distance calculated from the additional quarters."
+    }
+]

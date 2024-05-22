@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Liam is 16 years old now. Two years ago, Liam’s age was twice the age of Vince. How old is Vince now?",
+        "original_solution": "Liam's age two years ago was 16 - 2 = 14 years old.\nVince's age two years ago was 14/2 = 7 years old because Liam's age is twice his.\nSo Vince age now is 7 + 2 = 9 years old.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Vince's age two years ago was 16/2 = 8 years old because Liam's age is twice his.\n",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 1 calculates Liam’s age two years ago. However, the transformed_solution removes this first step. As a consequence, step 1 in the transformed_solution, which originally is step 2 in the original_solution, directly references the number 16 from the question, which leads to Vince’s age being half of 16 instead of half of Liam’s age two years ago. This results in a transformed answer of 10, which is incorrect. The error in the new step 1 is due to the fact that it incorrectly calculates Vince’s age as half of Liam’s current age rather than half of Liam’s age two years ago. Since the original step 1 is absent, the subsequent related step (the new step 1) becomes the wrong step.",
+        "is_correct": "yes",
+        "any_explanation": "The existing steps correctly calculate Vince's age two years ago by dividing Liam's age at that time by 2. Since the solution is incomplete and does not provide Vince's current age, we cannot assess the entire solution. However, the step provided is correct."
+    },
+    {
+        "question": "Chris wants to hold his breath underwater for 90 straight seconds so he starts training each day. On the first day, he holds it for 10 seconds. On the second day, he holds it for 20 seconds. On the third day, he holds it for 30 seconds. After realizing that he can hold it for ten extra seconds each day, he realizes he can calculate how many days it is until he reaches 90 if he keeps up the same pace. So how many days until he can hold his breath for 90 seconds?",
+        "original_solution": "He still has to improve by 60 more seconds because 90 - 30 = 60\nThis will take 6 days because 60 / 10 = 6\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "This will take 9 days because 90 / 10 = 9\n",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution has been removed. Originally, this step calculates the remaining seconds by subtracting 30 (the result of the third day) from 90. After removing this step, the 60 seconds of improvement mentioned in the result no longer has context, and the solution incorrectly assumes that Chris is starting from 0 seconds, which leads to dividing 90 by 10 to recommend 9 days of training. Since the deleted first step referenced the number 30 from the question, the transformed answer should still reflect the additional 60 seconds of improvement needed. However, the error in the transformation directly references 90 instead of the correct context, which is why the wrong_step is 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly divides the target time (90 seconds) by the daily increment (10 seconds) to find the number of days required."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly applies the geometric progression formula for the number of paintings Marcus paints each day and correctly sums them up to find the total."
+    },
+    {
+        "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+        "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n",
+        "transformed_answer": 78.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly converts Steve's original height of 5 feet to inches (5*12), adds the original 6 inches, and then adds the additional 6 inches he grew, resulting in the correct final height in inches."
+    }
+]

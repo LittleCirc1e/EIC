@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Emery and Serena go to their school library, and each borrows a copy of The life of Jack Steve's book to read for their school project. If Emery can read five times as fast as Serena, and the book takes her 20 days to read, what's the average number of days the two take to read the book?",
+        "original_solution": "If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.\nThe total number of days taken by the two to read the book is 100+20 = 120 days.\nThe average number of days the two take to read the book is 120/2 = 60 days.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.\nThe total number of days taken by the two to read the book is 100+25 = 125 days.\nThe average number of days the two take to read the book is 125/2 = 62.5 days.\n#### 62.5",
+        "transformed_answer": 62.5,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references the value 20 as 25 from step 1 and changes the calculation from 100+20=120 to 100+25=125. It should be noted that step 1 in the transformed_solution <If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.> should be the same as the step 1 in the original_solution <If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.> and calculates its result 100 correctly. Step 3 is affected by step 2 and changes the calculation from 120/2=60 to 125/2=62.5. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.\nThe total number of days taken by the two to read the book is 120+20 = 140 days.\nThe average number of days the two take to read the book is 140/2 = 70 days.\n#### 70",
+        "corrected_answer": 70.0,
+        "corrected_explanation": "Step 3 first erroneously references the result 120 instead of 100 from step 2, resulting in the calculation of 120+20=140 instead of 100+20=120. And this causes an error in the final result."
+    }
+]

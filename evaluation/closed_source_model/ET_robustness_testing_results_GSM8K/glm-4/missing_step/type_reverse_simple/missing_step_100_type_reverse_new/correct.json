@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Milly is figuring out how long she needs to spend studying. She knows that her math homework will take 60 minutes. Her geography homework will take half as long as her math homework, and her science homework will take time equal to the mean amount of time she spent studying math and geography. How many minutes does Milly spend studying?",
+        "original_solution": "First find how long Milly spends studying geography by dividing her math homework time by 2: 60 minutes / 2 = 30 minutes.\nNow find the total amount of time Milly spent on math and geography: 30 minutes + 60 minutes = 90 minutes.\nNow calculate the mean amount of time Milly spends on math and geography by dividing the total time spent by the number of subjects, which is 2: 90 minutes / 2 = 45 minutes.\nNow add the time Milly spent on all three subjects to find the total: 45 minutes + 30 minutes + 60 minutes = 135 minutes.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "Find the total amount of time Milly spent on math and geography [combining step 1 and 2]: 60 minutes + (60 minutes / 2) = 90 minutes.\nNow calculate the mean amount of time Milly spends on math and geography by dividing the total time spent by the number of subjects, which is 2: 90 minutes / 2 = 45 minutes.\nNow add the time Milly spent on all three subjects to find the total: 45 minutes + (60 minutes / 2) + 60 minutes = 150 minutes.\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the original step 1 has been removed. Thus, the reference to \"30 minutes\" in the original step 2 for the time spent on geography has been removed. In the transformed_solution, the calculation that finds the time spent on geography by dividing math homework time by 2 (60 minutes / 2 = 30 minutes) is integrated into step 1. Consequently, the initial calculation in step 3 of the original solution, which calculates the mean amount of time spent on math and geography, now references the recalculated total time spent on math and geography (90 minutes) from the transformed step 1. Step 2 of the transformed solution, which calculates the total study time, also integrates this change and incorrectly calculates the total study time as 150 minutes instead of the correct 135 minutes. By removing the first step, which was the calculation of the geography homework time, the subsequent steps reference the largest number from question that step 1 references, which is \"60 minutes\" for the math homework time, leading to the incorrect transformed_answer. Therefore, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution incorrectly adds the time for geography homework twice. It first adds it when combining math and geography, and then adds it again with the science homework. The correct approach should only add the science homework time once, after finding the mean of math and geography."
+    },
+    {
+        "question": "At the zoo, there are 5 different types of animals. Seeing each animal type takes around 6 minutes. How much time would it take to see each animal type if the zoo decided to import 4 new species?",
+        "original_solution": "If the zoo would decide to import 4 new species, there would be 5 + 4 = 9 species in total.\nThis would mean, that seeing each type of animal would take 9 * 6 = 54 minutes.\n#### 54",
+        "original_answer": 54.0,
+        "transformed_solution": "Seeing each type of animal would take 5 * 6 = 30 minutes.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, we are deleting the first step which is calculating the new total number of species if the zoo decides to import 4 new species. The deleted step 1 would normally reference the numbers 5 and 4 from the question. However, since we're deleting the first step and not recalculating the number of species with the new additions, we're incorrectly using the original number of species (5). The subsequent step that originally referenced the result of step 1 now incorrectly references the original number of species (5), leading to the calculation of 5 * 6 = 30 minutes instead of the correct 9 * 6 = 54 minutes. The wrong_step is 1 because it is the first step performed in the transformed_solution, which references the incorrect number (5) instead of the new total (9).",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution does not account for the new species being added. It only calculates the time based on the original number of animal types."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 124",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The final calculation sums up the daily paintings incorrectly. It should be 2 + 4 + 8 + 16 + 32 = 62, not 124."
+    },
+    {
+        "question": "Last month, Tasha made $80 from selling lemonade and mowing lawns. The first week, she mowed Kamala's lawn thrice as many times as she did Joe's. The following week, she mowed Alba's lawn five times as she did Joe's. If Joe paid Tasha $6 for her work, how much did she make from lemonade sales?",
+        "original_solution": "At Kamala's Tasha made three times what she made mowing Joe's lawn, which gives 3 * 6 = 18 dollars\nSince the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 18 + 30 = 54 dollars\nSubtracting the lawn mowing money from the total amount gives us 80 - 54 = 26 dollars\nTasha therefore made 26 dollars selling lemonade.\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Since the lawn mowing sessions at Alba's were 5 times those at Joe's Tasha also made 5 * 6 = 30 dollars.\nAdding up all the money earned from lawn mowing gives 6 + 6 + 30 = 42 dollars\nSubtracting the lawn mowing money from the total amount gives us 80 - 42 = 38 dollars\nTasha therefore made 38 dollars selling lemonade.\n#### 38",
+        "transformed_answer": 38.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformed_solution, the missing intermediate step is the calculation of the money Tasha made at Kamala's, which is 3 * 6 = 18 dollars. As a consequence, step 2 in the transformed_solution is the first instance that does not follow from the preceding steps, instead combining Tasha's earnings from Joe's lawn (6 dollars) with Alba's (30 dollars). This step also adds another lawn mowing session at Joe's (6 dollars), which corresponds to the largest number referenced by the deleted step 1 related to lawn mowing. The subsequent steps are all affected by this change and are modified to calculate and subtract from the total based on the incorrect total lawn mowing earnings. It is step 2 in the transformed_solution, that serves as the first step referencing the incorrect total after deleting the first step, so the wrong_step is 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution does not account for the fact that Tasha mowed Kamala's lawn thrice as many times as she did Joe's, which is necessary information to correctly calculate the total money earned from lawn mowing."
+    },
+    {
+        "question": "The last time Bob cut his hair he cut it to 6 inches.  His hair is now 36 inches long.  If hair grows at a rate of .5 inches per month how many years did it take him to grow out his hair?",
+        "original_solution": "His hair grew 36 inches - 6 inches = 30 inches\nHair grows at a rate of 12 months/year * 0.5 inches/month =6 inches/year\nIt took him 30 inches / 6 inches/year = 5 years to grow his hair out.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "His hair grew 36 inches * 12 months/year = 432 inches\nIt took him 432 inches / 0.5 inches/month = 864 months to grow his hair out.\n864 months / 12 months/year = 72 years\n#### 72",
+        "transformed_answer": 72.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step is altered and contains a mathematically incorrect operation. Instead of subtracting the starting length from the current length (36 inches - 6 inches), the current length is incorrectly multiplied by the number of months in a year (36 inches * 12 months/year), leading to a result of 432 inches. The transformed solution's step 1 results in an incorrect calculation that does not represent the hair growth correctly, therefore directly leading to the wrong answer that it took 72 years for Bob to grow out his hair. The sequence of steps in the transformed_solution erroneously inflated the hair growth, directly affecting the subsequent computations, which are also incorrect but follow from the initial error in step 1. The error is classified as a calculation error and wrong_step is identified as 1 because that is where the first incorrect operation occurred.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The calculation in the first step incorrectly multiplies the current hair length by 12 instead of subtracting the initial hair length before multiplication."
+    }
+]

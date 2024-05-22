@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Jack, who weighs 60 pounds, wants to play on the see-saw with his cousin Anna, who weighs 40 pounds. How many 4-pound rocks does Jack need to hold to make their weights equal?",
+        "original_solution": "First find the total difference in weight between the two people: 60 pounds - 40 pounds = 20 pounds\nThen divide the weight difference by the weight of each rock to find the number of rocks need to even the weights: 20 pounds / 4 pound/rock = 5 rocks\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "To make their weights equal, Jack needs to hold: 60 pounds / 4 pound/rock = 15 rocks\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformation, step 1 of the original_solution, which calculates the weight difference, was deleted. Therefore, the transformed_solution should have started with the calculation based on the 60 pounds Jack weighs. However, instead of calculating the weight difference from step 1 and dividing that by the weight of each rock, the transformed_solution incorrectly refers directly to Jack's weight. This leads to a calculation of 60 pounds divided by 4 pounds per rock, equaling 15 rocks. The correct intermediate calculation of the weight difference was not considered, resulting in the number of needed rocks being artificially increased to 15. The referenced number 60 in the transformed solution's first step, which is step 1, is the weight of Jack from the question, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The calculation correctly determines that Jack needs to hold 15 rocks to balance their weights, as 60 pounds / 4 pounds/rock equals 15."
+    },
+    {
+        "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+        "original_solution": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = 100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = 40 meters.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If the total distance is 140m, the distance between the house and the market is 140m - 50m = 90 meters.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformation, I have deleted the first step, which involves Andy's return trip from school to his house. The original step 1 involves adding the two 50m trips together for a total of 100m. By removing this step, we no longer account for the return trip from school, and thus the calculation in the transformed solution refers to only one leg of the journey from the house to the school (50m). Since in our transformation we remove step 1, we then modify step 2 to include only one 50m trip, changing the formula from 140m - 100m = 40 meters to 140m - 50m = 90 meters. It should be noted that while the calculation itself is algebraically correct, the premise is wrong because it does not consider the entire trip. The first step (now also the wrong_step) references the correct number from the question and no intermediate steps are present, thus making the entire reasoning incorrect and leading to a different transformed answer.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The calculation correctly subtracts the distance from the house to school (50 meters) from the total distance walked (140 meters), leaving the distance from the house to the market."
+    }
+]

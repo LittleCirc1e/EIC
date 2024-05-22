@@ -1,0 +1,44 @@
+[
+    {
+        "question": "If an object travels 80 feet in 4 seconds, what is the object's approximate speed in miles per hour? (note: 1 mile = 5280 feet)",
+        "original_solution": "The speed is calculated as distance / time. So, the speed is 80 feet / 4 seconds = 20 feet per second.\nTo convert feet per second to miles per hour, first convert feet to miles: 20 feet / 5280 feet per mile = 0.0037878788 miles per second.\nThen convert seconds to hours: 1 hour = 3600 seconds, so 0.0037878788 miles per second * 3600 = 13.64 miles per hour.\n#### 13.64",
+        "original_answer": 13.64,
+        "transformed_solution": "The speed is calculated as distance / time. So, the speed is 80 feet / 4 seconds = 20 feet per second.\nTo convert feet per second to miles per hour, first convert feet to miles: 20 feet / 5230 feet per mile = 0.0038277512 miles per second.\nThen convert seconds to hours: 1 hour = 3600 seconds, so 0.0038277512 miles per second * 3600 = 13.78 miles per hour.\n#### 13.78",
+        "transformed_answer": 13.78,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion by stating that there are 5230 feet per mile instead of the correct 5280 feet per mile, resulting in the original_solution calculation 20 feet / 5280 feet per mile becoming 20 feet / 5230 feet per mile in the transformed_solution. The error affects the outcome of the second conversion step, changing from 0.0037878788 miles per second in the original_solution to 0.0038277512 miles per second in the transformed_solution. This incorrect conversion then propagates to the final calculation step where the speed in miles per second is multiplied by the correct number of seconds in an hour, affecting the subsequent related step and leading to a different transformed_answer of 13.78 miles per hour from the correct original_answer of 13.64 miles per hour.",
+        "is_correct": "no",
+        "pred_wrong_type": "unit_conversion_error",
+        "type_explanation": "The conversion from feet to miles is incorrect. It should be 20 feet / 5280 feet per mile = 0.0037878787 miles per second."
+    },
+    {
+        "question": "A person crosses a 300 m long street in 4 minutes. What is his speed in km per hour?",
+        "original_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 60 minutes = 0.0667 hours.\nSpeed = 300 m / 0.0667 hours = 4500 m/h.\nConvert m/h to km/h: 4500 m/h * 1 km / 1000 m = 4.5 km/h.\n#### 4.5",
+        "original_answer": 4.5,
+        "transformed_solution": "Speed = Distance / Time = 300 m / 4 minutes.\nConvert minutes to hours: 4 minutes * 1 hour / 50 minutes = 0.08 hours.\nSpeed = 300 m / 0.08 hours = 3750 m/h.\nConvert m/h to km/h: 3750 m/h * 1 km / 1000 m = 3.75 km/h.\n#### 3.75",
+        "transformed_answer": 3.75,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original solution, minutes are correctly converted to hours using a factor of 60 minutes per hour. In the transformed solution, an incorrect conversion factor of 50 minutes per hour is used instead. This leads to an incorrect total time in hours, which is then used to calculate speed, resulting in an incorrect speed in meters per hour and subsequently an incorrect conversion to kilometers per hour. Only the step involving the unit conversion from minutes to hours is affected, while the other steps remain unchanged.",
+        "is_correct": "no",
+        "pred_wrong_type": "unit_conversion_error",
+        "type_explanation": "The conversion from minutes to hours is incorrect. It should be 4 minutes * 1 hour / 60 minutes = 0.067 hours instead of 4 minutes * 1 hour / 50 minutes = 0.08 hours."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "unit_conversion_error",
+        "type_explanation": "The solution incorrectly converts 1 hour to 50 minutes, which is incorrect. The correct conversion is 1 hour = 60 minutes."
+    }
+]

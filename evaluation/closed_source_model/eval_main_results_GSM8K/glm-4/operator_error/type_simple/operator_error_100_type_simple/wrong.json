@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly follows the information provided in the question, adding the length of Logan's hair to the additional 6 inches to find Emily's hair length, and then divides that length by 2 to find Kate's hair length, which results in the correct answer of 13 inches."
+    },
+    {
+        "question": "Emily has 4 kids named Amy, Jackson, Corey, and James. Amy is 5 years older than Jackson and 2 years younger than Corey. If James is 10 and is 1 year younger than Corey, how old is Jackson?",
+        "original_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 + 1 = 11 years old\nAmy is 2 years younger than Corey so is 11 - 2 = 9 years old\nAmy is also 5 years older than Jackson, so Jackson is 9 - 5 = 4 years old\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 - 1 = 9 years old\nAmy is 2 years younger than Corey so is 9 - 2 = 7 years old\nAmy is also 5 years older than Jackson, so Jackson is 7 - 5 = 2 years old\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 to subtraction, turning '10 + 1 = 11' into '10 - 1 = 9'. This error affects subsequent related steps 2 and 3. In step 2, the equation is now '9 - 2 = 7' resulting from the changed age of Corey, and in step 3, the equation becomes '7 - 5 = 2' due to Amy being 5 years older than Jackson, which has now been calculated based on the incorrect age of Amy. It should be noted that other than the erroneous operator change in step 1, the calculations in all other steps correctly follow through from the error.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly follows the given information to determine the ages of the children. It references the context values accurately, performs correct calculations, and uses the appropriate operators."
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "question": "if 20 typists can type 44 letters in 20 minutes, then how many letters will 30 typists working at the same rate complete in 1 hour?",
+        "original_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 3 = 6.6 letters.\nSo, 30 typists working at the same rate can type 30 x 6.6 = 198 letters in 1 hour.\n#### 198",
+        "original_answer": 198.0,
+        "transformed_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 2 = 4.4 letters.\nSo, 30 typists working at the same rate can type 30 x 4.4 = 132 letters in 1 hour.\n#### 132",
+        "transformed_answer": 132.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 40 minutes instead of 60 minutes, resulting in '2.2 x 3 = 6.6 letters' in the original_solution becoming '2.2 x 2 = 4.4 letters' in the transformed_solution. And it affects the subsequent related step 4, which changes from '30 x 6.6 = 198 letters' to '30 x 4.4 = 132 letters'. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct, maintaining consistency with the presented cases.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of letters 1 typist can type in 20 minutes, then scales it up to 1 hour, and finally multiplies by 30 to find the total number of letters typed by 30 typists in 1 hour."
+    },
+    {
+        "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+        "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n18 hours * 5 minutes gained per hour = 90 minutes gained by the clock.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total time from 12 a.m. to 6 p.m. as 18 hours and multiplies it by the rate at which the minute hand gains time, which is 5 minutes per hour, resulting in a total gain of 90 minutes."
+    }
+]

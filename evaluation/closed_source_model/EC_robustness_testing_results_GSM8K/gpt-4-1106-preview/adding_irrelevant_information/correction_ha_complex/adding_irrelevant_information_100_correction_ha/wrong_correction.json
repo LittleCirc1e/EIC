@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Christi saw twice as many black bears as white bears and 40 more brown bears than black bears in a national park. If the number of black bears in the park is 60, calculate the population of bears in the park.",
+        "original_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, there are 60+40 = 100 brown bears.\nThe number of black and brown bears in the park is 100+60 = 160\nTwice the number of black bears as white bears means 60/2 = 30 white bears.\nThe population of bears in the national park is 30+160 = 190\n#### 190",
+        "original_answer": 190.0,
+        "transformed_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, there are 60+40 = 100 brown bears. Additionally, the rangers noted 10 baby brown bears were not counted initially.\nThe number of black and brown bears in the park, including the baby brown bears, is 100+10+60 = 170\nTwice the number of black bears as white bears means 60/2 = 30 white bears.\nThe population of bears in the national park including the baby brown bears is 30+170 = 200\n#### 200",
+        "transformed_answer": 200.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Additionally, the rangers noted 10 baby brown bears were not counted initially>, resulting in step 2 changing from 100+60 = 160 in the original_solution to 100+10+60 = 170 in the transformed_solution. This changes the population of bears in the national park from the correct answer of 190 to an incorrect answer of 200. This new information impacts the final result and should not have been included as it was not in the initial information given in the question.",
+        "is_correct": "no",
+        "corrected_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, there are 60+40 = 100 brown bears.\nThe number of black and brown bears in the park is 100+60 = 160\nTwice the number of black bears as white bears means 2 * 60 = 120 white bears.\nThe population of bears in the national park is 120+160 = 280\n#### 280",
+        "corrected_answer": 280.0,
+        "corrected_explanation": "The first wrong step is step 2. Step 2 adds information not included in the question statement <the rangers noted 10 baby brown bears were not counted initially>, causing the result of step 2 to be overestimated by 10. Step 4, as the subsequent step of step 2, miscalculates 30+170 = 200 instead of 120+160 = 280."
+    },
+    {
+        "question": "Christi saw twice as many black bears as white bears and 40 more brown bears than black bears in a national park. If the number of black bears in the park is 60, calculate the population of bears in the park.",
+        "original_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, there are 60+40 = 100 brown bears.\nThe number of black and brown bears in the park is 100+60 = 160\nTwice the number of black bears as white bears means 60/2 = 30 white bears.\nThe population of bears in the national park is 30+160 = 190\n#### 190",
+        "original_answer": 190.0,
+        "transformed_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, and additional 10 unidentified bears spotted, there are 60+40+10 = 110 brown bears.\nThe number of black and brown bears in the park is 110+60 = 170\nTwice the number of black bears as white bears means 60/2 = 30 white bears.\nThe population of bears in the national park is 30+170 = 200\n#### 200",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and additional 10 unidentified bears spotted>, resulting in step 1 changing from 60+40 = 100 in the original_solution to 60+40+10 = 110 in the transformed_solution. Consequently, this incorrect addition affects the subsequent calculation, where the total population changes from 160 to 170 in Step 2 and the final answer changes from 190 to 200 in the final step. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "corrected_solution": "If there are 60 black bears in the park and 40 more brown bears than black bears, there are 60+40 = 100 brown bears.\nThe number of black and brown bears in the park is 100+60 = 160\nTwice the number of black bears as white bears means 60*2 = 120 white bears.\nThe population of bears in the national park is 120+160 = 280\n#### 280",
+        "corrected_answer": 280.0,
+        "corrected_explanation": "The first wrong step is step 1. Step 1 adds information not included in the question statement <and additional 10 unidentified bears spotted>, causing the result of step 1 to be overestimated by 10. The correct calculation should not include the 10 unidentified bears as they are not mentioned in the question. The corrected calculation for the number of brown bears should be 60 black bears + 40 more brown bears = 100 brown bears. The corrected calculation for the number of white bears should be twice the number of black bears, which is 60*2 = 120 white bears. The total population should be the sum of black, brown, and white bears, which is 60 (black) + 100 (brown) + 120 (white) = 280 bears."
+    },
+    {
+        "question": "Manny had 3 birthday cookie pies to share with his 24 classmates and his teacher, Mr. Keith. If each of the cookie pies were cut into 10 slices and Manny, his classmates, and Mr. Keith all had 1 piece, how many slices are left?",
+        "original_solution": "There is a total of 3 x 10 = 30 cookie slices.\nThere are 24 + 1 + 1 = 26 people who ate the cookie pieces.\nThere is 30 - 26 = 4 cookie slices left.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "There is a total of 3 x 10 = 30 cookie slices.\nThere are 24 + 1 + 1 + 1 = 27 people who ate the cookie pieces because there was an assistant teacher as well.\nThere is 30 - 27 = 3 cookie slices left.\n#### 3",
+        "transformed_answer": 3.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <because there was an assistant teacher as well>, resulting in step 2 changing from 24 + 1 + 1 = 26 people who ate the cookie pieces in the original_solution to 24 + 1 + 1 + 1 = 27 people who ate the cookie pieces in the transformed_solution. This new addition affects the final count of how many slices are left, changing the result from 4 to 3. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "corrected_solution": "There is a total of 3 x 10 = 30 cookie slices.\nThere are 24 classmates + 1 teacher = 25 people who ate the cookie pieces.\nThere is 30 - 25 = 5 cookie slices left.\n#### 5",
+        "corrected_answer": 5.0,
+        "corrected_explanation": "The first wrong step is step 2. Step 2 adds information not included in the question statement <because there was an assistant teacher as well>, causing the result of step 2 to be overestimated by 2. Step 3, as the subsequent step of step 2, miscalculates 30 - 27 = 3 instead of 30 - 25 = 5."
+    },
+    {
+        "question": "An organization trying to save endangered species of turtles has taken twice more hawksbill turtles than the number of green turtles into a conservation center. If the number of green turtles is 800, calculate the number of turtles that have been taken into the conservation center.",
+        "original_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800 = 3200 turtles.\n#### 3200",
+        "original_answer": 3200.0,
+        "transformed_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nAdditional loggerhead turtles equal to half the number of green turtles were also taken in, so there are 800/2 = 400 loggerhead turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800+400 = 3600 turtles.\n#### 3600",
+        "transformed_answer": 3600.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Additional loggerhead turtles equal to half the number of green turtles were also taken in>, resulting in step 2 changing from calculating only hawksbill and green turtles to also including loggerhead turtles in the transformed_solution. The new step integrated is 800/2 = 400 loggerhead turtles, which is then added to the total count, changing the answer from 3200 turtles to 3600 turtles.",
+        "is_correct": "no",
+        "corrected_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 hawksbill turtles.\nThe total number of turtles that have been taken into the conservation center is 1600+800 = 2400 turtles.\n#### 2400",
+        "corrected_answer": 2400.0,
+        "corrected_explanation": "The first wrong step is step 2. Step 2 adds information not included in the question statement about additional loggerhead turtles, which affects the final result. The correct calculation should only consider the number of green turtles and the number of hawksbill turtles, which is twice the number of green turtles, not twice more, resulting in a total of 2400 turtles."
+    }
+]

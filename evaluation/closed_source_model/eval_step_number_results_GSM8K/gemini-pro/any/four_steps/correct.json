@@ -1,0 +1,28 @@
+[
+    {
+        "question": "Iris’ family is planning a surprise birthday party for her. The party will include her 3 uncles and 4 aunts who have a son and daughter each as well as her brother and mother. In total, how many people are coming to Iris’ birthday party?",
+        "original_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 3 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 3 people in each family unit = 21 people.\nIncluding her mother and brother, there will be a total of 21 people + 1 mother + 1 brother = 23 people coming to her party.\n#### 23",
+        "original_answer": 23.0,
+        "transformed_solution": "Each of her aunts and uncles have a family unit of 1 son + 1 daughter + 1 aunt/uncle = 4 people.\nIris has a total of 3 uncles + 4 aunts = 7 aunts or uncles in these family units.\nSo among her aunts, uncles, and cousins, there will be 7 family units * 4 people in each family unit = 28 people.\nIncluding her mother and brother, there will be a total of 28 people + 1 mother + 1 brother = 30 people coming to her party.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution introduces a calculation error at step 1 by mistakenly counting each family unit as having 4 people instead of 3. This error then changes the expected number of people from each family unit and alters all the subsequent steps that rely on this number. The original and unrelated steps (total number of aunts and uncles) remain correct while steps that involve calculations with the family unit size inherit this error.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect because each aunt and uncle should have 3 people (themselves, and son and a daughter). So instead of 28 people for aunts, uncles, and Iris, it should be 35 people. Including mother and brother, the final number of people should be 37."
+    },
+    {
+        "question": "Micah bought envelopes to send, and depending on the weight of the envelope he will need more stamps. If an envelope weighs more than 5 pounds, he will need 5 stamps. If it weighs less than that, it will only need 2 stamps. If he bought 52 stamps with 6 envelopes that weigh less than 5 pounds, how many envelopes in total did Micah need to buy?",
+        "original_solution": "Micah had to buy 6*2=12 stamps for 6 envelopes less than 5 pounds.\nHe has 52-12=40 more stamps to buy.\nThere are 40/5=8 envelopes that weigh more than 5 pounds.\nMicah needed to buy 8+6=14 envelopes.\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Micah had to buy 6*2=12 stamps for 6 envelopes less than 5 pounds.\nHe has 52-12=30 more stamps to buy.\nThere are 30/5=6 envelopes that weigh more than 5 pounds.\nMicah needed to buy 6+6=12 envelopes.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 2 of the original solution, where the correct subtraction 52-12=40 was changed to 52-12=30. This error then affected the subsequent steps that rely on the number of stamps left to buy. Step 3 was changed from 40/5=8 to 30/5=6, and step 4 was changed from 8+6=14 to 6+6=12. The previous step 1 remains unchanged as it is not affected by the error in step 2. The calculation within each step is correct, but the numbers used are based on the incorrect result from the wrong step.",
+        "is_correct": "no",
+        "any_explanation": "The explanation does not justify the answer. 5 stamps are needed for envelopes over 5 pounds, and 2 stamps for envelopes under 5 pounds, and the number of envelopes is calculated incorrectly."
+    }
+]

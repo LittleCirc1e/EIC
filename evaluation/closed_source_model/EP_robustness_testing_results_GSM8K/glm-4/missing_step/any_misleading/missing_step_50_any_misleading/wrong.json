@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Francis' family has 2 ukuleles, 4 guitars, and a certain number of violins. Each ukulele has 4 strings. Each guitar has 6 strings. Each violin has 4 strings. If the total number of strings among the ukuleles, guitars, and violins is 40 strings, how many violins does Francis' family have?",
+        "original_solution": "From the ukuleles, there are 2 * 4 = 8 strings\nFrom the guitars, there are 4 * 6 = 24 strings\nFrom the violins, there are 40 - 8 - 24 = 8 strings\nThe total number of violins Francis' family has is 8 / 4 = 2 violins\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "From the guitars, there are 4 * 6 = 24 strings\nFrom the violins, there are 40 - 24 = 16 strings\nThe total number of violins Francis' family has is 16 / 4 = 4 violins\n#### 4",
+        "transformed_answer": 4.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes step 1 from the original_solution, which calculates the number of strings from the ukuleles. In the original_solution, step 1 references the number 2 from the question and the number 4 that represents the string count of ukuleles, step 2 calculates the strings from the guitars and references number 4 and 6 from the question, and step 3 references the results of step 1 and step 2. Therefore, after deleting step 1, step 3 in the new solution should reference the result of step 2 directly and ignore the information about the ukuleles. It changes the formula from 40 - 8 - 24 to 40 - 24 which simplifies calculating the strings from violins. The explanation assumes the resulting value represents the total strings of violins to calculate the number of violins. Step 4 as the final step that calculates the number of violins has changed the divisor to the revised total string count. Instead of dividing by 8, it inaccurately divides 16 by 4, arriving at a wrong conclusion of 4 violins instead of the correct 2. It is step 2 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step referencing incorrect information in the transformed_solution, so the wrong_step is 2.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of strings from the guitars, subtracted that from the total number of strings to find the number of strings from the violins, and then divided by the number of strings per violin to find the total number of violins."
+    },
+    {
+        "question": "Adam had a farm with animals. He had 12 cows and twice as many sheep. He decided to buy 3 pigs for every sheep he had. How many animals were on the farm after the transaction?",
+        "original_solution": "Adam had twice as many sheep as the cows, so 2 sheep/cow * 12 cows = 24 sheep.\nFor every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 24 sheep + 12 cows = 108 animals.\n#### 108",
+        "original_answer": 108.0,
+        "transformed_solution": "For every sheep, he bought 3 pigs, so he bought 3 pigs/sheep * 24 sheep = 72 pigs.\nIn total on the farm, there were 72 pigs + 12 cows = 84 animals.\n#### 84",
+        "transformed_answer": 84.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed. In the original_solution, step 1 calculates the number of sheep based on the number of cows, and this result is used in step 2 to calculate the number of pigs. After deleting step 1, the number of sheep is missing in the modified solution, and step 2 should change the formula from 3 pigs/sheep * 24 sheep to 3 pigs/sheep * (2 * 12 cows). However, this has been incorrectly omitted, and the calculation of pigs is directly based on the number of sheep from the removed step, resulting in an unaccounted number of sheep in step 2. The subsequent step 3, which originally summed up pigs, sheep, and cows, now incorrectly sums up just pigs and cows, leading to a wrong total count of animals on the farm. It is step 1 in the transformed_solution, which is also step 3 in the original_solution, that serves as the first step with the unaccounted number in the transformed_solution, so the wrong_step is 1.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated that Adam had twice as many sheep as cows, which is 24 sheep. Then, the student multiplied the number of sheep by 3 to find out how many pigs Adam bought, which is 72 pigs. Finally, the student added the number of cows and pigs to find the total number of animals on the farm, which is 84."
+    },
+    {
+        "question": "Ellis is going to take a road trip with her family. First, she needs to figure out how many bottles of water she should bring for everyone. There will be four people total: Ellis, her mother, her sister, and her aunt. They will be on the road to their destination for 8 hours and drive 8 hours to return home. Every hour each person will want to drink 1/2 a bottle of water. How many water bottles will Ellis' family need total?",
+        "original_solution": "Ellis and her family of 4 will be traveling for 8 hours going and 8 hours coming home = 16 hours total.\nEach person needs 1/2 a bottle of water each hour, so 1/2 a bottle x 16 hours = 8 bottles.\nThere are 4 people traveling so 8 total water bottles for each person x 4 people = 32 total water bottles.\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "Each person needs 1/2 a bottle of water each hour, so 1/2 a bottle x 8 hours going and 8 hours coming home = 8 bottles for one trip. Therefore, for a round trip, it is 8 bottles x 2 = 16 bottles per person.\nThere are 4 people traveling so 16 total water bottles for each person x 4 people = 64 total water bottles.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. In the original_solution, step 1 calculates the total number of hours traveled (both going and coming back) and its subsequent step 2 references the result of step 1. So after deleting step 1, step 2 should directly reference the number of hours going and coming back from the question (8 hours each way) and modify the calculation. The modified equation calculates the number of bottles for one trip which is then doubled for the round trip. Note that since step 1 originally referenced two numbers (8 hours going and 8 hours coming home), it selected the sum which is the largest number after the round trip calculation for subsequent steps to reference. The wrong_step is step 1 in the transformed_solution, which serves as the first step referencing the incorrect number in the transformed_solution. Therefore, it has been labeled as such.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the water bottle requirement for each person for one trip, which is 8 bottles, and then doubled it for the round trip. They also correctly multiplied this by the number of people, arriving at a total of 64 water bottles needed."
+    }
+]

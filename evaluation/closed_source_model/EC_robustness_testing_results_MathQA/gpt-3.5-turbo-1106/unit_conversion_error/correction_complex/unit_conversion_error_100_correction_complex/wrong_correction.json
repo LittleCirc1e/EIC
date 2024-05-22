@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A light flashes every 20 seconds, how many times will it flash in 1/4 of an hour?",
+        "original_solution": "There are 60 seconds in a minute and 60 minutes in an hour, so there are 60 x 60 = 3600 seconds in an hour.\nThe light flashes 3600 / 20 = 180 times in an hour.\n#### 180",
+        "original_answer": 180.0,
+        "transformed_solution": "There are 60 seconds in a minute and 50 minutes in an hour, so there are 60 x 50 = 3000 seconds in an hour.\nThe light flashes 3000 / 20 = 150 times in an hour.\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 60 x 60 = 3600 seconds in the original_solution becoming 60 x 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from 3600 / 20 = 180 times to 3000 / 20 = 150 times. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "The light flashes 3000 / 20 = 150 times in an hour.\nOn average it takes him 150 times because 150 / 3 = 50\n#### 150",
+        "corrected_answer": 150.0,
+        "corrected_explanation": "The solution incorrectly calculates the number of times the light flashes in 1/4 of an hour instead of in a full hour. The subsequent step incorrectly calculates the average number of times the light flashes."
+    },
+    {
+        "question": "If the population of a certain country increases at the rate of one person every 15 seconds, by how many persons does the population increase in 40 minutes?",
+        "original_solution": "First, we need to convert 40 minutes to seconds. There are 60 seconds in a minute, so 40 minutes * 60 seconds per minute = 2400 seconds.\nThe population increases by 1 person every 15 seconds, so 2400 seconds / 15 seconds per person = 160 persons.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "First, we need to convert 40 minutes to seconds. There are 50 seconds in a minute, so 40 minutes * 50 seconds per minute = 2000 seconds.\nThe population increases by 1 person every 15 seconds, so 2000 seconds / 15 seconds per person = 133.33 persons.\n#### 133.33",
+        "transformed_answer": 133.33,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which suggests 1 minute wrongly has 50 seconds instead of the correct 60 seconds, resulting in the original_solution calculation 40 minutes * 60 seconds per minute = 2400 seconds being changed to 40 minutes * 50 seconds per minute = 2000 seconds in the transformed_solution. Subsequent related step 2 is affected, changing from 2400 seconds / 15 seconds per person = 160 persons to 2000 seconds / 15 seconds per person = 133.33 persons. The explanation should note that only one step of unit conversion error is considered, and only the subsequent related step is affected while keeping the previous and unrelated steps in their original correct state.",
+        "is_correct": "no",
+        "corrected_solution": "The population increases by 1 person every 15 seconds, so 2000 seconds / 15 seconds per person = 133.33 persons.\n#### 133",
+        "corrected_answer": 133.0,
+        "corrected_explanation": "Step 2 first makes a mistake in the calculation process, calculating 2000 / 15 = 133.33 instead of 2000 / 15 = 133. The subsequent step 3 references the result of step 2, resulting in the final incorrect answer."
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 150\nRearranging terms gives 2x = -360, so x = -180\nThe negative distance doesn't make sense in this context, so the child is 180 meters from his school.\n#### 180",
+        "corrected_answer": 180.0,
+        "corrected_explanation": "Step 3 first makes a mistake in the calculation process, calculating x/5 + 6 = x/7 - 20 instead of x/5 + 6 = x/7 - 30. The subsequent step 4 references the result of step 3, calculating 7x + 210 = 5x - 700 instead of 7x + 210 = 5x - 150. The subsequent step 5 references the result of step 4, calculating 2x = -910 instead of 2x = -360, resulting in the final incorrect answer."
+    }
+]

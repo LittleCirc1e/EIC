@@ -1,0 +1,16 @@
+[
+    {
+        "question": "There is a playground that is surrounded by a square fence that has a side length of 27 yards. There is a 12 yard by 9 yard garden that has fencing around it. How many yards of fencing do the playground and garden have together?",
+        "original_solution": "27 * 4 = 108 yards\n2 * (12 + 9) = 42 yards\n108 + 42 = 150 yards\nThe playground and garden have a combined fence length of 150 yards.\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "The square fence around the playground is 27 * 4 = 108 yards\nThe fencing for the garden is 2 * (27) = 54 yards instead of 2 * (12 + 9)\nThe playground and garden have a combined fence length of 108 + 54 = 162 yards.\n#### 162",
+        "transformed_answer": 162.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2, which calculates the fence length of the garden correctly as 2 * (12 + 9) = 42 yards. After removing this step, the next step, which should calculate the combined fence length, should reference the result from the previous step. However, the transformed solution incorrectly references the largest side length from the question, which is 27, assuming that one side of the garden shares the same length as the playground's side length. It makes an error by incorrectly calculating the garden's fence length as 2 * (27) = 54 yards. Subsequently, the calculation for the combined length becomes 108 + 54 = 162 yards. The wrong_step is 2, which serves as the first step that references the incorrect assumption about the garden fence length in the transformed solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in calculating the fencing for the garden, calculating 2 * (27) = 54 yards instead of 2 * (12 + 9) = 42 yards. The subsequent step 3 references the result of step 2, calculating 108 + 54 = 162 yards instead of 108 + 42 = 150 yards, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

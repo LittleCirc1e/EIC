@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+        "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+        "original_answer": 520.0,
+        "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\nHe then loses half of them for 1000/2= 500 cards remaining.\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the number of baseball cards Phil collects in a year and then correctly calculates the number of cards left after losing half in a fire."
+    },
+    {
+        "question": "There is a road stretching 3 miles from the base camp to the chain challenge. Every 20 minutes, a car comes down the road from the base camp towards the chain challenge. How many hours have passed once 30 cars have come down the road?",
+        "original_solution": "20*30 = 600 minutes have passed.\n600/60 = 10 hours have passed.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "25*30 = 750 minutes have passed.\n750/60 = 12.5 hours have passed.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20 in the question as 25 wrongly, and calculates 25*30=750 instead of 20*30=600. Its subsequent related step will be affected, calculating 750/60=12.5 instead of 600/60=10 in step 2. Please note that you should only consider one error, so step 2 still references 60 in the question correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total time in minutes by multiplying the number of cars by the time interval between each car, and then converts the minutes to hours using the correct conversion factor of 60 minutes per hour."
+    }
+]

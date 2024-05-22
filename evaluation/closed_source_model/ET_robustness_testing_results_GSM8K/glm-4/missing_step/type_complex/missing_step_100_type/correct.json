@@ -1,0 +1,44 @@
+[
+    {
+        "question": "At the zoo, there are 5 different types of animals. Seeing each animal type takes around 6 minutes. How much time would it take to see each animal type if the zoo decided to import 4 new species?",
+        "original_solution": "If the zoo would decide to import 4 new species, there would be 5 + 4 = 9 species in total.\nThis would mean, that seeing each type of animal would take 9 * 6 = 54 minutes.\n#### 54",
+        "original_answer": 54.0,
+        "transformed_solution": "Seeing each type of animal would take 5 * 6 = 30 minutes.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, we are deleting the first step which is calculating the new total number of species if the zoo decides to import 4 new species. The deleted step 1 would normally reference the numbers 5 and 4 from the question. However, since we're deleting the first step and not recalculating the number of species with the new additions, we're incorrectly using the original number of species (5). The subsequent step that originally referenced the result of step 1 now incorrectly references the original number of species (5), leading to the calculation of 5 * 6 = 30 minutes instead of the correct 9 * 6 = 54 minutes. The wrong_step is 1 because it is the first step performed in the transformed_solution, which references the incorrect number (5) instead of the new total (9).",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is the absence of considering the new species. The solution only calculates the time for the existing 5 types of animals and does not account for the 4 new species that would increase the total number of animal types to 9. There is a missing step to include the time for the new species, so it belongs to missing_step."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 124",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 5. The operands and operators of the formula in step 5 are completely correct, but only the result is incorrectly calculated as 62 instead of 64, so it belongs to calculation_error. The final step references the incorrect total from step 5, resulting in the incorrect final answer."
+    },
+    {
+        "question": "John buys a heating pad for $30. He uses it 3 times a week for 2 weeks. How much does he spend on each use?",
+        "original_solution": "He uses it 3*2=6 times\nSo he pays 30/6=$5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "So he pays 30/3=$10\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 calculates the total number of uses as 3*2=6. Step 2 then references the result of 6 uses from step 1 to calculate the cost per use as 30/6=$5. After deleting step 1, the second step should change the divisor (which was originally 6) to the largest number that was used in the deleted step 1 (which is 3). This causes the calculation to change from 30/6=$5 to 30/3=$10. The reference to the total number of uses is removed and replaced with the number of uses per week. It is the only step in the transformed_solution that serves as the first step referencing an incorrect number (3 instead of 6) in the transformed_solution. Therefore, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is the entire calculation. The solution is missing the step to calculate the total number of uses over the 2 weeks, which should be 3 times a week times 2 weeks, equal to 6 uses. Instead, the solution incorrectly divides the total cost by the number of uses per week, resulting in an incorrect average cost per use. This error belongs to missing_step."
+    }
+]

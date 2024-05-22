@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Vikki worked 42 hours in one week. Her hourly pay rate is $10. From her weekly earnings, 20% is deducted as tax, 5% is deducted as insurance cover, and $5 is deducted for union dues. How much money, in dollars, does Vikki take home after deductions?",
+        "original_solution": "Vikki earnt 10 × $42 = $420 in one week.\nShe then gets taxed $420 × 0.2 = $84.\nShe also loses $420 × 0.05 = $21 due to insurance.\nVikki also pays $5 in union dues.\nIn total Vikki loses $84 + $21 + $5 = $110 because of deductions.\nHer final total pay after deductions is $420 - $110 = $310\n#### 310",
+        "original_answer": 310.0,
+        "transformed_solution": "Vikki earnt 10 × $42 = $420 in one week.\nShe then gets taxed $420 × 0.2 = $84.\nShe also loses $420 × 0.05 = $21 due to insurance.\nVikki also pays $5 in union dues.\nIn total Vikki loses $80 + $21 + $5 = $106 because of deductions.\nHer final total pay after deductions is $420 - $106 = $314\n#### 314",
+        "transformed_answer": 314.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references $84 as $80 from step 2 and changes $84 + $21 + $5 = $110 to $80 + $21 + $5 = $106. It should be noted that step 2 in the transformed_solution <She then gets taxed $420 × 0.2 = $84.> should be the same as the step 2 in the original_solution <She then gets taxed $420 × 0.2 = $84.> and calculates its result $84 correctly. Step 6, as the subsequent related step of step 5, is affected by step 5 and changes $420 - $110 = $310 to $420 - $106 = $314. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "Vikki earnt 10 × 42 = $420 in one week.\nShe then gets taxed $420 × 0.20 = $84.\nShe also loses $420 × 0.05 = $20.5 due to insurance.\nVikki also pays $5 in union dues.\nIn total Vikki loses $84 + $20.5 + $5 = $109.5 because of deductions.\nHer final total pay after deductions is $420 - $109.5 = $310.5\n#### 310.5",
+        "corrected_answer": 310.5,
+        "corrected_explanation": "Step 3 first erroneously calculates $21 for insurance instead of $20.5, which should be $420 × 0.05. This affects the total deductions in step 5, resulting in the calculation of $80 + $21 + $5 = $106 instead of $84 + $20.5 + $5 = $109.5. Consequently, the final pay after deductions in step 6 is incorrectly calculated as $420 - $106 = $314 instead of $420 - $109.5 = $310.5."
+    },
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "no",
+        "corrected_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + 1B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "corrected_answer": 12.0,
+        "corrected_explanation": "Step 5 first erroneously simplifies the equation as 2B + B instead of 2B + 1B, leading to the incorrect equation 2B + B = 36. This does not affect the final result of Bodhi's insects, but it is a mistake in the process. The correct equation should be 2B + 1B = 36. The rest of the solution is correct, and Lily indeed found 13 insects."
+    },
+    {
+        "question": "Carla is downloading a 200 GB file. Normally she can download 2 GB/minute, but 40% of the way through the download, Windows forces a restart to install updates, which takes 20 minutes. Then Carla has to restart the download from the beginning. How long does it take to download the file?",
+        "original_solution": "First find how many gigabytes are in 40% of the file: 200 GB * 40% = 80 GB\nThen divide that number by the download rate to find the time until Windows restarts: 80 GB / 2 GB/minute = 40 minutes\nThen find the time to download the whole file after the restart: 200 GB / 2 GB/minute = 100 minutes\nThen add the time to download 40% of the file, to download the whole file, and to wait for Windows to update: 40 minutes + 100 minutes + 20 minutes = 160 minutes\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "First find how many gigabytes are in 40% of the file: 200 GB * 40% = 80 GB\nThen divide that number by the download rate to find the time until Windows restarts: 80 GB / 2 GB/minute = 40 minutes\nThen find the time to download the whole file after the restart: 200 GB / 2 GB/minute = 100 minutes\nThen add the time to download 40% of the file, to download the whole file, and to wait for Windows to update: 40 minutes + 100 minutes + 30 minutes = 170 minutes\n#### 170",
+        "transformed_answer": 170.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error_fixed_addition",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 4 has a fixed addition error where the waiting time due to Windows update has been incorrectly changed from 20 minutes to 30 minutes, leading to a new sum of 170 minutes. This error only affects the final step; all the other calculations are correct and consistent with the original_solution. The transformed_answer changes accordingly from 160 minutes to 170 minutes due to this single error.",
+        "is_correct": "no",
+        "corrected_solution": "First find how many gigabytes are in 40% of the file: 200 GB * 40% = 80 GB\nThen divide that number by the download rate to find the time until Windows restarts: 80 GB / 2 GB/minute = 40 minutes\nThen find the time to download the whole file after the restart: 200 GB / 2 GB/minute = 100 minutes\nThen add the time to download the whole file twice, and to wait for Windows to update: 100 minutes + 100 minutes + 20 minutes = 220 minutes\n#### 220",
+        "corrected_answer": 220.0,
+        "corrected_explanation": "Step 4 first erroneously references the time to download 40% of the file (40 minutes) instead of the whole file (100 minutes) before the restart. Since Carla has to restart the download from the beginning, she needs to download the whole file twice, which should be 100 minutes + 100 minutes, not 40 minutes + 100 minutes. Additionally, the time to wait for Windows to update is 20 minutes, not 30 minutes as stated. This results in the correct total time being 220 minutes, not 170 minutes."
+    },
+    {
+        "question": "Five food companies sponsored a local food bank. Foster Farms donated 45 dressed chickens; American Summits donated twice the number of bottled water than the number of dressed chicken donated by Foster Farms; Hormel donated three times the number of dressed chickens that Foster Farms donated; Boudin Butchers donated one-third of the number of dressed chickens that Hormel donated; Del Monte Foods donated 30 fewer bottles of water than American Summits. How many food items did the companies donate in total?",
+        "original_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 60 = 375 different food.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 50 = 365 different food.\n#### 365",
+        "transformed_answer": 365.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 in the transformed_solution mistakenly references 60 as 50, changing the addition from 45 + 90 + 135 + 45 + 60 = 375 to 45 + 90 + 135 + 45 + 50 = 365, resulting in a total of 365 different food items instead of the correct total of 375. The previous related steps are unchanged from the original_solution and only this particular step has an error introduced in its calculation. All other referencing steps are correct and the transformed_answer of 365 is calculated based on the incorrect total due to the error in Step 5.",
+        "is_correct": "no",
+        "corrected_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Butchers donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 60 = 390 different food items.\n#### 390",
+        "corrected_answer": 390.0,
+        "corrected_explanation": "Step 5 first erroneously references the result 50 instead of 60 from step 4, resulting in the calculation of 45 + 90 + 135 + 45 + 50 = 365 instead of 45 + 90 + 135 + 45 + 60 = 390. This error in the final sum leads to an incorrect total count of food items donated."
+    }
+]

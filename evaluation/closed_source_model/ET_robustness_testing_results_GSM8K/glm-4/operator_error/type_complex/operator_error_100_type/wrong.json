@@ -1,0 +1,44 @@
+[
+    {
+        "question": "My 2 cats had 3 female kittens and 2 male kittens. How many cats do I have in total?",
+        "original_solution": "There are 3+2 = 5 kittens\nIf you originally had 2 cats then you now have 2+5 = 7 cats in total\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "There are 3*2 = 6 kittens\nIf you originally had 2 cats then you now have 2+6 = 8 cats in total\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 into multiplication, converting 3+2=5 to 3*2=6 by changing + to *. The result from step 1 affects step 2, thus changing the total from 2+5=7 to 2+6=8. It should be noted that only the operator in step 1 is changed, but the calculation after changing the operator is done correctly. Subsequent steps inherit the result of the modified step 1, but calculations in those steps are correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total number of cats by adding the number of kittens to the number of original cats."
+    },
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly follows the information provided in the question. It adds 6 inches to Logan's hair length to find Emily's hair length and then divides that length by 2 to find Kate's hair length, which is a correct process."
+    },
+    {
+        "question": "Carmen has $100, Samantha has $25 more than Carmen, and Daisy has $50 more than Samantha. How much do all three girls have combined?",
+        "original_solution": "Samantha has $100+$25 = $125.\nDaisy has $125+$50 = $175.\nThe total amount of money that the three girls have is $175+$125+$100 = $400.\n#### 400",
+        "original_answer": 400.0,
+        "transformed_solution": "Samantha has $100-$25 = $75.\nDaisy has $75+$50 = $125.\nThe total amount of money that the three girls have is $125+$75+$100 = $300.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 1 into subtraction, and by changing + to -, $100+$25 = $125 becomes $100-$25 = $75. This affects the subsequent related step 2 and 3. Step 2 changes from $125+$50 = $175 to $75+$50 = $125, step 3 changes from $175+$125+$100 = $400 to $125+$75+$100 = $300. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the amounts of money each girl has by referencing the information provided in the question. It then correctly adds these amounts together to find the total. There are no calculation errors, counting errors, referencing errors, unit conversion errors, operator errors, missing steps, formula confusion, or addition of irrelevant information."
+    }
+]

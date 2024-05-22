@@ -1,0 +1,72 @@
+[
+    {
+        "question": "A factory produces 5505 toys per week. If the workers at this factory work 5 days a week and if these workers make the same number of toys every day, how many toys are produced each day?",
+        "original_solution": "Total number of toys produced per week is 5505\nTotal number of days worked in a week is 5 days\nNumber of toys produced each day is 5505 / 5 = 1101\n#### 1101",
+        "original_answer": 1101.0,
+        "transformed_solution": "Total number of toys produced per week is 5505\nTotal number of days worked in a week is 4 days\nNumber of toys produced each day is 5505 / 4 = 1376.25\n#### 1376.25",
+        "transformed_answer": 1376.25,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts the days worked in a week as 4 days instead of 5 days, resulting in the original solution's calculation of 5505 / 5 = 1101 being changed to 5505 / 4 = 1376.25 in the transformed solution. The error induces a change in the outcome, while the division operation itself is carried out correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in counting the number of days worked in a week, mistakenly believing that there are 4 days in a week instead of 5 days. The subsequent step 3 references the result of step 2, calculating 5505 / 4 = 1376.25 instead of 5505 / 5 = 1101, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "Kamal obtained 76, 65, 82, 67, and 85 marks (out of 100) in English, mathematics, physics, chemistry, and biology. What are his average marks?",
+        "original_solution": "Add all the marks: 76+65+82+67+85=375\nDivide the total by the number of subjects: 375/5=75\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "Add all the marks: 76+65+82+67+85=375\nDivide the total by the number of subjects: 375/4=93.75\n#### 93.75",
+        "transformed_answer": 93.75,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts the number of subjects as 4 instead of 5, resulting in the original solution step <375/5=75> being changed to <375/4=93.75> in the transformed solution. The sum of the marks remains correct, but the divisor has been incorrectly changed, affecting the calculation of the average.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 375/4=93.75 instead of 375/5=75. The subsequent step 3 references the result of step 2, outputting 93.75 as the final answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "A factory produces 4340 toys per week. If the workers at this factory work 2 days a week and if these workers make the same number of toys every day, how many toys are produced each day?",
+        "original_solution": "The total number of toys produced per week is 4340\nThe workers work 2 days a week\nSo, the total number of toys produced each day is 4340 / 2 = 2170\n#### 2170",
+        "original_answer": 2170,
+        "transformed_solution": "The total number of toys produced per week is 4340\nThe workers work 1 days a week\nSo, the total number of toys produced each day is 4340 / 1 = 4340\n#### 4340",
+        "transformed_answer": 4340,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 2 incorrectly counts the number of workdays as 1 instead of 2. This error changes the division in step 3 from 4340 / 2 = 2170 to 4340 / 1 = 4340. Please note that only this counting error should be considered and the subsequent step is calculated correctly based on the modified counting.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 2 days a week as 1 day a week. The subsequent step 3 references the result of step 2, calculating 4340 / 1 = 4340 instead of 4340 / 2 = 2170, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "A factory produces 4560 toys per week. If the workers at this factory work 4 days a week and if these workers make the same number of toys everyday, how many toys are produced each day?",
+        "original_solution": "The total number of toys produced per week is 4560\nThe total number of days the workers work per week is 4 days\nThe number of toys produced each day is 4560 / 4 = 1140 toys\n#### 1140",
+        "original_answer": 1140.0,
+        "transformed_solution": "The total number of toys produced per week is 4560\nThe total number of days the workers work per week is 3 days\nThe number of toys produced each day is 4560 / 3 = 1520 toys\n#### 1520",
+        "transformed_answer": 1520.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the number of days the workers work per week as 3 days instead of 4 days, resulting in the equation 4560 / 4 = 1140 becoming 4560 / 3 = 1520 in the transformed_solution. It should be noted that only one counting error is considered, and the division calculation process is still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 4560 / 3 = 1520 instead of 4560 / 4 = 1140. The subsequent step 3 references the result of step 2, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "A factory produces 6000 toys per week. If the workers at this factory work 4 days a week and if these workers make the same number of toys everyday, how many toys are produced each day?",
+        "original_solution": "The total number of toys produced per week is 6000\nThe total number of days the workers work in a week is 4\nTo find the number of toys produced each day, divide the total number of toys produced per week by the total number of days worked in a week, 6000 / 4 = 1500\n#### 1500",
+        "original_answer": 1500,
+        "transformed_solution": "The total number of toys produced per week is 6000\nThe total number of days the workers work in a week is 3\nTo find the number of toys produced each day, divide the total number of toys produced per week by the total number of days worked in a week, 6000 / 3 = 2000\n#### 2000",
+        "transformed_answer": 2000,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the number of days the workers work in a week as 3 days instead of 4, resulting in the calculation from the original solution 6000 / 4 = 1500 being changed to 6000 / 3 = 2000. This counting error affects the final calculation of toys produced each day while the rest of the steps remain correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 6000 / 3 = 2000 instead of 6000 / 4 = 1500. The subsequent step 3 references the result of step 2, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

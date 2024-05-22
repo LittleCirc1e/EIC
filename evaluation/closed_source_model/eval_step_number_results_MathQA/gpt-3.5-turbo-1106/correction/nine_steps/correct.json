@@ -1,0 +1,32 @@
+[
+    {
+        "question": "A shopkeeper sells 20% of his stock at 10% profit and sells the remaining at a loss of 5%. He incurred an overall loss of Rs. 250. Find the total worth of the stock?",
+        "original_solution": "Let the total worth of the stock be x.\nProfit from 20% of stock = 0.2x * 0.10\nLoss from 80% of stock = 0.8x * 0.05\nOverall loss = 0.2x * 0.10 - 0.8x * 0.05 = 250\n0.02x - 0.04x = 250\n-0.02x = 250\nx = 250 / -0.02\nx = -12500\nThe total worth of the stock is Rs. -12500\n#### -12500",
+        "original_answer": -12500.0,
+        "transformed_solution": "Let the total worth of the stock be x.\nProfit from 20% of stock = 0.2x * 0.10\nLoss from 80% of stock = 0.8x * 0.05\nOverall loss = 0.2x * 0.10 - 0.8x * 0.05 = 250\n0.02x - 0.04x = 250\n-0.02x = 250\nx = 250 / -0.02\nx = -12000\nThe total worth of the stock is Rs. -12000\n#### -12000",
+        "transformed_answer": -12000.0,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation in step 7 is intentionally altered from 250 / -0.02 = -12500 to 250 / -0.02 = -12000, which is incorrect. This error only affects the final step, which is the calculation of the total worth of the stock. The previous steps remain unchanged as they are not dependent on the result of step 7. The transformed solution thus contains a single calculation error in step 7, leading to a different transformed answer from the original answer.",
+        "is_correct": "no",
+        "corrected_solution": "Let the total worth of the stock be x.\nProfit from 20% of stock = 0.2x * 0.10\nLoss from 80% of stock = 0.8x * 0.05\nOverall loss = (0.2x * 0.10) + (0.8x * -0.05) = 250\n0.02x - 0.04x = 250\n-0.02x = 250\nx = 250 / -0.02\nx = -12500",
+        "corrected_answer": -12500,
+        "corrected_explanation": "The original solution incorrectly subtracted the loss from the profit, instead of adding the profit and loss together to find the overall loss. The corrected process reflects the correct calculation for the overall loss and the total worth of the stock."
+    },
+    {
+        "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 10.\nSo, a = 10/3.\nPlugging the value of a into the first equation, we get 2*(10/3) + b = 10.\nSo, b = 10 - 20/3.\nSo, b = 10/3.\nThere are 10/3 associate professors and 10/3 assistant professors, so a total of 20/3 people are present.\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the subtraction in step 4 is incorrectly calculated as 3a = 10 instead of 3a = 12. This error affects the calculation of 'a' and subsequently 'b'. The value of 'a' is incorrectly calculated as 10/3 instead of 4, and the value of 'b' is incorrectly calculated as 10/3 instead of 2. The final total number of people is incorrectly calculated as 20/3 instead of 6. The error is introduced in step 4, and all subsequent steps are affected by this error, while the previous steps remain unchanged.",
+        "is_correct": "no",
+        "corrected_solution": "a = 4, b = 2",
+        "corrected_answer": "6",
+        "corrected_explanation": "The correct solution is to solve the system of equations 2a + b = 10 and a + 2b = 8 to find a = 4 and b = 2. Then, the total number of people present is a + b = 6."
+    }
+]

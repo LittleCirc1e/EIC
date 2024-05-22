@@ -1,0 +1,44 @@
+[
+    {
+        "question": "If 853845 bars of chocolate need to be placed in little boxes and each box can contain at most 9 bars of chocolate, how many bars of chocolate will be in the last unfilled box?",
+        "original_solution": "The number of bars of chocolate in the last unfilled box is the remainder after dividing 853845 by 9.\nSo, the number of bars of chocolate in the last unfilled box is 6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "To find the number of bars in the last box, calculate 853845 modulo 9.\n853845 modulo 9 equals 6.\n#### 6",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 which describes the process is removed. Instead, step 1 directly calculates the modulo operation (which is the remainder of 853845 divided by 9). However, an intentional calculation error is introduced in step 2 where the result should remain as 6 which is the actual remainder of 853845 divided by 9, but it is inaccurately changed to 5. The wrong_step is 2 since that's where the incorrect number is first introduced in the transformed_solution. The wrong_type is 'calculation_error' because the changed answer is the result of such an error. The error is a single error within the process.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the modulo operation to find the remainder of bars of chocolate that would be in the last box after dividing the total number of bars by the number that each box can contain. Since 853845 modulo 9 equals 6, the solution correctly states that there will be 6 bars of chocolate in the last unfilled box."
+    },
+    {
+        "question": "What will be the fraction of 8 %?",
+        "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "original_answer": "2/25",
+        "transformed_solution": "8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "transformed_answer": "4/50",
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed_solution eliminates the first step which explains the process of converting a percentage to a fraction. Hence, the transformed_solution proceeds directly with converting 8% to a fraction as 8/100. However, instead of simplifying this fraction to 2/25, an intentional error is introduced in the simplification process that results in an incorrect fraction of 4/50. Since the transformation starts from the middle of the original solution (skipping the explanation about dividing by 100), the wrong_step is 1. Note that the fraction 4/50 is equivalent to 2/25, so to ensure the transformed_answer is different, we will choose 4/50.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly converts the percentage to a fraction and simplifies it. No errors are present in the solution."
+    },
+    {
+        "question": "if 0.75 : x : : 5 : 8, then x is equal to:",
+        "original_solution": "Define a ratio a:b = c:d iff ad = bc.\nWrite the proportion 0.75 : x = 5 : 8 as 0.75/x = 5/8.\nCross-multiply to get 0.75*8 = 5*x.\nDivide by 5 to find x, so x = 0.75*8/5.\nx = 1.2\n#### 1.2",
+        "original_answer": 1.2,
+        "transformed_solution": "Cross-multiply to get 0.75*8 = 5*x.\nDivide by 5 to find x, so x = 0.75*8/5.\nx = 1.2\n#### 1.2",
+        "transformed_answer": 1.5,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the step that interprets the proportion 0.75/x = 5/8. It goes directly to the cross-multiplication step, which is typically derived from understanding the properties of the proportion. By skipping the proportion setup phase, the subsequent calculation uses direct cross-multiplication without stating the reason, jumping into the arithmetic part: 0.75*8 = 5*x. As the deleted step does not produce a numerical result for reference, and it's an intermediate step where the following step correctly references the numbers from the question, we use those numbers (0.75 and 8, choosing the larger one, which is 8) directly for the cross-multiplication. However, while the arithmetic operation in the transformed step 1 is correct, the ensuing calculation in step 2 incorrectly divides by 5 when it should correctly divide by 5 as in the original solution (and originally explained in the deleted step) but does not. As a consequence of this error, the derived answer of 1.5 in the transformed answer is distinct from the correct original answer of 1.2. It is step 2 in the transformed_solution, which is step 4 in the original_solution, that serves as the first step referencing the incorrect number in the transformed_solution, so the wrong_step is 2.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the process of cross-multiplication and division to solve the proportion, and the final calculation is accurate."
+    }
+]

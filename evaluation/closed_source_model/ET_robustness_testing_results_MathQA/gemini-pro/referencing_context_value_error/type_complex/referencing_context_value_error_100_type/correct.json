@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Calculate the sum of first 89 natural numbers.",
+        "original_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 89 natural numbers is 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005.\n#### 4005",
+        "original_answer": 4005.0,
+        "transformed_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 80 natural numbers is 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240.\n#### 3240",
+        "transformed_answer": 3240.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 89 in the question as 80 wrongly, and calculates 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240 instead of 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005. Subsequent calculations apply this error but are otherwise correct. Step 1 still refers to the correct formula for the sum of natural numbers and is not affected by the referencing error.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the number 80 instead of 89 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = Distance / Speed\nTime = 400 km / 90 kmh = 4.44 hours\n#### 4.44",
+        "transformed_answer": 4.44,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 450 km in the question as 400 km wrongly, and calculates 400 km / 90 kmh = 4.44 hours instead of 450 km / 90 kmh = 5 hours. The error impacts only the calculation of the time required. All the other references have to maintain their original values, and steps associated with the wrong step should still use the updated wrong result for subsequent calculations.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the number 400 km instead of 450 km from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "There are 21 students in a class. In how many different ways can a committee of 3 students be formed?",
+        "original_solution": "The number of ways to choose a committee of 3 from 21 students is given by the combination formula C(21, 3) = 21! / (3!(21-3)!) = 1330\n#### 1330",
+        "original_answer": 1330.0,
+        "transformed_solution": "The number of ways to choose a committee of 3 from 23 students is given by the combination formula C(23, 3) = 23! / (3!(23-3)!) = 1771\n#### 1771",
+        "transformed_answer": 1771.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 21 in the question as 23 wrongly, and applies the combination formula C(23, 3) instead of C(21, 3). Its subsequent calculation is performed with the incorrect value, resulting in C(23, 3) = 23! / (3!(23-3)!) = 1771 instead of the correct C(21, 3) = 21! / (3!(21-3)!) = 1330.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 references the number 23 instead of 21 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 2, as its subsequent step, references the wrong result of step 1, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+        "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+        "original_answer": 810.0,
+        "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 8000 x 9% x 1 year = 8000 x 0.09 x 1\nInterest = $720\n#### 720",
+        "transformed_answer": 720.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the number 8000 instead of 9000 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Steps 3 and 4, as its subsequent related steps, reference the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "a train moves with a speed of 108 kmph . its speed in metres per second is",
+        "original_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n108 km/h x 5/18 = 30 m/s.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n100 km/h x 5/18 = 27.77 m/s.\n#### 27.77",
+        "transformed_answer": 27.77,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 108 in the question as 100 wrongly, and calculates 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. The subsequent steps inherit this incorrect number but calculate the conversion correctly with the erroneous value given. Please note that you should only consider this one error, and all other steps that reference the number 108 km/h still reference it correctly except for the incorrect step 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly references the number 100 instead of 108 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 2, as its subsequent step, references the wrong result of step 1, resulting in the incorrect final answer."
+    }
+]

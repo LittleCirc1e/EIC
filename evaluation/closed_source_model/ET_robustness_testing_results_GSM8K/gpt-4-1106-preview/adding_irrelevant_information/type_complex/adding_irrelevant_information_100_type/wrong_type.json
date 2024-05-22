@@ -1,0 +1,58 @@
+[
+    {
+        "question": "John decides to start collecting art. He pays the same price for his first 3 pieces of art and the total price came to $45,000. The next piece of art was 50% more expensive than those. How much did all the art cost?",
+        "original_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nThat means it cost 15,000+7,500=$22,500\nThat means in total he spent 45,000+22,500=$67,500\n#### 67,500",
+        "original_answer": 67500.0,
+        "transformed_solution": "The first 3 pieces each cost 45000/3=$15,000\nSo the next piece was 15,000*.5=$7,500 more expensive\nBecause John also had to pay an auction fee of 10% on the next piece, that means it cost 15,000+7,500=$22,500 plus the auction fee 22,500*.1=$2,250\nThat means in total he spent 45,000+22,500+2,250=$69,750\n#### 69,750",
+        "transformed_answer": 69750.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement, specifically an auction fee that is 10% of the cost of the next piece of art, resulting in an additional calculation 22,500*.1=$2,250 being integrated into the existing text. This affects the final total cost calculation, changing it from $45,000 + $22,500 = $67,500 in the original_solution to $45,000 + $22,500 + $2,250 = $69,750 in the transformed_solution. The transformed_answer, therefore, differs from the original_answer due to the introduced auction fee.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4, where an auction fee is incorrectly added to the cost of the next piece of art, even though the cost of the next piece already includes the auction fee. This results in an incorrect calculation of the total cost."
+    },
+    {
+        "question": "Jessa needs to make cupcakes for 3 fourth-grade classes that each have 30 students and a P.E. class with 50 students. How many cupcakes does she need to make?",
+        "original_solution": "For the fourth-grade classes, Jessa needs 3 classes * 30 cupcakes/class = 90 cupcakes\nAdding the cupcakes for the P.E. class 50, she needs to make a total of 90 cupcakes + 50 cupcakes = 140 cupcakes\n#### 140",
+        "original_answer": 140.0,
+        "transformed_solution": "For the fourth-grade classes, Jessa needs 3 classes * 30 cupcakes/class = 90 cupcakes\nAdding the cupcakes for the P.E. class 50 plus 5 extra cupcakes for teachers, she needs to make a total of 90 cupcakes + 50 cupcakes + 5 cupcakes = 145 cupcakes\n#### 145",
+        "transformed_answer": 145.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <plus 5 extra cupcakes for teachers>, resulting in step 2 changing from 90 cupcakes + 50 cupcakes = 140 cupcakes in the original_solution to 90 cupcakes + 50 cupcakes + 5 cupcakes = 145 cupcakes in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The operands of the formula in step 1 are correct, but the result is incorrectly calculated as 90 cupcakes instead of 270 cupcakes for the three fourth-grade classes. This error in calculation affects the subsequent step that references its result, leading to the final wrong result."
+    },
+    {
+        "question": "An organization trying to save endangered species of turtles has taken twice more hawksbill turtles than the number of green turtles into a conservation center. If the number of green turtles is 800, calculate the number of turtles that have been taken into the conservation center.",
+        "original_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800 = 3200 turtles.\n#### 3200",
+        "original_answer": 3200.0,
+        "transformed_solution": "If the number of hawksbill turtles is twice more than the number of green turtles, then there are 2*800 = 1600 more hawksbill turtles.\nAdditional loggerhead turtles equal to half the number of green turtles were also taken in, so there are 800/2 = 400 loggerhead turtles.\nThe total number of hawksbill turtles is 800+1600 = 2400\nThe total number of turtles that have been taken into the conservation center is 2400+800+400 = 3600 turtles.\n#### 3600",
+        "transformed_answer": 3600.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Additional loggerhead turtles equal to half the number of green turtles were also taken in>, resulting in step 2 changing from calculating only hawksbill and green turtles to also including loggerhead turtles in the transformed_solution. The new step integrated is 800/2 = 400 loggerhead turtles, which is then added to the total count, changing the answer from 3200 turtles to 3600 turtles.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. The solution incorrectly interprets 'twice more' as 'twice as many,' which only results in an error in the operand of the formula. The correct interpretation should be 'three times as many,' which would result in 2400 hawksbill turtles instead of 1600. This error affects the subsequent calculations and leads to the final wrong result."
+    },
+    {
+        "question": "Grace baked 4 whole pumpkin pies. She sold 1 whole pumpkin pie and gave 1 whole pumpkin pie to her friend. The remaining whole pumpkin pies were each sliced into 6 pieces. Her family ate 2/3 pieces. How many pieces of pumpkin pie were left?",
+        "original_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nThere were a total of 2 x 6 = 12 pieces made from the 2 whole pumpkin pie.\nHer family ate 12 x 2/3 = 8 pieces.\nTherefore, 12 - 8 = 4 pieces of pumpkin pie were left.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nBecause her neighbor requested 1 whole pumpkin pie sliced into 6 pieces, there were a total of (2 - 1) x 6 = 6 pieces made from the remaining whole pumpkin pie.\nHer family ate 6 x 2/3 = 4 pieces.\nTherefore, 6 - 4 = 2 pieces of pumpkin pie were left.\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because her neighbor requested 1 whole pumpkin pie sliced into 6 pieces>, resulting in step 3 changing from 2 x 6 = 12 pieces in the original_solution to (2 - 1) x 6 = 6 pieces in the transformed_solution. This additional information improperly changes the quantity of remaining whole pumpkin pies available to be sliced, and thus affects the calculation of the pieces left over. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4. The operands of the formula are correct, but the result is calculated incorrectly. The family ate 2/3 of each of the 2 remaining pies, which are sliced into 6 pieces each, not 2/3 of 6 pieces. The correct calculation should be 2 pies x 6 pieces/pie x 2/3 = 8 pieces eaten, not 4. Therefore, the error is a calculation error."
+    }
+]

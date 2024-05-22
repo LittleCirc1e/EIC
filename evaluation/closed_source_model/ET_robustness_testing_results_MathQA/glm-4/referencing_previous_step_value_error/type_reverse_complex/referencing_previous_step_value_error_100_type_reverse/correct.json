@@ -1,0 +1,44 @@
+[
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 0.5 miles\n#### 0.5",
+        "transformed_answer": 0.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 2 in the transformed_solution incorrectly calculates the distance by referencing the correct speed from step 1 but then dividing by 60 incorrectly as 12 * (5 / 60) = 0.5 miles instead of the correct 12 * (5 / 60) = 1 mile. The incorrect division leads to a halved answer even though the previous step calculated the interval speed correctly. All other steps that should reference the correct result of the third interval speed, continue to reference the figure correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. The calculation in step 2 is incorrect. To find the distance traveled in the third 5-minute interval, the formula should be distance = speed * time. The speed in the third interval is correctly calculated as 2 + (5 * 2) = 12 miles per hour. However, the time is incorrectly used as 5 minutes instead of converting it to hours (5 minutes is 5/60 hours). The correct calculation should be 12 * (5/60) = 1 mile, not 0.5 miles. Therefore, the error in step 2 is a calculation_error."
+    },
+    {
+        "question": "A straight line in the xy-plane has a slope of 4 and a y-intercept of 4. On this line, what is the x-coordinate of the point whose y-coordinate is 800?",
+        "original_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 199\n#### 199",
+        "original_answer": 199.0,
+        "transformed_solution": "The equation of the line is y = 4x + 4\nSet y = 800 and solve for x: 800 = 4x + 4\n796 = 4x\nx = 198\n#### 198",
+        "transformed_answer": 198.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly divides 796 by 4 as 198 instead of 199, which is a simple arithmetic error after correctly subtracting 4 from 800 in the previous step to get 796. This error only affects the final step where the x-value is calculated. Steps 1, 2, and 3 are correct and consistent with the original solution. The reference number in the correct step 3 is 796, which is incorrectly used in step 4 to obtain x=198. Steps 1, 2, and 3 still reference their numbers correctly. The wrong_step (4), the calculation error which is the wrong_type, and an explanation indicating that it was an arithmetic mistake while dividing 796 by 4 that led to the error are provided. All other steps are calculated correctly, maintaining the wrong_type consistent with the task statement and ensuring that is_single_error is true.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3. The operands and operators of the formula are correct, but the result of the calculation is incorrect. The correct calculation should be 800 - 4 = 796, and then 796 / 4 = 199, not 198. This is a calculation_error that affects the final answer."
+    },
+    {
+        "question": "Rounded to 3 decimal places, 1.003 ^ 4 =",
+        "original_solution": "1.003^4 = 1.012\n#### 1.012",
+        "original_answer": 1.012,
+        "transformed_solution": "1.003^4 = 1.009\n#### 1.009",
+        "transformed_answer": 1.009,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 mistakenly calculates the power 1.003^4 as 1.009 instead of 1.012. This is a calculation error, as the power was incorrectly calculated. The exponentiation should be computed correctly using proper arithmetic to ensure accuracy. As 1.003 raised to the power of 4 more accurately equals 1.012015, when rounded to 3 decimal places the result should be 1.012. The step has been intentionally modified to introduce a single wrong calculation.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is the final calculation. The result of 1.003^4 is incorrectly calculated as 1.009, which does not match the correct value when rounded to 3 decimal places. The operands and operators are correct, but the result is not accurately computed, thus it belongs to calculation_error."
+    }
+]

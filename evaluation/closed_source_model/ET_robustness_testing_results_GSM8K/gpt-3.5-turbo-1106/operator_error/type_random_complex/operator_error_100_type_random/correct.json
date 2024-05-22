@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Ellen is on a diet. She eats two carrots, a salad, and a yogurt every day. The salad costs her $6, while the yogurt is half the price. How much does Ellen pay for one carrot every day when in total she pays $11 for her goods?",
+        "original_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nFor the two carrots Ellen needs to pay $11 - $6 - $3 = $2.\nSo one carrot costs $2 / $2 = $1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nInstead of subtracting, we add the prices Ellen needs to pay $11 + $6 + $3 = $20 for the two carrots and the carrots.\nSo one carrot would incorrectly be calculated as $20 / 2 = $10.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly changes the subtraction in step 2 into addition, and by changing - to +, the calculation of $11 - $6 - $3 = $2 becomes $11 + $6 + $3 = $20. This only affects step 2 directly. Step 3 then inherits the incorrect total from step 2 but performs the division correctly, so the error does not compound further. As a result, only step 2 is incorrect, but its calculation, given the wrong operator, is correct. This leads to an incorrect result for the cost of one carrot.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly adds the prices of the goods instead of subtracting them, which results in an incorrect total cost. This error belongs to operator_error."
+    }
+]

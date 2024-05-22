@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Farmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens?",
+        "original_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=70\n2C=10\nC=5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=80\n-2C=0\nC=0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error is intentionally introduced in step 6 where the equation is incorrectly simplified to 2C+80-4C=80 instead of 2C+80-4C=70. This miscalculation leads to an incorrect result of -2C=0, and subsequently C=0, which doesn’t make sense in the context of the question as farmer Brown cannot have zero chickens. The previous steps remain unchanged because they are not dependent on the outcome of the incorrect calculation step.",
+        "is_correct": "no",
+        "corrected_solution": "C = 10\n20 - C = 10\nChickens have 20 legs\nCows have 40 legs\nTotal legs = 20 + 40 = 60\nNumber of chickens = 10",
+        "corrected_answer": "10.0",
+        "corrected_explanation": "The original solution incorrectly set up the equation and did not solve for the correct number of chickens. The correct number of chickens is 10, not 0."
+    },
+    {
+        "question": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 339 Pokemon. Alex has caught 5 more than Stan, and Stan has caught 13 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "original_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=360\nx=40 Pokemon\nStan:4(40)-13=147 Pokemon\n#### 147",
+        "original_answer": 147.0,
+        "transformed_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=350\nx=38.89 Pokemon\nStan:4(38.89)-13=142.56 Pokemon\n#### 142.56",
+        "transformed_answer": 142.56,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the equation in step 6 is incorrectly solved as 9x=350 instead of 9x=360. Therefore, step 7 calculates the value of x incorrectly as 38.89 rather than 40. Subsequent step 8 subsequently calculates the number of Pokemon Stan caught using the incorrect value of x as 142.56 instead of 147. No other steps are modified, maintaining consistency with the single-error condition.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": "142.56",
+        "corrected_explanation": "The solution provided is incorrect because the final answer should be a whole number since you cannot catch a fraction of a Pokemon. The correct process is to solve for x using the equation 9x-21=339, then substitute the value of x into the expression for Stan's number of Pokemon caught to find the correct answer."
+    },
+    {
+        "question": "A local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?",
+        "original_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=70 left.\n70+6=76 were enrolled after the final rally.\n76/2=38 are left after half the class dropped.\n38/2=19 are left after half the class graduated.\n#### 19",
+        "original_answer": 19,
+        "transformed_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=68 left.\n68+6=74 were enrolled after the final rally.\n74/2=37 are left after half the class dropped.\n37/2=18.5 are left after half the class graduated.\n#### 18.5",
+        "transformed_answer": 18.5,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In step 5 of the transformed solution, the subtraction is incorrectly changed from 72-2=70 to 72-2=68. This mistake then affects the subsequent related steps (steps 6, 7, 8), but does not change any previous steps or ones not related to the error. Subsequently, step 6 changes from 70+6=76 to 68+6=74 due to inheriting the previous error. Step 7 changes from 76/2=38 to 74/2=37, and step 8 changes from 38/2=19 to 37/2=18.5. All the modifications in the transformed solution preserve the structure of the original solution but one calculation error is introduced, which propagates through following steps.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 37.0,
+        "corrected_explanation": "The correct process is to first calculate the number of students after each step, then apply the given conditions. After the final rally, there were 74 students. After half the class dropped, there were 37 students left. After half of the remaining students graduated, there were 37 students left, not 18.5."
+    },
+    {
+        "question": "Rory is retrieving tennis balls from the court after a tennis match. In the first of three sets, he had to retrieve four more balls than in the second set. In the third set, he retrieved half as many balls as in the second. He retrieved 19 tennis balls in all. How many tennis balls did he retrieve in the first set of the match?",
+        "original_solution": "Let B be the number of tennis balls Rory retrieved in the third set.\nIn the second set, he retrieved 2B balls.\nIn the first set, he retrieved 2B + 4 balls.\nIn total, he retrieved B + 2B + 2B + 4 = 5B + 4 = 19 balls.\nThus, 5B = 19 - 4 = 15 balls.\nTherefore, in the third set, Rory retrieved B = 15 / 5 = 3 balls.\nHence, in the second set, he retrieved 2B = 3 * 2 = 6 balls.\nIn the first set he retrieved 2(3) + 4 balls = 10\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let B be the number of tennis balls Rory retrieved in the third set.\nIn the second set, he retrieved 2B balls.\nIn the first set, he retrieved 2B + 4 balls.\nIn total, he retrieved B + 2B + 2B + 4 = 5B + 4 = 19 balls.\nThus, 5B = 19 - 4 = 15 balls.\nTherefore, in the third set, Rory retrieved B = 15 / 5 = 3 balls.\nHence, in the second set, he retrieved 2B = 3 * 2 = 6 balls.\nIn the first set he retrieved 2(3) + 4 balls = 6\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 8,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 8, where the calculation of the number of balls retrieved in the first set was changed from 2(3) + 4 = 10 to 2(3) + 4 = 6. This is a calculation error, as the operands and operators in the formula were not changed, but the result of the calculation was altered. The subsequent steps are not affected as this is the final calculation. The transformed answer is different from the original answer, which fulfills the requirement.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 7.0,
+        "corrected_explanation": "The correct answer is 7. In the first set, he retrieved 2B + 4 balls, which should be 2(3) + 4 = 6 + 4 = 10 balls."
+    }
+]

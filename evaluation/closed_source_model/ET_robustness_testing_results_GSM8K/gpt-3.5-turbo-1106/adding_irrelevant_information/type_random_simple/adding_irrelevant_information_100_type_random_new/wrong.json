@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Kat decides she wants to start a boxing career. She gets a gym membership and spends 1 hour in the gym 3 times a week doing strength training. She also trained at the boxing gym 4 times a week for 1.5 hours. How many hours a week does she train?",
+        "original_solution": "She strength trains 3*1=3 hours a week\nShe does boxing training 4*1.5=6 hours a week\nSo she trains a total of 3+6=9 hours a week\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "She strength trains 3*1=3 hours a week\nBecause Kat also spends an additional 0.5 hours on stretching after each strength training, her total strength training time is 3+(3*0.5)=4.5 hours a week\nShe does boxing training 4*1.5=6 hours a week\nSo she trains a total of 4.5+6=10.5 hours a week\n#### 10.5",
+        "transformed_answer": 10.5,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Kat also spends an additional 0.5 hours on stretching after each strength training>, changing the calculation from 3 hours a week to 4.5 hours a week. The statement has been modified to include this additional half an hour per strength training session, which affects her total weekly training hours in step 4, changing from a total of 3+6=9 hours a week to 4.5+6=10.5 hours a week. It should be noted that we should only consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct because the calculations for the total strength training time and boxing training time are accurate, and the final answer is correctly calculated as 10.5 hours a week."
+    },
+    {
+        "question": "On Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?",
+        "original_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\n12,000 + 24,000 = 36,000 ice cream cones have been sold in total.\n#### 36,000",
+        "original_answer": 36000,
+        "transformed_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\nOn Thursday, an additional 5,000 ice cream cones were sold due to a promotion.\n12,000 + 24,000 + 5,000 = 41,000 ice cream cones have been sold in total.\n#### 41,000",
+        "transformed_answer": 41000,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <On Thursday, an additional 5,000 ice cream cones were sold due to a promotion>, resulting in step 2 changing from 12,000 + 24,000 = 36,000 in the original_solution to 12,000 + 24,000 + 5,000 = 41,000 in the transformed_solution. This step incorrectly assumes a third day of sales occurs even though the question only asks about Tuesday and Wednesday.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total number of ice cream cones sold by adding the amounts sold on Tuesday, Wednesday, and Thursday."
+    },
+    {
+        "question": "Grace baked 4 whole pumpkin pies. She sold 1 whole pumpkin pie and gave 1 whole pumpkin pie to her friend. The remaining whole pumpkin pies were each sliced into 6 pieces. Her family ate 2/3 pieces. How many pieces of pumpkin pie were left?",
+        "original_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nThere were a total of 2 x 6 = 12 pieces made from the 2 whole pumpkin pie.\nHer family ate 12 x 2/3 = 8 pieces.\nTherefore, 12 - 8 = 4 pieces of pumpkin pie were left.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Grace sold and gave a total of 1 + 1 = 2 whole pumpkin pie.\nHer family was left with 4 - 2 = 2 whole pumpkin pie.\nBecause her neighbor requested 1 whole pumpkin pie sliced into 6 pieces, there were a total of (2 - 1) x 6 = 6 pieces made from the remaining whole pumpkin pie.\nHer family ate 6 x 2/3 = 4 pieces.\nTherefore, 6 - 4 = 2 pieces of pumpkin pie were left.\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because her neighbor requested 1 whole pumpkin pie sliced into 6 pieces>, resulting in step 3 changing from 2 x 6 = 12 pieces in the original_solution to (2 - 1) x 6 = 6 pieces in the transformed_solution. This additional information improperly changes the quantity of remaining whole pumpkin pies available to be sliced, and thus affects the calculation of the pieces left over. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly follows the given information and performs the necessary calculations to determine the number of pieces of pumpkin pie left. There are no errors in the reasoning or calculations."
+    }
+]

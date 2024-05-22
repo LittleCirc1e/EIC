@@ -1,0 +1,93 @@
+[
+    {
+        "question": "of the total amount that rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. if rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?",
+        "original_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.02x + 0.024x = 0.044x\nTotal tax as a percent of the total amount spent = (0.044x / x) * 100\nTotal tax as a percent of the total amount spent = 4.4%\n#### 4.4%",
+        "original_answer": 4.4,
+        "transformed_solution": "Let x be the total amount that Rose spent, excluding taxes.\n",
+        "transformed_answer": 4.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, calculating 0.6x for the amount spent on clothing instead of the correct 0.5x. This error affects the computation of the tax paid on clothing in step 4, leading to a miscalculation of the tax amount as 0.024x instead of 0.02x. Consequently, the erroneous tax values affect the total tax computation in step 6, changing the total tax from 0.044x to 0.048x, and affecting the final percentage calculation in step 8. Note that the numbers for the other items and their tax rates are referenced correctly, and it's the first erroneous step that causes all subsequent related steps to inherit its erroneous result, though they are computed correctly based on the wrong value provided.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the problem by defining a variable x for the total amount spent excluding taxes, which is necessary to calculate the percentages and the total tax paid."
+    },
+    {
+        "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+        "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+        "original_answer": 810.0,
+        "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\n",
+        "transformed_answer": 720.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000.",
+        "is_correct": "yes",
+        "any_explanation": "The formula provided in the solution is correct for calculating simple interest. The formula is Interest = Principal x Rate x Time, which is the standard formula for simple interest calculation. However, the solution does not provide the actual calculation and final answer, but the step given is correct."
+    },
+    {
+        "question": "a number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is",
+        "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Let the number be x.\n",
+        "transformed_answer": 4.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates x as 5a + 3 instead of 6a + 3. Its subsequent related step will be affected, calculating x^2 as 25a^2 + 30a + 9 instead of 36a^2 + 36a + 9 in step 2. Then it incorrectly suggests the remainder when divided by 5 is 4 instead of the remainder when divided by 6 is 3. The 5 and the remainder 4 are incorrect as they do not follow the original question asking for dividing by 6, but this transformed solution is consistently incorrect after the first error.",
+        "is_correct": "yes",
+        "any_explanation": "The initial step to let the number be x is a common and correct approach to start solving problems involving numbers and their properties."
+    },
+    {
+        "question": "If it is assumed that 50 percent of those who receive a questionnaire by mail will respond and 300 responses are needed, what is the minimum number of questionnaires that should be mailed?",
+        "original_solution": "Let x be the number of questionnaires mailed.\n0.50x = 300\nx = 300 / 0.50 = 600\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "Let x be the number of questionnaires mailed.\n",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, and calculates 0.60x=300 instead of 0.50x=300. Its subsequent related step will be affected, calculating x = 300 / 0.60 = 500 instead of 300 / 0.50 = 600 in step 2. Please note that you should only consider one error, so step 2 still references 300 in the question correctly, only the incorrect percentage is carried over in the calculation.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the variable x to represent the number of questionnaires mailed, which is the first step in solving the problem."
+    },
+    {
+        "question": "Two cars are driving towards one another. The first car is traveling at a speed of 120 km/h, which is 28% faster than the second car. If the distance between the cars is 855 km, how long will it take the cars to meet (in hours)?",
+        "original_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\nx = 120 / 1.28 = 93.75 km/h.\nIn 1 hour, the cars cover 120 + 93.75 = 213.75 km.\nThe time it takes to meet is 855 / 213.75 = 4 hours.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Let the speed of the second car be x km/h.\nThe speed of the first car is 120 km/h, which is 28% faster than the second car, so 120 = x + 0.28x.\n120 = 1.28x\n",
+        "transformed_answer": 4.1536,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 120 in the question as 110 wrongly, and calculates 110 / 1.28=85.9375 km/h instead of 120 / 1.28=93.75 km/h. Its subsequent related steps, step 4 and step 5, will be affected. Step 4 changes from 120 + 93.75=213.75 km/h to 120 + 85.9375=205.9375 km/h. Step 5 changes from 855 / 213.75=4 hours to 855 / 205.9375=4.1536 hours. Please note that you should only consider one error, so all other references of the number '120' still reference it correctly except for the step referenced incorrectly.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided correctly set up the equation to solve for the speed of the second car, taking into account that the first car is 28% faster."
+    },
+    {
+        "question": "a train moves with a speed of 108 kmph . its speed in metres per second is",
+        "original_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n108 km/h x 5/18 = 30 m/s.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n",
+        "transformed_answer": 27.77,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 108 in the question as 100 wrongly, and calculates 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. The subsequent steps inherit this incorrect number but calculate the conversion correctly with the erroneous value given. Please note that you should only consider this one error, and all other steps that reference the number 108 km/h still reference it correctly except for the incorrect step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The conversion from km/h to m/s is correctly described as multiplying by 5/18, since 1 km/h is equal to 5/18 m/s."
+    },
+    {
+        "question": "the length of rectangle is thrice its breadth and its perimeter is 88 m , find the area of the rectangle ?",
+        "original_solution": "Let the breadth be x.\nThe length is 3x.\nPerimeter = 2(length + breadth)\n88 = 2(3x + x)\n88 = 2(4x)\n88 = 8x\nx = 11\nLength = 33\nBreadth = 11\nArea = length x breadth = 33 x 11 = 363\n#### 363",
+        "original_answer": 363.0,
+        "transformed_solution": "Let the breadth be x.\nThe length is 3x.\nPerimeter = 2(length + breadth)\n88 = 2(3x + x)\n88 = 2(4x)\n",
+        "transformed_answer": 161.26,
+        "wrong_step": 5,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 references the relationship between length and breadth (3x+x) incorrectly as 2*6x instead of 2*4x. Its subsequent related step is affected, calculating 88=2*6x instead of 88=2*4x and thus wrongfully obtaining x=7.33 instead of x=11. Length is then wrongly calculated as 3*7.33=22 instead of 3*11=33, and breadth remains as incorrectly calculated 7.33 instead of 11. Finally, the area calculation inherits these errors, yielding 22*7.33=161.26 instead of 33*11=363. All other numbers in the problem are referenced correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution correctly apply the formula for the perimeter of a rectangle and set up the equation to solve for the breadth (x)."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "question": "A certain electric - company plan offers customers reduced rates for electricity used between 8 p . m . and 8 a . m . weekdays and 24 hours a day Saturdays and Sundays. Under this plan, the reduced rates q apply to what fraction of a week?",
+        "original_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours\nThe total hours for which reduced rates apply is 60 + 48 = 108 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 108 / 168 = 9 / 14\n#### 9/14",
+        "original_answer": "9/14",
+        "transformed_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours\nThe total hours for which reduced rates apply is 60 + 24 = 84 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 84 / 168 = 1 / 2\n#### 1/2",
+        "transformed_answer": "1/2",
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts Saturdays and Sundays as 1 day instead of 2 days, resulting in <The reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours> in the original_solution being changed to <The reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours> in the transformed_solution. Subsequently, step 3 changes from 60 + 48 = 108 to 60 + 24 = 84, and step 5 changes from 108 / 168 = 9 / 14 to 84 / 168 = 1 / 2. The error is only introduced in the step of counting the number of days for the weekend, and the subsequent division to get the fraction is performed correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "how many numbers from 2 to 15 are exactly divisible by 2 ?",
+        "original_solution": "There are 7 numbers between 2 and 15\n2, 4, 6, 8, 10, 12, 14\n#### 7",
+        "original_answer": 7,
+        "transformed_solution": "There are 6 numbers between 2 and 15\n2, 4, 6, 8, 10, 12\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the numbers between 2 and 15 that are exactly divisible by 2 as 6 instead of 7. This counting error excludes number 14 from the series, changing the original solution (which correctly identifies 2, 4, 6, 8, 10, 12, 14) to an incorrect count of 2, 4, 6, 8, 10, 12 in the transformed_solution. The other numbers remain unchanged, and only the count is affected, causing the transformed_answer to differ from the original_answer.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies that there are 6 numbers between 2 and 15 that are exactly divisible by 2, and lists them accordingly. There are no calculation errors, counting errors, referencing errors, unit conversion errors, operator errors, missing steps, formula confusion, or addition of irrelevant information. The final answer is correct."
+    },
+    {
+        "question": "Sheila works 8 hours per day on Monday, Wednesday, and Friday, and 6 hours per day on Tuesday and Thursday. She does not work on Saturday and Sunday. She earns $324 per week. How much does she earn in dollars per hour?",
+        "original_solution": "Sheila works (8 hours/day * 3 days) + (6 hours/day * 2 days) = 24 + 12 = 36 hours per week\nShe earns $324 per week\nSo, her earnings per hour is $324 / 36 = $9\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Sheila works (8 hours/day * 3 days) + (6 hours/day * 3 days) = 24 + 18 = 42 hours per week\nShe earns $324 per week\nSo, her earnings per hour is $324 / 42 = $7.71\n#### 7.71",
+        "transformed_answer": 7.71,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts Tuesday and Thursday as 3 days instead of 2 days regarding the 6-hour workdays, leading to (6 hours/day * 2 days) = 12 being wrongly transformed into (6 hours/day * 3 days) = 18. This affects the calculation of total hours worked per week, changing it from 36 to 42. Consequently, this error alters the earnings per hour from $9 in the original solution to $7.71 in the transformed solution. It should be noted that only one step of counting error is considered, and the division process remains correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "if w is the set of all the integers between 69 and 99, inclusive, that are either multiples of 3 or multiples of 2 or multiples of both, then w contains how many numbers?",
+        "original_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98\nNow find the common multiples of 2 and 3:\n72, 78, 84, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 20 numbers.\n#### 20",
+        "original_answer": 20,
+        "transformed_solution": "First, find the multiples of 3 between 69 and 99, which are:\n69, 72, 75, 78, 81, 84, 87, 90, 93, 96\nNext, find the multiples of 2 between 69 and 99, which are:\n70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96\nNow find the common multiples of 2 and 3:\n72, 78, 90, 96\nCombine all the numbers together and remove duplicates, we get:\n69, 70, 72, 74, 75, 76, 78, 80, 81, 82, 84, 86, 87, 88, 90, 92, 93, 94, 96, 98\nTherefore, w contains 19 numbers.\n#### 19",
+        "transformed_answer": 19,
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 erroneously omits counting the number 84 as a common multiple of 2 and 3, which is present in both the list of multiples of 2 and 3. This results in the list of common multiples being 72, 78, 90, 96 instead of 72, 78, 84, 90, 96. Consequently, the final count is one less than what it should be, so the original count of 20 is incorrectly transformed to 19.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "how many positive integers less than 60 have a reminder 01 when divided by 4 ?",
+        "original_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57.\nThere are 15 numbers that satisfy this condition.\n#### 15",
+        "original_answer": 15,
+        "transformed_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53.\nThere are 14 numbers that satisfy this condition.\n#### 14",
+        "transformed_answer": 14,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the counting result has been erroneously altered by excluding the number 57, which should have been included as it is less than 60 and leaves a remainder of 1 when divided by 4. Therefore, the count of numbers has changed from 15 to 14, which only impacts the final count of numbers that meet the condition and does not affect the previous steps of listing the numbers.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct. There are 14 positive integers less than 60 that have a remainder of 1 when divided by 4, and the solution correctly lists them all."
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "question": "Farmer Brown has 20 animals on his farm, all either chickens or cows. They have a total of 70 legs, all together. How many of the animals are chickens?",
+        "original_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=70\n2C=10\nC=5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Let C be the number of chickens.\nThere are 20-C cows.\nThe cows have 4*(20-C) legs.\nThe cows have 2C legs.\nThe total number of legs is 2C+4(20-C)=70.\n2C+80-4C=80\n-2C=0\nC=0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error is intentionally introduced in step 6 where the equation is incorrectly simplified to 2C+80-4C=80 instead of 2C+80-4C=70. This miscalculation leads to an incorrect result of -2C=0, and subsequently C=0, which doesn’t make sense in the context of the question as farmer Brown cannot have zero chickens. The previous steps remain unchanged because they are not dependent on the outcome of the incorrect calculation step.",
+        "is_correct": "no",
+        "any_explanation": "The answer (0) is incorrect. The number of chickens should be a positive integer."
+    },
+    {
+        "question": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 339 Pokemon. Alex has caught 5 more than Stan, and Stan has caught 13 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "original_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=360\nx=40 Pokemon\nStan:4(40)-13=147 Pokemon\n#### 147",
+        "original_answer": 147.0,
+        "transformed_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=350\nx=38.89 Pokemon\nStan:4(38.89)-13=142.56 Pokemon\n#### 142.56",
+        "transformed_answer": 142.56,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the equation in step 6 is incorrectly solved as 9x=350 instead of 9x=360. Therefore, step 7 calculates the value of x incorrectly as 38.89 rather than 40. Subsequent step 8 subsequently calculates the number of Pokemon Stan caught using the incorrect value of x as 142.56 instead of 147. No other steps are modified, maintaining consistency with the single-error condition.",
+        "is_correct": "no",
+        "any_explanation": "The answer should be 142 instead of 142.56, since we cannot catch fractions of Pokemon."
+    },
+    {
+        "question": "A local college is offering German lessons and currently has 8 students enrolled. Through advertising, 8 more became interested but a fourth of these dropped out within a day. 2 more got frustrated and left. The class then rallied to show how simple the course actually is and increased enrollment by 5 times the amount of students already enrolled in the class, but 2 had to drop it because of scheduling conflicts. After one last rally, 6 more people enrolled. As the days passed, half of the class eventually dropped, and half of the remaining students graduated. How many are still enrolled?",
+        "original_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=70 left.\n70+6=76 were enrolled after the final rally.\n76/2=38 are left after half the class dropped.\n38/2=19 are left after half the class graduated.\n#### 19",
+        "original_answer": 19,
+        "transformed_solution": "8+8=16 students are enrolled in the German class.\n8*.25=2 dropped out from the new recruits.\n2 more left, so the class had 16-2-2=12 students left.\nThere were 12*5+12=72 total students in the class after the rally.\nTwo people had to drop the class, so there were 72-2=68 left.\n68+6=74 were enrolled after the final rally.\n74/2=37 are left after half the class dropped.\n37/2=18.5 are left after half the class graduated.\n#### 18.5",
+        "transformed_answer": 18.5,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In step 5 of the transformed solution, the subtraction is incorrectly changed from 72-2=70 to 72-2=68. This mistake then affects the subsequent related steps (steps 6, 7, 8), but does not change any previous steps or ones not related to the error. Subsequently, step 6 changes from 70+6=76 to 68+6=74 due to inheriting the previous error. Step 7 changes from 76/2=38 to 74/2=37, and step 8 changes from 38/2=19 to 37/2=18.5. All the modifications in the transformed solution preserve the structure of the original solution but one calculation error is introduced, which propagates through following steps.",
+        "is_correct": "no",
+        "any_explanation": "The final answer should be integer, not a float number 18.5."
+    },
+    {
+        "question": "The total for the sum and product of Elvie's age and Arielle's age are 131. If Elvie's age is 10, how old is Arielle?",
+        "original_solution": "Let's say Arielle's age is x\nThe sum of Elvie's age and Arielle's age is 10+x\nThe product of their ages is 10*x\nThe total for the sum and product of their ages is 10+x+10*x = 131\nTo find Arielle's age, we evaluate x, which is 10+11x = 131\nThis gives us a total of 11x=121\nArielle's age is x=121/11\nThe value of x, which is Arielle's age, is 11\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Let's say Arielle's age is x\nThe sum of Elvie's age and Arielle's age is 10+x\nThe product of their ages is 10*x\nThe total for the sum and product of their ages is 10+x+10*x = 131\nTo find Arielle's age, we evaluate x, which is 10+11x = 131\nThis gives us a total of 11x=111\nArielle's age is x=111/11\nThe value of x, which is Arielle's age, is 10\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced during step 5, where the correct subtraction 131 - 10 to get 121 is instead wrongly recorded as 111. Since this is the calculation step where Arielle’s age is determined, it is imperative to ensure that the other step after a miscalculation correctly inherits the error and uses the incorrect figure; as such, step 6 changes from 11x=121 to 11x=111 and finally step 7 results in x=111/11 or 10 instead of 121/11 or 11.",
+        "is_correct": "no",
+        "any_explanation": "The answer is incorrect. The correct answer should be 11. "
+    },
+    {
+        "question": "The red rope was four times the length of the blue rope. The blue rope was 7 centimeters shorter than the yellow rope. If the 3 ropes had a combined length of 37 centimeters, what was the length of the red rope in centimeters?",
+        "original_solution": "Let Y = the length of the yellow rope in centimeters\nBlue rope = Y - 7\nRed rope = 4 * (Y - 7)\nY + Y - 7 + 4 (Y - 7) = 37 cm\n6Y - 35 = 37\n6Y = 72\nY = 12 cm\nThe red rope was 20 cm long.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let Y = the length of the yellow rope in centimeters\nBlue rope = Y - 7\nRed rope = 4 * (Y - 7)\nY + Y - 7 + 4 (Y - 7) = 37 cm\n6Y - 35 = 37\n6Y = 70\nY = 11.67 cm\nThe red rope was 18.67 cm long.\n#### 18.67",
+        "transformed_answer": 18.67,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation in step 6 is incorrect, changing 6Y = 72 to 6Y = 70. This error affects the calculation of Y in step 7, changing Y = 12 cm to Y = 11.67 cm. Consequently, the length of the red rope in the final step is also affected, changing from 20 cm to 18.67 cm. The previous steps remain unchanged as they are not affected by the error introduced in step 6. The calculation error is only in one step, and the subsequent related steps inherit this error without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect because it has an incorrect formula for calculating the length of the red rope. Because the red rope was four times the length of the blue rope, and the blue rope was 7 centimeters shorter than the yellow rope, so the correct formula to calculate the length of the red rope should be 4*(Y-7) instead of 4*(Y-5). Therefore the correct answer should be 17.33 instead of 18.67."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "question": "solution p is 20 percent lemonade and 80 percent carbonated water by volume; solution q is 45 percent lemonade and 55 percent carbonated water by volume. if a mixture of pq contains 72 percent carbonated water, what percent of the volume of the mixture is p?",
+        "original_solution": "Let x be the volume of solution p and y be the volume of solution q in the mixture pq\n0.8x + 0.55y = 0.72(x+y) (The total carbonated water in the mixture is 72%)\n0.8x + 0.55y = 0.72x + 0.72y\n0.08x = 0.17y\nx/y = 0.17/0.08\nx/y = 2.125\nThe percent of the volume of the mixture that is p is 2.125/(1+2.125) = 2.125/3.125 * 100 = 68%\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "Let x be the volume of solution p and y be the volume of solution q in the mixture pq\n0.2x + 0.55y = 0.72(x+y) (The total lemonade in the mixture is 72%)\n0.2x + 0.55y = 0.72x + 0.72y\n-0.52x = 0.17y\nx/y = 0.17/-0.52\nx/y = -0.32692308\nThe percent of the volume of the mixture that is p is -0.32692308/(1-0.32692308) = -0.32692308/0.67307692 * 100 = -48.57%\n#### -48.57",
+        "transformed_answer": -48.57,
+        "wrong_step": 2,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 incorrectly uses the percentage of lemonade instead of carbonated water in solution p, changing the correct term of 0.8x (representing 80% carbonated water in solution p) to 0.2x (erroneously representing 20% lemonade). The correct calculation should maintain the percentage of carbonated water. This mistake affects all following steps, altering the correct proportions and resulting in a negative percentage for the volume of solution p in the mixture, which is not possible in reality. This is a confusing formula error where the percentage of one component (carbonated water) is confused with another (lemonade).",
+        "is_correct": "no",
+        "pred_wrong_step": 7,
+        "step_explanation": "Step 7 first makes a mistake in the calculation process, calculating -0.32692308/0.67307692 * 100 = -48.57% instead of -0.32692308/(1-0.32692308) = -0.32692308/0.67307692 * 100 = 48.57%. The final answer should be 48.57% instead of -48.57%. The first step to make a mistake, which is the root cause of the mistake, is step 7, so pred_wrong_step is 7."
+    },
+    {
+        "question": "A volume of 11780 l water is in a container of sphere. How many hemisphere of volume 4 l each will be required to transfer all the water into the small hemispheres?",
+        "original_solution": "The volume of the sphere can be calculated using the formula V = (4/3)πr^3, where V is the volume and r is the radius of the sphere\nSo the radius of the sphere is (3V/4π)^(1/3) = (3*11780/4*π)^(1/3) = 15.772 feet\nThe volume of each hemisphere can be calculated using the formula V = (2/3)πr^3, where V is the volume and r is the radius of the hemisphere\nSo the radius of each hemisphere is (3V/4π)^(1/3) = (3*4/4*π)^(1/3) = 1 feet\nThe total number of hemispheres required is the total volume of the sphere divided by the volume of each hemisphere, which is 11780/4 = 2945\n#### 2945",
+        "original_answer": 2945.0,
+        "transformed_solution": "The volume of the sphere can be calculated using the formula V = (4/3)πr^3, where V is the volume and r is the radius of the sphere\nSo the radius of the sphere is (3V/4π)^(1/3) = (3*11780/4*π)^(1/3) = 15.772 feet\nThe surface area of each hemisphere can be calculated using the formula A = 2πr^2, where A is the surface area and r is the radius of the hemisphere\nSo the radius of each hemisphere is (A/2π)^(1/2) = (8/2π)^(1/2) = 1.595 feet\nThe total number of hemispheres required is the total volume of the sphere divided by the surface area of each hemisphere incorrectly calculated as volume, which is 11780/8 = 1472.5\n#### 1472.5",
+        "transformed_answer": 1472.5,
+        "wrong_step": 4,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 confuses the surface area and volume of hemisphere. The original solution correctly uses the formula for the volume of a hemisphere, but the transformed solution incorrectly uses the surface area formula to determine the radius and consequently calculate the number of hemispheres, affecting the number of hemispheres calculated in step 5, changing from 11780/4=2945 to 11780/8=1472.5. Note that the language description of step 4 < The volume of each hemisphere can be calculated using the formula > in the original_solution remains unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 4 mistakenly uses the formula for calculating the surface area of a hemisphere while the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 first makes a mistake in the calculation process, calculating 11780/8=1472.5 instead of 11780/4=2945. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "A volume of 10976 l water is in a container of sphere. How many hemisphere of volume 4 l each will be required to transfer all the water into the small hemispheres?",
+        "original_solution": "First, we need to find the radius of the large sphere using the formula V = (4/3) * pi * r^3\nTherefore, r = (3V / (4pi))^(1/3) = (3*10976 / (4*3.14))^(1/3)\nAfter calculation, we find r = 22 feet\nNext, we find the volume of a hemisphere using the formula V = (2/3) * pi * r^3\nV = (2/3) * 3.14 * 22^3 = (2/3) * 3.14 * 10648\nEach hemisphere has a volume of 707.72 l\nTherefore, the number of hemisphere required is 10976 / 4 = 2744\n#### 2744",
+        "original_answer": 2744.0,
+        "transformed_solution": "First, we need to find the radius of the large sphere using the formula V = (4/3) * pi * r^3\nTherefore, r = (3V / (4pi))^(1/3) = (3*10976 / (4*3.14))^(1/3)\nAfter calculation, we find r = 22 feet\nNext, we find the volume of a hemisphere using the formula V = 4 * pi * r^2\nV = 4 * 3.14 * 22^2 = 4 * 3.14 * 484\nEach hemisphere has a volume of 6075.36 l\nTherefore, the number of hemisphere required is 10976 / 4 = 2744\n#### 6075.36",
+        "transformed_answer": 6075.36,
+        "wrong_step": 4,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 confuses the volume and surface area of a hemisphere. The question requires that the volume of the hemisphere to be solved be equal to (2/3) * pi * r^3, rather than 4 * pi * r^2, which is equivalent to the surface area of a sphere, resulting in V = (2/3) * pi * r^3 in the original_solution becoming V = 4 * pi * r^2 in the transformed_solution. This leads to subsequent step 5 calculating the number of hemispheres required still using the original volume of 4 l for each hemisphere, although the calculated volume of a hemisphere has changed in step 4. As a result, the final answer changes, and the language descriptions remain unchanged. Only step 4 is using the wrong formula, while other steps maintain the correct calculations as per instructions.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 first makes a mistake in the calculation process, calculating 10976 / 4 = 2744 instead of 10976 / 6075.36 = 1.806. The final answer is the result of step 6, which is incorrect due to the mistake in step 6. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    }
+]

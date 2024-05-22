@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Lionel walked 4 miles. Esther walked 975 yards and Niklaus walked 1287 feet. How many combined feet did the friends walk?",
+        "original_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 21120 + 2925 + 1287 = 25332 feet\nTogether the friends walked 25332 feet.\n#### 25332",
+        "original_answer": 25332.0,
+        "transformed_solution": "Lionel = 3 * 5280 = 15840 feet\n",
+        "transformed_answer": 21052.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 4 in the question as 3 wrongly, and calculates 3 * 5280=15840 instead of 4 * 5280=21120. Its subsequent related step will be affected, calculating 15840 + 2925 + 1287=21052 instead of 21120 + 2925 + 1287=25332 in step 3. Please note that you should only consider one error, so step 2 still references 975 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The conversion from miles to feet is correctly done by multiplying by 5280, which is the number of feet in a mile."
+    },
+    {
+        "question": "Andy has 4 times as many white socks as he has black socks. If he loses half his white socks, how many more white socks does he still have than black socks if he has 6 black socks?",
+        "original_solution": "Andy has 6 x 4 = 24 white socks.\nHe loses 24/2 = 12 white socks.\nHe still has 12 - 6 = 6 white socks more than black socks.\n#### 6",
+        "original_answer": 6,
+        "transformed_solution": "Andy has 6 x 5 = 30 white socks.\n",
+        "transformed_answer": 9,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 4 in the question as 5 wrongly, and calculates 6*5=30 instead of 6*4=24. Its subsequent related step, step 2, will be affected, calculating 30/2=15 instead of 24/2=12. The subsequent related step, step 3, will inherit the error from step 2, calculating 15-6=9 instead of 12-6=6. Please note that you should only consider one error, so step 2 and step 3 still reference 24 and 12 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates that Andy has 4 times as many white socks as black socks, which would be 6 black socks x 4 = 24 white socks. However, the solution states 30 white socks, which is incorrect. But, since we are only evaluating the existing steps, the calculation of multiplying the number of black socks by 4 to get the original number of white socks is correct."
+    },
+    {
+        "question": "Colby harvested his mango trees, the total mangoes he harvested is 60 kilograms. He sold 20 kilograms to the market and sold the remaining half to his community. If each kilogram contains 8 mangoes, how many mangoes does he still have?",
+        "original_solution": "He has 60-20= 40 kilograms of mangoes left after selling them to the market.\nColby sold 1/2 x 40 = 20 kilograms of mangoes to the community.\nTherefore, Colby still has 20x8= 160 pieces of mangoes.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "He has 50-20= 30 kilograms of mangoes left after selling them to the market.\n",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 60 in the question as 50 wrongly, and calculates 50-20=30 instead of 60-20=40. Its subsequent related steps, step 2, and 3, will be affected. Step 2 changes from 1/2 x 40=20 to 1/2 x 30=15, step 3 changes from 20x8=160 to 15x8=120. Please note that you should only consider one error, so step 3 still references 20 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the amount of mangoes left after selling 20 kilograms to the market, which is 30 kilograms."
+    },
+    {
+        "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+        "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "Let k be the number of koi fish in the pond\n",
+        "transformed_answer": 41.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The first step correctly sets up the problem by introducing a variable 'k' to represent the unknown number of koi fish in the pond, which is the standard approach to solving algebraic equations."
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "corrected_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn the last two days, the sum of the packages transported was only 4/5 of the maximum daily performance, so 4/5 * 35 = 28 packages for each day, and for two days it is 2 * 28 = 56 packages.\nAdding up all the packages Max delivered: 70 (for two days at maximum) + 50 (on two other days) + 5 (one-seventh of the maximum) + 56 (for the last two days) = 181 packages.\nThat means, Max could deliver 245 - 181 = 64 more packages if he would work at maximum performance every day.\n#### 64",
+        "corrected_answer": 64.0,
+        "corrected_explanation": "The mistake in the original solution was in step 3, where the calculation for the last two days was incorrect. The correct calculation is 4/5 of the maximum daily performance, which is 4/5 * 35 = 28 packages per day, and since there are two such days, it should be 2 * 28 = 56 packages. The final calculation should subtract the sum of packages Max actually delivered from the maximum possible, which is 245 - (70 + 50 + 5 + 56) = 64 more packages."
+    },
+    {
+        "question": "Juan needs 10 half-gallons of milk to bake 40 cookies with. How many half-gallons of milk does Juan need to bake 200 dozen cookies?",
+        "original_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 40/10 = 4 cookies.\nIf one half-gallon of milk bakes 4 cookies. to bake 200 cookies, you'll need 200/4 = 50 half-gallons of milk\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 40*10 = 400 cookies.\nIf one half-gallon of milk bakes 400 cookies. to bake 200 dozen cookies (2400 cookies), you'll need 2400/400 = 6 half-gallons of milk\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 1 into multiplication, modifying 40/10 = 4 to 40*10 = 400. This affects the subsequent step where the quantity of milk required is calculated. Instead of dividing the number of cookies by the correct number of cookies baked per half-gallon, the number of cookies is divided by an incorrectly inflated amount due to the operator change. The calculation within the transformed solution is correct given the modified step, but the transformed solution yields a different answer from the original due to the change in the initial operator.",
+        "is_correct": "no",
+        "corrected_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 4 cookies because 40 / 10 = 4.\nTo bake 200 dozen cookies (2400 cookies), you'll need 2400 / 4 = 600 half-gallons of milk.\n#### 600",
+        "corrected_answer": 600.0,
+        "corrected_explanation": "The initial solution incorrectly states that one half-gallon of milk bakes 400 cookies. The correct calculation is that one half-gallon of milk bakes 4 cookies, since 40 cookies require 10 half-gallons. Therefore, to bake 2400 cookies (200 dozen), Juan would need 2400 / 4 = 600 half-gallons of milk."
+    },
+    {
+        "question": "Steve's new book sells 1,000,000 copies. He got an advance to pay for 100,000 copies. He gets $2 for each copy of the book sold. His agent takes 10% of that. How much money did he keep not counting the money from the advance?",
+        "original_solution": "He sold 1,000,000-100,000=900,000 not counting the advance\nSo he made 900,000*2=$1,800,000 from selling the books\nHis agent took 1,800,000*.1=$180,000\nThat means he kept 1,800,000-180,000=$1,620,000\n#### 1620000",
+        "original_answer": 1620000.0,
+        "transformed_solution": "He sold 1,000,000+100,000=1,100,000 not counting the advance\nSo he made 1,100,000*2=$2,200,000 from selling the books\nHis agent took 2,200,000*.1=$220,000\nThat means he kept 2,200,000-220,000=$1,980,000\n#### 1980000",
+        "transformed_answer": 1980000.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 1,000,000-100,000=900,000 becomes 1,000,000+100,000=1,100,000. This affects the subsequent related step 2, 3, and 4. Step 2 changes from 900,000*2=$1,800,000 to 1,100,000*2=$2,200,000, step 3 changes from 1,800,000*.1=$180,000 to 2,200,000*.1=$220,000, and step 4 changes from 1,800,000-180,000=$1,620,000 to 2,200,000-220,000=$1,980,000. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "is_correct": "no",
+        "corrected_solution": "He sold 1,000,000 copies not counting the advance\nSo he made 1,000,000*2=$2,000,000 from selling the books\nHis agent took 2,000,000*.1=$200,000\nThat means he kept 2,000,000-200,000=$1,800,000\n#### 1800000",
+        "corrected_answer": 1800000.0,
+        "corrected_explanation": "The solution incorrectly adds the advance copies to the total sold copies. The advance is for 100,000 copies, which should not be added to the 1,000,000 copies sold. The correct calculation is based on the 1,000,000 copies sold, not 1,100,000. After calculating the earnings from 1,000,000 copies and subtracting the agent's 10% commission, the correct amount that Steve keeps is $1,800,000."
+    }
+]

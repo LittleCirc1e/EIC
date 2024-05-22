@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Bill is ordering a new truck. He has decided to purchase a two-ton truck with several added features: a king cab upgrade, a towing package, leather seats, running boards, and the upgraded exterior light package. The base price of the truck is $30,000, and the other features are at extra cost. The king cab is an extra $7,500, leather seats are one-third the cost of the king cab upgrade, running boards are $500 less than the leather seats, and the upgraded exterior light package is $1500. What is the total cost of Bill's new truck, in dollars?",
+        "original_solution": "The leather seats are one-third the cost of the king cab upgrade, at a cost of $7,500/3=$2500.\nThe running boards are $500 less than the leather seats at a cost of $2500-$500=$2000\nThe total cost of the truck is $30,000+$7500+$2500+$2000+$1500=$43,500\n#### 43,500",
+        "original_answer": 43500.0,
+        "transformed_solution": "The running boards are $500 less than the leather seats which are one-third the cost of the king cab upgrade, at a cost of $7500/3-$500=$2000\nThe total cost of the truck is $30,000+$7500+($7500/3)+$2000+$1500=$42,000\n#### 42,000",
+        "transformed_answer": 42000.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 1. In the original_solution, step 1 calculates the cost of the leather seats as one-third the cost of the king cab upgrade, and step 2 references the result $2500 from step 1. Therefore, after deleting step 1, step 2 should reference the calculation for the cost of the leather seats directly as one-third of the cost of the king cab upgrade and then subtracting $500. The language in the transformed_solution is updated to combine the deleted step's calculation with the next step into 'The running boards are $500 less than the leather seats which are one-third the cost of the king cab upgrade, at a cost of $7500/3-$500=$2000'. Step 3 is adjusted accordingly to reference the recalculated price for the running boards and provide a new total cost, changing from $30,000+$7500+$2500+$2000+$1500=$43,500 to $30,000+$7500+($7500/3)+$2000+$1500=$42,000. Since step 1 in the transformed_solution now combines the original steps 1 and 2, the first wrong reference after the missing step occurs in the new step 1.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly adds up the costs of each feature to the base price of the truck to get the total cost."
+    },
+    {
+        "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+        "original_solution": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = 100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = 40 meters.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If the total distance is 140m, the distance between the house and the market is 140m - 50m = 90 meters.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformation, I have deleted the first step, which involves Andy's return trip from school to his house. The original step 1 involves adding the two 50m trips together for a total of 100m. By removing this step, we no longer account for the return trip from school, and thus the calculation in the transformed solution refers to only one leg of the journey from the house to the school (50m). Since in our transformation we remove step 1, we then modify step 2 to include only one 50m trip, changing the formula from 140m - 100m = 40 meters to 140m - 50m = 90 meters. It should be noted that while the calculation itself is algebraically correct, the premise is wrong because it does not consider the entire trip. The first step (now also the wrong_step) references the correct number from the question and no intermediate steps are present, thus making the entire reasoning incorrect and leading to a different transformed answer.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the distance between the house and the market by subtracting the distance from the house to school from the total distance walked, which is a valid approach. Therefore, there are no mistakes in the steps provided."
+    },
+    {
+        "question": "Phil has a coin collection he likes to add to. He started with 50 state quarters his parents gave him. Over the next year he doubled this. The following year he collected 3 each month. The year after that he collected 1 every third month. The year after that he lost a quarter of them when he misplaced his collection. How many did he have left after losing some?",
+        "original_solution": "Phil started with 50, and doubled this amount the next year for 50*2=100 coins\nPhil then collected 3 per month the following year, and since there are 12 months in a year that was 3*12=36 coins added\nPhil then collected 1 every third month, and since there are 12 months that means he collected one every 12/3=4 months, for 4 coins added\nBefore he lost a quarter of his coins, Phil had 100+36+4 coins, or 140 coins in total.\nLosing a quarter of 140 coins means Phill lost 140/4=35 coins\nThat means Phil had 140-35= 105 coins remaining\n#### 105",
+        "original_answer": 105.0,
+        "transformed_solution": "Phil started with 50, and doubled this amount the next year for 50*2=100 coins\nPhil then collected 3 per month the following year, and since there are 12 months in a year that was 3*12=36 coins added\nBefore he lost a quarter of his coins, Phil had 100+36 coins, or 136 coins in total.\nLosing a quarter of 136 coins means Phill lost 136/4=34 coins\nThat means Phil had 136-34= 102 coins remaining\n#### 102",
+        "transformed_answer": 102.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3 about Phil collecting 1 coin every third month. This step references the result 4 from the calculation 12/3. Step 4 in the original_solution references the result from this deleted step 3. Therefore, after deleting step 3, step 4 should not include the 4 coins from step 3. The formula changes from 100+36+4 coins to 100+36 coins, which results in 136 coins before the loss. Subsequent steps 5 and 6 are about losing a quarter of the coins and hence will be modified based on the new total before the loss (136 instead of 140). So, step 5 changes from 140/4=35 coins to 136/4=34 coins, and step 6 changes from 140-35=105 coins to 136-34=102 coins. Step 2 in the transformed_solution references the incorrect total number of coins after the deletion of step 3, serving as the first step referencing an incorrect number. The wrong_step is 2 as this is where the error first appears.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The calculation correctly reflects the changes in Phil's coin collection over the years and the loss of a quarter of his coins."
+    }
+]

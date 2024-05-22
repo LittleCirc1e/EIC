@@ -1,0 +1,44 @@
+[
+    {
+        "question": "On Independence Day, bananas were to be equally distributed among the children in a school so that each child would get two bananas. On that particular day, 390 children were absent, and as a result, each child got two extra bananas. Find the actual number of children in the school.",
+        "original_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390) = 2x - 780\nTotal bananas received = 2x\n2x - 780 = 2x + 780\n-780 = 390\nx = 390 + 390\nx = 780\n#### 780",
+        "original_answer": 780.0,
+        "transformed_solution": "Let x be the actual number of children in the school.\nTotal bananas received = 2x\n2x = 2x + 780\n-780 = 780\nx = 780 + 390\nx = 1170\n#### 1170",
+        "transformed_answer": 1170.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The intermediate step 2 has been removed. The removed step 2 was 'Total bananas distributed = 2(x-390) = 2x - 780'. Since step 3 in the original solution ('2x - 780 = 2x + 780') used the result from the removed step 2, the new step 2 in the transformed solution incorrectly uses the result from the previous step 1. Because the subtraction step has been removed, the equation should have been '2x - 2 * 390 bananas for absent children = 2x + 780 additional bananas due to absent children'. Because of the error, -780 has been equated to 780, which gives the incorrect transformed answer of 1170. The first step of the transformed solution referring to a wrong number is step 2, hence wrong_step is 2.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "The first erroneous step is step 3, which directly sets -780 = 780. There is a necessary step missing here to divide both sides of the equation by 2, which is (2x - 780) / 2 = (2x + 780) / 2. This would result in x - 390 = x + 390 instead of -780 = 780. Step 4 should calculate x - 390 = 390 instead of 780 + 390 = 1170. This also affects the subsequent step 5, where an incorrect calculation of 780 + 390 = 1170 instead of 390 + 390 = 780, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "A train crosses a platform of 170 m in 15 sec, then crosses another platform of length 250 m in 20 sec. Find the length of the train?",
+        "original_solution": "The length of the train is the difference between the length of the train and the length of the platform.\nLet the length of the train be x.\nSpeed = Distance/Time.\nSo, Speed of the train = (x + 170)/15 m/s.\nAlso, Speed of the train = (x + 250)/20 m/s.\n(x + 170)/15 = (x + 250)/20.\n4x + 680 = 3x + 750.\nx = 750 - 680 = 70 m.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Let the length of the train be x.\nSpeed = Distance/Time.\nSo, Speed of the train = (x + 250)/20 m/s.\nAlso, Speed of the train = (x + 250)/20 m/s.\n(x + 250)/20 = (x + 250)/20.\n5x + 1250 = 4x + 1000.\nx = 1000 - 1250 = -250 m.\n#### -250",
+        "transformed_answer": -250.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The example removes step 3 and directly uses the data of the second scenario in the subsequent calculations without establishing the speed relation. In the original_solution, step 3 calculates the speed of the train from the first scenario. After deleting step 3, step 4 is repeated as it is not needed anymore because we're not comparing the two speeds. The correct comparison step (calculating the equality of the two expressions for speed) is omitted, leading to an incorrect continuation from the assumption that both platforms will have the same speed equation, which doesn't hold true and isn't logically consistent. This propagation of error goes from step 3 to 4, and from there, the incorrect speed equivalence is used to falsely deduce that x, the length of the train, is -250 meters, which is not physically possible. Thus, the wrong step is identified as step 3, where the speed equivalence should have been first established.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "The first erroneous step is step 6, where the equation 5x + 1250 = 4x + 1000 is solved incorrectly. The correct solution should be x = 250 instead of x = -250. This is because the equation is a linear equation in the form of ax + b = cx + d, where a, b, c, and d are constants. To solve for x, we need to isolate x on one side of the equation and the constants on the other side. The correct steps should be: 5x + 1250 = 4x + 1000, 5x - 4x = 1000 - 1250, x = -250. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "On Independence Day, bananas were to be equally distributed among the children in a school so that each child would get two bananas. On that particular day, 390 children were absent, and as a result, each child got two extra bananas. Find the actual number of children in the school.",
+        "original_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390) = 2x - 780\nTotal bananas received = 2x + 780\n2x - 780 = 2x + 780\n-780 = 780\nx = 780/2\nx = 390\n#### 390",
+        "original_answer": 780.0,
+        "transformed_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390)\n2(x-390) = 2x + 780\n2x - 780 = 2x + 780\n-780 = 780\nx = 780/2\nx = 390\n#### 390",
+        "transformed_answer": 390.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original solution, step 2 expands the equation 2(x-390) to equal 2x - 780, which is correct, but the transformed solution skips this step. Therefore, subsequent steps need to start with the simplified form 2(x-390) and solve for x accordingly. Step 3 now directly equates 2(x-390) with 2x + 780, instead of 2x - 780 = 2x + 780. As a result, the subtraction operation in step 4 is incorrect, but it still reveals that the equation 2x - 780 = 2x + 780 cannot hold true unless the extra bananas (780) is balanced out by an equal amount on the other side of the equation (-780 = 780). Hence, in step 5, instead of equating -780 to 390, it should equate -780 to 780 to maintain this balance. Step 6 then incorrectly solves for x by dividing 780 by 2, which yields the incorrect answer of x = 390. The wrong_step is 2 because that is the first step in the transformed solution that incorrectly references the result of the deleted step (step 2 in the original solution).",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "The first erroneous step is step 3, which directly sets 2x - 780 = 2x + 780. There is a necessary step missing here to subtract 2x from both sides of the equation, which is 2x - 780 - 2x = 2x + 780 - 2x. This results in -780 = 780, which is an incorrect equation. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

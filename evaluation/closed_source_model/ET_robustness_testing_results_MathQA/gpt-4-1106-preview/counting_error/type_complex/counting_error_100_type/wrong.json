@@ -1,0 +1,44 @@
+[
+    {
+        "question": "John had a stock of 1400 books in his bookshop. He sold 75 on Monday, 50 on Tuesday, 64 on Wednesday, 78 on Thursday, and 135 on Friday. What percentage of the books were not sold?",
+        "original_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71.29%\n#### 71.29",
+        "original_answer": 71.29,
+        "transformed_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71%\n#### 71",
+        "transformed_answer": 71,
+        "wrong_step": 4,
+        "wrong_type": "rounding_error",
+        "is_single_error": true,
+        "explanation": "Here, the final step inaccurately rounds the percentage from 71.2857% to 71% instead of the correct 71.29% as per the original solution. This causes the transformed answer to be different from the original answer, creating a rounding error at step 4. It's important to note that the counting in earlier steps is unchanged, with only the final rounding step being affected.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total number of books sold, subtracts this from the initial stock to find the remaining books, and then correctly calculates the percentage of books not sold by dividing the remaining books by the initial stock and multiplying by 100. The final answer is rounded to the nearest whole number, which is appropriate for a percentage."
+    },
+    {
+        "question": "A certain electric-company plan offers customers reduced rates for electricity used between 8 p.m. and 8 a.m. weekdays and 24 hours a day Saturdays and Sundays. Under this plan, the reduced rates q apply to what fraction of a week?",
+        "original_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours\nThe total hours for which reduced rates apply is 60 + 48 = 108 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 108 / 168 = 9 / 14\n#### 9/14",
+        "original_answer": "9/14",
+        "transformed_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours\nThe total hours for which reduced rates apply is 60 + 24 = 84 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 84 / 168 = 1 / 2\n#### 1/2",
+        "transformed_answer": "1/2",
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts the reduced rates as applying for 24 hours on only one day of the weekend instead of two (Saturday and Sunday), resulting in the calculation 24 * 2=48 becoming 24 * 1=24. This affects the subsequent related step 3, changing the total hours from 60+48=108 to 60+24=84. The rest of the calculations are based on this incorrect counting step, including the last step that computes the fraction of the week for which reduced rates apply, changing it from 108/168=9/14 to 84/168=1/2.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the number of hours for reduced rates during weekdays and weekends, correctly calculates the total number of hours in a week, and accurately determines the fraction of the week that the reduced rates apply."
+    },
+    {
+        "question": "At Chennai it rained as much on Tuesday as on all the others days of the week combined. If the average rainfall for the whole week was 3cm. How much did it rain on Tuesday?",
+        "original_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 7 * 3 = 21 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 21 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 21 - x\n2x = 21\nx = 10.5\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 6 * 3 = 18 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 18 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 18 - x\n2x = 18\nx = 9\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original_solution, the total days are erroneously counted as 6 instead of 7 when calculating the total rainfall for the week. This affects the following steps since the total rainfall is now incorrectly set to 18 cm instead of 21 cm. Consequently, the calculation is based on the wrong total, which also changes the final answer for Tuesday’s rainfall from 10.5 cm to 9 cm.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up an equation where x represents the rainfall on Tuesday, and the total rainfall for the week is calculated as 6 days times the average of 3 cm per day. The equation x = 18 - x is correctly derived from the given information that Tuesday's rainfall equals the sum of the rainfall for the other days. Solving this equation yields the correct answer of 9 cm of rain on Tuesday."
+    }
+]

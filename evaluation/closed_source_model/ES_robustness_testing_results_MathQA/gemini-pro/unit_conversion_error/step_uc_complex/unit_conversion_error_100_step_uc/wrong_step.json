@@ -1,0 +1,44 @@
+[
+    {
+        "question": "A light flashes every 20 seconds, how many times will it flash in 1/4 of an hour?",
+        "original_solution": "There are 60 seconds in a minute and 60 minutes in an hour, so there are 60 x 60 = 3600 seconds in an hour.\nThe light flashes 3600 / 20 = 180 times in an hour.\n#### 180",
+        "original_answer": 180.0,
+        "transformed_solution": "There are 60 seconds in a minute and 50 minutes in an hour, so there are 60 x 50 = 3000 seconds in an hour.\nThe light flashes 3000 / 20 = 150 times in an hour.\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 60 x 60 = 3600 seconds in the original_solution becoming 60 x 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from 3600 / 20 = 180 times to 3000 / 20 = 150 times. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 makes an incorrect unit conversion, mistakenly assuming that there are 50 minutes in an hour instead of 60 minutes, and wrongly calculates 60 x 50=3000 instead of 60 x 60=3600. This affects step 3. Step 3 erroneously calculates 3000 / 20 = 150 instead of 3600 / 20 = 180. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "If the population of a certain country increases at the rate of one person every 25 seconds, by how many persons does the population increase in 1 hour?",
+        "original_solution": "First, we need to convert 1 hour to seconds. There are 60 minutes in an hour and 60 seconds in a minute, so 1 hour is equal to 60 * 60 = 3600 seconds.\nThe population increases by 1 person every 25 seconds, so in 3600 seconds, the population increases by 3600 / 25 = 144 people.\n#### 144",
+        "original_answer": 144.0,
+        "transformed_solution": "First, we need to convert 1 hour to seconds. There are 60 minutes in an hour and 50 seconds in a minute, so 1 hour is equal to 60 * 50 = 3000 seconds.\nThe population increases by 1 person every 25 seconds, so in 3000 seconds, the population increases by 3000 / 25 = 120 people.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 60 * 60 = 3600 seconds in the original_solution becoming 60 * 50 = 3000 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from 3600 / 25 = 144 people to 3000 / 25 = 120 people. It should be noted that you only need to consider one step of unit conversion error, so the calculation of 3600 / 25 is adjusted to 3000 / 25 to reflect the changed premise in step 1, and the rest of the calculation process remains correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 seconds instead of 60 seconds, and wrongly calculates 60 * 50=3000 instead of 60 * 60=3600. This affects step 3. Step 3 erroneously calculates 3000 / 25 = 120 instead of 3600 / 25 = 144. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 36 kmph. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour.\nAccording to the given information, the distance covered excluding stoppages is the same as that including stoppages. Therefore, the time taken excluding stoppages is less than the time taken including stoppages.\nDistance = speed x time\nThe speed of the bus without stoppages is 54 kmph, and with stoppages is 36 kmph, which means the bus covers 18 km less in an hour when it stops.\nTo find out for how long the bus stops, we calculate the difference in distance traveled: 54 km/h - 36 km/h = 18 km/h difference.\nThis difference of 18 km occurs because the bus is stopping for some time during the hour. To convert this lost distance back into time, we find out the fraction of the hour the bus stoppages take, which is the difference in speed (18 km/h) divided by the original speed (54 km/h).\nThis gives us 18/54 of an hour the bus is stopped. To convert this fraction to minutes, we multiply by 60 minutes/hour.\nThus, the bus stops for (18/54) * 60 minutes per hour = 20 minutes per hour.\n#### 20",
+        "original_answer": 20,
+        "transformed_solution": "Let x be the time the bus stops per hour.\nAccording to the given information, the distance covered excluding stoppages is the same as that including stoppages. Therefore, the time taken excluding stoppages is less than the time taken including stoppages.\nDistance = speed x time\nThe speed of the bus without stoppages is 54 kmph, and with stoppages is 36 kmph, which means the bus covers 18 km less in an hour when it stops.\nTo find out for how long the bus stops, we calculate the difference in distance traveled: 54 km/h - 36 km/h = 18 km/h difference.\nThis difference of 18 km occurs because the bus is stopping for some time during the hour. To convert this lost distance back into time, we find out the fraction of the hour the bus stoppages take, which is the difference in speed (18 km/h) divided by the original speed (54 km/h).\nThis gives us 18/54 of an hour the bus is stopped. To convert this fraction to minutes incorrectly, we multiply by 50 minutes/hour instead of the correct 60 minutes/hour.\nThus, the bus stops for (18/54) * 50 minutes per hour = 16.67 minutes per hour.\n#### 16.67",
+        "transformed_answer": 16.67,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means 1 hour is wrongly multiplied by 50 minutes instead of the correct 60 minutes, resulting in an error in calculating the time the bus stops per hour. The original solution used the correct figure of 60 minutes per hour, but the transformed solution incorrectly uses 50 minutes per hour, leading to a calculated time of (18/54) * 50 = 16.67 minutes per hour that the bus stops, rather than the correct answer of 20.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates (18/54) * 50 instead of (18/54) * 60. This affects the final answer. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    }
+]

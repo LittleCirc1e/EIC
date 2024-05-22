@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Carlos read 28 books in July and 30 books in August. He needed to read 100 books during his summer vacation. If Carlos read some of the books in June, calculate the number of books that Carlos read in June to meet his goal?",
+        "original_solution": "Carlos read 28 books + 30 books = 58 books.\nHe needed to read 100 books - 58 books = 42 books in June.\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "Carlos read 28 books + 32 books = 60 books.\nHe needed to read 100 books - 60 books = 40 books in June.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 30 books in the question as 32 books wrongly, and calculates 28 books + 32 books = 60 books instead of 28 books + 30 books = 58 books. Its subsequent related step will be affected, calculating 100 books - 60 books = 40 books instead of 100 books - 58 books = 42 books in step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly adds 32 books instead of 30 books that Carlos read in August, resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Ryanne is 7 years older than Hezekiah. Together Ryanne's and Hezekiah's ages equal 15 years. How many years old is Hezekiah?",
+        "original_solution": "Let H = Hezekiah's age\nRyanne = H + 7\n2H + 7 = 15\n2H = 8\nH = 4\nHezekiah is 4 years old.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Let H = Hezekiah's age\nRyanne = H + 5\n2H + 5 = 15\n2H = 10\nH = 5\nHezekiah is 5 years old.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 7 in the question as 5 wrongly, and calculates Ryanne = H + 5 instead of H + 7. Its subsequent related steps, step 3, 4, and 5, will be affected by this error but will still be calculated correctly based on the mistaken step 2 reference. Step 3 changes from 2H + 7 = 15 to 2H + 5 = 15, step 4 changes from 2H = 15 - 7 to 2H = 15 - 5, and step 5 changes from H = 8 / 2 to H = 10 / 2. Please note that you should only consider one error, so step 3 still references Ryanne correctly as H + 5 and does the calculation based on that incorrect reference.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly calculates Ryanne's age as H + 5 instead of H + 7, which results in an incorrect operand in the formula, so it belongs to referencing_context_value_error. Steps 4, 5, and 6, as its subsequent related steps, reference the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "A rival football team has won twice as many matches as the home team they will be playing did. If records show that the home team has won three matches, and each team drew four matches and lost none, how many matches have both teams played in total?",
+        "original_solution": "The rival team won twice as many as the home team who won 3 matches so they won 2*3 = 6 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 3+6+8 = 17 matches\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The rival team won twice as many as the home team who won 2 matches so they won 2*2 = 4 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 2+4+8 = 14 matches\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 2 wrongly, and calculates 2*2=4 instead of 2*3=6. Its subsequent related step will be affected, calculating 2+4+8=14 instead of 3+6+8=17 in step 3. Please note that you should only consider one error, so step 2 still references 4 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly references the number 2 instead of 3 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Steps 2 and 3, as its subsequent related steps, reference the wrong result of step 1, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Rachel weighs 75 pounds, 6 pounds less than Jimmy and 15 pounds more than Adam. What is the average weight of the three people, in pounds?",
+        "original_solution": "Jimmy weighs 75+6 = 81 pounds.\nAdam's weight is 75-15= 60 pounds.\nIn total, the three weigh 75 + 81 + 60 = 216 pounds.\nThe average weight of the three is 216/3 = 72 pounds\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "Jimmy weighs 75+6 = 81 pounds.\nAdam's weight is 75-10= 65 pounds.\nIn total, the three weigh 75 + 81 + 65 = 221 pounds.\nThe average weight of the three is 221/3 = 73.6666666667 pounds\n#### 73.6666666667",
+        "transformed_answer": 73.6666666667,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 15 in the question as 10 wrongly, and calculates 75-10=65 instead of 75-15=60. Its subsequent related steps, step 3 and step 4, will be affected. Step 3 changes from 75 + 81 + 60 = 216 pounds to 75 + 81 + 65 = 221 pounds and step 4 changes from 216/3 = 72 pounds to 221/3=73.6666666667 pounds. Please note that you should only consider one error, so step 1 and step 3 still reference the number 75 from the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly calculates Adam's weight as 75-10 instead of 75-15, which only results in an error in one operand in the formula, so it belongs to referencing_context_value_error. Steps 3 and 4, as its subsequent steps, reference the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Erin has 7 lollipops. Her mother gives Erin another 10 lollipops. If Erin gives 3 of her lollipops to Ella, how many lollipops does she have left?",
+        "original_solution": "Erin has 7 + 10 = 17 lollipops\nAfter she gives 3 lollipops to Ella she has 17 - 3 = 14 lollipops.\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Erin has 5 + 10 = 15 lollipops\nAfter she gives 3 lollipops to Ella she has 15 - 3 = 12 lollipops.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 7 in the question as 5 wrongly, and calculates 5 + 10 = 15 instead of 7 + 10 = 17. The subsequent related step will be affected, calculating 15 - 3 = 12 instead of 17 - 3 = 14 in step 2. Please note that you should only consider one error, so step 2 still references 3 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly references the number 5 instead of 7 from the question, resulting in an incorrect operand in the formula, so it belongs to referencing_context_value_error. Step 2, as the subsequent step of step 1, references the wrong result of step 1, resulting in the incorrect final answer."
+    }
+]

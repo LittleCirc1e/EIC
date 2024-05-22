@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A tree had 1000 leaves before the onset of the dry season, when it sheds all its leaves. In the first week of the dry season, the tree shed 2/5 of the leaves. In the second week, it shed 40% of the remaining leaves. In the third week, the tree shed 3/4 times as many leaves as it shed in the second week. Calculate the number of leaves the tree had not shed by the third week.",
+        "original_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360\nIn the third week, the tree shed 3/4 of its leaves, a total of 3/4*360 = 270 leaves.\nThe number of leaves remaining on the tree is 360-270 = 90 leaves.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360\nIn the third week, the tree shed 3/4 of its leaves, a total of 3/4*360 = 260 leaves.\nThe number of leaves remaining on the tree is 360-260 = 100 leaves.\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, step 4 incorrectly calculates the number of leaves the tree shed in the third week as 3/4*360 = 260 leaves instead of the correct 270 leaves. The subsequent step 5 uses the incorrect result of step 4 to calculate the number of leaves remaining on the tree which should be 360-260 = 100 leaves, rather than the correct calculation of 360-270 = 90 leaves. The transformed answer of 100 is thus based on the incorrect intermediate result in step 4, manifesting as the single calculation error in the transformed solution.",
+        "is_correct": "no",
+        "corrected_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360\nIn the third week, the tree shed 3/4 times as many leaves as it shed in the second week, which is 3/4*240 = 180 leaves.\nThe number of leaves remaining on the tree is 360-180 = 180 leaves.",
+        "corrected_answer": "180",
+        "corrected_explanation": "The error in the original solution was in the calculation of the number of leaves shed in the third week. The correct calculation is to take 3/4 of the number of leaves shed in the second week, not 3/4 of the total remaining leaves after the second week."
+    },
+    {
+        "question": "Jason is planning a parking garage that will have 12 floors. Every 3rd floor has a gate where drivers have to show ID, which takes two minutes. To get from one floor to the next, drivers have to drive 800 feet at 10 feet/second. How long, in seconds, does it take to get to the bottom of the garage from the top?",
+        "original_solution": "First find the total number of gates someone has to pass through: 12 floors / 3 floors/gate = 4 gates\nThen find the total time someone spends waiting at the gates: 4 gates * 2 minutes/gate = 8 minutes\nThen convert that time to seconds: 8 minutes * 60 seconds/minute = 480 seconds\nThen find the time to drive through one floor in seconds: 800 feet / 10 feet/second = 80 seconds\nThen multiply the time per floor by the number of floors to find the total driving time: 80 seconds/floor * 12 floors = 960 seconds\nThen add the total driving time to the total time waiting at the gates to find the total time to get to the bottom: 960 seconds + 480 seconds = 1440 seconds\n#### 1440",
+        "original_answer": 1440.0,
+        "transformed_solution": "First find the total number of gates someone has to pass through: 12 floors / 3 floors/gate = 4 gates\nThen find the total time someone spends waiting at the gates: 4 gates * 2 minutes/gate = 8 minutes\nThen convert that time to seconds: 8 minutes * 60 seconds/minute = 480 seconds\nThen find the time to drive through one floor in seconds: 800 feet / 10 feet/second = 80 seconds\nThen multiply the time per floor by the number of floors to find the total driving time: 80 seconds/floor * 12 floors = 960 seconds\nThen add the total driving time to the total time waiting at the gates to find the total time to get to the bottom: 960 seconds + 480 seconds = 1500 seconds\n#### 1500",
+        "transformed_answer": 1500.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the last step of the original solution, which adds the total driving time to the total time waiting at the gates, is modified to produce an incorrect total time of 1500 seconds instead of the correct 1440 seconds. The operands and operators of the formula remain unchanged, but the calculation result is altered. This error does not affect the previous steps or unrelated steps, and the transformed answer is different from the original answer.",
+        "is_correct": "no",
+        "corrected_solution": "First find the total number of gates someone has to pass through: 12 floors / 3 floors/gate = 4 gates\nThen find the total time someone spends waiting at the gates: 4 gates * 2 minutes/gate = 8 minutes\nThen convert that time to seconds: 8 minutes * 60 seconds/minute = 480 seconds\nThen find the time to drive through one floor in seconds: 800 feet / 10 feet/second = 80 seconds\nThen multiply the time per floor by the number of floors minus one because you don't drive on the first floor when you're already there: 80 seconds/floor * (12 floors - 1) = 80 seconds/floor * 11 floors = 880 seconds\nThen add the total driving time to the total time waiting at the gates to find the total time to get to the bottom: 880 seconds + 480 seconds = 1360 seconds",
+        "corrected_answer": "1360",
+        "corrected_explanation": "The solution correctly calculates the time spent at gates and the time to drive through one floor. However, it incorrectly multiplies the time per floor by 12. Since you start on the top floor, you only need to drive down 11 floors, not 12. Therefore, the driving time should be calculated for 11 floors, not 12."
+    },
+    {
+        "question": "Pearl wants to order 5 monogrammed Christmas stockings for each of her 5 grandchildren and her own 4 children. The stockings are $20.00 each and currently 10% off. The monogramming will costs $5.00 per stocking. How much will the stockings costs?",
+        "original_solution": "She has 5 grandchildren 4 children so she needs 5+4 = 9 stockings\nThe stockings are $20.00 each and currently 10% off so that's 20*.10 = $2.00 off\nThe stockings are $20.00 with a $2.00 discount so they are each 20-2 = $18.00\nThe stockings are now $18.00 and she needs 9 so that's $162.00\nShe also wants to monogram each stocking at $5.00 per stocking so that's 9*5 = $45.00\nThe stockings are $162.00 and the monogramming will cost $45.00 so the stockings will cost 162+45 = $207.00\n#### 207",
+        "original_answer": 207.0,
+        "transformed_solution": "She has 5 grandchildren 4 children so she needs 5+4 = 9 stockings\nThe stockings are $20.00 each and currently 10% off so that's 20*.10 = $2.00 off\nThe stockings are $20.00 with a $2.00 discount so they are each 20-2 = $18.00\nThe stockings are now $18.00 and she needs 9 so that's $162.00\nShe also wants to monogram each stocking at $5.00 per stocking so that's 9*5 = $40.00\nThe stockings are $162.00 and the monogramming will cost $40.00 so the stockings will cost 162+40 = $202.00\n#### 202",
+        "transformed_answer": 202.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 9*5=$40.00 instead of 9*5=$45.00 in step 5, which affects the final step 6. The error from step 5 is carried over to step 6, modifying the calculation from 162+45=$207.00 to 162+40=$202.00. The previous steps 1, 2, 3, and 4 remain unchanged as they are not affected by the error introduced in step 5.",
+        "is_correct": "no",
+        "corrected_solution": "She has 5 grandchildren and 4 children so she needs 5*5 + 4 = 29 stockings\nThe stockings are $20.00 each and currently 10% off so that's 20*0.10 = $2.00 off\nThe stockings are $20.00 with a $2.00 discount so they are each 20-2 = $18.00\nThe stockings are now $18.00 and she needs 29 so that's 18*29 = $522.00\nShe also wants to monogram each stocking at $5.00 per stocking so that's 29*5 = $145.00\nThe stockings are $522.00 and the monogramming will cost $145.00 so the stockings will cost 522+145 = $667.00",
+        "corrected_answer": 667.0,
+        "corrected_explanation": "The solution incorrectly calculated the number of stockings needed. Pearl wants 5 stockings for each of her 5 grandchildren and 5 stockings for each of her 4 children, which totals 5*5 + 5*4 = 25 + 20 = 45 stockings, not 9. The correct calculation for the discounted price of the stockings and the monogramming cost is then applied to this corrected number of stockings."
+    }
+]

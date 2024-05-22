@@ -1,0 +1,32 @@
+[
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "corrected_solution": "Today the Dow was down 8722 / 100*2 = 174.4.\nSo it started at 8722 + 174.4 = 8896.4 or rounded to 8896.\n#### 8896",
+        "corrected_answer": 8896.0,
+        "corrected_explanation": "The calculation in step 1 incorrectly divides by 98 instead of 100 to account for the 2% decrease. The correct calculation should be 8722 / 100 * 2 = 174.4. Additionally, the final answer is rounded to the nearest whole number, which is a common practice when dealing with stock market indices, so the correct starting value of the Dow is 8896."
+    },
+    {
+        "question": "The teacher decided to rewards his students with extra recess on report card day if they got good grades. Students normally get 20 minutes for recess. He told the students that every A got them 2 extra minutes of recess. Every B got them one extra minute. Every C got them zero extra minutes, but every D got them 1 less minute. When report cards came out there were 10 As, 12 Bs, 14Cs, and 5Ds. In total, how much recess would the students get that day?",
+        "original_solution": "The students have 20 minutes to start.\nThey get 20 minutes added for the As because 10 times 2 equals 20\nThey get 12 minutes added for the Bs because 12 times 1 equals 12\nThey get no minutes added or subtracted for the Cs because 14 times 0 equals 0.\nThey get 5 minutes taken away for the Ds because 5 times 1 equals 5.\nIn total, they get 47 minutes of recess because 20 plus 20 plus 12 minus 5 equals 47.\n#### 47",
+        "original_answer": 47.0,
+        "transformed_solution": "The students have 20 minutes to start.\nThey get 20 minutes added for the As because 10 times 2 equals 20\nThey get 12 minutes added for the Bs because 12 times 1 equals 12\nThey get no minutes added or subtracted for the Cs because 14 times 0 equals 0.\nThey get 7 minutes taken away for the Ds because 5 times 1 equals 7.\nIn total, they get 45 minutes of recess because 20 plus 20 plus 12 minus 7 equals 45.\n#### 45",
+        "transformed_answer": 45.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the error occurs in step 4, where the minutes taken away for the Ds are mistakenly calculated as 7 instead of 5. This error influences the total time calculated in the final step, changing the correct total from 47 minutes to an incorrect total of 45 minutes. The steps related to computing the time for As, Bs, and Cs remain unaltered, as they do not depend on step 4.",
+        "is_correct": "no",
+        "corrected_solution": "The students have 20 minutes to start.\nThey get 20 minutes added for the As because 10 times 2 equals 20\nThey get 12 minutes added for the Bs because 12 times 1 equals 12\nThey get no minutes added or subtracted for the Cs because 14 times 0 equals 0.\nThey get 5 minutes taken away for the Ds because 5 times -1 equals -5.\nIn total, they get 57 minutes of recess because 20 plus 20 plus 12 minus 5 equals 57.\n#### 57",
+        "corrected_answer": 57.0,
+        "corrected_explanation": "Step 5 makes a mistake in the calculation for the Ds, stating that 5 times 1 equals 7, when in fact it should be 5 times -1 equals -5. The subsequent step 6 references the result of step 5, incorrectly subtracting 7 from the total instead of -5, resulting in the final incorrect answer of 45. The correct calculation should subtract 5 minutes for the Ds, not 7, leading to a total of 57 minutes of recess."
+    }
+]

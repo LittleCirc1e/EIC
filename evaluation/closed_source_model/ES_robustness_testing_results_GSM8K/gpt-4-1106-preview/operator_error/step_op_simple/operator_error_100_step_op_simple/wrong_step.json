@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "The error is in the operator used to combine the chocolate bars sold by Lisa and Peter. The correct operation should be addition because they sold bars together, not subtraction."
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "The error in step 3 is an operator error. The correct operation should be multiplication (4/5 * 35), but division was used instead (4/5 / 35). This mistake affects the calculation of the number of packages delivered on the last two days."
+    },
+    {
+        "question": "In a national park, the number of redwoods is 20% more than the number of pines. If there are 600 pines in the national park, calculate the total number of pines and redwoods that are there.",
+        "original_solution": "If there are 600 pines, there are 20/100*600 = 120 more redwoods than pine trees in the national park.\nIn total, there are 120+600 = 720 redwoods in the national park.\nAltogether, there are 720+600 = 1320 pines and redwoods in the national park.\n#### 1320",
+        "original_answer": 1320.0,
+        "transformed_solution": "If there are 600 pines, there are 20/100*600 = 120 less redwoods than pine trees in the national park.\nIn total, there are 600-120 = 480 redwoods in the national park.\nAltogether, there are 480+600 = 1080 pines and redwoods in the national park.\n#### 1080",
+        "transformed_answer": 1080.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the addition in step 2 into subtraction, changing 120+600=720 to 600-120=480 by changing + to -. Its subsequent step 3 related to it inherits its result, changing 720+600=1320 to 480+600=1080. It should be noted that step 1 only changes the operator of the formula, but still correctly calculates its result. Step 2 only inherits the result of step 1, but its calculation is correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "The first step incorrectly calculates the number of redwoods as 120 less than the number of pines, but it should be 20% more. The correct calculation is 20/100*600 = 120 more redwoods than pine trees."
+    }
+]

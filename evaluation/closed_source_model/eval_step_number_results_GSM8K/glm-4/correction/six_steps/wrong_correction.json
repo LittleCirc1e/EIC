@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Together, Sofie, Anne, and Fawn have 85 books. If Sofie has 25 more books than Anne, and Anne has 12 fewer books than Fawn does, how many books does Fawn have?",
+        "original_solution": "Let x = the number of books Anne has.\nThen x + 25 + x + 12 + x = 85\n3x + 37 = 85\n3x = 48\nx = 48 / 3 = 16 books\nAnne has 12 fewer books than Fawn, so Fawn has 16 + 12 = 28 books.\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "Let x = the number of books Anne has.\nThen x + 25 + x + 12 + x = 85\n3x + 37 = 85\n3x = 50\nx = 50 / 3 = 16.67 books\nAnne has 12 fewer books than Fawn, so Fawn has 16.67 + 12 = 28.67 books.\n#### 28.67",
+        "transformed_answer": 28.67,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the calculation in step 3 is purposefully made incorrect, changing the result of 3x from 48 to 50. This error propagates through the rest of the solution without altering the original formula structure. The subsequent steps inherit the erroneous result of step 3, where step 4 calculates x as '50 / 3 = 16.67 books' instead of the correct '48 / 3 = 16 books', and step 5 therefore concludes with 'Fawn has 16.67 + 12 = 28.67 books' instead of the correct 'Fawn has 16 + 12 = 28 books'. Only the calculation of step 3 is wrong, subsequent steps have the correct procedure but use the erroneous value from step 3.",
+        "is_correct": "no",
+        "corrected_solution": "Let x = the number of books Anne has. Sofie has 25 more books than Anne, so Sofie has x + 25 books. Anne has 12 fewer books than Fawn, so Fawn has x + 12 books. The total number of books is x + (x + 25) + (x + 12) = 85. Simplifying the equation, we get 3x + 37 = 85.",
+        "corrected_answer": "33.00",
+        "corrected_explanation": "To solve the equation 3x + 37 = 85, we subtract 37 from both sides to get 3x = 85 - 37, which is 3x = 48. Then we divide both sides by 3 to get x = 48 / 3, which is x = 16. Since Fawn has 12 more books than Anne, Fawn has 16 + 12 = 28 books. However, the original solution incorrectly handled the division, resulting in a non-integer number of books. The correct number of books for Fawn is 33."
+    },
+    {
+        "question": "A tree had 1000 leaves before the onset of the dry season, when it sheds all its leaves. In the first week of the dry season, the tree shed 2/5 of the leaves. In the second week, it shed 40% of the remaining leaves. In the third week, the tree shed 3/4 times as many leaves as it shed in the second week. Calculate the number of leaves the tree had not shed by the third week.",
+        "original_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360\nIn the third week, the tree shed 3/4 of its leaves, a total of 3/4*360 = 270 leaves.\nThe number of leaves remaining on the tree is 360-270 = 90 leaves.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360\nIn the third week, the tree shed 3/4 of its leaves, a total of 3/4*360 = 260 leaves.\nThe number of leaves remaining on the tree is 360-260 = 100 leaves.\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, step 4 incorrectly calculates the number of leaves the tree shed in the third week as 3/4*360 = 260 leaves instead of the correct 270 leaves. The subsequent step 5 uses the incorrect result of step 4 to calculate the number of leaves remaining on the tree which should be 360-260 = 100 leaves, rather than the correct calculation of 360-270 = 90 leaves. The transformed answer of 100 is thus based on the incorrect intermediate result in step 4, manifesting as the single calculation error in the transformed solution.",
+        "is_correct": "no",
+        "corrected_solution": "In the first week, the tree shed 2/5*1000 = 400 leaves.\nThe number of leaves remaining on the tree at the end of the first week is 1000-400 = 600.\nIn the second week, the tree shed 40/100*600 = 240 leaves.\nThe number of leaves remaining on the tree is 600-240 = 360.\nIn the third week, the tree shed 3/4 of the leaves it shed in the second week, a total of 3/4*240 = 180 leaves.\nThe number of leaves remaining on the tree is 360-180 = 180 leaves.",
+        "corrected_answer": "180.0",
+        "corrected_explanation": "The error in the original solution is in the calculation of the number of leaves shed in the third week. The problem states that the tree shed 3/4 times as many leaves as it shed in the second week, not 3/4 of its remaining leaves. Therefore, the correct calculation should be based on the number of leaves shed in the second week, which is 240 leaves, not the remaining total of 360 leaves."
+    },
+    {
+        "question": "Reginald is selling apples. He sells each apple for $1.25. He plans to use his profits to help repair his bike. His bike cost $80 and the repairs cost 25% of what his bike cost. After the repairs are paid for, 1/5 of the money he'd earned remains. How many apples did he sell?",
+        "original_solution": "The bike repairs cost $20 because 80 x .25 = 20\nCall the amount he earns e. We know that e - 20 = 1/5e\nTherefore 5e - 100 = e\nTherefore, 4e = 100\nTherefore, e = 25\nTherefore, he sold 20 apples because 25 / 1.25 = 20\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "The bike repairs cost $20 because 80 x .25 = 20\nCall the amount he earns e. We know that e - 20 = 1/5e\nTherefore 5e - 100 = e\nTherefore, 4e = 100\nTherefore, e = 25\nTherefore, he sold 20 apples because 25 / 1.25 = 16\n#### 16",
+        "transformed_answer": 16.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 25 / 1.25 as 16 instead of 25 / 1.25 = 20 in step 6. The error in step 6 does not affect the previous steps, as it is the final calculation. The steps leading up to the final calculation are correct, but the final division is where the error is introduced, resulting in a different transformed_answer from the original_answer.",
+        "is_correct": "no",
+        "corrected_solution": "The bike repairs cost $20 because 80 x 0.25 = 20. Call the amount he earns e. We know that e - 20 = 1/5e. Therefore 5e - 100 = 4e. Therefore, e = 100. The total amount he earned is $100. To find out how many apples he sold, we divide the total amount earned by the price per apple: 100 / 1.25 = 80 apples.",
+        "corrected_answer": "80.0",
+        "corrected_explanation": "The solution incorrectly calculated the number of apples sold. The final step should divide the total amount earned ($100) by the price per apple ($1.25) to find out the number of apples sold, which is 80 apples."
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "question": "Paul lives in a 5th story apartment. He makes 3 trips out from and back to his apartment throughout the day each day of a week. How many feet does he travel vertically in total over the week if each story is 10 feet tall?",
+        "original_solution": "Since Paul makes 3 trips per day, and each trip involves going both down and up, this means he travels the full vertical distance of his apartment complex 3*2=6 times a day.\nSince there are 7 days in a week, this means he makes this trip 6*7=42 times a week.\nSince each story is 10 feet tall, that means with 5 stories he travels 5*10=50 feet each trip.\nSince he made 42 trips of 50 feet each, this means he traveled 50*42=2100 feet in a week.\n#### 2100",
+        "original_answer": 2100.0,
+        "transformed_solution": "Since Paul makes 3 trips per day, and each trip involves going both down and up, this means he travels the full vertical distance of his apartment complex 3/2=1.5 times a day.\n",
+        "transformed_answer": 525.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example replaces multiplication with division in step 1, changing '3*2=6' to '3/2=1.5'. The result of this incorrect operator change is then used in step 2, changing '6*7=42' to '1.5*7=10.5'. Since step 3 correctly calculates the height of one trip, step 4 correctly multiplies the height of one trip by the incorrect number of total trips, changing '50*42=2100' to '50*10.5=525'. This change affects subsequent steps, but all the calculations after the wrong step are correctly performed based on the wrong intermediate result.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates that Paul makes 1.5 trips up and down each day, as each trip involves going down and then back up."
+    },
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\n",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the length of Emily's hair by adding 6 inches to Logan's hair length."
+    },
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\n",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly translates the problem into an equation that represents the total number of chocolate bars sold by both Lisa and Peter."
+    },
+    {
+        "question": "Emily has 4 kids named Amy, Jackson, Corey, and James. Amy is 5 years older than Jackson and 2 years younger than Corey. If James is 10 and is 1 year younger than Corey, how old is Jackson?",
+        "original_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 + 1 = 11 years old\nAmy is 2 years younger than Corey so is 11 - 2 = 9 years old\nAmy is also 5 years older than Jackson, so Jackson is 9 - 5 = 4 years old\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 - 1 = 9 years old\n",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 to subtraction, turning '10 + 1 = 11' into '10 - 1 = 9'. This error affects subsequent related steps 2 and 3. In step 2, the equation is now '9 - 2 = 7' resulting from the changed age of Corey, and in step 3, the equation becomes '7 - 5 = 2' due to Amy being 5 years older than Jackson, which has now been calculated based on the incorrect age of Amy. It should be noted that other than the erroneous operator change in step 1, the calculations in all other steps correctly follow through from the error.",
+        "is_correct": "yes",
+        "any_explanation": "The first step correctly determined Corey's age by adding 1 year to James's age, since James is 1 year younger than Corey."
+    }
+]

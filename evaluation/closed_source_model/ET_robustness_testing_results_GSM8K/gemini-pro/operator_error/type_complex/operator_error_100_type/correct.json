@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses addition instead of subtraction, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    },
+    {
+        "question": "Ellen is on a diet. She eats two carrots, a salad, and a yogurt every day. The salad costs her $6, while the yogurt is half the price. How much does Ellen pay for one carrot every day when in total she pays $11 for her goods?",
+        "original_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nFor the two carrots Ellen needs to pay $11 - $6 - $3 = $2.\nSo one carrot costs $2 / $2 = $1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nInstead of subtracting, we add the prices Ellen needs to pay $11 + $6 + $3 = $20 for the two carrots and the carrots.\nSo one carrot would incorrectly be calculated as $20 / 2 = $10.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly changes the subtraction in step 2 into addition, and by changing - to +, the calculation of $11 - $6 - $3 = $2 becomes $11 + $6 + $3 = $20. This only affects step 2 directly. Step 3 then inherits the incorrect total from step 2 but performs the division correctly, so the error does not compound further. As a result, only step 2 is incorrect, but its calculation, given the wrong operator, is correct. This leads to an incorrect result for the cost of one carrot.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly uses addition instead of subtraction, and only one operator in the formula is incorrect, so it belongs to operator_error. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Maiya has two sisters. The first sister is twice as old as Maiya. The first sister is 1 year younger than Maiya. Their average age is 5. How old is Maiya?",
+        "original_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X - (X-1) is equivalent to 16 = 4X\nMaiya is 4 years old because 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X + (X-1) is equivalent to 16 = 2X\nMaiya is 8 years old because 16 / 2 = 8\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The error is introduced by changing the subtraction of (X - 1) to addition in the second step. This turns the equation 15 - X - 2X - (X-1) = 16 = 4X into 15 - X - 2X + (X-1) = 16 = 2X, incorrectly simplifying the ages. All other aspects of the solution are correct, including the arithmetic in the transformed steps. This leads to a different incorrect result for Maiya's age.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses subtraction instead of addition, and only one operator in the formula is incorrect, so it belongs to operator_error. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly uses subtraction instead of addition, and only one operator in the formula is incorrect, so it belongs to operator_error. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 mistakenly uses division instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error. Step 5, as the subsequent step of step 4, references the wrong result of step 4, resulting in the incorrect final answer."
+    }
+]

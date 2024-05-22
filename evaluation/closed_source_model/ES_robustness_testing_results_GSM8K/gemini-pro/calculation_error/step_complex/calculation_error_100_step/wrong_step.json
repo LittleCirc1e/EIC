@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Carly had 42 lollipops to share with her friends. Half of the lollipops were cherry, and the rest were equal amounts of watermelon, sour apple, and grape. How many lollipops were grape?",
+        "original_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 21 were not cherry.\nOf the 21 that were not cherry, 1/3 of them were grape, so 21 lollipops / 3 = 7 grape lollipops.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 22 were not cherry.\nOf the 22 that were not cherry, 1/3 of them were grape, so 22 lollipops / 3 = 7.33 grape lollipops.\n#### 7.33",
+        "transformed_answer": 7.33,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 42 lollipops / 2 calculation in step 1 is mistakenly given as 22 instead of 21. This error affects the second step since it relies on the outcome of the first step. Therefore, the second step takes the incorrect value of 22 and proceeds with the division by 3 to find the number of grape lollipops. However, the division is still correctly calculated using the erroneous value. No other parts of the original solution, including operators or operands, are changed.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 22 lollipops / 3 = 7.33 instead of 22 lollipops / 3 = 7.333333333333333. The subsequent step 3 references the result of step 2, rounding 7.33 to 7.33 instead of rounding 7.333333333333333 to 7.333. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "question": "let f(x) = x^2 + bx + c. if f(1) = 0 and f(-8) = 0, then f(x) crosses the y-axis at what y-coordinate?",
+        "original_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 7\nPutting the value of b into the equation f(1) = 0, 1 + 7 + c = 0\nc = -8\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 7x - 8\nThe y-coordinate when f(x) crosses the y-axis = -8\n#### -8",
+        "original_answer": -8,
+        "transformed_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 9\nPutting the value of b into the equation f(1) = 0, 1 + 9 + c = 0\nc = -10\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 9x - 10\nThe y-coordinate when f(x) crosses the y-axis = -10\n#### -10",
+        "transformed_answer": -10,
+        "wrong_step": 5,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 incorrectly references b = 9 instead of b = 7. It incorrectly substitutes this value into the equation, affecting the calculation of c = -10 instead of c = -8. The subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly. The transformed equation f(x) = x^2 + 9x - 10 has the y-coordinate crossing at -10 instead of -8.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly identifies the values of b and c by setting up and solving the system of equations based on the given values of f(1) and f(-8). It then correctly concludes that the y-coordinate where f(x) crosses the y-axis is the value of c, which is -10."
+    },
+    {
+        "question": "What is the smallest integer y for which 27 ^ y > 3 ^ 24 ?",
+        "original_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^8\nThis simplifies to 3^(3y) > 3^24\nTherefore, 3y > 24\nSo, y > 8\nThe smallest integer y for which 27^y > 3^24 is 9.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^7\nThis simplifies to 3^(3y) > 3^21\nTherefore, 3y > 21\nSo, y > 7\nThe smallest integer y for which 27^y > 3^24 is 8.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the original solution but was modified to 7 incorrectly, leading to the comparison (3^3)^y > (3^3)^7 instead of (3^3)^y > (3^3)^8. This error cascades through the subsequent steps; however, only the originally incorrect step is modified while the subsequent steps still perform the correct calculations based on the result of the first erroneous step. The solution should end with y being greater than 7 for 27^y > 3^21, which is incorrect since the original condition was 27^y > 3^24. The smallest integer y that satisfies 27^y > 3^24 is actually 9.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly simplifies the original inequality by applying the properties of exponents. It correctly concludes that 3^(3y) must be greater than 3^21, which implies that 3y must be greater than 21, and thus y must be greater than 7. The smallest integer greater than 7 is indeed 8, making the solution correct."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 wrongly references the power of 2 as 3 instead of 2, and calculates 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2 instead of 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4. All other steps that reference power of 2 correctly remain unaffected by this mistake.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly applies the operation ø. In the first step, it correctly calculates 3 ø 1 as (2^3) / (2^1) which equals 8/2 = 4. In the second step, it correctly calculates 4 ø 2 as (2^4) / (2^3) which equals 16/8 = 2. The final answer of 2 is correct based on the given operation."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 26 + 2(d + p)\n4d + 2p = 26 + 2d + 2p\n2d = 26\nd = 13\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 28 in the question as 26 wrongly, and calculates 26 + 2(d + p) instead of 28 + 2(d + p). Its subsequent related step will be affected, resulting in 2d being equal to 26 instead of 28. This leads to the incorrect calculation of d = 13 instead of d = 14 in step 6. Please note that you should only consider one error, so step 5 still references the correct relationship 4d + 2p = 28 + 2d + 2p.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly sets up the equation representing the relationship between the number of legs and the number of heads. It also correctly simplifies the equation and solves for the number of dogs (d = 13), showing that there are 13 dogs."
+    },
+    {
+        "question": "Find the value of x in ( x / 5 ) + 3 = 4 .",
+        "original_solution": "First, subtract 3 from both sides: ( x / 5 ) = 1\nThen, multiply both sides by 5: x = 5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "First, subtract 4 from both sides: ( x / 5 ) = 0\nThen, multiply both sides by 5: x = 0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 4 wrongly, and calculates ( x / 5 ) = 4 - 4 = 0 instead of ( x / 5 ) = 4 - 3 = 1. Its subsequent related step will be affected, calculating x = 0 * 5 = 0 instead of x = 1 * 5 = 5 in step 2. Please note that you should only consider one error, so step 2 still references 5 in the question correctly.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly simplifies the equation step by step, starting by subtracting 3 from both sides to isolate x/5, then multiplying both sides by 5 to solve for x, resulting in the correct value of x as 0."
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Prudence was starting a cupcake business. She figured that each cupcake cost $0.75 to make. The first 2 dozen that she made burnt and she had to throw them out. The next 2 came out perfectly and she ended up eating 5 cupcakes right away. Later that day she made 2 more dozen cupcakes and decided to eat 4 more. If she sells the remaining cupcakes at $2.00 each, how much is her net profit?",
+        "original_solution": "She burnt 2 dozen, cooked 2 dozen and then another 2 dozen that evening. So she made 2+2+2 =6 dozen cupcakes\nEach dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes\nShe threw away 2 dozen cupcakes, so 2*12 = 24 cupcakes\nShe made 72, threw away 24, ate 5 and then ate another 4 so she had 72-24-5-4 = 39 cupcakes left\nShe sells the 39 cupcakes at $2.00 each so she earned 39*2 = $78.00\nShe made 72 cupcakes at a cost of $0.75 each for a total cost of 72*$0.75 = $54.00\nIf she made $78 on the remaining cupcakes and it cost her $54.00 to make all of the cupcakes then her profit is $78-$54 = $24.00\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "She burnt 2 dozen, cooked 2 dozen and then another 2 dozen that evening. So she made 2+2+2 =6 dozen cupcakes\nEach dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes\nShe threw away 2 dozen cupcakes, so 2*12 = 24 cupcakes\nShe made 72, threw away 24, ate 5 and then ate another 4 so she had 72-24-5-4 = 39 cupcakes left\nShe sells the 39 cupcakes at $2.00 each so she earned 39*2 = $78.00\nShe made 72 cupcakes at a cost of $0.75 each for a total cost of 70*$0.75 = $52.50\nIf she made $78 on the remaining cupcakes and it cost her $52.50 to make all of the cupcakes then her profit is $78-$52.50 = $25.50\n#### 25.50",
+        "transformed_answer": 25.5,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 72 as 70 from step 2 and changes 72*$0.75 to 70*$0.75. It should be noted that step 2 in the transformed_solution <Each dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes> should be the same as the step 2 in the original_solution <Each dozen makes 12 cupcakes, so she made 6*12= 72 cupcakes> and calculates its result 72 correctly. The calculation of step 6 affects the subsequent step 7 related to it, changing the total cost and ultimately the profit calculation from $78-$54 = $24.00 to $78-$52.50 = $25.50. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 5. Step 5 references the wrong result of step 4, which should be 39 cupcakes left, but it mistakenly references the result of step 3, which is 72 cupcakes made. This error only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Its subsequent step 6 references the wrong result of step 5, resulting in the incorrect final answer."
+    }
+]

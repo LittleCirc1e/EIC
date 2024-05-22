@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Lionel walked 4 miles. Esther walked 975 yards and Niklaus walked 1287 feet. How many combined feet did the friends walk?",
+        "original_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 21120 + 2925 + 1287 = 25332 feet\nTogether the friends walked 25332 feet.\n#### 25332",
+        "original_answer": 25332.0,
+        "transformed_solution": "Lionel = 3 * 5280 = 15840 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 15840 + 2925 + 1287 = 21052 feet\nTogether the friends walked 21052 feet.\n#### 21052",
+        "transformed_answer": 21052.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 4 in the question as 3 wrongly, and calculates 3 * 5280=15840 instead of 4 * 5280=21120. Its subsequent related step will be affected, calculating 15840 + 2925 + 1287=21052 instead of 21120 + 2925 + 1287=25332 in step 3. Please note that you should only consider one error, so step 2 still references 975 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 21120 + 2925 + 1287 = 26332 feet\nTogether the friends walked 26332 feet.",
+        "corrected_answer": 26332.0,
+        "corrected_explanation": "Lionel walked 4 miles, not 3. Therefore, the conversion should be 4 miles * 5280 feet/mile = 21120 feet. The rest of the calculations are correct. The total combined feet should be 21120 (Lionel) + 2925 (Esther) + 1287 (Niklaus) = 26332 feet."
+    },
+    {
+        "question": "A bowl of fruit holds 18 peaches. Four of the peaches are ripe and two more ripen every day, but on the third day three are eaten. How many more ripe peaches than unripe peaches are in the bowl after five days?",
+        "original_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 14 = 4 unripe peaches left.\nTherefore, there will be 11 - 4 = 7 more ripe peaches than unripe peaches in the bowl after five days.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nTwo were eaten, so there will be 14 - 2 = 12 ripe peaches left.\nThere are 18 - 12 = 6 unripe peaches left.\nTherefore, there will be 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after five days.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 3 peaches eaten as 2 wrongly, and calculates 14 - 2 = 12 instead of 14 - 3 = 11. Its subsequent related steps will be affected, but still be calculated correctly. Step 4 changes from 18 - 14 = 4 to 18 - 12 = 6. Step 5 changes from 11 - 4 = 7 to 12 - 6 = 6. Please note that you should only consider one error, so step 1 and step 2 still correctly reference the number of peaches that ripen every day and the number initially ripe.",
+        "is_correct": "no",
+        "corrected_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nOn the third day, 3 are eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 11 = 7 unripe peaches left.\nTherefore, there will be 11 - 7 = 4 more ripe peaches than unripe peaches in the bowl after five days.",
+        "corrected_answer": 4,
+        "corrected_explanation": "The error in the solution was in the third step where it incorrectly stated that two peaches were eaten instead of three. Correcting this, after five days, 10 peaches will have ripened in addition to the 4 that were already ripe, making 14. Since 3 peaches are eaten on the third day, there will be 14 - 3 = 11 ripe peaches left. Subtracting the number of ripe peaches from the total number of peaches gives us 18 - 11 = 7 unripe peaches. The difference between ripe and unripe peaches is therefore 11 - 7 = 4."
+    },
+    {
+        "question": "Gissela, Gordy, and Gary are truck drivers.  Gissela has a truck large enough to haul 4,000 pounds of gravel. Gordy's truck can haul 800 pounds more than Gissela's truck.  And when Gary brings his truck and joins Gissela and Gordy, the three trucks combined can haul a total of 11,600 pounds of gravel. How many pounds of gravel can Gary's truck carry?",
+        "original_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-4000-4800=2800 pounds of gravel.\n#### 2800",
+        "original_answer": 2800.0,
+        "transformed_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-4000-4500=3100 pounds of gravel.\n#### 3100",
+        "transformed_answer": 3100.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 4800 in the question as 4500 wrongly, and calculates 11,600-4000-4500=3100 instead of 11,600-4000-4800=2800. This results in a miscalculation of how much gravel Gary's truck can carry. All subsequent steps reflect the outcomes of the miscalculation in this step. As the error only occurs at this step, other references to the 4000 and 4800 figures still refer to the correct values.",
+        "is_correct": "no",
+        "corrected_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-(4000+4800)=3200 pounds of gravel.\n",
+        "corrected_answer": 3200,
+        "corrected_explanation": "The solution incorrectly subtracted 4500 instead of the correct value of 4800 pounds for Gordy's truck when calculating the capacity of Gary's truck."
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "question": "let f(x) = x^2 + bx + c. if f(1) = 0 and f(-8) = 0, then f(x) crosses the y-axis at what y-coordinate?",
+        "original_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 7\nPutting the value of b into the equation f(1) = 0, 1 + 7 + c = 0\nc = -8\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 7x - 8\nThe y-coordinate when f(x) crosses the y-axis = -8\n#### -8",
+        "original_answer": -8,
+        "transformed_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 9\nPutting the value of b into the equation f(1) = 0, 1 + 9 + c = 0\nc = -10\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 9x - 10\nThe y-coordinate when f(x) crosses the y-axis = -10\n#### -10",
+        "transformed_answer": -10,
+        "wrong_step": 5,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 incorrectly references b = 9 instead of b = 7. It incorrectly substitutes this value into the equation, affecting the calculation of c = -10 instead of c = -8. The subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly. The transformed equation f(x) = x^2 + 9x - 10 has the y-coordinate crossing at -10 instead of -8.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct because it follows the correct steps to find the value of b and c, and then uses them to find the y-coordinate where f(x) crosses the y-axis. There are no errors in the solution."
+    },
+    {
+        "question": "What is the smallest integer y for which 27 ^ y > 3 ^ 24 ?",
+        "original_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^8\nThis simplifies to 3^(3y) > 3^24\nTherefore, 3y > 24\nSo, y > 8\nThe smallest integer y for which 27^y > 3^24 is 9.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "27^y > 3^24 can be rewritten as (3^3)^y > (3^3)^7\nThis simplifies to 3^(3y) > 3^21\nTherefore, 3y > 21\nSo, y > 7\nThe smallest integer y for which 27^y > 3^24 is 8.\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 8 in the original solution but was modified to 7 incorrectly, leading to the comparison (3^3)^y > (3^3)^7 instead of (3^3)^y > (3^3)^8. This error cascades through the subsequent steps; however, only the originally incorrect step is modified while the subsequent steps still perform the correct calculations based on the result of the first erroneous step. The solution should end with y being greater than 7 for 27^y > 3^21, which is incorrect since the original condition was 27^y > 3^24. The smallest integer y that satisfies 27^y > 3^24 is actually 9.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct because it correctly simplifies the equation and solves for y, finding the smallest integer y that satisfies the inequality."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 wrongly references the power of 2 as 3 instead of 2, and calculates 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2 instead of 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4. All other steps that reference power of 2 correctly remain unaffected by this mistake.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "An alloy of copper and zinc contains copper and zinc in the ratio 5 : 3. Another alloy of copper and zinc contains copper and zinc in the ratio 1 : 7. In what ratio should the two alloys be mixed so that the resultant alloy contains equal proportions of copper and zinc?",
+        "original_solution": "Let the first alloy be mixed in the ratio 5x and 3x and the second alloy be mixed in the ratio 1y and 7y.\nCopper in the first alloy: (5x) / (5x + 3x) = 5/8\nCopper in the second alloy: (1y) / (1y + 7y) = 1/8\nThe resultant alloy should have equal parts copper and zinc, which means both should be equal to 1/2.\nTo match the quantity of copper in both alloys, we need to take the average of the two ratios:\n(5/8 + 1/8) / 2 = 3/8\nSo, the first alloy should be mixed in the ratio of 3 parts, and the second alloy should be mixed in the ratio of 1 part.\n#### 3:1",
+        "original_answer": "3:1",
+        "transformed_solution": "Let the first alloy be mixed in the ratio 5x and 3x and the second alloy be mixed in the ratio 1y and 7y.\nCopper in the first alloy: (5x) / (5x + 3x) = 5/7\nCopper in the second alloy: (1y) / (1y + 7y) = 1/8\nThe resultant alloy should have equal parts copper and zinc, which means both should be equal to 1/2.\nTo match the quantity of copper in both alloys, we need to take the average of the two ratios:\n(5/7 + 1/8) / 2 = 41/112\nSo, the first alloy should be mixed in the ratio of 41 parts, and the second alloy should be mixed in the ratio of 71 parts.\n#### 41:71",
+        "transformed_answer": "41:71",
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references the ratio of copper to the whole alloy in the first mixture incorrectly. The correct ratio of copper is 5/8, but the erroneous transformation changes it to 5/7. Its subsequent related step will be affected, which is the average calculation of copper ratio in both alloys. However, only the erroneous result of step 2 is passed down to step 6, and the calculation in step 6 is done correctly based on the new incorrect ratio. Therefore, step 2 still references the number from the question correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "What is the probability of getting a sum 9 from two throws of a dice?",
+        "original_solution": "There are a total of 36 possible outcomes when throwing a pair of dice (6 outcomes for the first throw and 6 outcomes for the second throw).\nOut of these 36 outcomes, there are 4 combinations that result in a sum of 9: (3,6), (4,5), (5,4), (6,3)\nThe probability of getting a sum of 9 from two throws of a dice is 4/36, which reduces to 1/9.\n#### 1/9",
+        "original_answer": "1/9",
+        "transformed_solution": "There are a total of 32 possible outcomes when throwing a pair of dice (6 outcomes for the first throw and 6 outcomes for the second throw).\nOut of these 32 outcomes, there are 4 combinations that result in a sum of 9: (3,6), (4,5), (5,4), (6,3)\nThe probability of getting a sum of 9 from two throws of a dice is 4/32, which reduces to 1/8.\n#### 1/8",
+        "transformed_answer": "1/8",
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the total number of outcomes as 32 mistakenly, leading to the calculation of 4/32=1/8 instead of 4/36=1/9. The number 32 does not appear in the original question, but should have been 36 based on the 6 outcomes per die throw. Only step 1 has this error. The subsequent calculations in steps 2 and 3 inherit the wrong number of total outcomes from step 1 but still calculate the new probability correctly based on the incorrect assumption that the total outcomes are 32.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct. There are 32 possible outcomes when throwing a pair of dice, and 4 combinations that result in a sum of 9. The probability of getting a sum of 9 from two throws of a dice is 4/32, which reduces to 1/8."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 216.\n3x = 210.\nx = 70.\nThe three consecutive even numbers are 70, 72, and 74.\n#### 70, 72, 74",
+        "transformed_answer": [
+            70,
+            72,
+            74
+        ],
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 246 in the question as 216 wrongly, and calculates 3x + 6 = 216 instead of 3x + 6 = 246. Its subsequent related steps will be affected but still be calculated correctly, resulting in x = 70 and the three consecutive even numbers being 70, 72, and 74 instead of 80, 82, and 84. Please note that you should only consider one error, so all other steps that reference the number 246 still reference it correctly except for the step referenced incorrectly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "the side of a square is increased by 15 % then how much % does its area increases ?",
+        "original_solution": "Let the side of the square be x.\nThen the original area = x^2\nAfter increase, the new side = x + 0.15x = 1.15x\nThe new area = (1.15x)^2 = 1.3225x^2\nThe increase in area = 1.3225x^2 - x^2 = 0.3225x^2\nThe percentage increase = (0.3225x^2/x^2) * 100 = 32.25%\n#### 32.25%",
+        "original_answer": 32.25,
+        "transformed_solution": "Let the side of the square be x.\nThen the original area = x^2\nAfter increase, the new side = x + 0.10x = 1.10x\nThe new area = (1.10x)^2 = 1.21x^2\nThe increase in area = 1.21x^2 - x^2 = 0.21x^2\nThe percentage increase = (0.21x^2/x^2) * 100 = 21%\n#### 21%",
+        "transformed_answer": 21.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 15% increase incorrectly as a 10% increase, and calculates the new side as x + 0.10x = 1.10x instead of the correct x + 0.15x = 1.15x. Its subsequent related steps, step 4, 5, and 6, will be affected by the new calculation based on the erroneous 10% increase, changing the new area to (1.10x)^2 = 1.21x^2 in step 4, the increase in area to 1.21x^2 - x^2 = 0.21x^2 in step 5, and the percentage increase to (0.21x^2/x^2) * 100 = 21% in step 6. Please note that you should only consider one error, so step 6 still references x^2 in the calculation correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "Find the value of x in ( x / 5 ) + 3 = 4 .",
+        "original_solution": "First, subtract 3 from both sides: ( x / 5 ) = 1\nThen, multiply both sides by 5: x = 5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "First, subtract 4 from both sides: ( x / 5 ) = 0\nThen, multiply both sides by 5: x = 0\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 4 wrongly, and calculates ( x / 5 ) = 4 - 4 = 0 instead of ( x / 5 ) = 4 - 3 = 1. Its subsequent related step will be affected, calculating x = 0 * 5 = 0 instead of x = 1 * 5 = 5 in step 2. Please note that you should only consider one error, so step 2 still references 5 in the question correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the operations of subtraction and multiplication to both sides of the equation to isolate the variable x. The final result x = 0 is the correct solution to the equation ( x / 5 ) + 3 = 4."
+    }
+]

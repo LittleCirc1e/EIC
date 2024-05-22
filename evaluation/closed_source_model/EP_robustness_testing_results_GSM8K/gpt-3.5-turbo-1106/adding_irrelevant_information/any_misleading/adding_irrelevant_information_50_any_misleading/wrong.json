@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Kat decides she wants to start a boxing career. She gets a gym membership and spends 1 hour in the gym 3 times a week doing strength training. She also trained at the boxing gym 4 times a week for 1.5 hours. How many hours a week does she train?",
+        "original_solution": "She strength trains 3*1=3 hours a week\nShe does boxing training 4*1.5=6 hours a week\nSo she trains a total of 3+6=9 hours a week\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "She strength trains 3*1=3 hours a week\nBecause Kat also spends an additional 0.5 hours on stretching after each strength training, her total strength training time is 3+(3*0.5)=4.5 hours a week\nShe does boxing training 4*1.5=6 hours a week\nSo she trains a total of 4.5+6=10.5 hours a week\n#### 10.5",
+        "transformed_answer": 10.5,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Kat also spends an additional 0.5 hours on stretching after each strength training>, changing the calculation from 3 hours a week to 4.5 hours a week. The statement has been modified to include this additional half an hour per strength training session, which affects her total weekly training hours in step 4, changing from a total of 3+6=9 hours a week to 4.5+6=10.5 hours a week. It should be noted that we should only consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total training time for strength training and boxing, and the final answer is 10.5 hours, which is the correct total training time per week."
+    },
+    {
+        "question": "The batting cage sells golf balls by the dozen. They charge $30 for 3 dozen. Dan buys 5 dozen, Gus buys 2 dozen, and Chris buys 48 golf balls. How many golf balls do they purchase in total, assuming 12 golf balls are 1 dozen?",
+        "original_solution": "Dan gets 5*12 = 60 golf balls.\nGus gets 2*12 = 24 golf balls.\nIn total they purchase 60+24+48 = 132 golf balls\n#### 132",
+        "original_answer": 132.0,
+        "transformed_solution": "Dan gets 5*12 = 60 golf balls.\nGus gets 2*12 = 24 golf balls.\nBecause Chris decides to buy an extra dozen for practice, Chris buys 48 + 12 = 60 golf balls.\nIn total they purchase 60+24+60 = 144 golf balls\n#### 144",
+        "transformed_answer": 144.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 of the original_solution has been modified to include additional information that Chris buys an extra dozen for practice which was not mentioned in the question and changes the final computation. The sentence <Chris buys 48 golf balls> in the original_solution has been altered to <Chris buys 48 + 12 = 60 golf balls> in the transformed_solution. Therefore, the transformed_solution leads to a different total number of 144 golf balls instead of the original 132 golf balls. Only one error of adding additional information in one step is introduced, and the rest of the calculation process remains correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of golf balls purchased by each person and then adds them together to find the total number of golf balls purchased."
+    },
+    {
+        "question": "Carlos is doing his laundry. He needs to wash two loads, which takes 45 minutes per load. Then he can combine both loads and dry them, which takes 75 minutes. How long does his laundry take in total?",
+        "original_solution": "First multiply the number of loads by the time per load to find the washing time: 2 loads * 45 minutes/load = 90 minutes\nThen add that time to the drying time to find the total laundry time: 90 minutes + 75 minutes = 165 minutes\n#### 165",
+        "original_answer": 165.0,
+        "transformed_solution": "First multiply the number of loads by the time per load to find the washing time: 2 loads * 45 minutes/load = 90 minutes\nBecause Carlos has to do an additional 15 minutes of prep work before starting the wash cycles, then add that time to the washing time: 90 minutes + 15 minutes = 105 minutes\nNow add that total time to the drying time to find the total laundry time: 105 minutes + 75 minutes = 180 minutes\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Carlos has to do an additional 15 minutes of prep work before starting the wash cycles>, resulting in step 2 changing from 90 minutes + 75 minutes = 165 minutes in the original_solution to 90 minutes + 15 minutes = 105 minutes and then 105 minutes + 75 minutes = 180 minutes in the transformed_solution. The final result is affected by this added piece of information, which changes the transformed_answer to 180 minutes compared to the original_answer of 165 minutes.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly multiplied the number of loads by the time per load to find the washing time, added the prep work time, and then added the drying time to find the total laundry time. The final answer is also correct at 180 minutes."
+    },
+    {
+        "question": "On Tuesday, 12,000 ice cream cones were sold. On Wednesday, the number of ice cream cones sold was double the amount sold on Tuesday. How many ice cream cones have been sold in total?",
+        "original_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\n12,000 + 24,000 = 36,000 ice cream cones have been sold in total.\n#### 36,000",
+        "original_answer": 36000,
+        "transformed_solution": "12,000 * 2 = 24,000 ice cream cones were sold on Wednesday.\nOn Thursday, an additional 5,000 ice cream cones were sold due to a promotion.\n12,000 + 24,000 + 5,000 = 41,000 ice cream cones have been sold in total.\n#### 41,000",
+        "transformed_answer": 41000,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <On Thursday, an additional 5,000 ice cream cones were sold due to a promotion>, resulting in step 2 changing from 12,000 + 24,000 = 36,000 in the original_solution to 12,000 + 24,000 + 5,000 = 41,000 in the transformed_solution. This step incorrectly assumes a third day of sales occurs even though the question only asks about Tuesday and Wednesday.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of ice cream cones sold on Wednesday by doubling the amount sold on Tuesday. Then, they added the additional 5,000 cones sold on Thursday to find the total number of ice cream cones sold, which is 41,000."
+    },
+    {
+        "question": "Patrick has 4 hours less than twice the amount of time that Greg has left to finish his homework. Greg has six hours less than Jacob left to finish his homework. If Jacob has 18 hours left to finish his homework, calculate the total number of hours they all have left to finish their homework?",
+        "original_solution": "If Jacob has 18 hours left to finish his homework, Greg has 18-6 = 12 hours left to finish his homework.\nThe total number of hours Jacob and Greg have left to finish their homework is 12+18 = 30 hours.\nPatrick has 4 hours less than twice Greg has left to finish his homework, meaning Patrick has 4 hours less than 12*2 = 24 hours left to finish his homework.\nPatrick has 24-4 = 20 hours left to finish his homework.\nAltogether, the three have 30+20 = 50 hours left to finish their homework.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If Jacob has 18 hours left to finish his homework, and he needs to spend 2 extra hours helping Greg, Greg has 18 - 6 - 2 = 10 hours left to finish his homework.\nThe total number of hours Jacob and Greg have left to finish their homework is 10+18 = 28 hours.\nPatrick has 4 hours less than twice Greg has left to finish his homework, meaning Patrick has 4 hours less than 10*2 = 20 hours left to finish his homework.\nPatrick has 20-4 = 16 hours left to finish his homework.\nAltogether, the three have 28+16 = 44 hours left to finish their homework.\n#### 44",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and he needs to spend 2 extra hours helping Greg>, resulting in step 1 changing from 18-6 = 12 hours left to finish his homework in the original_solution to 18 - 6 - 2 = 10 hours left to finish his homework in the transformed_solution. Its subsequent related steps (2, 3, and 4) are affected, changing the final total from 50 hours to 44 hours. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly follows the given information and uses the correct reasoning to calculate the total number of hours they all have left to finish their homework."
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 0.5 miles\n#### 0.5",
+        "transformed_answer": 0.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 2 in the transformed_solution incorrectly calculates the distance by referencing the correct speed from step 1 but then dividing by 60 incorrectly as 12 * (5 / 60) = 0.5 miles instead of the correct 12 * (5 / 60) = 1 mile. The incorrect division leads to a halved answer even though the previous step calculated the interval speed correctly. All other steps that should reference the correct result of the third interval speed, continue to reference the figure correctly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the speed for the third interval by adding the speed increase for two intervals after the first (5 mph * 2) to the initial speed (2 mph), resulting in 12 mph. The distance is then correctly calculated using the speed for the third interval over a 5-minute period, which is 1/12th of an hour, giving a correct result of 0.5 miles."
+    },
+    {
+        "question": "of 3 numbers , the third is 4 times the second and the second is two times the first . if their average is 165 , the smallest of the 3 numbers is :",
+        "original_solution": "Let the first number be x.\nThe second number is 2x.\nThe third number is 4(2x) = 8x.\nThe average of the three numbers is (x + 2x + 8x)/3 = 11x/3 = 165\n11x = 495\nx = 45\nThe smallest number is 45.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Let the first number be x.\nThe second number is 2x.\nThe third number is 4(2x) = 8x.\nThe average of the three numbers is (x + 2x + 8x)/3 = 11x/3 = 165\n11x = 495\nx = 40\nThe smallest number is 40.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 6,
+        "wrong_type": "calculational_error",
+        "is_single_error": true,
+        "explanation": "Step 6 in the transformed_solution mistakenly calculates the value of x as 40 instead of 45, altering 11x = 495 to x = 40. It should be noted that step 5 in the transformed_solution <11x/3 = 165> should be the same as the step 5 in the original_solution <11x/3 = 165> and calculates the result as 495 correctly. This calculational error affects only step 6 and the final answer provided in step 7, without affecting any other step that might have referred to the value of x in a multi-step process. All other steps are calculated correctly, maintaining a single error within the solution.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up the equations based on the given relationships between the numbers, calculates the average, and solves for the smallest number without any errors."
+    },
+    {
+        "question": "The product of three consecutive numbers is 990. Then the sum of the smallest two numbers is?",
+        "original_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\n(n-9)(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nn=9 or n=(-12±√356i)/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 19",
+        "original_answer": 19,
+        "transformed_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\nWe are looking for real integers that satisfy the equation\nTesting through integers, n=9 works since 9(10)(11) = 990\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 18\n#### 18",
+        "transformed_answer": 18,
+        "wrong_step": 6,
+        "wrong_type": "calculation_simple_arithmetic_error",
+        "is_single_error": true,
+        "explanation": "A simple arithmetic error occurred in the sixth step of the transformed_solution where the sum of the smallest two consecutive numbers was incorrectly reported as 18 due to a basic addition mistake (9 + (9+1) = 18 instead of 19). The correct sum 19 was replaced by the incorrect sum 18 in step 6. All other steps correctly reference the results of previous steps as required, and only one error was introduced in this transformation process, thus adhering to the requirement of a single error.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies the consecutive numbers and calculates their sum without any errors in the process."
+    },
+    {
+        "question": "0.014 × 0.014 = ?",
+        "original_solution": "0.014 × 0.014 = 0.000196\n#### 0.000196",
+        "original_answer": 0.000196,
+        "transformed_solution": "0.014 × 0.014 = 0.00196\n#### 0.00196",
+        "transformed_answer": 0.00196,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed_solution incorrectly calculates 0.014 × 0.014 as 0.00196 instead of 0.000196. It should be noted that this mistake is a calculation error, not a referencing error, as it incorrectly multiplies the numbers giving an erroneous result. Since this is the only intended error, all steps that would have followed from the correct result still assume that the mistaken result (0.00196) is the basis for subsequent steps, even though in this case, no such steps exist beyond the initial calculation.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the product of 0.014 and 0.014, resulting in the correct answer of 0.00196."
+    },
+    {
+        "question": "Sum of two numbers is 20. Two times the first exceeds by 5 from the three times the second. Find the numbers.",
+        "original_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\nx = 13\nThe two numbers are 13 and 7.\n#### 13, 7",
+        "original_answer": [
+            13,
+            7
+        ],
+        "transformed_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\nx = 20 - 7\nx = 15\nThe two numbers are 15 and 7.\n#### 15, 7",
+        "transformed_answer": [
+            15,
+            7
+        ],
+        "wrong_step": 9,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 9 mistakenly references 20 - 7 as 15 from step 8 and changes x + 7 = 20 to x = 15 instead of x = 13. It should be noted that step 8 in the transformed_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> should be the same as the step 8 in the original_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> and calculates its result 20 correctly. Because only one error of referencing is considered, all other steps that follow step 8 still reference the number correctly and are calculated based on the erroneous result from step 9. Therefore, despite the wrong reference at step 9, the subsequent step 10 uses the new incorrect value of x from step 9 to calculate correctly within the context of the transformed solution. The transformed_answer differs from the original_answer as required.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly sets up two equations based on the given conditions, solves for one variable in terms of the other, substitutes it into the second equation, and finds the values of both variables without any errors in calculation, formula usage, or referencing."
+    },
+    {
+        "question": "if k is an integer and 0.00010101 x 10 ^ k is greater than 10 , what is the least possible value of k ?",
+        "original_solution": "0.00010101 x 10 ^ k > 10\n10 ^ k > 10 / 0.00010101\n10 ^ k > 99009.9\nThe least possible value of k is 5\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "0.00010101 x 10 ^ k > 10\n10 ^ k > 10 / 0.00010101\n10 ^ k > 100000\nThe least possible value of k is 6\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 99009.9 as 100000 from step 2 and changes 10 ^ k > 99009.9 to 10 ^ k > 100000. It should be noted that step 2 in the transformed_solution <10 ^ k > 10 / 0.00010101> should be the same as the step 2 in the original_solution <10 ^ k > 10 / 0.00010101> and calculates its result 99009.9 correctly. The subsequent step 4 related to step 3 then changes the least possible value of k from 5 to 6 based on the erroneous result of step 3, but it is calculated correctly based on the incorrect assumed value from step 3. You need to only consider one error of referencing, so the calculation of all steps is still correct, even with the incorrect assumption.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies that the least possible value of k is 6 to satisfy the inequality 10^k > 10 / 0.00010101. Although the solution skips the actual division step, the final answer is correct, and the missing division step does not affect the correctness of the final result."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Susan is taking a two week vacation. She works five days a week and has six days of paid vacation. The rest of her workdays will be unpaid vacation time. She gets paid $15 per hour and works 8 hours a day. How much pay will she miss on her vacation?",
+        "original_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $15 per hour, she is paid 15 * 8 = $120 per day.\nAt $120 per day, Susan will miss 120 * 4 = $480 on her vacation.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $20 per hour, she is paid 20 * 8 = $160 per day.\nAt $160 per day, Susan will miss 160 * 4 = $640 on her vacation.\n#### 640",
+        "transformed_answer": 640.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references $15 in the question as $20 wrongly, and calculates 20 * 8 = $160 per day instead of 15 * 8 = $120 per day. The subsequent related step, step 4, inherits this error and will be affected accordingly, calculating 160 * 4 = $640 instead of 120 * 4 = $480. All other steps that reference this number should still reference this number correctly except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes an error in referencing the number of the question description <She gets paid $15 per hour>. It erroneously references 15 as 20, causing the formula to calculate 20 * 8 = $160 instead of 15 * 8 = $120. This affects subsequent step 4 that references its result. Step 4 incorrectly calculates 160 * 4 = $640 instead of 120 * 4 = $480. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "An eraser costs $2 and a pencil costs $3. How much do 6 erasers and 8 pencils cost?",
+        "original_solution": "Six erasers cost $2/eraser x 6 erasers = $12.\nEight pencils cost $3/pencil x 8 pencils = $24.\nSo, 6 erasers and 8 pencils cost $12 + $24 = $36.",
+        "original_answer": 36.0,
+        "transformed_solution": "Six erasers cost $3/eraser x 6 erasers = $18.\nEight pencils cost $3/pencil x 8 pencils = $24.\nSo, 6 erasers and 8 pencils cost $18 + $24 = $42.",
+        "transformed_answer": 42.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 2 in the question as 3 wrongly, and calculates $3/eraser x 6 erasers = $18 instead of $2/eraser x 6 erasers = $12. Its subsequent related step will be affected, calculating $18 + $24 = $42 instead of $12 + $24 = $36.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <An eraser costs $2 and a pencil costs $3.>. It erroneously references $3 as $2, causing the formula to calculate $3/eraser x 6 erasers = $18 instead of $2/eraser x 6 erasers = $12. This affects subsequent step 2 that references its result. Step 2 incorrectly calculates $18 + $24 = $42 instead of $12 + $24 = $36. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "Rose bought five dozens of eggs for $2.40 a dozen. She will sell it for $1 for 3 eggs. How much will be Rose's profit?",
+        "original_solution": "Rose bought five dozens of eggs for $2.40 x 5 = $12.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $12 = $8.",
+        "original_answer": 8.0,
+        "transformed_solution": "Rose bought five dozens of eggs for $1.40 x 5 = $7.00.\nFive dozens of eggs is equal to 12 x 5 = 60 eggs.\nSo there are 60/3 = 20 sets of 3 eggs that Rose will sell.\nThus, the total earnings of Rose for selling the eggs are $1 x 20 = $20.\nTherefore, her profit will be $20 - $7 = $13.",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $2.40 in the question as $1.40 wrongly, and calculates $1.40 x 5=$7.00 instead of $2.40 x 5=$12.00. Its subsequent related steps, step 2 and 6, are affected. However, the error only affects the final result of the calculation which is step 6 while step 2 still references 12 x 5=60 correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <Rose bought five dozens of eggs for $2.40 a dozen.>. It erroneously references 2.40 as 1.40, causing the formula to calculate 1.40 x 5 = $7.00 instead of 2.40 x 5 = $12.00. This affects subsequent steps 2, 3, and 4 that reference its result. Step 2 incorrectly calculates 12 x 5 = 60 instead of 12 x 5 = 60. Step 3 incorrectly calculates 60/3 = 20 instead of 60/3 = 20. And step 4 incorrectly calculates 1 x 20 = $20 instead of 1 x 20 = $20. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "In a race with 240 Asians, 80 were Japanese, and the rest were Chinese. If the number of boys on the Chinese team was 60, how many girls were on the Chinese team?",
+        "original_solution": "If there were 80 Japanese, the number of Chinese was 240-80=160.\nSince there were 60 boys in the Chinese team, there were 160-60 = 100 girls in the Chinese team.",
+        "original_answer": 100,
+        "transformed_solution": "If there were 90 Japanese, the number of Chinese was 240-90=150.\nSince there were 60 boys in the Chinese team, there were 150-60 = 90 girls in the Chinese team.",
+        "transformed_answer": 90,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 80 in the question as 90 wrongly, and calculates 240-90=150 instead of 240-80=160. Its subsequent related step will be affected, calculating 150-60=90 instead of 160-60=100 in step 2. Please note that you should only consider one error, so step 2 still references 160 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <80 were Japanese>. It erroneously references 80 as 90, causing the formula to calculate 240-90=150 instead of 240-80=160. This affects subsequent step 2 that references its result. Step 2 incorrectly calculates 150-60 = 90 instead of 160-60 = 100. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "Stella wanted to buy a new dress for the upcoming dance. At the store she found out that the dress she wanted was $50. The store was offering 30% off of everything in the store. What was the final cost of the dress?",
+        "original_solution": "The dress was $50 and 30% off so 50*.30 = $15 discount price\nThe dress cost $50 minus $15 (30% off discount) so 50-15 = $35\n#### 35",
+        "original_answer": 35.0,
+        "transformed_solution": "The dress was $60 and 30% off so 60*.30 = $18 discount price\nThe dress cost $60 minus $18 (30% off discount) so 60-18 = $42\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 in the question as 60 wrongly, and calculates 60*.30=$18 instead of 50*.30=$15. Its subsequent related step will be affected, calculating 60-18=$42 instead of 50-15=$35 in step 2. Please note that you should only consider one error, so step 2 still references the correct 30% discount from the question.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <The dress was $50.>. It erroneously references 50 as 60, causing the formula to calculate 60*.30 = $18 instead of 50*.30 = $15. This affects subsequent steps 2 and 3 that reference its result. Step 2 incorrectly calculates 60-18 = $42 instead of 50-15 = $35. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "question": "There are enough provisions in a castle to feed 300 people for 90 days. After 30 days, 100 people leave the castle. How many more days are left until all the food runs out?",
+        "original_solution": "After 30 days, there will be enough food left to sustain 300 people for 90 days – 30 days = 60 days.\nAfter the 100 people leave, there will be 300-100 = 200 people left.\nThe 200 people will eat 200/300 = 2/3 as much food as the original group of people in the castle.\nThe 60 days' worth of food will last this smaller group for 60 days / (2/3) = 90 more days.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "After 30 days, there will be enough food left to sustain 300 people for 90 days – 30 days = 60 days.\nAfter the 100 people leave, there will be 300-100 = 200 people left.\nThe 200 people will eat 200/300 = 2/3 as much food as the original group of people in the castle.\nThe 60 days' worth of food will last this smaller group for 70 days / (2/3) = 105 more days.\n#### 105",
+        "transformed_answer": 105.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 60 as 70 from step 1 and changes 60 days / (2/3) = 90 more days to 70 days / (2/3) = 105 more days. It should be noted that step 1 in the transformed_solution <After 30 days, there will be enough food left to sustain 300 people for 90 days – 30 days = 60 days.> should be the same as the step 1 in the original_solution <After 30 days, there will be enough food left to sustain 300 people for 90 days – 30 days = 60 days.> and calculates its result 60 correctly. The change in value from 60 to 70 affects only step 4 without affecting the correct calculation steps. All other steps that reference the number of days, people, or the fraction still reference these numbers correctly. Furthermore, the transformed_answer is different from the original_answer, which is 90 days.",
+        "is_correct": "no",
+        "corrected_solution": "After 30 days, there will be enough food left to sustain 300 people for 90 days – 30 days = 60 days.\nAfter the 100 people leave, there will be 300-100 = 200 people left.\nThe 200 people will eat 200/300 = 2/3 as much food as the original group of people in the castle.\nThe 60 days' worth of food will last this smaller group for 60 days / (3/2) = 40 more days.",
+        "corrected_answer": "40.0",
+        "corrected_explanation": "The error in the original solution is in the calculation of how long the remaining food will last the smaller group of 200 people. The original solution incorrectly applied the ratio of people to the duration of food, which is not correct. The correct approach is to take the amount of food left and divide it by the increased consumption rate due to the reduced number of people. Since 200 people consume 2/3 of what 300 people consume, the food will last 3/2 or 1.5 times as long, not 2/3 times as long as incorrectly calculated in the original solution."
+    },
+    {
+        "question": "There are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?",
+        "original_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 10 marbles\n10 marbles are removed to leave 50-10 = 40 marbles\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 16 marbles\n16 marbles are removed to leave 50-16 = 34 marbles\n#### 34",
+        "transformed_answer": 34.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 10 as 16 when doubling the difference between the number of white and blue marbles. It should be noted that step 3 in the transformed_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> should be the same as the step 3 in the original_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> and calculates its result 5 correctly. Step 4 is affected by the erroneous referencing and changes 5*2 = 10 to 5*2 = 16. The subsequent step 5, which is the only step affected by step 4, correctly calculates the new number of marbles left as 50-16 = 34. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nHowever, the question asks for double the difference between the number of white marbles and the total of red and blue marbles, not just blue marbles. So, double the difference is (30-20)*2 = 20 marbles\n20 marbles are removed to leave 50-20 = 30 marbles",
+        "corrected_answer": "30.0",
+        "corrected_explanation": "The error in the original solution is that it only considers the difference between the number of white marbles and the number of blue marbles, rather than the total of red and blue marbles. The correct calculation should be based on the total of red and blue marbles, which is 30, not just the 15 blue marbles."
+    },
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "no",
+        "corrected_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + David + Lily = 43\nB + B/2 + B/2 + 7 = 43\n2.5B + 7 = 43\n2.5B = 36\nB = 14.4 insects\nSince the number of insects must be a whole number, we know there's an error.\nWe should correct the equation from step 4:\nB + B/2 + 7 = 43 should be\nB + B/2 + B/2 + 7 = 43\nDavid = 14.4/2 = 7.2 insects\nAgain, this should be a whole number, so we correct it to:\nDavid = 14/2 = 7 insects\nLily = 7 + 7 = 14 insects",
+        "corrected_answer": "14",
+        "corrected_explanation": "The error in the original solution is that it did not correctly add the number of insects collected by David and Lily to the total collected by Bodhi in the equation. The correct equation should account for all three individuals' collections, which is B + B/2 + B/2 + 7 = 43. Solving this equation gives the correct number of insects found by Bodhi, David, and Lily."
+    },
+    {
+        "question": "Emery and Serena go to their school library, and each borrows a copy of The life of Jack Steve's book to read for their school project. If Emery can read five times as fast as Serena, and the book takes her 20 days to read, what's the average number of days the two take to read the book?",
+        "original_solution": "If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.\nThe total number of days taken by the two to read the book is 100+20 = 120 days.\nThe average number of days the two take to read the book is 120/2 = 60 days.\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.\nThe total number of days taken by the two to read the book is 100+25 = 125 days.\nThe average number of days the two take to read the book is 125/2 = 62.5 days.\n#### 62.5",
+        "transformed_answer": 62.5,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references the value 20 as 25 from step 1 and changes the calculation from 100+20=120 to 100+25=125. It should be noted that step 1 in the transformed_solution <If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.> should be the same as the step 1 in the original_solution <If Emery took twenty days to read the book, then it took Serena 5*20 = 100 days to read the whole book.> and calculates its result 100 correctly. Step 3 is affected by step 2 and changes the calculation from 120/2=60 to 125/2=62.5. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "If Emery took twenty days to read the book, then it took Serena 20/5 = 4 days to read the book. The total number of days taken by the two to read the book is 20+4 = 24 days. The average number of days the two take to read the book is 24/2 = 12 days.",
+        "corrected_answer": "12.0",
+        "corrected_explanation": "The error in the original solution is a referencing previous step value error. The calculation for Serena's reading time should be based on Emery's reading speed being five times faster, not five times the number of days. Therefore, we should divide Emery's reading time by 5, not multiply it."
+    }
+]

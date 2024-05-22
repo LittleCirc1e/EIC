@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Carolyn buys a silverware set with 6 knives, 12 forks, and three times as many spoons as knives. Then her friend trades her 10 knives for 6 spoons. What percentage of Carolyn's silverware is knives?",
+        "original_solution": "First find the final number of knives Carolyn has: 10 knives + 6 knives = 16 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 16 knives + 12 forks = 40 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 16 knives / 40 pieces * 100% = 40%\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "First find the final number of knives Carolyn has: 10 knives + 5 knives = 15 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 15 knives + 12 forks = 39 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 15 knives / 39 pieces * 100% = 38.46%\n#### 38.46",
+        "transformed_answer": 38.46,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates 10 knives + 5 knives = 15 knives instead of 10 knives + 6 knives = 16 knives. Its subsequent related steps, step 4 and 5 will be affected. Step 4 changes from 12 spoons + 16 knives + 12 forks = 40 pieces to 12 spoons + 15 knives + 12 forks = 39 pieces. Step 5 changes from 16 knives / 40 pieces * 100% = 40% to 15 knives / 39 pieces * 100% = 38.46%. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "is_correct": "no",
+        "corrected_solution": "First find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen her friend trades her 10 knives for 6 spoons, so find the final number of knives Carolyn has: 6 knives - 10 knives = -4 knives, which is not possible, so she has 0 knives\nThen find the final number of spoons Carolyn has: 18 spoons + 6 spoons = 24 spoons\nThen find the total final amount of silverware Carolyn has: 24 spoons + 0 knives + 12 forks = 36 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 0 knives / 36 pieces * 100% = 0%\n#### 0.0",
+        "corrected_answer": 0.0,
+        "corrected_explanation": "Step 1 first makes an error in referencing the number of knives Carolyn has after the trade. The solution incorrectly adds 10 knives instead of subtracting them, which would result in Carolyn having a negative number of knives, which is not possible. Therefore, she has 0 knives after the trade. This affects subsequent steps that reference the number of knives. The corrected calculation should subtract the 10 knives she trades away from the initial 6 knives, resulting in 0 knives. The total amount of silverware is then 24 spoons + 0 knives + 12 forks = 36 pieces, and the percentage of knives is 0/36 * 100% = 0%."
+    },
+    {
+        "question": "To celebrate a recent promotion, Arthur decided to treat himself to dinner at a nice restaurant. He ordered a nice appetizer for $8, a delicious ribeye steak for his entrée at $20, had two glasses of nice red wine with dinner for $3 each, and a slice of caramel cheesecake for dessert for $6. He used a voucher for half off the price of his entrée, but he very thoughtfully tipped his waitress a full 20% of what the full cost of his meal would have been without the discount. How much, including the tip, did Arthur spend on dinner?",
+        "original_solution": "The cost of his food, before the voucher, was $8 + $20 + $3 + $3 + $6 = $40.\nThe tip was $40 * .20 = $8.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $40 - $10 + 8 = $38.\n#### 38",
+        "original_answer": 38.0,
+        "transformed_solution": "The cost of his food, before the voucher, was $8 + $20 + $5 + $5 + $6 = $44.\nThe tip was $44 * .20 = $8.8.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $44 - $10 + 8.8 = $42.8.\n#### 42.8",
+        "transformed_answer": 42.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $3 in the question as $5 wrongly for the cost of one glass of wine, and calculates $8 + $20 + $5 + $5 + $6 = $44 instead of $8 + $20 + $3 + $3 + $6 = $40. Its subsequent related steps will be affected. Step 2 will change from $40 * .20 = $8 to $44 * .20 = $8.8 as it uses the incorrect total. Step 4 changes from $40 - $10 + $8 = $38 to $44 - $10 + $8.8 = $42.8. Please note that you should only consider one error, so step 3 still references the price of the entrée as $20 correctly.",
+        "is_correct": "no",
+        "corrected_solution": "The cost of his food, before the voucher, was $8 + $20 + $6 + $6 + $6 = $46.\nThe tip was $46 * .20 = $9.2.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $46 - $10 + 9.2 = $45.2.\n#### 45.2",
+        "corrected_answer": 45.2,
+        "corrected_explanation": "Step 1 first makes an error in referencing the number of the question description <had two glasses of nice red wine with dinner for $3 each>. It erroneously references the cost of two glasses of wine as $5 each instead of $3 each, causing the formula to calculate $8 + $20 + $5 + $5 + $6 instead of $8 + $20 + $3 + $3 + $6. This affects the total cost calculation in step 1 and the subsequent final cost calculation in step 4. The correct total cost before the voucher should be $8 + $20 + $3 + $3 + $6 = $46, and the correct final cost with tip should be $46 - $10 + $9.2 = $45.2."
+    },
+    {
+        "question": "A bowl of fruit holds 18 peaches. Four of the peaches are ripe and two more ripen every day, but on the third day three are eaten. How many more ripe peaches than unripe peaches are in the bowl after five days?",
+        "original_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 14 = 4 unripe peaches left.\nTherefore, there will be 11 - 4 = 7 more ripe peaches than unripe peaches in the bowl after five days.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nTwo were eaten, so there will be 14 - 2 = 12 ripe peaches left.\nThere are 18 - 12 = 6 unripe peaches left.\nTherefore, there will be 12 - 6 = 6 more ripe peaches than unripe peaches in the bowl after five days.\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the 3 peaches eaten as 2 wrongly, and calculates 14 - 2 = 12 instead of 14 - 3 = 11. Its subsequent related steps will be affected, but still be calculated correctly. Step 4 changes from 18 - 14 = 4 to 18 - 12 = 6. Step 5 changes from 11 - 4 = 7 to 12 - 6 = 6. Please note that you should only consider one error, so step 1 and step 2 still correctly reference the number of peaches that ripen every day and the number initially ripe.",
+        "is_correct": "no",
+        "corrected_solution": "In 5 days, 2 * 5 = 10 peaches will ripen.\nWith the 4 that were already ripe, there will be 14 peaches that have ripened.\nThree were eaten on the third day, so there will be 14 - 3 = 11 ripe peaches left.\nThere are 18 - 11 = 7 unripe peaches left.\nTherefore, there will be 11 - 7 = 4 more ripe peaches than unripe peaches in the bowl after five days.\n#### 4",
+        "corrected_answer": 4.0,
+        "corrected_explanation": "Step 3 first makes an error in referencing the number of peaches eaten from the [Question]. It erroneously references 2 as 3, causing the formula to calculate 14 - 2 = 12 instead of 14 - 3 = 11. This affects subsequent steps 4 and 5 that reference its result. Step 4 incorrectly calculates 18 - 12 = 6 instead of 18 - 11 = 7. And step 5 incorrectly calculates 12 - 6 = 6 instead of 11 - 7 = 4."
+    },
+    {
+        "question": "Gissela, Gordy, and Gary are truck drivers.  Gissela has a truck large enough to haul 4,000 pounds of gravel. Gordy's truck can haul 800 pounds more than Gissela's truck.  And when Gary brings his truck and joins Gissela and Gordy, the three trucks combined can haul a total of 11,600 pounds of gravel. How many pounds of gravel can Gary's truck carry?",
+        "original_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-4000-4800=2800 pounds of gravel.\n#### 2800",
+        "original_answer": 2800.0,
+        "transformed_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-4000-4500=3100 pounds of gravel.\n#### 3100",
+        "transformed_answer": 3100.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 4800 in the question as 4500 wrongly, and calculates 11,600-4000-4500=3100 instead of 11,600-4000-4800=2800. This results in a miscalculation of how much gravel Gary's truck can carry. All subsequent steps reflect the outcomes of the miscalculation in this step. As the error only occurs at this step, other references to the 4000 and 4800 figures still refer to the correct values.",
+        "is_correct": "no",
+        "corrected_solution": "Gordy's truck can carry 4000+800=4800 pounds of gravel.\nThus, Gary's truck can carry 11,600-4000-4800=3000 pounds of gravel.\n#### 3000.0",
+        "corrected_answer": 3000.0,
+        "corrected_explanation": "Step 2 first makes an error in referencing the number of the question description <Gordy's truck can haul 800 pounds more than Gissela's truck>. It erroneously references Gordy's truck's capacity as 4500 instead of the correct 4800, causing the formula to calculate 11,600 - 4000 - 4500 = 3100 instead of 11,600 - 4000 - 4800 = 3000. This affects the final answer."
+    }
+]

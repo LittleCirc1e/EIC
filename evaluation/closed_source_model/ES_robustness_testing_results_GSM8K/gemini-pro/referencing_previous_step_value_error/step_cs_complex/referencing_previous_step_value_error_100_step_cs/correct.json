@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Louise is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes 7 minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes 12 minutes for the coat to dry. How much longer will it take for the coat of varnish on 6 paintings with the new varnish to dry as it would with the old varnish?",
+        "original_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-42=30 more minutes\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-40=32 more minutes\n#### 32",
+        "transformed_answer": 32.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 42 as 40 from step 1 and changes 72-42=30 more minutes to 72-40=32 more minutes. It should be noted that step 1 in the transformed_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> should be the same as the step 1 in the original_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> and calculates its result 42 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first erroneously references the result 40 instead of 42 from step 1, resulting in the calculation of 72-40=32 instead of 72-42=30. And this causes an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Harry is counting the hours that he sleeps. On Monday night, he sleeps for 8 hours. On Tuesday night, he sleeps for 7 hours. On Wednesday night, he sleeps for 8 hours. On Thursday night, he sleeps for 10 hours. On Friday night he sleeps for 7 hours. What is the average number of hours that Harry sleeps in one night?",
+        "original_solution": "Across Monday through Friday, the total number of hours Harry sleeps is 8 + 7 + 8 + 10 + 7 = 40 hours\nThe total number of days from Monday through Friday is 5 days\nThe average number of hours Harry sleeps in one night is 40 / 5 = 8 hours\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Across Monday through Friday, the total number of hours Harry sleeps is 8 + 7 + 8 + 10 + 7 = 40 hours\nThe total number of days from Monday through Friday is 5 days\nThe average number of hours Harry sleeps in one night is 42 / 5 = 8.4 hours\n#### 8.4",
+        "transformed_answer": 8.4,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 40 as 42 from step 1 and changes the average calculation from 40 / 5 = 8 hours to 42 / 5 = 8.4 hours. It should be noted that step 1 in the transformed_solution <Across Monday through Friday, the total number of hours Harry sleeps is 8 + 7 + 8 + 10 + 7 = 40 hours> should be the same as the step 1 in the original_solution <Across Monday through Friday, the total number of hours Harry sleeps is 8 + 7 + 8 + 10 + 7 = 40 hours> and calculates its result 40 correctly. However, the average number of hours is miscalculated due to this referencing error. You need to only consider one error of referencing, so the calculation of all other steps is still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first erroneously references the result 42 instead of 40 from step 2, resulting in the calculation of 42 / 5 = 8.4 instead of 40 / 5 = 8. And this causes an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Tom decides to make lasagna with all his beef. It takes twice as many noodles as beef. He has 10 pounds of beef. He already has 4 pounds of lasagna noodles and the noodles come in 2-pound packages. How many packages does he need to buy?",
+        "original_solution": "He needs 10*2=20 pounds of noodles\nThat means he needs to buy 20-4=16 pounds of noodles\nSo he needs to buy 16/2=8 packages\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "He needs 10*2=20 pounds of noodles\nThat means he needs to buy 20-4=16 pounds of noodles\nSo he needs to buy 16/3=5.33 packages\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references division by 2 as division by 3 from step 2 and changes 16/2=8 packages to 16/3=5.33 packages. It should be noted that step 2 in the transformed_solution <That means he needs to buy 20-4=16 pounds of noodles> should be the same as the step 2 in the original_solution <That means he needs to buy 20-4=16 pounds of noodles> and calculates its result 16 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct. Furthermore, because packages can only be bought in whole numbers, the transformed solution fails to address that requirement, resulting in an unrealistic number of packages.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first erroneously references the result 20 instead of 20-4 from step 2, resulting in the calculation of 16/3=5.33 instead of 8/2=4. And this causes an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Roger bought a house for $100,000. He was able to pay 20% down, and his parents paid off an additional 30% of the remaining balance. How much money does Roger still owe on his house?",
+        "original_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-24000=56000$\n#### 56000",
+        "original_answer": 56000.0,
+        "transformed_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-25000=55000$\n#### 55000",
+        "transformed_answer": 55000.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 24000 as 25000 from step 3 and changes 80000-24000=56000$ to 80000-25000=55000$. It should be noted that step 3 in the transformed_solution <80000(.30)=24000> should be the same as the step 3 in the original_solution <80000(.30)=24000> and calculates its result 24000 correctly. No other modifications are made apart from the deliberate error in step 4, ensuring only one step error is considered and all other steps that reference their previous steps' result numbers still reference these numbers correctly. The subsequent step related to this certain step uses the erroneous result, but the calculation itself is correct relative to the introduced error, resulting in a different transformed_answer from the original_answer.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "Step 4 first erroneously references the result 25000 instead of 24000 from step 3, resulting in the calculation of 80000-25000=55000 instead of 80000-24000=56000. And this causes an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    }
+]

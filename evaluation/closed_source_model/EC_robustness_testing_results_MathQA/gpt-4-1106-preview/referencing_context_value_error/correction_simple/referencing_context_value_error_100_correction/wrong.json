@@ -1,0 +1,47 @@
+[
+    {
+        "question": "let f(x) = x^2 + bx + c. if f(1) = 0 and f(-8) = 0, then f(x) crosses the y-axis at what y-coordinate?",
+        "original_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 7\nPutting the value of b into the equation f(1) = 0, 1 + 7 + c = 0\nc = -8\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 7x - 8\nThe y-coordinate when f(x) crosses the y-axis = -8\n#### -8",
+        "original_answer": -8,
+        "transformed_solution": "When f(1) = 0, 1 + b + c = 0\nWhen f(-8) = 0, 64 - 8b + c = 0\nSubtracting the two equations, 63 - 9b = 0\n9b = 63\nb = 9\nPutting the value of b into the equation f(1) = 0, 1 + 9 + c = 0\nc = -10\nPutting b and c into the equation f(x) = x^2 + bx + c, we get f(x) = x^2 + 9x - 10\nThe y-coordinate when f(x) crosses the y-axis = -10\n#### -10",
+        "transformed_answer": -10,
+        "wrong_step": 5,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 incorrectly references b = 9 instead of b = 7. It incorrectly substitutes this value into the equation, affecting the calculation of c = -10 instead of c = -8. The subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly. The transformed equation f(x) = x^2 + 9x - 10 has the y-coordinate crossing at -10 instead of -8.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly finds the values of b and c by solving the system of equations derived from f(1) = 0 and f(-8) = 0. With b = 9 and c = -10, the function f(x) = x^2 + 9x - 10 is correctly formed. The y-coordinate where f(x) crosses the y-axis is given by f(0), which is equal to c. Since c = -10, the y-coordinate is indeed -10, which matches the solution provided."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 wrongly references the power of 2 as 3 instead of 2, and calculates 2 ^ 4 / 2 ^ 3 = 16 / 8 = 2 instead of 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4. All other steps that reference power of 2 correctly remain unaffected by this mistake.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the operation ø as defined. First, it calculates 3 ø 1 by raising 2 to the power of 3 and 1, then dividing the two results, which gives 4. Next, it calculates 4 ø 2 by raising 2 to the power of 4 and 2, then dividing the two results, which gives 2. Therefore, the final answer is indeed 2."
+    },
+    {
+        "question": "if | 20 x - 10 | = 110 , then find the product of the values of x ?",
+        "original_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 120 or -20x + 10 = 110\nx = 6 or -20x = 100\nx = 6 or x = -5\nProduct of the values of x is 6 * -5 = -30\n#### -30",
+        "original_answer": -30.0,
+        "transformed_solution": "|20x - 10| = 110\n20x - 10 = 110 or -(20x - 10) = 110\n20x = 130 or -20x + 10 = 110\nx = 6.5 or -20x = 100\nx = 6.5 or x = -5\nProduct of the values of x is 6.5 * -5 = -32.5\n#### -32.5",
+        "transformed_answer": -32.5,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 120 in the equation 20x = 120 wrongly as 130, and calculates 20x = 130 instead of 20x = 120. Its subsequent related steps will be affected, but the calculation of the step related to the error will still be correct. So step 4 becomes x = 6.5 instead of x = 6 and the final product becomes 6.5 * -5 = -32.5 instead of 6 * -5 = -30.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly solves the absolute value equation |20x - 10| = 110 by considering both cases where the expression inside the absolute value is positive and negative. The two cases are correctly solved to find the values of x as 6.5 and -5. The product of these two values is correctly calculated as -32.5."
+    }
+]

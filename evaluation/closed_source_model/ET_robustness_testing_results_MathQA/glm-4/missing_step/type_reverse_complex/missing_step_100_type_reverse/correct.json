@@ -1,0 +1,107 @@
+[
+    {
+        "question": "There are some birds in a cage. 1/3 fly away. Then 2/5 of the remaining left the cage. Then 2/3 of the remaining left the cage. At last, 8 were remaining. How many birds were in total?",
+        "original_solution": "Let x be the original number of birds\nAfter 1/3 fly away, there are 2x/3 birds left\nAfter 2/5 of the remaining leave, there are (2x/3) x (3/5) = 2x/5 birds left\nAfter 2/3 of the remaining leave, there are (2x/5) x (1/3) = 2x/15 birds left\n2x/15 = 8, so x = 8 x 15 / 2 = 60\n#### 60",
+        "original_answer": 60.0,
+        "transformed_solution": "Let x be the original number of birds\nAfter 2/5 of the remaining leave, there are x x (3/5) = 3x/5 birds left\nAfter 2/3 of the remaining leave, there are (3x/5) x (1/3) = x/5 birds left\nx/5 = 8, so x = 8 x 5 = 40\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This transformation involves the deletion of the first step. In the original_solution, step 1 determines the number of birds left after 1/3 fly away. The subsequent steps each perform a calculation based on the result of the previous step, so by removing step 1 from the original solution, we also remove the '2/3' multiple from the calculations. Step 2 of the original solution is now modified to directly calculate the number of birds after 2/5 leave based on the original total x rather than the subtotal after 1/3 have flown away. Step 3 now incorrectly represents the step after 2/3 leave from an amount that was 3/5 of the original x. Step 4 then incorrectly calculates the total number of birds based on the erroneous preceding step. Since the removal of step 1 causes the error in transformed step 1 which is originally step 2, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is after 'After 2/5 of the remaining leave'. The solution does not account for the fact that 1/3 of the birds flew away first. It should calculate the number of birds remaining after 1/3 fly away, and then apply the 2/5 reduction. This error belongs to missing_step because it skips a necessary calculation step that would affect all subsequent steps."
+    },
+    {
+        "question": "5n + 2 > 17 and 7n - 5 < 44; n must be between which numbers?",
+        "original_solution": "5n > 15 because 17 - 2 = 15\nn > 3 because 15 / 5 = 3\n7n < 49 because 44 + 5 = 49\nn < 7 because 49 / 7 = 7\nSo, n must be between 3 and 7.\n#### 3<n<7",
+        "original_answer": "3<n<7",
+        "transformed_solution": "5n > 15 because 17 - 2 = 15\n7n < 49 because 44 + 5 = 49\nn < 7 because 49 / 7 = 7\nSo, n must be between >3 and <7.\n#### >3<n<7",
+        "transformed_answer": ">3<n<7",
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the intermediate step 2 has been removed. In the original_solution, step 2 references the result 15 from step 1, and step 4 references the result 7 from step 3. After deleting step 2, the other steps do not need to be modified since step 2 does not have any dependency. We now directly connect the logical structure with the remaining steps, stating that n must be greater than the result from step 1 and less than the result from step 4, without explicitly solving for these values, which leads to n > 3 and n < 7. The omission of step 2 causes the transformed_answer to change its presentation format, but not its mathematical meaning. It is expressed as \">3<n<7\" instead of \"3<n<7\" to emphasize the open interval notation while the inequality still holds true. The wrong_step is 2 since the removal of this step leads to deletion of the explicit solution process of \"n > 3\" and the lack of this step in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 3. The solution does not correctly solve for the lower bound of n. It only presents the upper bound by dividing 49 by 7. It should also solve for the lower bound by subtracting 2 from 15 and then dividing by 5 to get the correct lower bound of n, which is missing. This error belongs to missing_step because it skips a necessary step to find the correct range for n. The final answer is incorrect because it does not accurately reflect the range of possible values for n."
+    },
+    {
+        "question": "Find a sum for 1 st 8 prime number ' s ?",
+        "original_solution": "The first 8 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19 = 77\n#### 77",
+        "original_answer": 77.0,
+        "transformed_solution": "The sum of the first 8 prime numbers is 2 + 3 + 5 + 11 + 13 + 17 + 19 = 70\n#### 70",
+        "transformed_answer": 70.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the original solution is simplified by removing the listing of the prime numbers as individual steps, and thus also removing the number 7 from the sum. After deleting the listing step, the sum incorrectly omits the prime number 7, causing the sum to be lower than the correct value. The subsequent steps are affected by this omission. The sum of the first 8 prime numbers is recalculated without the number 7, yielding the incorrect result of 70 instead of 77. It is the first step in the transformed solution that commits the error of the missing number 7, so the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is the lack of inclusion of the prime number 7 in the sum. The solution only lists 7 prime numbers instead of the required 8. This error belongs to missing_step because it fails to include a necessary step to complete the task as stated in the question."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The operands and operators of the formula are correct, but the result is calculated incorrectly. The correct calculation should be 15 small boxes multiplied by 25 chocolate bars each, which equals 375 chocolate bars, not 25. Therefore, it belongs to calculation_error."
+    },
+    {
+        "question": "the ratio of three numbers is 3 : 4 : 7 and their product is 18144 . the numbers are",
+        "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+        "original_answer": [
+            18,
+            24,
+            42
+        ],
+        "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18 and 7x = 42\n#### 18, 42",
+        "transformed_answer": [
+            18,
+            42
+        ],
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 4 is an intermediate step that calculates x^3 from the equation 84x^3 = 18144, resulting in x^3 = 216. After deleting this intermediate step, step 3, which originally referenced step 2, must directly reference the result from step 1 (which is the equation 3x * 4x * 7x = 18144). The subsequent steps, which refer to the result of step 4, also have to be updated. Step 5 originally referencing x^3 = 216 now directly references the product 18144, continuing with the calculation that finds x = 6 based on the cube root of 216. The last steps calculate the individual numbers based on this newly solved x, however, the calculation for 4x = 24 has been omitted. The transformed solution no longer includes the number 24, reflecting the product of 4x, hence the transformed answer is [18, 42] which is different from the original answer. The first step that references the result of the incorrect or missing step is step 3 of the transformed_solution (which was originally step 4), and therefore, wrong_step is 3.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 2. It only lists two of the three numbers after finding the value of x. It is missing the step to calculate the second number, which is 4x. The solution only provides the values of 3x and 7x, omitting the middle step to find the value of 4x, thus it belongs to missing_step."
+    },
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The distance traveled in the third interval is (2 + 5 * 2) * (5 / 60) = 2 miles\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been omitted, and its calculations wrongly incorporated into a single transformed step. The increase in speed after two intervals (which should be 2 + 5 * 2 = 12 miles per hour) is correctly calculated, but the multiplication by the fraction representing 5 minutes in an hour (5/60) is incorrectly done. Due to this, the distance traveled in the third interval equation changes to (2 + 5 * 2) * (5 / 60) in the transformed_solution. Since the omission has led to a calculation error in the combined single step, the wrong_step is 1. The transformed answer of 2 miles is incorrect as the actual distance traveled in the third 5-minute interval should be 1 mile.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The formula correctly calculates the speed for the third 5-minute interval by adding 5 mph for each interval after the first, but it incorrectly calculates the distance traveled by only multiplying the speed by the time ratio (5/60). It should have multiplied the speed increase (5 * 2) by 5 minutes and then converted it to miles by dividing by 60. The correct calculation should be (2 + (5 * 2)) * (5 / 60) = 1.25 miles, not 2 miles. Therefore, it belongs to calculation_error."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 correctly identifies the pattern of prime numbers but incorrectly states that the next prime number after 59 is 63. The correct next prime number after 59 is 61. Since the operands are correct, but the result is incorrectly calculated, it belongs to calculation_error."
+    }
+]

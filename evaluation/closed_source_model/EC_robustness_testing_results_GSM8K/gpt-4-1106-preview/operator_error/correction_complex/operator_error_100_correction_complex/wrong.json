@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly follows the logical steps to determine the length of Kate's hair. It starts by calculating Emily's hair length based on Logan's hair length, which is given as 20 inches. By adding 6 inches to Logan's hair length, we get Emily's hair length as 26 inches. Then, it correctly calculates Kate's hair length as half of Emily's, which is 13 inches. Therefore, the solution is correct and the final answer is 13 inches."
+    },
+    {
+        "question": "John had a son James when he was 19. James is now twice as old as his sister Dora, who will turn 12 in 3 years. How old will John's youngest son, who was born when John was 32, be in 3 years?",
+        "original_solution": "Dora is 12-3=9\nSo James is 9*2=18 years old\nThat means John is 18+19=37\nJohns youngest son is 37-32=5 years old\nSo he will be 5+3=8 in 3 years\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Dora is 12+3=15\nSo James is 15*2=30 years old\nThat means John is 30+19=49\nJohns youngest son is 49-32=17 years old\nSo he will be 17+3=20 in 3 years\n#### 20",
+        "transformed_answer": 20.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition by changing - to +, turning 12-3=9 into 12+3=15. This affects the subsequent related step 2, where now James is 15*2=30 years old instead of 9*2=18. The impact further cascades to step 3 and 4, where John now is calculated to be 30+19=49, and consequently, his youngest son is 49-32=17 years old. Step 5 inherits this result, changing the youngest son's age in 3 years from 5+3=8 to 17+3=20. It should be noted that the only incorrect thing in the solution is the operator in step 1, but the calculations carried out after the change in the operator are correct, leading to a different result from the original answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates Dora's age in 3 years as 15, then correctly deduces James's current age as 30 by doubling Dora's age. It then correctly adds 19 to James's age to find John's current age as 49. The solution then correctly subtracts 32 from John's age to find the current age of John's youngest son as 17. Finally, it correctly adds 3 to the youngest son's current age to find his age in 3 years as 20."
+    }
+]

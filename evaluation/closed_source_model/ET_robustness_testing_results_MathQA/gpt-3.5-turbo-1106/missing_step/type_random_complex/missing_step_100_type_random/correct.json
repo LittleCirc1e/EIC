@@ -1,0 +1,30 @@
+[
+    {
+        "question": "2500 - ( 1002 / 20.04 ) = ?",
+        "original_solution": "First find out 1002 divided by 20.04 that equals 50.\nAfter that subtract 50 from 2500 that equals 2450.\n#### 2450",
+        "original_answer": 2450.0,
+        "transformed_solution": "Subtract 1002 from 2500 that equals 1498.\n#### 1498",
+        "transformed_answer": 1498.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, step 1 of the original_solution has been removed. The original step 1 is finding out 1002 divided by 20.04, which equals 50, and step 2 is subtracting the result of step 1, which is 50, from 2500. After deleting step 1, step 2 is directly applying the subtraction to 1002 instead of the quotient from step 1, causing the formula to change from 2500 - 50 to 2500 - 1002, which equals 1498. The value 1498 is the new transformed_answer, different from the original_answer. The deletion of step 1 caused a direct change to the subsequent step, which did not reference the result of the deleted step correctly, therefore, wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 1. Step 1 directly subtracts 1002 from 2500 without performing the division operation, so there is a missing step here to perform the division operation first, and this error belongs to missing_step."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly identifies 63 as the next prime number after 59, which is incorrect. The operands and operators of the formula in step 1 are completely correct, but only the result is calculated incorrectly, so it belongs to calculation_error."
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Two trains 140 m and 200 m long run at the speed of 60 km / hr and 40 km / hr respectively in opposite directions on parallel tracks. The time which they take to cross each other is?",
+        "original_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)\nRelative speed = (60 + 40) km/hr = 100 km/hr = (100 x 5) / 18 m/s = (500/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (500/18) = (340 * 18) / 500 = 12.24 seconds\n#### 12.24",
+        "original_answer": 12.24,
+        "transformed_solution": "Time taken to cross each other = (Sum of lengths of trains) / (Relative speed of the two trains)\nRelative speed = (60 - 40) km/hr = 20 km/hr = (20 x 5) / 18 m/s = (100/18) m/s\nLength of both trains = 140 m + 200 m = 340 m\nTime taken = 340 / (100/18) = (340 * 18) / 100 = 61.2 seconds\n#### 61.2",
+        "transformed_answer": 61.2,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition operator in step 2 to a subtraction operator, altering the relative speed calculation from (60 + 40) km/hr to (60 - 40) km/hr, resulting in a relative speed of 20 km/hr instead of 100 km/hr. The following step then converts this to meters per second, (20 x 5) / 18 m/s = (100/18) m/s. The new slower relative speed drastically increases the time taken to cross each other to (340 * 18) / 100 = 61.2 seconds. Every step after the operator change uses the new result, but is individually calculated correctly, thus preserving the single error throughout the solution.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the relative speed, sums the lengths of the trains, and computes the time taken for the trains to cross each other, resulting in the correct final answer."
+    }
+]

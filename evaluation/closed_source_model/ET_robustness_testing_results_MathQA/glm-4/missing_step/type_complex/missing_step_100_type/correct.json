@@ -1,0 +1,30 @@
+[
+    {
+        "question": "If 853845 bars of chocolate need to be placed in little boxes and each box can contain at most 9 bars of chocolate, how many bars of chocolate will be in the last unfilled box?",
+        "original_solution": "The number of bars of chocolate in the last unfilled box is the remainder after dividing 853845 by 9.\nSo, the number of bars of chocolate in the last unfilled box is 6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "To find the number of bars in the last box, calculate 853845 modulo 9.\n853845 modulo 9 equals 6.\n#### 6",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 which describes the process is removed. Instead, step 1 directly calculates the modulo operation (which is the remainder of 853845 divided by 9). However, an intentional calculation error is introduced in step 2 where the result should remain as 6 which is the actual remainder of 853845 divided by 9, but it is inaccurately changed to 5. The wrong_step is 2 since that's where the incorrect number is first introduced in the transformed_solution. The wrong_type is 'calculation_error' because the changed answer is the result of such an error. The error is a single error within the process.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. The operands and operators of the formula in step 2 are completely correct, but only the result is incorrectly calculated as 6 instead of 3, so it belongs to calculation_error."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. The operands and operators of the formula in step 2 are completely correct, but only the result is incorrectly calculated as 25 instead of 375, so it belongs to calculation_error."
+    }
+]

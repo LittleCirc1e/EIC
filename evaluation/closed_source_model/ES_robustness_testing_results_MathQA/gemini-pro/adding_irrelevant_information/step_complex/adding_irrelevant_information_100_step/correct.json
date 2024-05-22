@@ -1,0 +1,44 @@
+[
+    {
+        "question": "the sum of four consecutive even numbers is 292 . what would be the largest number ?",
+        "original_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 280\nx = 70\nThe largest number is 70+6 = 76\n#### 76",
+        "original_answer": 76.0,
+        "transformed_solution": "Assuming that there is an error where we incorrectly subtracted an additional $8 that is not part of the problem statement,\nLet the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 - 8 (incorrectly subtracting $8) = 292\n4x + 4 = 292\n4x = 288\nx = 72\nThe largest number is 72+6 = 78\n#### 78",
+        "transformed_answer": 78.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds an incorrect subtraction of $8 that is not mentioned in the question statement, resulting in step 3 changing from 4x + 12 = 292 to 4x + 12 - 8 = 292, which adjusts the equation solving process. The error affects the computed value of x and consequently the final result for the largest number, which changes from x + 6 = 76 in the original_solution to x + 6 = 78 in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, incorrectly subtracting 8 from 292, resulting in 4x + 4 = 292 instead of 4x + 12 = 292. The subsequent step 4 references the result of step 3, calculating 4x = 288 instead of 4x = 280. The subsequent step 5 references the result of step 4, calculating x = 72 instead of x = 70, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "There are 7 players in a bowling team with an average weight of 103 kg. If two new players join the team, one weighs 110 kg, and the second weighs 60 kg, what will be the new average weight?",
+        "original_solution": "The total weight of the original 7 players is 7 x 103 = 721 kg\nThe new total weight is 721 + 110 + 60 = 891 kg\nThe new average weight is 891 / 9 = 99 kg\n#### 99",
+        "original_answer": 99.0,
+        "transformed_solution": "The total weight of the original 7 players is 7 x 103 = 721 kg\nAssuming one player on the original team brought their pet to the weigh-in, adding an extra 20 kg not accounted for, the new total weight is 721 + 110 + 60 + 20 = 911 kg\nThe new average weight with the pet included is 911 / 9 = 101.22 kg\n#### 101.22",
+        "transformed_answer": 101.22,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <assuming one player on the original team brought their pet to the weigh-in, adding an extra 20 kg not accounted for>, resulting in step 2 changing from 721 + 110 + 60 = 891 kg in the original_solution to 721 + 110 + 60 + 20 = 911 kg in the transformed_solution. The final result of the average weight is affected and changes from 99 kg to 101.22 kg. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in calculating the total weight of the original 7 players, calculating 7 x 103 = 721 kg instead of 7 x 103 = 721 kg. The subsequent step 3 references the result of step 2, calculating 721 + 110 + 60 + 20 = 911 kg instead of 741 + 110 + 60 + 20 = 931 kg. The subsequent step 4 references the result of step 3, calculating 911 / 9 = 101.22 kg instead of 931 / 9 = 103.44 kg, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "the sum of 4 consecutive numbers is 102. The greatest among these 3 number is:",
+        "original_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 = 102.\n4x = 96.\nx = 24.\nThe greatest number is x + 3 = 24 + 3 = 27.\n#### 27",
+        "original_answer": 27.0,
+        "transformed_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 + 8 = 102 because there was a mistake in the original sum calculation.\n4x + 14 = 102.\n4x = 102 - 14.\n4x = 88.\nx = 22.\nThe greatest number is x + 3 = 22 + 3 = 25.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <because there was a mistake in the original sum calculation>, resulting in step 3 changing from 4x + 6 = 102 in the original_solution to 4x + 6 + 8 = 102 in the transformed_solution. This incorrect addition of 8 erroneously increases the sum, which alters the solution cascade and leads to a different greatest number, 25 instead of 27. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 4x + 6 + 8 = 102 instead of 4x + 6 = 102. The subsequent step 4 references the result of step 3, calculating 4x + 14 = 102 instead of 4x + 6 = 102, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

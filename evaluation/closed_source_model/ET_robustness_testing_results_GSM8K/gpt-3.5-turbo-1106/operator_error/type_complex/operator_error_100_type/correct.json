@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly adds the number Brenda throws away instead of subtracting, resulting in an incorrect operand in the formula, so it belongs to operator_error."
+    },
+    {
+        "question": "Ellen is on a diet. She eats two carrots, a salad, and a yogurt every day. The salad costs her $6, while the yogurt is half the price. How much does Ellen pay for one carrot every day when in total she pays $11 for her goods?",
+        "original_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nFor the two carrots Ellen needs to pay $11 - $6 - $3 = $2.\nSo one carrot costs $2 / $2 = $1.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Ellen's yogurt cost is half the price of the salad, so it's $6 / 2 = $3.\nInstead of subtracting, we add the prices Ellen needs to pay $11 + $6 + $3 = $20 for the two carrots and the carrots.\nSo one carrot would incorrectly be calculated as $20 / 2 = $10.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly changes the subtraction in step 2 into addition, and by changing - to +, the calculation of $11 - $6 - $3 = $2 becomes $11 + $6 + $3 = $20. This only affects step 2 directly. Step 3 then inherits the incorrect total from step 2 but performs the division correctly, so the error does not compound further. As a result, only step 2 is incorrect, but its calculation, given the wrong operator, is correct. This leads to an incorrect result for the cost of one carrot.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly adds the prices of the goods instead of subtracting, resulting in an error in the operator of the formula, so it belongs to operator_error."
+    },
+    {
+        "question": "As Dan is learning to screen-print t-shirts to sell at the craft fair, he makes t-shirts, over the first hour, at the rate of one every 12 minutes. Then, in the second hour, he makes one at the rate of every 6 minutes. How many t-shirts does he make over the course of those two hours?",
+        "original_solution": "He made 60/12=5 the first hour.\nHe made 60/6=10 the second hour.\nHe made 5+10=15\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "He made 60/12=5 the first hour.\nHe made 60*6=360 the second hour.\nHe made 5+360=365\n#### 365",
+        "transformed_answer": 365.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 2 into multiplication, altering the original '60/6=10' to '60*6=360'. The error in the operator used in step 2 results in an incorrect outcome for that step. Although the calculation itself (60*6=360) is correct, it's based on a changed operator, hence producing a different, incorrect result. The next step, which sums the results of the first two hours, inherits this incorrect result, changing from '5+10=15' to '5+360=365'. Other aspects of the calculations in the transformed steps are correct, and each step is correctly computed with the modified values. The transformed answer is different from the original answer due to the erroneous operation in step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly uses addition instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 mistakenly uses division instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    },
+    {
+        "question": "Cilia wants to buy a multi-level dumbbell system. The first pair of dumbbells are 3 lb weights, the second pair is 5 lb weights and the third is 8 lb pounds. How much does the entire system weigh?",
+        "original_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2*5 = 10 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+10+16 = 32 lbs\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "The first pair of weights weighs 3 lb each so all total they weigh 2*3 = 6 lbs\nThe second pair of weights weigh 5 lbs each so they weigh 2+5 = 7 lbs\nThe third pair of weights weigh 8 lbs each so they weigh 2*8 = 16lbs\nAll total, the entire system of weights weigh 6+7+16 = 29 lbs\n#### 29",
+        "transformed_answer": 29.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the operator change occurs at the second step. By incorrectly changing the multiplication operator to an addition operator (* to +), the calculation for the weight of the second pair of dumbbells changes from 2*5 = 10 lbs to 2+5 = 7 lbs, and the resulting total system weight is affected, changing from 6+10+16 = 32 lbs to 6+7+16 = 29 lbs. This alters the sum at the final step, yielding an incorrect total weight of 29 lbs instead of the original 32 lbs. The calculation after the change at step 2 is performed correctly, but introduces an error inherited by subsequent steps related to the incorrect weight of the second pair of dumbbells.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses addition instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    }
+]

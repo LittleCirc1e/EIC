@@ -1,0 +1,80 @@
+[
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 x ? = 62976\n? = 62976 / 120\n#### 524",
+        "transformed_answer": 524.67,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the wrong step is the final division (step 2), where it incorrectly divides 62976 by 120 instead of 123, leading to a transformed answer of approximately 524.67. The original multiplication step (step 1) remains unaffected because it precedes the incorrect division. There is only one error introduced, so it is considered a single error, and the explanation summarizes the error introduced and its impact on the subsequent step.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The correct answer should be 512."
+    },
+    {
+        "question": "28 buckets of water fill a tank when the capacity of each bucket is 13.5 litres. How many buckets will be required to fill the same tank if the capacity of each bucket is 9 litres?",
+        "original_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 378 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 378 / 9 = 42\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "The total capacity filled by 28 buckets = 28 x 13.5 = 385 litres\nThe capacity of each bucket to fill the same tank = 9 litres\nNumber of buckets required = 385 / 9 = 42.77\n#### 42.77",
+        "transformed_answer": 42.77,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation in step 1 (28 x 13.5) has been incorrectly modified to equal 385 instead of the correct 378. This introduces a calculation error that carries through to step 3, where the number of buckets required to fill the same tank is now based on the incorrect total capacity of 385 litres. Note that we divide 385 by 9 to get an incorrect transformed_answer of 42.77 buckets, which maintains the correct mathematical operation but with an incorrect value inherited from step 1. Steps that do not depend on the miscalculated total capacity remain unaffected.",
+        "is_correct": "no",
+        "any_explanation": "The answer should be rounded up to the nearest whole number, which is 43."
+    },
+    {
+        "question": "a car started running at a speed of 30 km / hr and the speed of the car was increased by 2 km / hr at the end of every hour. find the total distance covered by the car in the first 8 hours of the journey.",
+        "original_solution": "The distance covered in the first hour is 30 km because 30 x 1 = 30\nThe distance covered in the second hour is 32 km because 32 x 1 = 32\nThe distance covered in the third hour is 34 km because 34 x 1 = 34\nThe distance covered in the fourth hour is 36 km because 36 x 1 = 36\nThe distance covered in the fifth hour is 38 km because 38 x 1 = 38\nThe distance covered in the sixth hour is 40 km because 40 x 1 = 40\nThe distance covered in the seventh hour is 42 km because 42 x 1 = 42\nThe distance covered in the eighth hour is 44 km because 44 x 1 = 44\nThe total distance covered is 296 km because 30 + 32 + 34 + 36 + 38 + 40 + 42 + 44 = 296\n#### 296",
+        "original_answer": 296.0,
+        "transformed_solution": "The distance covered in the first hour is 30 km because 30 x 1 = 30\nThe distance covered in the second hour is 32 km because 32 x 1 = 32\nThe distance covered in the third hour is 34 km because 34 x 1 = 34\nThe distance covered in the fourth hour is 36 km because 36 x 1 = 36\nThe distance covered in the fifth hour is 28 km because 28 x 1 = 28\nThe distance covered in the sixth hour is 40 km because 40 x 1 = 40\nThe distance covered in the seventh hour is 42 km because 42 x 1 = 42\nThe distance covered in the eighth hour is 44 km because 44 x 1 = 44\nThe total distance covered is 286 km because 30 + 32 + 34 + 36 + 28 + 40 + 42 + 44 = 286\n#### 286",
+        "transformed_answer": 286.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example erroneously calculates the distance for the fifth hour as 28 km instead of 38 km in step 5, resulting in the subsequent step 9 (the sum of distances) being affected. The total is incorrectly summed as 286 km instead of 296 km due to this single calculation error, which only affects the total distance calculation and leaves all other steps unaltered. The steps before the wrongly calculated step remain unchanged. The relevant numbers in step 9 (summing of distances) inherit the error, but the arithmetic operation in step 9 itself is still performed correctly.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The distance covered in the fifth hour should be 38 km instead of 28 km."
+    },
+    {
+        "question": "Suppose 8 monkeys take 8 minutes to eat 8 bananas. How many minutes would it take 3 monkeys to eat 3 bananas?",
+        "original_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 10 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly claims that it would take 10 minutes instead of 8 minutes for 3 monkeys to eat 3 bananas in step 2, even though the rate of eating (1 banana per monkey per minute) remains the same. The error in step 2 does not impact step 1 as it is independent and correct in stating the initial ratio. Thus, only the related subsequent step is affected while previous or unrelated steps remain unchanged.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The rate of eating is not the same. It takes 8 minutes for 8 monkeys to eat 8 bananas, so each monkey eats 1 banana in 8 minutes. Therefore, it would take 3 monkeys 3 * 8 = 24 minutes to eat 3 bananas."
+    },
+    {
+        "question": "140 is what percent of 40 ?",
+        "original_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 350\n#### 350%",
+        "original_answer": 350.0,
+        "transformed_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 300\n#### 300%",
+        "transformed_answer": 300.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the division 140/40 in step 3 has been incorrectly calculated as giving 3 instead of 3.5, which leads to the final outcome x being calculated as 300 instead of the correct answer 350. The steps prior to this error remain unaffected, while the final step where x is determined reflects the mistake from the erroneous division.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The correct answer should be 350% instead of 300%. The correct calculation should be: 140 = (x/100) * 40, x = (140/40) * 100, x = 350."
+    },
+    {
+        "question": "At a certain committee meeting only associate professors and assistant professors are present. Each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. If a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14 / 3.\nPlugging the value of a into the first equation, we get 2*(14 / 3) + b = 10.\nSo, b = 10 - 28 / 3.\nSo, b = (30 - 28) / 3.\nSo, b = 2 / 3.\nThere are 14 / 3 associate professors and 2 / 3 assistant professors, so a total of 16/3 or approximately 5.33 people are present.\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, the transformed_solution contains a miscalculation in step 4, where the multiplication of 2 by the first equation is incorrectly carried out as 4a + 2b = 22 instead of 4a + 2b = 20. This single error affects all subsequent steps that rely on it. As a result, step 5 becomes 3a = 14 rather than 3a = 12, and consequently in step 6, the value of a is incorrectly calculated using the wrong 3a value, giving a = 14 / 3 instead of 4. This error flows through to step 7, 8 and 9, where the value of b and the total number of people are calculated based on this incorrect number of associate professors a. Thus, the entire transformed solution carries the initial miscalculation through all related steps, resulting in a wrong answer of approximately 5.33 people instead of the correct answer of 6 people.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The number of people present cannot be a fraction. The correct answer should be 6."
+    }
+]

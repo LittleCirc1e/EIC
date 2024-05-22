@@ -1,0 +1,62 @@
+[
+    {
+        "question": "John joins a country club with 3 other members of his family. The fee to join is $4000 per person. There is also a monthly cost of $1000 per person. John pays half the cost. How much does John pay for the first year?",
+        "original_solution": "There are 3+1=4 members joining\nSo the cost is 4*4000=$16,000 to join\nThe monthly fee comes out to 1000*12=$12,000 per person per year\nSo that is 12000*4=$48,000\nSo the total cost is 16,000+48,000=$64,000\nSo John pays 64000/2=$32,000\n#### 32000",
+        "original_answer": 32000.0,
+        "transformed_solution": "There are 3+1=4 members joining\nSo the cost is 4*4000=$16,000 to join\nThe monthly fee comes out to 1000*12=$12,000 per person per year\nSo that is 12000*4=$48,000\nSo the total cost is 16,000+48,000=$64,000\nSo John pays 64000/2=$31,000\n#### 31000",
+        "transformed_answer": 31000.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 64000/2 as $31,000 instead of $32,000 in step 6. This error does not affect the previous steps, which correctly calculate the total cost. The error only affects the final step where John's payment is calculated, and the subsequent steps related to it inherit this error. The calculation of the formula itself is still correct, but the result is wrong due to the error in step 6.",
+        "is_correct": "no",
+        "corrected_solution": "The total cost for all members in the first year is (3+1)*4000 + (3+1)*1000*12 = 16000 + 48000 = 64000.\nSince John pays half the cost, he pays 64000/2 = 32000.",
+        "corrected_answer": 32000,
+        "corrected_explanation": "The monthly fee should be multiplied by 12 to get the annual fee, and then multiplied by the total number of members to find the total annual cost."
+    },
+    {
+        "question": "In the first round of bowling, Patrick knocked down a total of 70 pins and Richard knocked down 15 more pins than Patrick. In the second round, Patrick knocked down twice as many pins as Richard in the first round and Richard knocked down 3 less than Patrick. How many more pins in total did Richard knock down than Patrick?",
+        "original_solution": "In the first round, Richard knocked down 70 + 15 = 85 pins.\nIn the second round, Patrick knocked down 85 x 2 = 170 pins.\nIn the second round, Richard knocked down 170 - 3 = 167 pins.\nIn total, Patrick knocked down 70 + 170 = 240 pins\nIn total, Richard knocked down 85 + 167 = 252 pins\nRichard knocked down 252 - 240 = 12 pins more than Patrick.\n#### 12",
+        "original_answer": 12.0,
+        "transformed_solution": "In the first round, Richard knocked down 70 + 15 = 85 pins.\nIn the second round, Patrick knocked down 85 x 2 = 170 pins.\nIn the second round, Richard knocked down 170 - 3 = 167 pins.\nIn total, Patrick knocked down 70 + 170 = 240 pins\nIn total, Richard knocked down 85 + 167 = 252 pins\nRichard knocked down 252 - 240 = 10 pins more than Patrick.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution contains a calculation error in step 6, where the difference in the total number of pins knocked down by Richard and Patrick is incorrectly calculated as 10 instead of the correct 12. This error does not affect the previous steps, as they are correct and unrelated to the error introduced in step 6. The calculation error is isolated to the final step, and the transformed_answer reflects the incorrect result of this miscalculation.",
+        "is_correct": "no",
+        "corrected_solution": "In the first round, Richard knocked down  70 + 15 = 85 pins.\nIn the second round, Patrick knocked down 85 x 2 = 170 pins.\nIn the second round, Richard knocked down 170 - 3 = 167 pins.\nIn total, Patrick knocked down 70 + 170 = 240 pins\nIn total, Richard knocked down 85 + 167 = 252 pins\nRichard knocked down 252 - 240 = 12 pins more than Patrick.",
+        "corrected_answer": "12.0",
+        "corrected_explanation": "The mistake in the original solution was in the calculation of the number of pins knocked down by Richard in the second round. The original solution incorrectly subtracted 3 from Patrick's score in the second round to find Richard's score, when it should have subtracted 3 from Patrick's score in the first round."
+    },
+    {
+        "question": "Tom decides to renovate a house.  There are 3 bedrooms and each bedroom takes 4 hours to renovate.  The kitchen takes 50% longer than each bedroom.  The living room took twice as much time as everything else combined.  How long did everything take?",
+        "original_solution": "The kitchen took 4 * .5 = 2 hours longer than the bedrooms\nSo the kitchen took 4 + 2 = 6 hours\nThe bedrooms took 3 * 4 = 12 hours\nSo the kitchen and bedrooms combined took 12 + 6 = 18 hours\nThe living room took 18 * 2 = 36 hours\nSo everything took a total of 18 + 36 = 54 hours\n#### 54",
+        "original_answer": 54.0,
+        "transformed_solution": "The kitchen took 4 * .5 = 2 hours longer than the bedrooms\nSo the kitchen took 4 + 2 = 6 hours\nThe bedrooms took 3 * 4 = 12 hours\nSo the kitchen and bedrooms combined took 12 + 6 = 18 hours\nThe living room took 18 * 2 = 40 hours\nSo everything took a total of 18 + 40 = 58 hours\n#### 58",
+        "transformed_answer": 58.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 18 * 2 = 40 hours instead of 18 * 2 = 36 hours in step 5, which affects the final step 6. The previous steps 1, 2, 3, and 4 remain unchanged because they are not related to the error introduced in step 5. Step 6 inherits the error from step 5, modifying the formula 18 + 36 = 54 hours to 18 + 40 = 58 hours. The calculation error is only in step 5, and the subsequent step 6 is affected by this error, but the calculation within step 6 itself is correct.",
+        "is_correct": "no",
+        "corrected_solution": "1) The total renovation time for the 3 bedrooms is 3 * 4 = 12 hours.\n2) The renovation time for the kitchen is 50% longer than 1 bedroom, thus 4 + 4 * 50% = 6 hours.\n3) The renovation time for the living room is two times longer than the total time of the bedrooms and the kitchen, so 2 * (12 + 6) = 36 hours.\n4) The total renovation time for renovating the whole house is the sum of the renovation time for the bedrooms, the kitchen, and the living room, so 12 + 6 + 36 = 54 hours.",
+        "corrected_answer": 54,
+        "corrected_explanation": "First we calculate the total renovation time for the bedrooms, then we compute the renovation time for the kitchen based on the given information, then we calculate the renovation time for the living room which is twice the total renovation time for the bedrooms and the kitchen, and finally we add the renovation time for each section to get the total renovation time for the whole house."
+    },
+    {
+        "question": "Simon wanted to buy flowers that his mom could plant for Mother's Day. The garden center was offering 10% off all purchases. He bought 5 pansies at $2.50 each, one hydrangea that cost $12.50 and 5 petunias that cost $1.00 each. If he paid with a $50 bill, how much change would Simon receive back from his purchase?",
+        "original_solution": "5 pansies at $2.50 each is 5*2.50 = $12.50\n5 petunias at $1.00 each 5*1 = $5.00\nAll total he spends 12.50+12.50+5.00 = $30.00\nThe sale is 10% off so 30*.10 = $3.00\nThe purchase total now comes to 30-3 = $27.00\nHe pays with a $50 bill so 50-27 = $23.00\n#### 23",
+        "original_answer": 23.0,
+        "transformed_solution": "5 pansies at $2.50 each is 5*2.50 = $12.50\n5 petunias at $1.00 each 5*1 = $5.00\nAll total he spends 12.50+12.50+5.00 = $30.00\nThe sale is 10% off so 30*.10 = $2.00\nThe purchase total now comes to 30-2 = $28.00\nHe pays with a $50 bill so 50-28 = $22.00\n#### 22",
+        "transformed_answer": 22.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the 10% discount of $30.00 as $2.00 instead of $3.00 in step 4. The subsequent steps 5 and 6 are affected by this error. Step 5 changes from 30-3 = $27.00 to 30-2 = $28.00, and step 6 changes from 50-27 = $23.00 to 50-28 = $22.00. The previous steps 1, 2, and 3 remain unchanged as they are not affected by the error in step 4.",
+        "is_correct": "no",
+        "corrected_solution": "5 pansies at $2.50 each is 5*2.50 = $12.50\n1 hydrangea costs $12.50\n5 petunias at $1.00 each is 5*1 = $5.00\nAll total he spends 12.50+12.50+5.00 = $30.00\nThe sale is 10% off so 30*.10 = $3.00\nThe purchase total now comes to 30-3 = $27.00\nHe pays with a $50 bill so 50-27 = $23.00",
+        "corrected_answer": 23.0,
+        "corrected_explanation": "The mistake made in the solution is that the 10% off should be calculated as 30*0.1 instead of 30*0.10, and the final price should be 30-3 = 27 instead of 30-2 = 28."
+    }
+]

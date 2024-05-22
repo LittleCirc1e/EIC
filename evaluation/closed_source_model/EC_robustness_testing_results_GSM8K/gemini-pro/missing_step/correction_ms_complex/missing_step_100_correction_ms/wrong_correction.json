@@ -1,0 +1,62 @@
+[
+    {
+        "question": "A mechanic charges different rates to repair the tires of trucks and cars. For each truck tire that is repaired, the mechanic will charge $60 and for each car tire that is repaired, the mechanic will charge $40. On Thursday, the mechanic repairs 6 truck tires and 4 car tires. On Friday, the mechanic repairs 12 car tries and doesn't repair any truck tires. How much more revenue did the mechanic earn on the day with higher revenue?",
+        "original_solution": "On Thursday the mechanic charged a total of 6*60 + 4*40 = $520.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 520-480 = $40 more revenue than on Friday.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "On Thursday the mechanic charged a total of 6*40 + 4*40 = $400.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 400-480 = -$80 more revenue than on Friday.\n#### -80",
+        "transformed_answer": -80.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been modified to incorrectly calculate the revenue from truck tires by using the price for car tires. In the original_solution, step 1 correctly calculates the revenue for truck tires by using $60. However, in the transformed_solution, step 1 incorrectly uses the car tire price ($40) for the truck tires as well. The remaining steps reference the result of step 1. Therefore, after altering step 1, the revenue calculation for Thursday should be $400 (using 6*40 + 4*40), leading to an incorrect revenue comparison and a negative result for the difference in revenue, that is actually impossible considering the problem context. The transformed_solution's first step now uses the car tire price for the truck tires, changing the formula from 6*60 + 4*40 to 6*40 + 4*40 and resulting in a revenue of $400. The subsequent steps reflect this error with the final step comparing the incorrect calculations, resulting in $400 - $480 equaling -$80. The wrong step is 1 because it contains the first incorrect calculation referencing the wrong tire repair price.",
+        "is_correct": "no",
+        "corrected_solution": "On Thursday the mechanic charged a total of 6*60 + 4*40 = $480.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 480-480 = $0 more revenue than on Friday.\n#### 0",
+        "corrected_answer": 0.0,
+        "corrected_explanation": "The first erroneous step is step 1, which incorrectly calculates the total revenue on Thursday as 6*40 + 4*40 = $400 instead of 6*60 + 4*40 = $480. This error leads to an incorrect conclusion that Thursday had higher revenue than Friday. The corrected calculation shows that both days had the same revenue of $480, resulting in a difference of $0."
+    },
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "is_correct": "no",
+        "corrected_solution": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. Therefore, they are able to bake 3*7 + 6*7 + 8*7 = 151 pies in 7 days.\n#### 151",
+        "corrected_answer": 151.0,
+        "corrected_explanation": "The first erroneous step is step 3, which directly adds up the number of pies baked by Eddie, his sister, and his mother. There is a necessary step missing here to multiply the number of pies baked per day by the number of days. Step 3 should calculate 3*7 + 6*7 + 8*7 = 151 instead of 3*7 + 42 + 56 = 119."
+    },
+    {
+        "question": "Tracy, John and Jake found their combined weight to be 158 kilograms. If Tracy weighs 52 kg and Jake weighs 8kg more than Tracy, what is the range of their weights?",
+        "original_solution": "Jake weighs 8kg more than 52 kg which is 8+52 = 60 kg\nTracy and Jake together weigh 60+52 = 112kg\nJohn therefore weighs 158-112 = 46 kg\nThe range of their weights is 60-46 = 14kg\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Tracy and Jake together weigh 52+52 = 104kg\nJohn therefore weighs 158-104 = 54 kg\nThe range of their weights is 60-54 = 6kg\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution computed Jake's weight, using the fact that he weighs 8kg more than Tracy. In the transformed_solution, the first step was removed. Since step 1 of the original_solution referred to the 8 kg additional weight Jake has over Tracy, after removing this step, the subsequent related steps should now reference 52 kg (Tracy's weight, and the largest of the numbers referenced in the deleted step). This leads to step 1 of the transformed_solution, which originally computed Tracy and Jake's combined weight using Jake's actual weight, to instead double Tracy's weight (thus stepping away from the +8). As a result, Tracy and Jake's combined weight is incorrectly listed as 52+52 kg, and the remaining steps are updated accordingly to keep consistency. This causes a change of calculated values in steps 2 and 3, now using the incorrect combined weight for the formula and subsequently changing the result of their range, from 60-46 = 14kg to 60-54 = 6kg. The first modified step in the transformed_solution is step 1; therefore, the wrong_step is 1.",
+        "is_correct": "no",
+        "corrected_solution": "Tracy and Jake together weigh 52+52+8 = 112kg\nJohn therefore weighs 158-112 = 46 kg\nThe range of their weights is 52-46 = 6kg\n#### 6",
+        "corrected_answer": 6.0,
+        "corrected_explanation": "The first erroneous step is step 1, which directly adds up Tracy's weight and Jake's weight without considering Jake's additional weight. There is a necessary step missing here to add Jake's additional weight to Tracy's weight to obtain their combined weight, which is 52+8=60. Step 1 should calculate 52+60=112 instead of 52+52=104. This also affects the subsequent step 2, where an incorrect calculation of 158-104=54 instead of 158-112=46, resulting in the final erroneous result."
+    },
+    {
+        "question": "The last time Bob cut his hair he cut it to 6 inches.  His hair is now 36 inches long.  If hair grows at a rate of .5 inches per month how many years did it take him to grow out his hair?",
+        "original_solution": "His hair grew 36 inches - 6 inches = 30 inches\nHair grows at a rate of 12 months/year * 0.5 inches/month =6 inches/year\nIt took him 30 inches / 6 inches/year = 5 years to grow his hair out.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "His hair grew 36 inches * 12 months/year = 432 inches\nIt took him 432 inches / 0.5 inches/month = 864 months to grow his hair out.\n864 months / 12 months/year = 72 years\n#### 72",
+        "transformed_answer": 72.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step is altered and contains a mathematically incorrect operation. Instead of subtracting the starting length from the current length (36 inches - 6 inches), the current length is incorrectly multiplied by the number of months in a year (36 inches * 12 months/year), leading to a result of 432 inches. The transformed solution's step 1 results in an incorrect calculation that does not represent the hair growth correctly, therefore directly leading to the wrong answer that it took 72 years for Bob to grow out his hair. The sequence of steps in the transformed_solution erroneously inflated the hair growth, directly affecting the subsequent computations, which are also incorrect but follow from the initial error in step 1. The error is classified as a calculation error and wrong_step is identified as 1 because that is where the first incorrect operation occurred.",
+        "is_correct": "no",
+        "corrected_solution": "His hair grew 30 inches * 12 months/year = 360 inches\nIt took him 360 inches / 0.5 inches/month = 720 months to grow his hair out.\n720 months / 12 months/year = 60 years\n#### 60",
+        "corrected_answer": 60.0,
+        "corrected_explanation": "The first erroneous step is step 1, which incorrectly calculates the total growth of Bob's hair as 36 inches * 12 months/year = 432 inches. The correct calculation should be 30 inches * 12 months/year = 360 inches, as Bob's hair grew from 6 inches to 36 inches, a total growth of 30 inches. This error affects the subsequent steps, leading to an incorrect result of 72 years instead of the correct 60 years."
+    }
+]

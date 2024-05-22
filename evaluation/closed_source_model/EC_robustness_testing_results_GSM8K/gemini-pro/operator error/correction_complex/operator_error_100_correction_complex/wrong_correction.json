@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A store decides to shut down and sell all of its inventory. They have 2000 different items which would normally retail for $50. They are offering an 80% discount and manage to sell 90% of the items. They owed $15000 to their creditors. How much money do they have left after the sale?",
+        "original_solution": "They sold 2000*.9=1800 items\nThey offered a 50*.8=$40 discount\nThat means that each item sold for 50-40=$10\nSo they made 1800*10=$18,000\nSo they had 18,000-15,000=$3,000 leftover\n#### 3000",
+        "original_answer": 3000.0,
+        "transformed_solution": "They sold 2000*.9=1800 items\nThey offered a 50/.8=$62.50 discount\nThat means that each item sold for 50-62.50=$-12.50\nSo they made 1800*-12.50=$-22,500\nSo they had -22,500-15,000=$-37,500 leftover\n#### -37500",
+        "transformed_answer": -37500.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 2 into division, changing 50*.8=$40 to 50/.8=$62.50 by changing * to /. The subsequent steps 3, 4, and 5 inherit this result. Step 3 changes from 50-40=$10 to 50-62.50=$-12.50, creating an erroneous negative value for the selling price. Consequently, step 4 changes from 1800*10=$18,000 to 1800*-12.50=$-22,500, resulting in a negative sales total. This negative revenue leads to step 5 wherein the store's leftover money turns from a positive value (18,000-15,000=$3,000) to a negative value (-22,500-15,000=$-37,500), suggesting the store is in debt after the sale. The mistake lies only in step 2's operator, but its calculation is correct, affecting all the subsequent steps that rely on its flawed result. The calculations in the subsequent steps are correctly executed with respect to the altered step 2 result.",
+        "is_correct": "no",
+        "corrected_solution": "They sold 2000*.9=1800 items\nThey offered a 50/.8=$62.50 discount\nThat means that each item sold for 50-62.50=$-12.50\nSo they made 1800*-12.50=$-22,500\nSo they had -22,500+15,000=$-7,500 leftover\n#### -7500",
+        "corrected_answer": -7500.0,
+        "corrected_explanation": "Step 4 makes a mistake in the calculation process, calculating -22,500-15,000=-$37,500 instead of -22,500+15,000=-$7,500, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Adam teaches 50 students a year. How many students will Adam teach in 10 years if in the first year he only teaches 40 students?",
+        "original_solution": "Adam will teach 50 * 9 = 450 students in 9 years.\nSo, in 10 years Adam will teach 450 + 40 = 490 students.\n#### 490",
+        "original_answer": 490.0,
+        "transformed_solution": "Adam will teach 50 / 9 = 5.56 students in 9 years.\nSo, in 10 years Adam will teach 5 + 40 = 45 students.\n#### 45",
+        "transformed_answer": 45.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication operator in step 1 to a division operator by changing 50 * 9 to 50 / 9, which incorrectly calculates the number of students Adam will teach in 9 years as 5.56. The second step is updated to add this incorrect value to the 40 students taught in the first year, deriving 5 + 40 = 45. Thus, the operator change in step 1 leads to a wrong step in subsequent calculations, but other aspects of the solution, such as the adherence to the order of operations and the correctness of arithmetic, are maintained.",
+        "is_correct": "no",
+        "corrected_solution": "Adam will teach 50 students in 9 years.\nSo, in 10 years Adam will teach 50 + 40 = 90 students.\n#### 90",
+        "corrected_answer": 90.0,
+        "corrected_explanation": "Step 2 first makes a mistake in the calculation process, calculating 50 / 9 = 5.56 instead of 50 / 9 = 5.56. The subsequent step 3 references the result of step 2, calculating 5 + 40 = 45 instead of 50 + 40 = 90, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Adam has $100 and wants to spend it to open a rock stand. He can buy rocks for $5 each and sell them for $7 each. If he invests all his money in the rock stand but only sells 60% of his inventory, how much money does he lose?",
+        "original_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 x 7 = 84\nHe lost $16 on his business because 100 - 84 = 16\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 * 7 = 84\nHe lost $16 on his business because 100 * 84 = 8400\n#### -8284",
+        "transformed_answer": -8284.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example incorrectly transforms the subtraction operator in the original solution's final step into a multiplication operator. By changing '-' to '*', the calculation '100 - 84 = 16' becomes '100 * 84 = 8400', leading to an incorrect step and a vastly incorrect final answer of losing $8,284 instead of $16. This affects only the final step, but all other calculations presented in the transformed solution are performed correctly, maintaining the integrity of the outlined process save for the single error introduced.",
+        "is_correct": "no",
+        "corrected_solution": "He can buy 20 rocks because 100 / 5 = 20\nHe sells 12 of these rocks because 20 x .6 = 12\nHe makes $84 selling these because 12 * 7 = 84\nHe lost $16 on his business because 100 - 84 = 16\n#### -16",
+        "corrected_answer": -16.0,
+        "corrected_explanation": "Step 4 makes a mistake in the calculation process, calculating 100 * 84 = 8400 instead of 100 - 84 = 16, resulting in the final incorrect answer."
+    }
+]

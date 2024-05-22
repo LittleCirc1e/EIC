@@ -1,0 +1,44 @@
+[
+    {
+        "question": "In a factory, there are 3 machines working 23 hours a day. The owner decided to buy a fourth machine, which works only 12 hours a day. One machine can produce 2 kg of material every hour. The factory sells the produced material for $50 per 1 kg. How much can this factory earn in one day?",
+        "original_solution": "The total runtime for the first three machines is 3 machines * 23 hours/day/machine = 69 hours/day.\nSo these machines could produce 69 hours/day * 2 kg/hour = 138 kg/day.\nThe fourth machine could produce 12 hours/day * 2 kg/hour = 24 kg/day of material.\nIn total all the machines would produce 138 kg/day + 24 kg/day = 162 kg/day of material.\nThe factory would therefore earn 162 kg/day * $50/kg = $8100/day.\n#### 8100",
+        "original_answer": 8100.0,
+        "transformed_solution": "The total runtime for the first three machines is 3 machines * 23 hours/day/machine = 69 hours/day.\nSo these machines could produce 69 hours/day * 2 kg/hour = 138 kg/day.\nThe fourth machine could produce 12 hours/day * 2 kg/hour = 24 kg/day of material.\nIn total all the machines would produce 138 kg/day + 24 kg/day = 156 kg/day of material.\nThe factory would therefore earn 156 kg/day * $50/kg = $7800/day.\n#### 7800",
+        "transformed_answer": 7800.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references the total produced by the first three machines as 138 kg/day and the fourth machine as 20 kg/day (implicitly, since 156 - 138 = 18, which could be misconstrued as 12 hours * 1.5 kg/hour for a total of 18 kg/day) from steps 2 and 3 by changing the correct sum 138 kg/day + 24 kg/day = 162 kg/day to an incorrect sum 138 kg/day + 24 kg/day = 156 kg/day. It should be noted that steps 2 and 3 in the transformed_solution should be the same as the steps 2 and 3 in the original_solution and should have their result numbers calculated correctly. Step 5, as the subsequent step of step 4, is affected and changes the total earning from 162 kg/day * $50/kg = $8100/day to 156 kg/day * $50/kg = $7800/day. The referencing error only occurs at step 4, and thus all calculations for the other steps are still correct. The consequence of this single referencing error is that the transformed_answer changes to $7800, which is different from the original_answer of $8100.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total production of material by all machines and then correctly calculates the earnings by multiplying the total production by the price per kilogram. All steps are correct and there are no errors in the calculations or the use of formulas."
+    },
+    {
+        "question": "While Joanne is gathering apples from her family’s orchard, her sister comes outside to help her. Joanne gathers 30 apples from the tallest trees, half this amount from the shortest trees, and more apples from the average trees. Compared with Joanne, her sister gathers twice as many apples from the tallest trees and 3 times as many apples from the shortest trees. She doesn't take any from the average trees. If the sisters have gathered a combined total of 500 apples, how many apples did Joanne gather from the average trees?",
+        "original_solution": "Joanna gathered 30 apples / 2 = 15 apples from the shortest trees.\nHer sister gathered 30 apples * 2 = 60 apples from the tallest trees.\nHer sister also gathered 15 apples * 3 = 45 apples from the shortest trees.\nIn total, her sister gathered 60 + 45 = 105 apples.\nFrom the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.\nSo far, the sisters have a combined total of 105 + 45 = 150 apples.\nTherefore, Joanna must have gathered 500 total apples – 150 apples so far = 350 apples from the average trees.\n#### 350",
+        "original_answer": 350.0,
+        "transformed_solution": "Joanna gathered 30 apples / 2 = 15 apples from the shortest trees.\nHer sister gathered 30 apples * 2 = 60 apples from the tallest trees.\nHer sister also gathered 15 apples * 3 = 45 apples from the shortest trees.\nIn total, her sister gathered 60 + 45 = 105 apples.\nFrom the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.\nSo far, the sisters have a combined total of 105 + 45 = 140 apples.\nTherefore, Joanna must have gathered 500 total apples – 140 apples so far = 360 apples from the average trees.\n#### 360",
+        "transformed_answer": 360.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 150 as 140 from step 5 and changes 105 + 45 = 150 to 105 + 45 = 140. It should be noted that step 5 in the transformed_solution <From the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.> should be the same as the step 5 in the original_solution <From the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.> and calculates its result 45 correctly. However, the language description of step 6 has also changed from <So far, the sisters have a combined total of 105 + 45 = 150 apples.> to <So far, the sisters have a combined total of 105 + 45 = 140 apples.>. Step 7, as the subsequent related step of step 6, is affected by step 6 and changes 500 - 150 = 350 to 500 - 140 = 360. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the number of apples gathered by Joanna and her sister from the tallest and shortest trees, and then correctly subtracts this number from the total to find the number of apples Joanna gathered from the average trees."
+    },
+    {
+        "question": "Uncle Ben has 440 chickens on his farm. 39 are roosters and the rest are hens. 15 of his hens do not lay eggs, and the rest do. If each egg-laying hen lays 3 eggs, how many eggs will Uncle Ben have?",
+        "original_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 386 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 386 hens = 1158 eggs.\n#### 1158",
+        "original_answer": 1158.0,
+        "transformed_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 385 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 385 hens = 1155 eggs.\n#### 1155",
+        "transformed_answer": 1155.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 401 as 401 from step 1 but changes 401 - 15 to 385 instead of the correct 386. It should be noted that step 1 in the transformed_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> should be the same as the step 1 in the original_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> and calculates its result 401 correctly. The subsequent step 3, which is related to step 2, is affected by the incorrect subtraction result but is still calculated correctly as 3 * 385 to give 1155 eggs. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the transformed_answer 1155 is different from the original_answer 1158.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly subtracts the number of roosters from the total number of chickens to find the number of hens, then subtracts the number of hens that do not lay eggs to find the number of egg-laying hens, and finally multiplies the number of egg-laying hens by the number of eggs each hen lays to find the total number of eggs. The arithmetic calculations are correct, and the logical steps follow the information given in the question."
+    }
+]

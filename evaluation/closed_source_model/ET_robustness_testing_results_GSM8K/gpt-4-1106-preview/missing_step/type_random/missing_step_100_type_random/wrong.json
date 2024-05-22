@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Liam is 16 years old now. Two years ago, Liam’s age was twice the age of Vince. How old is Vince now?",
+        "original_solution": "Liam's age two years ago was 16 - 2 = 14 years old.\nVince's age two years ago was 14/2 = 7 years old because Liam's age is twice his.\nSo Vince age now is 7 + 2 = 9 years old.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Vince's age two years ago was 16/2 = 8 years old because Liam's age is twice his.\nSo Vince's age now is 8 + 2 = 10 years old.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 1 calculates Liam’s age two years ago. However, the transformed_solution removes this first step. As a consequence, step 1 in the transformed_solution, which originally is step 2 in the original_solution, directly references the number 16 from the question, which leads to Vince’s age being half of 16 instead of half of Liam’s age two years ago. This results in a transformed answer of 10, which is incorrect. The error in the new step 1 is due to the fact that it incorrectly calculates Vince’s age as half of Liam’s current age rather than half of Liam’s age two years ago. Since the original step 1 is absent, the subsequent related step (the new step 1) becomes the wrong step.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates Vince's age two years ago by dividing Liam's age at that time by 2, and then correctly adds 2 years to find Vince's current age. There are no errors in the solution."
+    },
+    {
+        "question": "Madeline spends 18 hours a week in class. She spends 4 hours per day working on homework. She spends 8 hours per day sleeping. She works part-time 20 hours per week. How many hours left over does Madeline have?",
+        "original_solution": "Madeline spends 4*7=28 hours on homework.\nShe spends 8*7-56 hours sleeping.\nTherefore, she is busy 28+18+56+20=122 hours per week.\nThere are 7*24=168 hours per week.\nThus, Madeline has 168-122=46 hours left over.\n#### 46",
+        "original_answer": 46.0,
+        "transformed_solution": "She spends 8*7=56 hours sleeping.\nTherefore, she is busy 4*7+18+56+20=144 hours per week.\nThere are 7*24=168 hours per week.\nThus, Madeline has 168-144=24 hours left over.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step, which references the number 4 from the question, is removed. Step 2 of the original_solution, which uses the result 28 from the deleted step, now references the number 4 directly and recalculates the total hours busy per week. The calculation changes from 28+18+56+20=122 to 4*7+18+56+20=144. This does not affect the calculation of step 3 at all, which remains the same. Since step 1 was deleted, we start from step 2 in the transformed_solution, which is a combination of step 1 and step 3 from the original solution. Therefore, the first step that contains an error is step 2 in the transformed_solution, which is equivalent to step 3 in the original_solution. So the wrong_step is 2.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "All steps in the solution are correct. The time spent on each activity is correctly calculated, and the total time spent on activities is correctly subtracted from the total hours in a week to find the leftover hours."
+    }
+]

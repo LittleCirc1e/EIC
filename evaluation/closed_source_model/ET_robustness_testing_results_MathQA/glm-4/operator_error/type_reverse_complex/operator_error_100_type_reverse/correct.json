@@ -1,0 +1,44 @@
+[
+    {
+        "question": "evaluate : | 7 - 8 ( 3 - 12 ) | - | 5 - 11 | = ?",
+        "original_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 * -9 = -72\nSo, the expression becomes |7 - (-72)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-72) = 79\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |79| - |-6| = 79 - 6 = 73\n#### 73",
+        "original_answer": 73.0,
+        "transformed_solution": "First, solve the inner parentheses: 3 - 12 = -9\nThen, 8 / -9 = -0.88888888889 (approx -0.89)\nSo, the expression becomes |7 - (-0.89)| - |5 - 11|\nNow, solve inside the first absolute value: 7 - (-0.89) = 7.89\nAnd inside the second absolute value: 5 - 11 = -6\nFinally, evaluate the expression: |7.89| - |-6| = 7.89 - 6 = 1.89\n#### 1.89",
+        "transformed_answer": 1.89,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 2 to division, altering 8 * -9 = -72 to 8 / -9 = -0.88888888889 (rounded to -0.89). The subsequent steps inherit the altered value from step 2. The calculation within the absolute value expressions in step 4 and 5 is adjusted to the new values. Then the final evaluation computes the expression |7.89| - |-6| to be 7.89 - 6, resulting in 1.89. All the calculations after the operator change are correct, but the result is changed due to the modification in step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 incorrectly divides 8 by -9 instead of multiplying 8 by -9, which is an operator error. This affects the subsequent steps that reference this result, leading to the incorrect final answer."
+    },
+    {
+        "question": "If the operation ø is defined for all positive integers x and w by x ø w = ( 2 ^ x ) / ( 2 ^ w ) then ( 3 ø 1 ) ø 2 = ?",
+        "original_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 / 2 ^ 2 = 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "3 ø 1 = 2 ^ 3 / 2 ^ 1 = 8 / 2 = 4\nThen, 4 ø 2 = 2 ^ 4 * 2 ^ 2 = 16 * 4 = 64\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division operator in the second part of the expression to multiplication, altering the expression from 2 ^ 4 / 2 ^ 2 to 2 ^ 4 * 2 ^ 2. The erroneous transformation from division to multiplication leads to a different result in step 2, changing the correct answer of 4 to an incorrect answer of 64. The calculation within the transformed solution is performed correctly, but due to the operator change, the outcome is incorrect and affects the transformed_answer which is now different from the original_answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 incorrectly uses multiplication instead of division when performing the operation ø for the second time. According to the definition of the operation ø, it should be (2^x) / (2^w), but it was incorrectly calculated as (2^x) * (2^w), which is an operator error."
+    },
+    {
+        "question": "A cistern can be filled by a tap in 3 hours while it can be emptied by another tap in 8 hours. If both the taps are opened simultaneously, then after how much time will the cistern get filled?",
+        "original_solution": "The combined rate of both taps is 1/3 - 1/8 = 5/24 cistern/hour\nIt will take 24/5 = 4.8 hours to fill the cistern\n#### 4.8",
+        "original_answer": 4.8,
+        "transformed_solution": "The combined rate of both taps is 1/3 + 1/8 = 11/24 cistern/hour\nIt will take 24/11 = 2.1818 hours to fill the cistern\n#### 2.1818",
+        "transformed_answer": 2.1818,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The example changes the subtraction in step 1 to addition, converting 1/3 - 1/8 to 1/3 + 1/8 and therefore changing the result from 5/24 to 11/24. This affects step 2, where the time taken to fill the cistern changes from 24/5 = 4.8 hours to 24/11 = 2.1818 hours. The calculation in step 1 is done correctly but with the wrong operator, leading to an incorrect result, and this error carries over to step 2. However, step 2 calculations are performed correctly using the incorrect result from step 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is the combination of the rates of the taps. The correct way to combine the rates would be to subtract the rate at which the cistern is emptied from the rate at which it is filled, which is 1/3 - 1/8. Instead, the solution adds the two rates, which is incorrect. This is an operator error because the addition operator is used instead of the subtraction operator."
+    }
+]

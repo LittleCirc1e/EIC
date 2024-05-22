@@ -1,0 +1,30 @@
+[
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.5 = 77.36842105263158.\n#### 77.36842105263158",
+        "transformed_answer": 77.36842105263158,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 9.8 in the question as 9.5 wrongly, and calculates 735 / 9.5 instead of 735 / 9.8. The subsequent related step will be affected by the erroneous result of this step but is still calculated correctly based on the incorrect premise. All other steps that reference this number (9.8) still reference it correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 735 / 9.5 instead of 735 / 9.8. The subsequent step 2 references the result of step 1, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "at a certain committee meeting only associate professors and assistant professors are present. each associate professor has brought 2 pencils and 1 chart to the meeting, while each assistant professor has brought 1 pencil and 2 charts. if a total of 10 pencils and 8 charts have been brought to the meeting, how many people are present?",
+        "original_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 10 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 20.\nSubtracting the second equation from the first, we get 3a = 12.\nSo, a = 4.\nPlugging the value of a into the first equation, we get 2*4 + b = 10.\nSo, b = 2.\nThere are 4 associate professors and 2 assistant professors, so a total of 6 people are present.\n#### 6",
+        "original_answer": 6,
+        "transformed_solution": "Let a be the number of associate professors and b be the number of assistant professors.\n2a + b = 11 because each associate professor brought 2 pencils and each assistant professor brought 1 pencil.\na + 2b = 8 because each associate professor brought 1 chart and each assistant professor brought 2 charts.\nMultiplying the first equation by 2, we get 4a + 2b = 22.\nSubtracting the second equation from the first, we get 3a = 14.\nSo, a = 14/3.\nPlugging the value of a into the first equation, we get 2*(14/3) + b = 11.\nSo, b = 11 - 2*(14/3).\nSo, b = 11 - 28/3.\nSo, b = 33/3 - 28/3.\nSo, b = 5/3.\nThere are 14/3 associate professors and 5/3 assistant professors, so a total of (14/3 + 5/3) people are present.\nSo a total of 19/3 people are present, which is not possible, therefore we have a mistake in the initial step.\nAfter correcting we would get a=4 and b=2 for a total of 6 people are present.\n#### 6.33",
+        "transformed_answer": 6.33,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 10 in the question as 11 wrongly, and calculates 2a + b = 11 instead of 2a + b = 10. Its subsequent related steps will be affected by the erroneous result of this step but still be calculated correctly. Steps 2, 3, 4, 5, 6, and 7 correctly reference the numbers in their calculations, even though they propagate the error introduced in step 1. Please note that we should only consider the error in step 1, so all other steps that reference the numbers of pencils and charts will still reference them correctly except for the modified step. The substeps within step 7 correctly calculate b based on the incorrect step 1. After correcting we would get a=4 and b=2 for a total of 6 people are present. The transformed answer should therefore be returned to the original correct answer, even though the transformation process resulted in a nonsensical result implying a fraction of people.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in setting up the equations. The correct equations should be 2a + b = 10 and a + 2b = 8, instead of 2a + b = 11 and a + 2b = 8. The subsequent steps reference the results of step 1, leading to incorrect calculations and the final wrong answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "question": "The coach of a football team asked his players to do six laps of the field. The field is in the shape of a rectangle of length 100 m and width 50 m. What is the distance each player will run, in meters?",
+        "original_solution": "One lap corresponds to the perimeter of a rectangle of 100 m length and 50 m width: 2*100 + 2*50 = 300 metres.\nEach player has to do six turns of the field, so runs 6*300 = 1800 meters.\n#### 1800",
+        "original_answer": 1800.0,
+        "transformed_solution": "One lap corresponds to the area of a rectangle of 100 m length and 50 m width: 100*50 = 5000 metres.\nEach player has to do six turns of the field, so runs 6*5000 = 30000 meters.\n#### 30000",
+        "transformed_answer": 30000.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the perimeter and area of rectangle. The question requires calculating the perimeter of the rectangle for one lap, which is the sum of all sides, not the area. The original_solution correctly applies the perimeter formula 2*length + 2*width for a single lap. In the transformed_solution, the formula used is for the area (length * width) instead of the perimeter, resulting in 100*50 = 5000 metres for one lap instead of 2*100 + 2*50 = 300 metres. This error impacts step 2, where the total distance run changes from 6*300 = 1800 meters to 6*5000 = 30000 meters. The language description of step 1 in the original_solution 'One lap corresponds to the perimeter of a rectangle' remains unchanged in the transformed_solution, even though a different formula is applied.",
+        "is_correct": "no",
+        "pred_wrong_type": "confusing_formula_error",
+        "type_explanation": "The formula used in the first wrong step is incorrect. The area of a rectangle is calculated by multiplying its length and width, while the distance each player will run is the perimeter of the rectangle, which is calculated by adding twice its length and twice its width."
+    },
+    {
+        "question": "The perimeter of a square-shaped piece of paper is 20 cm shorter than the height of a computer screen. How many cm is the height of the screen if the side of the square paper is 20 cm?",
+        "original_solution": "The perimeter of a square is found by 4*side, which means the square paper has a perimeter of 4*20 = 80\nSince the perimeter of the square is 20 cm shorter than the height of the computer screen, the height of the computer screen is 20+80 = 100cm.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "The perimeter of a square is found by side^2, which means the square paper has a \"perimeter\" of 20^2 = 400\nSince the \"perimeter\" of the square is 20 cm shorter than the height of the computer screen, the height of the computer screen is 20+400 = 420cm.\n#### 420",
+        "transformed_answer": 420.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 confuses the formula for the area of a square (side^2) with the formula for its perimeter (4*side). The original solution correctly uses 4*20 to calculate the perimeter, but the transformed solution incorrectly uses 20^2. This is a formula for the area of a square, not the perimeter. This confusion in formula affects our final calculation for the height of the computer screen, changing the calculation from 20+80 in the original solution to 20+400 in the transformed solution. The language describing the steps remains unchanged; only the formula is modified to effect the error. Other steps of the calculation apply the changes correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "confusing_formula_error",
+        "type_explanation": "The formula used to calculate the perimeter of a square is incorrect. The perimeter of a square is found by 4 * side, not side^2."
+    },
+    {
+        "question": "Bob is building a garden on his land, and he wants it to be fenced in to keep out varmints. The garden is a rectangular plot 225 feet long by 125 feet wide. He also wants to have a small 3-foot wide gate to walk through and a larger 10-foot wide gate to move his gardening equipment through. How much fencing is Bob going to need to fence in his garden, taking into account the two gates?",
+        "original_solution": "The perimeter of the garden is 2 * 225 + 2 * 125 = 450 + 250 = 700 feet.\nMinus the two gates, he will need at least 700 - 3 - 10 = 687 feet of fencing.\n#### 687",
+        "original_answer": 687.0,
+        "transformed_solution": "Calculation of the incorrect perimeter using the area formula: The perimeter of the garden is 225 * 125 = 28125 feet.\nMinus the two gates, he will need at least 28125 - 3 - 10 = 28112 feet of fencing.\n#### 28112",
+        "transformed_answer": 28112.0,
+        "wrong_step": 1,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed solution incorrectly uses the formula for calculating the area of a rectangle instead of the perimeter. The correct formula for perimeter is 2 times the length plus 2 times the width (2 * length + 2 * width), whereas the formula used in the transformation is for area (length * width). Consequently, the correct calculation for the perimeter, 2 * 225 + 2 * 125, is replaced with an incorrect calculation of area, 225 * 125. This improper calculation leads to an erroneous total length of fencing required, 28112 feet instead of the correct 687 feet. The subsequent subtraction of the gate widths is correct in itself, but stems from the incorrect calculation of the perimeter.",
+        "is_correct": "no",
+        "pred_wrong_type": "confusing_formula_error",
+        "type_explanation": "The solution incorrectly uses the area formula (length * width) to calculate the perimeter of the garden, which is the sum of the lengths of all four sides. The correct formula for the perimeter of a rectangle is 2 * (length + width)."
+    },
+    {
+        "question": "Mary is building a mosaic for her school cafeteria's wall. It will be 10 feet tall and 15 feet long. Each tile she uses is 1 inch square. How many tiles will she need?",
+        "original_solution": "First convert the length of the mural to inches: 15 feet * 12 inches/foot = 180 inches\nThen convert the height of the mural to inches: 10 feet * 12 inches/foot = 120 inches\nThen multiply the length and the height to find the total area of the mural: 180 inches * 120 inches = 21600 square inches. Since each tile is 1 square inch, this is also the number of tiles she needs.\n#### 21600",
+        "original_answer": 21600.0,
+        "transformed_solution": "First convert the length of the mural to inches: 15 feet * 12 inches/foot = 180 inches\nThen convert the height of the mural to inches: 10 feet * 12 inches/foot = 120 inches\nThen add the length and height to find the total perimeter of the mural: 180 inches + 120 inches = 300 inches. Since we are calculating perimeter instead of area in this step, this will give us a different number of tiles. However, for each tile being 1 square inch, this step is incorrect for determining the number of tiles she needs.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 3,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 confuses the perimeter and area of a rectangle. The question requires that the total area of the mural to be solved, which would be the length multiplied by the height. Instead, the length and height are added together, which would calculate the perimeter if the width were also a part of the calculation, resulting in 180 inches * 120 inches = 21600 square inches in the original_solution becoming 180 inches + 120 inches = 300 inches in the transformed_solution. This affects the subsequent understanding of the result as the number of tiles needed by Mary, changing from 21600 tiles to an incorrect 300 tiles based on perimeter rather than area. Note that the language descriptions of the steps in the original_solution remain unchanged in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and other calculation processes are still correct. In this example, only step 3 mistakenly uses the addition suitable for calculating perimeter instead of the multiplication required for area, while the other calculation processes are still correct, although they are now based on an incorrect transformed_step.",
+        "is_correct": "no",
+        "pred_wrong_type": "confusing_formula_error",
+        "type_explanation": "The step of adding the length and height to find the total perimeter of the mural is incorrect for determining the number of tiles she needs, because the formula for calculating the perimeter of a rectangle is P = 2(L + W), and the formula for calculating the area of a rectangle is A = L * W. In this case, we need to calculate the area of the mural to find the number of tiles needed."
+    }
+]

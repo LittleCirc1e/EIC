@@ -1,0 +1,17 @@
+[
+    {
+        "question": "James builds a 20 story building. The first 10 stories are each 12 feet tall each. The remaining floors are each 3 feet taller. How tall is the building?",
+        "original_solution": "The first 10 floors are 10*12=120 feet\nThere are a remaining 20-10=10 stories\nThey are each 12+3=15 feet\nSo those stories are 15*10=150 feet\nSo the total height is 120+150=270 feet\n#### 270",
+        "original_answer": 270.0,
+        "transformed_solution": "The first 10 floors are 10*12=120 feet\nThere are a remaining 20-10=10 stories\nThey are each 12+3=15 feet\nSo those stories are 15*10=140 feet\nSo the total height is 120+140=260 feet\n#### 260",
+        "transformed_answer": 260.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 15*10 as 140 instead of 150 in step 4, which affects the final step 5. The previous steps 1, 2, and 3 remain unchanged because they are not dependent on the result of step 4. Step 5 inherits the error from step 4, modifying the formula 120+150=270 feet to 120+140=260 feet. It should be noted that only one calculation error is introduced, and the subsequent related steps to this wrong step will only inherit its error, which means the relevant numbers in the formula or language description inherit the error, but the calculation of the formula itself is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "The first 10 floors are 10*12 = 120 feet.\nThe remaining floors are each 3 feet taller. So the 11th floor is 12 + 3 = 15 feet, the 12th floor is 15 + 3 = 18 feet, and so on.\nThere are a remaining 20 - 10 = 10 stories. So those stories are 15 feet, 18 feet, ..., 42 feet.\nSo the total height is 120 + 15*10 = 390 feet.",
+        "corrected_answer": 390,
+        "corrected_explanation": "We only need to add the heights of all the floors to find the total height."
+    }
+]

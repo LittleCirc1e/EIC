@@ -1,0 +1,32 @@
+[
+    {
+        "question": "In soccer, players receive yellow cards when they are cautioned and red cards when they are sent off. Coach Tim has a team of 11 players, 5 of them didn't receive cautions, the rest received one yellow card each. How many red cards would the whole team collect, knowing that each red card corresponds to 2 yellow cards?",
+        "original_solution": "In coach Tim's team, 5 out of 11 players did not receive any caution, so 11 - 5 = 6 players were cautioned.\nEach cautioned player received a yellow card, so all the cautioned players received 6 * 1 = 6 yellow cards.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 6 / 2 = 3 red cards.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "In coach Tim's team, 10 out of 11 players did not receive any caution, so 11 - 10 = 1 player was cautioned.\nEach cautioned player received a yellow card, so the cautioned player received 1 * 1 = 1 yellow card.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 1 / 2 = 0.5 red cards.\n#### 0.5",
+        "transformed_answer": 0.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 5 in the question as 10 wrongly, and calculates 11 - 10 = 1 instead of 11 - 5 = 6. Its subsequent related steps will be affected by the erroneous result but still be calculated correctly. Step 2 changes from 6 * 1 = 6 yellow cards to 1 * 1 = 1 yellow card, and step 3 changes from 6 / 2 = 3 red cards to 1 / 2 = 0.5 red cards. Please note that you should only consider one error, so step 2 and 3 still correctly calculate results based on the erroneous first step.",
+        "is_correct": "no",
+        "corrected_solution": "In coach Tim's team, 6 out of 11 players did not receive any caution, so 11 - 6 = 5 players were cautioned.\nEach cautioned player received a yellow card, so the cautioned players received 5 * 1 = 5 yellow cards.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 5 / 2 = 2.5 red cards.\n#### 2.5",
+        "corrected_answer": 2.5,
+        "corrected_explanation": "Step 1 first makes an error in referencing the number of the question description <5 of them didn't receive cautions>. It erroneously references 5 as 10, causing the formula to calculate 11 - 10 = 1 instead of 11 - 6 = 5. This affects subsequent steps 2, 3, and 4 that reference its result. Step 2 incorrectly calculates 1 * 1 = 1 instead of 5 * 1 = 5. Step 3 incorrectly calculates 1 / 2 = 0.5 instead of 5 / 2 = 2.5. And step 4 incorrectly outputs 0.5 instead of 2.5."
+    },
+    {
+        "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+        "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "Let k be the number of koi fish in the pond\n14-2*k=68\n2*k=68+14=82\n2k=82\nk=82/2=41\n#### 41",
+        "transformed_answer": 41.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64-14=50\n2k=50\nk=50/2=25\n#### 25",
+        "corrected_answer": 25.0,
+        "corrected_explanation": "Step 2 first makes an error in referencing the number of the question description <14 less than two times the number of koi fish in the pond is 64.>. It erroneously references 64 as 68, causing the formula to calculate 68+14=82 instead of 64-14=50. This affects subsequent steps 3 and 4 that reference its result. Step 3 incorrectly calculates 82/2=41 instead of 50/2=25."
+    }
+]

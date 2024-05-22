@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Calculate the sum of first 89 natural numbers.",
+        "original_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 89 natural numbers is 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005.\n#### 4005",
+        "original_answer": 4005.0,
+        "transformed_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 80 natural numbers is 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240.\n#### 3240",
+        "transformed_answer": 3240.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 89 in the question as 80 wrongly, and calculates 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240 instead of 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005. Subsequent calculations apply this error but are otherwise correct. Step 1 still refers to the correct formula for the sum of natural numbers and is not affected by the referencing error.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 80 * (80 + 1) / 2 = 3240 instead of 89 * (89 + 1) / 2 = 4005. The subsequent step 2 references the result of step 1, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "There are 15 teams in a soccer league and each team plays each of the other teams once. How many games will be played in total?",
+        "original_solution": "The number of games played by one team is 15-1 = 14 because each team plays each of the other teams once.\nThe total number of games played is 15 x 14 / 2 = 105 because in a complete round-robin tournament, each team plays a game against every other team once.\n#### 105",
+        "original_answer": 105.0,
+        "transformed_solution": "The number of games played by one team is 16-1 = 15 because each team plays each of the other teams once.\nThe total number of games played is 15 x 15 / 2 = 112.5 because in a complete round-robin tournament, each team plays a game against every other team once.\n#### 112.5",
+        "transformed_answer": 112.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 15 in the question as 16 wrongly, and calculates 16-1=15 instead of 15-1=14. Its subsequent related step will be affected, calculating 15 x 15 / 2 = 112.5 instead of 15 x 14 / 2 = 105 in step 2. Please note that you should only consider one error, so step 2 still references 15 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 15 x 15 = 112.5 instead of 15 x 15 = 225. The subsequent step 3 references the result of step 2, calculating 112.5 / 2 = 56.25 instead of 225 / 2 = 112.5, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "Dan's age after 18 years will be 8 times his age 3 years ago. What is the present age of Dan?",
+        "original_solution": "Let Dan's present age be x.\nAfter 18 years, Dan's age will be x + 18.\nDan's age 3 years ago was x - 3.\nx + 18 = 8(x - 3)\nx + 18 = 8x - 24\nSubtracting x from both sides, we get 18 = 7x - 24\nAdding 24 to both sides, we get 42 = 7x\nDividing by 7, we get x = 6\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "Let Dan's present age be x.\nAfter 18 years, Dan's age will be x + 18.\nDan's age 5 years ago was x - 5.\nx + 18 = 8(x - 5)\nx + 18 = 8x - 40\nSubtracting x from both sides, we get 18 = 7x - 40\nAdding 40 to both sides, we get 58 = 7x\nDividing by 7, we get x = 58 / 7\n#### 8.28571428571",
+        "transformed_answer": 8.28571428571,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 3 in the question as 5 wrongly, and calculates 8(x - 5) instead of 8(x - 3). Its subsequent related steps, step 4, 5, 6, 7, and 8, will be affected, but still be calculated correctly based on the erroneous step 3. Step 4 changes from x + 18 = 8x - 24 to x + 18 = 8x - 40. Step 5 changes from 18 = 7x - 24 to 18 = 7x - 40. Step 6 changes from 42 = 7x to 58 = 7x. Step 7 changes from x = 6 to x = 58 / 7. The transformed_answer is calculated based on the accumulated error but is a different value than the original answer.",
+        "is_correct": "no",
+        "pred_wrong_step": 8,
+        "step_explanation": "Step 8 first makes a mistake in the calculation process, calculating 58 / 7 = 8.28571428571 instead of 58 / 7 = 8.285714285714286. The subsequent step 9 references the result of step 8, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 8, so pred_wrong_step is 8."
+    },
+    {
+        "question": "if m is an integer such that ( - 2 ) ^ 2 m = 2 ^ ( 21 - m ) then m = ?",
+        "original_solution": "(-2)^(2m) = 2^(21-m) \n2^(2m) = 2^(21-m) \n2m = 21 - m \n3m = 21 \nm = 7 \n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "(-2)^(2m) = 2^(21-m) \n2^(2m) = 2^(31-m) \n2m = 31 - m \n3m = 31 \nm = 31/3 \n#### 10.333333333333334",
+        "transformed_answer": 10.333333333333334,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 incorrectly references \"21\" from the question as \"31\". Thus, the equation changes from 2^(2m) = 2^(21-m) to 2^(2m) = 2^(31-m). Subsequent related steps are affected: the equation 2m = 21 - m changes to 2m = 31 - m in step 3, 3m = 21 changes to 3m = 31 in step 4, and the solution for m changes from 7 to m = 31/3 in step 5. Please note that only this step is considered erroneous, and all other steps that reference numbers from the question do so correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 first makes a mistake in the calculation process, calculating 31/3=10.333333333333334 instead of 31/3=10.333333333333332. The subsequent step 6 references the result of step 5, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    },
+    {
+        "question": "walking at 3/4 of her normal speed, a worker is 12 minutes later than usual in reaching her office. the usual time (in minutes) taken by her to cover the distance between her home and her office is",
+        "original_solution": "Let x be the usual time taken.\nThen the time taken at 3/4 speed is 4/3 * x.\nSo, 4/3 * x - x = 12.\n4/3 * x - 3/3 * x = 12.\n1/3 * x = 12\nx = 36\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "Let x be the usual time taken.\nThen the time taken at 3/4 speed is 4/5 * x.\nSo, 4/5 * x - x = 12.\n4/5 * x - 5/5 * x = 12.\n-1/5 * x = 12\nx = -60\n#### -60",
+        "transformed_answer": -60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 3/4 in the question as 4/5 wrongly, and calculates 4/5 * x instead of 4/3 * x. The error occurs again in the subtraction step (4/5 * x - 5/5 * x = 12), resulting in an arithmetic error that leads to a negative time, which doesn't make sense in the real-world context. As this is the root error, only this step is considered incorrect, and the following steps correctly apply the erroneous result from this step: Step 4 correctly subtracts -5/5 * x from 4/5 * x, giving -1/5 * x = 12, and Step 5 correctly solves for x, getting x = -60. However, the answer makes no sense as time cannot be negative, showing the influence of the initial error in Step 2.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 first makes a mistake in the calculation process, calculating -1/5 * x = 12 as x = -60 instead of x = 12 / (-1/5) = -600. The final answer is incorrect because of this mistake. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    }
+]

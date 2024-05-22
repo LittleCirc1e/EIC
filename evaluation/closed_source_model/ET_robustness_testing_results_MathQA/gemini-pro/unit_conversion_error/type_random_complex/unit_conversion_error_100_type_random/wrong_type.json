@@ -1,0 +1,72 @@
+[
+    {
+        "question": "The distance from city A to city B is 30 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.5 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.5 = 0.25 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0.25 hours = 120 miles per hour.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.75 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.75 = 0 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0 hours = undefined miles per hour.\n#### undefined",
+        "transformed_answer": null,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion error by stating that Alice has 0.75 hours less time instead of 0.5 hours, due to incorrectly converting 30 minutes into 0.75 hours instead of the correct 0.5 hours. This error affects the subsequent steps, specifically steps 3 and 4, where the time Alice has to drive is calculated incorrectly as 0 hours (0.75 - 0.75), leading to an incorrect, undefined speed calculation since one cannot divide by zero.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 6. The operands and operators of the formula in step 6 are completely correct, but only the result is incorrectly calculated as 55 instead of 56, so it belongs to calculation_error."
+    },
+    {
+        "question": "two watches are set for an alarm at 10 0 ' clock in the night . one watch gains 2 minutes per hour . when the faster watch shows 4 : 12 in the morning when the alarm rings what does the correct watch show ?",
+        "original_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 12 minutes = 4:00.\n#### 4:00",
+        "original_answer": "4:00",
+        "transformed_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nTo calculate the incorrect conversion, we'll say the faster watch gains 3 minutes per hour instead of 2. So the incorrect gain is 3 * 6 = 18 minutes.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 18 minutes = 3:54.\n#### 3:54",
+        "transformed_answer": "3:54",
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, the error was introduced at step 3 where the watch's gain per hour was incorrectly increased from 2 minutes to 3 minutes per hour. This affects the calculation of the total gain over 6 hours, leading to the transformed_solution showing the incorrect time of 3:54 instead of 4:00. Since we are only making one incorrect unit conversion, the rest of the solution remains based on the original correct steps. The incorrect gain affects only the final result.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result 18 of step 2, which only results in an error in one operand in the formula, thus it belongs to referencing_previous_step_value_error. Step 4, as its subsequent step, references the result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+        "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 5. The operands and operators of the formula in step 5 are completely correct, but only the result is incorrectly calculated as 14 instead of 15, so it belongs to calculation_error."
+    },
+    {
+        "question": "Darcy lives 1.5 miles from work. She can walk to work at a constant rate of 3 miles per hour, or she can ride the train to work at a constant rate of 20 miles per hour. If she rides the train, there is an additional x minutes spent walking to the nearest train station, waiting for the train, and walking from the final train station to her work. If it takes Darcy a total of 15 more minutes to commute to work by walking than it takes her to commute to work by riding the train, what is the value of x?",
+        "original_solution": "The time it takes Darcy to walk to work is 1.5 miles / 3 miles per hour = 0.5 hours.\nThe time it takes Darcy to ride the train to work is 1.5 miles / 20 miles per hour = 0.075 hours.\nThe difference in time is 15 minutes, or 0.25 hours.\nSo, 0.5 - 0.075 = 0.25 + x\n0.425 = 0.25 + x\nx = 0.425 - 0.25\nx = 0.175 hours = 10.5 minutes.\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "The time it takes Darcy to walk to work is 1.5 miles / 3 miles per hour = 0.5 hours.\nThe time it takes Darcy to ride the train to work is 1.5 miles / 25 miles per hour = 0.06 hours.\nThe difference in time is 15 minutes, or 0.25 hours.\nSo, 0.5 - 0.06 = 0.25 + x\n0.44 = 0.25 + x\nx = 0.44 - 0.25\nx = 0.19 hours = 11.4 minutes.\n#### 11.4",
+        "transformed_answer": 11.4,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion, which means the train speed is wrongly assumed to be 25 miles per hour instead of 20 miles per hour, resulting in 1.5 miles / 20 miles per hour = 0.075 hours in the original_solution becoming 1.5 miles / 25 miles per hour = 0.06 hours in the transformed_solution. This error affects the subsequent related step 4, which changes from 0.5 - 0.075 = 0.25 + x to 0.5 - 0.06 = 0.25 + x, and finally affects the calculation of the value of x in steps 5 and 6, which changes from 0.425 = 0.25 + x and x = 0.425 - 0.25 in the original_solution to 0.44 = 0.25 + x and x = 0.44 - 0.25 in the transformed_solution, resulting in a different value of the additional time x required by Darcy when riding the train.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly references the number 25 instead of 20 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Steps 4 and 5, as its subsequent related steps, reference the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "if a child walks at the rate of 5 m / min from his home, he is 6 minutes late for school, if he walks at the rate of 7 m / min he reaches half an hour earlier. how far is his school from his home?",
+        "original_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 30\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 1050.\nRearranging terms gives 2x = -1260, so x = -630.\nThe negative distance doesn't make sense in this context, so the child is 630 meters from his school.\n#### 630",
+        "original_answer": 630.0,
+        "transformed_solution": "Let x be the distance from his home to the school.\nAccording to the given data, time = distance/speed.\nSo, x/5 + 6 = x/7 - 20\nMultiplying through by 35 to clear the fractions gives 7x + 210 = 5x - 700.\nRearranging terms gives 2x = -910, so x = -455.\nThe negative distance doesn't make sense in this context, so the child is 455 meters from his school.\n#### 455",
+        "transformed_answer": 455.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means the half an hour earlier arrival time is wrongly calculated as 20 minutes earlier (half an hour should be 30 minutes), resulting in x/7 - 30 in the original_solution becoming x/7 - 20 in the transformed_solution. And it affects the subsequent related step 4, which changes from 7x + 210 = 5x - 1050 to 7x + 210 = 5x - 700. Step 5 changes from 2x = -1260, so x = -630 to 2x = -910, so x = -455. The final correct distance remains positive; thus, the child is 455 meters from his school in the transformed_solution. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 6. The operands and operators of the formula in step 6 are completely correct, but only the result is incorrectly calculated as 55 instead of 56, so it belongs to calculation_error."
+    }
+]

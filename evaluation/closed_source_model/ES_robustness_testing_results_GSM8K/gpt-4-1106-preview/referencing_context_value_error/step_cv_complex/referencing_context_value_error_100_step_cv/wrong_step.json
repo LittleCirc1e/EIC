@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Lionel walked 4 miles. Esther walked 975 yards and Niklaus walked 1287 feet. How many combined feet did the friends walk?",
+        "original_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 21120 + 2925 + 1287 = 25332 feet\nTogether the friends walked 25332 feet.\n#### 25332",
+        "original_answer": 25332.0,
+        "transformed_solution": "Lionel = 3 * 5280 = 15840 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 15840 + 2925 + 1287 = 21052 feet\nTogether the friends walked 21052 feet.\n#### 21052",
+        "transformed_answer": 21052.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 4 in the question as 3 wrongly, and calculates 3 * 5280=15840 instead of 4 * 5280=21120. Its subsequent related step will be affected, calculating 15840 + 2925 + 1287=21052 instead of 21120 + 2925 + 1287=25332 in step 3. Please note that you should only consider one error, so step 2 still references 975 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes an error in referencing the number of the question description. It erroneously references the conversion factor from yards to feet as 3 instead of the correct conversion factor of 3 feet per yard. The correct calculation should be 975 * 3 = 2925 feet. This affects the subsequent step 3 that references its result."
+    },
+    {
+        "question": "Nick is asking all his co-workers to chip in for a birthday gift for Sandra that costs $100. The boss agrees to contribute $15, and Todd volunteers to contribute twice as much since he always has to one-up everyone. If the remaining 5 employees (counting Nick) each pay an equal amount, how much do they each pay?",
+        "original_solution": "First find Todd's contribution by doubling the boss's contribution: $15 * 2 = $30\nNow subtract Todd and the boss's contributions to find out how much still needs to be paid: $100 - $30 - $15 = $55\nNow divide the remaining cost by the number of employees to find the cost per employee: $55 / 5 employees = $11/employee\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "First find Todd's contribution by doubling the boss's contribution: $20 * 2 = $40\nNow subtract Todd and the boss's contributions to find out how much still needs to be paid: $100 - $40 - $20 = $40\nNow divide the remaining cost by the number of employees to find the cost per employee: $40 / 5 employees = $8/employee\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $15 in the question as $20 wrongly, and calculates $20 * 2 = $40 instead of $15 * 2 = $30. Its subsequent related steps will be affected by the incorrect amounts. Step 2 calculates the remaining cost based on the altered contributions, calculating $100 - $40 - $20 = $40 instead of $100 - $30 - $15 = $55. Step 3 is then impacted by the error from step 2, dividing $40 by 5 employees resulting in $8/employee instead of dividing $55 by 5 employees to get $11/employee. Note that other steps still reference the correct value from the question except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes an error in referencing the number of the question description <The boss agrees to contribute $15>. It erroneously references the boss's contribution as $20 when subtracting from the total cost, causing the formula to calculate $100 - $40 - $20 = $40 instead of $100 - $40 - $15 = $45. This affects the subsequent step 3 that references its result. Step 3 incorrectly calculates $40 / 5 employees = $8/employee instead of $45 / 5 employees = $9/employee. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "The rim of a standard basketball hoop is 10 feet above the ground.  Additionally, most experts will say that a player must be able to reach at least 6 inches above the rim to dunk a basketball.  Suppose a basketball player is 6 feet tall and can reach 22 inches above their head using the wingspan of their arms.  How high must this player be able to jump to reach 6 inches above the rim to dunk a basketball?",
+        "original_solution": "In inches, the height of the rim is 10*12 = 120 inches.\nThus, the height that the player needs to be able to reach is 120 + 6 = 126 inches.\nWithout jumping, the player can reach their height plus an additional 22 inches, or a total of 6*12 + 22 = 94 inches.\nTherefore, the player needs to jump 126 - 94 = 32 inches to reach the height required to dunk a basketball.\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "In inches, the height of the rim is 11*12 = 132 inches.\nThus, the height that the player needs to be able to reach is 132 + 6 = 138 inches.\nWithout jumping, the player can reach their height plus an additional 22 inches, or a total of 6*12 + 22 = 94 inches.\nTherefore, the player needs to jump 138 - 94 = 44 inches to reach the height required to dunk a basketball.\n#### 44",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 10 in the question as 11 wrongly and calculates 11*12=132 instead of 10*12=120. Its subsequent related steps, step 2 and 4, will be affected. Step 2 changes from 120+6=126 to 132+6=138, and step 4 changes from 126-94=32 to 138-94=44. Please note that you should only consider one error, so step 3 still references 6 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes an error in referencing the number of the question description. It erroneously references the player's height as 6 feet (72 inches) plus 22 inches to get 94 inches, but it should be 72 inches plus 22 inches to get a total of 94 inches. The correct calculation should be 6*12 + 22 = 72 + 22 = 94 inches. However, the error does not affect the final result because the calculation is correct, but the explanation is wrong. The first step to make a mistake, which is the root cause of the mistake, is step 3."
+    },
+    {
+        "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+        "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "Let k be the number of koi fish in the pond\n14-2*k=68\n2*k=68+14=82\n2k=82\nk=82/2=41\n#### 41",
+        "transformed_answer": 41.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes an error in referencing the number from the question description. It erroneously references 64 as 68, causing the formula to calculate 14-2*k=68 instead of 14-2*k=64. This affects subsequent steps that reference its result. The correct calculation should be 2*k=64+14=78, leading to k=78/2=39. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

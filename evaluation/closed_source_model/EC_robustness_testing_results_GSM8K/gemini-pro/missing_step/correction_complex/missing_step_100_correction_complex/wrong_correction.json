@@ -1,0 +1,32 @@
+[
+    {
+        "question": "A mechanic charges different rates to repair the tires of trucks and cars. For each truck tire that is repaired, the mechanic will charge $60 and for each car tire that is repaired, the mechanic will charge $40. On Thursday, the mechanic repairs 6 truck tires and 4 car tires. On Friday, the mechanic repairs 12 car tries and doesn't repair any truck tires. How much more revenue did the mechanic earn on the day with higher revenue?",
+        "original_solution": "On Thursday the mechanic charged a total of 6*60 + 4*40 = $520.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 520-480 = $40 more revenue than on Friday.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "On Thursday the mechanic charged a total of 6*40 + 4*40 = $400.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 400-480 = -$80 more revenue than on Friday.\n#### -80",
+        "transformed_answer": -80.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been modified to incorrectly calculate the revenue from truck tires by using the price for car tires. In the original_solution, step 1 correctly calculates the revenue for truck tires by using $60. However, in the transformed_solution, step 1 incorrectly uses the car tire price ($40) for the truck tires as well. The remaining steps reference the result of step 1. Therefore, after altering step 1, the revenue calculation for Thursday should be $400 (using 6*40 + 4*40), leading to an incorrect revenue comparison and a negative result for the difference in revenue, that is actually impossible considering the problem context. The transformed_solution's first step now uses the car tire price for the truck tires, changing the formula from 6*60 + 4*40 to 6*40 + 4*40 and resulting in a revenue of $400. The subsequent steps reflect this error with the final step comparing the incorrect calculations, resulting in $400 - $480 equaling -$80. The wrong step is 1 because it contains the first incorrect calculation referencing the wrong tire repair price.",
+        "is_correct": "no",
+        "corrected_solution": "On Thursday the mechanic charged a total of 6*60 + 4*40 = $480.\nOn Friday the mechanic charged a total of 12*40 = $480.\nThus, on Thursday, the day with higher revenue, the mechanic had 480-480 = $0 more revenue than on Friday.\n#### 0",
+        "corrected_answer": 0.0,
+        "corrected_explanation": "Step 1 makes a mistake in the calculation process, calculating 6*40 + 4*40 = $400 instead of 6*60 + 4*40 = $480. The subsequent step 2 references the result of step 1, calculating 400-480 = -$80 instead of 480-480 = $0, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "is_correct": "no",
+        "corrected_solution": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. Therefore, they are able to bake 3*7 + 6*7 + 8*7 = 151 pies in 7 days.\n#### 151",
+        "corrected_answer": 151.0,
+        "corrected_explanation": "The solution incorrectly adds 3*7, 42, and 56 to get 119, instead of adding 3*7, 6*7, and 8*7 to get 151."
+    }
+]

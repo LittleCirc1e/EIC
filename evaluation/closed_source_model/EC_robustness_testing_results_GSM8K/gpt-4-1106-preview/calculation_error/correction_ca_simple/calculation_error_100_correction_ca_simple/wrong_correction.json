@@ -1,0 +1,32 @@
+[
+    {
+        "question": "The battery charge in Mary’s cordless vacuum cleaner lasts ten minutes. It takes her four minutes to vacuum each room in her house. Mary has three bedrooms, a kitchen, and a living room. How many times does Mary need to charge her vacuum cleaner to vacuum her whole house?",
+        "original_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 25 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 25 / 10 = 2.5 times to vacuum her whole house.\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 4 * 5 = 25 instead of 4 * 5 = 20 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 20 / 10 = 2 to 25 / 10 = 2.5. The modified transformed_solution should only include the single error in the specified step, with correct calculations in the subsequent steps except for the inherited wrong result. It should be noted that only one calculation error is considered, subsequent steps will inherit its error, and the final transformed_answer is affected as well.",
+        "is_correct": "no",
+        "corrected_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\nSince you cannot charge a vacuum cleaner a fraction of a time, she will need to charge it 3 times in total.\n",
+        "corrected_answer": 3,
+        "corrected_explanation": "The calculation of the total time required to vacuum the house was incorrect. The correct total time should be 4 minutes per room multiplied by 5 rooms, which equals 20 minutes. Since each charge lasts 10 minutes, she will need 2 full charges to cover 20 minutes. However, since you cannot charge a vacuum cleaner a fraction of a time, she will need to charge it 3 times in total to vacuum all rooms."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "corrected_solution": "He needs to do 15 reps for each of the 3 types of push-ups before getting to floor push-ups. That's 15 reps * 3 types = 45 reps in total. Since he trains 5 days a week and adds 1 rep per day, it will take him 45 reps / 5 days per week = 9 days to complete all reps. Since there are 7 days in a week, and he only trains 5 days a week, it will take him 9/5 = 1.8 weeks, which rounds up to 2 weeks because he cannot train a fraction of a day.",
+        "corrected_answer": 2,
+        "corrected_explanation": "The calculation of the total number of progressions is correct, but the division to find out the number of weeks is incorrect. Since he trains 5 days a week, it will take him 9 days, not 45/5 weeks, to complete the 45 progressions. Therefore, it will take him 2 weeks to reach floor push-ups."
+    }
+]

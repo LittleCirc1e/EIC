@@ -1,0 +1,16 @@
+[
+    {
+        "question": "For a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?",
+        "original_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 24 packs = 26 more packs of cookies to reach his target\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 20 packs = 30 more packs of cookies to reach his target\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 24 packs as 20 packs from step 2 and changes 50 packs - 24 packs = 26 more packs to 50 packs - 20 packs = 30 more packs. It should be noted that step 2 in the transformed_solution <Tory sold 19 packs + 5 packs = 24 packs in total> should be the same as the step 2 in the original_solution <Tory sold 19 packs + 5 packs = 24 packs in total> and calculates its result 24 correctly. This is the only step with an error and all other calculations are performed correctly based on the wrong result from this step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result 20 of step 2, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    }
+]

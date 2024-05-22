@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Steve bought $25 worth of groceries. He bought a gallon of milk for $3, two boxes of cereal for $3.5 each, 4 bananas for $.25 each, four apples that cost $.5 each and a number of boxes of cookies. The cookies cost twice as much per box as the gallon of milk. How many boxes of cookies did he get?",
+        "original_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 13 on everything but the cookies because 3 + 7 + 1 + 2 = 13\nHe spent $12 on cookies because 25 - 13 = 12\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2 boxes of cookies because 12 / 6 = 2\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 11 on everything but the cookies because 3 + 7 + 1 + 2 = 11\nHe spent $14 on cookies because 25 - 11 = 14\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2.33 boxes of cookies because 14 / 6 = 2.33\n#### 2.33",
+        "transformed_answer": 2.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the total spent on everything but cookies as $11 instead of $13 in step 4, which affects the subsequent calculation of the money spent on cookies in step 5. The modified formula in step 5 becomes 25 - 11 = 14 instead of 25 - 13 = 12. Step 6 and step 7 remain unaffected as they do not rely on the result of step 4 or step 5. As a result, the error is confined to step 4's calculation and its immediate consequence on step 5, leaving all other steps and their calculations as correct. In step 7, the number of boxes of cookies is inaccurately calculated based on the mistaken $14 value, yielding 14 / 6 = 2.33 boxes of cookies.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 7. The operands and operators of the formula in step 7 are completely correct, but only the result is incorrectly calculated as 2.33 instead of 2.34, so it belongs to calculation_error."
+    },
+    {
+        "question": "Carly had 42 lollipops to share with her friends. Half of the lollipops were cherry, and the rest were equal amounts of watermelon, sour apple, and grape. How many lollipops were grape?",
+        "original_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 21 were not cherry.\nOf the 21 that were not cherry, 1/3 of them were grape, so 21 lollipops / 3 = 7 grape lollipops.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 22 were not cherry.\nOf the 22 that were not cherry, 1/3 of them were grape, so 22 lollipops / 3 = 7.33 grape lollipops.\n#### 7.33",
+        "transformed_answer": 7.33,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 42 lollipops / 2 calculation in step 1 is mistakenly given as 22 instead of 21. This error affects the second step since it relies on the outcome of the first step. Therefore, the second step takes the incorrect value of 22 and proceeds with the division by 3 to find the number of grape lollipops. However, the division is still correctly calculated using the erroneous value. No other parts of the original solution, including operators or operands, are changed.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3. The operands and operators of the formula in step 3 are completely correct, but only the result is incorrectly calculated as 7.33 instead of 7, so it belongs to calculation_error."
+    },
+    {
+        "question": "The battery charge in Mary’s cordless vacuum cleaner lasts ten minutes. It takes her four minutes to vacuum each room in her house. Mary has three bedrooms, a kitchen, and a living room. How many times does Mary need to charge her vacuum cleaner to vacuum her whole house?",
+        "original_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 25 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 25 / 10 = 2.5 times to vacuum her whole house.\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 4 * 5 = 25 instead of 4 * 5 = 20 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 20 / 10 = 2 to 25 / 10 = 2.5. The modified transformed_solution should only include the single error in the specified step, with correct calculations in the subsequent steps except for the inherited wrong result. It should be noted that only one calculation error is considered, subsequent steps will inherit its error, and the final transformed_answer is affected as well.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3. The operands and operators of the formula in step 3 are completely correct, but only the result is incorrectly calculated as 2.5 instead of 3, so it belongs to calculation_error."
+    },
+    {
+        "question": "Jean has 60 stuffies. She keeps 1/3 of them and then gives away the rest. She gives 1/4 of what she gave away to her sister Janet. How many stuffies did Janet get?",
+        "original_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=40 stuffies\nSo Janet got 40/4=10 stuffies\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=35 stuffies\nSo Janet got 35/4=8.75 stuffies\n#### 8.75",
+        "transformed_answer": 8.75,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly changes the calculation of the stuffies given away from 60-20=40 to 60-20=35 in step 2, impacting the final amount that Janet gets. Step 3 accordingly changes from 40/4=10 to 35/4=8.75 to take into account the erroneous total given away. All changes only affect the steps after the error, while the step before the error, which is step 1 in this case, remains unaffected. The wrong calculation result in step 2 is carried through to the subsequent step, modifying both the operands used in the calculation and the explanatory text, but the calculation process within each step is performed correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4. The operands and operators of the formula in step 4 are completely correct, but only the result is incorrectly calculated as 8.75 instead of 8.75 stuffies, so it belongs to calculation_error."
+    }
+]

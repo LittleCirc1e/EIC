@@ -1,0 +1,233 @@
+[
+    {
+        "question": "Jack, who weighs 60 pounds, wants to play on the see-saw with his cousin Anna, who weighs 40 pounds. How many 4-pound rocks does Jack need to hold to make their weights equal?",
+        "original_solution": "First find the total difference in weight between the two people: 60 pounds - 40 pounds = 20 pounds\nThen divide the weight difference by the weight of each rock to find the number of rocks need to even the weights: 20 pounds / 4 pound/rock = 5 rocks\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "To make their weights equal, Jack needs to hold: 60 pounds / 4 pound/rock = 15 rocks\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformation, step 1 of the original_solution, which calculates the weight difference, was deleted. Therefore, the transformed_solution should have started with the calculation based on the 60 pounds Jack weighs. However, instead of calculating the weight difference from step 1 and dividing that by the weight of each rock, the transformed_solution incorrectly refers directly to Jack's weight. This leads to a calculation of 60 pounds divided by 4 pounds per rock, equaling 15 rocks. The correct intermediate calculation of the weight difference was not considered, resulting in the number of needed rocks being artificially increased to 15. The referenced number 60 in the transformed solution's first step, which is step 1, is the weight of Jack from the question, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "any_explanation": "The calculation correctly determines that Jack needs to add 15 rocks, each weighing 4 pounds, to his side of the see-saw to balance the weights. 60 pounds (Jack's weight) minus 40 pounds (Anna's weight) equals 20 pounds. Since each rock adds 4 pounds, 20 pounds divided by 4 pounds per rock equals 5 rocks. However, the solution incorrectly states the calculation as 60 pounds divided by 4 pounds per rock, which is not the correct approach. The number of rocks should be based on the weight difference, not Jack's total weight. Despite this, the final answer of 15 rocks is correct because it would balance the see-saw if Jack adds 15 rocks to his side, making the total weight on both sides equal (60 + 15*4 = 100 pounds for Jack and 100 pounds for Anna).",
+        "label": "no"
+    },
+    {
+        "question": "Steve is 5'6\". He grows 6 inches. How tall is he in inches?",
+        "original_solution": "He is 5*12+6=66 inches tall before the growth spurt.\nAfter growing he is now 66+6=72 inches\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "After growing he is now 5*12+6+6=78 inches\n#### 78",
+        "transformed_answer": 78.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed and its calculation has been merged into the next step. In the original_solution, step 1 establishes Steve's height before growth, which is referenced in step 2 (final step). After deleting step 1, the calculation from step 1 needs to be incorporated into the next step (now the first and only step). The number 66 from step 2, derived from step 1 in the original solution, is replaced with the full calculation that includes the original 5'6\" height expressed in inches (5*12+6) and the growth of 6 inches. Therefore, the transformed formula is 5*12+6+6=78. This is the first and only step in the transformed_solution that outputs a different transformed_answer of 78 inches, making the wrong_step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly converts Steve's original height of 5 feet 6 inches to 66 inches, then adds the additional 6 inches of growth, resulting in a total height of 72 inches. However, the explanation contains an error in the calculation (5*12+6+6 should be 60+6+6), but the final answer of 78 inches is correct.",
+        "label": "no"
+    },
+    {
+        "question": "If Patty's dress was $10 more than Ida's dress, and Ida's dress was $30 more than Jean's dress, and Jean's dress was $10 less than Pauline's dress, and lastly Pauline's dress was $30, how much did all the ladies spend on dressed put together?",
+        "original_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10= 20 dollars.\nIda's dress was $30 more than Jean's $20 dress, meaning it was 30+20=50 dollars.\nPatty's dress was $10 more than Ida's $50 dress, meaning it was 50+10=60 dollars.\nTherefore, all four women together spent 60+50+20+30=160 dollars.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10=20 dollars.\nIda's dress was $30 more than Jean's dress, meaning it was 30+30=60 dollars.\nPatty's dress was $10 more than Ida's $60 dress, meaning it was 60+10=70 dollars.\nTherefore, all four women together spent 70+60+20+30=180 dollars.\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original solution. In the original_solution, the step 2 calculation is based on the results of step 1. After deleting original step 2, the new step 2 should be based on step 1's result, so the formula should now reference the 30 dollars directly rather than the result of deleted step 2's 20 dollars. The number 30 dollars also appears in deleted step 2, so we choose 30 as the reference for the new step 2 because it is the larger number used in the original step 2. Although the new calculation (30+30=60 dollars) makes sense in context, it is incorrect because it does not follow the decrement given in the original question for Jean’s dress (which is $10 less than $30). The subsequent calculations in step 3 and 4 then inherit this error, leading to the transformed_solution with a first erroneous reference appearing at the new step 2, incorrectly inflating the price of Ida's dress and ultimately the total amount.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the price of each dress by following the given relationships and then sums them up correctly to reach the total amount spent on dresses.",
+        "label": "no"
+    },
+    {
+        "question": "Brian's friend Bobby has 5 fewer than 3 times as many video games as Brian does. If Brian has 20 video games but lost 5 right before the comparison was made, how many does Bobby have?",
+        "original_solution": "If Brian previously had 20 video games but lost 5, that means he now has 20-5=15 video games\nBrian has 15 video games, so if Bobby has 5 fewer than 3 times as many as Brian does we must first perform 15*3=45\nWe then subtract 5 from the previous total for 45-5=40 games in total.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Brian has 20 video games, so if Bobby has 5 fewer than 3 times as many as Brian does we must first perform 20*3=60\nWe then subtract 5 from the previous total for 60-5=55 games in total.\n#### 55",
+        "transformed_answer": 55.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "By deleting the first step in the original_solution, the immediate next step in the transformed_solution should directly reference Brian's original number of video games instead of his number after losing 5 games. The original step 1 references 20 from the question, and step 2 references the result 15 of step 1. After deleting step 1, step 2 is changed to reference the number 20 from the question. Since multiple numbers weren't referenced by step 1, we keep the sequence as is, resulting in the formula 20*3=60. Consequently, in the transformed_solution, step 1 is the first step now, but it is based on the original step 2, which results in the wrong count of video games. The wrong_step is therefore identified as step 1 because it is the first step that references an incorrect number in the transformed_solution.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates that Brian would have 3 times as many video games which is 60, and then correctly subtracts 5 to find that Bobby has 55 video games, which is 5 fewer than 3 times the number of games Brian has after losing 5.",
+        "label": "no"
+    },
+    {
+        "question": "Sam and Jeff had a skipping competition at recess. The competition was split into four rounds. Sam completed 1 more skip than Jeff in the first round. Jeff skipped 3 fewer times than Sam in the second round. Jeff skipped 4 more times than Sam in the third round. Jeff got tired and only completed half the number of skips as Sam in the last round. If Sam skipped 16 times in each round, what is the average number of skips per round completed by Jeff?",
+        "original_solution": "In round one, Jeff completed 16 - 1 = 15.\nIn round two, Jeff completed 16 - 3 = 13.\nIn round three, Jeff completed 16 + 4 = 20.\nIn round four, Jeff completed 16 / 2 = 8.\nJeff completed 15 + 13 + 20 + 8 = 56 skips in total.\nJeff skipped an average of 56 / 4 = 14 skips per round.\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "In round two, Jeff completed 16 - 3 = 13.\nIn round three, Jeff completed 16 + 4 = 20.\nIn round four, Jeff completed 16 / 2 = 8.\nJeff completed 16 + 13 + 20 + 8 = 57 skips in total.\nJeff skipped an average of 57 / 4 = 14.25 skips per round.\n#### 14.25",
+        "transformed_answer": 14.25,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step is removed, which detailed how many skips Jeff completed in round one. Thus, step 4 should transition from referencing Jeff's skips in round one to directly referencing Sam's skips from the question. In round one, Jeff did 16 - 1 skips (15 skips), so the 15 is no longer calculated and 16 is used directly in the total computation instead. The updated formula is 'Jeff completed 16 + 13 + 20 + 8 = 57 skips in total.' This mistake modifies the rest of the calculations, leading to an altered total and average. In step 5, which previously added up Jeff's total skips, the number 15 from step 1 is replaced by 16, the number in the question, adjusting the total. This step becomes the new step 4 in the transformed_solution and is therefore the wrong_step where the first incorrect reference occurs.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of skips Jeff completed in each round based on the information provided in the question. It then correctly adds up the total number of skips and divides by the number of rounds to find the average, arriving at the answer of 14.25 skips per round.",
+        "label": "no"
+    },
+    {
+        "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+        "original_solution": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = 100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = 40 meters.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If the total distance is 140m, the distance between the house and the market is 140m - 50m = 90 meters.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformation, I have deleted the first step, which involves Andy's return trip from school to his house. The original step 1 involves adding the two 50m trips together for a total of 100m. By removing this step, we no longer account for the return trip from school, and thus the calculation in the transformed solution refers to only one leg of the journey from the house to the school (50m). Since in our transformation we remove step 1, we then modify step 2 to include only one 50m trip, changing the formula from 140m - 100m = 40 meters to 140m - 50m = 90 meters. It should be noted that while the calculation itself is algebraically correct, the premise is wrong because it does not consider the entire trip. The first step (now also the wrong_step) references the correct number from the question and no intermediate steps are present, thus making the entire reasoning incorrect and leading to a different transformed answer.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly accounts for the total distance walked and the distance from the house to school, then subtracts to find the distance to the market.",
+        "label": "no"
+    },
+    {
+        "question": "Layla is training for a bicycle race. She rode her bicycle slowly to the high school, rode four miles around the running track at her faster, race pace, and then rode back home, slowly, on the same route. If her total mileage was 10 miles, how far is it, in miles, from Layla's house to the high school?",
+        "original_solution": "Layla rode 10-4=6 miles between home and the high school.\nEach leg of the round-trip journey was 6/2=3 miles.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Each leg of the round-trip journey was 10/2=5 miles.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, step 1 of the original solution, which subtracts the 4 miles of the running track from the total mileage, has been deleted. In the transformation, the next step, which originally divided the 6 miles by 2 to calculate the distance from home to the high school, has been incorrectly modified to reference the total mileage (10 miles) without subtracting the running track mileage. The erroneous step uses the 10 miles directly and wrongly calculates each leg of the trip as half the total mileage, which should actually be the mileage after subtracting the running track portion. It's step 1 in the transformed solution which is incorrect, hence the wrong_step is 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates that Layla rode 5 miles to the high school and back, which is half of her total 10-mile journey.",
+        "label": "no"
+    },
+    {
+        "question": "Eliana walked 200 steps for her morning exercise, did some press-ups, then added some 300 more steps to her count for the first day. The next day, she walked twice the number of steps she walked on the first day. And on the third day, Eliana walked an additional 100 steps. What's the total number of steps Eliana walked during these three days?",
+        "original_solution": "On the first day, she walks 200 + 300 = 500 steps.\nThe next day she walks twice the steps, which is 2*500 = 1000\nThe total number of steps after the two days are 1000+500 = 1500\nOn the third day, she walks an additional 100 steps, bringing the three-day total to 1500+100=1600 steps\n#### 1600",
+        "original_answer": 1600.0,
+        "transformed_solution": "The next day she walks twice the steps, which is 2*(200+300) = 1000\nThe total number of steps after the two days are 1000+200+300 = 1500\nOn the third day, she walks an additional 100 steps, bringing the three-day total to 1500+100=1700 steps\n#### 1700",
+        "transformed_answer": 1700.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformed solution, step 1 from the original solution has been deleted. The first step in the original solution dealt with the calculation for the first day, giving us 500 steps. In subsequent steps, this total is used for further calculations. With the deletion of this step, step 2 from the original solution, which is now step 1 in the transformed solution, needs to directly reference the numbers from the question, which were 200 and 300. The transformed solution now incorrectly assumes that Eliana walked these steps twice on the second day, leading to a doubling of the 300 steps. The wrong step in the transformed solution is the new step 1, which took the place of step 2 in the original solution, because it refers to the incorrect number when calculating the steps for the second day.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of steps Eliana walked on each day and adds them up appropriately. On the first day, she walked 200 + 300 = 500 steps. On the second day, she walked twice that amount, which is 2 * 500 = 1000 steps. The total after two days is 500 + 1000 = 1500 steps. On the third day, she walked an additional 100 steps, making the three-day total 1500 + 100 = 1600 steps. However, the solution has a mistake in the final addition, stating 1500 + 100 = 1700 instead of the correct 1500 + 100 = 1600. Despite this error in the final answer, the method used to solve the problem is correct, and the explanation would be correct if the final addition was 1500 + 100 = 1600.",
+        "label": "no"
+    },
+    {
+        "question": "Donna is trying to figure out if her truck is over a particular bridge's weight limit. The bridge can hold 20,000 pounds. Donna's empty truck weighs 12,000 pounds. She's carrying 20 crates of soda that each weigh 50 pounds, 3 dryers that each weigh 3000 pounds, and twice as much weight in fresh produce as in soda. How much does Donna's fully loaded truck weigh?",
+        "original_solution": "First find the total weight of the soda by multiplying the number of crates by the weight per crate: 20 crates * 50 pounds/crate = 1000 pounds\nThen find the weight of the fresh produce by doubling the weight of the soda: 1000 pounds * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of all three groups of products to find the fully loaded weight: 12000 pounds + 1000 pounds + 2000 pounds + 9000 pounds = 24000 pounds\n#### 24000",
+        "original_answer": 24000.0,
+        "transformed_solution": "Find the weight of the fresh produce by doubling the weight of the soda directly from the crates number and weight per crate: 20 crates * 50 pounds/crate * 2 = 2000 pounds\nNow find the weight of the dryers by multiplying the quantity by the weight per item: 3 dryers * 3000 pounds/dryer = 9000 pounds\nNow add the empty truck's weight to the weight of the fresh produce and dryers to find the fully loaded weight: 12000 pounds + 2000 pounds + 9000 pounds = 23000 pounds\n#### 23000",
+        "transformed_answer": 23000.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Step 1 has been removed, which originally calculated the weight of the crates of soda. In the original_solution, the weight of the fresh produce was calculated in step 2 based on the result of step 1. So after deleting step 1, step 1 in the transformed_solution directly calculates the weight of the fresh produce by using the number of crates and weight per crate from the question and skips calculating the weight of soda separately, effectively doubling it to get the fresh produce's weight (2000 pounds). It then adds the transformed steps from the third step of the original solution. The weight of the soda, which is 1000 pounds, is not added in the transformed_solution, so the final transformed_answer is 23000 pounds, which results from omitting the weight of the soda. It is step 1 in the transformed_solution, which is also a transformation of step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the weight of the fresh produce by doubling the weight of the soda, the weight of the dryers, and then adds these weights to the weight of the empty truck to find the total weight, which equals 23,000 pounds.",
+        "label": "no"
+    },
+    {
+        "question": "Phil has a coin collection he likes to add to. He started with 50 state quarters his parents gave him. Over the next year he doubled this. The following year he collected 3 each month. The year after that he collected 1 every third month. The year after that he lost a quarter of them when he misplaced his collection. How many did he have left after losing some?",
+        "original_solution": "Phil started with 50, and doubled this amount the next year for 50*2=100 coins\nPhil then collected 3 per month the following year, and since there are 12 months in a year that was 3*12=36 coins added\nPhil then collected 1 every third month, and since there are 12 months that means he collected one every 12/3=4 months, for 4 coins added\nBefore he lost a quarter of his coins, Phil had 100+36+4 coins, or 140 coins in total.\nLosing a quarter of 140 coins means Phill lost 140/4=35 coins\nThat means Phil had 140-35= 105 coins remaining\n#### 105",
+        "original_answer": 105.0,
+        "transformed_solution": "Phil started with 50, and doubled this amount the next year for 50*2=100 coins\nPhil then collected 3 per month the following year, and since there are 12 months in a year that was 3*12=36 coins added\nBefore he lost a quarter of his coins, Phil had 100+36 coins, or 136 coins in total.\nLosing a quarter of 136 coins means Phill lost 136/4=34 coins\nThat means Phil had 136-34= 102 coins remaining\n#### 102",
+        "transformed_answer": 102.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 3 about Phil collecting 1 coin every third month. This step references the result 4 from the calculation 12/3. Step 4 in the original_solution references the result from this deleted step 3. Therefore, after deleting step 3, step 4 should not include the 4 coins from step 3. The formula changes from 100+36+4 coins to 100+36 coins, which results in 136 coins before the loss. Subsequent steps 5 and 6 are about losing a quarter of the coins and hence will be modified based on the new total before the loss (136 instead of 140). So, step 5 changes from 140/4=35 coins to 136/4=34 coins, and step 6 changes from 140-35=105 coins to 136-34=102 coins. Step 2 in the transformed_solution references the incorrect total number of coins after the deletion of step 3, serving as the first step referencing an incorrect number. The wrong_step is 2 as this is where the error first appears.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of coins Phil had at each step: starting with 50, doubling to 100, adding 36 more, and then losing 34, which results in 102 coins remaining.",
+        "label": "no"
+    },
+    {
+        "question": "Ann is cutting fabric to make curtains. She cuts a 4 foot by 6 foot rectangle for the living room, and a 2 foot by 4 foot rectangle for the bedroom. If the bolt of fabric is 16 feet by 12 feet, how much fabric is left in square feet?",
+        "transformed_solution": "First figure out how many square feet the original bolt of fabric was: 16 feet * 12 feet = 192 square feet\nThen figure out how much fabric Ann took for the living room curtains: 4 feet * 6 feet = 24 square feet\nThen figure out how much fabric Ann took for the bathroom curtains: 2 feet * 4 feet = 8 square feet\nFinally, subtract the square footage of both sets of curtains from the total square footage: 192 - 24 - 8 = 160 square feet\n#### 160",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly states that Ann took 8 square feet for the bathroom curtains, but the question states she made curtains for the bedroom, not the bathroom. The calculation for the bedroom curtains should be correct, but the reference to the room should be accurate."
+    },
+    {
+        "question": "Caleb bought 10 cartons of ice cream and 4 cartons of frozen yoghurt. Each carton of ice cream cost $4 and each carton of frozen yoghurt cost $1. How much more did Caleb spend on ice cream than on frozen yoghurt?",
+        "transformed_solution": "The cost of the ice cream is 10 × $4 = $40.\nThe cost of the frozen yoghurt is 4 × $1 = $4.\nCaleb spent $40 − $4 = $36 more on ice cream than on frozen yogurt.\n#### 36",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation in the last step is incorrect. Caleb spent $40 on ice cream and $4 on frozen yogurt, so the difference should be $40 - $4 = $36, not $36 more as stated in the solution."
+    },
+    {
+        "question": "Liza bought 10 kilograms of butter to make cookies. She used one-half of it for chocolate chip cookies, one-fifth of it for peanut butter cookies, and one-third of the remaining butter for sugar cookies. How many kilograms of butter are left after making those three kinds of cookies?",
+        "transformed_solution": "Liza used 10/2 = 5 kilograms of butter for the chocolate chip cookies.\nThen, she used 10/5 = 2 kilograms of butter for the peanut butter cookies.\nShe used 5 + 2 = 7 kilograms of butter for the chocolate and peanut butter cookies.\nSo, only 10 -7 = 3 kilograms of butter was left.\nThen, Liza used 3/3 = 1 kilograms of butter for the sugar cookies.\nTherefore, only 3-1 = 2 kilograms of butter were left.\n#### 2",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the use of butter for the sugar cookies. After making chocolate and peanut butter cookies, Liza has 3 kg of butter left. One-third of 3 kg is 1 kg, not 1 kg as stated in the solution. Therefore, after making sugar cookies, she should have 3 kg - 1 kg = 2 kg of butter left, which the solution correctly calculates, but the explanation for the sugar cookies is incorrect."
+    },
+    {
+        "question": "A bear is preparing to hibernate for the winter and needs to gain 1000 pounds. At the end of summer, the bear feasts on berries and small woodland animals. During autumn, it devours acorns and salmon. It gained a fifth of the weight it needed from berries during summer, and during autumn, it gained twice that amount from acorns. Salmon made up half of the remaining weight it had needed to gain. How many pounds did it gain eating small animals?",
+        "transformed_solution": "The bear gained 1 / 5 * 1000 = 200 pounds from berries.\nIt gained 2 * 200 = 400 pounds from acorns.\nIt still needed 1000 - 200 - 400 = 400 pounds.\nThus, it gained 400 / 2 = 200 pounds from salmon.\nTherefore, the bear gained 400 - 200 = 200 pounds from small animals.\n#### 200",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the weight gained from small animals is incorrect. The bear had needed to gain 1000 pounds and gained 200 from berries, 400 from acorns, and 200 from salmon, which leaves 200 pounds unaccounted for, not 400 as the solution suggests."
+    },
+    {
+        "question": "Tara has been planning to buy a laptop which costs $1000. A computer shop accepts payment in installments of $65 per month provided that a 20% down payment is made. If Tara wants to pay an additional $20 for the down payment, how much will her balance be after paying for 4 months?",
+        "transformed_solution": "Tara has to make a $1000 x 20/100 = $200 down payment.\nSince Tara wants to pay $20 more for the down payment, her total down payment will be $200 + $20 = $220.\nSo her remaining balance payable over a year is $1000 - $220 = $780.\nTara has to make a monthly payment of $780/year / 12 months/year = $65/month.\nThe total cost of her payments for 4 months is $65/month x 4 months = $260.\nTherefore, Tara's balance after 4 months is $780 - $260 = $520.\n#### 520",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the monthly payment and the balance after 4 months. The monthly payment amount is correct at $65, but the total payments for 4 months should be $65/month * 4 months = $260. However, the balance after 4 months should be the remaining balance after subtracting the down payment and the 4 monthly payments from the original price of the laptop, which is $1000 - $220 - $260 = $520, not $780 - $260 as stated in the solution."
+    },
+    {
+        "question": "Jesse and Mia are competing in a week long race. They have one week to run 30 miles. On the first three days Jesse averages (2/3) of a mile. On day four she runs 10 miles. Mia averages 3 miles a day over the first 4 days. What is the average of their average that they have to run over the final three days?",
+        "transformed_solution": "Jesse runs 2 miles in the first three days because 3 x (2/3) = 2\nJesse has 18 miles left to run because 30 - 10 - 2 = 18\nJesse has to run an average of 6 miles a day because 18 / 3 = 6\nMia runs 12 miles over the first four days because 4 x 3 = 12\nShe has 18 miles left to run because 30 - 12 = 18\nShe has to run six miles a day because 18 / 3 = 6\nThe total they both have to run is 12 miles a day\nThe average they have to run per day on average is 6 miles because 12 / 2 = 6\n#### 6",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the average of their average distance for the final three days. Jesse and Mia both have to run 6 miles a day, but to find the average of their averages, we should add their daily averages and then divide by 2, not divide the total distance by 2."
+    },
+    {
+        "question": "The ratio of coins that Elsa has to that which Amalie has is 10:45. If the total number of coins they have is 440, and Amalie spends 3/4 of what she has on toys, how many will she remain with?",
+        "transformed_solution": "The total ratio of the coins they both have is 10+45 = 55\nThe fraction of the ratio representing the number of coins that Amalie has is 45/55, and since the total number of coins they both have is 440, Amalie has 45/55*440 = 360 coins.\nWhen Amalie spends 3/4 of what she has, she parts with 3/4*360 = 270 coins.\nShe still has 360 coins - 270 coins = 90 coins\n#### 90",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the number of coins Amalie has is incorrect. It should be 45/55 of the total, but the math was not done correctly."
+    },
+    {
+        "question": "Nancy is filling an aquarium for her fish. She fills it halfway and goes to answer the door. While she's gone, her cat knocks the aquarium over and spills half the water in it. Then Nancy comes back and triples the amount of water in the aquarium. If the aquarium is 4 feet long, 6 feet wide, and 3 feet high, how many cubic feet of water are in the aquarium?",
+        "transformed_solution": "First calculate the volume of the aquarium by multiplying its length, width and height: 4 ft * 6 ft * 3 ft = 72 cubic ft\nThen figure out what proportion of the aquarium is full after the cat knocks it over: 1/2 * 1/2 = 1/4\nThen figure out what proportion of the aquarium is full after Nancy refills it: 3 * 1/4 = 3/4\nNow multiply the proportion of the aquarium that's full by the aquarium's volume to find out how much water is in it: 72 cubic ft * 3/4 = 54 cubic ft\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the proportion of the aquarium that is full after the cat knocks it over and Nancy refills it. It should be 1/2 * 3 = 3/2 or 1.5, not 3/4, because Nancy triples the amount of water that remained after the spill."
+    },
+    {
+        "question": "Dale and Andrew had breakfast at a cafe. A slice of toast costs £1, and eggs cost £3 each. Dale had 2 slices of toast and 2 eggs. Andrew had 1 slice of toast and 2 eggs. How much did their breakfast cost?",
+        "transformed_solution": "The cost of Dale's toast is 2 × $1 = $2.\nThe cost of Andrew's toast is 1 × $1 = $1.\nThe cost of Dale's eggs is 2 × $3 = $6.\nThe cost of Andrew's eggs is 2 × $3 = $6.\nTheir breakfast cost $2 + $1 + $6 + $6 = $15.\n#### 15",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The currency is specified as £ (pounds), but the solution uses $ (dollars). The calculation should maintain the same currency unit."
+    },
+    {
+        "question": "Paityn has 20 red hats and 24 blue hats. Her friend Zola has 4/5 times as many red hats as she has and twice the number of blue hats. If they combine all the hats together and share them equally between themselves, calculate the number of hats each gets.",
+        "transformed_solution": "Paityn has a total of 20 hats + 24 hats = 44 hats.\nThe number of red hats that Zola has is 4/5 * 20 hats = 16 hats\nZola also has 2 * 24 hats = 48 blue hats.\nZola has a total of 48 hats + 16 hats = 64 hats.\nWhen they combine their hats, they have 64 hats + 44 hats = 108 hats\nIf they share the hats equally, each get 108 hats / 2 people = 54 hats/person\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the total number of hats each person gets. The correct calculation should be 108 hats / 2 people = 54 hats/person, but in the final step, it incorrectly states that each gets 54 hats, which is a typo because it should be 54 hats each."
+    },
+    {
+        "question": "John's cow weighs 400 pounds.  It increased its weight to 1.5 times its starting weight.  He is able to sell the cow for $3 per pound.  How much more is it worth after gaining the weight?",
+        "transformed_solution": "The cow initially weighs 400*1.5=600 pounds\nSo it gained 600 - 400 = 200 pounds\nSo its value increased by 200*$3 = $600\n#### 600",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the final weight is incorrect. The cow initially weighed 400 pounds and then gained 1.5 times its weight, which should be calculated by adding the gain to the initial weight, not by multiplying the initial weight by 1.5."
+    },
+    {
+        "question": "Krystian works in the library. He borrows an average of 40 books every day. Every Friday, his number of borrowed books is about 40% higher than the daily average. How many books does he borrow in a week if the library is open from Monday to Friday?",
+        "transformed_solution": "The number of books borrowed on Friday is higher by 40 * 40/100 = 16 books.\nThere are 5 days from Monday to Friday inclusive, so Krystian borrows an average of 5 * 40 = 200 books during that time.\nWith Friday's increase in borrowings, during one week Krystian borrows 200 + 16 = 216 books.\n#### 216",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution did not account for the increased number of books borrowed on Friday correctly. It added the increase to the total weekly average, rather than adding it to the Friday total only."
+    },
+    {
+        "question": "Sally and Bob have made plans to go on a trip at the end of the year. They both decide to work as babysitters and save half of what they've earned for their trip. If Sally makes $6 per day and Bob makes $4 per day, how much money will they both have saved for their trip after a year?",
+        "transformed_solution": "Saly saves 1/2 * $6/day = $3/day.\nSince each year have 365 days, the total amount of money Sally will save in a year is $3/day * 365 days/year = $1095/year\nBob saves 1/2 * $4/day = $2/day.\nThe total amount of money Bob will have saved in a year is $2/day * 365 days/year = $730/year\nIn total, Sally and Bob would have saved $730 + $1095 = $1825\n#### 1825",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the total savings by adding the individual savings of Sally and Bob without considering that they are saving half of their earnings. The daily savings for Sally should be $3 and for Bob should be $2, but the explanation incorrectly adds these daily amounts without dividing by 2."
+    }
+]

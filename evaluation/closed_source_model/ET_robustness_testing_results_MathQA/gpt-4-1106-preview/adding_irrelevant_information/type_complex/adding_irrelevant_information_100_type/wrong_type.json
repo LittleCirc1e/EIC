@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Find two numbers whose difference is 1365, the larger number divided by the smaller gives a quotient of 6 and a remainder of 20",
+        "original_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nx = 6(269) + 20 = 1614 + 20 = 1634\nThe two numbers are 269 and 1634.\n#### 1634",
+        "original_answer": 1634.0,
+        "transformed_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nBecause the smaller number was already used in a previous calculation and the quotient is increased by 1, x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903\nThe two numbers are 269 and 1903.\n#### 1903",
+        "transformed_answer": 1903.0,
+        "wrong_step": 7,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 7 adds information that is not mentioned in the question statement <Because the smaller number was already used in a previous calculation and the quotient is increased by 1>, resulting in step 7 changing from x = 6(269) + 20 = 1614 + 20 = 1634 in the original_solution to x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903 in the transformed_solution. The added information incorrectly modifies the quotient from 6 to 7, leading to a different final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is the calculation of the larger number x. The operands and operators of the formula are correct, but the result is calculated incorrectly as 1903 instead of the correct value 1634, so it belongs to calculation_error."
+    },
+    {
+        "question": "What is the sum of natural numbers between 20 and 100?",
+        "original_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nThe sum of natural numbers between 20 and 100 = 5050 - 190 = 4860\n#### 4860",
+        "original_answer": 4860.0,
+        "transformed_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nAssuming there is an error and the first natural number to consider is from 21 instead of 20, the sum of natural numbers between 21 and 100 = 5050 - (190 + 20) = 4840\n#### 4840",
+        "transformed_answer": 4840.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 incorrectly adds information that is not mentioned in the question statement <Assuming there is an error and the first natural number to consider is from 21 instead of 20>, resulting in step 3 changing from 5050 - 190 = 4860 in the original_solution to 5050 - (190 + 20) = 4840 in the transformed_solution. This alteration erroneously excludes the value 20 from the calculation, which was not part of the original question's scope. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is assuming the first natural number to consider is from 21 instead of 20, which results in an error in the counting process. This affects the operand of the formula in the first wrong step, so it belongs to counting_error."
+    },
+    {
+        "question": "how many multiples of 4 are there between 16 and 112 , inclusive ?",
+        "original_solution": "The first multiple of 4 after 16 is 16, and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 16/4 = 4, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 4 + 1 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The first multiple of 4 after 16 is 20 (including the starting number: 16), and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 20/4 = 5, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 5 + 1 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds incorrect and irrelevant information that changes the first multiple of 4 from 16 to 20, which is not following the question statement as 16 itself is a multiple of 4. This results in the step 1 calculation incorrectly changing from dividing 16 by 4 to dividing 20 by 4. Consequently, the first quotient (related to the starting number) incorrectly changes from 4 to 5. This affects the final calculation, causing the result to be 1 number less than the correct answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1, where the first multiple of 4 after 16 is incorrectly identified as 20. The calculation should include 16 itself since it is a multiple of 4 and within the range specified by the question. This results in a calculation error affecting the subsequent steps and leading to the final wrong result."
+    },
+    {
+        "question": "Calculate the average of all the numbers between 18 and 57 which are divisible by 7.",
+        "original_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56.\nThe sum of these numbers is 21+28+35+42+49+56 = 231.\nThe average is 231/6 = 38.5.\n#### 38.5",
+        "original_answer": 38.5,
+        "transformed_solution": "The numbers divisible by 7 between 18 and 57 are 21, 28, 35, 42, 49, 56, including an extra number 63 mistakenly included within the range.\nThe sum of these numbers including the extra is 21+28+35+42+49+56+63 = 294.\nThe average is 294/7 = 42.\n#### 42",
+        "transformed_answer": 42.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <including an extra number 63 mistakenly included within the range>, resulting in step 2 changing from 21+28+35+42+49+56 = 231 in the original_solution to 21+28+35+42+49+56+63 = 294 in the transformed_solution. The related subsequent step also changes to reflect this new total number, with the average calculated as 294/7 = 42 instead of 231/6. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 includes an extra number 63 that is not within the specified range of 18 to 57, which is an error in the counting process. This error affects the sum calculated in step 2 and the average calculated in step 3, leading to the incorrect final result."
+    },
+    {
+        "question": "the sum of 4 consecutive numbers is 102. The greatest among these 3 number is:",
+        "original_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 = 102.\n4x = 96.\nx = 24.\nThe greatest number is x + 3 = 24 + 3 = 27.\n#### 27",
+        "original_answer": 27.0,
+        "transformed_solution": "Let x be the first number.\nThe sum of the four consecutive numbers is x + (x+1) + (x+2) + (x+3) = 4x + 6.\n4x + 6 + 8 = 102 because there was a mistake in the original sum calculation.\n4x + 14 = 102.\n4x = 102 - 14.\n4x = 88.\nx = 22.\nThe greatest number is x + 3 = 22 + 3 = 25.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <because there was a mistake in the original sum calculation>, resulting in step 3 changing from 4x + 6 = 102 in the original_solution to 4x + 6 + 8 = 102 in the transformed_solution. This incorrect addition of 8 erroneously increases the sum, which alters the solution cascade and leads to a different greatest number, 25 instead of 27. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. The operands and operators of the formula in step 2 are correct for calculating the sum of four consecutive numbers, but the result is incorrectly adjusted by adding an extra 8, which is not needed. The correct calculation should be 4x + 6 = 102. The error in step 2 affects the subsequent steps, leading to the final wrong result."
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "question": "Uncle Ben has 440 chickens on his farm. 39 are roosters and the rest are hens. 15 of his hens do not lay eggs, and the rest do. If each egg-laying hen lays 3 eggs, how many eggs will Uncle Ben have?",
+        "original_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 386 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 386 hens = 1158 eggs.\n#### 1158",
+        "original_answer": 1158.0,
+        "transformed_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 385 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 385 hens = 1155 eggs.\n#### 1155",
+        "transformed_answer": 1155.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 401 as 401 from step 1 but changes 401 - 15 to 385 instead of the correct 386. It should be noted that step 1 in the transformed_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> should be the same as the step 1 in the original_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> and calculates its result 401 correctly. The subsequent step 3, which is related to step 2, is affected by the incorrect subtraction result but is still calculated correctly as 3 * 385 to give 1155 eggs. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the transformed_answer 1155 is different from the original_answer 1158.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the number of egg-laying hens by subtracting the number of roosters and non-egg-laying hens from the total number of chickens. It then correctly multiplies the number of egg-laying hens by the number of eggs each hen lays, resulting in the correct total number of eggs."
+    }
+]

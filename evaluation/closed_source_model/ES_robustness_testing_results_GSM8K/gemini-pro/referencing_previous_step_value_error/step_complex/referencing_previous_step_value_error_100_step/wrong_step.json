@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Anna has 3 times as many toys as Mandy and 2 fewer toys than Amanda. If they have 142 toys all together, how many toys does Mandy have?",
+        "original_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=140\nx=20\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=150\nx=21.429\n#### 21.429",
+        "transformed_answer": 21.429,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 140 as 150 from step 5 and changes 7*x=140 to 7*x=150. It should be noted that step 5 in the transformed_solution <7*x+2=142> should be the same as the step 5 in the original_solution <7*x+2=142> and calculates its result 140 correctly. The subsequent step, step 7, is affected by the incorrect result of step 6 but still computes the result correctly using the erroneous value from step 6, changing x=20 to x=21.429. There is no need to modify the previous steps as you only need to consider one error of referencing, and the calculation of all steps should still be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "Step 4 first makes a mistake in the calculation process, calculating 7*x=150 instead of 7*x=140. The subsequent step 5 references the result of step 4, calculating x=21.429 instead of x=20. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    },
+    {
+        "question": "Tom decides to make lasagna with all his beef. It takes twice as many noodles as beef. He has 10 pounds of beef. He already has 4 pounds of lasagna noodles and the noodles come in 2-pound packages. How many packages does he need to buy?",
+        "original_solution": "He needs 10*2=20 pounds of noodles\nThat means he needs to buy 20-4=16 pounds of noodles\nSo he needs to buy 16/2=8 packages\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "He needs 10*2=20 pounds of noodles\nThat means he needs to buy 20-4=16 pounds of noodles\nSo he needs to buy 16/3=5.33 packages\n#### 5.33",
+        "transformed_answer": 5.33,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references division by 2 as division by 3 from step 2 and changes 16/2=8 packages to 16/3=5.33 packages. It should be noted that step 2 in the transformed_solution <That means he needs to buy 20-4=16 pounds of noodles> should be the same as the step 2 in the original_solution <That means he needs to buy 20-4=16 pounds of noodles> and calculates its result 16 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct. Furthermore, because packages can only be bought in whole numbers, the transformed solution fails to address that requirement, resulting in an unrealistic number of packages.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 first makes a mistake in the calculation process, calculating 16/3=5.33 instead of 16/2=8. The subsequent step 6 references the result of step 5, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    },
+    {
+        "question": "Roger bought a house for $100,000. He was able to pay 20% down, and his parents paid off an additional 30% of the remaining balance. How much money does Roger still owe on his house?",
+        "original_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-24000=56000$\n#### 56000",
+        "original_answer": 56000.0,
+        "transformed_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-25000=55000$\n#### 55000",
+        "transformed_answer": 55000.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 24000 as 25000 from step 3 and changes 80000-24000=56000$ to 80000-25000=55000$. It should be noted that step 3 in the transformed_solution <80000(.30)=24000> should be the same as the step 3 in the original_solution <80000(.30)=24000> and calculates its result 24000 correctly. No other modifications are made apart from the deliberate error in step 4, ensuring only one step error is considered and all other steps that reference their previous steps' result numbers still reference these numbers correctly. The subsequent step related to this certain step uses the erroneous result, but the calculation itself is correct relative to the introduced error, resulting in a different transformed_answer from the original_answer.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 80000(.30)=24000 instead of 80000(.30)=24000. The subsequent step 4 references the result of step 3, calculating 80000-25000=55000 instead of 80000-24000=56000, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

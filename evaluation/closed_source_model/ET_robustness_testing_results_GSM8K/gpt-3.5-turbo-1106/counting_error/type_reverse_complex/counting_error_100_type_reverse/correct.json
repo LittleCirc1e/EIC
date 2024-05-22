@@ -1,0 +1,58 @@
+[
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nThe average distance traveled per day is counted as 51/2 = 25.5 miles because Wednesday is mistakenly excluded.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously assumes the total distance covered should be divided by 2 days instead of 3, which means Wednesday is mistakenly excluded. Hence the average 51/3=17 changes to 51/2=25.5. The error is isolated to the counting of the number of days, and the previous step regarding the calculation of total distance remains unaffected.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly excludes the distance traveled on Wednesday, resulting in an error in the counting process, so it belongs to counting_error. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he intends to split his time over the weekend, but mistakenly counts that as 1 day, he spends 4 hours / 1 = 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 of the transformed_solution incorrectly assumes that the weekend is 1 day instead of 2, therefore changing 4 hours / 2 to 4 hours / 1. The mistake results in Tristan spending all 4 remaining hours on Saturday as opposed to dividing them evenly between Saturday and Sunday. This counting error affects only the final step related to the allocation of study hours over the weekend and the subsequent calculation of hours studied on Saturday, without affecting previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 5. Step 5 mistakenly counts the weekend as 1 day instead of 2 days, resulting in an error in the counting process, so it belongs to counting_error."
+    },
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly counts Monday to Wednesday as 2 days instead of 3 days, only resulting in an operand error in the formula, so it belongs to counting_error."
+    },
+    {
+        "question": "Gumball was counting his water intake for the previous week. He checked his list and saw that he had drank 60 liters of water for the week. He drank nine liters of water on Monday, Thursday and Saturday and 8 liters of water on Tuesday, Friday and Sunday. Unfortunately, no data was input on Wednesday. How many liters of water did he drink on Wednesday?",
+        "original_solution": "Gumball's total water intake on Monday, Thursday, and Saturday is 9 x 3 = 27 liters.\nAnd his total water intake on Tuesday, Friday, and Sunday is 8 x 3 = 24 liters.\nSo his total water intake for 6 days is 24 + 27 = 51 liters.\nTherefore Gumball's water intake on Wednesday is 60 - 51 = 9 liters.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Gumball's total water intake on Monday, Thursday, and Saturday is 9 x 2 = 18 liters.\nAnd his total water intake on Tuesday, Friday, and Sunday is 8 x 2 = 16 liters.\nSo his total water intake for 5 days is 18 + 16 = 34 liters.\nTherefore Gumball's water intake on Wednesday is 60 - 34 = 26 liters.\n#### 26",
+        "transformed_answer": 26.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts Monday, Thursday, and Saturday as 2 days instead of 3 days, changing the correct calculation of 9 x 3 = 27 liters to 9 x 2 = 18 liters. Step 2 repeats a similar mistake, counting Tuesday, Friday, and Sunday as 2 days instead of 3 days, altering 8 x 3 = 24 liters to 8 x 2 = 16 liters. These errors are carried through to steps 3 and 4, impacting the total for the 5 days instead of 6 days and changing the subtraction to account for intake on Wednesday from 60 - 51 = 9 liters to 60 - 34 = 26 liters. The error should have only occurred in the step where the counting happens, and the transformation should not affect the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 counts the total water intake for 5 days as 34 liters instead of 36 liters, only resulting in an operand error in the formula, so it belongs to counting_error."
+    }
+]

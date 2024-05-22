@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Emily wants to know how much it rained last week. She sees that it rained 2 inches on Monday morning and 1 more inch later that day. It rained twice that much on Tuesday. It did not rain on Wednesday but on Thursday it rained 1 inch. The biggest storm was on Friday when the total was equal to Monday through Thursday combined. What was the daily average rain total for the week?",
+        "original_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/5 days = 4 inches average daily rain.\n#### 4",
+        "original_answer": 4,
+        "transformed_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total from Monday to Thursday.\n20 inches/4 days = 5 inches average daily rain.\n#### 5",
+        "transformed_answer": 5,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 incorrectly counts the number of days. In the transformed_solution, the divisor has been mistakenly changed from 5 days to 4 days (Monday to Thursday), excluding Friday. This incorrect counting affects step 6, changing the average daily rain calculation from 20/5=4 inches to 20/4=5 inches, thus leading to a different transformed_answer.",
+        "is_correct": "no",
+        "corrected_solution": "The total rain was 2 inches + 1 inch = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches on Wednesday.\nThe total rain was 1 inch on Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch + 1 inch = 11 inches on Friday.\nThere were 3 inches + 6 inches + 0 inches + 1 inch + 11 inches = 21 inches total from Monday to Friday.\n21 inches/7 days = 3 inches average daily rain.",
+        "corrected_answer": 3.0,
+        "corrected_explanation": "The solution incorrectly combined Wednesday and Thursday's rain totals and then incorrectly calculated the total rain for Friday. The correct total for Friday is the sum of Monday through Thursday, which is 3 inches (Monday) + 6 inches (Tuesday) + 0 inches (Wednesday) + 1 inch (Thursday) = 11 inches. The total for the week is 3 inches (Monday) + 6 inches (Tuesday) + 0 inches (Wednesday) + 1 inch (Thursday) + 11 inches (Friday) = 21 inches. To find the average daily rain, divide the total inches of rain by the number of days in the week, which is 7, not 4. Therefore, the average daily rain is 21 inches / 7 days = 3 inches."
+    },
+    {
+        "question": "Emily wants to know how much it rained last week. She sees that it rained 2 inches on Monday morning and 1 more inch later that day. It rained twice that much on Tuesday. It did not rain on Wednesday but on Thursday it rained 1 inch. The biggest storm was on Friday when the total was equal to Monday through Thursday combined. What was the daily average rain total for the week?",
+        "original_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/5 days = 4 inches average daily rain.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/4 days = 5 inches average daily rain.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 6,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 6 erroneously counts Monday through Friday as 4 days instead of 5 days, resulting in the '20 inches/5 days = 4 inches average daily rain' in the original_solution being changed to '20 inches/4 days = 5 inches average daily rain' in the transformed_solution. This transforms the correct average daily rain calculation into an incorrect one. It should be noted that you only need to consider one step of counting error, and the division calculation process in the wrong step should be correctly performed, resulting in a different answer from the original.",
+        "is_correct": "no",
+        "corrected_solution": "The total rain was 2 inches + 1 inch = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches on Wednesday.\nThe total rain was 1 inch on Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 0 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/7 days = 2.86 inches average daily rain.",
+        "corrected_answer": 2.86,
+        "corrected_explanation": "The total rain for the week should be divided by 7 days to find the daily average, not by 4 days. The days without rain are still counted in the average."
+    },
+    {
+        "question": "Emily wants to know how much it rained last week. She sees that it rained 2 inches on Monday morning and 1 more inch later that day. It rained twice that much on Tuesday. It did not rain on Wednesday but on Thursday it rained 1 inch. The biggest storm was on Friday when the total was equal to Monday through Thursday combined. What was the daily average rain total for the week?",
+        "original_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/5 days = 4 inches average daily rain.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/4 days = 5 inches average daily rain.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 6,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 6 erroneously counts the total number of days with rain as 4 days instead of 5 days because Wednesday is mistakenly not counted even when there was no rain. This counting error changes the average daily rain calculation from 20 inches/5 days to 20 inches/4 days resulting in 4 inches becoming 5 inches for the average daily rain total. It should be noted that you only need to consider one step of counting error, which here is the divisor in the average calculation step, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "The total rain was 2 inches + 1 inch = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches on Wednesday.\nThe total rain was 1 inch on Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 0 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/7 days = 2.86 inches average daily rain.\n",
+        "corrected_answer": 2.86,
+        "corrected_explanation": "The solution incorrectly divided the total inches of rain by 4 days instead of 7 days. There are 7 days in a week, so the average daily rain should be calculated by dividing the total inches of rain by 7."
+    }
+]

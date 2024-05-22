@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Bobby buys two packets of candy. He eats two candies every day from Monday through Friday and takes one each during the remaining days of the week. If it takes him 3 such weeks to finish the 2 packets, how many candies are in a packet?",
+        "original_solution": "He eats 2 each from Monday through Friday for a total of 2*5 = 10 candies\nHe eats 1 each every other day of the week (Saturday and Sunday) for a total of 1*2 = 2 candies\nIn a week, he consumes a total of 10+2 = 12 candies\nDoing this for 3 weeks, he will consume 3*12 = 36 candies\nIf 2 packets contain 36 candies, then 1 contains 36/2 = 18 candies\n#### 18",
+        "original_answer": 18,
+        "transformed_solution": "He eats 2 each from Monday through Friday for a total of 2*5 = 10 candies\nHe eats 1 each on the remaining day of the week (Sunday) for a total of 1*1 = 1 candy\nIn a week, he consumes a total of 10+1 = 11 candies\nDoing this for 3 weeks, he will consume 3*11 = 33 candies\nIf 2 packets contain 33 candies, then 1 contains 33/2 = 16.5 candies\n#### 16.5",
+        "transformed_answer": 16.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the remaining days of the week as one day (Sunday only) instead of two days (Saturday and Sunday), resulting in 1*2=2 becoming 1*1=1. And it affects the subsequent related steps, step 3 changes from 10+2=12 to 10+1=11, step 4 changes from 3*12=36 to 3*11=33, and step 5 changes from 36/2=18 to 33/2=16.5. It should be noted that you only need to consider one step of counting error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "He eats 2 each from Monday through Friday for a total of 2*5 = 10 candies\nHe eats 1 each on the remaining day of the week (Saturday) for a total of 1*1 = 1 candy\nIn a week, he consumes a total of 10+1 = 11 candies\nDoing this for 3 weeks, he will consume 3*11 = 33 candies\nIf 2 packets contain 33 candies, then 1 contains 33/2 = 16.5 candies\n#### 16.5",
+        "corrected_answer": 16.5,
+        "corrected_explanation": "Step 2 erroneously counts the remaining day of the week as Sunday instead of Saturday, resulting in an error in the calculation of the total candies consumed. This leads to an incorrect calculation of the number of candies in a packet."
+    },
+    {
+        "question": "Emily wants to know how much it rained last week. She sees that it rained 2 inches on Monday morning and 1 more inch later that day. It rained twice that much on Tuesday. It did not rain on Wednesday but on Thursday it rained 1 inch. The biggest storm was on Friday when the total was equal to Monday through Thursday combined. What was the daily average rain total for the week?",
+        "original_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total last week.\n20 inches/5 days = 4 inches average daily rain.\n#### 4",
+        "original_answer": 4,
+        "transformed_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total from Monday to Thursday.\n20 inches/4 days = 5 inches average daily rain.\n#### 5",
+        "transformed_answer": 5,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 incorrectly counts the number of days. In the transformed_solution, the divisor has been mistakenly changed from 5 days to 4 days (Monday to Thursday), excluding Friday. This incorrect counting affects step 6, changing the average daily rain calculation from 20/5=4 inches to 20/4=5 inches, thus leading to a different transformed_answer.",
+        "is_correct": "no",
+        "corrected_solution": "The total rain was 2 inches + 1 inches = 3 inches on Monday.\nThe total rain was 2 * 3 inches = 6 inches on Tuesday.\nThe total rain was 0 inches + 1 inch = 1 inch across Wednesday and Thursday.\nThe total rain was 3 inches + 6 inches + 1 inch = 10 inches on Friday.\nThere were 3 inches + 6 inches + 1 inch + 10 inches = 20 inches total from Monday to Thursday.\n20 inches/4 days = 5 inches average daily rain.\n#### 5",
+        "corrected_answer": 5.0,
+        "corrected_explanation": "Step 6 first erroneously counts Monday to Thursday as 4 days instead of 5 days, resulting in an error in the divisor in the formula. And step 6 calculates 20/4=5 instead of 20/5=4, resulting in the final incorrect answer."
+    },
+    {
+        "question": "Lisa has 36 candies. On Mondays and Wednesdays, she eats 2 candies for each day and on the other days of the week she eats 1 candy for each day. How many weeks does it take for Lisa to eat all of the candies?",
+        "original_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week, she eats 5 * 1=5 candies.\nIn a week she eats 5 + 4= 9 candies.\nSo it takes 36 / 9 = 4 weeks for Lisa to eat all candies.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week (Thursday to Sunday), she eats 4 * 1 = 4 candies.\nIn a week she eats 4 + 4 = 8 candies.\nSo it takes 36 / 8 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "transformed_answer": 4.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 erroneously counts the other days of the week (Thursday to Sunday) as 4 days instead of 5 days, and as a result, the quantity of candies eaten from 5 * 1=5 becomes 4 * 1=4. This change affects the number of candies eaten in the week (step 3) and the total number of weeks it takes for Lisa to eat all the candies (step 4), changing it from 36 / 9 = 4 weeks to 36 / 8 = 4.5 weeks. The wrong step entry corresponds to the first modification step which introduced the counting error. It should be noted that only one step of counting error was considered, and the previous and unrelated steps are still calculated correctly.",
+        "is_correct": "no",
+        "corrected_solution": "On Monday and Wednesdays, she eats 2 * 2 = 4 candies.\nOn the other days of the week (Thursday to Sunday), she eats 4 * 1 = 4 candies.\nIn a week she eats 4 + 4 = 8 candies.\nSo it takes 36 / 6 = 4.5 weeks for Lisa to eat all candies.\n#### 4.5",
+        "corrected_answer": 4.5,
+        "corrected_explanation": "Step 4 first erroneously calculates 36/8=4.5 instead of 36/6=6, resulting in the final incorrect answer."
+    }
+]

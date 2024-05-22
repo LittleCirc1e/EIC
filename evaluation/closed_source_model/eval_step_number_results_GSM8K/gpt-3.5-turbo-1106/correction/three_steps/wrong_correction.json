@@ -1,0 +1,32 @@
+[
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "corrected_solution": "8722 / 0.98 = 8924.49\n8924.49 / 0.98 = 9110.20\n9110.20",
+        "corrected_answer": "9110.20",
+        "corrected_explanation": "The correct process is to first calculate the original value by dividing the final value by 0.98, then divide the result by 0.98 again to get the correct answer."
+    },
+    {
+        "question": "Fred had 236 dollars to spend on 6 books. After buying them, he had 14 dollars. On average, how much did each book cost?",
+        "original_solution": "Fred spent $236 - $14 = $222 on books.\nThe cost per book is $222 / 6 books = $37.\n#### 37",
+        "original_answer": 37.0,
+        "transformed_solution": "Fred spent $236 - $14 = $222 on books.\nThe cost per book is $222 / 6 books = $35.\n#### 35",
+        "transformed_answer": 35.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the division in step 2 is intentionally calculated incorrectly: $222 / 6 books should equal $37, but is instead listed as $35. The incorrect division alters the outcome of the solution without affecting the first step, which remains accurate and unchanged. The transformed_answer reflects this miscalculation, resulting in a different answer than the original_answer.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 36.83,
+        "corrected_explanation": "The correct average cost per book is $222 / 6 = $37."
+    }
+]

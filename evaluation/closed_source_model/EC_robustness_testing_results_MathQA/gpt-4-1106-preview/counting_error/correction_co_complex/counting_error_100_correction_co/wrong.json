@@ -1,0 +1,32 @@
+[
+    {
+        "question": "John had a stock of 1400 books in his bookshop. He sold 75 on Monday, 50 on Tuesday, 64 on Wednesday, 78 on Thursday, and 135 on Friday. What percentage of the books were not sold?",
+        "original_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71.29%\n#### 71.29",
+        "original_answer": 71.29,
+        "transformed_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71%\n#### 71",
+        "transformed_answer": 71,
+        "wrong_step": 4,
+        "wrong_type": "rounding_error",
+        "is_single_error": true,
+        "explanation": "Here, the final step inaccurately rounds the percentage from 71.2857% to 71% instead of the correct 71.29% as per the original solution. This causes the transformed answer to be different from the original answer, creating a rounding error at step 4. It's important to note that the counting in earlier steps is unchanged, with only the final rounding step being affected.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly adds up the total number of books sold from Monday to Friday, correctly subtracts this from the initial stock to find the remaining books, and correctly calculates the percentage of books not sold. The final answer is rounded to the nearest whole number as requested."
+    },
+    {
+        "question": "At Chennai it rained as much on Tuesday as on all the others days of the week combined. If the average rainfall for the whole week was 3cm. How much did it rain on Tuesday?",
+        "original_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 7 * 3 = 21 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 21 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 21 - x\n2x = 21\nx = 10.5\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 6 * 3 = 18 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 18 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 18 - x\n2x = 18\nx = 9\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original_solution, the total days are erroneously counted as 6 instead of 7 when calculating the total rainfall for the week. This affects the following steps since the total rainfall is now incorrectly set to 18 cm instead of 21 cm. Consequently, the calculation is based on the wrong total, which also changes the final answer for Tuesday’s rainfall from 10.5 cm to 9 cm.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up an equation where x represents the rainfall on Tuesday. It correctly calculates the total rainfall for the week as 6 days * 3 cm/day average = 18 cm. It then sets up the equation x = 18 - x, where x is the rainfall on Tuesday and 18 - x is the rainfall for the other days. Solving for x gives the correct answer of 9 cm of rain on Tuesday."
+    }
+]

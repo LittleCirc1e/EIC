@@ -1,0 +1,58 @@
+[
+    {
+        "question": "a number when divided by 6 leaves a remainder 3. when the square of the same number is divided by 6, the remainder is",
+        "original_solution": "Let the number be x.\nTherefore, x = 6a + 3, where a is the quotient.\nThen x^2 = 36a^2 + 36a + 9 = 6(6a^2 + 6a + 1) + 3, which means when the square of the number is divided by 6, the remainder is 3.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Let the number be x.\nThen x^2 = (6+3)^2 = 36+54+9= 6(15) + 9, which means when the square of the number is divided by 6, the remainder is 9.\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step which establishes the form of x has been removed. The original solution uses x = 6a + 3 to form the base equation of the number before squaring it. By deleting this, the transformed solution directly references the remainder '3' when creating the square of the number, which should result in a form of (6 + 3)^2, but incorrectly transforms it into 36+54+9, implying the number to be squared was 9 instead of 6a+3. Consequently, the final step alters the remainder incorrectly from 3 to 9 when the number is squared. The wrong_step is 1 because it is the first step in the transformed_solution that uses incorrect logic, resulting in the incorrect conclusion.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the properties of remainders in modular arithmetic. When a number x leaves a remainder of 3 when divided by 6, it can be expressed as x = 6k + 3 for some integer k. Squaring both sides gives x^2 = (6k + 3)^2. Expanding this, we get x^2 = 36k^2 + 36k + 9 = 6(6k^2 + 6k + 1) + 9, which shows that when x^2 is divided by 6, the remainder is indeed 9. Therefore, the solution is correct."
+    },
+    {
+        "question": "If 853845 bars of chocolate need to be placed in little boxes and each box can contain at most 9 bars of chocolate, how many bars of chocolate will be in the last unfilled box?",
+        "original_solution": "The number of bars of chocolate in the last unfilled box is the remainder after dividing 853845 by 9.\nSo, the number of bars of chocolate in the last unfilled box is 6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "To find the number of bars in the last box, calculate 853845 modulo 9.\n853845 modulo 9 equals 6.\n#### 6",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 which describes the process is removed. Instead, step 1 directly calculates the modulo operation (which is the remainder of 853845 divided by 9). However, an intentional calculation error is introduced in step 2 where the result should remain as 6 which is the actual remainder of 853845 divided by 9, but it is inaccurately changed to 5. The wrong_step is 2 since that's where the incorrect number is first introduced in the transformed_solution. The wrong_type is 'calculation_error' because the changed answer is the result of such an error. The error is a single error within the process.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the modulo operation to find the remainder of bars that would be in the last box after dividing the total number of bars by the number of bars that can fit in each box. Since 853845 modulo 9 equals 6, the last box would contain 6 bars of chocolate, which is the correct answer."
+    },
+    {
+        "question": "What will be the fraction of 8 %?",
+        "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "original_answer": "2/25",
+        "transformed_solution": "8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "transformed_answer": "4/50",
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed_solution eliminates the first step which explains the process of converting a percentage to a fraction. Hence, the transformed_solution proceeds directly with converting 8% to a fraction as 8/100. However, instead of simplifying this fraction to 2/25, an intentional error is introduced in the simplification process that results in an incorrect fraction of 4/50. Since the transformation starts from the middle of the original solution (skipping the explanation about dividing by 100), the wrong_step is 1. Note that the fraction 4/50 is equivalent to 2/25, so to ensure the transformed_answer is different, we will choose 4/50.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly converts the percentage to a fraction and simplifies it by dividing both the numerator and the denominator by their greatest common divisor."
+    },
+    {
+        "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+        "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from 0 to 48\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+        "transformed_answer": 49.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step, which involves the inequality '4n + 7 > 1', was removed. Since the subsequent steps do not reference the result of this first step, we only need to adjust the range of integer values that n can take from '-1 to 48' to '0 to 48'. Hence, the total count of integer values changes from 50 to 49. It is step 1 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing the range of n in the transformed_solution, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies the range of integer values for n from 0 to 48 inclusive, which totals 49 integer values. Although the solution does not explicitly state the lower bound condition, it does not affect the final count."
+    }
+]

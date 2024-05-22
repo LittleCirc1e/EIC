@@ -1,0 +1,32 @@
+[
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "corrected_solution": "To find the original value of the Dow before the 2% drop, we divide the final value by 0.98 (since a 2% drop implies it is now at 98% of the original value).\nOriginal Dow value = 8722 / 0.98\nOriginal Dow value = 8902.04",
+        "corrected_answer": 8902.04,
+        "corrected_explanation": "The solution incorrectly calculates the 2% drop as 8722 / 98*2, which does not represent a 2% reduction. The correct method is to divide the final value by 0.98 to find the original value before the 2% decrease."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "corrected_solution": "John starts with wall push-ups and adds 1 rep each day for 5 days a week. It takes him 15 days to reach 15 reps for wall push-ups. \nThen he moves on to high elevation push-ups, adding 1 rep each day for 5 days a week, which also takes 15 days to reach 15 reps. \nNext, he does the same with low elevation push-ups, which takes another 15 days. \nFinally, he starts floor push-ups. \nIn total, he needs 15 days for each type of push-up, and there are 4 types. \nSo, it takes 15*4=60 days. \nSince he trains 5 days a week, we divide the total days by 5 to get the number of weeks: 60/5=12 weeks.",
+        "corrected_answer": 12.0,
+        "corrected_explanation": "John has to complete 15 reps for each of the 4 stages (wall, high elevation, low elevation, and floor push-ups). Each stage takes 15 days since he adds 1 rep per day and trains 5 days a week. Therefore, it takes 15 days for each stage, multiplied by 4 stages, resulting in 60 days. Dividing 60 days by 5 days per week gives us 12 weeks."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (60 minutes per hour) / (60 - x) minutes per hour and 45 kmph = (60 minutes per hour) / x minutes per hour.\nSolving for x, we get x = 10.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (50 minutes per hour) / (50 - x) minutes per hour and 45 kmph = (50 minutes per hour) / x minutes per hour.\nSolving for x, we get x = 5.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion, which means 1 hour is wrongly calculated as 50 minutes instead of the actual 60 minutes. This has subsequently affected the equation in step 3, changing it from (60 minutes per hour) / (60 - x) minutes and (60 minutes per hour) / x minutes to (50 minutes per hour) / (50 - x) minutes and (50 minutes per hour) / x minutes. This incorrect unit conversion results in a different solution for x, leading to an altered answer.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the question, the distance remains constant, so the time taken is inversely proportional to the speed.\nSo, 54 kmph = (60 minutes per hour) / (60 - x) minutes per hour and 45 kmph = (60 minutes per hour) / (60 + x) minutes per hour.\nSolving for x, we get x = 10.",
+        "corrected_answer": "10.0",
+        "corrected_explanation": "The original solution incorrectly set up the equation for the time taken including stoppages. The correct equation should be 45 kmph = (60 minutes per hour) / (60 + x) minutes per hour, and solving for x gives us x = 10, which is the correct answer."
+    },
+    {
+        "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+        "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "corrected_solution": "First, start both hourglasses together and let them run. When the 7 mins hourglass runs out, flip it over immediately. When the 11 mins hourglass runs out, flip it over immediately. When the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over. 11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.",
+        "corrected_answer": "15.0",
+        "corrected_explanation": "The original solution incorrectly calculated the time passed when the 7 mins hourglass runs out for the second time. The correct calculation should be 11 + (7 - 7) = 11 + 0 = 11 minutes, not 10 minutes. Therefore, the correct answer is 15 minutes."
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.5 = 77.36842105263158.\n#### 77.36842105263158",
+        "transformed_answer": 77.36842105263158,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 9.8 in the question as 9.5 wrongly, and calculates 735 / 9.5 instead of 735 / 9.8. The subsequent related step will be affected by the erroneous result of this step but is still calculated correctly based on the incorrect premise. All other steps that reference this number (9.8) still reference it correctly.",
+        "is_correct": "no",
+        "corrected_solution": "The average price of a pair of rackets is $9.8, so the total sales can be calculated by multiplying the average price by the number of pairs sold. Therefore, the number of pairs sold is 735 / 9.8 = 74.9.\n#### 74.9",
+        "corrected_answer": 74.9,
+        "corrected_explanation": "The average price of a pair of rackets is $9.8, so the total sales can be calculated by multiplying the average price by the number of pairs sold. Therefore, the number of pairs sold is 735 / 9.8 = 74.9."
+    },
+    {
+        "question": "In a college the ratio of the numbers of boys to the girls is 8 : 5. if there are 120 girls, the total number of students in the college is ?",
+        "original_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*120 = 192\nThe total number of students in the college is 192+120 = 312\n#### 312",
+        "original_answer": 312.0,
+        "transformed_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*100 = 160\nThe total number of students in the college is 160+100 = 260\n#### 260",
+        "transformed_answer": 260.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 120 in the question as 100 wrongly, and calculates 8/5*100=160 instead of 8/5*120=192. The related subsequent step (step 3) will be affected, calculating 160+100=260 instead of 192+120=312. Please note that you should only consider one error, so step 3 still references 100 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/13*120 = 73.85\nThe total number of students in the college is 73.85+120 = 193.85",
+        "corrected_answer": 193.85,
+        "corrected_explanation": "The ratio of boys to girls is 8:5, so the ratio of boys to the total number of students is 8/(8+5) = 8/13. Therefore, the number of boys is 8/13*120 = 73.85. The total number of students in the college is 73.85+120 = 193.85."
+    },
+    {
+        "question": "Some of 50% - intensity red paint is replaced with 20% solution of red paint such that the new paint intensity is 40%. What fraction of the original paint was replaced?",
+        "original_solution": "Let x be the fraction of the original paint that was replaced. \n0.5 - 0.5x + 0.2x = 0.4 \n0.3x = 0.1 \nx = 0.1/0.3 = 1/3 \n#### 1/3",
+        "original_answer": "1/3",
+        "transformed_solution": "Let x be the fraction of the original paint that was replaced. \n0.5 - 0.6x + 0.2x = 0.4 \n-0.1x = -0.1 \nx = -0.1/-0.1 = 1 \n#### 1",
+        "transformed_answer": "1",
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 0.5 in the equation as 0.6 wrongly, changing the equation from 0.5 - 0.5x + 0.2x = 0.4 to 0.5 - 0.6x + 0.2x = 0.4. The error in the equation leads to -0.1x = -0.1 instead of 0.3x = 0.1. Subsequent calculation is based on the erroneous result in step 2, but the operations are correctly performed based on that result, leading to x being wrongly calculated as 1 instead of 1/3.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the fraction of the original paint that was replaced.\n0.5 - 0.6x + 0.2x = 0.4\n-0.4x = -0.1\nx = -0.1/-0.4 = 0.25\n#### 0.25",
+        "corrected_answer": 0.25,
+        "corrected_explanation": "The solution is incorrect because the equation -0.1x = -0.1 is divided by -0.1 instead of -0.4."
+    }
+]

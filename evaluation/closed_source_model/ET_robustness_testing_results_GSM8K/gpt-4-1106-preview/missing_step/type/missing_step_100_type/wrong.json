@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Liam is 16 years old now. Two years ago, Liam’s age was twice the age of Vince. How old is Vince now?",
+        "original_solution": "Liam's age two years ago was 16 - 2 = 14 years old.\nVince's age two years ago was 14/2 = 7 years old because Liam's age is twice his.\nSo Vince age now is 7 + 2 = 9 years old.\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "Vince's age two years ago was 16/2 = 8 years old because Liam's age is twice his.\nSo Vince's age now is 8 + 2 = 10 years old.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original_solution, step 1 calculates Liam’s age two years ago. However, the transformed_solution removes this first step. As a consequence, step 1 in the transformed_solution, which originally is step 2 in the original_solution, directly references the number 16 from the question, which leads to Vince’s age being half of 16 instead of half of Liam’s age two years ago. This results in a transformed answer of 10, which is incorrect. The error in the new step 1 is due to the fact that it incorrectly calculates Vince’s age as half of Liam’s current age rather than half of Liam’s age two years ago. Since the original step 1 is absent, the subsequent related step (the new step 1) becomes the wrong step.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates Vince's age two years ago by dividing Liam's age at that time by 2, and then correctly adds 2 years to find Vince's current age. There are no errors in the calculation, counting, referencing, unit conversion, operators, missing steps, confusing formulas, or adding irrelevant information."
+    }
+]

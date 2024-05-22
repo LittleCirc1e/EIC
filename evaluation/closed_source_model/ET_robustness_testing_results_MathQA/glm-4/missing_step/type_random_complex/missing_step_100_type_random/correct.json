@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Find a sum for 1 st 8 prime number ' s ?",
+        "original_solution": "The first 8 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19.\nThe sum of these prime numbers is 2 + 3 + 5 + 7 + 11 + 13 + 17 + 19 = 77\n#### 77",
+        "original_answer": 77.0,
+        "transformed_solution": "The sum of the first 8 prime numbers is 2 + 3 + 5 + 11 + 13 + 17 + 19 = 70\n#### 70",
+        "transformed_answer": 70.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the original solution is simplified by removing the listing of the prime numbers as individual steps, and thus also removing the number 7 from the sum. After deleting the listing step, the sum incorrectly omits the prime number 7, causing the sum to be lower than the correct value. The subsequent steps are affected by this omission. The sum of the first 8 prime numbers is recalculated without the number 7, yielding the incorrect result of 70 instead of 77. It is the first step in the transformed solution that commits the error of the missing number 7, so the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is the missing step to include the prime number 7 in the sum of the first 8 prime numbers. The provided list only contains 7 prime numbers instead of 8. This error belongs to missing_step because there is a necessary step to include all 8 prime numbers that is absent, affecting the final result."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. The operands and operators of the formula are correct, but the result is incorrectly calculated as 25 instead of the correct total of 375 chocolate bars. This is a calculation_error because the multiplication operation should yield 15 * 25 = 375."
+    },
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The distance traveled in the third interval is (2 + 5 * 2) * (5 / 60) = 2 miles\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been omitted, and its calculations wrongly incorporated into a single transformed step. The increase in speed after two intervals (which should be 2 + 5 * 2 = 12 miles per hour) is correctly calculated, but the multiplication by the fraction representing 5 minutes in an hour (5/60) is incorrectly done. Due to this, the distance traveled in the third interval equation changes to (2 + 5 * 2) * (5 / 60) in the transformed_solution. Since the omission has led to a calculation error in the combined single step, the wrong_step is 1. The transformed answer of 2 miles is incorrect as the actual distance traveled in the third 5-minute interval should be 1 mile.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The formula correctly calculates the speed for the third 5-minute interval by adding 5 mph for each interval after the first, but it fails to correctly calculate the total distance traveled. The expression should be (2 + 5 * 2) * (5/60) to calculate the speed for the third interval and then convert it to distance by multiplying by time, but the calculation is incorrect. The correct calculation should be (2 + 5 * 2) * 5/60 = 7 * 5/60 = 35/60 = 0.5833... miles, not 2 miles as stated in the solution."
+    },
+    {
+        "question": "Sarah is driving to the airport. After driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. She then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. How many miles did she drive in all?",
+        "original_solution": "She drove 50 miles in the first hour because 50 x 1 = 50\nShe drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 200 miles in all because 50 + 150 = 200\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "She drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 150 miles in all because 0 + 150 = 150\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step which calculates how far Sarah drove in the first hour has been removed. The original step 1 resulted in 50 miles. In the transformed_solution, step 2 which originally added 50 miles from step 1 to 150 miles from what was step 2 in the original_solution must now be corrected to add 0 to 150 miles, since step 1 has been removed. This results in a total distance driven of 150 miles, as stated in the transformed_solution. The deletion of step 1 removes the reference to the number of miles driven in the first hour from the solution, which leads to an incorrect calculation of the total distance driven and a wrong transformed_answer of 150 miles, which is different from the original_answer of 200 miles. Therefore, the wrong_step is the rewritten step 2 in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 2. The solution does not account for the distance driven in the first hour at 50 miles per hour. It incorrectly assumes that the total distance is only the distance traveled at 100 miles per hour. This results in a missing step to calculate the initial distance, and thus it belongs to missing_step. The subsequent step incorrectly references the absence of this initial distance, leading to the incorrect final answer."
+    }
+]

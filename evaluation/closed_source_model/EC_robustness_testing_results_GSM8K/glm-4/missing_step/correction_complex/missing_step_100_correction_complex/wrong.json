@@ -1,0 +1,32 @@
+[
+    {
+        "question": "If Patty's dress was $10 more than Ida's dress, and Ida's dress was $30 more than Jean's dress, and Jean's dress was $10 less than Pauline's dress, and lastly Pauline's dress was $30, how much did all the ladies spend on dressed put together?",
+        "original_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10= 20 dollars.\nIda's dress was $30 more than Jean's $20 dress, meaning it was 30+20=50 dollars.\nPatty's dress was $10 more than Ida's $50 dress, meaning it was 50+10=60 dollars.\nTherefore, all four women together spent 60+50+20+30=160 dollars.\n#### 160",
+        "original_answer": 160.0,
+        "transformed_solution": "Jean's dress was $10 less than Pauline's $30 dress, meaning it was 30-10=20 dollars.\nIda's dress was $30 more than Jean's dress, meaning it was 30+30=60 dollars.\nPatty's dress was $10 more than Ida's $60 dress, meaning it was 60+10=70 dollars.\nTherefore, all four women together spent 70+60+20+30=180 dollars.\n#### 180",
+        "transformed_answer": 180.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes the intermediate step 2 from the original solution. In the original_solution, the step 2 calculation is based on the results of step 1. After deleting original step 2, the new step 2 should be based on step 1's result, so the formula should now reference the 30 dollars directly rather than the result of deleted step 2's 20 dollars. The number 30 dollars also appears in deleted step 2, so we choose 30 as the reference for the new step 2 because it is the larger number used in the original step 2. Although the new calculation (30+30=60 dollars) makes sense in context, it is incorrect because it does not follow the decrement given in the original question for Jean’s dress (which is $10 less than $30). The subsequent calculations in step 3 and 4 then inherit this error, leading to the transformed_solution with a first erroneous reference appearing at the new step 2, incorrectly inflating the price of Ida's dress and ultimately the total amount.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the price of each dress and sums them up. The calculations for Jean's, Ida's, Patty's, and Pauline's dresses are all correct, and the total spent is correctly determined to be $180."
+    },
+    {
+        "question": "Andy walks 50 meters from his house to school. After school, he comes back to the house and goes to the market. If he walks 140 meters in total, how many meters is the distance between the house and the market?",
+        "original_solution": "He walks 50m from home to school and walks 50m again from school to house, so he walks 50m + 50m = 100 meters\nIf the total distance is 140m, the distance between the house and the market is 140m - 100m = 40 meters.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If the total distance is 140m, the distance between the house and the market is 140m - 50m = 90 meters.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformation, I have deleted the first step, which involves Andy's return trip from school to his house. The original step 1 involves adding the two 50m trips together for a total of 100m. By removing this step, we no longer account for the return trip from school, and thus the calculation in the transformed solution refers to only one leg of the journey from the house to the school (50m). Since in our transformation we remove step 1, we then modify step 2 to include only one 50m trip, changing the formula from 140m - 100m = 40 meters to 140m - 50m = 90 meters. It should be noted that while the calculation itself is algebraically correct, the premise is wrong because it does not consider the entire trip. The first step (now also the wrong_step) references the correct number from the question and no intermediate steps are present, thus making the entire reasoning incorrect and leading to a different transformed answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the distance between the house and the market by subtracting the distance from the house to school from the total distance walked, resulting in the correct answer of 90 meters."
+    }
+]

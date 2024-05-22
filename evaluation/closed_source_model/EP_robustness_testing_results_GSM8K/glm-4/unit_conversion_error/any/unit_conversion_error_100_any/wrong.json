@@ -1,0 +1,177 @@
+[
+    {
+        "question": "Christina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?",
+        "original_solution": "The first snake is 24 inches because there are 12 inches in a foot.\nThe snakes are 24+16+10= 50 inches long.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "The first snake is 20 inches because there are 10 inches in a foot.\nThe snakes are 20+16+10= 46 inches long.\n#### 46",
+        "transformed_answer": 46.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of the correct 12 inches, resulting in 2 feet being equal to 20 inches instead of 24 inches in the original_solution. This affects the subsequent related step 2, which changes from 24 + 16 + 10 = 50 inches to 20 + 16 + 10 = 46 inches. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The conversion from feet to inches is correct (2 feet = 24 inches, not 20 as stated, but the final calculation is done correctly with the given incorrect conversion). The addition of the snake lengths is done correctly, resulting in the correct total length of 46 inches.",
+        "label": "no"
+    },
+    {
+        "question": "Jake's dad can drive the distance from their house to the water park in 30 minutes. He spends half that journey driving 28 miles per hour and the other half driving 60 miles per hour on the highway. If Jake can bike 11 miles per hour, how many hours will it take him to bike to the water park?",
+        "original_solution": "First find how long half Jake's dad's trip is: 30 minutes / 2 = 15 minutes\nThen convert the minutes to hours: 15 minutes * 1 hour/60 minutes = .25 hours\nNow find how far Jake's dad travels at 28 miles per hour: .25 hours * 28 miles per hour = 7 miles\nThen find how far Jake's dad travels at 60 miles per hour: .25 hours * 60 miles per hour = 15 miles\nNow add those distances to find the total distance to the water park: 7 miles + 15 miles = 22 miles\nNow divide the total distance by Jake's speed to find how long it takes him: 22 miles / 11 miles/hour = 2 hours\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "First find how long half Jake's dad's trip is: 30 minutes / 2 = 15 minutes\nThen convert the minutes to hours: 15 minutes * 1 hour/50 minutes = .3 hours\nNow find how far Jake's dad travels at 28 miles per hour: .3 hours * 28 miles per hour = 8.4 miles\nThen find how far Jake's dad travels at 60 miles per hour: .3 hours * 60 miles per hour = 18 miles\nNow add those distances to find the total distance to the water park: 8.4 miles + 18 miles = 26.4 miles\nNow divide the total distance by Jake's speed to find how long it takes him: 26.4 miles / 11 miles/hour = 2.4 hours\n#### 2.4",
+        "transformed_answer": 2.4,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes incorrect conversion from minutes to hours. Instead of using the correct 60 minutes per hour, it wrongly uses 50 minutes per hour, changing 15 minutes * 1 hour/60 minutes = .25 hours in the original_solution to 15 minutes * 1 hour/50 minutes = .3 hours in the transformed_solution. This error affects the subsequent related distance calculations in steps 3 and 4, changing the outcomes from 7 miles and 15 miles to 8.4 miles and 18 miles, respectively. It also affects the final step where the total distance Jake has to bike is divided by his speed, changing from 22 miles / 11 miles/hour = 2 hours to 26.4 miles / 11 miles/hour = 2.4 hours. The other steps prior to the error remain correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the distance Jake's dad travels at each speed and then adds them to get the total distance. It also correctly converts time units and uses the total distance and Jake's biking speed to find the time it would take for Jake to bike to the water park.",
+        "label": "no"
+    },
+    {
+        "question": "Jenna is hemming her prom dress. The dress's hem is 3 feet long. Each stitch Jenna makes is 1/4 inch long. If Jenna makes 24 stitches per minute, how many minutes does it take Jenna to hem her dress?",
+        "original_solution": "First find how many inches the hem is by multiplying the length in feet by the number of inches per foot: 3 feet * 12 inches/foot = 36 inches\nThen divide the length in inches by the length of each stitch to find how many stitches Jenna makes: 36 inches / .25 inches = 144 stitches\nThen divide the number of stitches by Jenna's stitching rate to find how long it takes her: 144 stitches / 24 stitches/minute = 6 minutes\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "First find how many inches the hem is by multiplying the length in feet by the number of inches per foot: 3 feet * 10 inches/foot = 30 inches\nThen divide the length in inches by the length of each stitch to find how many stitches Jenna makes: 30 inches / .25 inches = 120 stitches\nThen divide the number of stitches by Jenna's stitching rate to find how long it takes her: 120 stitches / 24 stitches/minute = 5 minutes\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 3 feet * 12 inches/foot = 36 inches in the original_solution becoming 3 feet * 10 inches/foot = 30 inches in the transformed_solution. And it affects the subsequent related step 2 and 3, which changes from 36 inches / .25 inches = 144 stitches to 30 inches / .25 inches = 120 stitches, and from 144 stitches / 24 stitches/minute = 6 minutes to 120 stitches / 24 stitches/minute = 5 minutes. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2 and the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly converts the length of the hem from feet to inches, calculates the total number of stitches needed, and then divides that number by the rate of stitches per minute to find the time required.",
+        "label": "no"
+    },
+    {
+        "question": "On a shopping trip in a crowded store, Josie had to wait 3 minutes for a cart, 13 minutes for an employee to unlock a cabinet to get her a product, 14 minutes for a stocker to restock a shelf with what she wanted, and 18 minutes in line to check out. Her shopping trip took an hour and a half. How many minutes did Josie spend shopping instead of waiting?",
+        "original_solution": "There are 60 minutes in an hour, so the trip took 1 1/2 * 60 = 90 minutes.\nJosie spent 3 + 13 + 14 + 18 = 48 minutes waiting.\nThus, she spent 90 - 48 = 42 minutes shopping.\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "There are 50 minutes in an hour, so the trip took 1 1/2 * 50 = 75 minutes.\nJosie spent 3 + 13 + 14 + 18 = 48 minutes waiting.\nThus, she spent 75 - 48 = 27 minutes shopping.\n#### 27",
+        "transformed_answer": 27.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 1 1/2 * 60 = 90 minutes in the original_solution becoming 1 1/2 * 50 = 75 minutes in the transformed_solution. This affects the subsequent related step 3, which changes from 90 - 48 = 42 minutes to 75 - 48 = 27 minutes. It should be noted that you only need to consider one step of unit conversion error, so the addition of waiting times in step 2 and the subtraction process in step 3 are still correct aside from the impact of the unit conversion error.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total time Josie spent waiting by adding the individual wait times, and then subtracts this total from the total shopping trip time to find the time spent shopping.",
+        "label": "no"
+    },
+    {
+        "question": "A radio show plays for 3 hours a day. They split their show into talking segments, ad breaks, and songs. Talking segments last 10 minutes each, ad breaks last 5 minutes each and songs are played throughout the rest of the show. If the radio show includes 3 talking segments and 5 ad breaks in today’s show, how long, in minutes, does the show play songs?",
+        "original_solution": "The entire radio show plays for 3 hours * 60 minutes = 180 minutes.\nThe talking segments use 3 talking segments * 10 minutes per talking segment = 30 minutes each.\nThe ad breaks use 5 ad breaks * 5 minutes per ad break = 25 minutes.\nIn total, the talking segments and ad breaks use 30 + 25 = 55 minutes.\nThis leaves 180 – 55 = 125 minutes for the radio show to play songs.\n#### 125",
+        "original_answer": 125.0,
+        "transformed_solution": "The entire radio show plays for 3 hours * 50 minutes = 150 minutes.\nThe talking segments use 3 talking segments * 10 minutes per talking segment = 30 minutes each.\nThe ad breaks use 5 ad breaks * 5 minutes per ad break = 25 minutes.\nIn total, the talking segments and ad breaks use 30 + 25 = 55 minutes.\nThis leaves 150 – 55 = 95 minutes for the radio show to play songs.\n#### 95",
+        "transformed_answer": 95.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 3 hours * 60 minutes = 180 minutes in the original_solution becoming 3 hours * 50 minutes = 150 minutes in the transformed_solution. And it affects the subsequent related step 5, which changes from 180 – 55 = 125 minutes for the radio show to play songs to 150 – 55 = 95 minutes for the radio show to play songs. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of step 2, 3, and the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total time used by talking segments and ad breaks, then subtracts this from the total show time to find the time left for songs.",
+        "label": "no"
+    },
+    {
+        "question": "Naruto can lift a mountain ten times higher than Kagiyami can. But Kagiyami can lift a mountain 4 times higher than Saskay can. And Saskay can lift a mountain 12 times higher than Pompei can. If Pompei can lift a mountain 1 inch, how high can Naruto lift a mountain, in feet?",
+        "original_solution": "If Pompei can lift a mountain 1 inch, and Saskay can lift a mountain 12 times higher than Pompei can, then Saskay can lift a mountain 12*1=12 inches=1 foot.\nSince Kagiyami can lift a mountain 4 times higher than Saskay, then Kagiyami can lift a mountain 4*1=4 feet.\nAnd since Naruto can lift a mountain ten times higher than Kagiyami. then Naruto can lift a mountain 10*4=40 feet.\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "If Pompei can lift a mountain 1 inch, and Saskay can lift a mountain 12 times higher than Pompei can, then Saskay can lift a mountain 12*1=12 inches=2 feet.\nSince Kagiyami can lift a mountain 4 times higher than Saskay, then Kagiyami can lift a mountain 4*2=8 feet.\nAnd since Naruto can lift a mountain ten times higher than Kagiyami, then Naruto can lift a mountain 10*8=80 feet.\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 12 inches is wrongly equal to 2 feet instead of 1 foot, resulting in Saskay being able to lift 12 inches = 1 foot in the original_solution becoming Saskay being able to lift 12 inches = 2 feet in the transformed_solution. This incorrect conversion impacts the subsequent related calculations for Kagiyami and Naruto, affecting steps 2 and 3. Step 2 changes from Kagiyami lifting 4*1=4 feet in the original_solution to 4*2=8 feet in the transformed_solution. Similarly, step 3 changes from Naruto lifting a mountain 10*4=40 feet to 10*8=80 feet. It should be noted that only the unit conversion error is made, without affecting the previous steps and the multiplication process itself, only the value used has changed due to the conversion error.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly multiplies the lifting capacities at each step to find Naruto's ultimate lifting capacity, starting from Pompei's base capacity of 1 inch, converting inches to feet where appropriate.",
+        "label": "no"
+    },
+    {
+        "question": "Ann is cutting fabric to make curtains. She cuts a 4 foot by 6 foot rectangle for the living room, and a 2 foot by 4 foot rectangle for the bedroom. If the bolt of fabric is 16 feet by 12 feet, how much fabric is left in square feet?",
+        "transformed_solution": "First figure out how many square feet the original bolt of fabric was: 16 feet * 12 feet = 192 square feet\nThen figure out how much fabric Ann took for the living room curtains: 4 feet * 6 feet = 24 square feet\nThen figure out how much fabric Ann took for the bathroom curtains: 2 feet * 4 feet = 8 square feet\nFinally, subtract the square footage of both sets of curtains from the total square footage: 192 - 24 - 8 = 160 square feet\n#### 160",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly states that Ann took 8 square feet for the bathroom curtains, but the question states she made curtains for the bedroom, not the bathroom. The calculation for the bedroom curtains should be correct, but the reference to the room should be accurate."
+    },
+    {
+        "question": "Caleb bought 10 cartons of ice cream and 4 cartons of frozen yoghurt. Each carton of ice cream cost $4 and each carton of frozen yoghurt cost $1. How much more did Caleb spend on ice cream than on frozen yoghurt?",
+        "transformed_solution": "The cost of the ice cream is 10 × $4 = $40.\nThe cost of the frozen yoghurt is 4 × $1 = $4.\nCaleb spent $40 − $4 = $36 more on ice cream than on frozen yogurt.\n#### 36",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation in the last step is incorrect. Caleb spent $40 on ice cream and $4 on frozen yogurt, so the difference should be $40 - $4 = $36, not $36 more as stated in the solution."
+    },
+    {
+        "question": "Liza bought 10 kilograms of butter to make cookies. She used one-half of it for chocolate chip cookies, one-fifth of it for peanut butter cookies, and one-third of the remaining butter for sugar cookies. How many kilograms of butter are left after making those three kinds of cookies?",
+        "transformed_solution": "Liza used 10/2 = 5 kilograms of butter for the chocolate chip cookies.\nThen, she used 10/5 = 2 kilograms of butter for the peanut butter cookies.\nShe used 5 + 2 = 7 kilograms of butter for the chocolate and peanut butter cookies.\nSo, only 10 -7 = 3 kilograms of butter was left.\nThen, Liza used 3/3 = 1 kilograms of butter for the sugar cookies.\nTherefore, only 3-1 = 2 kilograms of butter were left.\n#### 2",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the use of butter for the sugar cookies. After making chocolate and peanut butter cookies, Liza has 3 kg of butter left. One-third of 3 kg is 1 kg, not 1 kg as stated in the solution. Therefore, after making sugar cookies, she should have 3 kg - 1 kg = 2 kg of butter left, which the solution correctly calculates, but the explanation for the sugar cookies is incorrect."
+    },
+    {
+        "question": "A bear is preparing to hibernate for the winter and needs to gain 1000 pounds. At the end of summer, the bear feasts on berries and small woodland animals. During autumn, it devours acorns and salmon. It gained a fifth of the weight it needed from berries during summer, and during autumn, it gained twice that amount from acorns. Salmon made up half of the remaining weight it had needed to gain. How many pounds did it gain eating small animals?",
+        "transformed_solution": "The bear gained 1 / 5 * 1000 = 200 pounds from berries.\nIt gained 2 * 200 = 400 pounds from acorns.\nIt still needed 1000 - 200 - 400 = 400 pounds.\nThus, it gained 400 / 2 = 200 pounds from salmon.\nTherefore, the bear gained 400 - 200 = 200 pounds from small animals.\n#### 200",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the weight gained from small animals is incorrect. The bear had needed to gain 1000 pounds and gained 200 from berries, 400 from acorns, and 200 from salmon, which leaves 200 pounds unaccounted for, not 400 as the solution suggests."
+    },
+    {
+        "question": "Tara has been planning to buy a laptop which costs $1000. A computer shop accepts payment in installments of $65 per month provided that a 20% down payment is made. If Tara wants to pay an additional $20 for the down payment, how much will her balance be after paying for 4 months?",
+        "transformed_solution": "Tara has to make a $1000 x 20/100 = $200 down payment.\nSince Tara wants to pay $20 more for the down payment, her total down payment will be $200 + $20 = $220.\nSo her remaining balance payable over a year is $1000 - $220 = $780.\nTara has to make a monthly payment of $780/year / 12 months/year = $65/month.\nThe total cost of her payments for 4 months is $65/month x 4 months = $260.\nTherefore, Tara's balance after 4 months is $780 - $260 = $520.\n#### 520",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the monthly payment and the balance after 4 months. The monthly payment amount is correct at $65, but the total payments for 4 months should be $65/month * 4 months = $260. However, the balance after 4 months should be the remaining balance after subtracting the down payment and the 4 monthly payments from the original price of the laptop, which is $1000 - $220 - $260 = $520, not $780 - $260 as stated in the solution."
+    },
+    {
+        "question": "Jesse and Mia are competing in a week long race. They have one week to run 30 miles. On the first three days Jesse averages (2/3) of a mile. On day four she runs 10 miles. Mia averages 3 miles a day over the first 4 days. What is the average of their average that they have to run over the final three days?",
+        "transformed_solution": "Jesse runs 2 miles in the first three days because 3 x (2/3) = 2\nJesse has 18 miles left to run because 30 - 10 - 2 = 18\nJesse has to run an average of 6 miles a day because 18 / 3 = 6\nMia runs 12 miles over the first four days because 4 x 3 = 12\nShe has 18 miles left to run because 30 - 12 = 18\nShe has to run six miles a day because 18 / 3 = 6\nThe total they both have to run is 12 miles a day\nThe average they have to run per day on average is 6 miles because 12 / 2 = 6\n#### 6",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the average of their average distance for the final three days. Jesse and Mia both have to run 6 miles a day, but to find the average of their averages, we should add their daily averages and then divide by 2, not divide the total distance by 2."
+    },
+    {
+        "question": "The ratio of coins that Elsa has to that which Amalie has is 10:45. If the total number of coins they have is 440, and Amalie spends 3/4 of what she has on toys, how many will she remain with?",
+        "transformed_solution": "The total ratio of the coins they both have is 10+45 = 55\nThe fraction of the ratio representing the number of coins that Amalie has is 45/55, and since the total number of coins they both have is 440, Amalie has 45/55*440 = 360 coins.\nWhen Amalie spends 3/4 of what she has, she parts with 3/4*360 = 270 coins.\nShe still has 360 coins - 270 coins = 90 coins\n#### 90",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the number of coins Amalie has is incorrect. It should be 45/55 of the total, but the math was not done correctly."
+    },
+    {
+        "question": "Nancy is filling an aquarium for her fish. She fills it halfway and goes to answer the door. While she's gone, her cat knocks the aquarium over and spills half the water in it. Then Nancy comes back and triples the amount of water in the aquarium. If the aquarium is 4 feet long, 6 feet wide, and 3 feet high, how many cubic feet of water are in the aquarium?",
+        "transformed_solution": "First calculate the volume of the aquarium by multiplying its length, width and height: 4 ft * 6 ft * 3 ft = 72 cubic ft\nThen figure out what proportion of the aquarium is full after the cat knocks it over: 1/2 * 1/2 = 1/4\nThen figure out what proportion of the aquarium is full after Nancy refills it: 3 * 1/4 = 3/4\nNow multiply the proportion of the aquarium that's full by the aquarium's volume to find out how much water is in it: 72 cubic ft * 3/4 = 54 cubic ft\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the proportion of the aquarium that is full after the cat knocks it over and Nancy refills it. It should be 1/2 * 3 = 3/2 or 1.5, not 3/4, because Nancy triples the amount of water that remained after the spill."
+    },
+    {
+        "question": "Dale and Andrew had breakfast at a cafe. A slice of toast costs £1, and eggs cost £3 each. Dale had 2 slices of toast and 2 eggs. Andrew had 1 slice of toast and 2 eggs. How much did their breakfast cost?",
+        "transformed_solution": "The cost of Dale's toast is 2 × $1 = $2.\nThe cost of Andrew's toast is 1 × $1 = $1.\nThe cost of Dale's eggs is 2 × $3 = $6.\nThe cost of Andrew's eggs is 2 × $3 = $6.\nTheir breakfast cost $2 + $1 + $6 + $6 = $15.\n#### 15",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The currency is specified as £ (pounds), but the solution uses $ (dollars). The calculation should maintain the same currency unit."
+    },
+    {
+        "question": "Paityn has 20 red hats and 24 blue hats. Her friend Zola has 4/5 times as many red hats as she has and twice the number of blue hats. If they combine all the hats together and share them equally between themselves, calculate the number of hats each gets.",
+        "transformed_solution": "Paityn has a total of 20 hats + 24 hats = 44 hats.\nThe number of red hats that Zola has is 4/5 * 20 hats = 16 hats\nZola also has 2 * 24 hats = 48 blue hats.\nZola has a total of 48 hats + 16 hats = 64 hats.\nWhen they combine their hats, they have 64 hats + 44 hats = 108 hats\nIf they share the hats equally, each get 108 hats / 2 people = 54 hats/person\n#### 54",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the total number of hats each person gets. The correct calculation should be 108 hats / 2 people = 54 hats/person, but in the final step, it incorrectly states that each gets 54 hats, which is a typo because it should be 54 hats each."
+    },
+    {
+        "question": "John's cow weighs 400 pounds.  It increased its weight to 1.5 times its starting weight.  He is able to sell the cow for $3 per pound.  How much more is it worth after gaining the weight?",
+        "transformed_solution": "The cow initially weighs 400*1.5=600 pounds\nSo it gained 600 - 400 = 200 pounds\nSo its value increased by 200*$3 = $600\n#### 600",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the final weight is incorrect. The cow initially weighed 400 pounds and then gained 1.5 times its weight, which should be calculated by adding the gain to the initial weight, not by multiplying the initial weight by 1.5."
+    },
+    {
+        "question": "Krystian works in the library. He borrows an average of 40 books every day. Every Friday, his number of borrowed books is about 40% higher than the daily average. How many books does he borrow in a week if the library is open from Monday to Friday?",
+        "transformed_solution": "The number of books borrowed on Friday is higher by 40 * 40/100 = 16 books.\nThere are 5 days from Monday to Friday inclusive, so Krystian borrows an average of 5 * 40 = 200 books during that time.\nWith Friday's increase in borrowings, during one week Krystian borrows 200 + 16 = 216 books.\n#### 216",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution did not account for the increased number of books borrowed on Friday correctly. It added the increase to the total weekly average, rather than adding it to the Friday total only."
+    },
+    {
+        "question": "Sally and Bob have made plans to go on a trip at the end of the year. They both decide to work as babysitters and save half of what they've earned for their trip. If Sally makes $6 per day and Bob makes $4 per day, how much money will they both have saved for their trip after a year?",
+        "transformed_solution": "Saly saves 1/2 * $6/day = $3/day.\nSince each year have 365 days, the total amount of money Sally will save in a year is $3/day * 365 days/year = $1095/year\nBob saves 1/2 * $4/day = $2/day.\nThe total amount of money Bob will have saved in a year is $2/day * 365 days/year = $730/year\nIn total, Sally and Bob would have saved $730 + $1095 = $1825\n#### 1825",
+        "label": "yes",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the total savings by adding the individual savings of Sally and Bob without considering that they are saving half of their earnings. The daily savings for Sally should be $3 and for Bob should be $2, but the explanation incorrectly adds these daily amounts without dividing by 2."
+    }
+]

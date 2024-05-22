@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly followed the given information. It first calculated Emily's hair length by adding 6 inches to Logan's hair length, which is 20 inches, making Emily's hair 26 inches. Then it correctly determined that Kate's hair is half as long as Emily's, resulting in 13 inches for Kate's hair length."
+    },
+    {
+        "question": "Chris wanted to buy a new video game that costs $60 as well as an assortment of candy that costs $5.  To earn the money, he agreed to babysit his little sister for $8 per hour.  If he works 9 hours, how much money will be left over after he makes his purchases?",
+        "original_solution": "He wants to buy a $60 game and $5 of candy so 60 + 5 = $65\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $65 so 72-65 = $7 left over\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "He wants to buy a $60 game and $5 of candy so 60 - 5 = $55\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $55 so 72-55 = $17 left over\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition to subtraction in step 1, turning 60 + 5 = $65 into 60 - 5 = $55. The subsequent step 3 that uses the result of step 1 is affected, changing from 72 - 65 = $7 to 72 - 55 = $17. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, leading to an incorrect result for step 1, which subsequently affects the final answer. All other calculations in step 2 and step 3 are correct, considering the altered outcome from step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the total cost of the game and candy, then correctly calculates the total earnings from babysitting, and finally subtracts the total cost from the total earnings to find the amount left over."
+    },
+    {
+        "question": "Emily has 4 kids named Amy, Jackson, Corey, and James. Amy is 5 years older than Jackson and 2 years younger than Corey. If James is 10 and is 1 year younger than Corey, how old is Jackson?",
+        "original_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 + 1 = 11 years old\nAmy is 2 years younger than Corey so is 11 - 2 = 9 years old\nAmy is also 5 years older than Jackson, so Jackson is 9 - 5 = 4 years old\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 - 1 = 9 years old\nAmy is 2 years younger than Corey so is 9 - 2 = 7 years old\nAmy is also 5 years older than Jackson, so Jackson is 7 - 5 = 2 years old\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 to subtraction, turning '10 + 1 = 11' into '10 - 1 = 9'. This error affects subsequent related steps 2 and 3. In step 2, the equation is now '9 - 2 = 7' resulting from the changed age of Corey, and in step 3, the equation becomes '7 - 5 = 2' due to Amy being 5 years older than Jackson, which has now been calculated based on the incorrect age of Amy. It should be noted that other than the erroneous operator change in step 1, the calculations in all other steps correctly follow through from the error.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly follows the given information to determine Jackson's age. It starts by establishing Corey's age based on James', then Amy's age based on Corey's, and finally Jackson's age based on Amy's. The steps are logical and correctly applied."
+    },
+    {
+        "question": "Carmen has $100, Samantha has $25 more than Carmen, and Daisy has $50 more than Samantha. How much do all three girls have combined?",
+        "original_solution": "Samantha has $100+$25 = $125.\nDaisy has $125+$50 = $175.\nThe total amount of money that the three girls have is $175+$125+$100 = $400.\n#### 400",
+        "original_answer": 400.0,
+        "transformed_solution": "Samantha has $100-$25 = $75.\nDaisy has $75+$50 = $125.\nThe total amount of money that the three girls have is $125+$75+$100 = $300.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 1 into subtraction, and by changing + to -, $100+$25 = $125 becomes $100-$25 = $75. This affects the subsequent related step 2 and 3. Step 2 changes from $125+$50 = $175 to $75+$50 = $125, step 3 changes from $175+$125+$100 = $400 to $125+$75+$100 = $300. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the amount of money each girl has and then sums it up. Samantha has $25 more than Carmen's $100, which is $125. Daisy has $50 more than Samantha's $75, which is $125. The total is correctly calculated as $100 + $125 + $125 = $350. However, the question asks for the combined total of all three, and the solution incorrectly states it as $300 instead of $350. Despite this error in the final answer, the process leading up to it is correct in terms of the calculations for each individual's money, which is likely a typo in the final sum. Since the steps are correct, the 'is_correct' is still 'yes', but the explanation points out the typo in the final total."
+    }
+]

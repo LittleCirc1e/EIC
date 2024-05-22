@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Excluding the stoppages, the speed of a bus is 64 km/hr and including the stoppages the speed of the bus is 48 km/hr. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr.\nSolving for x gives 64(60 - x) = 48 * 60, then 3840 - 64x = 2880, and x = (3840 - 2880)/64 = 15.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr.\nSolving for x gives 64(50 - x) = 48 * 50, then 3200 - 64x = 2400, and x = (3200 - 2400)/64 = 12.5.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr in the original_solution becoming 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr in the transformed_solution. And it changes the subsequent related step 2 to 64(50 - x) = 48 * 50 and step 3 to 3200 - 64x = 2400, and the last step which is the solution of x is changed from (3840 - 2880)/64 = 15 to (3200 - 2400)/64 = 12.5. It should be noted that you only need to consider one step of unit conversion error, so the conversion factors in the other steps are still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the time the bus stops per hour by setting up an equation based on the distance traveled at different speeds. It correctly converts the speed from km/hr to km/minute by assuming 60 minutes in an hour, and then solves for x, the time in minutes the bus stops. The calculation steps are accurate, leading to the correct answer of 12.5 minutes."
+    },
+    {
+        "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+        "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n18 hours * 5 minutes gained per hour = 90 minutes gained by the clock.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the total minutes gained by the clock over 18 hours, using the given rate of 5 minutes gained per hour."
+    }
+]

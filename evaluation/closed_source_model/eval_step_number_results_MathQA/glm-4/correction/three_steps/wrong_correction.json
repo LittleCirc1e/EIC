@@ -1,0 +1,47 @@
+[
+    {
+        "question": "If 89 / 99 = 0.898 , what is the 83 rd digit to the right of the decimal point of the fraction ?",
+        "original_solution": "The remainder when 89 is divided by 99 is 89.\n0.898 is equivalent to 898/1000.\nThe period of the decimal representation of 89/99 is 02, so the 83rd digit to the right of the decimal point is the same as the 83rd digit to the right of 898/1000 that is 89/99.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The remainder when 89 is divided by 99 is 89.\n0.898 is equivalent to 898/1000.\nThe period of the decimal representation of 89/99 is 02, so the 83rd digit to the right of the decimal point is the same as the 83rd digit to the right of 898/1000 that is 89/99.\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 3 by incorrectly stating that the 83rd digit to the right of the decimal point of 89/99 is 9 instead of 8. The period of the decimal representation of 89/99 is indeed 02, which means the sequence of digits repeats every 2 digits. Since 83 is an odd number, the 83rd digit would be the first digit in the repeating sequence, which is 8. However, the transformed solution incorrectly states that the 83rd digit is 9. This is the only error introduced, and it does not affect the previous steps.",
+        "is_correct": "no",
+        "corrected_solution": "To find the 83rd digit to the right of the decimal point in the fraction 89/99, we need to first find the repeating pattern of the decimal. The remainder when 89 is divided by 99 is not 89, it is actually 89 modulo 99, which is 89. The repeating pattern of the decimal is found by looking at the fraction in its reduced form, which is 89/99. The decimal representation of 89/99 is 0.898898... (with the block 898 repeating). To find the 83rd digit, we consider that the block of 898 repeats every 3 digits. So, we divide 83 by 3 (because the block length is 3) to find out how many complete blocks we have: 83 / 3 = 27 with a remainder of 2. This means the 83rd digit is the second digit of the repeating block, which is 9.",
+        "corrected_answer": "9",
+        "corrected_explanation": "The repeating pattern of the decimal is 898, which repeats every 3 digits. The 83rd digit corresponds to the second digit of the 27th complete repetition of this pattern, which is 9."
+    },
+    {
+        "question": "the price of an item is discounted 5 percent on day 1 of a sale. on day 2, the item is discounted another 5.00001 percent, and on day 3, it is discounted an additional 10 percent. the price of the item on day 3 is what percentage of the sale price on day 1?",
+        "original_solution": "The price on day 2 is 95% of the price on day 1 because 100% - 5% = 95%\nThe price on day 3 is 90% of the price on day 2 because 100% - 10% = 90%\nThe price on day 3 is 85.5% of the price on day 1 because 95% * 90% = 85.5%\n#### 85.5%",
+        "original_answer": 85.5,
+        "transformed_solution": "The price on day 2 is 95% of the price on day 1 because 100% - 5% = 95%\nThe price on day 3 is 90% of the price on day 2 because 100% - 10% = 90%\nThe price on day 3 is 85% of the price on day 1 because 95% * 90% = 85%\n#### 85%",
+        "transformed_answer": 85.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 95% * 90% as 85% instead of 85.5% in step 3, which is the last step and therefore has no impact on other steps. The previous steps 1 and 2 remain unchanged because they are not affected by the error in step 3. The transformed answer is different from the original answer as required.",
+        "is_correct": "no",
+        "corrected_solution": "The price on day 2 is 95% of the price on day 1 because 100% - 5% = 95%. The price on day 3 is 90.5% of the price on day 2 because 100% - 5.00001% = 94.99999%, and then it is further discounted by 10%, which is 94.99999% * 90% = 90.4999949%. The price on day 3 is approximately 86.0249375% of the price on day 1 because 95% * 90.5% = 86.0249375%.",
+        "corrected_answer": "86.02",
+        "corrected_explanation": "The solution did not account for the additional 0.00001% in the second discount, and the final calculation did not carry enough decimal places to represent the actual percentage accurately. The corrected solution takes into account the precise discounts and calculates the final price as a more accurate percentage of the day 1 price."
+    },
+    {
+        "question": "in an intercollegiate competition that lasted for 3 days , 185 students took part on day 1 , 150 on day 2 and 200 on day 3 . if 100 took part on day 1 and day 2 and 110 took part on day 2 and day 3 and 50 took part on all three days , how many students took part only on day 3 ?",
+        "original_solution": "Number of students who took part on day 1 only = 185 - 100 - 50 = 35\nNumber of students who took part on day 2 only = 150 - 100 - 110 + 50 = 0\nNumber of students who took part on day 3 only = 200 - 110 - 50 = 40\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Number of students who took part on day 1 only = 185 - 100 - 50 = 35\nNumber of students who took part on day 2 only = 150 - 100 - 110 + 50 = 0\nNumber of students who took part on day 3 only = 200 - 110 - 50 = 30\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The example mistakenly calculates 200 - 110 - 50 as 30 instead of 40 in step 3. This error affects only the calculation for the number of students who took part on day 3 only, without affecting the calculations for day 1 and day 2. The previous steps 1 and 2 remain unchanged, as they are unrelated to the error introduced in step 3.",
+        "is_correct": "no",
+        "corrected_solution": "Number of students who took part on day 1 only = 185 - 100 - 50 = 35\nNumber of students who took part on day 2 only = 150 - (100 - 50) = 100\nNumber of students who took part on day 3 only = 200 - (110 - 50) = 140",
+        "corrected_answer": "140.0",
+        "corrected_explanation": "The original solution incorrectly subtracted the number of students who participated in all three days from each day's total twice. The corrected approach ensures that the students who participated in all three days are only subtracted once from each relevant day's total."
+    }
+]

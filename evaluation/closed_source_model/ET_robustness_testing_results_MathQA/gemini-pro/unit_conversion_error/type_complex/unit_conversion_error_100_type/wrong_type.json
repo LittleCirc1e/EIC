@@ -1,0 +1,30 @@
+[
+    {
+        "question": "The distance from city A to city B is 30 miles. While driving from city A to city B, Bob drives at a constant speed of 40 miles per hour. Alice leaves city A 30 minutes after Bob. What is the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob?",
+        "original_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.5 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.5 = 0.25 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0.25 hours = 120 miles per hour.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The time it takes Bob to get to city B is 30 miles / 40 miles per hour = 0.75 hours.\nAlice leaves 30 minutes after Bob, so she has 0.75 hours less time to get to city B than Bob.\nTo get to city B before Bob, Alice must drive 30 miles in 0.75 - 0.75 = 0 hours.\nTherefore, the minimum constant speed in miles per hour that Alice must exceed in order to arrive in city B before Bob is 30 miles / 0 hours = undefined miles per hour.\n#### undefined",
+        "transformed_answer": null,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 makes an incorrect unit conversion error by stating that Alice has 0.75 hours less time instead of 0.5 hours, due to incorrectly converting 30 minutes into 0.75 hours instead of the correct 0.5 hours. This error affects the subsequent steps, specifically steps 3 and 4, where the time Alice has to drive is calculated incorrectly as 0 hours (0.75 - 0.75), leading to an incorrect, undefined speed calculation since one cannot divide by zero.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 incorrectly calculates 0.75 - 0.75 = 0, which should be 0.75 - 0.5 = 0.25. This error in calculation leads to the incorrect result in step 5, and thus the final answer is wrong. Therefore, it belongs to calculation_error."
+    },
+    {
+        "question": "The recipe requires 15 mins to cook. You have a 7 mins hourglass and an 11 mins hourglass with you. How will you measure 15 mins using them?",
+        "original_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 11 + (7 - 7) = 11 + 0 = 11 minutes have passed since you started both hourglasses. So, 11 minutes are over.\n11 minutes + 4 minutes = 15 minutes have passed since you started both hourglasses.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "First, start both hourglasses together and let them run.\nWhen the 7 mins hourglass runs out, flip it over immediately.\nWhen the 11 mins hourglass runs out, flip it over immediately.\nWhen the 7 mins hourglass runs out for the second time, 10 + (7 - 7) = 10 + 0 = 10 minutes have passed since you started both hourglasses. So, 10 minutes are over.\n10 minutes + 4 minutes = 14 minutes have passed since you started both hourglasses.\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, incorrect unit conversion is applied by changing the time passed after both hourglasses have been flipped to 10 minutes instead of 11. This changes the calculation in step 4, which previously added up to 11 minutes and now incorrectly sums to 10 minutes. As a result, the total time in the final step is now 14 minutes, which is incorrect. Only one step of unit conversion error is considered, and the error is synchronized through the subsequent related steps without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 5. Step 5 incorrectly calculates 10 + (7 - 7) = 10 + 0 = 10 minutes, while it should be 10 + (7 - 4) = 10 + 3 = 13 minutes. This error only occurs in the calculation process, so it belongs to calculation_error. Step 6, as the subsequent step of step 5, references the wrong result of step 5, resulting in the incorrect final answer."
+    }
+]

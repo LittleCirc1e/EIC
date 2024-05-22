@@ -1,0 +1,32 @@
+[
+    {
+        "question": "The sale price sarees listed for Rs. 400 after successive discount is 30% and 20%",
+        "original_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\n#### 224",
+        "original_answer": 224.0,
+        "transformed_solution": "First, find the amount after the first discount: 400 - (30/100 * 400) = 400 - 120 = 280\nThen, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224\nBecause there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244\n#### 244",
+        "transformed_answer": 244.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement by inserting a packaging fee of Rs. 20. The error occurs when transforming the statement 'Then, find the amount after the second discount: 280 - (20/100 * 280) = 280 - 56 = 224' from the original_solution into the transformed_solution, where it states 'Because there is an additional Rs. 20 packaging fee for the saree, the final sale price is 224 + 20 = 244'. This introduces an additional cost that changes the final answer, despite not being part of the original question. Other calculations in step 1 and 2 are unaffected and are carried out correctly.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies two successive discounts to the original price of Rs. 400. The first discount of 30% reduces the price to Rs. 280. The second discount of 20% further reduces this amount to Rs. 224. Finally, the addition of the Rs. 20 packaging fee results in a final sale price of Rs. 244. The solution follows the correct steps and reaches the correct final answer."
+    },
+    {
+        "question": "there is a train and car. the ratio btw the speed of a train & a car is 16 : 15 respectively. also, a bus covered a distance of 480 km in 8 h. the speed of the bus is 3 / 4 th of the speed of the train. how much distance will the car cover in 6 h?",
+        "original_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDistance covered by the car in 6 hours is 6*75 = 450 km.\n#### 450",
+        "original_answer": 450.0,
+        "transformed_solution": "Let the speed of the car be 15x and the speed of the train be 16x.\nThe speed of the bus is (3/4)*(16x) = 12x.\nThe distance covered by the bus is 480 km, so 480 = 12x * 8.\n12x = 60, x = 5.\nThe speed of the car is 15x = 75.\nDue to road constructions, the effective speed of the car reduces by 5 km/h.\nDistance covered by the car in 6 hours is 6*(75-5) = 6*70 = 420 km.\n#### 420",
+        "transformed_answer": 420.0,
+        "wrong_step": 6,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 6 adds information that is not mentioned in the question statement <Due to road constructions, the effective speed of the car reduces by 5 km/h>, resulting in step 6 changing from 6*75=450 km in the original_solution to 6*(75-5)=6*70=420 km in the transformed_solution. In this process, an irrelevant factor is incorrectly introduced that affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies the speed of the car as 15x and the speed of the train as 16x. It then correctly calculates the speed of the bus as 3/4 of the speed of the train, which is 12x. Using the information that the bus covers 480 km in 8 hours, the solution finds the value of x to be 5. With x determined, the speed of the car is correctly calculated as 15x, which is 75 km/h. The solution then accounts for a reduction in the car's speed due to road constructions by subtracting 5 km/h, resulting in an effective speed of 70 km/h. Finally, the solution correctly calculates the distance covered by the car in 6 hours at the reduced speed, which is 420 km. Therefore, the solution is correct."
+    }
+]

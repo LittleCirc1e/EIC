@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Anna has 3 times as many toys as Mandy and 2 fewer toys than Amanda. If they have 142 toys all together, how many toys does Mandy have?",
+        "original_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=140\nx=20\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let x be the number of toys Mandy has.\nAnna has 3*x toys.\nAmanda has 3*x+2 toys.\nx+3*x+3*x+2=142\n7*x+2=142\n7*x=150\nx=21.429\n#### 21.429",
+        "transformed_answer": 21.429,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 140 as 150 from step 5 and changes 7*x=140 to 7*x=150. It should be noted that step 5 in the transformed_solution <7*x+2=142> should be the same as the step 5 in the original_solution <7*x+2=142> and calculates its result 140 correctly. The subsequent step, step 7, is affected by the incorrect result of step 6 but still computes the result correctly using the erroneous value from step 6, changing x=20 to x=21.429. There is no need to modify the previous steps as you only need to consider one error of referencing, and the calculation of all steps should still be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 first erroneously references the result 150 instead of 140 from step 4, resulting in the calculation of 150 / 7 = 21.429 instead of 140 / 7 = 20. And this causes an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    },
+    {
+        "question": "Five food companies sponsored a local food bank. Foster Farms donated 45 dressed chickens; American Summits donated twice the number of bottled water than the number of dressed chicken donated by Foster Farms; Hormel donated three times the number of dressed chickens that Foster Farms donated; Boudin Butchers donated one-third of the number of dressed chickens that Hormel donated; Del Monte Foods donated 30 fewer bottles of water than American Summits. How many food items did the companies donate in total?",
+        "original_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 60 = 375 different food.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "American Summits donated 45 x 2 = 90 bottled waters.\nHormel donated 45 x 3 = 135 spams.\nBoudin Bakery donated 135 x 1/3 = 45 sourdoughs.\nDel Monte Foods donated 90 - 30 = 60 canned fruits.\nTherefore, a total of 45 + 90 + 135 + 45 + 50 = 365 different food.\n#### 365",
+        "transformed_answer": 365.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 in the transformed_solution mistakenly references 60 as 50, changing the addition from 45 + 90 + 135 + 45 + 60 = 375 to 45 + 90 + 135 + 45 + 50 = 365, resulting in a total of 365 different food items instead of the correct total of 375. The previous related steps are unchanged from the original_solution and only this particular step has an error introduced in its calculation. All other referencing steps are correct and the transformed_answer of 365 is calculated based on the incorrect total due to the error in Step 5.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first erroneously references the result 135 instead of 45 from step 2, resulting in the calculation of 135 x 1/3 = 45 instead of 45 x 1/3 = 15. This affects the calculation of 45 + 90 + 135 + 45 + 50 = 365 instead of 45 + 90 + 45 + 15 + 50 = 245 in step 4, resulting in an error in the final result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

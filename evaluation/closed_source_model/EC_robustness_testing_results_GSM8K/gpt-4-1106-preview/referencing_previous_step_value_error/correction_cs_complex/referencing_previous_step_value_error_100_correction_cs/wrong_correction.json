@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "no",
+        "corrected_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + B/2 + 7 = 43\n2B + B/2 + B/2 = 43 - 7\n2B + B = 36\n3B = 36\nB = 36 / 3\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "corrected_answer": 13.0,
+        "corrected_explanation": "Step 4 first erroneously references the result 2B + B = 36 instead of 2B + B/2 + B/2 = 36. The correct equation should be B + B/2 + B/2 + 7 = 43, which simplifies to 2B + B = 36 after subtracting 7 from both sides. This error affects the subsequent steps, but the final answer remains the same after correcting the equation."
+    },
+    {
+        "question": "Dan spent an hour doing 400 work tasks at $0.25 each. Then Dan spent an hour doing 5 work tasks at $2.00 each. How much more did Dan make doing the good work compared to the lower-paid work?",
+        "original_solution": "Dan spent an hour doing 400 tasks * $.25 = $100.\nDan spent an hour doing 5 tasks * $2.00 each = $10.00.\nDan made $100 - $10 = $90.00 per hour more doing the higher paid work.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "Dan spent an hour doing 400 tasks * $.25 = $100.\nDan spent an hour doing 5 tasks * $2.00 each = $10.00.\nDan made $100 - $5 = $95.00 per hour more doing the higher paid work.\n#### 95",
+        "transformed_answer": 95.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references $10 as $5 from step 2 and changes $100 - $10 = $90.00 to $100 - $5 = $95.00. It should be noted that step 2 in the transformed_solution <Dan spent an hour doing 5 tasks * $2.00 each = $10.00.> should remain exactly the same as the step 2 in the original_solution <Dan spent an hour doing 5 tasks * $2.00 each = $10.00.> and calculates its result $10.00 correctly. Since only one step error is considered, subsequent steps that reference the incorrect result number from this wrong step reference it correctly, and the transformed_answer $95.00 is different from the original_answer $90.00.",
+        "is_correct": "no",
+        "corrected_solution": "Dan spent an hour doing 400 tasks * $.25 = $100.00.\nDan spent an hour doing 5 tasks * $2.00 each = $10.00.\nDan made $10.00 - $100.00 = -$90.00 per hour more doing the higher paid work.\n#### -90.0",
+        "corrected_answer": -90.0,
+        "corrected_explanation": "Step 3 first erroneously references the result $5 instead of $10 from step 2, resulting in the calculation of $100 - $5 = $95 instead of $10 - $100 = -$90. This affects the final result, showing an incorrect amount that Dan made more doing the higher paid work."
+    }
+]

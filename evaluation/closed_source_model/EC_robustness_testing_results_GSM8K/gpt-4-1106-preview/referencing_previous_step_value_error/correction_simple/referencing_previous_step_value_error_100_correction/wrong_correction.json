@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "no",
+        "corrected_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + B/2 + 7 = 43\n2B + B = 43 - 7\n3B = 36\nB = 36 / 3\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.",
+        "corrected_answer": 13,
+        "corrected_explanation": "The equation setup in the original solution was incorrect. It should have been B + B/2 + B/2 + 7 = 43, which simplifies to 3B + 7 = 43. After subtracting 7 from both sides, we get 3B = 36, and dividing both sides by 3 gives B = 12. The rest of the solution is correct, and Lily indeed found 13 insects."
+    },
+    {
+        "question": "Donna worked 2 hours every morning walking dogs in her neighborhood for $10.00 an hour. 5 days a week, after school, she worked at a card shop for 2 hours and made $12.50 an hour. On the weekends, she usually made $10.00 an hour babysitting and was guaranteed 4 hours every Saturday from her neighbor. How much money did she make over 7 days?",
+        "original_solution": "She makes $10.00 an hour for 2 hours walking dogs so she makes 10*2 = $20.00 every morning\nOver 7 days she makes 7*20 = $140.00 a week\nShe makes $12.50 for 2 hours working at a card shop so she makes 12.5*2 = $25.00\nShe works there 5 days a week so she makes 5*25 = $125.00 a week\nShe also babysits for 4 hours making $10.00 an hour for a total of 4*10 = $40.00\nOver 7 days, she makes 140+125+40 = $305.00\n#### 305",
+        "original_answer": 305.0,
+        "transformed_solution": "She makes $10.00 an hour for 2 hours walking dogs so she makes 10*2 = $20.00 every morning\nOver 7 days she makes 7*20 = $140.00 a week\nShe makes $12.50 for 2 hours working at a card shop so she makes 12.5*2 = $25.00\nShe works there 5 days a week so she makes 5*25 = $125.00 a week\nShe also babysits for 4 hours making $10.00 an hour for a total of 4*10 = $40.00\nOver 7 days, she makes 140+135+40 = $315.00\n#### 315",
+        "transformed_answer": 315.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references 125 as 135 from step 4 and changes 140+125+40 = $305.00 to 140+135+40 = $315.00. It should be noted that step 4 in the transformed_solution <She works there 5 days a week so she makes 5*25 = $125.00 a week> should be the same as the step 4 in the original_solution <She works there 5 days a week so she makes 5*25 = $125.00 a week> and calculates its result 125 correctly. Step 5 affects the final computation but is the only error in the transformed_solution. All other values are referenced correctly, and the calculations are accurate, leading to a transformed_answer of $315.00, which is incorrect due to the single step referencing error.",
+        "is_correct": "no",
+        "corrected_solution": "She makes $10.00 an hour for 2 hours walking dogs so she makes 10*2 = $20.00 every morning\nOver 5 weekdays she makes 5*20 = $100.00 a week\nShe makes $12.50 for 2 hours working at a card shop so she makes 12.5*2 = $25.00\nShe works there 5 days a week so she makes 5*25 = $125.00 a week\nShe also babysits for 4 hours making $10.00 an hour for a total of 4*10 = $40.00\nOver 7 days, she makes 100+125+40 = $265.00\n",
+        "corrected_answer": "265.00",
+        "corrected_explanation": "The error in the original solution was in the calculation of the dog walking earnings. Donna walks dogs for 2 hours every morning at $10.00 an hour, but only on weekdays (5 days), not all 7 days of the week. Therefore, the correct calculation for dog walking should be 5 days times $20.00 per day, which equals $100.00, not $140.00. The rest of the calculations are correct. Adding the correct amount for dog walking ($100.00) to the card shop earnings ($125.00) and babysitting earnings ($40.00) gives the correct total of $265.00."
+    },
+    {
+        "question": "Jack decides to visit a museum 150 miles from home. He drives 75 mph there and back. He spends 6 hours at the museum. How long is he gone from home?",
+        "original_solution": "He drove a total of 150+150=300 miles\nSo he drove for 300/75=4 hours\nThat means he was gone from home for 4+6=10 hours\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "He drove a total of 150+150=300 miles\nSo he drove for 300/75=4 hours\nThat means he was gone from home for 4+8=12 hours\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 6 as 8 from step 2 and changes 4+6=10 hours to 4+8=12 hours. It should be noted that step 2 in the transformed_solution <So he drove for 300/75=4 hours> should be the same as the step 2 in the original_solution <So he drove for 300/75=4 hours> and calculates its result 4 correctly. The error only occurs in referencing the time spent at the museum, while the calculations of driving time remain correct. Subsequent steps are not affected since the 3rd step is the final one. You need to only consider one error of referencing, so the calculation of all steps is still correct, except for the incorrect reference of time spent at the museum.",
+        "is_correct": "no",
+        "corrected_solution": "He drove a total of 150+150=300 miles\nSo he drove for 300/75=4 hours\nHe spent 6 hours at the museum\nThat means he was gone from home for 4+4+6=14 hours\n",
+        "corrected_answer": 14,
+        "corrected_explanation": "Jack drove 300 miles in total (150 miles each way). At 75 mph, the driving time is 300/75=4 hours. He spent 6 hours at the museum. The total time gone from home is the sum of the driving time and the time spent at the museum, which is 4 hours for driving there, 4 hours for driving back, and 6 hours at the museum, totaling 14 hours."
+    }
+]

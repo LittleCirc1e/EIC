@@ -1,0 +1,30 @@
+[
+    {
+        "question": "For every 100 additional people that board a spaceship, its speed is halved. If the speed of the spaceship with 200 people on board is 500km per hour, what is its speed in km/hr when there are 400 people on board?",
+        "original_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 125 km/hr. So for the total of 200 additional people, its speed is 125 km/hr\n#### 125",
+        "original_answer": 125.0,
+        "transformed_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 100 km/hr. So for the total of 200 additional people, its speed is 100 km/hr\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 1/2 * 250 km/hr as 100 km/hr instead of 125 km/hr in step 2. This results in a transformed answer of 100 km/hr, which is different from the original answer of 125 km/hr. The error in step 2 affects the final result, but does not impact the calculation in step 1 as it is correct and unrelated to the error made in step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 3. Step 3 does not calculate the speed of the spaceship when there are 300 people on board, but directly subtracts the speed of the spaceship when there are 200 people on board from the speed of the spaceship when there are 100 people on board. So there is a missing step here to calculate the speed of the spaceship when there are 300 people on board, and this error belongs to missing_step. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly uses division instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    }
+]

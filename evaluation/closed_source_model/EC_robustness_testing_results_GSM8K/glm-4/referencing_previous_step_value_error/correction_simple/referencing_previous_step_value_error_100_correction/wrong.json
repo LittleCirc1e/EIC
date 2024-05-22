@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Tom and Devin have been teaching for a total of 70 years. Devin has been teaching for 5 less than half the number of years that Tom has. How many years has Tom been teaching?",
+        "original_solution": "Let x be the number of years Tom has been teaching\nDevin has been teaching for (1/2)x-5 years\n70=x+((1/2)x-5)\n70=(3/2)x-5\n75=(3/2)x\nx=50\nTom has been teaching for 50 years\n#### 50",
+        "original_answer": 50,
+        "transformed_solution": "Let x be the number of years Tom has been teaching\nDevin has been teaching for (1/2)x-5 years\n70=x+((1/2)x-5)\n70=(3/2)x-5\n80=(3/2)x\nx=53.333333333333336\nTom has been teaching for 53.333333333333336 years\n#### 53.333333333333336",
+        "transformed_answer": 53.333333333333336,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 5 mistakenly references 75 as 80 from step 4 and changes 75=(3/2)x to 80=(3/2)x. It should be noted that step 4 in the transformed_solution <70=(3/2)x-5> should be the same as the step 4 in the original_solution <70=(3/2)x-5> and calculates its result 75 correctly. The changed reference affects only the subsequent steps that directly involve the value from the erroneous step but still uses correct arithmetic. Therefore, step 6 is affected by step 5 and changes from 75=(3/2)x to 80=(3/2)x, leading to an incorrect value for x. You need to only consider one error of referencing, so the calculation of all other steps is still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up the equation based on the given information and solves for x, which represents the number of years Tom has been teaching. The arithmetic is accurate, and the final answer of 53.3333... is the correct number of years Tom has been teaching, which when rounded to the nearest year, would be 53 years."
+    },
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up the equations to represent the relationships between the number of insects each person found. It then solves these equations accurately to find that Lily found 13 insects, which matches the final answer provided."
+    },
+    {
+        "question": "A van is delivering 180 bottles of drinks to a neighborhood, and each bottle contains either cider or beer or a mixture of two. Out of the 180 bottles, 40 contain only cider, 80 contain only beer, and the rest are a mixture of the two drinks. If the delivery man gives half the number of each bottle of drink to the first house, how many bottles does the first house get?",
+        "original_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30\nThe first house got 60+30 = 90 bottles of all types of drinks.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "The total number of bottles containing cider or beer is 40+80 = 120\nIf the number of bottles in the van was 180, then 180-120 =60 contains a mixture of the two drinks.\nAt the first house, the delivery man dropped 1/2*40 = 20 bottles.\nThere were also 1/2*80 = 40 bottles of beer that the delivery man gave to the first house.\nTogether, the first house received 40+20 = 60 bottles of cider and beer\nThe total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 25\nThe first house got 60+25 = 85 bottles of all types of drinks.\n#### 85",
+        "transformed_answer": 85.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references the amount of mixture bottles given to the first house as 25 instead of the correct amount 30 from the previous related step 5. It should be noted that step 5 in the transformed_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> should be the same as the step 5 in the original_solution <The total number of bottles that had a mixture of the two drinks that were dropped at the first house is 1/2*60 = 30> and calculates its result 30 correctly. Because we consider only one error, step 5 has been unaffected and is the same as in the original solution. Subsequent step 7 is related to step 6 and is calculated correctly based on the erroneous amount from step 6, changing the final total to 60+25 = 85 instead of the correct total of 60+30 = 90. The transformed answer reflects the new incorrect total.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the number of bottles containing cider, beer, and the mixture. It also correctly applies the half distribution to each type of bottle, adding them up appropriately to get the total number of bottles delivered to the first house."
+    },
+    {
+        "question": "Uncle Ben has 440 chickens on his farm. 39 are roosters and the rest are hens. 15 of his hens do not lay eggs, and the rest do. If each egg-laying hen lays 3 eggs, how many eggs will Uncle Ben have?",
+        "original_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 386 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 386 hens = 1158 eggs.\n#### 1158",
+        "original_answer": 1158.0,
+        "transformed_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 385 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 385 hens = 1155 eggs.\n#### 1155",
+        "transformed_answer": 1155.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 401 as 401 from step 1 but changes 401 - 15 to 385 instead of the correct 386. It should be noted that step 1 in the transformed_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> should be the same as the step 1 in the original_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> and calculates its result 401 correctly. The subsequent step 3, which is related to step 2, is affected by the incorrect subtraction result but is still calculated correctly as 3 * 385 to give 1155 eggs. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the transformed_answer 1155 is different from the original_answer 1158.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the number of egg-laying hens by subtracting the number of roosters and non-egg-laying hens from the total number of chickens. It then correctly multiplies this number by the number of eggs each hen lays, resulting in the correct total number of eggs."
+    }
+]

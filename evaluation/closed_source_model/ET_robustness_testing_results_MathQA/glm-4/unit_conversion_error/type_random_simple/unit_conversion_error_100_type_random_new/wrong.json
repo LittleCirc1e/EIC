@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Excluding the stoppages, the speed of a bus is 64 km/hr and including the stoppages the speed of the bus is 48 km/hr. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr.\nSolving for x gives 64(60 - x) = 48 * 60, then 3840 - 64x = 2880, and x = (3840 - 2880)/64 = 15.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes.\nAccording to the problem, the distance for both scenarios is the same. So, 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr.\nSolving for x gives 64(50 - x) = 48 * 50, then 3200 - 64x = 2400, and x = (3200 - 2400)/64 = 12.5.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour wrongly has 50 minutes instead of 60 minutes, resulting in 64 km/hr * (60 minutes/hr - x) = 48 km/hr * 60 minutes/hr in the original_solution becoming 64 km/hr * (50 minutes/hr - x) = 48 km/hr * 50 minutes/hr in the transformed_solution. And it changes the subsequent related step 2 to 64(50 - x) = 48 * 50 and step 3 to 3200 - 64x = 2400, and the last step which is the solution of x is changed from (3840 - 2880)/64 = 15 to (3200 - 2400)/64 = 12.5. It should be noted that you only need to consider one step of unit conversion error, so the conversion factors in the other steps are still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the time the bus stops per hour by setting up an equation based on the distance traveled at different speeds and solving for the unknown time of stops. The calculation steps are accurate, and there are no errors in the formula or the arithmetic."
+    },
+    {
+        "question": "with both valves open, the pool will be filled with water in 48 minutes. The first valve alone would fill the pool in 2 hours. If the second valve emits 50 cubic meters of water more than the first every minute, then what is the capacity r of the pool?",
+        "original_solution": "Let x be the rate of the first valve in cubic meters per minute.\nThen the rate of the second valve is x + 50 cubic meters per minute.\nWith both valves open, the pool is filled in 48 minutes.\nSo, 48x + 48(x + 50) = r.\nThe first valve alone would fill the pool in 2 hours, or 120 minutes, so 120x = r.\nSince both expressions equal r, we can set them equal to each other: 48x + 48(x + 50) = 120x\n48x + 48x + 2400 = 120x\n96x + 2400 = 120x\n2400 = 24x\nx = 100\nSo 120x = r, and 120(100) = r\nr = 12000\n#### 12000",
+        "original_answer": 12000.0,
+        "transformed_solution": "Let x be the rate of the first valve in cubic meters per minute.\nThen the rate of the second valve is x + 50 cubic meters per minute.\nWith both valves open, the pool is filled in 48 minutes.\nSo, 48x + 48(x + 50) = r.\nThe first valve alone would fill the pool in 2 hours, or 100 minutes, so 100x = r.\nSince both expressions equal r, we can set them equal to each other: 48x + 48(x + 50) = 100x\n48x + 48x + 2400 = 100x\n96x + 2400 = 100x\n2400 = 4x\nx = 600\nSo 100x = r, and 100(600) = r\nr = 60000\n#### 60000",
+        "transformed_answer": 60000.0,
+        "wrong_step": 5,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 makes incorrect unit conversion, which means 2 hours is wrongly equal to 100 minutes instead of 120 minutes, resulting in 120x = r in the original_solution becoming 100x = r in the transformed_solution. And it affects the subsequent related steps 6, 7, 8, 9, and the final answer. Step 6 changes from 48x + 48(x + 50) = 120x to 48x + 48(x + 50) = 100x; step 7 changes from 96x + 2400 = 120x to 96x + 2400 = 100x; step 8 changes from 2400 = 24x to 2400 = 4x; and step 9 changes from x = 100 to x = 600, which ultimately changes the answer in step 10 from r = 12000 to r = 60000. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of steps 3, 4 and the initial rate declaration in step 1 and 2 are still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies the rates of the two valves, sets up the equations based on the rates and times given in the question, and solves for the pool's capacity without any errors in calculation or reasoning steps."
+    },
+    {
+        "question": "if the speed of a man is 54 km per hour, then what is the distance traveled by him in 25 seconds?",
+        "original_solution": "First, convert the speed from km per hour to m per second: 54 km/h * 1000 m/km * 1 h/3600 s = 15 m/s.\nDistance traveled = speed x time = 15 m/s * 25 s = 375 m.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "First, convert the speed from km per hour to m per second: 54 km/h * 1000 m/km * 1 h/3000 s = 18 m/s.\nDistance traveled = speed x time = 18 m/s * 25 s = 450 m.\n#### 450",
+        "transformed_answer": 450.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equivalent to 3000 seconds instead of 3600 seconds, resulting in 54 km/h * 1000 m/km * 1 h/3600 s = 15 m/s in the original_solution becoming 54 km/h * 1000 m/km * 1 h/3000 s = 18 m/s in the transformed_solution. And it affects the subsequent related step 2, which changes from 15 m/s * 25 s = 375 m to 18 m/s * 25 s = 450 m. It should be noted that you only need to consider one step of unit conversion error, so the unit conversion of the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly converts the speed from km/h to m/s and then calculates the distance traveled using the formula distance = speed x time."
+    },
+    {
+        "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+        "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n18 hours * 5 minutes gained per hour = 90 minutes gained by the clock.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total number of minutes gained by the clock over 18 hours, using the given rate of 5 minutes gained per hour."
+    },
+    {
+        "question": "a train is moving at 6 / 7 of its usual speed . the train is 15 minutes too late . what is the usual time ( in hours ) for the train to complete the journey ?",
+        "original_solution": "Let the usual speed of the train be S mph and the usual time taken be T hours.\nWhen the train is moving at 6/7 of its usual speed, the speed becomes (6/7)S mph.\nGiven that the train is 15 minutes late, the extra time taken is 15 minutes = 15/60 hours = 1/4 hours.\nUsing the formula, Distance = Speed × Time, the equation becomes S × (T + 1/4) = (6/7)S × T.\nSolving this equation gives T = 3/2 hours.\n#### 1.5",
+        "original_answer": 1.5,
+        "transformed_solution": "Let the usual speed of the train be S mph and the usual time taken be T hours.\nWhen the train is moving at 6/7 of its usual speed, the speed becomes (6/7)S mph.\nGiven that the train is 15 minutes late, the extra time taken is 15 minutes = 15/50 hours = 3/10 hours.\nUsing the formula, Distance = Speed × Time, the equation becomes S × (T + 3/10) = (6/7)S × T.\nSolving this equation gives T = 9/5 hours.\n#### 1.8",
+        "transformed_answer": 1.8,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 15 minutes is wrongly converted to 15/50 hours instead of 15/60 hours. This results in the incorrect conversion of 15 minutes to 3/10 hours in the transformed_solution instead of the correct 1/4 hours in the original_solution. And it affects the subsequent related step 5. The new equation becomes S × (T + 3/10) = (6/7)S × T, which when solved gives T = 9/5 hours instead of the correct 3/2 hours. It should be noted that you only need to consider one step of unit conversion error, so the equations and calculation processes before and after step 3 are still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the formula for distance, considering the change in speed and the extra time taken. It correctly converts the extra 15 minutes into hours and solves for the usual time T."
+    }
+]

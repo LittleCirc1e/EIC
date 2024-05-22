@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Suppose 8 monkeys take 8 minutes to eat 8 bananas. How many minutes would it take 3 monkeys to eat 3 bananas?",
+        "original_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 minutes for 3 monkeys to eat 3 bananas because the rate of eating remains the same.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "It takes 8 minutes for 8 monkeys to eat 8 bananas because they eat 1 banana per monkey per minute.\nIt would take 8 * 3 = 24 minutes for 3 monkeys to eat 3 bananas because we incorrectly change the constant rate to be multiplied.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the correct assumption \"the rate of eating remains the same\" by incorrectly introducing multiplication to the duration in step 2, changing \"8 minutes\" to \"8 * 3 = 24 minutes\" for 3 monkeys to eat 3 bananas. This is a misguided application of the original principle that the number of monkeys and bananas doesn't change the rate of consumption per monkey. Only step 2 contains the introduced error, but its result is calculated correctly based on the incorrect operation. This doesn't affect the subsequent steps because there are no other computations dependent on step 2 in this simplified problem.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The correct operator should be division instead of multiplication."
+    },
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 + ? = 62976\n? = 62976 - 123\n#### 62853",
+        "transformed_answer": 62853.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 1 into addition by changing 'x' to '+', which subsequently changes '123 x ? = 62976' to '123 + ? = 62976'. The next step involves calculating the value of '?', which changes from '62976 / 123' in the original solution to '62976 - 123' in the transformed solution. Consequently, the result changes from '? = 512' to '? = 62853'. It should be noted that the only operator in step 1 is incorrect, but its calculation is done correctly, leading to a different result from the original answer. The rest of the calculations are correct based on the transformed step.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator in the first wrong step should be subtraction instead of addition."
+    },
+    {
+        "question": "The diagonals of a rhombus are 14 cm and 20 cm. Find its area?",
+        "original_solution": "The area of a rhombus is given by the formula: (1/2) * d1 * d2, where d1 and d2 are the diagonals.\nPlugging in the given values: (1/2) * 14 * 20 = 140\n#### 140",
+        "original_answer": 140.0,
+        "transformed_solution": "The area of a rhombus is given by the formula: (1/2) * d1 * d2, where d1 and d2 are the diagonals.\nPlugging in the given values: (1/2) * 14 / 20 = 7\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The example changes the multiplication operator to division in the calculation of the area based on the original formula for the area of a rhombus, which is (1/2) * d1 * d2. It changes the operation from (1/2) * 14 * 20 to (1/2) * 14 / 20, which affects the result of the area calculation while keeping all other steps correct. As a result, the transformed answer is different from the original answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator in the formula is incorrect. The correct formula for the area of a rhombus is (1/2) * d1 * d2, where d1 and d2 are the diagonals. In the first step, the operator / is used incorrectly. It should be replaced with *."
+    },
+    {
+        "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+        "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+        "original_answer": 120,
+        "transformed_solution": "The area of a parallelogram is given by the formula: base / height.\nSo, the area of the parallelogram is 12 / 10 = 1.2 square cm.\n#### 1.2",
+        "transformed_answer": 1.2,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication operator in step 2 to a division operator, turning 12 x 10 = 120 into 12 / 10 = 1.2. This only affects the step where the operator was changed and does not alter any subsequent steps, as there are none. The calculation for the new operator is done correctly, but because of the incorrect operator, the final answer is different from the original answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The formula for the area of a parallelogram is base * height, not base / height."
+    },
+    {
+        "question": "two brother x and y appeared for an exam. the probability of selection of x is 1 / 7 and that of b is 2 / 9. find the probability that both of them are selected.",
+        "original_solution": "The probability that both of them are selected is the product of their individual probabilities.\nProbability of x being selected = 1/7\nProbability of y being selected = 2/9\nProbability of both x and y being selected = (1/7) * (2/9) = 2/63\n#### 2/63",
+        "original_answer": "2/63",
+        "transformed_solution": "The probability that both of them are selected is the sum of their individual probabilities.\nProbability of x being selected = 1/7\nProbability of y being selected = 2/9\nProbability of both x and y being selected = (1/7) + (2/9) = 9/63 + 14/63 = 23/63\n#### 23/63",
+        "transformed_answer": "23/63",
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 3 to addition, turning (1/7) * (2/9) into (1/7) + (2/9). The addition of fractions in transformed step 3 has been calculated correctly after the operator change to obtain 9/63 + 14/63 which is equal to 23/63. The incorrect operator usage changes the entire context of the probability calculation, but the mathematical operation of adding the fractions itself is correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The operator used to combine the probabilities of x and y is addition, which is incorrect. The correct operator should be multiplication."
+    }
+]

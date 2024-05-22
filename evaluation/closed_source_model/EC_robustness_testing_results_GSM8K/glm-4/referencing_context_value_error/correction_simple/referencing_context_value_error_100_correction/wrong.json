@@ -1,0 +1,62 @@
+[
+    {
+        "question": "For homework, Brooke has 15 math problems, 6 social studies problems, and 10 science problems. He can answer each math problem for 2 minutes while answering each social studies problem takes him 30 seconds. If he can answer each science problem in 1.5 minutes, how long will it take Brooke to answer all his homework?",
+        "original_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 30 seconds = 180 seconds to answer all social studies problems.\nIn minutes, this is equal to 180/60 = 3 minutes.\nIt will take him 10 x 1.5 minutes = 15 minutes to answer all science problems.\nTherefore, Brooke will take 30 + 3 + 15 = 48 minutes to finish his homework.\n#### 48",
+        "original_answer": 48.0,
+        "transformed_solution": "Brooke will take 15 x 2 = 30 minutes to answer all math problems.\nIt will take him 6 x 20 seconds = 120 seconds to answer all social studies problems.\nIn minutes, this is equal to 120/60 = 2 minutes.\nIt will take him 10 x 1.5 minutes = 15 minutes to answer all science problems.\nTherefore, Brooke will take 30 + 2 + 15 = 47 minutes to finish his homework.\n#### 47",
+        "transformed_answer": 47.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 30 seconds in the question as 20 seconds wrongly, and calculates 6 x 20 seconds = 120 seconds instead of 6 x 30 seconds = 180 seconds. Its subsequent related step will be affected, calculating 120/60 = 2 minutes instead of 180/60 = 3 minutes in step 3. The final step will also be affected, calculating 30 + 2 + 15 = 47 minutes instead of 30 + 3 + 15 = 48 minutes in step 5. Please note that you should only consider one error, so all other steps that reference 30 seconds still do so correctly except for the step referenced incorrectly.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the time taken for each type of problem and then adds them together to get the total time taken. The conversion from seconds to minutes for social studies problems is also done correctly."
+    },
+    {
+        "question": "Ella earned $33 for 3 hours of dog walking. If she continues to walk dogs at the same rate, how much would she earn after 12 hours?",
+        "original_solution": "Ella earned $33 / 3 hours of dog walking = $11 per hour.\nSo for 12 hours of dog walking, Ella would earn $11 x 12 = $132.\n#### 132",
+        "original_answer": 132.0,
+        "transformed_solution": "Ella earned $30 / 3 hours of dog walking = $10 per hour.\nSo for 12 hours of dog walking, Ella would earn $10 x 12 = $120.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $33 in the question as $30 wrongly, and calculates $30 / 3 hours of dog walking = $10 per hour instead of $33 / 3 = $11 per hour. Its subsequent related step will be affected, calculating $10 x 12 = $120 instead of $11 x 12 = $132 in step 2. Please note that you should only consider one error, so step 2 still references 12 in the question correctly.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates Ella's hourly rate as $10 and then multiplies it by the number of hours she would work to find her total earnings. The calculation $10 x 12 = $120 is accurate and reflects the correct answer to the question."
+    },
+    {
+        "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+        "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+        "original_answer": 520.0,
+        "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\nHe then loses half of them for 1000/2= 500 cards remaining.\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the number of baseball cards Phil has after buying them for a year and then losing half in a fire. The calculation multiplies the number of cards per week by the number of weeks in a year, then divides by 2 to account for the loss in the fire."
+    },
+    {
+        "question": "There is a road stretching 3 miles from the base camp to the chain challenge. Every 20 minutes, a car comes down the road from the base camp towards the chain challenge. How many hours have passed once 30 cars have come down the road?",
+        "original_solution": "20*30 = 600 minutes have passed.\n600/60 = 10 hours have passed.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "25*30 = 750 minutes have passed.\n750/60 = 12.5 hours have passed.\n#### 12.5",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20 in the question as 25 wrongly, and calculates 25*30=750 instead of 20*30=600. Its subsequent related step will be affected, calculating 750/60=12.5 instead of 600/60=10 in step 2. Please note that you should only consider one error, so step 2 still references 60 in the question correctly.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates that each car takes 20 minutes to travel the road. It then multiplies this by 30 cars to find the total time passed in minutes (750 minutes). It finally converts this to hours by dividing by 60, which is the correct process and yields the correct answer of 12.5 hours."
+    }
+]

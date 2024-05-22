@@ -1,0 +1,67 @@
+[
+    {
+        "question": "John had a stock of 1400 books in his bookshop. He sold 75 on Monday, 50 on Tuesday, 64 on Wednesday, 78 on Thursday, and 135 on Friday. What percentage of the books were not sold?",
+        "original_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71.29%\n#### 71.29",
+        "original_answer": 71.29,
+        "transformed_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71%\n",
+        "transformed_answer": 71,
+        "wrong_step": 4,
+        "wrong_type": "rounding_error",
+        "is_single_error": true,
+        "explanation": "Here, the final step inaccurately rounds the percentage from 71.2857% to 71% instead of the correct 71.29% as per the original solution. This causes the transformed answer to be different from the original answer, creating a rounding error at step 4. It's important to note that the counting in earlier steps is unchanged, with only the final rounding step being affected.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution correctly calculate the total number of books sold, the remaining books, and the percentage of books not sold. The arithmetic is correct and the final answer is appropriately rounded."
+    },
+    {
+        "question": "A factory produces 6500 toys per week. If the workers at this factory work 5 days a week and if these workers make the same number of toys every day, how many toys are produced each day?",
+        "original_solution": "To find the number of toys produced each day, divide the total number of toys produced per week by the number of days worked per week\n6500 / 5 = 1300 toys\n#### 1300",
+        "original_answer": 1300.0,
+        "transformed_solution": "To find the number of toys produced each day, divide the total number of toys produced per week by the number of days worked per week\n",
+        "transformed_answer": 1625.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the number of days worked per week as 4 days instead of 5 days, resulting in the original calculation of 6500 / 5 = 1300 being changed to 6500 / 4 = 1625 in the transformed_solution. This counting error only affects this specific step and the resulting computation, while previous or unrelated steps and calculations remain correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly states that to find the number of toys produced each day, you should divide the total number of toys produced per week by the number of days worked per week."
+    },
+    {
+        "question": "Gary's gas station serves an average of 15 cars per hour on Saturdays, 10 cars per hour on Sundays, and 9 cars per hour on all other days of the week. If the station is open from 6 a.m. to 10 p.m. every day, how many cars does Gary's station serve over the course of a typical week?",
+        "original_solution": "On Monday through Friday the station is open for 16 hours per day, that is 16 * 5 = 80 hours in total\nThe total number of cars served on Monday through Friday is 9 * 80 = 720 cars\nOn Saturday, the station is open for 16 hours and serves 15 cars per hour, so 16 * 15 = 240 cars\nOn Sunday, the station is open for 16 hours and serves 10 cars per hour, so 16 * 10 = 160 cars\nThe total number of cars served in one week is 720 + 240 + 160 = 1120 cars\n#### 1120",
+        "original_answer": 1120,
+        "transformed_solution": "On Monday through Friday the station is open for 16 hours per day, that is 16 * 5 = 80 hours in total\nThe total number of cars served on Monday through Friday is 9 * 80 = 720 cars\nOn Saturday, the station is open for 16 hours and serves 15 cars per hour, so 16 * 15 = 240 cars\nOn Sunday, the station is open for 16 hours and serves 10 cars per hour, so 16 * 10 = 160 cars\n",
+        "transformed_answer": 1105,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, the final step 4 is modified to subtract 15 cars from the total count, as if there was a miscalculation or an hour on Sunday when the station was not open. This changes the total number of cars served from Sunday from 160 cars to 145 cars (an error), affecting the last calculation step. The actual operation performed in the transformed_solution is 720 + 240 + 145 instead of the correct 720 + 240 + 160, resulting in the transformed_answer of 1105 cars instead of the original_answer of 1120 cars. This is done as if mistaken that Sunday has only 15.5 hours of operation when it actually has 16 hours.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of cars served each day by multiplying the number of hours the station is open by the average number of cars served per hour for each day of the week."
+    },
+    {
+        "question": "A certain electric - company plan offers customers reduced rates for electricity used between 8 p.m. and 8 a.m. weekdays and 24 hours a day Saturdays and Sundays. Under this plan, the reduced rates c apply to what fraction of a week?",
+        "original_solution": "The reduced rates apply to the following times: \n8 p.m. to 8 a.m. weekdays (12 hours) and 24 hours on weekends (Saturday and Sunday)\nFrom Monday to Friday, there are 5 days, and each day has 12 hours of reduced rates\nOn Saturday and Sunday, there are 2 days, and each day has 24 hours of reduced rates\nTherefore, the total hours of reduced rates in a week is 5*12 + 2*24 = 60 + 48 = 108 hours\nThe total number of hours in a week is 7*24 = 168 hours\nSo, the fraction of the week with reduced rates is 108 / 168 = 9 / 14\n#### 9/14",
+        "original_answer": "9/14",
+        "transformed_solution": "The reduced rates apply to the following times: \n8 p.m. to 8 a.m. weekdays (12 hours) and 24 hours on weekends (Saturday and Sunday)\nFrom Monday to Friday, there are 5 days, and each day has 12 hours of reduced rates\n",
+        "transformed_answer": "1/2",
+        "wrong_step": 3,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, the wrong counting occurs at step 3 where Saturday and Sunday are mistakenly counted as a single day with 24 hours of reduced rates, instead of 2 days. This changes the calculation in step 4, consequently altering the subsequent related step 6 resulting in an incorrect fraction of reduced rate hours as 1/2 instead of the correct 9/14. The calculations prior to the counting error are unaffected, and the division process remains correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly identifies the time periods during which reduced rates apply and accurately calculates the number of hours for weekdays. The next steps would involve calculating the total hours for the weekend and then determining the fraction of the week these hours represent."
+    },
+    {
+        "question": "how many positive integers less than 60 have a reminder 01 when divided by 4 ?",
+        "original_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57.\nThere are 15 numbers that satisfy this condition.\n#### 15",
+        "original_answer": 15,
+        "transformed_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53.\n",
+        "transformed_answer": 14,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the counting result has been erroneously altered by excluding the number 57, which should have been included as it is less than 60 and leaves a remainder of 1 when divided by 4. Therefore, the count of numbers has changed from 15 to 14, which only impacts the final count of numbers that meet the condition and does not affect the previous steps of listing the numbers.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly lists the positive integers less than 60 that have a remainder of 1 when divided by 4."
+    }
+]

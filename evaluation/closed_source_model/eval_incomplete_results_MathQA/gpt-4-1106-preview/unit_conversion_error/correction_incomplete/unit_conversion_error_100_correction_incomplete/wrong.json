@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 33 kmph. Of how many minutes does the train stop per hour?",
+        "original_solution": "Let T be the time taken for stoppages in hours.\nDistance = Speed x Time\n45 kmph x (1 - T) = 33 kmph x 1\n45(1 - T) = 33\n45 - 45T = 33\n45T = 12\nT = 12/45 = 4/15 hours\nIn minutes, 4/15 hours x 60 minutes/hour = 16 minutes\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let T be the time taken for stoppages in hours.\nDistance = Speed x Time\n45 kmph x (1 - T) = 33 kmph x 1\n45(1 - T) = 33\n45 - 45T = 33\n45T = 12\nT = 12/45 = 4/15 hours\n",
+        "transformed_answer": 13.333,
+        "wrong_step": 7,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 7 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 50 minutes instead of 60 minutes, resulting in 4/15 hours x 60 minutes/hour = 16 minutes in the original_solution becoming 4/15 hours x 50 minutes/hour = 13.333 minutes in the transformed_solution. The affected step is the final conversion to minutes; the rest of the steps to find T in hours are unaffected and correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the time the train stops per hour. The train's speed without stoppages is 45 kmph, and with stoppages, it is 33 kmph. The difference in speed is due to the stoppages. By setting up the equation 45(1 - T) = 33, where T is the time in hours the train stops, and solving for T, we find that T = 4/15 hours. To convert this to minutes, we multiply by 60 (since there are 60 minutes in an hour), which gives us 4/15 * 60 = 16 minutes. Therefore, the train stops for 16 minutes per hour, which is the correct answer."
+    },
+    {
+        "question": "Cole drove from home to work at an average speed of 60 km/h. He then returned home at an average speed of 90 km/h. If the round trip took a total of 2 hours, how many minutes did it take Cole to drive to work?",
+        "original_solution": "Let x be the time it took to drive from home to work.\nThe time it took to return home is 2 - x.\nThe distance from home to work is the same as the distance from work to home.\nDistance = Speed * Time\n60x = 90(2 - x)\n60x = 180 - 90x\n150x = 180\nx = 1.2\nCole took 1.2 hours to drive to work, which is 1.2 x 60 = 72 minutes.\n#### 72",
+        "original_answer": 72.0,
+        "transformed_solution": "Let x be the time it took to drive from home to work.\nThe time it took to return home is 2 - x.\nThe distance from home to work is the same as the distance from work to home.\nDistance = Speed * Time\n60x = 90(2 - x)\n60x = 180 - 90x\n150x = 180\nx = 1.2\n",
+        "transformed_answer": 60.0,
+        "wrong_step": 8,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 8 makes incorrect unit conversion, mistaking that 1 hour has 50 minutes instead of 60 minutes, hence changing the conversion from 1.2 x 60 = 72 minutes in the original_solution to 1.2 x 50 = 60 minutes in the transformed_solution. This causes the transformed_answer to be different from the original_answer. It should be noted that only one step of unit conversion error is introduced, affecting the subsequent related calculation, without altering the previous steps or unrelated calculations.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up an equation based on the fact that the distance to work and back is the same. By using the average speeds and the total time, the equation is solved for x, which represents the time to go to work. The solution finds x to be 1.2 hours, which is correct. To convert hours to minutes, we multiply by 60, but since the question only asks for the time to drive to work, the final answer is just the value of x in hours, which is correctly found to be 1.2 hours or 72 minutes."
+    },
+    {
+        "question": "a clock shows the time as 12 a . m . if the minute hand gains 5 minutes every hour , how many minutes will the clock gain by 6 p . m . ?",
+        "original_solution": "From 12 a.m. to 6 p.m. is a total of 6 hours.\n6 hours * 5 minutes gained per hour = 30 minutes gained by the clock.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "From 12 a.m. to 6 p.m. is a total of 18 hours.\n",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means the time interval is wrongly calculated as 18 hours instead of the actual 6-hour duration from 12 a.m. to 6 p.m., resulting in 6 hours * 5 minutes gained per hour = 30 minutes gained by the clock in the original_solution becoming 18 hours * 5 minutes gained per hour = 90 minutes gained by the clock in the transformed_solution. This resulted in a change in both the transformed_solution and the transformed_answer. It should be noted that you only need to consider one step of unit conversion error, and the multiplication process of step 2 is still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly calculates the time from 12 a.m. to 6 p.m. as 18 hours. Since the minute hand gains 5 minutes every hour, over 18 hours it would gain 5 minutes * 18 hours = 90 minutes. Therefore, the final answer of 90 minutes is correct."
+    },
+    {
+        "question": "Circular gears p and q start rotating at the same time at constant speeds. Gear p makes 10 revolutions per minute and gear q makes 40 revolutions per minute. How many seconds after the gears start rotating will gear q have made exactly 5 more revolutions than gear p?",
+        "original_solution": "Let t be the time in minutes after the gears start rotating.\nAfter t minutes, gear p will have made 10t revolutions and gear q will have made 40t revolutions.\nWe need to find t such that 40t = 10t + 5\nSolving for t: 30t = 5, t = 5/30 = 1/6\nIn seconds, 1/6 minutes is 1/6 * 60 = 10 seconds.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let t be the time in minutes after the gears start rotating.\nAfter t minutes, gear p will have made 10t revolutions and gear q will have made 40t revolutions.\nWe need to find t such that 40t = 10t + 5\nSolving for t: 30t = 5, t = 5/30 = 1/6\n",
+        "transformed_answer": 8.33,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in 1/6 * 60 = 10 seconds in the original_solution becoming 1/6 * 50 = 8.33 seconds in the transformed_solution. The error only affects the unit conversion for representing minutes into seconds and does not affect the algebraic operation or the process to find t, as that remains correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up the equation to find the time when gear q has made 5 more revolutions than gear p. The equation 40t = 10t + 5 is solved correctly to find t = 1/6 minutes. Since the question asks for the time in seconds, and there are 60 seconds in a minute, the time in seconds would be (1/6) * 60 = 10 seconds. However, the solution does not explicitly convert the time from minutes to seconds, but the final numerical answer of 1/6 minutes is correct. The explanation should include the conversion to seconds to fully answer the question."
+    }
+]

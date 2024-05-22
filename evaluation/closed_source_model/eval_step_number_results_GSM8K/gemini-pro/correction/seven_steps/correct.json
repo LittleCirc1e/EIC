@@ -1,0 +1,32 @@
+[
+    {
+        "question": "A rancher owns a mixture of 8 sheep and 5 cattle that graze on his land. In a typical year, the rancher will allow his animals to feed off his pastures for as long as possible before they run out of grass. After the pastures run out of grass, he must buy feed corn for $10 per bag. Each cow eats 2 acres of grass per month, and each sheep eats 1 acre of grass per month. Additionally, a bag of feed corn can feed each cow for 1 month and each sheep for 2 months. If the rancher's pasture contains 144 acres of grass, how much will the rancher need to spend on feed corn to feed his animals each year?",
+        "original_solution": "First, the 144 acres of grass will be eaten according to the equation 5*2*T + 8*1*T = 144.\nSolving this equation for T, we find 18*T = 144, or T = 8 months of food are covered by the animals grazing on the rancher's pasture.\nThis means the farmer must buy feed corn for the remaining 12 - 8 = 4 months.\nNext, the rancher's 8 sheep will require 4/2 = 2 bags of feed corn each, or 8*2 = 16 bags of feed corn in total for the 4 month period.\nThe rancher's 5 cows will require 4/1 = 4 bags of feed corn each, or 5*4 = 20 bags of feed corn in total for the month.\nTherefore, the rancher needs 16+20 = 36 bags of feed corn for all of his animals.\nSo, the rancher will need to spend 36*10 = $360 per year on feed corn.\n#### 360",
+        "original_answer": 360.0,
+        "transformed_solution": "First, the 144 acres of grass will be eaten according to the equation 5*2*T + 8*1*T = 144.\nSolving this equation for T, we find 18*T = 144, or T = 8 months of food are covered by the animals grazing on the rancher's pasture.\nThis means the farmer must buy feed corn for the remaining 12 - 8 = 4 months.\nNext, the rancher's 8 sheep will require 4/2 = 2 bags of feed corn each, or 8*2 = 16 bags of feed corn in total for the 4 month period.\nThe rancher's 5 cows will require 4/1 = 4 bags of feed corn each (incorrect calculation leads to 5*3 = 15 bags instead of 5*4), or 5*3 = 15 bags of feed corn in total for the month.\nTherefore, the rancher needs 16+15 = 31 bags of feed corn for all of his animals (wrongly adding the correct 16 and incorrect 15).\nSo, the rancher will need to spend 31*10 = $310 per year on feed corn.\n#### 310",
+        "transformed_answer": 310.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Transformed solution alters the calculation in step 5, where the correct computation of 5 cows requiring 4 bags of feed corn each for 4 months is replaced with an incorrect computation of them requiring 3 bags each (5*3=15). As a consequence, the total required bags of feed corn has been incorrectly calculated as 31 instead of the correct 36 originally. This affects step 6 where the multiplication of the number of bags by the price per bag is done. All steps before step 5 remain unaffected by this wrong calculation step.",
+        "is_correct": "no",
+        "corrected_solution": "First, the 144 acres of grass will be eaten according to the equation 5*2*T + 8*1*T = 144.\nSolving this equation for T, we find 18*T = 144, or T = 8 months of food are covered by the animals grazing on the rancher's pasture.\nThis means the farmer must buy feed corn for the remaining 12 - 8 = 4 months.\nNext, the rancher's 8 sheep will require 4/2 = 2 bags of feed corn each, or 8*2 = 16 bags of feed corn in total for the 4 month period.\nThe rancher's 5 cows will require 4/1 = 4 bags of feed corn each, or 5*4 = 20 bags of feed corn in total for the month.\nTherefore, the rancher needs 16+20 = 36 bags of feed corn for all of his animals.\nSo, the rancher will need to spend 36*10 = $360 per year on feed corn.",
+        "corrected_answer": 360,
+        "corrected_explanation": "The calculation in the original solution for The rancher's 5 cows is incorrect. Instead of 4/1 = 4 bags of feed corn each, it should be 5 cows require 4/1 = 4 bags of feed corn each, which is a total of 5*4 = 20 bags. Then the total number of bags for the cows and sheep together is 16+20 = 36 bags."
+    },
+    {
+        "question": "Barbeck has two times as many guitars as Steve, but Davey has three times as many guitars as Barbeck. If there are 27 guitars altogether, how many guitars does Davey have?",
+        "original_solution": "Let x = the number of guitars Steve has.\nBarbeck has 2x guitars, and Davey has 3 * 2x = 6x guitars.\n2x + 6x + x = 27\n9x = 27\nx = 27 / 9 = 3 so Steve has 3 guitars.\nBarbeck has 2 * 3 = 6 guitars.\nAnd Davey has 3 * 6 = 18 guitars.\n#### 18",
+        "original_answer": 18.0,
+        "transformed_solution": "Let x = the number of guitars Steve has.\nBarbeck has 2x guitars, and Davey has 3 * 2x = 6x guitars.\n2x + 6x + x = 27\n9x = 27\nx = 27 / 9 = 3 so Steve has 3 guitars.\nBarbeck has 2 * 3 = 6 guitars.\nAnd Davey has 3 * 6 = 15 guitars.\n#### 15",
+        "transformed_answer": 15.0,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 7 where the calculation of Davey's guitars was changed from 3 * 6 = 18 to 3 * 6 = 15. This is a calculation error that affects only the final answer and not the previous steps. The steps before the error remain correct, and the error does not propagate to any other steps because it is the final calculation.",
+        "is_correct": "no",
+        "corrected_solution": "Let x = the number of guitars Steve has.\nThen Barbeck has 2x guitars, and Davey has 3 * 2x = 6x guitars.\nWe know that x + 2x + 6x = 27.\n9x = 27\nx = 3\nSo Steve has 3 guitars.\nBarbeck has 2 * 3 = 6 guitars.\nAnd Davey has 3 * 6 = 18 guitars.",
+        "corrected_answer": 18,
+        "corrected_explanation": "In the incorrect solution, it is assumed Davey has three times as many guitars as Barbeck, which is not what the question asks for. The question asks Davey to have three times as many guitars as Barbeck."
+    }
+]

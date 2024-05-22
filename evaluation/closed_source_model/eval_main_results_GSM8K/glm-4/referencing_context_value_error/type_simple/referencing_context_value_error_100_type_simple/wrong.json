@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Phil likes to collect baseball cards. He buys a pack of twenty each week for a year, but then loses half of them one day in a fire. How many baseball cards does Phil have left?",
+        "original_solution": "Since there are 20 cards in a pack and 52 weeks in a year, Phil starts by collecting 20*52= 1040 baseball cards\nHe then loses half of them for 1040/2= 520 cards remaining.\n#### 520",
+        "original_answer": 520.0,
+        "transformed_solution": "Since there are 20 cards in a pack and 50 weeks in a year, Phil starts by collecting 20*50= 1000 baseball cards\nHe then loses half of them for 1000/2= 500 cards remaining.\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 52 in the question as 50 wrongly, and calculates 20*50=1000 instead of 20*52=1040. Its subsequent related step will be affected, calculating 1000/2=500 instead of 1040/2=520 in step 2. Please note that you should only consider one error, so step 2 still references 1040 in the question correctly, although the number referenced should actually have been 1000 as a result of the incorrect calculation in step 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the number of baseball cards Phil collects in a year and then correctly calculates the number of cards left after losing half in a fire."
+    },
+    {
+        "question": "Nick is asking all his co-workers to chip in for a birthday gift for Sandra that costs $100. The boss agrees to contribute $15, and Todd volunteers to contribute twice as much since he always has to one-up everyone. If the remaining 5 employees (counting Nick) each pay an equal amount, how much do they each pay?",
+        "original_solution": "First find Todd's contribution by doubling the boss's contribution: $15 * 2 = $30\nNow subtract Todd and the boss's contributions to find out how much still needs to be paid: $100 - $30 - $15 = $55\nNow divide the remaining cost by the number of employees to find the cost per employee: $55 / 5 employees = $11/employee\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "First find Todd's contribution by doubling the boss's contribution: $20 * 2 = $40\nNow subtract Todd and the boss's contributions to find out how much still needs to be paid: $100 - $40 - $20 = $40\nNow divide the remaining cost by the number of employees to find the cost per employee: $40 / 5 employees = $8/employee\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $15 in the question as $20 wrongly, and calculates $20 * 2 = $40 instead of $15 * 2 = $30. Its subsequent related steps will be affected by the incorrect amounts. Step 2 calculates the remaining cost based on the altered contributions, calculating $100 - $40 - $20 = $40 instead of $100 - $30 - $15 = $55. Step 3 is then impacted by the error from step 2, dividing $40 by 5 employees resulting in $8/employee instead of dividing $55 by 5 employees to get $11/employee. Note that other steps still reference the correct value from the question except for the step referenced incorrectly.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the contributions and divides the remaining amount evenly among the employees."
+    }
+]

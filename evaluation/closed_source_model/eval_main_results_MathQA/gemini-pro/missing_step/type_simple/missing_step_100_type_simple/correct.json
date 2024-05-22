@@ -1,0 +1,58 @@
+[
+    {
+        "question": "What is the time required for a bike to cover a distance of 450 km with a speed of 90 kmh ?",
+        "original_solution": "Time = Distance / Speed\nTime = 450 km / 90 kmh = 5 hours\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Time = 450 km / 90 kmh = 10 hours\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we have incorrectly modified step 1 to imply a longer time, resulting in an arithmetic error where the division is performed incorrectly. Instead of dividing 450 by 90 to get 5 hours, we erroneously modified it to '450 km / 90 kmh = 10 hours' without changing the division process, leading to an inaccurate time calculation. The correct division would still result in 5 hours, not 10. Thus, the wrong_step is 1, which involves the incorrect calculation, constituting a 'calculation_error'. There is only a single error introduced in the transformation.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The calculation of 450 km / 90 kmh = 10 hours is incorrect. The correct result should be 5 hours."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The result of the multiplication of 15 and 25 is 375, not 25."
+    },
+    {
+        "question": "a and b finish the job in 15 days. while a, b and c can finish it in 3 days. c alone will finish the job in",
+        "original_solution": "a and b finish 1/15 of the job in 1 day\na, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 5/15 - 1/15 = 4/15 of the job in 1 day\nc alone will finish the job in 15/4 = 3.75 days\n#### 3.75",
+        "original_answer": 3.75,
+        "transformed_solution": "a, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 2/15 of the job in 1 day\nc alone will finish the job in 15/2 = 7.5 days\n#### 7.5",
+        "transformed_answer": 7.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution has been removed, assuming that it referenced directly from the question that a and b together finish the job in 15 days. After deleting the first step, the immediate next step becomes step 1 (previously step 2) and references directly the efficiency of a and b from the question. However, a mistake occurred in the calculation in the new step 2 (previously step 3) where 1/3 - 1/15 was incorrectly simplified as 2/15 instead of 4/15. This is an intentional calculation error. The final step is then adjusted to reflect this error, with the number of days c needs to finish the job alone being recalculated to 15/2 days, which results in a transformed answer of 7.5 days. The first step in the transformed solution that references the result of the deleted step is step 2, so the wrong_step is 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The calculation of 1/3 - 1/15 = 2/15 is incorrect. The correct result should be 1/5."
+    },
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The distance traveled in the third interval is (2 + 5 * 2) * (5 / 60) = 2 miles\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been omitted, and its calculations wrongly incorporated into a single transformed step. The increase in speed after two intervals (which should be 2 + 5 * 2 = 12 miles per hour) is correctly calculated, but the multiplication by the fraction representing 5 minutes in an hour (5/60) is incorrectly done. Due to this, the distance traveled in the third interval equation changes to (2 + 5 * 2) * (5 / 60) in the transformed_solution. Since the omission has led to a calculation error in the combined single step, the wrong_step is 1. The transformed answer of 2 miles is incorrect as the actual distance traveled in the third 5-minute interval should be 1 mile.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The formula used to calculate the distance traveled in the third interval is incorrect. The correct formula should be (2 + 5 * 2) * (5 / 60) = 1.67 miles."
+    }
+]

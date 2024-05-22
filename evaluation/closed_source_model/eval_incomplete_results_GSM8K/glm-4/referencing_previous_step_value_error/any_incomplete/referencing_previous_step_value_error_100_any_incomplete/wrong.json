@@ -1,0 +1,93 @@
+[
+    {
+        "question": "There are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?",
+        "original_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 10 marbles\n10 marbles are removed to leave 50-10 = 40 marbles\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 16 marbles\n",
+        "transformed_answer": 34.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 10 as 16 when doubling the difference between the number of white and blue marbles. It should be noted that step 3 in the transformed_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> should be the same as the step 3 in the original_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> and calculates its result 5 correctly. Step 4 is affected by the erroneous referencing and changes 5*2 = 10 to 5*2 = 16. The subsequent step 5, which is the only step affected by step 4, correctly calculates the new number of marbles left as 50-16 = 34. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps correctly calculate the number of red and blue marbles, find the difference between the number of white and blue marbles, and then double that difference to find out how many marbles Jack removes. The final step to find out how many marbles are left is not provided, but the calculations up to that point are accurate."
+    },
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the variables for the number of insects each person collected and writes the equation reflecting the given information that Bodhi collected B insects, David found half of that, and Lily found seven more than David, which sums up to the total of 43 insects."
+    },
+    {
+        "question": "In a factory, there are 3 machines working 23 hours a day. The owner decided to buy a fourth machine, which works only 12 hours a day. One machine can produce 2 kg of material every hour. The factory sells the produced material for $50 per 1 kg. How much can this factory earn in one day?",
+        "original_solution": "The total runtime for the first three machines is 3 machines * 23 hours/day/machine = 69 hours/day.\nSo these machines could produce 69 hours/day * 2 kg/hour = 138 kg/day.\nThe fourth machine could produce 12 hours/day * 2 kg/hour = 24 kg/day of material.\nIn total all the machines would produce 138 kg/day + 24 kg/day = 162 kg/day of material.\nThe factory would therefore earn 162 kg/day * $50/kg = $8100/day.\n#### 8100",
+        "original_answer": 8100.0,
+        "transformed_solution": "The total runtime for the first three machines is 3 machines * 23 hours/day/machine = 69 hours/day.\nSo these machines could produce 69 hours/day * 2 kg/hour = 138 kg/day.\nThe fourth machine could produce 12 hours/day * 2 kg/hour = 24 kg/day of material.\nIn total all the machines would produce 138 kg/day + 24 kg/day = 156 kg/day of material.\n",
+        "transformed_answer": 7800.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references the total produced by the first three machines as 138 kg/day and the fourth machine as 20 kg/day (implicitly, since 156 - 138 = 18, which could be misconstrued as 12 hours * 1.5 kg/hour for a total of 18 kg/day) from steps 2 and 3 by changing the correct sum 138 kg/day + 24 kg/day = 162 kg/day to an incorrect sum 138 kg/day + 24 kg/day = 156 kg/day. It should be noted that steps 2 and 3 in the transformed_solution should be the same as the steps 2 and 3 in the original_solution and should have their result numbers calculated correctly. Step 5, as the subsequent step of step 4, is affected and changes the total earning from 162 kg/day * $50/kg = $8100/day to 156 kg/day * $50/kg = $7800/day. The referencing error only occurs at step 4, and thus all calculations for the other steps are still correct. The consequence of this single referencing error is that the transformed_answer changes to $7800, which is different from the original_answer of $8100.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total production of the first three machines and the fourth machine separately, then adds them together to get the total daily production of material, which is a valid approach to solve the problem."
+    },
+    {
+        "question": "While Joanne is gathering apples from her family’s orchard, her sister comes outside to help her. Joanne gathers 30 apples from the tallest trees, half this amount from the shortest trees, and more apples from the average trees. Compared with Joanne, her sister gathers twice as many apples from the tallest trees and 3 times as many apples from the shortest trees. She doesn't take any from the average trees. If the sisters have gathered a combined total of 500 apples, how many apples did Joanne gather from the average trees?",
+        "original_solution": "Joanna gathered 30 apples / 2 = 15 apples from the shortest trees.\nHer sister gathered 30 apples * 2 = 60 apples from the tallest trees.\nHer sister also gathered 15 apples * 3 = 45 apples from the shortest trees.\nIn total, her sister gathered 60 + 45 = 105 apples.\nFrom the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.\nSo far, the sisters have a combined total of 105 + 45 = 150 apples.\nTherefore, Joanna must have gathered 500 total apples – 150 apples so far = 350 apples from the average trees.\n#### 350",
+        "original_answer": 350.0,
+        "transformed_solution": "Joanna gathered 30 apples / 2 = 15 apples from the shortest trees.\nHer sister gathered 30 apples * 2 = 60 apples from the tallest trees.\nHer sister also gathered 15 apples * 3 = 45 apples from the shortest trees.\nIn total, her sister gathered 60 + 45 = 105 apples.\nFrom the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.\nSo far, the sisters have a combined total of 105 + 45 = 140 apples.\n",
+        "transformed_answer": 360.0,
+        "wrong_step": 6,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 6 mistakenly references 150 as 140 from step 5 and changes 105 + 45 = 150 to 105 + 45 = 140. It should be noted that step 5 in the transformed_solution <From the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.> should be the same as the step 5 in the original_solution <From the tallest and shortest trees, Joanna gathered 30 + 15 = 45 apples.> and calculates its result 45 correctly. However, the language description of step 6 has also changed from <So far, the sisters have a combined total of 105 + 45 = 150 apples.> to <So far, the sisters have a combined total of 105 + 45 = 140 apples.>. Step 7, as the subsequent related step of step 6, is affected by step 6 and changes 500 - 150 = 350 to 500 - 140 = 360. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided correctly calculate the number of apples gathered by Joanne and her sister from the tallest and shortest trees. The logic used in the calculations is consistent with the information given in the question."
+    },
+    {
+        "question": "Meryll wants to write 35 multiple-choice questions and 15 problem-solving questions for her Chemistry class. She already has written 2/5 of the multiple-choice and 1/3 of the problem-solving questions. How many more questions does she need to write for both multiple-choice and problem-solving?",
+        "original_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 19 questions = 31 questions more.\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\n",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 19 as 20 from step 3 and changes 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. It should be noted that step 3 in the transformed_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> should be the same as the step 3 in the original_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> and calculates its result 50 correctly. Step 4 affects the subsequent step 5 related to it, changing from 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. You need to only consider one error of referencing, so the calculation of all steps starting from the wrong step and the ones following it is still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of multiple-choice questions Meryll has written as 14 and the number of problem-solving questions as 5. It also correctly identifies that she needs to write a total of 50 questions and has already written 19, which means she still needs to write 31 more questions."
+    },
+    {
+        "question": "Chris’s internet bill is $45 per month for 100 GB and $0.25 for every 1 GB over. His bill for this month is $65. How many GB over was Chris charged for on this bill?",
+        "original_solution": "Let G stand for the number of GB billed, so the total bill is $0.25G + $45 flat rate charge = $65 total bill.\nNow we will solve for G. $0.25G + $45 flat rate - $45 = $65 -$45. This simplifies to $0.25G = $20\n$0.25G/$0.25 = $20/$0.25\nG = 80 GB were charged on this bill.\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "Let G stand for the number of GB billed, so the total bill is $0.25G + $45 flat rate charge = $65 total bill.\nNow we will solve for G. $0.25G + $45 flat rate - $45 = $65 -$45. This simplifies to $0.25G = $25\n$0.25G/$0.25 = $25/$0.25\n",
+        "transformed_answer": 100.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 20 as 25 from step 2 and changes $0.25G = $20 to $0.25G = $25. It should be noted that step 2 in the transformed_solution <Now we will solve for G. $0.25G + $45 flat rate - $45 = $65 -$45. This simplifies to $0.25G = $20> should be the same as the step 2 in the original_solution <Now we will solve for G. $0.25G + $45 flat rate - $45 = $65 -$45. This simplifies to $0.25G = $20> and calculates its result 20 correctly. And step 4 is affected by step 3 and changes $20/$0.25 to $25/$0.25 leading to a wrong result of 100 GB instead of 80 GB. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the equation to represent the total bill, which includes a flat rate and an additional charge per GB over the initial 100 GB. It also correctly simplifies the equation to solve for G, the number of GB over the initial 100 GB that were charged."
+    },
+    {
+        "question": "Uncle Ben has 440 chickens on his farm. 39 are roosters and the rest are hens. 15 of his hens do not lay eggs, and the rest do. If each egg-laying hen lays 3 eggs, how many eggs will Uncle Ben have?",
+        "original_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 386 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 386 hens = 1158 eggs.\n#### 1158",
+        "original_answer": 1158.0,
+        "transformed_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 385 hens that lay eggs.\n",
+        "transformed_answer": 1155.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 401 as 401 from step 1 but changes 401 - 15 to 385 instead of the correct 386. It should be noted that step 1 in the transformed_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> should be the same as the step 1 in the original_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> and calculates its result 401 correctly. The subsequent step 3, which is related to step 2, is affected by the incorrect subtraction result but is still calculated correctly as 3 * 385 to give 1155 eggs. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the transformed_answer 1155 is different from the original_answer 1158.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided correctly calculate the number of hens that lay eggs by subtracting the number of roosters and non-egg-laying hens from the total number of chickens."
+    }
+]

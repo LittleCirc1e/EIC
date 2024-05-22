@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Mrs. Young makes bonnets for kids in the orphanage. On Monday, she made 10 bonnets, on Tuesday and Wednesday combined she made twice more than on Monday, while on Thursday she made 5 more than on Monday, and on Friday she made 5 less than on Thursday. Then, she divided up the bonnets evenly and sent them to 5 orphanages. How many bonnets did Mrs. Young send to each orphanage?",
+        "original_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 5 = 11 bonnets to each orphanage.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 4 = 13.75 bonnets to each orphanage.\n#### 13.75",
+        "transformed_answer": 13.75,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, in step 5, the original_solution's division process mistakenly divides the total number of bonnets by 4 orphanages instead of the correct 5 orphanages, resulting in an incorrect number of bonnets per orphanage. This directly affects the final answer. The rest of the arithmetic operations are unchanged, but this division error results in a different answer from the original_solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 first makes a mistake in the calculation process, calculating 55 / 4 = 13.75 instead of 55 / 5 = 11. The final answer is incorrect because of this mistake. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "It’s exam season and Tristan has several exams to prepare for. On Monday, he studies for 4 hours then studies for twice this long on Tuesday. On Wednesday, Thursday, and Friday he studies for 3 hours each day. He wants to study for a total of 25 hours over the week and divides the remaining amount of study time evenly between Saturday and Sunday. How many hours does Tristan spend studying on Saturday?",
+        "original_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he splits his time evenly over 2 days, he spends 4 hours / 2 = 2 hours studying on Saturday.\n#### 2",
+        "original_answer": 2,
+        "transformed_solution": "On Tuesday, Tristan studies twice as long as he did on Monday and this amounts to 4 hours * 2 = 8 hours.\nSo in the first 5 days of the week, he studies for a total of 4 hours Monday + 8 hours Tuesday + 3 hours Wednesday + 3 hours Thursday + 3 hours Friday = 21 hours.\nHe therefore has 25 planned hours – 21 used hours = 4 hours left to study.\nAs he intends to split his time over the weekend, but mistakenly counts that as 1 day, he spends 4 hours / 1 = 4 hours studying on Saturday.\n#### 4",
+        "transformed_answer": 4,
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 of the transformed_solution incorrectly assumes that the weekend is 1 day instead of 2, therefore changing 4 hours / 2 to 4 hours / 1. The mistake results in Tristan spending all 4 remaining hours on Saturday as opposed to dividing them evenly between Saturday and Sunday. This counting error affects only the final step related to the allocation of study hours over the weekend and the subsequent calculation of hours studied on Saturday, without affecting previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_step": 7,
+        "step_explanation": "Step 7 first makes a mistake in the calculation process, calculating 4 / 1 = 4 instead of 4 / 2 = 2. The subsequent step 8 references the result of step 7, calculating 4 hours studying on Saturday instead of 2 hours studying on Saturday, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 7, so pred_wrong_step is 7."
+    },
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in calculating the number of days from Monday to Wednesday, mistakenly believing that it is 2 days instead of 3 days. The subsequent step 4 references the result of step 3, calculating 51/2 = 25.5 instead of 51/3 = 17, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Mrs. Young makes bonnets for kids in the orphanage. On Monday, she made 10 bonnets, on Tuesday and Wednesday combined she made twice more than on Monday, while on Thursday she made 5 more than on Monday, and on Friday she made 5 less than on Thursday. Then, she divided up the bonnets evenly and sent them to 5 orphanages. How many bonnets did Mrs. Young send to each orphanage?",
+        "original_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 5 = 11 bonnets to each orphanage.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "She made 10 x 2 = 20 bonnets on Tuesday and Wednesday.\nWhile on Thursday she made 10 + 5 = 15 bonnets.\nOn Friday she made 15 - 5 = 10 bonnets.\nMrs. Young made a total of 10 + 20 + 15 + 10 = 55 bonnets for the orphanage.\nTherefore, Mrs. Young sends 55 / 4 = 13.75 bonnets to each orphanage.\n#### 13.75",
+        "transformed_answer": 13.75,
+        "wrong_step": 5,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution incorrectly divides the total number of bonnets by 4 orphanages instead of 5. The division in step 5 of the transformed_solution is done improperly leading to a calculation that divides 55 by 4 instead of 55 by 5, changing the answer from 11 to 13.75. This is a single counting error affecting just the division of bonnets among orphanages, leaving the prior steps correctly calculated.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "Step 6 first makes a mistake in the calculation process, calculating 55 / 4 = 13.75 instead of 55 / 5 = 11. The final answer is incorrect because of this mistake. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "question": "For every 100 additional people that board a spaceship, its speed is halved. If the speed of the spaceship with 200 people on board is 500km per hour, what is its speed in km/hr when there are 400 people on board?",
+        "original_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 125 km/hr. So for the total of 200 additional people, its speed is 125 km/hr\n#### 125",
+        "original_answer": 125.0,
+        "transformed_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 100 km/hr. So for the total of 200 additional people, its speed is 100 km/hr\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 1/2 * 250 km/hr as 100 km/hr instead of 125 km/hr in step 2. This results in a transformed answer of 100 km/hr, which is different from the original answer of 125 km/hr. The error in step 2 affects the final result, but does not impact the calculation in step 1 as it is correct and unrelated to the error made in step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 references the wrong result 250 km/hr of step 1, which only results in an operand error in the formula, so it belongs to referencing_previous_step_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly references the number 98 instead of 100 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 2, as its subsequent step, references the wrong result of step 1, resulting in the incorrect final answer."
+    },
+    {
+        "question": "There are 325 students in a local high school. 40 percent of the students have glasses, how many students do not have glasses?",
+        "original_solution": "People that do not have glasses 100%-40%=60%\n325(.10)=32.5\n32.5*6=195 students\n#### 195",
+        "original_answer": 195.0,
+        "transformed_solution": "People that do not have glasses 100%-40%=60%\n325(.10)=32.5\n32.5*6=190 students\n#### 190",
+        "transformed_answer": 190.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformation introduces a calculation error in step 3 by changing 32.5*6 from 195 to 190, affecting the final answer while leaving the previous steps unchanged. The rest of the solution inherits the value from the incorrect step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 references the wrong result 10% of step 1, which only results in an operand error in the formula, so it belongs to referencing_previous_step_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    }
+]

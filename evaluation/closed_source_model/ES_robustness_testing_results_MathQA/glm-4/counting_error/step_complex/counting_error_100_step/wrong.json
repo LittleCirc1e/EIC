@@ -1,0 +1,72 @@
+[
+    {
+        "question": "A certain electric - company plan offers customers reduced rates for electricity used between 8 p . m . and 8 a . m . weekdays and 24 hours a day Saturdays and Sundays. Under this plan, the reduced rates q apply to what fraction of a week?",
+        "original_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours\nThe total hours for which reduced rates apply is 60 + 48 = 108 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 108 / 168 = 9 / 14\n#### 9/14",
+        "original_answer": "9/14",
+        "transformed_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours\nThe total hours for which reduced rates apply is 60 + 24 = 84 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 84 / 168 = 1 / 2\n#### 1/2",
+        "transformed_answer": "1/2",
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts Saturdays and Sundays as 1 day instead of 2 days, resulting in <The reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours> in the original_solution being changed to <The reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours> in the transformed_solution. Subsequently, step 3 changes from 60 + 48 = 108 to 60 + 24 = 84, and step 5 changes from 108 / 168 = 9 / 14 to 84 / 168 = 1 / 2. The error is only introduced in the step of counting the number of days for the weekend, and the subsequent division to get the fraction is performed correctly.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the total number of hours with reduced rates on weekdays (60 hours) and weekends (24 hours), then adds them to get the total hours (84 hours). It also correctly calculates the total number of hours in a week (168 hours). The final step correctly divides the total hours with reduced rates by the total hours in a week to get the fraction of a week with reduced rates, which is 1/2. All steps are correct, and the final answer is correct."
+    },
+    {
+        "question": "how many numbers from 2 to 15 are exactly divisible by 2 ?",
+        "original_solution": "There are 7 numbers between 2 and 15\n2, 4, 6, 8, 10, 12, 14\n#### 7",
+        "original_answer": 7,
+        "transformed_solution": "There are 6 numbers between 2 and 15\n2, 4, 6, 8, 10, 12\n#### 6",
+        "transformed_answer": 6,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 mistakenly counts the numbers between 2 and 15 that are exactly divisible by 2 as 6 instead of 7. This counting error excludes number 14 from the series, changing the original solution (which correctly identifies 2, 4, 6, 8, 10, 12, 14) to an incorrect count of 2, 4, 6, 8, 10, 12 in the transformed_solution. The other numbers remain unchanged, and only the count is affected, causing the transformed_answer to differ from the original_answer.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly lists the numbers from 2 to 15 that are exactly divisible by 2, which are 2, 4, 6, 8, 10, and 12. There are indeed 6 numbers, and the final answer of 6 is correct."
+    },
+    {
+        "question": "A certain electric-company plan offers customers reduced rates for electricity used between 8 p.m. and 8 a.m. weekdays and 24 hours a day Saturdays and Sundays. Under this plan, the reduced rates q apply to what fraction of a week?",
+        "original_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 2 = 48 hours\nThe total hours for which reduced rates apply is 60 + 48 = 108 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 108 / 168 = 9 / 14\n#### 9/14",
+        "original_answer": "9/14",
+        "transformed_solution": "The reduced rates apply from 8 p.m. to 8 a.m. on weekdays, which is 12 hours per day for 5 days (Monday to Friday), so 12 * 5 = 60 hours\nThe reduced rates also apply for 24 hours on Saturdays and Sundays, which is 24 * 1 = 24 hours\nThe total hours for which reduced rates apply is 60 + 24 = 84 hours\nThere are 24 hours in a day and 7 days in a week, so the total hours in a week is 24 * 7 = 168 hours\nThe fraction of a week for which reduced rates apply is 84 / 168 = 1 / 2\n#### 1/2",
+        "transformed_answer": "1/2",
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 mistakenly counts the reduced rates as applying for 24 hours on only one day of the weekend instead of two (Saturday and Sunday), resulting in the calculation 24 * 2=48 becoming 24 * 1=24. This affects the subsequent related step 3, changing the total hours from 60+48=108 to 60+24=84. The rest of the calculations are based on this incorrect counting step, including the last step that computes the fraction of the week for which reduced rates apply, changing it from 108/168=9/14 to 84/168=1/2.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the number of hours with reduced rates on weekdays (60 hours) and weekends (24 hours), then adds them to get the total hours with reduced rates (84 hours). It also correctly calculates the total number of hours in a week (168 hours). The final step correctly divides the total hours with reduced rates by the total hours in a week to get the fraction of a week with reduced rates, which is 1/2. All steps are correct, and the final answer is correct."
+    },
+    {
+        "question": "Find the probability that a non leap year selected at random will have 53 Sundays",
+        "original_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day in that year\nThe probability of selecting a non leap year with 53 Sundays is 1/7\n#### 1/7",
+        "original_answer": "1/7",
+        "transformed_solution": "In a non leap year, there are 365 days\nThe total number of weeks in a non-leap year is 52\nIf there are 53 Sundays, it means there is an extra day that could potentially fall on a Sunday\nThe probability of selecting a non leap year with 53 Sundays is 2/7\n#### 2/7",
+        "transformed_answer": "2/7",
+        "wrong_step": 4,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 erroneously calculates the probability of having 53 Sundays in a non-leap year as 2/7 instead of 1/7. Since there are 365 days in a non-leap year and 52 full weeks account for 364 days, there is 1 extra day, not 2 as implied by the transformed solution. This extra day has a 1/7 chance of being a Sunday, not 2/7. To generate the transformed_solution, the counting of weeks is kept correct, but the probability calculation is erroneously changed which is reflected in the transformed_answer.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly calculates the probability of a non-leap year having 53 Sundays. There are 52 weeks in a year, which accounts for 364 days, leaving one extra day. This extra day can fall on a Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, or Saturday, each with an equal probability. Since there are 7 possible days for the extra day, and only one of them results in 53 Sundays (the extra day being a Sunday), the probability is 1/7. However, the solution states 2/7, which is incorrect. The correct probability should be 1/7. Since the instructions indicate to only consider a single type of error in one step, and assuming that the error is a simple arithmetic mistake, the first step to make a mistake is not identified in the provided solution. The solution is, however, incorrect in terms of the final answer, but according to the given criteria, the 'pred_wrong_step' is 'none' because the error is not isolated to a single step but is a conceptual misunderstanding of the probability calculation."
+    },
+    {
+        "question": "At Chennai it rained as much on Tuesday as on all the others days of the week combined. If the average rainfall for the whole week was 3cm. How much did it rain on Tuesday?",
+        "original_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 7 * 3 = 21 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 21 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 21 - x\n2x = 21\nx = 10.5\n#### 10.5",
+        "original_answer": 10.5,
+        "transformed_solution": "Let x be the amount of rain on Tuesday\nTotal rainfall for the week = 6 * 3 = 18 cm\nTotal rainfall for Monday, Wednesday, Thursday, Friday, Saturday and Sunday = 18 - x\nSince it rained as much on Tuesday as on all the others days combined: x = 18 - x\n2x = 18\nx = 9\n#### 9",
+        "transformed_answer": 9,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In step 2 of the original_solution, the total days are erroneously counted as 6 instead of 7 when calculating the total rainfall for the week. This affects the following steps since the total rainfall is now incorrectly set to 18 cm instead of 21 cm. Consequently, the calculation is based on the wrong total, which also changes the final answer for Tuesday’s rainfall from 10.5 cm to 9 cm.",
+        "is_correct": "yes",
+        "pred_wrong_step": "none",
+        "step_explanation": "The solution correctly sets up the equation based on the given information. It correctly calculates that the total rainfall for the week is 18cm and then correctly solves for x, the amount of rainfall on Tuesday, by setting it equal to the rainfall on the other days combined. The equation 2x = 18 correctly simplifies to x = 9, which is the right answer."
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by another price, so 735 / 10 = 73.5.\n#### 73.5",
+        "transformed_answer": 73.5,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The original_solution only had one step calculation. For the transformed_solution, since I can't delete the final step and there's only one step, I have modified it to reference the closest whole number to the original price per pair, which is $10 instead of $9.8, and reran the calculation with this new price to produce a new answer. Therefore, as per the problem guidelines, I have chosen to slightly alter the price per pair used in the calculation from $9.8 to $10. The wrong_step is 1 because in the transformed solution, it is the first step that incorrectly references the price of a pair of rackets as $10 instead of $9.8, which results in the transformed_answer being different from the original_answer, as required.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 735 / 10 = 73.5 instead of 735 / 9.8 = 75. The subsequent step 2 references the result of step 1, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+        "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "The area of the parallelogram is 12 x 12 = 144 square cm.\n#### 144",
+        "transformed_answer": 144.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been completely removed. In the original_solution, step 1 states the formula for the area of a parallelogram and step 2 references both the base and the height from the question, multiplying them to find the area. Since we are deleting step 1, step 2 should still calculate the area but since we need a different answer, we reference the base for both the base and height, which is the largest number. Hence, we get 12 (base) x 12 (chosen number instead of the height) = 144 square cm. The calculation in step 2 after the transformation is using the incorrect formula but still internally consistent as a simple multiplication. It is the transformed step 1, which is also step 2 in the original_solution, that first references the incorrect number, in this case using the base (12) instead of the height (10). Thus, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 12 x 12 = 144 instead of 12 x 10 = 120. The subsequent step 2 references the result of step 1, outputting the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "There are 15 teams in a soccer league and each team plays each of the other teams once. How many games will be played in total?",
+        "original_solution": "The number of games played by one team is 15-1 = 14 because each team plays each of the other teams once.\nThe total number of games played is 15 x 14 / 2 = 105 because in a complete round-robin tournament, each team plays a game against every other team once.\n#### 105",
+        "original_answer": 105.0,
+        "transformed_solution": "The total number of games played is 15 x 15 / 2 = 112.5 because in a complete round-robin tournament, each team plays a game against every other team once, but here we erroneously count each team playing itself once.\n#### 112.5",
+        "transformed_answer": 112.5,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. In the original_solution, step 1 references the numbers 15 and 1 from the question and step 2 references the result 14 of step 1 to calculate the total number of games. After deleting step 1, the calculation in step 2 changes to directly use the number 15 from the question, mistakenly assuming each team plays itself once, without subtracting 1. Therefore, the formula has been adjusted from 15 x (15-1) / 2 to 15 x 15 / 2, yielding an incorrect total of 112.5 games. The wrong_step is 1 because it is the first step in the transformed_solution and references the incorrect assumption that each team plays itself once.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes a mistake in the calculation process, calculating 15 x 15 / 2 = 112.5 instead of 15 x 14 / 2 = 105. The subsequent step 2 references the result of step 1, outputting the final incorrect answer 112.5. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

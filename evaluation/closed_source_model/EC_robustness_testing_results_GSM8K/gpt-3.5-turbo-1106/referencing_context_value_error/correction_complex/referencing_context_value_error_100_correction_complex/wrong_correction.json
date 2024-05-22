@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Lionel walked 4 miles. Esther walked 975 yards and Niklaus walked 1287 feet. How many combined feet did the friends walk?",
+        "original_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 21120 + 2925 + 1287 = 25332 feet\nTogether the friends walked 25332 feet.\n#### 25332",
+        "original_answer": 25332.0,
+        "transformed_solution": "Lionel = 3 * 5280 = 15840 feet\nEsther = 975 * 3 = 2925 feet\nTogether = 15840 + 2925 + 1287 = 21052 feet\nTogether the friends walked 21052 feet.\n#### 21052",
+        "transformed_answer": 21052.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 4 in the question as 3 wrongly, and calculates 3 * 5280=15840 instead of 4 * 5280=21120. Its subsequent related step will be affected, calculating 15840 + 2925 + 1287=21052 instead of 21120 + 2925 + 1287=25332 in step 3. Please note that you should only consider one error, so step 2 still references 975 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "Lionel = 4 * 5280 = 21120 feet\nEsther = 975 / 3 = 325 yards = 975 feet\nNiklaus = 1287 feet\nTogether = 21120 + 975 + 1287 = 23382 feet\n",
+        "corrected_answer": 23382.0,
+        "corrected_explanation": "The solution incorrectly converts yards to feet and adds the distances together. The correct process should convert all distances to the same unit (feet) before adding them together."
+    },
+    {
+        "question": "In soccer, players receive yellow cards when they are cautioned and red cards when they are sent off. Coach Tim has a team of 11 players, 5 of them didn't receive cautions, the rest received one yellow card each. How many red cards would the whole team collect, knowing that each red card corresponds to 2 yellow cards?",
+        "original_solution": "In coach Tim's team, 5 out of 11 players did not receive any caution, so 11 - 5 = 6 players were cautioned.\nEach cautioned player received a yellow card, so all the cautioned players received 6 * 1 = 6 yellow cards.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 6 / 2 = 3 red cards.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "In coach Tim's team, 10 out of 11 players did not receive any caution, so 11 - 10 = 1 player was cautioned.\nEach cautioned player received a yellow card, so the cautioned player received 1 * 1 = 1 yellow card.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 1 / 2 = 0.5 red cards.\n#### 0.5",
+        "transformed_answer": 0.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 5 in the question as 10 wrongly, and calculates 11 - 10 = 1 instead of 11 - 5 = 6. Its subsequent related steps will be affected by the erroneous result but still be calculated correctly. Step 2 changes from 6 * 1 = 6 yellow cards to 1 * 1 = 1 yellow card, and step 3 changes from 6 / 2 = 3 red cards to 1 / 2 = 0.5 red cards. Please note that you should only consider one error, so step 2 and 3 still correctly calculate results based on the erroneous first step.",
+        "is_correct": "no",
+        "corrected_solution": "In coach Tim's team, 10 out of 11 players did not receive any caution, so 11 - 10 = 1 player was cautioned.\nEach cautioned player received a yellow card, so the cautioned player received 1 * 1 = 1 yellow card.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 1 / 2 = 0.5 red cards.\n#### 0.5",
+        "corrected_answer": 0.5,
+        "corrected_explanation": "The solution is incorrect because it incorrectly calculates the number of red cards. The correct calculation should be 5 (number of cautioned players) / 2 = 2.5, not 1 / 2 = 0.5."
+    },
+    {
+        "question": "A rival football team has won twice as many matches as the home team they will be playing did. If records show that the home team has won three matches, and each team drew four matches and lost none, how many matches have both teams played in total?",
+        "original_solution": "The rival team won twice as many as the home team who won 3 matches so they won 2*3 = 6 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 3+6+8 = 17 matches\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The rival team won twice as many as the home team who won 2 matches so they won 2*2 = 4 matches\nThey both drew 4 matches each for a total of 2*4 = 8 matches\nThe total number of matches played is 2+4+8 = 14 matches\n#### 14",
+        "transformed_answer": 14.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 3 in the question as 2 wrongly, and calculates 2*2=4 instead of 2*3=6. Its subsequent related step will be affected, calculating 2+4+8=14 instead of 3+6+8=17 in step 3. Please note that you should only consider one error, so step 2 still references 4 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "The rival team won twice as many as the home team who won 3 matches so they won 3*2 = 6 matches\nThey both drew 4 matches each for a total of 3*4 = 12 matches\nThe total number of matches played is 3+3+12 = 18 matches\n#### 18",
+        "corrected_answer": 18.0,
+        "corrected_explanation": "The solution incorrectly calculates the number of matches won by the rival team and the total number of matches played."
+    },
+    {
+        "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+        "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "Let k be the number of koi fish in the pond\n14-2*k=68\n2*k=68+14=82\n2k=82\nk=82/2=41\n#### 41",
+        "transformed_answer": 41.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly.",
+        "is_correct": "no",
+        "corrected_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n-2*k=64-14\n-2*k=50\nk=50/-2\nk=-25",
+        "corrected_answer": -25,
+        "corrected_explanation": "The original solution makes a mistake in the equation 14-2*k=68, it should be 14-2*k=64. Then the subsequent steps are incorrect, leading to the final incorrect answer."
+    }
+]

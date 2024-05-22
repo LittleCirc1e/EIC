@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Nora's mother tells her to go and pick oranges from their farm. She picks 80 oranges from one tree, 60 from another tree, and 120 from the third tree. What's the total number of oranges she picked?",
+        "original_solution": "After picking 80 oranges from the first tree and 60 oranges from the second tree, she has 80+60 = 140 oranges.\nWhen she adds 120 more oranges from the third tree, she has 140+120 = 260 oranges.\n#### 260",
+        "original_answer": 260.0,
+        "transformed_solution": "After picking 80 oranges from the first tree and 50 oranges from the second tree, she has 80+50 = 130 oranges.\nWhen she adds 120 more oranges from the third tree, she has 130+120 = 250 oranges.\n#### 250",
+        "transformed_answer": 250.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 60 in the question as 50 wrongly, and calculates 80+50=130 instead of 80+60=140. Its subsequent related step will be affected, calculating 130+120=250 instead of 140+120=260 in step 2. Please note that you should only consider one error, so step 2 still references 120 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes an error in referencing the number of oranges picked from the second tree. It erroneously references 50 instead of 60, causing the formula to calculate 80+50=130 instead of 80+60=140. This affects subsequent step 3 that references its result. Step 3 incorrectly calculates 130+120=250 instead of 140+120=260. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "There are 25 roses in a garden. There are 40 tulips. There are 35 daisies. What percentage of flowers are not roses?",
+        "original_solution": "There are 25+40+35=100 flowers total.\nThere are 40+35=75 flowers that are not roses.\nTherefore, (75/100)*100=75% of the flowers are not roses.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "There are 25+40+30=95 flowers total.\nThere are 40+30=70 flowers that are not roses.\nTherefore, (70/95)*100=73.68% of the flowers are not roses.\n#### 73.68",
+        "transformed_answer": 73.68,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 35 in the question as 30 wrongly, and calculates 25+40+30=95 instead of 25+40+35=100. Its subsequent related steps, step 2 and 3, will be affected. Step 2 changes from 40+35=75 to 40+30=70, and step 3 changes from (75/100)*100=75% to (70/95)*100=73.68%. Please note that you should only consider one error, so step 2 still references 40 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes an error in referencing the number of the question description <There are 35 daisies.>. It erroneously references 35 as 30, causing the formula to calculate 40+30=70 instead of 40+35=75. This affects subsequent step 4 that references its result. Step 4 incorrectly calculates (70/95)*100=73.68% instead of (75/95)*100=78.95%. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

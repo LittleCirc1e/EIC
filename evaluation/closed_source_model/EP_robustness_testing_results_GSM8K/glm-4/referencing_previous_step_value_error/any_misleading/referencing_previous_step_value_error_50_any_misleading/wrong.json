@@ -1,0 +1,30 @@
+[
+    {
+        "question": "There are 50 marbles in a box which has a mixture of white, red and blue marbles. There were originally 20 white marbles and an equal number of red and blue marbles. Jack removes a number of marbles equal to double the difference between the number of white marbles and the number of blue marbles. How many marbles are left in the box?",
+        "original_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 10 marbles\n10 marbles are removed to leave 50-10 = 40 marbles\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "20 of 50 marbles are white so there are 50-20 = 30 red and blue marbles\nThe number of red marbles and blue marbles is the same, so there are 30/2 = 15 of each color\nThe difference between the number of white marbles and blue marbles is 20-15 = 5\nDouble the difference is 5*2 = 16 marbles\n16 marbles are removed to leave 50-16 = 34 marbles\n#### 34",
+        "transformed_answer": 34.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 10 as 16 when doubling the difference between the number of white and blue marbles. It should be noted that step 3 in the transformed_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> should be the same as the step 3 in the original_solution <The difference between the number of white marbles and blue marbles is 20-15 = 5> and calculates its result 5 correctly. Step 4 is affected by the erroneous referencing and changes 5*2 = 10 to 5*2 = 16. The subsequent step 5, which is the only step affected by step 4, correctly calculates the new number of marbles left as 50-16 = 34. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly calculated the number of red and blue marbles, found the difference between the white and blue marbles, doubled it, and then subtracted that number from the total number of marbles to find the number of marbles left in the box."
+    },
+    {
+        "question": "Together Lily, David, and Bodhi collected 43 insects. Lily found 7 more than David. David found half of what Bodhi found. How many insects did Lily find?",
+        "original_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B + 7 = 43\n2B = 36\nB = 18 insects\nDavid = 18/2 = 9 insects\nLily = 9 + 7 = 16 insects\nLily found 16 insects.\n#### 16",
+        "original_answer": 16.0,
+        "transformed_solution": "Let B = the number of insects Bodhi collected\nDavid = B/2\nLily = B/2 + 7\nB + B/2 + 7 = 43\n2B + B = 36\nB = 12 insects\nDavid = 12/2 = 6 insects\nLily = 6 + 7 = 13 insects\nLily found 13 insects.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references B + B + 7 = 43 as B + B/2 + 7 = 43, changing 2B + 7 = 43 to 1.5B + 7 = 43 and as a result, changing the calculation in step 5 to 2B + B = 36 incorrectly. The subsequent steps 6, 7, and 8 are affected by this error and calculate new and erroneous values for B, David, and Lily, but still follow the correct calculation process based on the incorrect value. It should be noted that step 3 in the transformed_solution <B + B/2 + 7 = 43> is the point where the referencing error occurs, while the equivalent step 3 in the original_solution <B + B + 7 = 43> and its result 2B = 36 should remain unchanged, ensuring the error occurs only at the point of reference and that all calculations following the erroneous reference are internally consistent and correct.",
+        "label": "no",
+        "is_correct": "yes",
+        "any_explanation": "The student correctly set up the equations to represent the relationships between the number of insects found by each person and then accurately solved for the number of insects Lily found, which is 13."
+    }
+]

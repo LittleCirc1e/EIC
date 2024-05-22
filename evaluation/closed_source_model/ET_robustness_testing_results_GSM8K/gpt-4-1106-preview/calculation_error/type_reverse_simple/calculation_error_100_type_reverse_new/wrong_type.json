@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Wendy just started working at an Italian restaurant. She polished 50 small glasses and 10 more large glasses than small glasses. How many glasses did she polish?",
+        "original_solution": "She polished 50 + 10 = 60 large glasses.\nTherefore, Wendy polished 50 + 60 = 110 glasses.\n#### 110",
+        "original_answer": 110.0,
+        "transformed_solution": "She polished 50 + 10 = 70 large glasses.\nTherefore, Wendy polished 50 + 70 = 120 glasses.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the calculation in the first step is changed incorrectly from 50 + 10 = 60 to 50 + 10 = 70. This is a calculation error where the sum of 50 and 10 is wrongly taken as 70 instead of the correct 60. The subsequent step inherits this error, changing the sum from 50 + 60 = 110 to 50 + 70 = 120, thus affecting the result of the total calculation. This single error impacted the final result without changing any operands or operators from the original solution. The calculation within the subsequent step is correct, but it incorrectly uses the erroneous result from the previous step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is in calculating the number of large glasses. The solution incorrectly references the number of small glasses as the total number of large glasses, instead of adding 10 to the number of small glasses to find the correct number of large glasses."
+    },
+    {
+        "question": "John is very unfit and decides to work up to doing a push-up. He trains 5 days a week for them and starts with wall push-ups. He adds 1 rep a day and once he gets to 15 reps he will start training high elevation push-ups. and then low elevation push-ups, and finally floor push-ups. How many weeks will it take him to get to floor push-ups?",
+        "original_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=9 weeks\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "He needs to do 15*3=45 progressions\nThat will take 45/5=7 weeks\n#### 7",
+        "transformed_answer": 7.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution has a calculation error in step 2 where 45/5 is incorrectly calculated as 7 instead of 9. This is the only calculation error present, and hence there is a single error. The correct calculation should have yielded that it will take 9 weeks, not 7 weeks. The original equation of 45/5 remains unaltered, but the arithmetic calculation provided is incorrect.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution is missing the step of considering that John adds 1 rep each day, not starting at 15 reps for each type of push-up. He starts from 1 rep and adds 1 rep each day until he reaches 15 reps for wall push-ups, then starts over for high elevation push-ups, and again for low elevation push-ups. The calculation does not account for the cumulative nature of the progression."
+    },
+    {
+        "question": "The total number of lions in a park is twice the number of leopards in the same park. The number of elephants is half the combined number of lions and leopards. Calculate the total population of the three animals in the park if the number of lions is 200.",
+        "original_solution": "If there are 200 lions in the park, which is twice the number of leopards in the park, there are 200/2 = 100 leopards in the park.\nThe total population of lions and leopards in the park is 200 lions + 100 leopards = 300\nThe number of elephants in the park is 1/2 the total population of lions and leopards; thus, there are 300/2 = 150 elephants in the park.\nThere are a total of 150+300 = 450 animals in the park.\n#### 450",
+        "original_answer": 450,
+        "transformed_solution": "If there are 200 lions in the park, which is twice the number of leopards in the park, there are 200/2 = 100 leopards in the park.\nThe total population of lions and leopards in the park is 200 lions + 100 leopards = 300\nThe number of elephants in the park is 1/2 the total population of lions and leopards; thus, there are 300/2 = 100 elephants in the park.\nThere are a total of 100+300 = 400 animals in the park.\n#### 400",
+        "transformed_answer": 400,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the 300/2 calculation in step 3 has been incorrectly changed to 100 instead of 150. Subsequently, step 4 inherits the error from step 3, modifying the formula of the total number of animals from 150+300 = 450 to 100+300 = 400. The preceding steps 1 and 2 remain unaffected, along with their descriptions and calculations. The transformed answer becomes 400 instead of the original 450.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The final step incorrectly references the combined number of lions and leopards as 300 instead of adding the number of elephants to get the total population. The correct total should be 200 lions + 100 leopards + 150 elephants."
+    }
+]

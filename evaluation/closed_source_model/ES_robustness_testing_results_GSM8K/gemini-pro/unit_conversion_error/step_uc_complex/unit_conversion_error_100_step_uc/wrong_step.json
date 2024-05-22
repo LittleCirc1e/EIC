@@ -1,0 +1,72 @@
+[
+    {
+        "question": "To make 3 kilometers, Ben walked for 2 hours. Continuing at the same speed, how much time in minutes would it take him to travel 12 kilometers?",
+        "original_solution": "We have 12 km / 3 km = 4. So, the distance covered in 12 km is 4 times greater than 3 km. The time taken will also be 4 times greater.\nSo, 2 hours x 4 = 8 hours.\nWe convert the time to minutes: 8 hours * 60 minutes/hour = 480 minutes.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "We have 12 km / 3 km = 4. So, the distance covered in 12 km is 4 times greater than 3 km. The time taken will also be 4 times greater.\nSo, 2 hours x 4 = 8 hours.\nWe convert the time to minutes: 8 hours * 50 minutes/hour = 400 minutes.\n#### 400",
+        "transformed_answer": 400.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes an incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 8 hours * 60 minutes/hour = 480 minutes in the original_solution becoming 8 hours * 50 minutes/hour = 400 minutes in the transformed_solution. It should be noted that the error affects only the last conversion step, and the previous steps are unchanged, maintaining the consistency of the process as per the instructions provided.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 8 hours * 50 minutes/hour = 400 minutes instead of 8 hours * 60 minutes/hour = 480 minutes. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    },
+    {
+        "question": "It takes 1 hour for refrigerated dough to come to room temperature. It takes 15 minutes to shape the dough and 2 hours to proof. The bread takes 30 minutes to bake and 15 minutes to cool. If the bakery opens at 6:00 am, what is the latest time the head baker can make it to the store to start working?",
+        "original_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 60 minutes in 1 hour so that takes him 60/60 = 1 hour\nIn total it takes 3+1 = 4 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4 hours to prep then the latest the head baker can show up is 6-4 = 2:00 am\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 50 minutes in 1 hour so that takes him 60/50 = 1.2 hours\nIn total it takes 3+1.2 = 4.2 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4.2 hours to prep then the latest the head baker can show up is 6 - 4.2 = 1:48 am\n#### 1.8",
+        "transformed_answer": 1.8,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 'There are 60 minutes in 1 hour so that takes him 60/60 = 1 hour' in the original_solution becoming 'There are 50 minutes in 1 hour so that takes him 60/50 = 1.2 hours' in the transformed_solution. This affects the subsequent related step 4, which changes from 'In total it takes 3+1 = 4 hours' to 'In total it takes 3+1.2 = 4.2 hours'. And it also affects the final step, changing the latest starting time from 2:00 am to 1:48 am. It should be noted that you only need to consider one step of unit conversion error, the other calculation processes should remain correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 60/50=1.2 instead of 60/60=1. This affects step 6. Step 6 erroneously calculates 3+1.2=4.2 instead of 3+1=4. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    },
+    {
+        "question": "Tracy used a piece of wire 4 feet long to support tomato plants in the garden. The wire was cut into pieces 6 inches long. How many pieces did she obtain?",
+        "original_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 12 inches, the total length of the wire in inches was 12*4=48 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 48/6=8 pieces\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "If Tracy used a piece of wire 4 feet long, since 1 foot is equal to 10 inches, the total length of the wire in inches was 10*4=40 inches.\nSince the wire was cut into pieces 6 inches long, Tracy obtained 40/6=6.67 pieces\n#### 6.67",
+        "transformed_answer": 6.67,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 foot is wrongly equal to 10 inches instead of 12 inches, resulting in 12*4=48 inches in the original_solution becoming 10*4=40 inches in the transformed_solution. And it affects the subsequent related step 2, which changes from 48/6=8 pieces to 40/6=6.67 pieces. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 makes an incorrect unit conversion, mistakenly assuming that 1 foot has 10 inches instead of 12 inches, and wrongly calculates 10*4=40 instead of 12*4=48. This affects step 4. Step 4 erroneously calculates 40/6=6.67 instead of 48/6=8. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "If a bunny comes out of its burrow 3 times per minute, calculate the combined number of times 20 bunnies at the same pace will have come out of their burrows in 10 hours.",
+        "original_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 60 minutes, the bunny will come out of the hole 60*3=180 times.\nIn 10 hours, a bunny will come out of their hole 180*10=1800 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1800*20=36000 times.\n#### 36000",
+        "original_answer": 36000.0,
+        "transformed_solution": "If a bunny comes out of its hole three times in a minute, in an hour, with 50 minutes, the bunny will come out of the hole 50*3=150 times.\nIn 10 hours, a bunny will come out of their hole 150*10=1500 times.\nThe combined time that 20 bunnies coming out of their holes will have taken in 10 hours is 1500*20=30000 times.\n#### 30000",
+        "transformed_answer": 30000.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which assumes that there are 50 minutes in an hour instead of the correct 60 minutes. This results in a cascade of errors through the subsequent steps. The original_solution stating that a bunny will come out of the hole 60*3=180 times is transformed to 50*3=150 times. Consequently, the 10-hour total for one bunny changes from 180*10=1800 in the original_solution to 150*10=1500 in the transformed_solution. The final combined count for 20 bunnies then changes from 1800*20=36000 times to 1500*20=30000 times. It should be noted that only one step of unit conversion error is considered and the rest of calculation steps are kept consistent with the original solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 50*3=150 instead of 60*3=180. This affects steps 3 and 4. Step 3 erroneously calculates 150*10=1500 instead of 180*10=1800. Step 4 erroneously calculates 1500*20=30000 instead of 1800*20=36000. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "It takes 1 hour for refrigerated dough to come to room temperature. It takes 15 minutes to shape the dough and 2 hours to proof. The bread takes 30 minutes to bake and 15 minutes to cool. If the bakery opens at 6:00 am, what is the latest time the head baker can make it to the store to start working?",
+        "original_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 60 minutes in 1 hour so that takes him 60/60 = 1 hour\nIn total it takes 3+1 = 4 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4 hours to prep then the latest the head baker can show up is 6-4 = 2:00 am\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 50 minutes in 1 hour so that takes him 60/50 = 1.2 hours\nIn total it takes 3+1.2 = 4.2 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4.2 hours to prep then the latest the head baker can show up is 6-4.2 = 1:48 am\n#### 1.8",
+        "transformed_answer": 1.8,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 60/60 = 1 hour in the original_solution becoming 60/50 = 1.2 hours in the transformed_solution. And it affects the subsequent related step 4, where the total time changes from 3+1 = 4 hours to 3+1.2 = 4.2 hours, and the final step 5 where the latest time the head baker can show up changes from 6-4 = 2:00 am to approximately 6-4.2 = 1:48 am (converted from decimal to time format). It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 5,
+        "step_explanation": "Step 5 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 60/50=1.2 instead of 60/60=1. This affects step 6. Step 6 erroneously calculates 3+1.2=4.2 instead of 3+1=4. The first step to make a mistake, which is the root cause of the mistake, is step 5, so pred_wrong_step is 5."
+    }
+]

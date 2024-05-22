@@ -1,0 +1,72 @@
+[
+    {
+        "question": "A town is trying to clear litter from its streets. The council pays for adding 14 trash cans to the streets and also pays for adding twice as many trash cans to the back of stores. How many trash cans has the town paid for?",
+        "original_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nThe town has therefore added 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans.\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nBecause the council decided to add an extra 10% for future maintenance to the original number of street trash cans, the town has therefore added (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans.\n#### 43.4",
+        "transformed_answer": 43.4,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the council decided to add an extra 10% for future maintenance to the original number of street trash cans>, resulting in step 2 changing from 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans in the original_solution to (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans in the transformed_solution. The additional 10% of the street trash cans (which is 1.4) has been added to the original 14, making it 15.4 before adding the 28 trash cans at the back of stores. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 14 + 10% of 14 = 15.4 instead of 14 + 10% of 14 = 15.4. The subsequent step 4 references the result of step 3, calculating 15.4 + 28 = 43.4 instead of 15.4 + 28 = 43.4, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Hash has nine more than half as many toys as Bill has. If Bill has 60 toys, how many total toys do the boys have?",
+        "original_solution": "First we need to know what half of Bills toys are, 60 toys / 2 = 30 toys.\nHash has 9 toys + 30 toys = 39 toys.\nTogether the boys have 60 toys + 39 toys = 99 toys.\n#### 99",
+        "original_answer": 99.0,
+        "transformed_solution": "First we need to know what half of Bills toys are, 60 toys / 2 = 30 toys.\nHash has 9 toys + 30 toys = 39 toys. Assuming Hash found another 5 toys, Hash has 39 toys + 5 toys = 44 toys.\nTogether the boys have 60 toys + 44 toys = 104 toys.\n#### 104",
+        "transformed_answer": 104.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Assuming Hash found another 5 toys>, which results in step 2 changing from 9 toys + 30 toys = 39 toys in the original_solution to 39 toys + 5 toys = 44 toys in the transformed_solution. This added information affects the final total, changing the result from 60 toys + 39 toys = 99 toys to 60 toys + 44 toys = 104 toys. Therefore, the transformed_solution contains a single irrelevant information error and its calculation is affected by this new assumption.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 39 toys + 5 toys = 44 toys instead of 39 toys + 5 toys = 44 toys. The subsequent step 4 references the result of step 3, calculating 60 toys + 44 toys = 104 toys instead of 60 toys + 44 toys = 104 toys, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Marta was about to start the school year and needed to buy the necessary textbooks. She managed to buy five on sale, for $10 each. She had to order two textbooks online, which cost her a total of $40, and three she bought directly from the bookstore for a total of three times the cost of the online ordered books. How much in total did Martha spend on textbooks?",
+        "original_solution": "Marta bought five textbooks on sale, for a total of 5 * 10 = $50.\nThree textbooks from the bookstore had a cost of 3 * 40 = $120.\nThat means that Marta spent in total 50 + 40 + 120 = $210 on textbooks.\n#### 210",
+        "original_answer": 210.0,
+        "transformed_solution": "Marta bought five textbooks on sale for $10 each and also bought a pen for $5, for a total of 5 * 10 + 5 = $55.\nThree textbooks from the bookstore had a cost of 3 * 40 = $120.\nThat means that Marta spent in total 55 + 40 + 120 = $215 on textbooks and the pen.\n#### 215",
+        "transformed_answer": 215.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <and also bought a pen for $5>, resulting in step 1 changing from 5 * 10 = $50 in the original_solution to 5 * 10 + 5 = $55 in the transformed_solution. Its subsequent related step 3 is affected, changing from 50 + 40 + 120 = $210 to 55 + 40 + 120 = $215. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "Step 2 first makes a mistake in the calculation process, calculating 3 * 40 = $120 instead of 3 * 40 = $120. The subsequent step 3 references the result of step 2, calculating 55 + 40 + 120 = $215 instead of 55 + 40 + 120 = $215. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "Paul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?",
+        "original_solution": "The price of the juice was 2 * 2 = $4.\nSo in total he paid for his shopping 2 + 3 + 4 = $9.\nThat means he had 15 - 9 = $6 left.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "The price of the juice was 2 * 2 = $4.\nBecause he also bought snacks for $1, so in total he paid for his shopping 2 + 3 + 4 + 1 = $10.\nThat means he had 15 - 10 = $5 left.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because he also bought snacks for $1>, resulting in step 2 changing from 2 + 3 + 4 = $9 in the original_solution to 2 + 3 + 4 + 1 = $10 in the transformed_solution. Its subsequent related step 3 is affected, changing from 15 - 9 = $6 to 15 - 10 = $5. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 2 * 2 = $4 instead of 2 * 2 = $4. The subsequent step 4 references the result of step 3, calculating 2 + 3 + 4 + 1 = $10 instead of 2 + 3 + 4 + 1 = $11. The subsequent step 5 references the result of step 4, calculating 15 - 10 = $5 instead of 15 - 11 = $4, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Paul went to a shop to buy some groceries. He bought some bread for $2, butter for $3, and juice for two times the price of the bread. He had $15 for his shopping. How much money did Paul have left?",
+        "original_solution": "The price of the juice was 2 * 2 = $4.\nSo in total he paid for his shopping 2 + 3 + 4 = $9.\nThat means he had 15 - 9 = $6 left.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "The price of the juice was 2 * 2 = $4.\nBecause Paul also bought a chocolate bar for $1, which is not mentioned in the question, so in total he paid for his shopping 2 + 3 + 4 + 1 = $10.\nThat means he had 15 - 10 = $5 left.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because Paul also bought a chocolate bar for $1>, resulting in step 2 changing from 2 + 3 + 4 = $9 in the original_solution to 2 + 3 + 4 + 1 = $10 in the transformed_solution. The final result has changed from $6 left in the original_solution to $5 left in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 2 * 2 = $4 instead of 2 * 2 = $4. The subsequent step 4 references the result of step 3, calculating 2 + 3 + 4 + 1 = $10 instead of 2 + 3 + 4 + 1 = $11. The subsequent step 5 references the result of step 4, calculating 15 - 10 = $5 instead of 15 - 11 = $4, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

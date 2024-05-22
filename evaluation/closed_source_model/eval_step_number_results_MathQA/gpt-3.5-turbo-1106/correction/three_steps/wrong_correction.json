@@ -1,0 +1,47 @@
+[
+    {
+        "question": "If 89 / 99 = 0.898 , what is the 83 rd digit to the right of the decimal point of the fraction ?",
+        "original_solution": "The remainder when 89 is divided by 99 is 89.\n0.898 is equivalent to 898/1000.\nThe period of the decimal representation of 89/99 is 02, so the 83rd digit to the right of the decimal point is the same as the 83rd digit to the right of 898/1000 that is 89/99.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The remainder when 89 is divided by 99 is 89.\n0.898 is equivalent to 898/1000.\nThe period of the decimal representation of 89/99 is 02, so the 83rd digit to the right of the decimal point is the same as the 83rd digit to the right of 898/1000 that is 89/99.\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 3 by incorrectly stating that the 83rd digit to the right of the decimal point of 89/99 is 9 instead of 8. The period of the decimal representation of 89/99 is indeed 02, which means the sequence of digits repeats every 2 digits. Since 83 is an odd number, the 83rd digit would be the first digit in the repeating sequence, which is 8. However, the transformed solution incorrectly states that the 83rd digit is 9. This is the only error introduced, and it does not affect the previous steps.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": "0.090",
+        "corrected_explanation": "The correct approach is to find the decimal representation of 89/99, which is 0.898989... The period of the decimal representation is 02, so the 83rd digit to the right of the decimal point is the same as the 83rd digit to the right of 89/99, which is 0."
+    },
+    {
+        "question": "the price of an item is discounted 5 percent on day 1 of a sale. on day 2, the item is discounted another 5.00001 percent, and on day 3, it is discounted an additional 10 percent. the price of the item on day 3 is what percentage of the sale price on day 1?",
+        "original_solution": "The price on day 2 is 95% of the price on day 1 because 100% - 5% = 95%\nThe price on day 3 is 90% of the price on day 2 because 100% - 10% = 90%\nThe price on day 3 is 85.5% of the price on day 1 because 95% * 90% = 85.5%\n#### 85.5%",
+        "original_answer": 85.5,
+        "transformed_solution": "The price on day 2 is 95% of the price on day 1 because 100% - 5% = 95%\nThe price on day 3 is 90% of the price on day 2 because 100% - 10% = 90%\nThe price on day 3 is 85% of the price on day 1 because 95% * 90% = 85%\n#### 85%",
+        "transformed_answer": 85.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 95% * 90% as 85% instead of 85.5% in step 3, which is the last step and therefore has no impact on other steps. The previous steps 1 and 2 remain unchanged because they are not affected by the error in step 3. The transformed answer is different from the original answer as required.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": "72.25",
+        "corrected_explanation": "The correct process is to calculate the final price on day 3 by multiplying the discounts on each day: 100% - 5% = 95%, 95% - 5.00001% = 90.000005%, 90.000005% - 10% = 81%. So, the price on day 3 is 81% of the price on day 1, not 85%."
+    },
+    {
+        "question": "riya and priya set on a journey . riya moves eastward at a speed of 21 kmph and priya moves westward at a speed of 22 kmph . how far will be priya from riya after 60 minutes",
+        "original_solution": "Riya travels 21 km in 60 minutes because 21 x (60/60) = 21\nPriya travels 22 km in 60 minutes because 22 x (60/60) = 22\nThey are 43 km apart because 22 + 21 = 43\n#### 43",
+        "original_answer": 43.0,
+        "transformed_solution": "Riya travels 21 km in 60 minutes because 21 x (60/60) = 21\nPriya travels 22 km in 60 minutes because 22 x (60/60) = 20\nThey are 41 km apart because 21 + 20 = 41\n#### 41",
+        "transformed_answer": 41.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 22 x (60/60) as 20 instead of 22 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 22 + 21 = 43 to 21 + 20 = 41. It should be noted that you only need to pay attention to one calculation error, and the subsequent related steps to this wrong step will only inherit its error, which means the relevant numbers in the formula or language description inherit the error, but the calculation of the formula itself is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": "41.0",
+        "corrected_explanation": "The distance between Riya and Priya after 60 minutes is the sum of the distances they traveled in opposite directions, which is 21 + 22 = 43 km."
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "question": "On Saturdays and Sundays, Suzanne makes french toast for the family. She and her husband each have 1 whole slice and her daughters split 1 slice. She uses a thick sliced bread that comes 12 slices per loaf. Over 52 weeks, how many loaves of bread will she need to make french toast?",
+        "original_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast on Saturday and Sunday for a total of 3*2 = 6 slices per weekend\nIf she uses 6 slices per weekend then over 52 weeks she will have used 6*52 = 312 slices\nShe gets 12 slices per loaf and she needs 312 slices so she needs 312/12 = 26 loaves\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "She and her husband have 1 slice each and her children split 1 slice so that's 1+1+.5+.5 = 3 slices\nShe makes 3 pieces of french toast only on Saturday for a total of 3*1= 3 slices per weekend\nIf she uses 3 slices per weekend then over 52 weeks she will have used 3*52 = 156 slices\nShe gets 12 slices per loaf and she needs 156 slices so she needs 156/12 = 13 loaves\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 in the original_solution erroneously counts Saturday and Sunday as two days to make french toast instead of one day in the transformed_solution, resulting in 3*2=6 becoming 3*1=3. This change affects the subsequent step 3, which changes from 6*52=312 slices to 3*52=156 slices, and therefore step 4 now divides 156/12=13 instead of 312/12=26. Although the steps related to the counting of slices and division by loaf size remain correct, the initial counting assumption has been altered to create a counting error that propagates through the rest of the solution, leading to a different transformed_answer.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total number of slices needed per weekend, multiplies by the number of weekends in a year, and then divides by the number of slices per loaf to find the total number of loaves needed."
+    }
+]

@@ -1,0 +1,66 @@
+[
+    {
+        "question": "Calculate the sum of first 89 natural numbers.",
+        "original_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 89 natural numbers is 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005.\n#### 4005",
+        "original_answer": 4005.0,
+        "transformed_solution": "The sum of first n natural numbers is given by the formula n * (n + 1) / 2.\nSo, the sum of the first 80 natural numbers is 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240.\n#### 3240",
+        "transformed_answer": 3240.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 89 in the question as 80 wrongly, and calculates 80 * (80 + 1) / 2 = 80 * 81 / 2 = 3240 instead of 89 * (89 + 1) / 2 = 89 * 90 / 2 = 4005. Subsequent calculations apply this error but are otherwise correct. Step 1 still refers to the correct formula for the sum of natural numbers and is not affected by the referencing error.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step incorrectly references the number in the [Question] as 80 instead of 89, leading to the final wrong result."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 216.\n3x = 210.\nx = 70.\nThe three consecutive even numbers are 70, 72, and 74.\n#### 70, 72, 74",
+        "transformed_answer": [
+            70,
+            72,
+            74
+        ],
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 246 in the question as 216 wrongly, and calculates 3x + 6 = 216 instead of 3x + 6 = 246. Its subsequent related steps will be affected but still be calculated correctly, resulting in x = 70 and the three consecutive even numbers being 70, 72, and 74 instead of 80, 82, and 84. Please note that you should only consider one error, so all other steps that reference the number 246 still reference it correctly except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The error occurred in the step '3x + 6 = 216' where the equation should be '3x + 6 = 246' according to the given problem statement."
+    },
+    {
+        "question": "From a pack of 52 cards, 1 card is drawn at random. What is the probability that a jack, queen, or king is drawn?",
+        "original_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 52\nProbability = 12/52 = 3/13\n#### 3/13",
+        "original_answer": "3/13",
+        "transformed_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 50\nProbability = 12/50 = 6/25\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 52 in the question as 50 wrongly, and calculates the probability as 12/50 = 6/25 instead of 12/52 = 3/13. The related step that calculates the probability will be affected, using the erroneous 12/50 instead of 12/52 but will be calculated correctly from the erroneous result. Note that the mistake is only in step 3; all other references to 52 in the deck are correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step incorrectly states that there are 50 total possible outcomes, when in fact there are 52 cards in a deck, so the total possible outcomes should be 52. This error in referencing the number in the [Question] leads to the final wrong result."
+    },
+    {
+        "question": "If it is assumed that 50 percent of those who receive a questionnaire by mail will respond and 300 responses are needed, what is the minimum number of questionnaires that should be mailed?",
+        "original_solution": "Let x be the number of questionnaires mailed.\n0.50x = 300\nx = 300 / 0.50 = 600\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "Let x be the number of questionnaires mailed.\n0.60x = 300\nx = 300 / 0.60 = 500\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, and calculates 0.60x=300 instead of 0.50x=300. Its subsequent related step will be affected, calculating x = 300 / 0.60 = 500 instead of 300 / 0.50 = 600 in step 2. Please note that you should only consider one error, so step 2 still references 300 in the question correctly, only the incorrect percentage is carried over in the calculation.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The error is in referencing the number in the [Question]. The solution incorrectly assumes that 50 percent of those who receive a questionnaire by mail will respond, when in fact the question states that 50 percent will respond. This leads to the incorrect calculation of the minimum number of questionnaires that should be mailed."
+    }
+]

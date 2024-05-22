@@ -1,0 +1,30 @@
+[
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 x ? = 62976\n? = 62976 / 120\n#### 524",
+        "transformed_answer": 524.67,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the wrong step is the final division (step 2), where it incorrectly divides 62976 by 120 instead of 123, leading to a transformed answer of approximately 524.67. The original multiplication step (step 1) remains unaffected because it precedes the incorrect division. There is only one error introduced, so it is considered a single error, and the explanation summarizes the error introduced and its impact on the subsequent step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the number 120 instead of 123 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "A towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?",
+        "original_solution": "The area of the towel is decreased by 36% because 20% + 20% + (20% x 20%) = 36%\n#### 36%",
+        "original_answer": 36.0,
+        "transformed_solution": "The area of the towel is decreased by 44% because 20% + 20% + (20% x 20%) = 44%\n#### 44%",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "By randomly changing the calculation result of one step in the original_solution, the percentage decrease of area was incorrectly altered to 44% instead of the correct 36%. This was done by directly changing the total percentage value without modifying the operands or the operators. The subsequent related steps and the final transformed_answer are influenced by this new incorrect percentage.",
+        "is_correct": "no",
+        "pred_wrong_type": "confusing_formula_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 confuses the formula for calculating the percentage decrease in area with the formula for calculating the percentage decrease in length and breadth. The formula for calculating the percentage decrease in area should be (20% + 20%) + (20% * 20%) = 44%, while the formula for calculating the percentage decrease in length and breadth is 20% + 20% = 40%. Therefore, step 1 belongs to confusing_formula_error."
+    }
+]

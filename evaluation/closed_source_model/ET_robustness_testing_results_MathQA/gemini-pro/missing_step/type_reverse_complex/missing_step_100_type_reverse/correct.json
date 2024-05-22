@@ -1,0 +1,30 @@
+[
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 incorrectly calculates 15 * 25 as 25 instead of 375, which only results in an error in the result of the formula, so it belongs to calculation_error."
+    },
+    {
+        "question": "Sarah is driving to the airport. After driving at 50 miles per hour for one hour, she realizes that if she continues at that same average rate she will be an hour late for her flight. She then travels 100 miles per hour for the rest of the trip, and arrives 30 minutes before her flight departs. How many miles did she drive in all?",
+        "original_solution": "She drove 50 miles in the first hour because 50 x 1 = 50\nShe drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 200 miles in all because 50 + 150 = 200\n#### 200",
+        "original_answer": 200.0,
+        "transformed_solution": "She drove 150 miles in the second part of the trip because (1 + 1/2) x 100 = 150\nShe drove 150 miles in all because 0 + 150 = 150\n#### 150",
+        "transformed_answer": 150.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, the first step which calculates how far Sarah drove in the first hour has been removed. The original step 1 resulted in 50 miles. In the transformed_solution, step 2 which originally added 50 miles from step 1 to 150 miles from what was step 2 in the original_solution must now be corrected to add 0 to 150 miles, since step 1 has been removed. This results in a total distance driven of 150 miles, as stated in the transformed_solution. The deletion of step 1 removes the reference to the number of miles driven in the first hour from the solution, which leads to an incorrect calculation of the total distance driven and a wrong transformed_answer of 150 miles, which is different from the original_answer of 200 miles. Therefore, the wrong_step is the rewritten step 2 in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 2. Step 2 does not convert the time she drove at 100 miles per hour from hours to minutes, but directly adds up the distance she drove at 50 miles per hour (miles) and the distance she drove at 100 miles per hour (miles). So there is a missing step here to convert the time she drove at 100 miles per hour from hours to minutes, and this error belongs to missing_step. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    }
+]

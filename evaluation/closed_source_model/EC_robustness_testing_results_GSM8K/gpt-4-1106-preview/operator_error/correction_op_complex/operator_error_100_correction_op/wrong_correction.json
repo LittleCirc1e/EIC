@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Juan needs 10 half-gallons of milk to bake 40 cookies with. How many half-gallons of milk does Juan need to bake 200 dozen cookies?",
+        "original_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 40/10 = 4 cookies.\nIf one half-gallon of milk bakes 4 cookies. to bake 200 cookies, you'll need 200/4 = 50 half-gallons of milk\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 40*10 = 400 cookies.\nIf one half-gallon of milk bakes 400 cookies. to bake 200 dozen cookies (2400 cookies), you'll need 2400/400 = 6 half-gallons of milk\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the division in step 1 into multiplication, modifying 40/10 = 4 to 40*10 = 400. This affects the subsequent step where the quantity of milk required is calculated. Instead of dividing the number of cookies by the correct number of cookies baked per half-gallon, the number of cookies is divided by an incorrectly inflated amount due to the operator change. The calculation within the transformed solution is correct given the modified step, but the transformed solution yields a different answer from the original due to the change in the initial operator.",
+        "is_correct": "no",
+        "corrected_solution": "If 10 half-gallons of milk bake 40 cookies, then one half-gallon of milk bakes 40 / 10 = 4 cookies.\nIf one half-gallon of milk bakes 4 cookies, to bake 200 dozen cookies (2400 cookies), you'll need 2400 / 4 = 600 half-gallons of milk\n#### 600",
+        "corrected_answer": 600.0,
+        "corrected_explanation": "The operator in step 1 encounters an error, division should be used instead of multiplication. It miscalculates 40*10=400 instead of 40/10=4. This affects step 2 where the calculation should be 2400/4=600 instead of 2400/400=6."
+    },
+    {
+        "question": "Steve's new book sells 1,000,000 copies. He got an advance to pay for 100,000 copies. He gets $2 for each copy of the book sold. His agent takes 10% of that. How much money did he keep not counting the money from the advance?",
+        "original_solution": "He sold 1,000,000-100,000=900,000 not counting the advance\nSo he made 900,000*2=$1,800,000 from selling the books\nHis agent took 1,800,000*.1=$180,000\nThat means he kept 1,800,000-180,000=$1,620,000\n#### 1620000",
+        "original_answer": 1620000.0,
+        "transformed_solution": "He sold 1,000,000+100,000=1,100,000 not counting the advance\nSo he made 1,100,000*2=$2,200,000 from selling the books\nHis agent took 2,200,000*.1=$220,000\nThat means he kept 2,200,000-220,000=$1,980,000\n#### 1980000",
+        "transformed_answer": 1980000.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 1 into addition, and by changing - to +, 1,000,000-100,000=900,000 becomes 1,000,000+100,000=1,100,000. This affects the subsequent related step 2, 3, and 4. Step 2 changes from 900,000*2=$1,800,000 to 1,100,000*2=$2,200,000, step 3 changes from 1,800,000*.1=$180,000 to 2,200,000*.1=$220,000, and step 4 changes from 1,800,000-180,000=$1,620,000 to 2,200,000-220,000=$1,980,000. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "is_correct": "no",
+        "corrected_solution": "He sold 1,000,000 copies not counting the advance\nSo he made 1,000,000*2=$2,000,000 from selling the books\nHis agent took 2,000,000*.1=$200,000\nThat means he kept 2,000,000-200,000=$1,800,000\n#### 1800000",
+        "corrected_answer": 1800000.0,
+        "corrected_explanation": "The operator in step 1 encounters an error by adding the advance to the total sold copies. The advance for 100,000 copies should not be added to the 1,000,000 copies sold. This affects the calculation of the total money made and the subsequent steps. The correct calculation is based on the 1,000,000 copies actually sold."
+    },
+    {
+        "question": "A sixty bulb watt uses 60 watts of power each day. If Allyn has 40 such bulbs in his house and pays an electricity bill of twenty cents per power watt used, calculate Allyn's total monthly expenses on electricity in June.",
+        "original_solution": "If each bulb uses 60 watts each day, the 40 bulbs that Allyn has uses 60*40 = 2400 watts of power each day.\nIn June, with 30 days, the bulbs will use 30*2400 = 72000 watts of power.\nIf Allyn is charged an electricity bill of twenty cents per power watt used, in June she will pay 72000*$0.20 = $14400\n#### 14400",
+        "original_answer": 14400.0,
+        "transformed_solution": "If each bulb uses 60 watts each day, the 40 bulbs that Allyn has uses 60/40 = 1.5 watts of power each day.\nIn June, with 30 days, the bulbs will use 30*1.5 = 45 watts of power.\nIf Allyn is charged an electricity bill of twenty cents per power watt used, in June she will pay 45*$0.20 = $9\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the multiplication in step 1 into division, changing 60*40=2400 to 60/40=1.5 by changing * to /. Its subsequent step 2 related to it inherits its result, changing 30*2400=72000 to 30*1.5=45. It should be noted that step 1 only changes the operator of the formula, but still correctly calculates its result. Step 2 only inherits the result of step 1, but its calculation is correct.",
+        "is_correct": "no",
+        "corrected_solution": "If each bulb uses 60 watts each day, the 40 bulbs that Allyn has use 60*40 = 2400 watts of power each day.\nIn June, with 30 days, the bulbs will use 30*2400 = 72000 watts of power.\nSince 1 watt = 0.001 kilowatts and electricity is billed per kilowatt-hour, we convert watts to kilowatts by multiplying by 0.001, so 72000 watts = 72 kilowatts.\nIf Allyn is charged an electricity bill of twenty cents per power watt used, in June she will pay 72*$0.20 = $14.40\n#### 14.4",
+        "corrected_answer": 14.4,
+        "corrected_explanation": "The operator in step 1 encounters an error, division should be multiplication. It miscalculates 60/40=1.5 instead of 60*40=2400. This affects all subsequent steps. Step 2 should calculate 30*2400=72000, and step 3 should convert watts to kilowatts and calculate the cost based on kilowatts, not watts. The final step should calculate 72*$0.20=$14.40."
+    }
+]

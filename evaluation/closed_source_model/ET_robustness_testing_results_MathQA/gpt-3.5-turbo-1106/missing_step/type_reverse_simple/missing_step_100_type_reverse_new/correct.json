@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Of 70 players on a football team, 31 are throwers. The rest of the team is divided so one third are left-handed and the rest are right-handed. Assuming that all throwers are right-handed, how many right-handed players are there total?",
+        "original_solution": "There are 70-31 = 39 non-throwers.\nThere are 39/3 = 13 left-handed players.\nThere are 39 - 13 = 26 right-handed non-throwers.\nThere are 26 + 31 = 57 right-handed players in total.\n#### 57",
+        "original_answer": 57.0,
+        "transformed_solution": "There are 70/3 = 23 left-handed players.\nThere are 70 - 23 = 47 right-handed players in total.\n#### 47",
+        "transformed_answer": 47.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 of the original solution has been removed. Step 1 references the number 70 and 31 from the question, while step 2 references the result of step 1. Upon deletion of step 1, step 2 has been modified to directly reference the total number of players instead. However, the calculation in step 2 is incorrect because it should divide the number of non-throwers (70 - 31) rather than the total number of players. With step 1 missing, the calculation in the transformed solution incorrectly references the total number of players (70) when calculating left-handed players, which is incorrect because it omits subtracting the throwers (70 - 31) first. Following the instructions, I chose to use only the calculation involving the total number of players, but since we are removing the first step, this leads to an incorrect calculation for left-handed and consequently, right-handed players. The number of left-handed players is incorrectly calculated as 70/3 instead of (70 - 31)/3. The total right-handed players are calculated using this incorrect number, resulting in step 2 referencing an incorrect figure from the modified step 1. Therefore, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The solution is incorrect because it fails to account for the 31 throwers who are all assumed to be right-handed. The missing step is to subtract the 31 throwers from the total number of right-handed players, resulting in 47 - 31 = 16 right-handed players."
+    },
+    {
+        "question": "a and b finish the job in 15 days. while a, b and c can finish it in 3 days. c alone will finish the job in",
+        "original_solution": "a and b finish 1/15 of the job in 1 day\na, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 5/15 - 1/15 = 4/15 of the job in 1 day\nc alone will finish the job in 15/4 = 3.75 days\n#### 3.75",
+        "original_answer": 3.75,
+        "transformed_solution": "a, b, and c together finish 1/3 of the job in 1 day\nc alone finish 1/3 - 1/15 = 2/15 of the job in 1 day\nc alone will finish the job in 15/2 = 7.5 days\n#### 7.5",
+        "transformed_answer": 7.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution has been removed, assuming that it referenced directly from the question that a and b together finish the job in 15 days. After deleting the first step, the immediate next step becomes step 1 (previously step 2) and references directly the efficiency of a and b from the question. However, a mistake occurred in the calculation in the new step 2 (previously step 3) where 1/3 - 1/15 was incorrectly simplified as 2/15 instead of 4/15. This is an intentional calculation error. The final step is then adjusted to reflect this error, with the number of days c needs to finish the job alone being recalculated to 15/2 days, which results in a transformed answer of 7.5 days. The first step in the transformed solution that references the result of the deleted step is step 2, so the wrong_step is 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The error occurred in the calculation of the time it takes for c alone to finish the job. The calculation of 1/3 - 1/15 = 2/15 is incorrect, leading to the final wrong result of 7.5 days."
+    },
+    {
+        "question": "a certain car increased its average speed by 5 miles per hour in each successive 5 - minute interval after the first interval. if in the first 5 - minute interval its average speed was 2 miles per hour, how many miles did the car travel in the third 5 - minute interval?",
+        "original_solution": "The speed in the third interval is 2 + (5 * 2) = 12 miles per hour\nThe distance traveled in the third interval is 12 * (5 / 60) = 1 mile\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The distance traveled in the third interval is (2 + 5 * 2) * (5 / 60) = 2 miles\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the first step has been omitted, and its calculations wrongly incorporated into a single transformed step. The increase in speed after two intervals (which should be 2 + 5 * 2 = 12 miles per hour) is correctly calculated, but the multiplication by the fraction representing 5 minutes in an hour (5/60) is incorrectly done. Due to this, the distance traveled in the third interval equation changes to (2 + 5 * 2) * (5 / 60) in the transformed_solution. Since the omission has led to a calculation error in the combined single step, the wrong_step is 1. The transformed answer of 2 miles is incorrect as the actual distance traveled in the third 5-minute interval should be 1 mile.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step involves a calculation error in the formula for finding the distance traveled in the third interval. The correct formula should be (2 + 5 * 2) * (5 / 60) = 2.5 miles, not 2 miles."
+    },
+    {
+        "question": "Resolve the given sequence: 23 , 29 , 31 , 37 , 41 , 43 , 47 , 53 , 59 , ( . . . )",
+        "original_solution": "The sequence represents prime numbers.\nThe next prime number after 59 is 61.\n#### 61",
+        "original_answer": 61,
+        "transformed_solution": "The next prime number after 59 is 63.\n#### 63",
+        "transformed_answer": 63,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The modified transformed_solution incorrectly assumes that 63 is the next prime number after 59. Since intermediate step 1 (identifying the sequence as a prime number sequence) has been deleted, step 2 should directly state the next prime number after 59. However, instead of correctly identifying 61 as the next prime number, it incorrectly states 63, which is not a prime number. Consequently, the subsequent answer is also incorrect. Step 1 in the transformed_solution references the wrong number and therefore is considered the wrong step.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step involves a calculation error, as 63 is not the next prime number after 59. The correct next prime number after 59 is 61."
+    }
+]

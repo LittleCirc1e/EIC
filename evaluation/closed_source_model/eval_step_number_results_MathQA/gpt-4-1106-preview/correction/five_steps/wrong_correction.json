@@ -1,0 +1,62 @@
+[
+    {
+        "question": "from an island, it is possible to reach the mainland by either ferry p or ferry q. ferry p travels for 3 hours at 8 kilometers per hour, while ferry q takes a route that is two times longer. if ferry p is slower than ferry q by 4 kilometers per hour, how many hours longer is the journey of ferry q compared with the journey of ferry p?",
+        "original_solution": "The distance traveled by ferry p is 3 x 8 = 24 kilometers.\nThe speed of ferry q is 8 + 4 = 12 kilometers per hour.\nThe distance traveled by ferry q is 24 x 2 = 48 kilometers.\nThe time taken by ferry q is 48 / 12 = 4 hours.\nThe time difference is 4 - 3 = 1 hour longer for ferry q compared to ferry p.\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "The distance traveled by ferry p is 3 x 8 = 24 kilometers.\nThe speed of ferry q is 8 + 4 = 12 kilometers per hour.\nThe distance traveled by ferry q is 24 x 2 = 48 kilometers.\nThe time taken by ferry q is 48 / 12 = 3 hours.\nThe time difference is 3 - 3 = 0 hours longer for ferry q compared to ferry p.\n#### 0",
+        "transformed_answer": 0.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation of 48 / 12 in step 4 is incorrectly given as 3 hours instead of the correct 4 hours. This error affects the final step, which calculates the time difference based on the incorrect time taken by ferry q. The previous steps remain unchanged because they are not dependent on the erroneous step 4. The final step is modified from 4 - 3 = 1 hour to 3 - 3 = 0 hours, reflecting the inherited error from step 4.",
+        "is_correct": "no",
+        "corrected_solution": "The distance traveled by ferry p is 3 x 8 = 24 kilometers.\nThe speed of ferry q is 8 - 4 = 4 kilometers per hour.\nThe distance traveled by ferry q is 24 x 2 = 48 kilometers.\nThe time taken by ferry q is 48 / 4 = 12 hours.\nThe time difference is 12 - 3 = 9 hours longer for ferry q compared to ferry p.",
+        "corrected_answer": 9.0,
+        "corrected_explanation": "The speed of ferry q should be 4 kilometers per hour slower than ferry p, not faster. Therefore, the speed of ferry q is 8 - 4 = 4 kilometers per hour. The rest of the calculation follows from this corrected speed."
+    },
+    {
+        "question": "a sum of money deposited at c . i . amounts to rs . 2420 in 2 years and to rs . 2783 in 3 years . find the rate percent ?",
+        "original_solution": "The interest for the third year is 2783 - 2420 = 363\nThe interest for the first 2 years is 2420\nThe interest for 1 year is 363\nThe annual interest rate is 363 / 2420 = 0.15\nThe annual interest rate as a percentage is 0.15 x 100 = 15%\n#### 15%",
+        "original_answer": 0.15,
+        "transformed_solution": "The interest for the third year is 2783 - 2420 = 363\nThe interest for the first 2 years is 2420\nThe interest for 1 year is 363\nThe annual interest rate is 363 / 2420 = 0.14\nThe annual interest rate as a percentage is 0.14 x 100 = 14%\n#### 14%",
+        "transformed_answer": "14%",
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation of 363 / 2420 in step 4 is incorrectly given as 0.14 instead of the correct 0.15. This error is then carried forward to step 5, where the incorrect interest rate of 0.14 is multiplied by 100 to give a transformed answer of 14% instead of the correct 15%. The previous steps remain unaffected by this error, and the calculation error is only present in step 4, with the subsequent step 5 inheriting this error.",
+        "is_correct": "no",
+        "corrected_solution": "The interest for the third year is 2783 - 2420 = 363\nThe principal amount is the amount before the last interest was added, so it is 2420 - 363 = 2057\nThe interest for 1 year is 363\nThe annual interest rate is 363 / 2057\nThe annual interest rate as a percentage is (363 / 2057) x 100",
+        "corrected_answer": 17.65,
+        "corrected_explanation": "The solution incorrectly assumes that the interest for the first 2 years is the same as the principal, which is not correct in compound interest. The principal should be calculated by subtracting the third year's interest from the total amount after 2 years. Then, the annual interest rate is calculated by dividing the interest of the third year by the principal and converting it to a percentage."
+    },
+    {
+        "question": "circular gears l and r start to rotate at the same time at the same rate. gear l makes 20 complete revolutions per minute and gear r makes 40 revolutions per minute. how many seconds after the gears start to rotate will gear r have made exactly 6 more revolutions than gear l?",
+        "original_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 60 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 60/10 = 6 seconds\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "In one minute, gear l makes 20*60 = 1200 revolutions\nIn one minute, gear r makes 40*60 = 2400 revolutions\nIn one minute, gear r makes 2400-1200 = 1200 more revolutions than gear l\nIn one minute, gear r makes 1200/20 = 60 more revolutions than gear l\nGear r will make exactly 6 more revolutions than gear l in 60/6 = 10 seconds\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 60/6=10 seconds instead of 60/10=6 seconds in step 5, which is the last step and therefore has no impact on other steps.",
+        "is_correct": "no",
+        "corrected_solution": "In one minute, gear l makes 20 revolutions\nIn one minute, gear r makes 40 revolutions\nIn one minute, gear r makes 40-20 = 20 more revolutions than gear l\nTo make 6 more revolutions, gear r needs 6/20 minutes\nSince 1 minute is 60 seconds, gear r will make 6 more revolutions in (6/20)*60 seconds\nTherefore, gear r will make exactly 6 more revolutions than gear l in 18 seconds",
+        "corrected_answer": 18.0,
+        "corrected_explanation": "The solution incorrectly calculated the number of revolutions per minute as revolutions per second. The correct approach is to find the difference in revolutions per minute between the two gears and then calculate the time it takes for gear r to make 6 more revolutions than gear l."
+    },
+    {
+        "question": "if 9 a - b = 10 b + 80 = - 12 b - 2 a , what is the value of 2 a + 22 b ?",
+        "original_solution": "9a - b = 10b + 80\n-2a - 12b = 10b + 80\n-2a - 12b = 10b + 80\n-2a - 22b = 80\n2a + 22b = -80\n#### -80",
+        "original_answer": -80.0,
+        "transformed_solution": "9a - b = 10b + 80\n-2a - 12b = 10b + 80\n-2a - 12b = 10b + 80\n-2a - 22b = 70\n2a + 22b = -70\n#### -70",
+        "transformed_answer": -70.0,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error is introduced in step 4 by changing the sum from 80 to 70 without altering any operands or operators. This error then carries through to step 5, which uses the result of step 4. The previous steps remain unaffected because they do not depend on the result of step 4. The transformed answer is -70, which is different from the original answer of -80.",
+        "is_correct": "no",
+        "corrected_solution": "9a - b = 10b + 80\n-12b - 2a = 9a - b\nAdding the two equations: 9a - b - 12b - 2a = 10b + 80 + 9a - b\n7a - 13b = 10b + 80\n7a = 23b + 80\nNow, we need to find the value of 2a + 22b:\n2a + 22b = 2(7a)/7 + 22b = 2(23b + 80)/7 + 22b = 46b/7 + 160/7 + 22b = (46b + 154b)/7 + 160/7 = 200b/7 + 160/7 = 200b/7 + 1120/7 = (200b + 1120)/7\nSince we do not have the individual values of a and b, we cannot simplify further without additional information.",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution provided incorrectly combines the equations. The correct process is to add the two equations together to eliminate a or b and then solve for the remaining variable. However, without additional information or another equation, we cannot find the exact numerical value of 2a + 22b."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "question": "If it takes a machine 2 ⁄ 3 minute to produce one item, how many items will it produce in 1 hour?",
+        "original_solution": "First, convert 1 hour to minutes: 1 hour * 60 minutes per hour = 60 minutes.\nThen, divide 60 minutes by 2/3 minutes per item: 60 / (2/3) = 60 * (3/2) = 90.\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "First, convert 1 hour to minutes: 1 hour * 50 minutes per hour = 50 minutes.\nThen, divide 50 minutes by 2/3 minutes per item: 50 / (2/3) = 50 * (3/2) = 75.\n#### 75",
+        "transformed_answer": 75.0,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, which means 1 hour is wrongly taken to have 50 minutes instead of 60 minutes, resulting in 1 hour * 60 minutes per hour = 60 minutes in the original_solution becoming 1 hour * 50 minutes per hour = 50 minutes in the transformed_solution. And it affects the subsequent related step 2, which changes from 60 / (2/3) = 90 to 50 / (2/3) = 75. It should be noted that only one step of unit conversion error is introduced, so other steps should remain unaffected.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 1 hour * 50 minutes per hour = 50 minutes instead of 1 hour * 60 minutes per hour = 60 minutes. This affects steps 2 and 3. Step 2 erroneously calculates 50 / (2/3) = 50 * (3/2) = 75 instead of 60 / (2/3) = 60 * (3/2) = 90. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "two watches are set for an alarm at 10 0 ' clock in the night . one watch gains 2 minutes per hour . when the faster watch shows 4 : 12 in the morning when the alarm rings what does the correct watch show ?",
+        "original_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 12 minutes = 4:00.\n#### 4:00",
+        "original_answer": "4:00",
+        "transformed_solution": "From 10:00 at night to 4:12 in the morning, there is a total of 6 hours and 12 minutes.\nThe faster watch gains 2 minutes per hour, so it gains a total of 2 * 6 = 12 minutes over this time period.\nTo calculate the incorrect conversion, we'll say the faster watch gains 3 minutes per hour instead of 2. So the incorrect gain is 3 * 6 = 18 minutes.\nWhen the correct time is 4:12, the faster watch actually shows 4:12 - 18 minutes = 3:54.\n#### 3:54",
+        "transformed_answer": "3:54",
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, the error was introduced at step 3 where the watch's gain per hour was incorrectly increased from 2 minutes to 3 minutes per hour. This affects the calculation of the total gain over 6 hours, leading to the transformed_solution showing the incorrect time of 3:54 instead of 4:00. Since we are only making one incorrect unit conversion, the rest of the solution remains based on the original correct steps. The incorrect gain affects only the final result.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 makes an incorrect unit conversion, mistakenly assuming that the faster watch gains 3 minutes per hour instead of 2 minutes per hour, and wrongly calculates 3 * 6 = 18 minutes instead of 2 * 6 = 12 minutes. This affects step 4. Step 4 erroneously calculates 4:12 - 18 minutes = 3:54 instead of 4:12 - 12 minutes = 4:00. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "If it takes a machine 1 ⁄ 3 minute to produce one item, how many items will it produce in 2 hours?",
+        "original_solution": "First, we need to convert 2 hours to minutes: 2 hours * 60 minutes/hour = 120 minutes.\nNext, we divide the total time in minutes by the time it takes to produce one item: 120 minutes / (1/3) minutes/item = 120 / (1/3) = 120 * 3 = 360 items.\n#### 360",
+        "original_answer": 360,
+        "transformed_solution": "First, we need to convert 2 hours to minutes: 2 hours * 50 minutes/hour = 100 minutes.\nNext, we divide the total time in minutes by the time it takes to produce one item: 100 minutes / (1/3) minutes/item = 100 / (1/3) = 100 * 3 = 300 items.\n#### 300",
+        "transformed_answer": 300,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes incorrect unit conversion, which means 1 hour is wrongly equal to 50 minutes instead of 60 minutes, resulting in 2 hours * 60 minutes/hour = 120 minutes in the original_solution becoming 2 hours * 50 minutes/hour = 100 minutes in the transformed_solution. And it affects the subsequent related step 2, which changes from 120 minutes / (1/3) minutes/item = 120 * 3 = 360 items to 100 minutes / (1/3) minutes/item = 100 * 3 = 300 items. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 2 hours * 50 minutes/hour=100 minutes instead of 2 hours * 60 minutes/hour=120 minutes. This affects steps 2 and 3. Step 2 erroneously calculates 100 minutes / (1/3) minutes/item=100 / (1/3) instead of 120 minutes / (1/3) minutes/item=120 / (1/3). Step 3 erroneously calculates 100 * 3=300 instead of 120 * 3=360. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "What percent is 2 minutes 24 seconds of an hour?",
+        "original_solution": "First, convert 2 minutes 24 seconds to seconds: 2 * 60 + 24 = 144 seconds.\nNext, calculate the percent: (144 seconds / 3600 seconds) * 100 = 4%.\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "First, convert 2 minutes 24 seconds to seconds: 2 * 50 + 24 = 124 seconds.\nNext, calculate the percent: (124 seconds / 3600 seconds) * 100 = 3.444...%.\n#### 3.444",
+        "transformed_answer": 3.444,
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, which means that for the transformation 1 minute is wrongly equal to 50 seconds instead of 60 seconds, resulting in the original conversion 2 * 60 + 24 = 144 seconds becoming 2 * 50 + 24 = 124 seconds in the transformed_solution. And it affects the subsequent related step 2, which changes from (144 seconds / 3600 seconds) * 100 = 4% to (124 seconds / 3600 seconds) * 100 = 3.444...%. It should be noted that you only need to consider one step of unit conversion error, so the subsequent step 2 and the related calculations are affected, without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 makes an incorrect unit conversion, mistakenly assuming that 1 minute has 50 seconds instead of 60 seconds, and wrongly calculates 2 * 50 + 24 = 124 instead of 2 * 60 + 24 = 144. This affects step 2. Step 2 erroneously calculates (124 seconds / 3600 seconds) * 100 = 3.444...% instead of (144 seconds / 3600 seconds) * 100 = 4%. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "What is the ratio of 12 minutes to 1 hour?",
+        "original_solution": "Since there are 60 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/60 = 1/5.\n#### 1/5",
+        "original_answer": "1/5",
+        "transformed_solution": "Since there are 50 minutes in an hour, the ratio of 12 minutes to 1 hour is 12/50 = 6/25.\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 1,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 makes an incorrect unit conversion, stating there are 50 minutes in an hour instead of the correct 60 minutes. This error affects the ratio calculation, changing the correct ratio of 12 minutes to 1 hour from 12/60 = 1/5 to an incorrect value of 12/50 = 6/25 in the transformed_solution. It should be noted that only one step of unit conversion error is considered, and subsequent steps that are directly affected by the error are adjusted accordingly without affecting the previous or unrelated steps.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 makes an incorrect unit conversion, mistakenly assuming that there are 50 minutes in an hour instead of 60 minutes, and wrongly calculates 12/50 instead of 12/60. This affects the final result. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

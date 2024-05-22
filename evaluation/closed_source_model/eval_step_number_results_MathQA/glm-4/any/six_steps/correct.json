@@ -1,0 +1,93 @@
+[
+    {
+        "question": "a shopkeeper has 280 kg of apples. he sells 85 % of these at 20 % profit and remaining 60 % at 30 % profit. find his % profit on total.",
+        "original_solution": "He sells 238 kg of apples at 20% profit because 280 x .85 = 238\nHe sells 168 kg of apples at 30% profit because 280 x .6 = 168\nHe makes $47.6 profit on the first set because 238 x .2 = 47.6\nHe makes $50.4 profit on the second set because 168 x .3 = 50.4\nHe makes $98 profit in total because 47.6 + 50.4 = 98\nHis total profit percentage is 35% because 98 / 280 = .35\n#### 35%",
+        "original_answer": "35%",
+        "transformed_solution": "He sells 238 kg of apples at 20% profit because 280 x .85 = 238\nHe sells 168 kg of apples at 30% profit because 280 x .6 = 168\nHe makes $47.6 profit on the first set because 238 x .2 = 47.6\nHe makes $50.4 profit on the second set because 168 x .3 = 50.4\nHe makes $100 profit in total because 47.6 + 50.4 = 100\nHis total profit percentage is 35.7% because 100 / 280 = .357\n#### 35.7%",
+        "transformed_answer": "35.7%",
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the total profit as $100 instead of $98 in step 5, which affects the final step 6. The calculation of 47.6 + 50.4 should result in 98, but it is incorrectly stated as 100. The subsequent step 6 then inherits this error, modifying the calculation of the total profit percentage from 98 / 280 = .35 to 100 / 280 = .357. The previous steps 1, 2, 3, and 4 remain unchanged as they are not affected by the error introduced in step 5.",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the profit on the first set of apples is incorrect, as it does not account for the cost of the apples. Similarly, the profit calculation for the second set is also incorrect. The total profit percentage is incorrectly calculated by dividing the total profit by the initial amount of apples rather than the total cost of the apples sold."
+    },
+    {
+        "question": "a line that passes through ( – 2 , – 4 ) and ( 3 , k ) has a slope = k . what is the value of k ?",
+        "original_solution": "Use the formula for slope: (y2 - y1) / (x2 - x1) = k\nPlug in the given points: (-4 - k) / (-2 - 3) = k\nSolve for k: (-4 - k) / -5 = k\nMultiply both sides by -5: -4 - k = -5k\nAdd k to both sides: -4 = -4k\nDivide by -4: k = 1\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "Use the formula for slope: (y2 - y1) / (x2 - x1) = k\nPlug in the given points: (-4 - k) / (-2 - 3) = k\nSolve for k: (-4 - k) / -5 = k\nMultiply both sides by -5: -4 - k = -5k\nAdd k to both sides: -4 = -5k\nDivide by -5: k = 0.8\n#### 0.8",
+        "transformed_answer": 0.8,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly changes the equation from -4 = -4k to -4 = -5k in step 5, which affects the subsequent step 6. The correct step 5 should be -4 = -4k, but the error changes it to -4 = -5k. The subsequent step 6 then incorrectly solves for k using the erroneous equation, resulting in k = 0.8 instead of the correct k = 1. The previous steps 1 through 4 remain unchanged as they are not affected by the error introduced in step 5.",
+        "is_correct": "no",
+        "any_explanation": "The calculation in the solution is incorrect. The correct calculation should be: (-4 - k) / (-2 - 3) = k, which simplifies to (-4 - k) / -5 = k. Multiplying through by -5 gives: -4 + k = 5k. Subtracting k and adding 4 to both sides gives: 4 = 4k, and dividing by 4 gives k = 1, not 0.8."
+    },
+    {
+        "question": "the sum of four consecutive even numbers is 292 . what would be the largest number ?",
+        "original_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 280\nx = 70\nThe largest number is 70+6 = 76\n#### 76",
+        "original_answer": 76.0,
+        "transformed_solution": "Let the numbers be x, x+2, x+4, and x+6\nThe sum is x + (x+2) + (x+4) + (x+6) = 4x + 12\n4x + 12 = 292\n4x = 290\nx = 72.5\nThe largest number is 72.5+6 = 78.5\n#### 78.5",
+        "transformed_answer": 78.5,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation error is introduced in step 4 where the correct subtraction 292 - 12 = 280 is mistakenly calculated as 292 - 12 = 290. This error affects the value of x, which is incorrectly calculated as 72.5 instead of 70. Consequently, the largest number, which is x+6, is incorrectly calculated as 78.5 instead of 76. The steps before the error remain unchanged, and the steps after the error inherit the wrong result from step 4, but the calculations within each step are still performed correctly.",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly assumes that the even numbers can be represented by x, x+2, x+4, and x+6 where x is a decimal, but the problem states that the numbers are consecutive even integers, which means x must also be an integer."
+    },
+    {
+        "question": "if xy > 0 , 1 / x + 1 / y = 6 , and 1 / xy = 12 , then ( x + y ) / 6 = ?",
+        "original_solution": "1/x + 1/y = 6 can be rewritten as (x + y) / xy = 6\n1/xy = 12 can be rewritten as xy = 1/12\nSubstitute xy = 1/12 into the first equation: (x + y) / (1/12) = 6\nThis simplifies to (x + y) * 12 = 6\nDivide both sides by 6 to solve for (x + y): (x + y) = 6 / 12\n(x + y) = 1/2\n#### 1/2",
+        "original_answer": 0.5,
+        "transformed_solution": "1/x + 1/y = 6 can be rewritten as (x + y) / xy = 6\n1/xy = 12 can be rewritten as xy = 1/12\nSubstitute xy = 1/12 into the first equation: (x + y) / (1/12) = 6\nThis simplifies to (x + y) * 12 = 72\nDivide both sides by 6 to solve for (x + y): (x + y) = 72 / 6\n(x + y) = 12\n#### 12",
+        "transformed_answer": 12,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 4 of the original solution by changing the result of the equation (x + y) * 12 from 6 to 72, which is incorrect. This error then propagates to step 5, where the incorrect value of 72 is divided by 6, yielding an incorrect result of (x + y) = 12 instead of the correct (x + y) = 1/2. The previous steps remain unaffected by this error.",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculates the value of xy. It states that 1/xy = 12, which means xy = 1/12. However, the correct calculation should be xy = 1/6 because 1/x + 1/y = 6 can be rewritten as (x + y) / xy = 6, and therefore 1/xy = 6, not 12. The rest of the calculations are based on this incorrect value for xy."
+    },
+    {
+        "question": "What is the total surface area in square meters of a rectangular solid whose length is 6 meters, width is 5 meters, and depth is 2 meters?",
+        "original_solution": "Calculate the area of the six faces: \nArea of the front and back faces = 2 x (length x width) = 2 x (6 x 5) = 60 square meters\nArea of the top and bottom faces = 2 x (length x depth) = 2 x (6 x 2) = 24 square meters\nArea of the left and right faces = 2 x (width x depth) = 2 x (5 x 2) = 20 square meters\nAdd the areas of all six faces together: \nTotal surface area = 60 + 24 + 20 = 104 square meters\n#### 104",
+        "original_answer": 104.0,
+        "transformed_solution": "Calculate the area of the six faces: \nArea of the front and back faces = 2 x (length x width) = 2 x (6 x 5) = 60 square meters\nArea of the top and bottom faces = 2 x (length x depth) = 2 x (6 x 2) = 24 square meters\nArea of the left and right faces = 2 x (width x depth) = 2 x (5 x 2) = 22 square meters\nAdd the areas of all six faces together: \nTotal surface area = 60 + 24 + 22 = 106 square meters\n#### 106",
+        "transformed_answer": 106.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 3, where the area of the left and right faces was incorrectly calculated as 2 x (5 x 2) = 22 square meters instead of the correct 20 square meters. This error then affected the final step, where the total surface area was incorrectly summed up to 106 square meters instead of the correct 104 square meters. The previous steps and their calculations remain unchanged, as the error only affects the subsequent related steps.",
+        "is_correct": "no",
+        "any_explanation": "The calculation for the area of the left and right faces is incorrect. It should be 2 x (width x depth) = 2 x (5 x 2) = 20 square meters, not 22 square meters. The correct total surface area should be 60 + 24 + 20 = 104 square meters, not 106 square meters."
+    },
+    {
+        "question": "the l . c . m . of two numbers is 54 . the numbers are in the ratio 2 : 3 . then sum of the number is :",
+        "original_solution": "The numbers are 2x and 3x because they are in the ratio 2:3.\nThe LCM of 2x and 3x is 6x because LCM(a,b) = (a*b)/GCD(a,b).\n6x = 54 because 6x is the LCM.\nx = 9 because 54 / 6 = 9\n2x + 3x = 5x because sum of the numbers is 2x + 3x.\n5(9)= 45 because 5x = 45.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "The numbers are 2x and 3x because they are in the ratio 2:3.\nThe LCM of 2x and 3x is 6x because LCM(a,b) = (a*b)/GCD(a,b).\n6x = 54 because 6x is the LCM.\nx = 9 because 54 / 6 = 9\n2x + 3x = 5x because sum of the numbers is 2x + 3x.\n5(9)= 40 because 5x = 40.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 5(9) as 40 instead of 5(9) as 45 in step 5, which is the last step and therefore has no impact on other steps.",
+        "is_correct": "no",
+        "any_explanation": "The solution correctly identifies the numbers as 2x and 3x, and determines that their LCM is 6x. However, it incorrectly calculates the value of x as 9. The correct value of x should be 54 divided by the LCM, which is 54 / 6 = 9. But then, it incorrectly states that 5(9) is 40. The correct sum of the two numbers is 2x + 3x = 5x, which should be 5 * 9 = 45."
+    },
+    {
+        "question": "the consumption of diesel per hour of a bus varies directly as square of its speed. when the bus is travelling at 70 kmph its consumption is 1 litre per hour. if each litre costs $ 70 and other expenses per hour is $ 70, then what would be the minimum expenditure required to cover a distance of 700 km?",
+        "original_solution": "The consumption of diesel per hour varies directly as the square of the speed, so the consumption at 70 kmph is 1 litre per hour.\nIf each litre costs $70, the fuel cost at 70 kmph is 1 x $70 = $70 per hour.\nThe other expenses per hour are $70.\nTotal expenses per hour at 70 kmph are $70 for fuel + $70 for other expenses = $140.\nIt takes 10 hours to cover 700 km at 70 kmph because 700 / 70 = 10\nThe minimum expenditure required to cover a distance of 700 km is 10 x $140 = $1400.\n#### 1400",
+        "original_answer": 1400.0,
+        "transformed_solution": "The consumption of diesel per hour varies directly as the square of the speed, so the consumption at 70 kmph is 1 litre per hour.\nIf each litre costs $70, the fuel cost at 70 kmph is 1 x $70 = $70 per hour.\nThe other expenses per hour are $70.\nTotal expenses per hour at 70 kmph are $70 for fuel + $70 for other expenses = $140.\nIt takes 10 hours to cover 700 km at 70 kmph because 700 / 70 = 10\nThe minimum expenditure required to cover a distance of 700 km is 10 x $140 = $1450.\n#### 1450",
+        "transformed_answer": 1450.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the calculation error is introduced in the final step, where the total expenditure is incorrectly calculated as 10 x $140 = $1450 instead of the correct 10 x $140 = $1400. This error does not affect the previous steps, as it is only present in the final calculation of the total expenditure. The steps leading up to the final calculation remain unchanged, and the error is isolated to the last step.",
+        "is_correct": "no",
+        "any_explanation": "The solution does not correctly calculate the fuel consumption at different speeds. Since the consumption varies directly as the square of the speed, the cost per km will not remain constant. The solution assumes the cost per hour remains the same regardless of the speed, which is incorrect."
+    }
+]

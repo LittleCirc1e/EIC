@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Teddy finished half of a 500 piece puzzle, and then started and finished another 500 piece puzzle within an hour. How many puzzle pieces did Teddy place during that hour?",
+        "original_solution": "Teddy did 1/2 * 500 pieces = 250 pieces.\nTeddy completed 250 pieces + 500 pieces = 750 pieces.\n#### 750",
+        "original_answer": 750.0,
+        "transformed_solution": "Teddy did 1/2 * 500 pieces = 250 pieces.\nTeddy completed 250 pieces + 550 pieces = 800 pieces.\n#### 800",
+        "transformed_answer": 800.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 500 as 550 from step 1 and changes 250 pieces + 500 pieces = 750 pieces to 250 pieces + 550 pieces = 800 pieces. It should be noted that step 1 in the transformed_solution <Teddy did 1/2 * 500 pieces = 250 pieces.> should be the same as the step 1 in the original_solution <Teddy did 1/2 * 500 pieces = 250 pieces.> and calculates its result 250 correctly. Since only one error is made without affecting the computation of other steps, the rest of the computations are correct despite the initial mistaken reference.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 erroneously references the result 550 of step 2 instead of 500, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error. Its subsequent step 3 references the result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Nick is choosing between two jobs. Job A pays $15 an hour for 2000 hours a year, and is in a state with a 20% total tax rate. Job B pays $42,000 a year and is in a state that charges $6,000 in property tax and a 10% tax rate on net income after property tax. How much more money will Nick make at the job with a higher net pay rate, compared to the other job?",
+        "original_solution": "First calculate the gross annual salary for Job A: 2000 hours * $15/hour = $30,000\nNext, calculate the amount of taxes Nick pays at Job A by multiplying his net salary by the 20% tax rate: .2 * $30,000 = $6,000\nNow subtract Nick's taxes from his net pay to find his gross pay at Job A: $30,000 - $6,000 = $24,000\nNow subtract Nick's property taxes from his gross income at Job B: $42,000 - $6,000 = $36,000\nNow multiply Nick's income after property tax by 10% to find his income tax at Job B: $36,000 * 10% = $3,600\nNow subtract the income tax amount from Nick's earnings after property tax to find his net income at Job B: $36,000 - $3,600 = $32,400\nNow subtract the net income from the lower-paying job (A) from the net income from the higher-paying job (B): $32,400 - $24,000 = $8,400\n#### 8400",
+        "original_answer": 8400.0,
+        "transformed_solution": "First calculate the gross annual salary for Job A: 2000 hours * $15/hour = $30,000\nNext, calculate the amount of taxes Nick pays at Job A by multiplying his net salary by the 20% tax rate: .2 * $30,000 = $6,000\nNow subtract Nick's taxes from his net pay to find his gross pay at Job A: $30,000 - $6,000 = $24,000\nNow subtract Nick's property taxes from his gross income at Job B: $42,000 - $6,000 = $36,000\nNow multiply Nick's income after property tax by 10% to find his income tax at Job B: $36,000 * 10% = $3,600\nNow subtract the income tax amount from Nick's earnings after property tax to find his net income at Job B: $36,000 - $3,600 = $32,400\nNow subtract the net income from the lower-paying job (A) from the net income from the higher-paying job (B): $32,400 - $20,000 = $12,400\n#### 12400",
+        "transformed_answer": 12400.0,
+        "wrong_step": 7,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 7 mistakenly references 24,000 as 20,000 from step 3 and changes $32,400 - $24,000 = $8,400 to $32,400 - $20,000 = $12,400. It should be noted that step 3 in the transformed_solution <Now subtract Nick's taxes from his net pay to find his gross pay at Job A: $30,000 - $6,000 = $24,000> should be the same as the step 3 in the original_solution <Now subtract Nick's taxes from his net pay to find his gross pay at Job A: $30,000 - $6,000 = $24,000> and calculates its result 24,000 correctly. The error is introduced only in step 7 where the reference to Job A's net income is incorrect, but all other calculations still use the correct figures. This still allows the transformation to introduce a single error while keeping the rest of the calculations accurate. Therefore, the transformed_answer is different from the original_answer due to this intentional mistake.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 7. Step 7 erroneously references the result 20,000 of step 4 instead of 24,000, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error. Its subsequent step 8 references the result of step 7, resulting in the incorrect final answer."
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Susan is taking a two week vacation. She works five days a week and has six days of paid vacation. The rest of her workdays will be unpaid vacation time. She gets paid $15 per hour and works 8 hours a day. How much pay will she miss on her vacation?",
+        "original_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $15 per hour, she is paid 15 * 8 = $120 per day.\nAt $120 per day, Susan will miss 120 * 4 = $480 on her vacation.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $20 per hour, she is paid 20 * 8 = $160 per day.\nAt $160 per day, Susan will miss 160 * 4 = $640 on her vacation.\n#### 640",
+        "transformed_answer": 640.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references $15 in the question as $20 wrongly, and calculates 20 * 8 = $160 per day instead of 15 * 8 = $120 per day. The subsequent related step, step 4, inherits this error and will be affected accordingly, calculating 160 * 4 = $640 instead of 120 * 4 = $480. All other steps that reference this number should still reference this number correctly except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly uses \\$20 per hour\\ instead of \\$15 per hour\\ when calculating the pay per day."
+    },
+    {
+        "question": "Trip wanted to watch the new action movie in theaters. An evening ticket cost $10 and a large popcorn & drink combo would cost him an additional $10. He noticed on their website, they had a special offer. From 12 noon to 3 pm, save 20% off tickets and 50% off any food combos. How much money could Trip save by going to the earlier movie?",
+        "original_solution": "An evening movie is $10 and the food combo would be $10 so 10 + 10 = $20\nIf he goes to an earlier movie, it's 20% off the normal ticket price of $10 so 10 * .20 = $2\nIf he goes to an earlier movie, it's 50% off the normal food price of $10 so 10 * .50 = $5\nIf he saves $2 for the ticket and $5 on food, then 2+5 = $7 saved\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "An evening movie is $10 and the food combo would be $10 so 10 + 10 = $20\nIf he goes to an earlier movie, it's 20% off the normal ticket price of $15 so 15 * .20 = $3\nIf he goes to an earlier movie, it's 50% off the normal food price of $10 so 10 * .50 = $5\nIf he saves $3 for the ticket and $5 on food, then 3+5 = $8 saved\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 10 in the question as 15 wrongly, and calculates 15 * .20 = $3 instead of 10 * .20 = $2. This error in step 2 leads to a wrong saving calculation on the ticket in step 4, where 3+5=$8 is calculated instead of 2+5=$7. All subsequent calculations pertaining to this incorrect referencing step are correctly performed using the erroneous result from step 2. Other steps which also reference the price of the ticket still correctly use the original price of $10.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "In the first step, it incorrectly references the context value of the ticket price as $15, while the correct ticket price is $10."
+    },
+    {
+        "question": "Farmer Randy has 1700 acres of cotton he needs to have planted in 5 days. With a crew of 2 tractors working for 2 days and then a crew of 7 tractors working for another 3 days, how many acres of cotton per day does each tractor need to plant to meet their planting deadline?",
+        "original_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 7 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1700 acres with their 25 tractor days, then each tractor team needs to plant 1700/25 = 68 acres of cotton per day.\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "With 2 tractor teams working for 2 days, this is like 2*2=4 days worth of work by a single tractor, which they call tractor days.\nWith 5 tractor teams working for 3 days, this is 7*3=21 tractor days.\nIn total, the effort of all the tractor teams is 4+21=25 tractor days.\nIf they need to plant 1600 acres with their 25 tractor days, then each tractor team needs to plant 1600/25 = 64 acres of cotton per day.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 1700 in the question as 1600 wrongly, and calculates 1600/25=64 instead of 1700/25=68. Its subsequent related step will be affected, producing a different result of 1600/25=64 instead of the correct 1700/25=68. Please note that you should only consider one error, so all other steps that reference the number of acres still reference 1700 correctly, except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The solution incorrectly uses the number 1600 as the total acres of cotton to be planted, while the correct number should be 1700."
+    },
+    {
+        "question": "In a race with 240 Asians, 80 were Japanese, and the rest were Chinese. If the number of boys on the Chinese team was 60, how many girls were on the Chinese team?",
+        "original_solution": "If there were 80 Japanese, the number of Chinese was 240-80=160.\nSince there were 60 boys in the Chinese team, there were 160-60 = 100 girls in the Chinese team.",
+        "original_answer": 100,
+        "transformed_solution": "If there were 90 Japanese, the number of Chinese was 240-90=150.\nSince there were 60 boys in the Chinese team, there were 150-60 = 90 girls in the Chinese team.",
+        "transformed_answer": 90,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 80 in the question as 90 wrongly, and calculates 240-90=150 instead of 240-80=160. Its subsequent related step will be affected, calculating 150-60=90 instead of 160-60=100 in step 2. Please note that you should only consider one error, so step 2 still references 160 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is to assume that there were 90 Japanese, which is not supported by the information in the [Question]."
+    }
+]

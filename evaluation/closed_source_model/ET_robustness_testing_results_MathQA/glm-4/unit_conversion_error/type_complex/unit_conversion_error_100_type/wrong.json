@@ -1,0 +1,58 @@
+[
+    {
+        "question": "A man can row 7 ½ kmph in still water. If in a river running at 1.5 km/hr, it takes him 50 minutes to row to a place and back, how far off is the place?",
+        "original_solution": "Speed downstream = 7.5 + 1.5 = 9 km/hr\nSpeed upstream = 7.5 - 1.5 = 6 km/hr\nLet the distance to the place be x km.\nTime taken to row downstream = x / 9\nTime taken to row upstream = x / 6\nAccording to the given information, x / 9 + x / 6 = 50 minutes\nConverting 50 minutes to hours, 50/60 = 5/6 hours\nSolving the equation: x/9 + x/6 = 5/6\nMultiplying through by 18 to clear the denominators: 2x + 3x = 15\n5x = 15, so x = 3 km\nSo the place is 3 km away from the starting point.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "Speed downstream = 7.5 + 1.5 = 9 km/hr\nSpeed upstream = 7.5 - 1.5 = 6 km/hr\nLet the distance to the place be x km.\nTime taken to row downstream = x / 9\nTime taken to row upstream = x / 6\nAccording to the given information, x / 9 + x / 6 = 50 minutes\nConverting 50 minutes to hours, 50/50 = 1 hour\nSolving the equation: x/9 + x/6 = 1\nMultiplying through by 18 to clear the denominators: 2x + 3x = 18\n5x = 18, so x = 3.6 km\nSo the place is 3.6 km away from the starting point.\n#### 3.6",
+        "transformed_answer": 3.6,
+        "wrong_step": 6,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 6 makes incorrect unit conversion, which means 50 minutes is wrongly equal to 1 hour instead of 5/6 of an hour, resulting in 50/60 = 5/6 hours in the original_solution becoming 50/50 = 1 hour in the transformed_solution. And it affects the subsequent related step 7, which changes from x/9 + x/6 = 5/6 into x/9 + x/6 = 1. The following calculation steps are modified accordingly to maintain logical consistency after the conversion error. It should be noted that you only need to consider one step of unit conversion error, so the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "if 20 typists can type 44 letters in 20 minutes, then how many letters will 30 typists working at the same rate complete in 1 hour?",
+        "original_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 3 = 6.6 letters.\nSo, 30 typists working at the same rate can type 30 x 6.6 = 198 letters in 1 hour.\n#### 198",
+        "original_answer": 198.0,
+        "transformed_solution": "20 typists can type 44 letters in 20 minutes.\nSo, 1 typist can type 44/20 = 2.2 letters in 20 minutes.\nIn 1 hour, 1 typist can type 2.2 x 2 = 4.4 letters.\nSo, 30 typists working at the same rate can type 30 x 4.4 = 132 letters in 1 hour.\n#### 132",
+        "transformed_answer": 132.0,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means 1 hour is wrongly assumed to have 40 minutes instead of 60 minutes, resulting in '2.2 x 3 = 6.6 letters' in the original_solution becoming '2.2 x 2 = 4.4 letters' in the transformed_solution. And it affects the subsequent related step 4, which changes from '30 x 6.6 = 198 letters' to '30 x 4.4 = 132 letters'. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct, maintaining consistency with the presented cases.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct because it correctly calculates the number of letters 30 typists can type in 1 hour by first finding the number of letters 1 typist can type in 20 minutes and then multiplying it by 3 to find the number of letters 1 typist can type in 1 hour. Then it multiplies the number of letters 1 typist can type in 1 hour by 30 to find the total number of letters 30 typists can type in 1 hour."
+    },
+    {
+        "question": "Excluding stoppages, the average speed of a bus is 60 km/hr and including stoppages, the average speed of the bus is 45 km/hr. For how many minutes does the bus stop per hour?",
+        "original_solution": "Let x be the time the bus stops per hour in minutes. \nUsing the formula: average speed = total distance / total time\nWhen excluding stoppages: 60 = d / (60 - x)\nWhen including stoppages: 45 = d / (60)\nSolving for d in the second equation: d = 45 * 60 = 2700 km\nSubstitute d into the first equation: 60 = 2700 / (60 - x)\n60 * (60 - x) = 2700\n3600 - 60x = 2700\n-60x = -900\nx = 15\nThe bus stops for 15 minutes per hour.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "Let x be the time the bus stops per hour in minutes. \nUsing the formula: average speed = total distance / total time\nWhen excluding stoppages: 60 = d / (60 - x)\nWhen including stoppages: 45 = d / (50)\nSolving for d in the second equation: d = 45 * 50 = 2250 km\nSubstitute d into the first equation: 60 = 2250 / (60 - x)\n60 * (60 - x) = 2250\n3600 - 60x = 2250\n-60x = -1350\nx = 22.5\nThe bus stops for 22.5 minutes per hour.\n#### 22.5",
+        "transformed_answer": 22.5,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes incorrect unit conversion, which means 1 hour is wrongly counted as 50 minutes instead of 60 minutes, resulting in the formula 45 = d / (60) in the original_solution becoming 45 = d / (50) in the transformed_solution. This changes the calculation of distance (d) from 45 * 60 = 2700 km to 45 * 50 = 2250 km. The substitution into the first equation also changes due to the incorrect distance, which subsequently affects the final value of x turning from 15 minutes to 22.5 minutes. The error is only introduced in step 4, so the steps before are unchanged.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    },
+    {
+        "question": "a man travelled from the village to the post - office at the rate of 25 kmph and walked back at the rate of 4 kmph. if the whole journey took 5 hours 48 minutes, find the distance of the post - office from the village",
+        "original_solution": "Let the distance between the village and the post-office be x km.\nTime taken to go from village to post-office = x/25 hours\nTime taken to return from post-office to village = x/4 hours\nTotal time is given as 5 hours 48 minutes or 5 + 48/60 hours.\nSo, x/25 + x/4 = 5 + 48/60\nSolving for x gives x = 20 km.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "Let the distance between the village and the post-office be x km.\nTime taken to go from village to post-office = x/25 hours\nTime taken to return from post-office to village = x/4 hours\nTotal time is given as 5 hours 48 minutes or 5 + 48/60 hours.\nSo, x/25 + x/4 = 6 + 48/60\nSolving for x gives x ≈ 23.2 km.\n#### 23.2",
+        "transformed_answer": 23.2,
+        "wrong_step": 4,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 4 makes an incorrect unit conversion by considering the total time to be 6 + 48/60 hours instead of the correct time, which is 5 + 48/60 hours. This mistake in unit conversion leads to an incorrect total time and thus affects the equation in step 5, leading to the wrong solution for x. The correct calculation steps for the original solution are still maintained for the rest of the problem-solving process.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution is correct and there is no error in any step."
+    }
+]

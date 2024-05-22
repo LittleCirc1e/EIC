@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Eddie can bake 3 pies a day. His sister can bake 6 pies while his mother can bake 8 pies a day. How many pies will they be able to bake in 7 days?",
+        "original_solution": "Eddie bakes 3 x 7 = 21 pies for 7 days.\nHis sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 21 + 42 + 56 = 119 pies in 7 days.\n#### 119",
+        "original_answer": 119.0,
+        "transformed_solution": "His sister bakes 6 x 7 = 42 pies for 7 days.\nHis mother can bake 8 x 7 = 56 pies for 7 days.\nTherefore, they are able to bake 3*7 + 42 + 56 = 119 pies in 7 days.\n#### 133",
+        "transformed_answer": 133.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this example, step 1 has been removed. The original_solution's first step calculates the number of pies Eddie bakes in 7 days, and the subsequent steps calculate the sister's and mother's output, before summing them all in the final step. After deleting step 1, the final step needs to change to directly reference the number of pies Eddie can bake without calculating it separately. Originally Eddie's contribution is 3 * 7 = 21, but since we're no longer calculating this, we directly use 3*7 in the sum, hence the new formula becomes 3*7 + 42 + 56 = 119. However, an error was introduced in the transformed solution: instead of summing up the correct numbers to maintain the original answer, the total was incorrectly added as 3*7 + 42 + 56 = 133. Due to this error, the transformed answer differs from the original. The wrong_step is 3 which is the first step that has the incorrect reference in the transformed_solution. The step directly introduces Eddie's contribution without calculating it as a separate step.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "The first erroneous step is step 4, which directly adds up the number of pies baked by Eddie, his sister, and his mother. There is a necessary step missing here to calculate the total number of pies baked by Eddie in 7 days, which is 3 * 7 = 21. Step 4 should calculate 21 + 42 + 56 = 119 instead of 3 + 42 + 56 = 119. This also affects the subsequent step 5, where an incorrect calculation of 119 + 14 = 133 instead of 119 + 14 = 133, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 124",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_step": 6,
+        "step_explanation": "The first erroneous step is step 6, which directly adds up the number of paintings painted on each day. There is a necessary step missing here to sum up the number of paintings painted on the first 4 days, which is 2+4+8+16=30. Step 6 should calculate 30+32=62 instead of 2+4+8+16+32=62. This also affects the final result, where an incorrect calculation of 62+32=124 instead of 30+32=62, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 6, so pred_wrong_step is 6."
+    },
+    {
+        "question": "On Monday, Walt walked 4 miles. Tuesday, he walked 6 times as many miles as he walked on Monday. His total mileage Monday through Wednesday was 41 miles. How many miles did he walk on Wednesday?",
+        "original_solution": "Walt’s Tuesday walk was 4*6 = 24 miles.\nWalt’s Monday and Tuesday walk were 4+24 = 28 miles combined.\nWalt’s Wednesday walk was 41-28 = 13 miles.\n#### 13",
+        "original_answer": 13.0,
+        "transformed_solution": "Walt’s Monday and Tuesday walk were 4+4*6 = 52 miles combined.\nWalt’s Wednesday walk was 41-52 = -11 miles.\n#### -11",
+        "transformed_answer": -11.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this transformed_solution, intermediate step 1 has been removed. In the original_solution, step 1 references the number 4 from the question, and step 2 references the result 24 of step 1. Therefore, after deleting step 1, step 2 should reference result 4 from the question. However, instead of using the correct multiplication and addition, there was a mistake in combining the operations, leading to an incorrect new step of 'Walt's Monday and Tuesday walk were 4+4*6 = 52 miles combined.' This is mathematically incorrect because it does not respect the order of operations (multiplication should be done before addition). This incorrect step results in the subsequent step calculating Walt's Wednesday walk by subtracting 52 from 41, yielding an incorrect negative distance. It is step 1 in the transformed_solution, which is also step 2 in the original_solution, that serves as the first step referencing incorrect number in the transformed_solution, so the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "The first erroneous step is step 3, which directly subtracts the combined mileage of Monday and Tuesday from the total mileage of Monday through Wednesday to obtain the mileage of Wednesday. There is a necessary step missing here to subtract the combined mileage of Monday and Tuesday from the total mileage of Monday through Wednesday to obtain the mileage of Wednesday. Step 3 should calculate 41-52=-11 instead of 41-4=37. This also affects the subsequent step 4, where an incorrect calculation of 37 instead of -11, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Shawn collected 40 plain pebbles. He painted 9 pebbles red and 13 pebbles blue. He then divided the remaining pebbles equally into 3 groups, and painted them purple, yellow, and green. What is the difference between the number of blue and yellow pebbles?",
+        "original_solution": "After painting the red and blue pebbles, Shawn had a remainder of 40 - 9 - 13 = 18 pebbles.\nHe painted 18/3 = 6 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 6 = 7.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Shawn painted 40 - 9 = 31 pebbles as red and other colors.\nHe then divided the 31 pebbles into 4 groups and painted one of the groups yellow.\nSo he painted 31/4 = 7.75, which rounds up to 8 pebbles yellow.\nThe difference between the number of blue and yellow pebbles is 13 - 8 = 5.\n#### 5",
+        "transformed_answer": 5.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step of the original solution was deleted. In the original_solution, this step involves subtracting the count of both the red and blue pebbles from the total, to get the remainder, which was then divided equally amongst 3 groups. After deletion, the transformed solution starts with the subtraction of red pebbles only. This causes a change in subsequent calculations, where now the total number of pebbles is divided by 4 groups instead of 3, which is a mistake because the question specifies the remaining pebbles are divided into 3 groups, not 4. This incorrect modification affects the calculation of yellow pebbles resulting in a different answer, as the division would then include the blue pebbles in the count. The referenced 31 after deletion is incorrect because it included blue pebble count which should still have been excluded. Because the deletion involved an early computational step, the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "The first erroneous step is step 3, which divides the remaining pebbles into 4 groups and paints one of the groups yellow. There is a necessary step missing here to calculate the number of remaining pebbles after painting red and blue, which is 31. Step 3 should calculate 31/3=10.33, which rounds up to 11 pebbles yellow, instead of 31/4=7.75, which rounds up to 8 pebbles yellow. This also affects the subsequent step 4, where an incorrect calculation of 13-8=5 instead of 13-11=2, resulting in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

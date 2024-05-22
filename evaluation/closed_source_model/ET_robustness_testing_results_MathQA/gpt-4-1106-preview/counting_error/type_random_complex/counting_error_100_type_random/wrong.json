@@ -1,0 +1,44 @@
+[
+    {
+        "question": "John had a stock of 1400 books in his bookshop. He sold 75 on Monday, 50 on Tuesday, 64 on Wednesday, 78 on Thursday, and 135 on Friday. What percentage of the books were not sold?",
+        "original_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71.29%\n#### 71.29",
+        "original_answer": 71.29,
+        "transformed_solution": "Total books sold from Monday to Friday is 75 + 50 + 64 + 78 + 135 = 402 books\nThe remaining books after these sales is 1400 - 402 = 998 books\nThe percentage of the books not sold is (998 / 1400) * 100 = 71.2857%\nThe percentage of the books not sold is approximately 71%\n#### 71",
+        "transformed_answer": 71,
+        "wrong_step": 4,
+        "wrong_type": "rounding_error",
+        "is_single_error": true,
+        "explanation": "Here, the final step inaccurately rounds the percentage from 71.2857% to 71% instead of the correct 71.29% as per the original solution. This causes the transformed answer to be different from the original answer, creating a rounding error at step 4. It's important to note that the counting in earlier steps is unchanged, with only the final rounding step being affected.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total books sold, the remaining books, and the percentage of books not sold, following the correct mathematical procedures and rounding to the nearest whole number."
+    },
+    {
+        "question": "A library has an average of 510 visitors on Sunday and 240 on other days. The average number of visitors per day in a month of 30 days beginning with a Sunday is?",
+        "original_solution": "The total number of visitors on Sunday in a month is 510 * 5 = 2550 visitors\nThe total number of visitors on other days in a month is 240 * 25 = 6000 visitors\nThe total number of visitors in a month is 2550 + 6000 = 8550 visitors\nThe average number of visitors per day in a month is 8550 / 30 = 285 visitors\n#### 285",
+        "original_answer": 285.0,
+        "transformed_solution": "The total number of visitors on Sunday in a month is 510 * 4 = 2040 visitors\nThe total number of visitors on other days in a month is 240 * 26 = 6240 visitors\nThe total number of visitors in a month is 2040 + 6240 = 8280 visitors\nThe average number of visitors per day in a month is 8280 / 30 = 276 visitors\n#### 276",
+        "transformed_answer": 276.0,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "Here, step 1 erroneously counts the number of Sundays in a month as 4 instead of 5. The transformation affects step 1 where the calculation should be 510 * 5 = 2550 but was modified to 510 * 4 = 2040. Consequently, step 2 changes the number of days in the month that are not Sunday from 25 to 26, resulting in a change from 240 * 25 = 6000 to 240 * 26 = 6240. Step 3 and 4 are adjusted accordingly to result in a different average. The previous and unrelated steps are not affected.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the total number of visitors on Sundays and other days, adds them to find the total number of visitors in the month, and then divides by the number of days in the month to find the average number of visitors per day."
+    },
+    {
+        "question": "how many positive integers less than 60 have a reminder 01 when divided by 4 ?",
+        "original_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57.\nThere are 15 numbers that satisfy this condition.\n#### 15",
+        "original_answer": 15,
+        "transformed_solution": "The numbers that satisfy this condition are the ones that leave a remainder of 1 when divided by 4, so the numbers are 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53.\nThere are 14 numbers that satisfy this condition.\n#### 14",
+        "transformed_answer": 14,
+        "wrong_step": 1,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the counting result has been erroneously altered by excluding the number 57, which should have been included as it is less than 60 and leaves a remainder of 1 when divided by 4. Therefore, the count of numbers has changed from 15 to 14, which only impacts the final count of numbers that meet the condition and does not affect the previous steps of listing the numbers.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies all positive integers less than 60 that have a remainder of 1 when divided by 4 and correctly counts the total number of such integers."
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "question": "In soccer, players receive yellow cards when they are cautioned and red cards when they are sent off. Coach Tim has a team of 11 players, 5 of them didn't receive cautions, the rest received one yellow card each. How many red cards would the whole team collect, knowing that each red card corresponds to 2 yellow cards?",
+        "original_solution": "In coach Tim's team, 5 out of 11 players did not receive any caution, so 11 - 5 = 6 players were cautioned.\nEach cautioned player received a yellow card, so all the cautioned players received 6 * 1 = 6 yellow cards.\nKnowing that each red card corresponds to 2 yellow cards, the team would have 6 / 2 = 3 red cards.\n#### 3",
+        "original_answer": 3.0,
+        "transformed_solution": "In coach Tim's team, 10 out of 11 players did not receive any caution, so 11 - 10 = 1 player was cautioned.\n",
+        "transformed_answer": 0.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 5 in the question as 10 wrongly, and calculates 11 - 10 = 1 instead of 11 - 5 = 6. Its subsequent related steps will be affected by the erroneous result but still be calculated correctly. Step 2 changes from 6 * 1 = 6 yellow cards to 1 * 1 = 1 yellow card, and step 3 changes from 6 / 2 = 3 red cards to 1 / 2 = 0.5 red cards. Please note that you should only consider one error, so step 2 and 3 still correctly calculate results based on the erroneous first step.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly identifies that 1 player out of 11 received a yellow card. Since each red card corresponds to 2 yellow cards, the team would collect 1/2 = 0.5 red cards, which is not possible, so the answer is 0 red cards."
+    },
+    {
+        "question": "The rim of a standard basketball hoop is 10 feet above the ground.  Additionally, most experts will say that a player must be able to reach at least 6 inches above the rim to dunk a basketball.  Suppose a basketball player is 6 feet tall and can reach 22 inches above their head using the wingspan of their arms.  How high must this player be able to jump to reach 6 inches above the rim to dunk a basketball?",
+        "original_solution": "In inches, the height of the rim is 10*12 = 120 inches.\nThus, the height that the player needs to be able to reach is 120 + 6 = 126 inches.\nWithout jumping, the player can reach their height plus an additional 22 inches, or a total of 6*12 + 22 = 94 inches.\nTherefore, the player needs to jump 126 - 94 = 32 inches to reach the height required to dunk a basketball.\n#### 32",
+        "original_answer": 32.0,
+        "transformed_solution": "In inches, the height of the rim is 11*12 = 132 inches.\n",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 10 in the question as 11 wrongly and calculates 11*12=132 instead of 10*12=120. Its subsequent related steps, step 2 and 4, will be affected. Step 2 changes from 120+6=126 to 132+6=138, and step 4 changes from 126-94=32 to 138-94=44. Please note that you should only consider one error, so step 3 still references 6 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly converts the height of the rim from feet to inches, which is 132 inches. This is the correct first step in solving the problem."
+    },
+    {
+        "question": "Mark decides to buy packs of old magic cards and open them to sell.  He buys 3 packs for $1800 each.  He gets 1 card that is worth $4000 and another card worth $1000.  There are 30 more cards worth an average of $50 each.  How much money profit did he make?",
+        "original_solution": "The cheaper cards are worth a total of 30*50=$1500\nSo all the cards together are worth 1500+4000+1000=$6500\nThe cost for the cards was 1800*3=$5400\nSo he made a profit of 6500-5400=$1100\n#### 1100",
+        "original_answer": 1100.0,
+        "transformed_solution": "The cheaper cards are worth a total of 30*30=$900\n",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $50 in the question as $30 wrongly, and calculates 30*30=$900 instead of 30*50=$1500. Its subsequent related step will be affected, calculating 900+4000+1000=$5900 instead of 1500+4000+1000=$6500 in step 2. Please note that you should only consider one error, so step 3 still references $1800 in the question correctly, as well as step 4, which correctly calculates profit based on the erroneous total value of $5900.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total value of the cheaper cards as 30*30=$900."
+    },
+    {
+        "question": "Nathan plays amateur baseball. He played for 3 hours for two weeks, every day. His friend Tobias played for 5 hours every day, but only for one week. How many hours did Nathan and Tobias play in total?",
+        "original_solution": "Two weeks are 14 days, so Nathan played for 3 * 14 = 42 hours.\nTobias played for 7 days, so he played a total of 5 * 7 = 35 hours.\nNathan and Tobias played together for 42 + 35 = 77 hours.\n#### 77",
+        "original_answer": 77.0,
+        "transformed_solution": "Two weeks are 10 days, so Nathan played for 3 * 10 = 30 hours.\n",
+        "transformed_answer": 65.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references the duration of two weeks as 10 days wrongly, and calculates 3 * 10 = 30 hours instead of 3 * 14 = 42 hours. Its subsequent related step will be affected, combining 30 hours (Nathan) + 35 hours (Tobias) = 65 hours instead of 42 hours + 35 hours = 77 hours in step 3. Please note that you should only consider one error, so step 2 still references 7 days in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total hours played by Nathan over two weeks."
+    },
+    {
+        "question": "There is a road stretching 3 miles from the base camp to the chain challenge. Every 20 minutes, a car comes down the road from the base camp towards the chain challenge. How many hours have passed once 30 cars have come down the road?",
+        "original_solution": "20*30 = 600 minutes have passed.\n600/60 = 10 hours have passed.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "25*30 = 750 minutes have passed.\n",
+        "transformed_answer": 12.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 20 in the question as 25 wrongly, and calculates 25*30=750 instead of 20*30=600. Its subsequent related step will be affected, calculating 750/60=12.5 instead of 600/60=10 in step 2. Please note that you should only consider one error, so step 2 still references 60 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total number of minutes that have passed once 30 cars have come down the road."
+    },
+    {
+        "question": "14 less than two times the number of koi fish in the pond is 64. How many koi fish will you find in the pond?",
+        "original_solution": "Let k be the number of koi fish in the pond\n14-2*k=64\n2*k=64+14=78\n2k=78\nk=78/2=39\n#### 39",
+        "original_answer": 39.0,
+        "transformed_solution": "Let k be the number of koi fish in the pond\n",
+        "transformed_answer": 41.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 64 in the question as 68 wrongly, and calculates 14-2*k=68 instead of 14-2*k=64. Its subsequent related steps will be affected, calculating 2*k=68+14=82 in step 2, 2k=82 in step 3, and k=82/2=41 in step 4. Please note that you should only consider one error, so step 2 still references 14 in the question correctly.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the equation 2k - 14 = 64 to represent the given information and solve for the number of koi fish in the pond. The final answer is 39, which is correct."
+    }
+]

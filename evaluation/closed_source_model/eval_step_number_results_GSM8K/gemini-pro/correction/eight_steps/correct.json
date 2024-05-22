@@ -1,0 +1,62 @@
+[
+    {
+        "question": "Carly is a pet groomer. Today, her task was trimming the four nails on dogs’ paws. She trimmed 164 nails, but three of the dogs had only three legs. How many dogs did Carly work on?",
+        "original_solution": "Let N be the number of dogs with 4 legs Carly worked on.\nAll the dogs with 4 legs had 4N paws.\nThere were 3 * 3 = 9 paws on dogs with 3 legs.\nAt 4 nails per paw, she trimmed 164 / 4 = 41 paws.\nShe worked on 4N + 9 = 41 paws.\nThus, she worked on 4N = 32 paws on dogs with 4 legs.\nShe worked on N = 32 / 4 = 8 dogs with 4 legs.\nThus, Carly worked on 8 + 3 = 11 dogs.\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Let N be the number of dogs with 4 legs Carly worked on.\nAll the dogs with 4 legs had 4N paws.\nThere were 3 * 3 = 9 paws on dogs with 3 legs.\nAt 4 nails per paw, she trimmed 164 / 4 = 41 paws.\nShe worked on 4N + 9 = 41 paws.\nThus, she worked on 4N = 41 - 9 = 32 paws on dogs with 4 legs.\nShe worked on N = 32 / 4 = 7 dogs with 4 legs.\nThus, Carly worked on 7 + 3 = 10 dogs.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, step 6 mistakenly calculates 32 / 4 as 7 instead of the correct result of 8. Steps 7 and 8 use the result of step 6, so they are altered accordingly. Step 6 should be corrected to N = 32 / 4 = 8 dogs with 4 legs. Step 7 will change to correctly adding the three 3-legged dogs to the count, resulting in the total being 8 + 3 = 11 dogs. All previous steps are unaffected and remain the same as the original solution.",
+        "is_correct": "no",
+        "corrected_solution": "Let N be the number of dogs with 4 legs Carly worked on, and M be the number of dogs with three legs. Then we know that N + M represents the total number of dogs. At 4 nails per paw, she trimmed 164 / 4 = 41 paws. Since dogs with 4 legs have 4 paws each, and dogs with 3 legs have 3 paws each, we can set up the equation: 4N + 3M = 41. Also, we know that Carly worked on 3 of dogs with 3 legs. So we can write M = 3. Then we can use these two equations to solve for N and M. Plugging M = 3 into 4N + 3M = 41, we get 4N + 3(3) = 41, which simplifies to 4N + 9 = 41. Subtracting 9 from both sides, we obtain 4N = 32, and dividing both sides by 4, we find N = 8. This means there are 8 dogs with 4 legs. Adding 8 and 3, we find the total number of dogs Carly worked on is 11.",
+        "corrected_answer": "11",
+        "corrected_explanation": "The corrected solution first defines N and M as the number of dogs with 4 legs and 3 legs, respectively, and then sets up an equation based on the information that 4N + 3M = 41. Since we know that there are 3 dogs with 3 legs, we substitute M with 3 and solve the equation to find N = 8, which represents the number of dogs with 4 legs. Finally, adding N and M, we find that Carly worked on 11 dogs in total."
+    },
+    {
+        "question": "Alex, Stan, and Adelwolfe are trying to catch them all, Pokemon that is. Together they have caught 339 Pokemon. Alex has caught 5 more than Stan, and Stan has caught 13 less than 4 times as many as Adelwolfe has caught. How many Pokemon has Stan caught?",
+        "original_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=360\nx=40 Pokemon\nStan:4(40)-13=147 Pokemon\n#### 147",
+        "original_answer": 147.0,
+        "transformed_solution": "Let x represent the number of Pokemon Adelwolfe caught\nStan: 4x-13\nAlex: 5+(4x-13)=4x-8\nTotal: x+4x-13+4x-8=339\n9x-21=339\n9x=350\nx=38.89 Pokemon\nStan:4(38.89)-13=142.56 Pokemon\n#### 142.56",
+        "transformed_answer": 142.56,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the equation in step 6 is incorrectly solved as 9x=350 instead of 9x=360. Therefore, step 7 calculates the value of x incorrectly as 38.89 rather than 40. Subsequent step 8 subsequently calculates the number of Pokemon Stan caught using the incorrect value of x as 142.56 instead of 147. No other steps are modified, maintaining consistency with the single-error condition.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the number of Pokemon Adelwolfe caught. We proceed to solve x.\n1. Stan: 4x-13\n2. Alex: 5+(4x-13)=4x-8\n3. Total: x+4x-13+4x-8=339\n4. 9x-21=339\n5. 9x=360\n6. x=40 Pokemon\n7. Stan:4(40)-13=147 Pokemon",
+        "corrected_answer": 147,
+        "corrected_explanation": "The mistake in the original solution is that in step 5, it should be 9x=360. Proceed to correct the mistakes, with step 6 being the corrected answer."
+    },
+    {
+        "question": "The price of electricity went up by 25%.  John's old computer used 800 watts and his new computer uses 50% more.  If the old price of electricity was 12 cents per kilowatt-hour, how much does his computer cost, in dollars, to run for 50 hours?",
+        "original_solution": "His new computer uses 800*.5=400 watts more than his old computer\nSo it users 800+400=1200 watts\nThat is 1200/1000=1.2 kw\nElectricity cost 12*.25=3 cents more than it used to\nSo it now cost 12+3=15 cents per kwh\nHe used 1.2*50=60 kwh\nSo he paid 15*60=900 cents per kwh\nSo he paid 900/100=$9\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "His new computer uses 800*.5=400 watts more than his old computer\nSo it users 800+400=1200 watts\nThat is 1200/1000=1.2 kw\nElectricity cost 12*.25=3 cents more than it used to\nSo it now cost 12+3=15 cents per kwh\nHe used 1.2*50=60 kwh\nSo he paid 15*60=800 cents per kwh\nSo he paid 800/100=$8\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 6,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 15*60 as 800 cents instead of 900 cents in step 6, which affects the final step 7. Step 7 inherits the error from step 6, modifying 900/100=$9 to 800/100=$8. The previous steps 1 through 5 remain unchanged as they are not affected by the error introduced in step 6.",
+        "is_correct": "no",
+        "corrected_solution": "1. Calculate the new wattage of John's computer:\nOld wattage = 800 watts\nIncrease in wattage = 50%\nNew wattage = Old wattage + (Old wattage * Increase in wattage)\nNew wattage = 800 watts + (800 watts * 0.50)\nNew wattage = 1200 watts\n\n2. Convert the new wattage to kilowatts:\n1 kilowatt (kW) = 1000 watts\nNew wattage in kilowatts = New wattage / 1000\nNew wattage in kilowatts = 1200 watts / 1000\nNew wattage in kilowatts = 1.2 kW\n\n3. Calculate the new cost per kilowatt-hour:\nOld cost per kilowatt-hour = 12 cents\nIncrease in cost = 25%\nNew cost per kilowatt-hour = Old cost per kilowatt-hour + (Old cost per kilowatt-hour * Increase in cost)\nNew cost per kilowatt-hour = 12 cents + (12 cents * 0.25)\nNew cost per kilowatt-hour = 15 cents\n\n4. Calculate the total cost of running the computer for 50 hours:\nTotal kilowatt-hours used = New wattage in kilowatts * Number of hours\nTotal kilowatt-hours used = 1.2 kW * 50 hours\nTotal kilowatt-hours used = 60 kWh\n\nTotal cost = New cost per kilowatt-hour * Total kilowatt-hours used\nTotal cost = 15 cents * 60 kWh\nTotal cost = 900 cents\n\n5. Convert the total cost to dollars:\n1 dollar ($) = 100 cents\nTotal cost in dollars = Total cost in cents / 100\nTotal cost in dollars = 900 cents / 100\nTotal cost in dollars = 9 dollars\n\nTherefore, the total cost of running John's computer for 50 hours is $9.",
+        "corrected_answer": 9,
+        "corrected_explanation": "The solution incorrectly calculated the new wattage of the computer by multiplying the old wattage by 5 instead of 1.5. It also incorrectly calculated the total cost by multiplying the new cost per kilowatt-hour by the number of hours instead of the total kilowatt-hours used. The corrected solution provides a step-by-step calculation of the new wattage, new cost per kilowatt-hour, total kilowatt-hours used, and total cost."
+    },
+    {
+        "question": "Rory is retrieving tennis balls from the court after a tennis match. In the first of three sets, he had to retrieve four more balls than in the second set. In the third set, he retrieved half as many balls as in the second. He retrieved 19 tennis balls in all. How many tennis balls did he retrieve in the first set of the match?",
+        "original_solution": "Let B be the number of tennis balls Rory retrieved in the third set.\nIn the second set, he retrieved 2B balls.\nIn the first set, he retrieved 2B + 4 balls.\nIn total, he retrieved B + 2B + 2B + 4 = 5B + 4 = 19 balls.\nThus, 5B = 19 - 4 = 15 balls.\nTherefore, in the third set, Rory retrieved B = 15 / 5 = 3 balls.\nHence, in the second set, he retrieved 2B = 3 * 2 = 6 balls.\nIn the first set he retrieved 2(3) + 4 balls = 10\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let B be the number of tennis balls Rory retrieved in the third set.\nIn the second set, he retrieved 2B balls.\nIn the first set, he retrieved 2B + 4 balls.\nIn total, he retrieved B + 2B + 2B + 4 = 5B + 4 = 19 balls.\nThus, 5B = 19 - 4 = 15 balls.\nTherefore, in the third set, Rory retrieved B = 15 / 5 = 3 balls.\nHence, in the second set, he retrieved 2B = 3 * 2 = 6 balls.\nIn the first set he retrieved 2(3) + 4 balls = 6\n#### 6",
+        "transformed_answer": 6.0,
+        "wrong_step": 8,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The error was introduced in step 8, where the calculation of the number of balls retrieved in the first set was changed from 2(3) + 4 = 10 to 2(3) + 4 = 6. This is a calculation error, as the operands and operators in the formula were not changed, but the result of the calculation was altered. The subsequent steps are not affected as this is the final calculation. The transformed answer is different from the original answer, which fulfills the requirement.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the number of tennis balls Rory retrieved in the second set.\nThen, in the first set, he retrieved x + 4 balls.\nIn the third set, he retrieved (x / 2) balls.\nIn total, he retrieved x + x + 4 + (x / 2) = (5 / 2)x + 4 = 19 balls.\nThus, (5 / 2)x = 19 - 4 = 15.\nTherefore, x = 15 * (2 / 5) = 6 balls.\nHence, in the first set, Rory retrieved x + 4 = 6 + 4 balls = 10 balls.",
+        "corrected_answer": 10,
+        "corrected_explanation": "This problem can be solved using the information in the question and setting up an equation that represents the total number of balls Rory retrieved in all three sets. After solving the equation for x, which represents the number of balls he retrieved in the second set, we can use this value to find the number of balls he retrieved in the first set."
+    }
+]

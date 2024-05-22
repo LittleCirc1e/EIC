@@ -1,0 +1,32 @@
+[
+    {
+        "question": "if 8 workers can build 8 cars in 8 days, then how many days would it take 5 workers to build 5 cars?",
+        "original_solution": "The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.\nTherefore, 5 workers will also take 8 days to build 5 cars.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.\nTherefore, 5 workers will also take 10 days to build 5 cars.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 8 as 10 from step 1 and changes 'Therefore, 5 workers will also take 8 days to build 5 cars.' to 'Therefore, 5 workers will also take 10 days to build 5 cars.' It should be noted that step 1 in the transformed_solution <The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.> should be the same as the step 1 in the original_solution <The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.> and calculates its conclusion correctly. The error introduced at step 2 does not affect the wording of the rest of the solution but changes the final answer from 8 days to 10 days. You need to only consider one error of referencing, so the logical structure of the explanation is still correct.",
+        "is_correct": "no",
+        "corrected_solution": "The number of workers and the number of cars are not equal, so the same number of workers will not take the same amount of time to build the same number of cars.\nTherefore, 5 workers will take 16 days to build 5 cars.\n#### 16",
+        "corrected_answer": 16.0,
+        "corrected_explanation": "Step 1 erroneously states that the number of workers and the number of cars are equal, which leads to the incorrect conclusion that the same number of workers will take the same amount of time to build the same number of cars. This affects the calculation in step 2, resulting in an error in the final result."
+    },
+    {
+        "question": "In a college the ratio of the numbers of boys to the girls is 8 : 5 . if there are 120 girls, the total number of students in the college is ?",
+        "original_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*120 = 192\nThe total number of students in the college is 192+120 = 312\n#### 312",
+        "original_answer": 312.0,
+        "transformed_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*120 = 192\nThe total number of students in the college is 192+100 = 292\n#### 292",
+        "transformed_answer": 292.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 120 as 100 from step 2 and changes 192+120=312 to 192+100=292. It should be noted that step 2 in the transformed_solution <The number of boys is 8/5*120 = 192> should be the same as the step 2 in the original_solution <The number of boys is 8/5*120 = 192> and calculates its result 192 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct, and subsequent steps are affected by the erroneous result of this certain step but still calculated correctly based on the transformed values.",
+        "is_correct": "no",
+        "corrected_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/13*120 = 73.85\nThe total number of students in the college is 73.85+120 = 193.85\n#### 193.85",
+        "corrected_answer": 193.84999999999997,
+        "corrected_explanation": "Step 3 first erroneously references the result 100 instead of 120 from step 2, resulting in the calculation of 192+100=292 instead of 192+120=312. This affects the final result."
+    }
+]

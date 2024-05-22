@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Jack had $100. Sophia gave him 1/5 of her $100. How many dollars does Jack have now?",
+        "original_solution": "Sophia gave 100 * 1/5 = 20 $ to Jack.\nJack now has 100 + 20 = 120$\n#### 120",
+        "original_answer": 120.0,
+        "transformed_solution": "Jack now has 100 + 100 = 200$\n#### 200",
+        "transformed_answer": 200.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step where Sophia calculates the fraction of her money to give to Jack is removed, so the entire amount is incorrectly added to Jack's original $100 in the subsequent step. This implies that Jack received the entire $100 from Sophia instead of 1/5 of it. The step that adds $100 directly to Jack's original amount uses the number from the question and should only have used the result of the missing calculation of 1/5 of Sophia's $100. The wrong_step is step 1 in the transformed_solution, corresponding to the calculation of Jack's new total without considering Sophia's contribution as 1/5 of her money. This results in an incorrect transformed_answer of $200, different from the original_answer of $120.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "The first erroneous step is step 1, which directly adds up Jack's initial money and Sophia's money. There is a necessary step missing here to calculate 1/5 of Sophia's money, which is 100 * 1/5 = 20. Step 1 should calculate 100 + 20 = 120 instead of 100 + 100 = 200. This also affects the subsequent step 2, where an incorrect calculation of 200 instead of 120 results in the final erroneous result. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "Andrea needs 45 rhinestones to finish an art project. She bought a third of what she needed and found a fifth of what she needed in her supplies. How many rhinestones does she still need?",
+        "original_solution": "Andrea bought 45 / 3 = 15 rhinestones.\nShe found 45 / 5 = 9 rhinestones in her supplies.\nThus, Andrea still needs 45 - 15 - 9 = 21 rhinestones.\n#### 21",
+        "original_answer": 21.0,
+        "transformed_solution": "She found 45 / 5 = 9 rhinestones in her supplies.\nThus, Andrea still needs 45 - 45 - 9 = -9 rhinestones.\n#### -9",
+        "transformed_answer": -9.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, the first step has been removed. This first step calculated how many rhinestones Andrea bought, which was 1/3 of the total she needed. After deleting it, step 2, which is the original step 3, references the result of step 1 and therefore should change from referencing 15 (the result of the deleted step 1) to referencing 45 (the original amount she needed from the question). However, instead of using the number 45, the number has been erroneously rewritten to 45 again, which makes the subtraction incorrect and results in a negative number of rhinestones, which is not possible. The corrected step 2 of the transformed_solution should calculate 45 minus the total of bought and found rhinestones, leading to a new incorrect and impossible answer. The wrong_step is 2 because it is the first one that references the result of the deleted step 1.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "The first erroneous step is step 2, which directly subtracts 45 from 45. There is a necessary step missing here to calculate the number of rhinestones Andrea bought, which is 45 / 3 = 15. Step 2 should calculate 45 - 15 - 9 = 21 instead of 45 - 45 - 9 = -9. This also affects the final result. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    },
+    {
+        "question": "There is a playground that is surrounded by a square fence that has a side length of 27 yards. There is a 12 yard by 9 yard garden that has fencing around it. How many yards of fencing do the playground and garden have together?",
+        "original_solution": "27 * 4 = 108 yards\n2 * (12 + 9) = 42 yards\n108 + 42 = 150 yards\nThe playground and garden have a combined fence length of 150 yards.\n#### 150",
+        "original_answer": 150.0,
+        "transformed_solution": "The square fence around the playground is 27 * 4 = 108 yards\nThe fencing for the garden is 2 * (27) = 54 yards instead of 2 * (12 + 9)\nThe playground and garden have a combined fence length of 108 + 54 = 162 yards.\n#### 162",
+        "transformed_answer": 162.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 2, which calculates the fence length of the garden correctly as 2 * (12 + 9) = 42 yards. After removing this step, the next step, which should calculate the combined fence length, should reference the result from the previous step. However, the transformed solution incorrectly references the largest side length from the question, which is 27, assuming that one side of the garden shares the same length as the playground's side length. It makes an error by incorrectly calculating the garden's fence length as 2 * (27) = 54 yards. Subsequently, the calculation for the combined length becomes 108 + 54 = 162 yards. The wrong_step is 2, which serves as the first step that references the incorrect assumption about the garden fence length in the transformed solution.",
+        "is_correct": "no",
+        "pred_wrong_step": 2,
+        "step_explanation": "The first erroneous step is step 2, which incorrectly calculates the fencing for the garden as 2 * (27) = 54 yards. The correct calculation should be 2 * (12 + 9) = 42 yards. This error affects the subsequent step 3, where the combined fence length is calculated as 108 + 54 = 162 yards instead of 108 + 42 = 150 yards. The first step to make a mistake, which is the root cause of the mistake, is step 2, so pred_wrong_step is 2."
+    }
+]

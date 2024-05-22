@@ -1,0 +1,93 @@
+[
+    {
+        "question": "My 2 cats had 3 female kittens and 2 male kittens. How many cats do I have in total?",
+        "original_solution": "There are 3+2 = 5 kittens\nIf you originally had 2 cats then you now have 2+5 = 7 cats in total\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "There are 3*2 = 6 kittens\nIf you originally had 2 cats then you now have 2+6 = 8 cats in total\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 into multiplication, converting 3+2=5 to 3*2=6 by changing + to *. The result from step 1 affects step 2, thus changing the total from 2+5=7 to 2+6=8. It should be noted that only the operator in step 1 is changed, but the calculation after changing the operator is done correctly. Subsequent steps inherit the result of the modified step 1, but calculations in those steps are correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total number of cats by adding the number of kittens (3 female and 2 male, which totals to 5, but seems to have a multiplication error in the solution) to the original 2 cats."
+    },
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly follows the given information. It first calculates Emily's hair length by adding 6 inches to Logan's hair length, which is 20 inches, making Emily's hair 26 inches. Then it correctly divides this length by 2 to find Kate's hair length, which is half of Emily's, resulting in 13 inches."
+    },
+    {
+        "question": "A mother is making her own bubble mix out of dish soap and water for her two-year-old son. The recipe she is following calls for 3 tablespoons of soap for every 1 cup of water. If the container she hopes to store the bubble mix in can hold 40 ounces of liquid, and there are 8 ounces in a cup of water, how many tablespoons of soap should she add to the container (assuming that the soap itself doesn't count towards the capacity of the container)?",
+        "original_solution": "The 40-ounce container can hold 40/8 = 5 cups of water.\nThis means that 5*3 = 15 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "The 40-ounce container can hold 40*8 = 320 cups of water.\nThis means that 320*3 = 960 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 960",
+        "transformed_answer": 960.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This case changes the division operator in step 1 of the original solution to a multiplication operator, which results in an incorrect calculation of 40*8=320 instead of the correct 40/8=5. This incorrect value is used in step 2 to incorrectly multiply by the 3 tablespoons of soap per cup, resulting in a mistaken value of 960 tablespoons of soap. The error is only in the operator change in step 1; the calculations are correct based on the wrong assumption, but the result is incorrect. The subsequent step involves correct arithmetic based on the prior step's result, leading to an incorrect final answer.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates that the container can hold 40/8 = 5 cups of water, and then multiplies this by the required 3 tablespoons of soap per cup, which results in 5*3 = 15 tablespoons of soap needed. However, the solution incorrectly states that 320 cups of water are needed, which leads to an incorrect calculation of 960 tablespoons. The correct amount should be 5 cups * 3 tablespoons = 15 tablespoons. Since the question asks for the amount of soap needed for the entire capacity of the container, the solution's final answer is incorrect, but the process would be correct if the initial calculation of cups of water was accurate."
+    },
+    {
+        "question": "Chris wanted to buy a new video game that costs $60 as well as an assortment of candy that costs $5.  To earn the money, he agreed to babysit his little sister for $8 per hour.  If he works 9 hours, how much money will be left over after he makes his purchases?",
+        "original_solution": "He wants to buy a $60 game and $5 of candy so 60 + 5 = $65\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $65 so 72-65 = $7 left over\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "He wants to buy a $60 game and $5 of candy so 60 - 5 = $55\nHe will make $8 per hour of babysitting and will work 9 hours so 8 * 9 = $72\nHe made $72 and spent $55 so 72-55 = $17 left over\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition to subtraction in step 1, turning 60 + 5 = $65 into 60 - 5 = $55. The subsequent step 3 that uses the result of step 1 is affected, changing from 72 - 65 = $7 to 72 - 55 = $17. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, leading to an incorrect result for step 1, which subsequently affects the final answer. All other calculations in step 2 and step 3 are correct, considering the altered outcome from step 1.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the total cost of the purchases and the total earnings from babysitting, then subtracts the total cost from the total earnings to find the amount left over."
+    },
+    {
+        "question": "Julia collects old watches. She owns 20 silver watches, and three times as many bronze watches. She decided to buy gold watches to add to her collection, a number that represents 10% of all the watches she owns. How many watches does Julia own after this purchase?",
+        "original_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60+20 = 80 total silver and bronze watches\n10% of all Julia's watches is 80 * 10/100 = 8 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 8 = 88 watches.\n#### 88",
+        "original_answer": 88.0,
+        "transformed_solution": "Julia owns 3 * 20 = 60 bronze watches.\n60-20 = 40 total silver and bronze watches\n10% of all Julia's watches is 40 * 10/100 = 4 watches, and she decided to buy so many gold watches.\nSo in total Julia is in possession of 20 + 60 + 4 = 84 watches.\n#### 84",
+        "transformed_answer": 84.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example transforms the addition in step 2 to subtraction, altering 60+20 = 80 to 60-20 = 40 by changing + to -. This impacts the following step 3, as the calculation of 10% of Julia's watches is based on the modified total number of watches, changing 80 * 10/100 = 8 to 40 * 10/100 = 4. The final step 4 also inherits this change, adjusting from 20 + 60 + 8 = 88 to 20 + 60 + 4 = 84. It should be noted that in step 2, only the operator of the formula is incorrect, but the step still performs the correct mathematical operation accordingly, resulting in an incorrect outcome for that step. The subsequent steps that rely on the outcome of step 2 correctly perform their calculations based on the erroneous value provided.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of bronze watches as 3 times the number of silver watches, then adds the number of silver watches to find the total number of silver and bronze watches. It correctly applies 10% to this total to find the number of gold watches purchased, and finally adds all three types of watches together to find the total number of watches Julia owns."
+    },
+    {
+        "question": "Emily has 4 kids named Amy, Jackson, Corey, and James. Amy is 5 years older than Jackson and 2 years younger than Corey. If James is 10 and is 1 year younger than Corey, how old is Jackson?",
+        "original_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 + 1 = 11 years old\nAmy is 2 years younger than Corey so is 11 - 2 = 9 years old\nAmy is also 5 years older than Jackson, so Jackson is 9 - 5 = 4 years old\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "James is 10 and 1 year younger than Corey, so Corey is 10 - 1 = 9 years old\nAmy is 2 years younger than Corey so is 9 - 2 = 7 years old\nAmy is also 5 years older than Jackson, so Jackson is 7 - 5 = 2 years old\n#### 2",
+        "transformed_answer": 2.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 to subtraction, turning '10 + 1 = 11' into '10 - 1 = 9'. This error affects subsequent related steps 2 and 3. In step 2, the equation is now '9 - 2 = 7' resulting from the changed age of Corey, and in step 3, the equation becomes '7 - 5 = 2' due to Amy being 5 years older than Jackson, which has now been calculated based on the incorrect age of Amy. It should be noted that other than the erroneous operator change in step 1, the calculations in all other steps correctly follow through from the error.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly follows the given relationships between the ages of the kids to determine that Jackson is 2 years old. It starts with the known age of James, then deduces Corey's age, then Amy's age, and finally Jackson's age based on the information provided."
+    },
+    {
+        "question": "Carmen has $100, Samantha has $25 more than Carmen, and Daisy has $50 more than Samantha. How much do all three girls have combined?",
+        "original_solution": "Samantha has $100+$25 = $125.\nDaisy has $125+$50 = $175.\nThe total amount of money that the three girls have is $175+$125+$100 = $400.\n#### 400",
+        "original_answer": 400.0,
+        "transformed_solution": "Samantha has $100-$25 = $75.\nDaisy has $75+$50 = $125.\nThe total amount of money that the three girls have is $125+$75+$100 = $300.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the addition in step 1 into subtraction, and by changing + to -, $100+$25 = $125 becomes $100-$25 = $75. This affects the subsequent related step 2 and 3. Step 2 changes from $125+$50 = $175 to $75+$50 = $125, step 3 changes from $175+$125+$100 = $400 to $125+$75+$100 = $300. It should be noted that only the operator in step 1 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent steps of using its results, but all the calculation of the steps affected by step 1 is correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the amount of money each girl has and then adds those amounts together to get the total."
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 + ? = 62976\n? = 62976 - 123\n#### 62853",
+        "transformed_answer": 62853.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 1 into addition by changing 'x' to '+', which subsequently changes '123 x ? = 62976' to '123 + ? = 62976'. The next step involves calculating the value of '?', which changes from '62976 / 123' in the original solution to '62976 - 123' in the transformed solution. Consequently, the result changes from '? = 512' to '? = 62853'. It should be noted that the only operator in step 1 is incorrect, but its calculation is done correctly, leading to a different result from the original answer. The rest of the calculations are correct based on the transformed step.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly uses addition instead of subtraction, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    },
+    {
+        "question": "Find the area of a parallelogram with base 12 cm and height 10 cm?",
+        "original_solution": "The area of a parallelogram is given by the formula: base x height.\nSo, the area of the parallelogram is 12 x 10 = 120 square cm.\n#### 120",
+        "original_answer": 120,
+        "transformed_solution": "The area of a parallelogram is given by the formula: base / height.\nSo, the area of the parallelogram is 12 / 10 = 1.2 square cm.\n#### 1.2",
+        "transformed_answer": 1.2,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication operator in step 2 to a division operator, turning 12 x 10 = 120 into 12 / 10 = 1.2. This only affects the step where the operator was changed and does not alter any subsequent steps, as there are none. The calculation for the new operator is done correctly, but because of the incorrect operator, the final answer is different from the original answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 confuses the formula for the area of a parallelogram and mistakenly uses division instead of multiplication, which only results in an error in one operator in the formula, so it belongs to operator_error."
+    },
+    {
+        "question": "The ratio of three numbers is 3 : 4 : 7 and their product is 18144. The numbers are",
+        "original_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x * 7x = 18144\n84x^3 = 18144\nx^3 = 216\nx = 6\nThe numbers are 3x = 18, 4x = 24, and 7x = 42\n#### 18, 24, 42",
+        "original_answer": [
+            18,
+            24,
+            42
+        ],
+        "transformed_solution": "Let the numbers be 3x, 4x, and 7x.\nTheir product is 3x * 4x / 7x = 18144\n12x^2 = 18144\nx^2 = 1512\nx = sqrt(1512)\nThe numbers are 3x = 3*sqrt(1512), 4x = 4*sqrt(1512), and 7x = 7*sqrt(1512)\n#### 3*sqrt(1512), 4*sqrt(1512), 7*sqrt(1512)",
+        "transformed_answer": [
+            117,
+            156,
+            273
+        ],
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in step 2 of the original solution, which is a multiplication '*', has been incorrectly changed to a division '/'. This changed the original equation '3x * 4x * 7x = 18144' to the incorrect '3x * 4x / 7x = 18144'. The steps following the modified step are executed correctly using the incorrect step 2 result, but with the altered operator, the final answer changes from the correct numbers 18, 24, and 42 to the incorrect values 3*sqrt(1512), 4*sqrt(1512), and 7*sqrt(1512), which when calculated further result in approximately 117, 156, 273. This transformation leads to a single error in the second step, which then affects all subsequent steps that rely on the result of that erroneous step.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly uses division instead of multiplication, and only one operator in the formula is incorrect, so it belongs to operator_error."
+    }
+]

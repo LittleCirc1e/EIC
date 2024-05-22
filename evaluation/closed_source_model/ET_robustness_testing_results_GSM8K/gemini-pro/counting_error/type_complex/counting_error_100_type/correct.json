@@ -1,0 +1,16 @@
+[
+    {
+        "question": "If a vehicle is driven 12 miles on Monday, 18 miles on Tuesday, and 21 miles on Wednesday. What is the average distance traveled per day?",
+        "original_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nSo the average distance traveled per day is 51/3 = 17 miles.\n#### 17",
+        "original_answer": 17.0,
+        "transformed_solution": "The total distance covered from Monday to Wednesday is 12 + 18 + 21 = 51 miles.\nBut here we mistakenly consider that Monday to Wednesday counts as 2 days.\nSo the average distance traveled per day is 51/2 = 25.5 miles.\n#### 25.5",
+        "transformed_answer": 25.5,
+        "wrong_step": 2,
+        "wrong_type": "counting_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, we make a counting error by incorrectly considering the number of days from Monday to Wednesday as only 2 days instead of the actual 3 days. This error subsequently affects the calculation of the average distance, changing the correct operation 51/3 to the incorrect operation 51/2. It should be noted that this is a single counting error and the sum of the distances remains unchanged, as it is not part of the error.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly counts Monday to Wednesday as 2 days instead of 3 days, only resulting in an operand error in the formula, so it belongs to counting_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    }
+]

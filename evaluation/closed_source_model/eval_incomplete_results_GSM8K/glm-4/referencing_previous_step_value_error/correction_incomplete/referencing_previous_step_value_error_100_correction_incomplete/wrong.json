@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Meryll wants to write 35 multiple-choice questions and 15 problem-solving questions for her Chemistry class. She already has written 2/5 of the multiple-choice and 1/3 of the problem-solving questions. How many more questions does she need to write for both multiple-choice and problem-solving?",
+        "original_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\nHence, she needs to write 50 questions - 19 questions = 31 questions more.\n#### 31",
+        "original_answer": 31.0,
+        "transformed_solution": "Meryll has written 35 questions x 2/5 = 14 multiple-choice questions.\nWhile she has written 15 questions x 1/3 = 5 problem-solving questions.\nThe total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.\nMeryll has written a total of 14 questions + 5 questions = 19 questions.\n",
+        "transformed_answer": 30.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 19 as 20 from step 3 and changes 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. It should be noted that step 3 in the transformed_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> should be the same as the step 3 in the original_solution <The total number of questions that Meryll has to write is 35 questions + 15 questions = 50 questions.> and calculates its result 50 correctly. Step 4 affects the subsequent step 5 related to it, changing from 50 questions - 19 questions = 31 questions more to 50 questions - 20 questions = 30 questions more. You need to only consider one error of referencing, so the calculation of all steps starting from the wrong step and the ones following it is still correct.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": null,
+        "corrected_explanation": "The solution correctly calculates that Meryll has written 14 multiple-choice questions and 5 problem-solving questions. It also correctly adds the total number of questions she needs to write (35 multiple-choice + 15 problem-solving = 50 questions) and the total number she has already written (14 multiple-choice + 5 problem-solving = 19 questions). Therefore, to find out how many more questions she needs to write, one would subtract 19 from 50, which the solution implies but does not explicitly state."
+    },
+    {
+        "question": "Uncle Ben has 440 chickens on his farm. 39 are roosters and the rest are hens. 15 of his hens do not lay eggs, and the rest do. If each egg-laying hen lays 3 eggs, how many eggs will Uncle Ben have?",
+        "original_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 386 hens that lay eggs.\nThe egg-laying hens each lay 3 eggs * 386 hens = 1158 eggs.\n#### 1158",
+        "original_answer": 1158.0,
+        "transformed_solution": "Uncle Ben has 440 chickens - 39 roosters = 401 hens.\nUncle Ben has 401 hens - 15 that don't lay eggs = 385 hens that lay eggs.\n",
+        "transformed_answer": 1155.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 401 as 401 from step 1 but changes 401 - 15 to 385 instead of the correct 386. It should be noted that step 1 in the transformed_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> should be the same as the step 1 in the original_solution <Uncle Ben has 440 chickens - 39 roosters = 401 hens.> and calculates its result 401 correctly. The subsequent step 3, which is related to step 2, is affected by the incorrect subtraction result but is still calculated correctly as 3 * 385 to give 1155 eggs. You need to only consider one error of referencing, so the calculation of all steps is still correct, and the transformed_answer 1155 is different from the original_answer 1158.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": null,
+        "corrected_explanation": "The solution correctly calculates the number of egg-laying hens by subtracting the number of roosters and non-egg-laying hens from the total number of chickens. Then, it multiplies the number of egg-laying hens by the number of eggs each hen lays, which would yield the correct number of eggs. However, the final calculation is missing from the provided solution. The correct calculation would be 385 hens * 3 eggs/hen = 1155 eggs."
+    }
+]

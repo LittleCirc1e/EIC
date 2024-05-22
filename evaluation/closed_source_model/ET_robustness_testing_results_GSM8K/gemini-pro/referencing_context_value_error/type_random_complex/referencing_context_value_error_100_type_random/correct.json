@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Susan is taking a two week vacation. She works five days a week and has six days of paid vacation. The rest of her workdays will be unpaid vacation time. She gets paid $15 per hour and works 8 hours a day. How much pay will she miss on her vacation?",
+        "original_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $15 per hour, she is paid 15 * 8 = $120 per day.\nAt $120 per day, Susan will miss 120 * 4 = $480 on her vacation.\n#### 480",
+        "original_answer": 480.0,
+        "transformed_solution": "Susan works 2 * 5 = 10 days in two weeks.\nShe is taking 10 - 6 = 4 days of unpaid vacation.\nAt $20 per hour, she is paid 20 * 8 = $160 per day.\nAt $160 per day, Susan will miss 160 * 4 = $640 on her vacation.\n#### 640",
+        "transformed_answer": 640.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references $15 in the question as $20 wrongly, and calculates 20 * 8 = $160 per day instead of 15 * 8 = $120 per day. The subsequent related step, step 4, inherits this error and will be affected accordingly, calculating 160 * 4 = $640 instead of 120 * 4 = $480. All other steps that reference this number should still reference this number correctly except for the step referenced incorrectly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 mistakenly references the number 20 instead of 15 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Steps 4 and 5, as its subsequent related steps, reference the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "In a race with 240 Asians, 80 were Japanese, and the rest were Chinese. If the number of boys on the Chinese team was 60, how many girls were on the Chinese team?",
+        "original_solution": "If there were 80 Japanese, the number of Chinese was 240-80=160.\nSince there were 60 boys in the Chinese team, there were 160-60 = 100 girls in the Chinese team.",
+        "original_answer": 100,
+        "transformed_solution": "If there were 90 Japanese, the number of Chinese was 240-90=150.\nSince there were 60 boys in the Chinese team, there were 150-60 = 90 girls in the Chinese team.",
+        "transformed_answer": 90,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 80 in the question as 90 wrongly, and calculates 240-90=150 instead of 240-80=160. Its subsequent related step will be affected, calculating 150-60=90 instead of 160-60=100 in step 2. Please note that you should only consider one error, so step 2 still references 160 in the question correctly.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 mistakenly references the number 90 instead of 80 from the question, only resulting in an operand error in the formula, so it belongs to referencing_context_value_error. Step 2, as its subsequent step, references the wrong result of step 1, resulting in the incorrect final answer."
+    }
+]

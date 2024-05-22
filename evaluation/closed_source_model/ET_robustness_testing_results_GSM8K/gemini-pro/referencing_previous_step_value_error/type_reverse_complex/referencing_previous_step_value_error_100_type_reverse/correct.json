@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Rubert has 4 times the number of candies James has. James has 3 times the number of candies Adam has. If Adam has 6 candies, how many candies do the three of them have in total?",
+        "original_solution": "James has 3 * 6 candies = 18 candies.\nRubert has 4 * 18 candies = 72 candies.\nSo, the three of them have 6 candies + 18 candies + 72 candies = 96 candies.\n#### 96",
+        "original_answer": 96.0,
+        "transformed_solution": "James has 3 * 6 candies = 18 candies.\nRubert has 4 * 19 candies = 76 candies.\nSo, the three of them have 6 candies + 18 candies + 76 candies = 100 candies.\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 18 as 19 from step 1 and changes the multiplication 4 * 18 candies to 4 * 19 candies, resulting in 72 candies changing to 76 candies. It should be noted that step 1 in the transformed_solution <James has 3 * 6 candies = 18 candies.> should be the same as the step 1 in the original_solution <James has 3 * 6 candies = 18 candies.> and calculates its result 18 correctly. The subsequent step 3 is affected by step 2 and changes the computation from 6 + 18 + 72 to 6 + 18 + 76. You need to only consider one error of referencing, so the calculation of all steps is still correct, and there is only a single error in the transformed solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 references the wrong result of step 1, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 3, as the subsequent step of step 2, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Katy participated in a summer reading program at her local library. She read 8 books in June, twice as many in July and three fewer in August than she did in July. How many books did Katy read during the summer?",
+        "original_solution": "Katy read twice as many books in July as she did in June, so she read 2 * 8 = 16 books in July.\nShe read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.\nSo, including June, she read 8 + 16 + 13 = 37 books total\n#### 37",
+        "original_answer": 37.0,
+        "transformed_solution": "Katy read twice as many books in July as she did in June, so she read 2 * 8 = 16 books in July.\nShe read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.\nSo, including June, she read 8 + 16 + 15 = 39 books total\n#### 39",
+        "transformed_answer": 39.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 13 as 15 from step 2 and changes the correct calculation 8 + 16 + 13 = 37 to an incorrect 8 + 16 + 15 = 39. It should be noted that step 2 in the transformed_solution <She read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.> should be the same as the step 2 in the original_solution <She read three fewer books in August than she did in July, so she read 16 - 3 = 13 books in August.> and calculates its result 13 correctly. However, the mistakenly referenced number 15 in step 3 affects the final calculation but is the only error introduced, so all subsequent steps that are related to this error are calculated correctly from the erroneous result.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result of step 2, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Roger bought a house for $100,000. He was able to pay 20% down, and his parents paid off an additional 30% of the remaining balance. How much money does Roger still owe on his house?",
+        "original_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-24000=56000$\n#### 56000",
+        "original_answer": 56000.0,
+        "transformed_solution": "100000(.20)=20000$ down payment\n100000-20000=$80000 remaining\n80000(.30)=24000\n80000-25000=55000$\n#### 55000",
+        "transformed_answer": 55000.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 24000 as 25000 from step 3 and changes 80000-24000=56000$ to 80000-25000=55000$. It should be noted that step 3 in the transformed_solution <80000(.30)=24000> should be the same as the step 3 in the original_solution <80000(.30)=24000> and calculates its result 24000 correctly. No other modifications are made apart from the deliberate error in step 4, ensuring only one step error is considered and all other steps that reference their previous steps' result numbers still reference these numbers correctly. The subsequent step related to this certain step uses the erroneous result, but the calculation itself is correct relative to the introduced error, resulting in a different transformed_answer from the original_answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 references the wrong result of step 3, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 5, as the subsequent step of step 4, references the wrong result of step 4, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Lilia has 15 peaches. She sold 10 peaches to her friends for $2 each, while 4 other peaches were sold to her relatives for $1.25 each, and she left the other one for herself. How much did she earn after selling 14 peaches?",
+        "original_solution": "Lilia earned 10 x $2 = $20 for selling the peaches to her friends.\nShe also earned 4 x $1.25 = $5 for selling the peaches to her relatives.\nTherefore, Lilia earned $20 + $5 = $25 for selling 14 peaches.\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "Lilia earned 10 x $2 = $20 for selling the peaches to her friends.\nShe also earned 4 x $1.25 = $5 for selling the peaches to her relatives.\nTherefore, Lilia earned $20 + $4 = $24 for selling 14 peaches.\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references $5 as $4 from step 2 and changes $20 + $5 = $25 to $20 + $4 = $24. It should be noted that step 2 in the transformed_solution <She also earned 4 x $1.25 = $5 for selling the peaches to her relatives.> should be the same as the step 2 in the original_solution <She also earned 4 x $1.25 = $5 for selling the peaches to her relatives.> and calculates its result $5 correctly. Even though step 3 produces an incorrect sum due to the error, the subsequent step, which provides the total earnings, references the incorrect sum but calculates within its own step correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct except for the referencing error in step 3.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result of step 2, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "For a school fundraiser, Tory needs to sell 50 packs of cookies. So far, he has sold 12 packs to his grandmother, 7 packs to his uncle, and 5 packs to a neighbor. How many more packs of cookies does Tory need to sell?",
+        "original_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 24 packs = 26 more packs of cookies to reach his target\n#### 26",
+        "original_answer": 26.0,
+        "transformed_solution": "Tory sold 12 packs + 7 packs = 19 packs to his family members.\nTory sold 19 packs + 5 packs = 24 packs in total\nHe has to sell 50 packs - 20 packs = 30 more packs of cookies to reach his target\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 24 packs as 20 packs from step 2 and changes 50 packs - 24 packs = 26 more packs to 50 packs - 20 packs = 30 more packs. It should be noted that step 2 in the transformed_solution <Tory sold 19 packs + 5 packs = 24 packs in total> should be the same as the step 2 in the original_solution <Tory sold 19 packs + 5 packs = 24 packs in total> and calculates its result 24 correctly. This is the only step with an error and all other calculations are performed correctly based on the wrong result from this step.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result 20 of step 2, which only results in an error in one operand in the formula, so it belongs to referencing_previous_step_value_error. Step 4, as its subsequent step, references the wrong result of step 3, resulting in the incorrect final answer."
+    }
+]

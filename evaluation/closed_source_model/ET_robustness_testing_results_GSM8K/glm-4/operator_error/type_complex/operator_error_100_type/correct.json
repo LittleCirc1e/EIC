@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Instead of subtracting the number of peaches Brenda throws away, the solution adds them, which is an operator error. The correct operation should be to subtract 15 peaches from the 150 fresh peaches, not add them."
+    },
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. The formula used to combine the number of bars sold by Lisa and Peter incorrectly uses subtraction instead of addition, resulting in an operator error. The correct operation should be 3 1/2 * B + 4 1/2 * B, not 3 1/2 * B - 4 1/2 * B. This error affects the subsequent steps and leads to an incorrect final answer."
+    },
+    {
+        "question": "Bailey needs to buy 2 new sets of towels for the guest bathroom and 4 new sets for her master bathroom. The set of towels for the guest bathroom are $40.00 each and the master bathroom set is $50.00 each. The store is currently offering 20% off so how much will Bailey spend on towel sets?",
+        "original_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280-56 =$224.00\n#### 224",
+        "original_answer": 224.0,
+        "transformed_solution": "She needs 2 sets of guest towels that are $40.00 each so that’s 2*40 = $80.00\nShe needs 4 sets of master bath towels that are $50.00 each so that’s 4*50 = $200.00\nTogether, the towels will cost 80+200 = $280.00\nThe store is offering 20% off of her $280.00 towels so that’s 280*.20 = $56.00 discount\nHer $280.00 towels have a $56.00 discount making them 280+56 = $336.00\n#### 336",
+        "transformed_answer": 336.0,
+        "wrong_step": 5,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example converts the subtraction in step 5 into addition, changing 280-56 to 280+56 by changing - to +. As a result, the calculation in step 5 is still correct given the altered operator, but the outcome is different, leading to a changed transformed_answer. The wrong step (step 5) alters the outcome of the calculation such that Bailey will be spending more than the discounted price, which is incorrect in the context of the problem. However, all prior steps and calculations remain correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 6. Instead of subtracting the discount from the total price, the solution incorrectly adds the discount to the total price, which is an operator error. The correct operation should be 280 - 56 = $224.00, not 280 + 56 = $336.00."
+    }
+]

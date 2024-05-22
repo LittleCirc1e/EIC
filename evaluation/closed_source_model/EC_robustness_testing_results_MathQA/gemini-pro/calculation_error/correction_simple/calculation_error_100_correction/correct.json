@@ -1,0 +1,62 @@
+[
+    {
+        "question": "find 62976 ÷ ? = 123",
+        "original_solution": "123 x ? = 62976\n? = 62976 / 123\n#### 512",
+        "original_answer": 512.0,
+        "transformed_solution": "123 x ? = 62976\n? = 62976 / 120\n#### 524",
+        "transformed_answer": 524.67,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the wrong step is the final division (step 2), where it incorrectly divides 62976 by 120 instead of 123, leading to a transformed answer of approximately 524.67. The original multiplication step (step 1) remains unaffected because it precedes the incorrect division. There is only one error introduced, so it is considered a single error, and the explanation summarizes the error introduced and its impact on the subsequent step.",
+        "is_correct": "no",
+        "corrected_solution": "62976 ÷ 123 = ?",
+        "corrected_answer": 512,
+        "corrected_explanation": "The question is to find the number that, when divided by 62976, equals 123. So, we can set up the equation as 62976 ÷ ? = 123. To solve for ?, we can multiply both sides of the equation by ?, which gives us 62976 = 123 * ?. Then, we can divide both sides of the equation by 123, which gives us ? = 62976 ÷ 123. Therefore, the answer is 512."
+    },
+    {
+        "question": "the difference between c . i . and s . i . on an amount of $ 20,000 for 2 years is $ 72 . what is the rate of interest per annum ?",
+        "original_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72.\nSolving this equation gives x = 0.06.\n#### 6%",
+        "original_answer": 6.0,
+        "transformed_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 82.\nSolving this equation gives x = 0.07.\n#### 7%",
+        "transformed_answer": 7.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The example presents an error in step 3 where the difference between c . i . and s . i . is wrongly taken as $82 instead of $72. This error affects the equation to be solved and thus, results in a different calculated interest rate in step 4. Since the interest rate x calculated is based on the erroneous step 3, it gets incorrectly calculated as 0.07 (or 7%) instead of the correct 0.06 (or 6%). Previous steps remain unaffected by this error, only subsequent steps that depend on the wrong output of the altered step are influenced.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the rate of interest per annum.\nThe compound interest is 20000*(1+x)^2 - 20000.\nThe simple interest is 20000*x*2.\nThe difference between c . i . and s . i . is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72.\nSolving this equation gives x = 0.06.\n#### 6%",
+        "corrected_answer": 6,
+        "corrected_explanation": "The difference between compound interest and simple interest is 20000*(1+x)^2 - 20000 - 20000*x*2 = 72. Solving this equation gives x = 0.06."
+    },
+    {
+        "question": "140 is what percent of 40 ?",
+        "original_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 350\n#### 350%",
+        "original_answer": 350.0,
+        "transformed_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nDivide both sides by 40 to solve for x: x = (140/40) * 100\nx = 300\n#### 300%",
+        "transformed_answer": 300.0,
+        "wrong_step": 3,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the division 140/40 in step 3 has been incorrectly calculated as giving 3 instead of 3.5, which leads to the final outcome x being calculated as 300 instead of the correct answer 350. The steps prior to this error remain unaffected, while the final step where x is determined reflects the mistake from the erroneous division.",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the percent we are trying to find.\nWe can write the equation as: 140 = (x/100) * 40\nMultiply both sides by 100 to solve for x: 140 * 100 = x * 40\nDivide both sides by 40: (140 * 100) / 40 = x\nx = 350\n#### 350%",
+        "corrected_answer": 350,
+        "corrected_explanation": "The mistake in the original solution is that it divided both sides of the equation by 40 before multiplying both sides by 100. This resulted in an incorrect answer. The correct way to solve the equation is to multiply both sides by 100 first, and then divide both sides by 40."
+    },
+    {
+        "question": "A towel, when bleached, lost 20% of its length and 20% of its breadth. What is the percentage decrease in area?",
+        "original_solution": "The area of the towel is decreased by 36% because 20% + 20% + (20% x 20%) = 36%\n#### 36%",
+        "original_answer": 36.0,
+        "transformed_solution": "The area of the towel is decreased by 44% because 20% + 20% + (20% x 20%) = 44%\n#### 44%",
+        "transformed_answer": 44.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "By randomly changing the calculation result of one step in the original_solution, the percentage decrease of area was incorrectly altered to 44% instead of the correct 36%. This was done by directly changing the total percentage value without modifying the operands or the operators. The subsequent related steps and the final transformed_answer are influenced by this new incorrect percentage.",
+        "is_correct": "no",
+        "corrected_solution": "The area of the towel is decreased by 36% because (1 - 20%) x (1 - 20%) = 0.64 = 64%.\n#### 36%",
+        "corrected_answer": 36,
+        "corrected_explanation": "The percentage decrease in area is the product of the percentage decrease in length and the percentage decrease in breadth. In this case, the percentage decrease in length is 20% and the percentage decrease in breadth is also 20%. So, the percentage decrease in area is 20% x 20% = 4%. Therefore, the correct answer should be 36%."
+    }
+]

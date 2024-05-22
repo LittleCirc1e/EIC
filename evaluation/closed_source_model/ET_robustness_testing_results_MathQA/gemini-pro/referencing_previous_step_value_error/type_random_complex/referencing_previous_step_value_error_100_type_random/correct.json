@@ -1,0 +1,58 @@
+[
+    {
+        "question": "jane and thomas are among the 9 people from which a committee of 4 people is to be selected. how many different possible committees of 4 people can be selected from these 9 people if at least one of either jane or thomas is to be selected?",
+        "original_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35\nTotal possible committees of 4 including jane and thomas = 126 - 35 = 91\n#### 91",
+        "original_answer": 91.0,
+        "transformed_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35\nTotal possible committees of 4 including jane and thomas = 126 - 30 = 96\n#### 96",
+        "transformed_answer": 96.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 35 as 30 from step 2 and changes 126 - 35 = 91 to 126 - 30 = 96. It should be noted that step 2 in the transformed_solution <Total possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35> should be the same as the step 2 in the original_solution <Total possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35> and calculates its result 35 correctly. The subsequent step 3 is affected by step 2 and changes 126 - 35 = 91 to 126 - 30 = 96. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 references the wrong result 30 of step 2 instead of 35, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error. Step 4, as its subsequent step, references the result of step 3, resulting in the incorrect final answer."
+    },
+    {
+        "question": "if 8 workers can build 8 cars in 8 days, then how many days would it take 5 workers to build 5 cars?",
+        "original_solution": "The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.\nTherefore, 5 workers will also take 8 days to build 5 cars.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.\nTherefore, 5 workers will also take 10 days to build 5 cars.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 8 as 10 from step 1 and changes 'Therefore, 5 workers will also take 8 days to build 5 cars.' to 'Therefore, 5 workers will also take 10 days to build 5 cars.' It should be noted that step 1 in the transformed_solution <The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.> should be the same as the step 1 in the original_solution <The number of workers and the number of cars are equal, so the same number of workers will take the same amount of time to build the same number of cars.> and calculates its conclusion correctly. The error introduced at step 2 does not affect the wording of the rest of the solution but changes the final answer from 8 days to 10 days. You need to only consider one error of referencing, so the logical structure of the explanation is still correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 mistakenly references the result 8 of step 1 instead of 5, only resulting in an operand error in the formula, therefore it belongs to referencing_previous_step_value_error. Step 3, as its subsequent step, references the wrong result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "rice weighing 29 / 4 pounds was divided equally and placed in 4 containers. How many ounces of rice were in each container? (Note that 1 pound = 16 ounces)",
+        "original_solution": "The rice weighed 29 / 4 x 16 = 116 ounces in total.\nEach container had 116 / 4 = 29 ounces of rice.\n#### 29",
+        "original_answer": 29.0,
+        "transformed_solution": "The rice weighed 29 / 4 x 16 = 116 ounces in total.\nEach container had 120 / 4 = 30 ounces of rice.\n#### 30",
+        "transformed_answer": 30.0,
+        "wrong_step": 5,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 mistakenly references 116 as 120 from step 1 and changes 116 / 4 = 29 ounces of rice to 120 / 4 = 30 ounces of rice. It should be noted that step 1 in the transformed_solution <The rice weighed 29 / 4 x 16 = 116 ounces in total.> should be the same as the step 1 in the original_solution <The rice weighed 29 / 4 x 16 = 116 ounces in total.>, with the same correct result of 116 ounces in total. You need to only consider one error of referencing, so the calculation of step 2 is still correct with the incorrect reference value 120.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 references the wrong result 120 of step 1, which only results in an error in one operand in the formula, thus it belongs to referencing_previous_step_value_error. Step 3, as its subsequent step, references the result of step 2, resulting in the incorrect final answer."
+    },
+    {
+        "question": "In a college the ratio of the numbers of boys to the girls is 8 : 5 . if there are 120 girls, the total number of students in the college is ?",
+        "original_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*120 = 192\nThe total number of students in the college is 192+120 = 312\n#### 312",
+        "original_answer": 312.0,
+        "transformed_solution": "The total ratio of boys to girls is 8+5 = 13\nThe number of boys is 8/5*120 = 192\nThe total number of students in the college is 192+100 = 292\n#### 292",
+        "transformed_answer": 292.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 120 as 100 from step 2 and changes 192+120=312 to 192+100=292. It should be noted that step 2 in the transformed_solution <The number of boys is 8/5*120 = 192> should be the same as the step 2 in the original_solution <The number of boys is 8/5*120 = 192> and calculates its result 192 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct, and subsequent steps are affected by the erroneous result of this certain step but still calculated correctly based on the transformed values.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 references the wrong result 100 of step 1 instead of 120, which only results in an error in one operand in the formula, therefore it belongs to referencing_previous_step_value_error. Its subsequent step 3 references the result of step 2, resulting in the incorrect final answer."
+    }
+]

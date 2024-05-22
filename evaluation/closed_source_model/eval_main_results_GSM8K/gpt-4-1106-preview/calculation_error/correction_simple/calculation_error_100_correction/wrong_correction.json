@@ -1,0 +1,17 @@
+[
+    {
+        "question": "The battery charge in Mary’s cordless vacuum cleaner lasts ten minutes. It takes her four minutes to vacuum each room in her house. Mary has three bedrooms, a kitchen, and a living room. How many times does Mary need to charge her vacuum cleaner to vacuum her whole house?",
+        "original_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 25 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 25 / 10 = 2.5 times to vacuum her whole house.\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 4 * 5 = 25 instead of 4 * 5 = 20 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 20 / 10 = 2 to 25 / 10 = 2.5. The modified transformed_solution should only include the single error in the specified step, with correct calculations in the subsequent steps except for the inherited wrong result. It should be noted that only one calculation error is considered, subsequent steps will inherit its error, and the final transformed_answer is affected as well.",
+        "is_correct": "no",
+        "corrected_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house, because she cannot charge the vacuum cleaner for only half a time.\n#### 3",
+        "corrected_answer": 3,
+        "corrected_explanation": "Although the calculation of the total vacuuming time is correct (20 minutes), the number of charges cannot be a fraction. Mary needs to charge her vacuum cleaner fully each time. After the first charge, she can vacuum for 10 minutes (2 rooms), and after the second charge, she can vacuum another 10 minutes (2 more rooms). She will need a third charge to vacuum the last room."
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Carly had 42 lollipops to share with her friends. Half of the lollipops were cherry, and the rest were equal amounts of watermelon, sour apple, and grape. How many lollipops were grape?",
+        "original_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 21 were not cherry.\nOf the 21 that were not cherry, 1/3 of them were grape, so 21 lollipops / 3 = 7 grape lollipops.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 22 were not cherry.\nOf the 22 that were not cherry, 1/3 of them were grape, so 22 lollipops / 3 = 7.33 grape lollipops.\n#### 7.33",
+        "transformed_answer": 7.33,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 42 lollipops / 2 calculation in step 1 is mistakenly given as 22 instead of 21. This error affects the second step since it relies on the outcome of the first step. Therefore, the second step takes the incorrect value of 22 and proceeds with the division by 3 to find the number of grape lollipops. However, the division is still correctly calculated using the erroneous value. No other parts of the original solution, including operators or operands, are changed.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 22 lollipops / 3 = 7.33 grape lollipops instead of 22 lollipops / 3 = 7.333333333333333. The subsequent step 4 references the result of step 3, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    },
+    {
+        "question": "Jean has 60 stuffies. She keeps 1/3 of them and then gives away the rest. She gives 1/4 of what she gave away to her sister Janet. How many stuffies did Janet get?",
+        "original_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=40 stuffies\nSo Janet got 40/4=10 stuffies\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Jean kept 60/3=20 stuffies\nThat means she gave away 60-20=35 stuffies\nSo Janet got 35/4=8.75 stuffies\n#### 8.75",
+        "transformed_answer": 8.75,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly changes the calculation of the stuffies given away from 60-20=40 to 60-20=35 in step 2, impacting the final amount that Janet gets. Step 3 accordingly changes from 40/4=10 to 35/4=8.75 to take into account the erroneous total given away. All changes only affect the steps after the error, while the step before the error, which is step 1 in this case, remains unaffected. The wrong calculation result in step 2 is carried through to the subsequent step, modifying both the operands used in the calculation and the explanatory text, but the calculation process within each step is performed correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 35/4=8.75 instead of 35/4=8.75. The subsequent step 4 references the result of step 3, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

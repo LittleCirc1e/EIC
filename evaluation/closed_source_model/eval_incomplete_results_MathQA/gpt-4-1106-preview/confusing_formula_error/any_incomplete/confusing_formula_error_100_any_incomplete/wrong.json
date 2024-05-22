@@ -1,0 +1,41 @@
+[
+    {
+        "question": "the ratio between the length and the breadth of a rectangular park is 3 : 2 . if a man cycling along the boundary of the park at the speed of 12 km / hr completes one round in 9 minutes , then the area of the park ( in sq . m ) is :",
+        "original_solution": "Let the length of the park be 3x and the breadth be 2x\nPerimeter of the park = 2(3x + 2x) = 10x\nTime taken to complete one round = 9 minutes = 9/60 hours = 0.15 hours\nSpeed = Distance/Time, so Distance = Speed * Time = 12 * 0.15 = 1.8 km = 1800m\nAlso, Distance = Perimeter = 10x\nSo, 10x = 1800\nx = 180\nLength = 3x = 540m, Breadth = 2x = 360m\nArea = Length * Breadth = 540 * 360 = 194400 sq. meters\n#### 194400",
+        "original_answer": 194400.0,
+        "transformed_solution": "Let the length of the park be 3x and the breadth be 2x\nPerimeter of the park = 2(3x + 2x) = 10x\nTime taken to complete one round = 9 minutes = 9/60 hours = 0.15 hours\nSpeed = Distance/Time, so Distance = Speed * Time = 12 * 0.15 = 1.8 km = 1800m\nAlso, Distance = Perimeter = 10x\nSo, 10x = 1800\nx = 180\nLength = 3x = 540m, Breadth = 2x = 360m\n",
+        "transformed_answer": 1800.0,
+        "wrong_step": 8,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 8 confuses the formula for area with the formula for perimeter. The question asks for the area of the rectangle to be solved, which should be length multiplied by breadth, but it has been mistakenly changed to 2 times the sum of length and breadth, which represents the formula to calculate the perimeter. The formerly correct area formula 'Length * Breadth' in the original_solution has been incorrectly changed to '2(Length + Breadth)' in the transformed_solution. It should be also noted that you need to only consider one step of confusing formula error, and the other calculation processes are still correct. In this example, only step 8 mistakenly uses the formula for rectangular perimeter instead of the area, while the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution correctly apply the given ratio to determine the length and breadth of the park, use the speed and time to find the distance (which is the perimeter), and then solve for x to find the actual dimensions of the park. The calculations are correct as per the steps given."
+    },
+    {
+        "question": "If the perimeter of square region q and the perimeter of rectangular region r are equal and the sides of r are in the ratio 2 : 3 then the ratio of the area of r to the area of q",
+        "original_solution": "Let the side of the square be x.\nThe perimeter of q is 4x.\nLet the sides of rectangular r be 2y and 3y.\nThe perimeter of r is 2(2y) + 2(3y) = 10y.\nEquating the perimeters: 4x = 10y, so x = 5/2y.\nThe area of q is x^2 = (5/2y)^2 = 25/4y^2.\nThe area of r is 2y * 3y = 6y^2.\nThe ratio of the area of r to q is 6y^2 / (25/4y^2) = 24y^4 / 25y^2 = 24/25y^2.\n#### 24/25y^2",
+        "original_answer": "24/25y^2",
+        "transformed_solution": "Let the side of the square be x.\nThe perimeter of q is 4x.\nLet the sides of rectangular r be 2y and 3y.\nThe perimeter of r is 2(2y) + 2(3y) = 10y.\nEquating the perimeters: 4x = 10y, so x = 5/2y.\n",
+        "transformed_answer": "6/10y",
+        "wrong_step": 5,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here, step 5 confuses the area of a square with its perimeter. The question requires that the area of the square be equal to the square of the side length, x^2, rather than the sum of all sides 4x, which is the perimeter of the square, resulting in x^2 in the original_solution becoming 4x in the transformed_solution. This affects the subsequent related step 7, changing the ratio calculation from the original 6y^2 / (25/4y^2) to 6y^2 / 4x. The language description of step 5 <The area of q is> in the original_solution remains unchanged in the transformed_solution. In this example, only step 5 mistakenly uses the formula of square area while the other calculation processes are still correct.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided in the solution are correct. The perimeter of the square is correctly calculated as 4 times the side length x. The perimeter of the rectangle is correctly calculated as the sum of twice the length and twice the width, which are given in a 2:3 ratio as 2y and 3y, respectively. The equation to equate the perimeters of the square and the rectangle is correctly set up and solved for x in terms of y."
+    },
+    {
+        "question": "two cubes have their volumes in the ratio 1 : 27. find the ratio of their surface areas.",
+        "original_solution": "Let the side of the first cube be x and the side of the second cube be y\nVolume of the first cube = x^3\nVolume of the second cube = y^3\nGiven that x^3/y^3 = 1/27\nTaking cube root of both sides gives x/y = 1/3\nThe ratio of their surface areas is (6x^2)/(6y^2) = (x^2)/(y^2) = (1/9)/(1/3)^2 = (1/9)/(1/9) = 1:1\n#### 1:1",
+        "original_answer": "1:1",
+        "transformed_solution": "Let the side of the first cube be x and the side of the second cube be y\nVolume of the first cube = x^3\nVolume of the second cube = y^3\nGiven that x^3/y^3 = 1/27\nTaking cube root of both sides gives x/y = 1/3\n",
+        "transformed_answer": "1:27",
+        "wrong_step": 5,
+        "wrong_type": "confusing_formula_error",
+        "is_single_error": true,
+        "explanation": "Here in step 5, the formula used for the surface area of a cube, which is 6 times the square of its side (6s^2), has been mistakenly replaced with the volume formula (s^3), resulting in the transformed_solution incorrectly relating the volume to the surface area. The correct ratio of the surface areas (x^2/y^2) should be (1/3)^2 giving (1/9), as mentioned in the original_solution. However, in the transformed_solution, the surface area was mistakenly calculated using volume values, giving (6x^3)/(6y^3) instead of (6x^2)/(6y^2), resulting in a wrong ratio of 1/27 as the transformed_answer. This introduces a single step error while keeping all other steps correctly based on their corresponding formulas.",
+        "is_correct": "yes",
+        "any_explanation": "The steps provided correctly apply the cube root to the ratio of the volumes to find the ratio of the sides of the cubes."
+    }
+]

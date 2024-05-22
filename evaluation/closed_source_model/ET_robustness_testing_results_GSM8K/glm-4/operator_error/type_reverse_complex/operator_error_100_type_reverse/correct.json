@@ -1,0 +1,58 @@
+[
+    {
+        "question": "Brenda picks 250 peaches. When she sorts through them, only 60% are fresh, and Brenda has to throw 15 away for being too small. How many peaches does Brenda have left?",
+        "original_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, subtract the number Brenda throws away after the fresh count, which is 150 peaches - 15 peaches = 135 peaches.\n#### 135",
+        "original_answer": 135.0,
+        "transformed_solution": "First find how many of the peaches are fresh, which is 250 peaches * 60% = 150 peaches.\nThen, add the number Brenda throws away instead of subtracting, which is 150 peaches + 15 peaches = 165 peaches.\n#### 165",
+        "transformed_answer": 165.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation involves changing the subtraction operation to an addition operation in step 2. Instead of subtracting the 15 small peaches from the fresh peaches, the transformed solution incorrectly adds them, resulting in 150 peaches + 15 peaches = 165 peaches. This results in a wrong total number of peaches. The transformed solution only introduces a single error in the step 2 operation while all remaining calculations and logic are kept correct, which affects the final answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Instead of subtracting the number of peaches Brenda throws away, the solution adds them, which is an error in the operator of the formula. This step should be 150 peaches - 15 peaches = 135 peaches. Therefore, it belongs to operator_error. The subsequent step references the incorrect result of step 2, leading to the incorrect final answer."
+    },
+    {
+        "question": "During the most recent voyage of the Starship Conundrum, the spacecraft traveled from Planet X to Planet Y in eight hours less than twice the number of hours in a typical earth day. If the distance between these two planets is 4,000 parsecs, what was the average speed, in parsecs per hour, of the Starship Conundrum during this most recent voyage?",
+        "original_solution": "Twice the number of hours in a typical earth day is 24*2=48 hours.\nEight hours less than twice the number of hours in a typical earth day is 48-8=40 hours.\nIf the distance between these two planets is 4,000 parsecs, then the average speed on this voyage was 4000/40=100 parsecs per hour.\n#### 100",
+        "original_answer": 100.0,
+        "transformed_solution": "Twice the number of hours in a typical earth day is 24*2=48 hours.\nEight hours less than twice the number of hours in a typical earth day is 48+8=56 hours.\nIf the distance between these two planets is 4,000 parsecs, then the average speed on this voyage was 4000/56=71.43 parsecs per hour.\n#### 71.43",
+        "transformed_answer": 71.43,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the subtraction in step 2 into addition, and by changing - to +, 48-8=40 hours becomes 48+8=56 hours. This impacts the subsequent related step 3. Step 3 changes from 4000/40=100 parsecs per hour to 4000/56=71.43 parsecs per hour. It should be noted that only the operator in step 2 is incorrect, but its calculation is correct, which leads to its result being incorrect. This affects the subsequent step of using its results, but all the calculation in step 3 that is affected by step 2 is correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 incorrectly adds 8 hours instead of subtracting 8 hours from twice the number of hours in a typical earth day, which results in an incorrect calculation of the time taken for the voyage. This is an operator error since the operator (+) is used incorrectly instead of the correct operator (-). The subsequent step references this incorrect result, leading to an incorrect final answer."
+    },
+    {
+        "question": "Lisa and Peter are selling chocolate bars door to door. Lisa sold three and a half boxes of chocolate bars, and Peter sold four and a half boxes. They sold 64 chocolate bars together. How many chocolate bars are in a box?",
+        "original_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B + 4 1/2 * B = 8B = 64 bars.\nTherefore, there are B = 64 / 8 = 8 chocolate bars in a box.\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let B stand for the number of chocolate bars in a box.\nLisa sold 3 1/2 * B bars.\nPeter sold 4 1/2 * B bars.\nTogether, they sold 3 1/2 * B - 4 1/2 * B = -1B = -64 bars.\nTherefore, there are B = -64 / -1 = 64 chocolate bars in a box.\n#### 64",
+        "transformed_answer": 64.0,
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "In this example, the addition in step 3 is changed to subtraction, which is an operator error. By changing + to -, the equation 3 1/2 * B + 4 1/2 * B = 8B becomes 3 1/2 * B - 4 1/2 * B = -1B. This error results in a transformed solution that incorrectly implies that they sold a negative number of bars, which impacts the final calculation of the number of bars in a box. Subsequent steps are affected; step 4 calculates the number of chocolate bars in a box based on the incorrect total number of bars sold, but it is calculated correctly based on the erroneous quantity. The calculation after changing the operator is correct for the new erroneous context, resulting in a transformed answer that is different from the original.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 3. Instead of adding the number of bars sold by Lisa and Peter, it incorrectly uses subtraction, resulting in a negative number of bars. This is an operator error because the operator used in the formula is incorrect. The subsequent step incorrectly divides by -1 to obtain the number of bars in a box, which is influenced by the incorrect result of step 3."
+    },
+    {
+        "question": "Max works for a delivery company as a courier. During one working day, he can deliver a maximum of 35 packages. One week, Max delivered the maximum number of packages, only twice. On two other days, Max unloaded a total of 50 packages, and on one day he unloaded only one-seventh of the maximum possible daily performance. On the last two days, the sum of the packages transported was only fourth-fifth of the maximum daily performance. How many more packages could Max deliver during that week, if he would work at maximum performance?",
+        "original_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 * 35 = 28 packages.\nThat means, Max could deliver 245 - 28 - 5 - 70 - 50 = 92 more packages.\n#### 92",
+        "original_answer": 92.0,
+        "transformed_solution": "Max can deliver a maximum of 35 * 7 = 245 packages in one week.\nFor two days Max has carried the maximum number of packages, which in total means 2 * 35 = 70 packages.\nOne day Max has carried only 1/7 of the maximum capacity, that is 1/7 * 35 = 5 packages.\nOn two other days, Max delivered only 4/5 / 35 = 0.8/35, which is clearly incorrect because now we are dividing instead of multiplying.\nThis error will also affect the final calculation since the wrong result of step 3 will be used.\nThe correct should be 4/5 * 35 = 28 packages.\nIgnoring the mistake for transformation purposes and keeping the calculation correct: On two other days, Max delivered only 0.8/35 approximately equals 0 packages (since 0.8/35 is much less than one and for practical purposes the number of packages would be rounded to the nearest whole number).\nThat means, Max could deliver 245 - 0 - 5 - 70 - 50 = 120 more packages.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation occurs at step 4 where the original multiplication operation 4/5 * 35 is incorrectly changed to a division 4/5 / 35. Because the original amount in question is much larger than 1 and we are dividing something less than one (4/5) by 35, the result is significantly smaller and closer to zero. Thus, the calculation shows 0.8/35 is approximately 0 packages. This wrong operator leads to an incorrect step calculation and affects the final step where the total number of additional packages Max could deliver is calculated. All other calculations regarding this step are done correctly, albeit based on the incorrect operator change.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 4. Step 4 confuses the formula for the total number of packages Max can deliver in one week, which should be 35 packages per day * 7 days = 245 packages, but instead calculates 35 packages per day / 7 days = 35 packages. This error only affects the operator in the formula, so it belongs to operator_error. Step 5, as the subsequent step of step 4, references the wrong result of step 4, resulting in the incorrect final answer."
+    }
+]

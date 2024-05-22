@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Find two numbers whose difference is 1365, the larger number divided by the smaller gives a quotient of 6 and a remainder of 20",
+        "original_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nx = 6(269) + 20 = 1614 + 20 = 1634\nThe two numbers are 269 and 1634.\n#### 1634",
+        "original_answer": 1634.0,
+        "transformed_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nBecause the smaller number was already used in a previous calculation and the quotient is increased by 1, x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903\nThe two numbers are 269 and 1903.\n#### 1903",
+        "transformed_answer": 1903.0,
+        "wrong_step": 7,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 7 adds information that is not mentioned in the question statement <Because the smaller number was already used in a previous calculation and the quotient is increased by 1>, resulting in step 7 changing from x = 6(269) + 20 = 1614 + 20 = 1634 in the original_solution to x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903 in the transformed_solution. The added information incorrectly modifies the quotient from 6 to 7, leading to a different final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is the final calculation of the larger number x. The operands and operators of the formula are correct, but the result is incorrectly calculated as 1903 instead of the correct value of 1634. Therefore, the error belongs to calculation_error."
+    },
+    {
+        "question": "What is the sum of natural numbers between 20 and 100?",
+        "original_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nThe sum of natural numbers between 20 and 100 = 5050 - 190 = 4860\n#### 4860",
+        "original_answer": 4860.0,
+        "transformed_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nAssuming there is an error and the first natural number to consider is from 21 instead of 20, the sum of natural numbers between 21 and 100 = 5050 - (190 + 20) = 4840\n#### 4840",
+        "transformed_answer": 4840.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 incorrectly adds information that is not mentioned in the question statement <Assuming there is an error and the first natural number to consider is from 21 instead of 20>, resulting in step 3 changing from 5050 - 190 = 4860 in the original_solution to 5050 - (190 + 20) = 4840 in the transformed_solution. This alteration erroneously excludes the value 20 from the calculation, which was not part of the original question's scope. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is the subtraction of an additional 20, which is not necessary since the sum from 1 to 19 already includes the number 20. The operands and operators of the formula are correct, but the result is calculated incorrectly, so it belongs to calculation_error."
+    },
+    {
+        "question": "how many multiples of 4 are there between 16 and 112 , inclusive ?",
+        "original_solution": "The first multiple of 4 after 16 is 16, and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 16/4 = 4, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 4 + 1 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The first multiple of 4 after 16 is 20 (including the starting number: 16), and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 20/4 = 5, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 5 + 1 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds incorrect and irrelevant information that changes the first multiple of 4 from 16 to 20, which is not following the question statement as 16 itself is a multiple of 4. This results in the step 1 calculation incorrectly changing from dividing 16 by 4 to dividing 20 by 4. Consequently, the first quotient (related to the starting number) incorrectly changes from 4 to 5. This affects the final calculation, causing the result to be 1 number less than the correct answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_context_value_error",
+        "type_explanation": "The first wrong step is step 1. Step 1 incorrectly references the starting multiple of 4 as 20 instead of the correct value, which is 16, from the [Question]. This error only results in an error in one operand in the formula, so it belongs to referencing_context_value_error. The subsequent steps reference the wrong result of step 1, leading to the incorrect final answer."
+    },
+    {
+        "question": "if the selling price of 50 articles is equal to the cost price of 30 articles, then the loss or gain percent is:",
+        "original_solution": "Let the cost price of each article be $1.\nThen, cost price of 50 articles = 50 x 1 = $50\nSelling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30\nLoss = Cost price - Selling price = 50 - 30 = $20\nLoss percent = (Loss / Cost price) x 100 = (20 / 50) x 100 = 40%\n#### 40%",
+        "original_answer": 40.0,
+        "transformed_solution": "Let the cost price of each article be $1.\nThen, cost price of 50 articles = 50 x 1 = $50\nAfter a shop discount of $10, Selling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30\nLoss = Cost price - Selling price = 50 - (30 + 10) = $10\nLoss percent = (Loss / Cost price) x 100 = (10 / 50) x 100 = 20%\n#### 20%",
+        "transformed_answer": 20.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <After a shop discount of $10>, resulting in step 3 changing from Selling price of 50 articles = Cost price of 30 articles = 30 x 1 = $30 in the original_solution to Selling price of 50 articles = Cost price of 30 articles + shop discount = 30 x 1 +10 = $40 in the transformed_solution. Consequently, the error affects the calculation of loss, reducing it from $20 to $10, and the loss percent from 40% to 20%. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 3, where the selling price of 50 articles is incorrectly calculated by adding an irrelevant shop discount of $10. The correct selling price should be equal to the cost price of 30 articles, which is $30, without any additional discounts or charges. Since only the result of the calculation is incorrect while the operands and operators are correct, this error is classified as a calculation_error. The subsequent steps that reference this incorrect selling price lead to the wrong calculation of loss and loss percent."
+    },
+    {
+        "question": "a , b and c rents a pasture for rs . 957 . a put in 12 horses for 8 months , b 16 horses for 9 months and 18 horses for 6 months . how much should c pay ?",
+        "original_solution": "a paid 12 x 8 = 96 horse-months of rent\nb paid 16 x 9 = 144 horse-months of rent\nc paid 18 x 6 = 108 horse-months of rent\nThe total is 96 + 144 + 108 = 348 horse-months of rent\nC should pay 957 / 348 = 2.75 rs per horse-month\nC should pay 18 x 6 x 2.75 = 297 rs\n#### 297",
+        "original_answer": 297.0,
+        "transformed_solution": "a paid 12 x 8 = 96 horse-months of rent\nb paid 16 x 9 = 144 horse-months of rent\nc initially paid for 18 x 6 but due to price increase in feed, the cost per horse month increased by 1 rs, so c paid 18 x 6 x (2.75 + 1) = 18 x 6 x 3.75 = 405 rs\nThe total is 96 + 144 + 108 = 348 horse-months of rent\nC should actually pay 957 - (96 + 144) x 2.75 + 405 = 957 - 660 + 405 = 702 rs\n#### 702",
+        "transformed_answer": 702.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement, that due to a price increase in feed, the cost per horse month for c increased by 1 rs. This error modifies the cost calculation for c's share from 18 x 6 x 2.75 = 297 rs to 18 x 6 x (2.75 + 1) = 18 x 6 x 3.75 = 405 rs. The total payment by c, therefore, changes from 297 rs in the original_solution to 702 rs due to the addition of the extra 1 rs per horse-month cost.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 4. The operands and operators of the formula in step 4 are correct for a and b, but the result is incorrectly calculated by adding c's payment in rupees instead of calculating the remaining horse-months for c. This error belongs to calculation_error because only the result is calculated incorrectly. Step 5, as the subsequent step of step 4, references the wrong result of step 4, resulting in the incorrect final answer."
+    }
+]

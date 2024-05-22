@@ -1,0 +1,47 @@
+[
+    {
+        "question": "If one positive integer is greater than another positive integer by 3, and the difference of their cubes is 189, what is their sum?",
+        "original_solution": "Let the smaller integer be x\nThe larger integer is x + 3\nThe difference of their cubes is (x + 3)^3 - x^3 = 189\nExpanding the cubes and simplifying gives 9x^2 + 27x + 27 = 189\nDividing by 9 gives x^2 + 3x + 3 = 21\nSubtracting 21 gives x^2 + 3x - 18 = 0\nFactoring gives (x + 6)(x - 3) = 0\nSo the possible values for x are -6 and 3, but since the integers are positive, the smaller integer x is 3\nThe larger integer is 3 + 3 = 6\nTheir sum is 3 + 6 = 9\n#### 9",
+        "original_answer": 9.0,
+        "transformed_solution": "The larger integer is 3, since the difference of 6^3 and 3^3 equals 189\nSo the smaller integer is 3 - 3 = 0\nTheir sum is 3 + 0 = 3\n#### 3",
+        "transformed_answer": 3.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, step 1 has been removed. The identification of 'x' as the smaller integer in the original solution is skipped, and instead, the larger integer is directly set to 3, which is derived from the cubic root of the difference provided in the question. Since the first step is removed, all further steps reference the larger integer directly without considering the actual value of x. The wrong_step 1 in the transformed_solution is also the first step in the original_solution, which originally dealt with the correct identification of the smaller integer x. Since the error starts from step 1 in the transformed_solution and is due to missing step 1 in the original_solution, it is identified as the wrong_step. The entire solution has been transformed based on the incorrect assumption that the larger integer is 3, so the wrong_step is 1.",
+        "is_correct": "no",
+        "corrected_solution": "Let the smaller integer be x, and the larger integer be x + 3. We know that (x + 3)^3 - x^3 = 189. Expanding the cubes, we get x^3 + 9x^2 + 27x + 27 - x^3 = 189. Simplifying, we get 9x^2 + 27x - 162 = 0. Factoring, we get (9x - 18)(x + 9) = 0. Therefore, x = 2 or x = -2. Since x is a positive integer, we have x = 2. Therefore, the larger integer is x + 3 = 5. Their sum is 2 + 5 = 7.\n#### 7",
+        "corrected_answer": 7.0,
+        "corrected_explanation": "The solution incorrectly finds the larger integer to be 3 and the smaller integer to be 0, resulting in an incorrect sum of 3. The correct solution should set up an equation based on the given information and solve for the two integers, resulting in a sum of 7."
+    },
+    {
+        "question": "A train crosses a platform of 170 m in 15 sec, then crosses another platform of length 250 m in 20 sec. Find the length of the train?",
+        "original_solution": "The length of the train is the difference between the length of the train and the length of the platform.\nLet the length of the train be x.\nSpeed = Distance/Time.\nSo, Speed of the train = (x + 170)/15 m/s.\nAlso, Speed of the train = (x + 250)/20 m/s.\n(x + 170)/15 = (x + 250)/20.\n4x + 680 = 3x + 750.\nx = 750 - 680 = 70 m.\n#### 70",
+        "original_answer": 70.0,
+        "transformed_solution": "Let the length of the train be x.\nSpeed = Distance/Time.\nSo, Speed of the train = (x + 250)/20 m/s.\nAlso, Speed of the train = (x + 250)/20 m/s.\n(x + 250)/20 = (x + 250)/20.\n5x + 1250 = 4x + 1000.\nx = 1000 - 1250 = -250 m.\n#### -250",
+        "transformed_answer": -250.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The example removes step 3 and directly uses the data of the second scenario in the subsequent calculations without establishing the speed relation. In the original_solution, step 3 calculates the speed of the train from the first scenario. After deleting step 3, step 4 is repeated as it is not needed anymore because we're not comparing the two speeds. The correct comparison step (calculating the equality of the two expressions for speed) is omitted, leading to an incorrect continuation from the assumption that both platforms will have the same speed equation, which doesn't hold true and isn't logically consistent. This propagation of error goes from step 3 to 4, and from there, the incorrect speed equivalence is used to falsely deduce that x, the length of the train, is -250 meters, which is not physically possible. Thus, the wrong step is identified as step 3, where the speed equivalence should have been first established.",
+        "is_correct": "no",
+        "corrected_solution": "Let the length of the train be x.\nSpeed = Distance/Time.\nSo, Speed of the train = (x + 170)/15 m/s.\nAlso, Speed of the train = (x + 250)/20 m/s.\n(x + 170)/15 = (x + 250)/20.\n20x + 3400 = 15x + 4250.\nx = 4250 - 3400 = 850 m.\n#### 850",
+        "corrected_answer": 850,
+        "corrected_explanation": "Step 6 first makes a mistake in the calculation process, calculating 4250 - 3400 = -250 instead of 4250 - 3400 = 850, resulting in the final incorrect answer."
+    },
+    {
+        "question": "On Independence Day, bananas were to be equally distributed among the children in a school so that each child would get two bananas. On that particular day, 390 children were absent, and as a result, each child got two extra bananas. Find the actual number of children in the school.",
+        "original_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390) = 2x - 780\nTotal bananas received = 2x + 780\n2x - 780 = 2x + 780\n-780 = 780\nx = 780/2\nx = 390\n#### 390",
+        "original_answer": 780.0,
+        "transformed_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390)\n2(x-390) = 2x + 780\n2x - 780 = 2x + 780\n-780 = 780\nx = 780/2\nx = 390\n#### 390",
+        "transformed_answer": 390.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the original solution, step 2 expands the equation 2(x-390) to equal 2x - 780, which is correct, but the transformed solution skips this step. Therefore, subsequent steps need to start with the simplified form 2(x-390) and solve for x accordingly. Step 3 now directly equates 2(x-390) with 2x + 780, instead of 2x - 780 = 2x + 780. As a result, the subtraction operation in step 4 is incorrect, but it still reveals that the equation 2x - 780 = 2x + 780 cannot hold true unless the extra bananas (780) is balanced out by an equal amount on the other side of the equation (-780 = 780). Hence, in step 5, instead of equating -780 to 390, it should equate -780 to 780 to maintain this balance. Step 6 then incorrectly solves for x by dividing 780 by 2, which yields the incorrect answer of x = 390. The wrong_step is 2 because that is the first step in the transformed solution that incorrectly references the result of the deleted step (step 2 in the original solution).",
+        "is_correct": "no",
+        "corrected_solution": "Let x be the actual number of children in the school.\nTotal bananas distributed = 2(x-390)\n2(x-390) = 2x + 780\n2x - 780 = 2x + 780\n-780 - 780 = 2x - 2x\n-1560 = 0\nx = -1560/0\n#### None",
+        "corrected_answer": "None",
+        "corrected_explanation": "Step 4 makes a mistake in the calculation process, calculating -780 - 780 = 2x - 2x instead of -780 - 780 = 0. The subsequent step 5 references the result of step 4, calculating -1560/0 instead of -1560/0, resulting in the final incorrect answer."
+    }
+]

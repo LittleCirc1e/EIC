@@ -1,0 +1,62 @@
+[
+    {
+        "question": "The Dow Jones Industrial Average fell 2% today. The Dow ended the day at 8,722. What was the Dow in the morning before the markets opened?",
+        "original_solution": "Today the Dow was down 8722 / 98*2 = 178.\nSo it started at 8722 + 178 = 8900.\n#### 8900",
+        "original_answer": 8900.0,
+        "transformed_solution": "Today the Dow was down 8722 / 98*2 = 188.\nSo it started at 8722 + 188 = 8910.\n#### 8910",
+        "transformed_answer": 8910.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The transformed_solution shows an intentional wrong calculation of the first step: '8722 / 98*2 = 188' instead of the correct '8722 / 98*2 = 178'. The mistake in the first step carries over to the second step '8722 + 188 = 8910' to maintain the inherited error. The subsequent step is affected by using the erroneous result of 188; however, this step is still calculated correctly based on the new wrong input. The original step is '8722 + 178 = 8900', and the transformed solution alters the outcome to '8722 + 188 = 8910'. The transformed answer is therefore 8910, which is different from the original answer of 8900. This simulates a single miscalculation without changing any operands or operators in the formula.",
+        "is_correct": "no",
+        "corrected_solution": "8722 / 0.98 = 8910.20\n8910.20 / 0.98 = 9107.14",
+        "corrected_answer": "9107.14",
+        "corrected_explanation": "The correct process is to first find the original value by dividing the final value by 0.98, then divide the result by 0.98 again to find the value in the morning before the markets opened."
+    },
+    {
+        "question": "A person puts $5600 in a bank for two years. Each year he earns interest of 7% of the original amount deposited. How much will this person have in the bank after two years?",
+        "original_solution": "The interest that this person will get equals $5600 * 7%/year * 2 years = $784.\nAfter two years the amount found at the bank is $5600 + $784 = $6384.\n#### 6384",
+        "original_answer": 6384.0,
+        "transformed_solution": "The interest that this person will get equals $5600 * 7%/year * 2 years = $800.\nAfter two years the amount found at the bank is $5600 + $800 = $6400.\n#### 6400",
+        "transformed_answer": 6400.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The calculation of the interest in step 1 is incorrectly changed from $784 to $800. This error is then carried over to step 2, where the total amount in the bank is incorrectly calculated as $5600 + $800 = $6400 instead of the correct $5600 + $784 = $6384. The error in step 1 affects the subsequent step without changing the operands or operators of the formula, and the calculation within the formula itself remains correct.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 6400.0,
+        "corrected_explanation": "The correct calculation for the interest earned should be $5600 * 7% * 2 = $784. So, the total amount after two years should be $5600 + $784 = $6384."
+    },
+    {
+        "question": "Thomas is keeping track of the rainfall in May for his science project. On the first day, 26 cm of rain fell. On the second day, 34 cm fell. On the third day, 12 cm less than the second day fell. The average rainfall for the first three days of May is usually 140 cm across all three days, in a normal year. How much less is it raining this year than average?",
+        "original_solution": "In total 26 + 34 + 22 = 82 cm fell for three days.\nIf 140 cm is the average for the first three days, then 140 - 82 = 58 cm less than the average.\n#### 58",
+        "original_answer": 58.0,
+        "transformed_solution": "In total 26 + 34 + 22 = 72 cm fell for three days.\nIf 140 cm is the average for the first three days, then 140 - 72 = 68 cm less than the average.\n#### 68",
+        "transformed_answer": 68.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The example mistakenly calculates the total rainfall as 26 + 34 + 22 = 72 cm instead of 26 + 34 + 22 = 82 cm in step 1. This error affects the subsequent step 2, which calculates the difference from the average as 140 - 72 = 68 cm instead of 140 - 82 = 58 cm. The previous steps and unrelated parts of the solution remain unchanged, and only the steps related to the miscalculated total are affected. The calculation within the steps is still correct, but the numbers used are based on the incorrect total from step 1.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 68.0,
+        "corrected_explanation": "The solution incorrectly calculates the total rainfall for the first three days. The correct total is 26 + 34 + 22 = 82 cm. Therefore, the correct calculation for how much less it is raining this year than average is 140 - 82 = 58 cm."
+    },
+    {
+        "question": "Three local dance studios have 376 students. The first two have 110 and 135 students. How many students does the third studio have?",
+        "original_solution": "The first two studios have 110 + 135 = 245 students.\nThe remaining studio has 376 – 245 = 131 students.\n#### 131",
+        "original_answer": 131.0,
+        "transformed_solution": "The first two studios have 110 + 135 = 245 students.\nThe remaining studio has 376 – 245 = 130 students.\n#### 130",
+        "transformed_answer": 130.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 376 – 245 as 130 instead of 376 – 245 = 131 in step 2. This is the only step that has been modified, and it is a calculation error. The previous step remains unchanged because it is not affected by the error in step 2. The transformed answer is different from the original answer as required.",
+        "is_correct": "no",
+        "corrected_solution": "none",
+        "corrected_answer": 91,
+        "corrected_explanation": "The correct solution is to subtract the number of students in the first two studios from the total number of students: 376 - (110 + 135) = 131."
+    }
+]

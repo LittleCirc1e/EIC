@@ -1,0 +1,32 @@
+[
+    {
+        "question": "It takes 1 hour for refrigerated dough to come to room temperature. It takes 15 minutes to shape the dough and 2 hours to proof. The bread takes 30 minutes to bake and 15 minutes to cool. If the bakery opens at 6:00 am, what is the latest time the head baker can make it to the store to start working?",
+        "original_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 60 minutes in 1 hour so that takes him 60/60 = 1 hour\nIn total it takes 3+1 = 4 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4 hours to prep then the latest the head baker can show up is 6-4 = 2:00 am\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 70 minutes in 1 hour so that takes him 60/70 = 0.857 hours\nIn total it takes 3+0.857 = 3.857 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 3.857 hours to prep then the latest the head baker can show up is 6-3.857 = 2:08.6 am (rounding to the nearest minute gives 2:09 am)\n#### 2.15",
+        "transformed_answer": 2.15,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 falsely infers that there are 70 minutes in an hour instead of 60 minutes, thus the intermediate calculation changes from 60/60 = 1 hour in the original_solution to 60/70 = 0.857 hours in the transformed_solution. This error subsequently affects the calculation in step 4, where the total time required from start to finish changes from 3+1 = 4 hours to 3+0.857 = 3.857 hours. Finally, it impacts the result in step 5, calculating the latest time the baker can start working from 6:00 am. Instead of the original 2:00 am, the falsely transformed solution indicates it's 2:08.6 am, which rounds to 2:09 am. Therefore, the transformed answer is 2.15 hours represented in decimal format which corresponds to 2:09 am. Note that the error is only introduced once and the unrelated steps remain unaffected.",
+        "is_correct": "no",
+        "corrected_solution": "It takes 1 hour to bring the dough to room temp and 2 hours to proof the dough so that's 1+2 = 3 hours\nIt takes 15 minutes to shape the dough, 30 minutes to bake and another 15 minutes to cool for a total of 15+30+15 = 60 minutes\nThere are 60 minutes in 1 hour so that takes him 60/60 = 1 hour\nIn total it takes 3+1 = 4 hours from start to finish to make the bread\nIf the bakery opens at 6:00 am and it takes 4 hours to prep then the latest the head baker can show up is 6-4 = 2:00 am\n#### 2:00",
+        "corrected_answer": 120.0,
+        "corrected_explanation": "Step 3 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 70 minutes instead of 60 minutes, and wrongly calculates 60/70=0.857 instead of 60/60=1. This affects step 4. Step 4 erroneously calculates 3+0.857=3.857 instead of 3+1=4."
+    },
+    {
+        "question": "Liz roasts 2 16 pounds turkeys every Thanksgiving. She can only roast them 1 at a time because she has a small oven. She roasts each turkey for 15 minutes per pound. If dinner is served at 6:00 pm what is the latest time she can start roasting the turkeys?",
+        "original_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 60 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/60 = 8 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 8 hours to cook the turkeys so the latest she can start is 18 - 8 = 10:00 am\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 50 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/50 = 9.6 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 9.6 hours to cook the turkeys so the latest she can start is 18 - 9.6 = 8.4, which is 8 hours and 24 minutes, so 6:00 pm - 8 hours and 24 minutes is 9:36 am\n#### 9.6",
+        "transformed_answer": 9.6,
+        "wrong_step": 3,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 3 makes incorrect unit conversion, which means an hour wrongly has 50 minutes instead of the standard 60 minutes, resulting in 480/60 = 8 hours in the original_solution becoming 480/50 = 9.6 hours in the transformed_solution. And it affects the subsequent related step 4, changing the calculation of the latest start time. In the original solution, 18 - 8 = 10:00 am, but in transformed solution, 18 - 9.6 = 8.4, which equates to 9:36 am when converted back from military time. It should be noted that you only need to consider one step of unit conversion error, and the other calculation processes are still correct.",
+        "is_correct": "no",
+        "corrected_solution": "She bakes a turkey for 15 minutes a pound and the turkey is 16 pounds so it takes 15*16 = 240 minutes\nShe has 2 turkeys to roast and one turkey takes 240 minutes to cook so 2 turkeys will take 2*240 = 480 minutes\nThere are 60 minutes in an hour and these turkeys will take 480 minutes to cook so that's 480/60 = 8 hours\nIn military time, 6:00 pm is 18:00 hours (12 hours +6 hours) and it takes 8 hours to cook the turkeys so the latest she can start is 18 - 8 = 10, which is 10 hours, so 6:00 pm - 10 hours is 8:00 am\n#### 8",
+        "corrected_answer": 8.0,
+        "corrected_explanation": "Step 3 makes an incorrect unit conversion, mistakenly assuming that 1 hour has 50 minutes instead of 60 minutes, and wrongly calculates 480/50=9.6 instead of 480/60=8. This affects step 4. Step 4 erroneously calculates 18-9.6=8.4 instead of 18-8=10."
+    }
+]

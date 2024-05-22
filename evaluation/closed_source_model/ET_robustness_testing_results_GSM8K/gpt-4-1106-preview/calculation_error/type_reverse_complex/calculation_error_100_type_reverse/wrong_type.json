@@ -1,0 +1,30 @@
+[
+    {
+        "question": "The battery charge in Mary’s cordless vacuum cleaner lasts ten minutes. It takes her four minutes to vacuum each room in her house. Mary has three bedrooms, a kitchen, and a living room. How many times does Mary need to charge her vacuum cleaner to vacuum her whole house?",
+        "original_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 20 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 20 / 10 = 2 times to vacuum her whole house.\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "Mary has 3 + 1 + 1 = 5 rooms in her house.\nAt 4 minutes a room, it will take her 4 * 5 = 25 minutes to vacuum her whole house.\nAt 10 minutes a charge, she will need to charge her vacuum cleaner 25 / 10 = 2.5 times to vacuum her whole house.\n#### 2.5",
+        "transformed_answer": 2.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 4 * 5 = 25 instead of 4 * 5 = 20 in step 2, which affects the subsequent step 3 related to it. Step 3 inherits the error from step 2, modifying the formula 20 / 10 = 2 to 25 / 10 = 2.5. The modified transformed_solution should only include the single error in the specified step, with correct calculations in the subsequent steps except for the inherited wrong result. It should be noted that only one calculation error is considered, subsequent steps will inherit its error, and the final transformed_answer is affected as well.",
+        "is_correct": "no",
+        "pred_wrong_type": "counting_error",
+        "type_explanation": "The first wrong step is step 3. Step 3 concludes that Mary needs to charge her vacuum cleaner 2.5 times, but since she cannot charge it half a time, she actually needs to charge it 3 times to vacuum her whole house. The error is in the counting process, as it does not account for the need to round up to a whole number of charges, so it belongs to counting_error."
+    },
+    {
+        "question": "Jackson wants to go on a shopping spree, so his mom says she will give him some spending money if he does extra chores. She promises $5 per hour spent on chores. Jackson spends 2 hours vacuuming, and decides to do this twice. He also spends 0.5 hours washing dishes, and three times as long cleaning the bathroom. How much spending money has Jackson earned?",
+        "original_solution": "Jackson spent a total of 2 * 2 = 4 hours vacuuming.\nThis means he earned 4 * $5 = 20 dollars from vacuuming.\nHe earned 0.5 * $5 = 2.5 dollars from washing dishes.\nCleaning the bathroom took three times as long as the dishes, so he spent 0.5 * 3 = 1.5 hours in the bathroom.\nThis means he earned 1.5 * $5 = $7.5 from cleaning the bathroom.\nIn total, he has earned $20 + $2.5 + $7.5 = $30.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Jackson spent a total of 2 * 2 = 4 hours vacuuming.\nThis means he earned 4 * $5 = 20 dollars from vacuuming.\nHe earned 0.5 * $5 = 2.5 dollars from washing dishes.\nCleaning the bathroom took three times as long as the dishes, so he spent 0.5 * 3 = 1.5 hours in the bathroom.\nThis means he earned 1.5 * $5 = $9 from cleaning the bathroom.\nIn total, he has earned $20 + $2.5 + $9 = $31.5.\n#### 31.5",
+        "transformed_answer": 31.5,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The calculation for the money earned from cleaning the bathroom in step 4 has been modified incorrectly from $7.5 to $9, affecting the final calculation in step 6 where the total is now summed up to $31.5 instead of $30. The error is isolated in the calculation of the earnings from cleaning the bathroom only and hence is a single error. Subsequent steps related to this error inherit this mistake, leading to a different final answer than the original one.",
+        "is_correct": "no",
+        "pred_wrong_type": "operator_error",
+        "type_explanation": "The first wrong step is step 2. Step 2 incorrectly calculates the money earned from vacuuming by multiplying the number of hours by $5 without considering the hourly rate, which is an operator error. The correct operation should be 4 hours * $5/hour = $20. This error affects the subsequent step that references its result, leading to the final wrong result."
+    }
+]

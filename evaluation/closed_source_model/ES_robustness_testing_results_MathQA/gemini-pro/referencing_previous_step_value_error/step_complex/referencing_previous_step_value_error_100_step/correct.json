@@ -1,0 +1,16 @@
+[
+    {
+        "question": "a bag contains an equal number of one rupee, 50 paise and 25 paise coins respectively. If the total value is 210, how many coins of each type are there?",
+        "original_solution": "Let the number of each type of coin be x.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value is x + 0.5x + 0.25x = 210.\n1.75x = 210\nx = 120\nThere are 120 coins of each type.\n#### 120",
+        "original_answer": 120,
+        "transformed_solution": "Let the number of each type of coin be x.\nThe value of one rupee, 50 paise, and 25 paise coins is x, 0.5x, and 0.25x, respectively.\nSo, the total value is x + 0.5x + 0.25x = 210.\n1.75x = 200\nx = 200 / 1.75\nx = 114.29\nThere are 114 coins of each type.\n#### 114",
+        "transformed_answer": 114,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 210 as 200 from step 3 and changes 1.75x = 210 to 1.75x = 200. It should be noted that step 3 in the transformed_solution <So, the total value is x + 0.5x + 0.25x = 210.> should be the same as the step 3 in the original_solution <So, the total value is x + 0.5x + 0.25x = 210.> and calculates its result 210 correctly. However, in step 4 of the transformed_solution, the total value of 210 is incorrectly referenced as 200, leading to an incorrect calculation of x in subsequent steps. Step 5 and 6 still perform the calculations correctly as if step 4 was correct. You need only consider one error of referencing so that all other steps that reference this result number still reference it correctly. The transformed_answer should be different from the original_answer, which it is in this case.",
+        "is_correct": "no",
+        "pred_wrong_step": 4,
+        "step_explanation": "Step 4 first makes a mistake in the calculation process, calculating 200 / 1.75 = 114.29 instead of 210 / 1.75 = 120. The subsequent step 5 references the result of step 4, calculating 114 instead of 120, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 4, so pred_wrong_step is 4."
+    }
+]

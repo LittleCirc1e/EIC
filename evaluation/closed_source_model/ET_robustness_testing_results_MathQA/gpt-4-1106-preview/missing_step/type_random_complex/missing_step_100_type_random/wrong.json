@@ -1,0 +1,72 @@
+[
+    {
+        "question": "If 853845 bars of chocolate need to be placed in little boxes and each box can contain at most 9 bars of chocolate, how many bars of chocolate will be in the last unfilled box?",
+        "original_solution": "The number of bars of chocolate in the last unfilled box is the remainder after dividing 853845 by 9.\nSo, the number of bars of chocolate in the last unfilled box is 6.\n#### 6",
+        "original_answer": 6.0,
+        "transformed_solution": "To find the number of bars in the last box, calculate 853845 modulo 9.\n853845 modulo 9 equals 6.\n#### 6",
+        "transformed_answer": 5.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 which describes the process is removed. Instead, step 1 directly calculates the modulo operation (which is the remainder of 853845 divided by 9). However, an intentional calculation error is introduced in step 2 where the result should remain as 6 which is the actual remainder of 853845 divided by 9, but it is inaccurately changed to 5. The wrong_step is 2 since that's where the incorrect number is first introduced in the transformed_solution. The wrong_type is 'calculation_error' because the changed answer is the result of such an error. The error is a single error within the process.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly applies the modulo operation to find the remainder of bars that will be in the last unfilled box when 853845 bars of chocolate are divided by 9. Since 853845 modulo 9 equals 6, it means that the last box will contain 6 bars of chocolate, which is the correct answer."
+    },
+    {
+        "question": "What will be the fraction of 8 %?",
+        "original_solution": "To find the fraction of a percentage, you divide the percentage by 100. So, 8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "original_answer": "2/25",
+        "transformed_solution": "8% as a fraction is 8/100, which simplifies to 2/25.\n#### 2/25",
+        "transformed_answer": "4/50",
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The transformed_solution eliminates the first step which explains the process of converting a percentage to a fraction. Hence, the transformed_solution proceeds directly with converting 8% to a fraction as 8/100. However, instead of simplifying this fraction to 2/25, an intentional error is introduced in the simplification process that results in an incorrect fraction of 4/50. Since the transformation starts from the middle of the original solution (skipping the explanation about dividing by 100), the wrong_step is 1. Note that the fraction 4/50 is equivalent to 2/25, so to ensure the transformed_answer is different, we will choose 4/50.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly converts the percentage to a fraction by dividing 8 by 100 to get 8/100 and then simplifies it to 2/25 by dividing both numerator and denominator by the greatest common divisor, which is 4."
+    },
+    {
+        "question": "On the number line, if x is halfway between -4 and 4, and if y is halfway between -2 and 6, what number is halfway between x and y?",
+        "original_solution": "x is the average of -4 and 4 because (-4 + 4) / 2 = 0\ny is the average of -2 and 6 because (-2 + 6) / 2 = 2\nThe number halfway between x and y is the average of 0 and 2 because (0 + 2) / 2 = 1\n#### 1",
+        "original_answer": 1.0,
+        "transformed_solution": "y is the average of -2 and 6 because (-2 + 6) / 2 = 2\nThe number halfway between x=-4 and y=2 is the average because (-4 + 2) / 2 = -1\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, step 1 which calculates the value of x has been removed. Since step 1 referenced numbers from the question, the subsequent steps that were originally referencing the result of step 1 (which was x=0) should now reference the number -4 from the question because it's larger in magnitude compared to 4 (as per instruction to choose the largest one). The transformed solution incorrectly directly points to x=-4, changing the calculation in the remaining step to find the average between x=-4 and y=2. This leads to a new answer of -1. The wrong_step is step 2, where we first reference the deleted step's result, providing an incorrect number to calculate with.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates y as the average of -2 and 6, and then correctly finds the number halfway between x and y, which is the average of x=-4 and y=2."
+    },
+    {
+        "question": "For how many integer values of n will the value of the expression 4n + 7 be an integer greater than 1 and less than 200?",
+        "original_solution": "4n + 7 > 1\n4n > -6\nn > -1.5\n4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from -1 to 48\nThere are 50 integer values of n that satisfy the given conditions.\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "4n + 7 < 200\n4n < 193\nn < 48.25\nn can take integer values from 0 to 48\nThere are 49 integer values of n that satisfy the given conditions.\n#### 49",
+        "transformed_answer": 49.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step, which involves the inequality '4n + 7 > 1', was removed. Since the subsequent steps do not reference the result of this first step, we only need to adjust the range of integer values that n can take from '-1 to 48' to '0 to 48'. Hence, the total count of integer values changes from 50 to 49. It is step 1 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step referencing the range of n in the transformed_solution, so the wrong_step is 1.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly identifies the range of integer values for n and correctly calculates the number of integer values within this range, despite not explicitly solving the lower bound inequality."
+    },
+    {
+        "question": "A man can row upstream at 20 kmph and downstream at 60 kmph, and then find the speed of the man in still water?",
+        "original_solution": "Let the speed of the man in still water be x kmph.\nThen, speed downstream = (x + 20) kmph\nSpeed upstream = (x - 20) kmph\nAccording to the given data, x + 20 = 60 and x - 20 = 20\nSolving the equations we get, x = 40 kmph\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "According to the given data, speed downstream - speed upstream = 60 - 20\nThis implies 2 * speed of the man in still water = 40 kmph\nTherefore, the speed of the man in still water = 40 / 2\nThis gives us x = 20 kmph\n#### 20",
+        "transformed_answer": 20.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 has been removed, which initially let x be the speed of the man in still water and expressed the downstream and upstream speeds in terms of x. Therefore, the downstream and upstream speeds are now directly derived from the given data, taking the difference between the two known speeds. The subsequent calculations are based on this difference, which leads to an incorrect calculation of the speed of the man in still water. The wrong_step is 1, as it is the first step that now references the incorrect derived speeds without the setup involving x.",
+        "is_correct": "yes",
+        "pred_wrong_type": "none",
+        "type_explanation": "The solution correctly calculates the speed of the man in still water by averaging the downstream and upstream speeds. The formula used is appropriate, and the calculations are correct, leading to the correct final answer."
+    }
+]

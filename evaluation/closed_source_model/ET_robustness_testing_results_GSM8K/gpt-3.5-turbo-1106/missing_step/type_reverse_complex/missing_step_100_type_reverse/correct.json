@@ -1,0 +1,58 @@
+[
+    {
+        "question": "John buys dinner plates and silverware. The silverware cost $20. The dinner plates cost 50% as much as the silverware. How much did he pay for everything?",
+        "original_solution": "The dinner plates cost 20*.5=$10\nSo he paid 10+20=$30\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "He paid 20+20 = $40 for everything.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In this case, the first step referencing the cost of plates as half the cost of the silverware has been removed. In the original_solution, step 1 calculates the cost of the plates, which is referenced in step 2. In the transformed_solution, step 1 was eliminated, making the first step (which also happens to be step 2 in the original_solution) directly reference the cost of the silverware from the question. Because step 1 often references a number in the question, the incorrect number used in the transformed solution (the original cost of just the silverware) is also from the question. Hence, the formula changed from 10+20=$30 to 20+20=$40. The wrong_step is 1 because it is the first transformed step that incorrectly calculates the total cost by failing to account for the correct cost of the dinner plates.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 1. Step 1 directly adds up the cost of silverware and dinner plates without calculating the cost of the dinner plates, which is 50% of the cost of the silverware. So there is a missing step here to calculate the cost of the dinner plates, and this error belongs to missing_step."
+    },
+    {
+        "question": "The math questions in a contest are divided into three rounds: easy, average, and hard. There are corresponding points given for each round. That is 2, 3, and 5 points for every correct answer in the easy, average, and hard rounds, respectively. Suppose Kim got 6 correct answers in the easy; 2 correct answers in the average; and 4 correct answers in the difficult round, what are her total points in the contest?",
+        "original_solution": "Kim got 6 points/round x 2 round = 12 points in the easy round.\nShe got 2 points/round x 3 rounds = 6 points in the average round.\nShe got 4 points/round x 5 rounds = 20 points in the difficult round.\nSo her total points is 12 points + 6 points + 20 points = 38 points.\n#### 38",
+        "original_answer": 38.0,
+        "transformed_solution": "Kim got 2 points/round x 3 rounds = 6 points in the average round.\nShe got 4 points/round x 5 rounds = 20 points in the difficult round.\nSo her total points is 6*2 points + 6 points + 20 points = 32 points.\n#### 32",
+        "transformed_answer": 32.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the first step has been removed. In the original_solution, step 1 references the number 6 from the question related to the easy round, and the final step (step 4) references the result of step 1. So after deleting step 1, step 4 should change and reference the number 6 (number of correct answers in the easy round) directly from the question since it is the largest number in this case. This causes the formula to change from 12 points + 6 points + 20 points = 38 points to 6*2 points + 6 points + 20 points = 32 points, with the understanding that the easy round's score is calculated directly in the final summation. Since the deletion of step 1 affects the final summation, it is considered the first and only mistake in the transformed solution, so the wrong_step is 1.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 1. Step 1 does not calculate the points Kim got in the easy round, which is 6 points. So there is a missing step here to calculate the points Kim got in the easy round, and this error belongs to missing_step. Step 3, as the subsequent step of step 1, references the wrong result of step 1, resulting in the incorrect final answer."
+    },
+    {
+        "question": "Marcus has received a commission for as many paintings as possible. Marcus plans out his drawings so that his client can receive some of the paintings as soon as possible but it is still going to take a long time. On the first day, he paints 2 paintings. He then paints every day and each day, he paints twice as many paintings as he painted the day before. If he paints for 5 days, how many paintings will he have painted in total?",
+        "original_solution": "If Marcus creates 2 paintings on the first day, then he can paint 2 paintings * 2 = 4 paintings on the 2nd day.\nSo he paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 62",
+        "original_answer": 62.0,
+        "transformed_solution": "So Marcus paints 2 paintings * 2 = 4 paintings on the 2nd day.\nHe then paints 4 paintings * 2 = 8 paintings on the 3rd day.\nHe then paints 8 paintings * 2 = 16 paintings on the 4th day.\nAnd finally paints 16 paintings * 2 = 32 paintings on the 5th day.\nMarcus therefore has painted a total of 2 + 4 + 8 + 16 + 32 = 62 paintings.\n#### 124",
+        "transformed_answer": 124.0,
+        "wrong_step": 5,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformation, the first step has been removed. Since the first step is missing, we need to adjust the final summation step (original Step 5) to compensate for this removal. The original solution went through 5 steps to show the progression of paintings from Day 1 to Day 5. By removing the first day's 2 paintings and not adjusting the final sum to account for this absence, it results in an error in calculation. Specifically, the final sum should still be 2 + 4 + 8 + 16 + 32 = 62 as in the original solution. However, in the transformed step, the summation incorrectly doubles the calculated total to 124, which becomes the transformed_answer. Therefore, the wrong_step is the last remaining one (number 5 in the sequence of steps that have not been deleted), as it improperly adjusts for the missing step and incorrectly doubles the total count, showing a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 5. The operands and operators of the formula in step 5 are completely correct, but only the result is incorrectly calculated as 62 instead of 62, so it belongs to calculation_error."
+    },
+    {
+        "question": "Jack buys a squat rack for $2500. The barbell cost 1/10 as much. How much did he pay for everything?",
+        "original_solution": "The barbell cost 2500/10=$250\nSo he paid 2500+250=$2750 for everything\n#### 2750",
+        "original_answer": 2750.0,
+        "transformed_solution": "He paid 2500+2500=$5000 for everything\n#### 5000",
+        "transformed_answer": 5000.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "In the transformed_solution, step 1 from the original_solution, which calculates the price of the barbell, has been removed. Instead of calculating the reduced cost of the barbell, the transformed_solution incorrectly uses the full price of the squat rack. The subsequent step directly adds the squat rack cost to itself without considering the correct barbell cost. After deleting step 1, the subsequent step does not reference the correct number for the barbell from step 1 but instead incorrectly uses the squat rack cost, resulting in a transformed_solution with an incorrect total cost calculation, and the formula changes from 2500+250=$2750 to 2500+2500=$5000. Since the result of the deleted step 1 is no longer included and there is a direct jump to referencing the squat rack cost again, the erroneous calculation starts at wrong_step 1 in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 1. Step 1 does not calculate the cost of the barbell, which is necessary to find the total cost of everything. So there is a missing step here to calculate the cost of the barbell, and this error belongs to missing_step. Step 2, as the subsequent step of step 1, references the wrong result of step 1, resulting in the incorrect final answer."
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "question": "For every 100 additional people that board a spaceship, its speed is halved. If the speed of the spaceship with 200 people on board is 500km per hour, what is its speed in km/hr when there are 400 people on board?",
+        "original_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 125 km/hr. So for the total of 200 additional people, its speed is 125 km/hr\n#### 125",
+        "original_answer": 125.0,
+        "transformed_solution": "For every addition of 100 people added the speed is halved so for the first 100 people added its speed is 1/2 * 500 km/hr = 250 km/hr.\nFor another addition of 100 people its speed is also halved, 1/2 * 250 km/hr = 100 km/hr. So for the total of 200 additional people, its speed is 100 km/hr\n#### 100",
+        "transformed_answer": 100.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates 1/2 * 250 km/hr as 100 km/hr instead of 125 km/hr in step 2. This results in a transformed answer of 100 km/hr, which is different from the original answer of 125 km/hr. The error in step 2 affects the final result, but does not impact the calculation in step 1 as it is correct and unrelated to the error made in step 2.",
+        "is_correct": "no",
+        "any_explanation": "The solution incorrectly calculated the speed of the spaceship when it had 200 people on board. The speed should be 250 km/hr, not 100 km/hr. As a result, the final answer is also incorrect."
+    },
+    {
+        "question": "Carly had 42 lollipops to share with her friends. Half of the lollipops were cherry, and the rest were equal amounts of watermelon, sour apple, and grape. How many lollipops were grape?",
+        "original_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 21 were not cherry.\nOf the 21 that were not cherry, 1/3 of them were grape, so 21 lollipops / 3 = 7 grape lollipops.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Of her 42 lollipops, half were cherry, so 42 lollipops / 2 = 22 were not cherry.\nOf the 22 that were not cherry, 1/3 of them were grape, so 22 lollipops / 3 = 7.33 grape lollipops.\n#### 7.33",
+        "transformed_answer": 7.33,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this example, the 42 lollipops / 2 calculation in step 1 is mistakenly given as 22 instead of 21. This error affects the second step since it relies on the outcome of the first step. Therefore, the second step takes the incorrect value of 22 and proceeds with the division by 3 to find the number of grape lollipops. However, the division is still correctly calculated using the erroneous value. No other parts of the original solution, including operators or operands, are changed.",
+        "is_correct": "no",
+        "any_explanation": "The answer should be 7 instead of 7.33, because the question asks the number of lollipops that were grape, so the answer should be an integer."
+    },
+    {
+        "question": "James takes 20 units per semester at community college.  If each unit costs $50 how much does he pay for 2 semesters?",
+        "original_solution": "He pays 20*50=$1000 per semester\nSo he pays 1000*2=$2000\n#### 2000",
+        "original_answer": 2000.0,
+        "transformed_solution": "He pays 20*50=$1000 per semester\nSo he pays 1000*2=$1900\n#### 1900",
+        "transformed_answer": 1900.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution contains a calculation error in step 2, where the correct calculation of 1000*2 should result in $2000, but instead it incorrectly shows $1900. There are no other errors introduced in the transformation process, so this is a single error. The incorrect result from step 2 does not affect the previous step (step 1), and there are no subsequent steps that depend on the output of step 2. Thus, only step 2 is impacted by the erroneous calculation.",
+        "is_correct": "no",
+        "any_explanation": "The answer should be 2000 instead of 1900."
+    },
+    {
+        "question": "Wendy just started working at an Italian restaurant. She polished 50 small glasses and 10 more large glasses than small glasses. How many glasses did she polish?",
+        "original_solution": "She polished 50 + 10 = 60 large glasses.\nTherefore, Wendy polished 50 + 60 = 110 glasses.\n#### 110",
+        "original_answer": 110.0,
+        "transformed_solution": "She polished 50 + 10 = 70 large glasses.\nTherefore, Wendy polished 50 + 70 = 120 glasses.\n#### 120",
+        "transformed_answer": 120.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the calculation in the first step is changed incorrectly from 50 + 10 = 60 to 50 + 10 = 70. This is a calculation error where the sum of 50 and 10 is wrongly taken as 70 instead of the correct 60. The subsequent step inherits this error, changing the sum from 50 + 60 = 110 to 50 + 70 = 120, thus affecting the result of the total calculation. This single error impacted the final result without changing any operands or operators from the original solution. The calculation within the subsequent step is correct, but it incorrectly uses the erroneous result from the previous step.",
+        "is_correct": "no",
+        "any_explanation": "The solution is incorrect. The step 'She polished 50 + 10 = 70 large glasses.' is incorrect because it incorrectly adds 10 to 50 to get the number of large glasses, when in fact the number of large glasses polished is 10 more than the number of small glasses. To find the total number of glasses polished, one needs to add the number of small glasses to the number of large glasses."
+    }
+]

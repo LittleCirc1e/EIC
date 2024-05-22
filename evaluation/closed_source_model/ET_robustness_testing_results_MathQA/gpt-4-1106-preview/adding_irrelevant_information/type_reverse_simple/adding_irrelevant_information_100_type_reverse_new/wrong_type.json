@@ -1,0 +1,72 @@
+[
+    {
+        "question": "Find two numbers whose difference is 1365, the larger number divided by the smaller gives a quotient of 6 and a remainder of 20",
+        "original_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nx = 6(269) + 20 = 1614 + 20 = 1634\nThe two numbers are 269 and 1634.\n#### 1634",
+        "original_answer": 1634.0,
+        "transformed_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nBecause the smaller number was already used in a previous calculation and the quotient is increased by 1, x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903\nThe two numbers are 269 and 1903.\n#### 1903",
+        "transformed_answer": 1903.0,
+        "wrong_step": 7,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 7 adds information that is not mentioned in the question statement <Because the smaller number was already used in a previous calculation and the quotient is increased by 1>, resulting in step 7 changing from x = 6(269) + 20 = 1614 + 20 = 1634 in the original_solution to x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903 in the transformed_solution. The added information incorrectly modifies the quotient from 6 to 7, leading to a different final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The error occurs when the solution incorrectly states that because the smaller number was already used in a previous calculation and the quotient is increased by 1. This is not how the division process works. The quotient should not be increased by 1; instead, the original equation x = 6y + 20 should be used to find the value of x after finding y."
+    },
+    {
+        "question": "What is the sum of natural numbers between 20 and 100?",
+        "original_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nThe sum of natural numbers between 20 and 100 = 5050 - 190 = 4860\n#### 4860",
+        "original_answer": 4860.0,
+        "transformed_solution": "The sum of natural numbers between 1 and 100 = 1 + 2 + 3 + ... + 100 = (100*101)/2 = 5050\nThe sum of natural numbers between 1 and 19 = 1 + 2 + 3 + ... + 19 = (19*20)/2 = 190\nAssuming there is an error and the first natural number to consider is from 21 instead of 20, the sum of natural numbers between 21 and 100 = 5050 - (190 + 20) = 4840\n#### 4840",
+        "transformed_answer": 4840.0,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 incorrectly adds information that is not mentioned in the question statement <Assuming there is an error and the first natural number to consider is from 21 instead of 20>, resulting in step 3 changing from 5050 - 190 = 4860 in the original_solution to 5050 - (190 + 20) = 4840 in the transformed_solution. This alteration erroneously excludes the value 20 from the calculation, which was not part of the original question's scope. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The error is in referencing the result of the previous step. The solution incorrectly assumes that the sum of natural numbers from 1 to 19 is the same as the sum from 1 to 20 minus 20. The correct approach is to subtract the sum of numbers from 1 to 19 from the sum of numbers from 1 to 100 to get the sum of numbers from 20 to 100."
+    },
+    {
+        "question": "how many multiples of 4 are there between 16 and 112 , inclusive ?",
+        "original_solution": "The first multiple of 4 after 16 is 16, and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 16/4 = 4, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 4 + 1 = 25\n#### 25",
+        "original_answer": 25.0,
+        "transformed_solution": "The first multiple of 4 after 16 is 20 (including the starting number: 16), and the last multiple of 4 before 112 is 112.\nDivide the endpoints by 4: 20/4 = 5, 112/4 = 28\nSubtract 1 from 28 because it is inclusive: 28 - 5 + 1 = 24\n#### 24",
+        "transformed_answer": 24.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds incorrect and irrelevant information that changes the first multiple of 4 from 16 to 20, which is not following the question statement as 16 itself is a multiple of 4. This results in the step 1 calculation incorrectly changing from dividing 16 by 4 to dividing 20 by 4. Consequently, the first quotient (related to the starting number) incorrectly changes from 4 to 5. This affects the final calculation, causing the result to be 1 number less than the correct answer.",
+        "is_correct": "no",
+        "pred_wrong_type": "referencing_previous_step_value_error",
+        "type_explanation": "The first multiple of 4 after 16 is incorrectly stated as 20, when in fact 16 itself is a multiple of 4. This error affects the subsequent calculation of the number of multiples."
+    },
+    {
+        "question": "a cistern which could be filled in 9 hours takes 1 hour more to be filled owing to a leak in its bottom. If the cistern is full, in what time will the leak empty it?",
+        "original_solution": "The rate of the leak is 1/9 - 1/10 = 1/90 because 1 / 9 - 1 / (9+1) = 1 / 90\nIt will take 90 hours to empty the cistern because 1 / (1 / 90) = 90\n#### 90",
+        "original_answer": 90.0,
+        "transformed_solution": "Assuming there is an additional leakage that doubles the rate of the existing leak, the new rate of the leaks combined is 1/9 - 1/10 + 1/90 = 2/90 because 1 / 9 - 1 / (9+1) + (1 / 90) = 2 / 90\nIt will take 45 hours to empty the cistern with the increased leakage because 1 / (2 / 90) = 45\n#### 45",
+        "transformed_answer": 45.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <Assuming there is an additional leakage that doubles the rate of the existing leak>, which mistakenly introduces another leak increasing the rate of leakage. This modification changes the rate of leakage from 1/90 to 2/90. As a result, the cistern will empty in half the time, changing the answer from 90 hours to 45 hours in the transformed_solution. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The operands and operators of the formula in the first wrong step are correct, but the result is calculated incorrectly. The correct calculation for the new rate of the leaks combined should be 1/9 - 1/10 = 1/90, not 2/90."
+    },
+    {
+        "question": "wink , inc . follows a certain procedure that requires two tasks to be finished independently in order for a job to be done . on any given day , there is a 2 / 3 probability that task 1 will be completed on time , and a 3 / 5 probability that task 2 will be completed on time . on a certain day , what is the probability that task 1 will be completed on time , but task 2 will not ?",
+        "original_solution": "The probability that task 1 will be completed on time is 2/3.\nThe probability that task 2 will not be completed on time is 1 - 3/5 = 2/5\nThe probability that task 1 will be completed on time, but task 2 will not is 2/3 * 2/5 = 4/15\n#### 4/15",
+        "original_answer": "4/15",
+        "transformed_solution": "The probability that task 1 will be completed on time is 2/3.\nBecause of an unexpected event, the probability that task 2 will be affected and thus will not be completed on time is now 1 - (3/5 - 1/10) = 1/2.\nThe probability that task 1 will be completed on time, but task 2 will not, considering the new circumstance, is 2/3 * 1/2 = 1/3\n#### 1/3",
+        "transformed_answer": "1/3",
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, introducing an unexpected event that affects the probability of task 2 not being completed on time. This changes the probability calculation from the original (1 - 3/5) to a new probability (1 - (3/5 - 1/10)), resulting in 1 - 1/2 = 1/2. The transformed Step 3 uses this new probability to calculate the final result, which is now 1/3 instead of the original 4/15. The only calculation process that should be affected by this change is Step 2.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The operands in the formula to calculate the new probability for task 2 not being completed on time are correct, but the result of the calculation is incorrect. The correct calculation should be 1 - (3/5) = 2/5, not 1/2."
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "question": "Dexter has five pigs. Each one eats 4 pounds of feed, twice a day. If Dexter ordered 300 pounds of feed, how many pounds of feed is left after a week?",
+        "original_solution": "In a day, one pig consumes 4 x 2 = 8 pounds of feed.\nIn a day, five pigs consume 8 x 5 = 40 pounds.\nIn a week, five pigs consume 40 x 7 = 280 pounds.\nSo, there are 300 - 280 = 20 pounds of feed left.\n#### 20",
+        "original_answer": 20.0,
+        "transformed_solution": "In a day, one pig consumes 4 + 2 = 6 pounds of feed.\nIn a day, five pigs consume 6 x 5 = 30 pounds.\nIn a week, five pigs consume 30 x 7 = 210 pounds.\nSo, there are 300 - 210 = 90 pounds of feed left.\n#### 90",
+        "transformed_answer": 90.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 1 to addition, turning 4 x 2 = 8 pounds into 4 + 2 = 6 pounds of feed consumed by one pig a day. This affects the subsequent related step 2, step 3, and step 4. Step 2 changes from 8 x 5 = 40 pounds to 6 x 5 = 30 pounds, step 3 changes from 40 x 7 = 280 pounds to 30 x 7 = 210 pounds, and step 4 changes from 300 - 280 = 20 pounds to 300 - 210 = 90 pounds of feed left. It should be noted that only the operator in step 1 is incorrect, and its calculation after the operator change is correct. This leads to a different result in step 1, which affects the subsequent steps that use the result of step 1, but all calculations in the affected steps are correct.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "My 2 cats had 3 female kittens and 2 male kittens. How many cats do I have in total?",
+        "original_solution": "There are 3+2 = 5 kittens\nIf you originally had 2 cats then you now have 2+5 = 7 cats in total\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "There are 3*2 = 6 kittens\nIf you originally had 2 cats then you now have 2+6 = 8 cats in total\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition in step 1 into multiplication, converting 3+2=5 to 3*2=6 by changing + to *. The result from step 1 affects step 2, thus changing the total from 2+5=7 to 2+6=8. It should be noted that only the operator in step 1 is changed, but the calculation after changing the operator is done correctly. Subsequent steps inherit the result of the modified step 1, but calculations in those steps are correct.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Paul lives in a 5th story apartment. He makes 3 trips out from and back to his apartment throughout the day each day of a week. How many feet does he travel vertically in total over the week if each story is 10 feet tall?",
+        "original_solution": "Since Paul makes 3 trips per day, and each trip involves going both down and up, this means he travels the full vertical distance of his apartment complex 3*2=6 times a day.\nSince there are 7 days in a week, this means he makes this trip 6*7=42 times a week.\nSince each story is 10 feet tall, that means with 5 stories he travels 5*10=50 feet each trip.\nSince he made 42 trips of 50 feet each, this means he traveled 50*42=2100 feet in a week.\n#### 2100",
+        "original_answer": 2100.0,
+        "transformed_solution": "Since Paul makes 3 trips per day, and each trip involves going both down and up, this means he travels the full vertical distance of his apartment complex 3/2=1.5 times a day.\nSince there are 7 days in a week, this means he makes this trip 1.5*7=10.5 times a week.\nSince each story is 10 feet tall, that means with 5 stories he travels 5*10=50 feet each trip.\nSince he made 10.5 trips of 50 feet each, this means he traveled 50*10.5=525 feet in a week.\n#### 525",
+        "transformed_answer": 525.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example replaces multiplication with division in step 1, changing '3*2=6' to '3/2=1.5'. The result of this incorrect operator change is then used in step 2, changing '6*7=42' to '1.5*7=10.5'. Since step 3 correctly calculates the height of one trip, step 4 correctly multiplies the height of one trip by the incorrect number of total trips, changing '50*42=2100' to '50*10.5=525'. This change affects subsequent steps, but all the calculations after the wrong step are correctly performed based on the wrong intermediate result.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Max is planning a vacation for 8 people. The Airbnb rental costs $3200. They also plan on renting a car that will cost $800. If they plan on splitting the costs equally, how much will each person’s share be?",
+        "original_solution": "The total cost for the vacation rentals will be $3200 + $800 = $4000.\nThe cost per person will be $4000 / 8 = $500.\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "The total cost for the vacation rentals will be $3200 - $800 = $2400.\nThe cost per person will be $2400 / 8 = $300.\n#### 300",
+        "transformed_answer": 300.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the addition operator to a subtraction operator in step 1 of the original solution, which results in a change of the total cost calculation from $3200 + $800 = $4000 to $3200 - $800 = $2400. The subsequent step that calculates the cost per person now uses the transformed total cost to give a new answer of $2400 / 8 = $300 instead of the original $500. The calculation itself is correct, however the transformed total cost is not, due to the operator change in step 1. The error is singular and isolated to the operator change.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "Kate's hair is half as long as Emily's hair. Emily’s hair is 6 inches longer than Logan's hair. If Logan hair is 20 inches, how many inches is Kate’s hair?",
+        "original_solution": "Emily’s hair is 20-6 = 14 inches long.\nKate's hair 14/2= 7 inches long.\n#### 7",
+        "original_answer": 7.0,
+        "transformed_solution": "Emily’s hair is 20+6 = 26 inches long.\nKate's hair 26/2= 13 inches long.\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the subtraction in the original solution step 1 to addition, turning '20-6 = 14 inches' into '20+6 = 26 inches'. Subsequently, step 2, which calculates the length of Kate's hair based on the length of Emily's hair, now uses the incorrect figure from step 1 but does the calculation correctly. Thus, '14/2= 7 inches' is transformed into '26/2= 13 inches'. The transformed answer is therefore different from the original answer due to the introduced operator error in step 1.",
+        "label": "no",
+        "is_correct": "yes"
+    },
+    {
+        "question": "A mother is making her own bubble mix out of dish soap and water for her two-year-old son. The recipe she is following calls for 3 tablespoons of soap for every 1 cup of water. If the container she hopes to store the bubble mix in can hold 40 ounces of liquid, and there are 8 ounces in a cup of water, how many tablespoons of soap should she add to the container (assuming that the soap itself doesn't count towards the capacity of the container)?",
+        "original_solution": "The 40-ounce container can hold 40/8 = 5 cups of water.\nThis means that 5*3 = 15 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 15",
+        "original_answer": 15.0,
+        "transformed_solution": "The 40-ounce container can hold 40*8 = 320 cups of water.\nThis means that 320*3 = 960 tablespoons of soap should be used, since each cup of water requires 3 tablespoons of soap.\n#### 960",
+        "transformed_answer": 960.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This case changes the division operator in step 1 of the original solution to a multiplication operator, which results in an incorrect calculation of 40*8=320 instead of the correct 40/8=5. This incorrect value is used in step 2 to incorrectly multiply by the 3 tablespoons of soap per cup, resulting in a mistaken value of 960 tablespoons of soap. The error is only in the operator change in step 1; the calculations are correct based on the wrong assumption, but the result is incorrect. The subsequent step involves correct arithmetic based on the prior step's result, leading to an incorrect final answer.",
+        "label": "no",
+        "is_correct": "yes"
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "question": "of the final grades received by the students in a certain math course , 1 / 5 are a  s , 1 / 4 are b  s , 1 / 2 are c  s , and the remaining 40 grades are d  s . what is the number of students in the course ?",
+        "original_solution": "Let the total number of students be x\nNumber of As = (1/5)x\nNumber of Bs = (1/4)x\nNumber of Cs = (1/2)x\nNumber of Ds = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n800 = 20x - 19x = x\n#### 800",
+        "original_answer": 800.0,
+        "transformed_solution": "Number of As = (1/5)x\nNumber of Bs = (1/4)x\nNumber of Cs = (1/2)x\nNumber of Ds = 40\n(1/5)x + (1/4)x + (1/2)x + 40 = x\nMultiplying by 20 to clear fractions gives 4x + 5x + 10x + 800 = 20x\n19x + 800 = 20x\n1600 = 2(20x - 19x) = 2x\n#### 1600",
+        "transformed_answer": 1600.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The intermediate step \"Let the total number of students be x\" was removed. This step set the variable for the total number of students which is then used in all subsequent steps. After deleting this step, we must remember that x is still representing the total number of students. The transformed solution directly begins with the calculation of the number of As, Bs, and Cs as proportions of x, continuing with the inclusion of the 40 Ds. The last step should still solve for x, but instead of setting x to 800, as in the original, it was incorrectly doubled to make the final transformed_answer incorrect at 1600. All the previous steps still properly calculated the parts of x, but the final step introduced an arbitrary multiplication by 2 to inflate the final answer to a different value from the original solution. The mistake in the final step showing an incorrect conclusion is made possible by the removal of the explicative initial declaration, so the wrong_step is 4, which is the altered conclusion step in the transformed_solution.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 4. Step 4 does not convert the number of students in the course from x to a number, but directly adds up the number of students in the course (x) and the number of Ds (40). So there is a missing step here to convert the number of students in the course from x to a number, and this error belongs to missing_step. Step 5, as the subsequent step of step 4, references the wrong result of step 4, resulting in the incorrect final answer."
+    },
+    {
+        "question": "a large box contains 15 small boxes and each small box contains 25 chocolate bars. how many chocolate bars are in the large box?",
+        "original_solution": "There are 15 small boxes * 25 chocolate bars in each small box = 375 chocolate bars in the large box.\n#### 375",
+        "original_answer": 375.0,
+        "transformed_solution": "There are 15 small boxes with 25 chocolate bars each = 15 * 25 = 25 chocolate bars in the large box.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this case, we intentionally introduced a calculation error in the transformation process. The original step involves multiplying 15 small boxes by 25 chocolate bars per box, which is correct and gives 375 chocolate bars. However, in the transformed solution, we retain the multiplication of the numbers but mistakenly keep only one factor of 25, instead of multiplying it by 15 to get the total. This results in an incorrect number of chocolate bars (25 instead of 375). The erroneous result is carried on from the first step, making it the wrong_step. Since the error is due to an incorrect calculation rather than the omission of a step or concept, we categorize it as a calculation error.",
+        "is_correct": "no",
+        "pred_wrong_type": "calculation_error",
+        "type_explanation": "The first wrong step is step 1. The operands and operators of the formula in step 1 are completely correct, but only the result is incorrectly calculated as 25 instead of 375, so it belongs to calculation_error."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nThe total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n2p = 28 + 2p\nThen, after simplifying we have 0 = 28, which is not possible.\n#### -1",
+        "transformed_answer": -1.0,
+        "wrong_step": 3,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "This example removes intermediate step 4. In the original_solution, step 4 references the total number of legs and heads, and the relationship between them stated in the question, setting up the equation 4d + 2p = 28 + 2(d + p). Step 5 references the result of step 4 and simplifies the equation. Therefore, after deleting step 4, step 5 directly attempts to use the elimination method incorrectly without establishing the proper equation from the relationship of legs and heads; it incorrectly concludes that 2p can be canceled out from both sides without considering the dogs' count, leading us to a nonsensical simplification 0 = 28, which implies that the system of equations has no solution. This step also incorrectly references numbers from the question itself. Since this is nonsense and does not provide a solution, the transformed_answer is set to -1 to indicate an error in the process. It is step 3 in the transformed_solution, which is also step 4 in the original_solution, that serves as the first step removed in the transformed_solution, so the wrong_step is 3.",
+        "is_correct": "no",
+        "pred_wrong_type": "missing_step",
+        "type_explanation": "The first wrong step is step 3. Step 3 does not subtract 2p from both sides of the equation, which is a necessary step to solve for p. So there is a missing step here to subtract 2p from both sides of the equation, and this error belongs to missing_step. Step 4, as the subsequent step of step 3, references the wrong result of step 3, resulting in the incorrect final answer."
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "question": "A store decides to shut down and sell all of its inventory. They have 2000 different items which would normally retail for $50. They are offering an 80% discount and manage to sell 90% of the items. They owed $15000 to their creditors. How much money do they have left after the sale?",
+        "original_solution": "They sold 2000*.9=1800 items\nThey offered a 50*.8=$40 discount\nThat means that each item sold for 50-40=$10\nSo they made 1800*10=$18,000\nSo they had 18,000-15,000=$3,000 leftover\n#### 3000",
+        "original_answer": 3000.0,
+        "transformed_solution": "They sold 2000*.9=1800 items\nThey offered a 50/.8=$62.50 discount\nThat means that each item sold for 50-62.50=$-12.50\nSo they made 1800*-12.50=$-22,500\nSo they had -22,500-15,000=$-37,500 leftover\n#### -37500",
+        "transformed_answer": -37500.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example turns the multiplication in step 2 into division, changing 50*.8=$40 to 50/.8=$62.50 by changing * to /. The subsequent steps 3, 4, and 5 inherit this result. Step 3 changes from 50-40=$10 to 50-62.50=$-12.50, creating an erroneous negative value for the selling price. Consequently, step 4 changes from 1800*10=$18,000 to 1800*-12.50=$-22,500, resulting in a negative sales total. This negative revenue leads to step 5 wherein the store's leftover money turns from a positive value (18,000-15,000=$3,000) to a negative value (-22,500-15,000=$-37,500), suggesting the store is in debt after the sale. The mistake lies only in step 2's operator, but its calculation is correct, affecting all the subsequent steps that rely on its flawed result. The calculations in the subsequent steps are correctly executed with respect to the altered step 2 result.",
+        "is_correct": "no",
+        "corrected_solution": "They sold 2000*.9=1800 items\nThey offered a 50/.8=$62.50 discount\nThat means that each item sold for 50-62.50=$-12.50\nSo they made 1800*-12.50=$-22,500\nSo they had -22,500+15,000=$-7,500 leftover\n#### -7500",
+        "corrected_answer": -7500.0,
+        "corrected_explanation": "The operator in step 4 encounters an error and should use addition instead of subtraction. It miscalculates -22,500-15,000=-37,500 instead of -22,500+15,000=-7,500, resulting in the final erroneous result."
+    },
+    {
+        "question": "Maiya has two sisters. The first sister is twice as old as Maiya. The first sister is 1 year younger than Maiya. Their average age is 5. How old is Maiya?",
+        "original_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X - (X-1) is equivalent to 16 = 4X\nMaiya is 4 years old because 16 / 4 = 4\n#### 4",
+        "original_answer": 4.0,
+        "transformed_solution": "Their total age is 15 because 3 x 5 = 15\n15 - X - 2X + (X-1) is equivalent to 16 = 2X\nMaiya is 8 years old because 16 / 2 = 8\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The error is introduced by changing the subtraction of (X - 1) to addition in the second step. This turns the equation 15 - X - 2X - (X-1) = 16 = 4X into 15 - X - 2X + (X-1) = 16 = 2X, incorrectly simplifying the ages. All other aspects of the solution are correct, including the arithmetic in the transformed steps. This leads to a different incorrect result for Maiya's age.",
+        "is_correct": "no",
+        "corrected_solution": "Let Maiya's age be X, then the first sister's age is X+1 and the second sister's age is 2X+1. Their total age is 3X+2, and their average age is (3X+2)/3. Since their average age is 5, we have (3X+2)/3 = 5. Solving for X, we get X = 8.\nTherefore, Maiya is 8 years old.\n#### 8",
+        "corrected_answer": 8.0,
+        "corrected_explanation": "The operator in step 2 encounters an error, and should use subtraction instead of addition. It miscalculates 15-X-2X+(X-1) to be 16=2X instead of 15-X-2X+(X-1) to be 16=4X. This affects step 3. Step 3 miscalculates 16/2=8 instead of 16/4=4."
+    },
+    {
+        "question": "Adam teaches 50 students a year. How many students will Adam teach in 10 years if in the first year he only teaches 40 students?",
+        "original_solution": "Adam will teach 50 * 9 = 450 students in 9 years.\nSo, in 10 years Adam will teach 450 + 40 = 490 students.\n#### 490",
+        "original_answer": 490.0,
+        "transformed_solution": "Adam will teach 50 / 9 = 5.56 students in 9 years.\nSo, in 10 years Adam will teach 5 + 40 = 45 students.\n#### 45",
+        "transformed_answer": 45.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication operator in step 1 to a division operator by changing 50 * 9 to 50 / 9, which incorrectly calculates the number of students Adam will teach in 9 years as 5.56. The second step is updated to add this incorrect value to the 40 students taught in the first year, deriving 5 + 40 = 45. Thus, the operator change in step 1 leads to a wrong step in subsequent calculations, but other aspects of the solution, such as the adherence to the order of operations and the correctness of arithmetic, are maintained.",
+        "is_correct": "no",
+        "corrected_solution": "Adam will teach 50 students in 9 years.\nSo, in 10 years Adam will teach 50 + 40 = 90 students.\n#### 90",
+        "corrected_answer": 90.0,
+        "corrected_explanation": "The operator in step 2 encounters an error and should use addition instead of division. It miscalculates 50/9=5.56 instead of 50+40=90, resulting in the final erroneous result."
+    }
+]

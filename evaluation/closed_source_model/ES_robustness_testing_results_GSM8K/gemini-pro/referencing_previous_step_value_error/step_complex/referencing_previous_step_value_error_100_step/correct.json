@@ -1,0 +1,16 @@
+[
+    {
+        "question": "Louise is an artist and needs to apply a coat of varnish to her latest paintings. Usually it takes 7 minutes for the coat of varnish to dry on one painting. However, today she is using a new varnish and it takes 12 minutes for the coat to dry. How much longer will it take for the coat of varnish on 6 paintings with the new varnish to dry as it would with the old varnish?",
+        "original_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-42=30 more minutes\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes\nWith the new varnish, all 6 paintings would be dry in 12*6=72 minutes\nWith the new varnish, it will take 72-40=32 more minutes\n#### 32",
+        "transformed_answer": 32.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 mistakenly references 42 as 40 from step 1 and changes 72-42=30 more minutes to 72-40=32 more minutes. It should be noted that step 1 in the transformed_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> should be the same as the step 1 in the original_solution <Usually, the varnish on all 6 paintings would be dry in 7*6=42 minutes> and calculates its result 42 correctly. You need to only consider one error of referencing, so the calculation of all steps is still correct.",
+        "is_correct": "no",
+        "pred_wrong_step": 3,
+        "step_explanation": "Step 3 first makes a mistake in the calculation process, calculating 7*6=40 instead of 7*6=42. The subsequent step 4 references the result of step 3, calculating 72-40=32 instead of 72-42=30, resulting in the final incorrect answer. The first step to make a mistake, which is the root cause of the mistake, is step 3, so pred_wrong_step is 3."
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "question": "A bathroom has 10 6 inch tiles along its width and 20 6 inch tiles along its length.  What is the square footage of the bathroom?",
+        "original_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 12 inches in a foot and it’s 60 inches wide so it is 60/12 = 5 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*5 = 50 sq feet\n#### 50",
+        "original_answer": 50.0,
+        "transformed_solution": "There are 10 tiles that are 6 inches long running the width of the bathroom so it is 10*6 = 60 inches long\nThere are 10 inches in a foot (incorrect unit conversion) and it’s 60 inches wide so it is 60/10 = 6 feet wide\nThere are 20 tiles that are 6 inches long running the length of the bathroom so it’s 20*6 = 120 inches long\nThere are 12 inches in a foot and it’s 120 inches long so it is 120/12 = 10 feet wide\nThe square footage is l x w so the bathroom has 10*6 = 60 sq feet\n#### 60",
+        "transformed_answer": 60.0,
+        "wrong_step": 2,
+        "wrong_type": "unit_conversion_error",
+        "is_single_error": true,
+        "explanation": "Here, step 2 introduces an incorrect unit conversion, asserting that there are 10 inches in a foot instead of 12 inches. This mistake affects the width calculation of the bathroom, which transforms from 60 inches wide equals to 5 feet wide (60/12) in the original_solution to 60 inches wide equals to 6 feet wide (60/10) in the transformed_solution. Consequently, the square footage calculation in the final step is also impacted, changing from 50 sq feet (10*5) in the original_solution to 60 sq feet (10*6) in the transformed_solution. All other calculation steps remain accurate.",
+        "is_correct": "no",
+        "pred_wrong_type": "unit_conversion_error",
+        "type_explanation": "The solution incorrectly converts 10 inches to 1 foot, which should be 12 inches to 1 foot."
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "question": "Find two numbers whose difference is 1365, the larger number divided by the smaller gives a quotient of 6 and a remainder of 20",
+        "original_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\nx = 6(269) + 20 = 1614 + 20 = 1634\nThe two numbers are 269 and 1634.\n#### 1634",
+        "original_answer": 1634.0,
+        "transformed_solution": "Let the larger number be x and the smaller number be y.\nx - y = 1365\nx = 6y + 20\nSubstitute the value of x from the second equation into the first equation: 6y + 20 - y = 1365\n5y + 20 = 1365\n5y = 1345\ny = 269\n",
+        "transformed_answer": 1903.0,
+        "wrong_step": 7,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 7 adds information that is not mentioned in the question statement <Because the smaller number was already used in a previous calculation and the quotient is increased by 1>, resulting in step 7 changing from x = 6(269) + 20 = 1614 + 20 = 1634 in the original_solution to x = (6+1)(269) + 20 = 7(269) + 20 = 1883 + 20 = 1903 in the transformed_solution. The added information incorrectly modifies the quotient from 6 to 7, leading to a different final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly sets up the equations and solves for the smaller number y, which is 269. However, the final answer is incomplete and should also include the larger number x, which is 6y + 20 = 6*269 + 20 = 1614."
+    },
+    {
+        "question": "In an election, candidate A got 80% of the total valid votes. If 15% of the total votes were declared invalid and the total number of votes is 560000, find the number of valid votes polled in favor of candidate?",
+        "original_solution": "Number of invalid votes = 15% of 560000 = 0.15 * 560000 = 84000\nNumber of valid votes = 560000 - 84000 = 476000\nNumber of valid votes polled in favor of candidate A = 80% of 476000 = 0.80 * 476000 = 380800\n#### 380800",
+        "original_answer": 380800,
+        "transformed_solution": "Number of invalid votes = 15% of 560000 = 0.15 * 560000 = 84000\nNumber of valid votes = 560000 - 84000 = 476000\nBecause 2000 extra votes were discovered and were all for candidate A, Number of valid votes polled in favor of candidate A = 80% of 476000 + 2000 = 0.80 * 476000 + 2000 = 380800 + 2000 = 382800\n",
+        "transformed_answer": 382800,
+        "wrong_step": 3,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 3 adds information that is not mentioned in the question statement <Because 2000 extra votes were discovered and were all for candidate A>, resulting in step 3 changing from 80% of 476000 = 0.80 * 476000 = 380800 in the original_solution to 80% of 476000 + 2000 = 0.80 * 476000 + 2000 = 380800 + 2000 = 382800 in the transformed_solution, thus modifying the final result. The addition is embedded within the existing step and directly affects the total votes for candidate A, which is not consistent with the information provided in the original question.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly calculates the number of invalid votes, the number of valid votes, and the number of valid votes polled in favor of candidate A."
+    },
+    {
+        "question": "A bag contains 3 blue and 5 white marbles. One by one, marbles are drawn out randomly until only two are left in the bag. What is the probability that out of the two, one is white and one is blue?",
+        "original_solution": "First, calculate the probability of drawing one white and one blue marble from the bag.\nThe probability of drawing a white marble first is 5/8, and the probability of drawing a blue marble next is 3/7.\nThe probability of drawing a blue marble first is 3/8, and the probability of drawing a white marble next is 5/7.\nAdd the two probabilities together: (5/8 * 3/7) + (3/8 * 5/7) = 15/56 + 15/56 = 30/56 = 15/28\n#### 15/28",
+        "original_answer": "15/28",
+        "transformed_solution": "First, calculate the probability of drawing one white and one blue marble from the bag, considering there is an additional red marble in the bag making it 3 blue, 5 white, and 1 red marble.\n",
+        "transformed_answer": "5/12",
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement by supposing there is an additional red marble in the bag, which changes the total number of marbles and affects the probabilities calculated. As a result, the probability calculations in the transformed_solution incorrectly account for the total number of marbles as 9 instead of 8, and thus the answer is altered from 15/28 in the original_solution to 5/12 in the transformed_solution. It should be noted that even though this change affects multiple probabilities calculated later in the solution, it originates from a single point of error in the initial assumption.",
+        "is_correct": "yes",
+        "any_explanation": "The solution correctly adjusts the number of marbles in the bag to account for the additional red marble, and sets up the calculation for the probability of drawing one white and one blue marble."
+    }
+]

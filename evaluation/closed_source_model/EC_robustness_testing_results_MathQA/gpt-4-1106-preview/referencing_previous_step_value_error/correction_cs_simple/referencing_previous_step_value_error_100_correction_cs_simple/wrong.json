@@ -1,0 +1,113 @@
+[
+    {
+        "question": "of 3 numbers , the third is 4 times the second and the second is two times the first . if their average is 165 , the smallest of the 3 numbers is :",
+        "original_solution": "Let the first number be x.\nThe second number is 2x.\nThe third number is 4(2x) = 8x.\nThe average of the three numbers is (x + 2x + 8x)/3 = 11x/3 = 165\n11x = 495\nx = 45\nThe smallest number is 45.\n#### 45",
+        "original_answer": 45.0,
+        "transformed_solution": "Let the first number be x.\nThe second number is 2x.\nThe third number is 4(2x) = 8x.\nThe average of the three numbers is (x + 2x + 8x)/3 = 11x/3 = 165\n11x = 495\nx = 40\nThe smallest number is 40.\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 6,
+        "wrong_type": "calculational_error",
+        "is_single_error": true,
+        "explanation": "Step 6 in the transformed_solution mistakenly calculates the value of x as 40 instead of 45, altering 11x = 495 to x = 40. It should be noted that step 5 in the transformed_solution <11x/3 = 165> should be the same as the step 5 in the original_solution <11x/3 = 165> and calculates the result as 495 correctly. This calculational error affects only step 6 and the final answer provided in step 7, without affecting any other step that might have referred to the value of x in a multi-step process. All other steps are calculated correctly, maintaining a single error within the solution.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies the first number as x, the second as 2x, and the third as 8x. It then correctly calculates the average of the three numbers as 11x/3 and sets it equal to 165 to solve for x. The smallest number, x, is correctly found to be 40."
+    },
+    {
+        "question": "The product of three consecutive numbers is 990. Then the sum of the smallest two numbers is?",
+        "original_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\n(n-9)(n^2+12n+110) = 0\nn-9=0 or n^2+12n+110=0\nn=9 or n=(-12±√(12^2-4(1)(110)))/2(1)\nn=9 or n=(-12±√(-356))/2\nn=9 or n=(-12±√356i)/2\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 19\n#### 19",
+        "original_answer": 19,
+        "transformed_solution": "Let the three consecutive numbers be n, n+1, and n+2\nTheir product is n(n+1)(n+2) = 990\nn(n+1)(n+2) = 990\nn(n^2+2n+n+2) = 990\nn^3+3n^2+2n = 990\nn^3+3n^2+2n-990 = 0\nWe are looking for real integers that satisfy the equation\nTesting through integers, n=9 works since 9(10)(11) = 990\nTherefore, the sum of the smallest two numbers is 9 + (9+1) = 18\n#### 18",
+        "transformed_answer": 18,
+        "wrong_step": 6,
+        "wrong_type": "calculation_simple_arithmetic_error",
+        "is_single_error": true,
+        "explanation": "A simple arithmetic error occurred in the sixth step of the transformed_solution where the sum of the smallest two consecutive numbers was incorrectly reported as 18 due to a basic addition mistake (9 + (9+1) = 18 instead of 19). The correct sum 19 was replaced by the incorrect sum 18 in step 6. All other steps correctly reference the results of previous steps as required, and only one error was introduced in this transformation process, thus adhering to the requirement of a single error.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies that the three consecutive numbers n, n+1, and n+2, when multiplied together, equal 990. The solution then correctly finds that n=9 satisfies the equation n(n+1)(n+2) = 990. Finally, the solution correctly adds the smallest two numbers, 9 and 10, to get the sum of 19. Therefore, the solution is correct."
+    },
+    {
+        "question": "0.014 × 0.014 = ?",
+        "original_solution": "0.014 × 0.014 = 0.000196\n#### 0.000196",
+        "original_answer": 0.000196,
+        "transformed_solution": "0.014 × 0.014 = 0.00196\n#### 0.00196",
+        "transformed_answer": 0.00196,
+        "wrong_step": 1,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "Step 1 in the transformed_solution incorrectly calculates 0.014 × 0.014 as 0.00196 instead of 0.000196. It should be noted that this mistake is a calculation error, not a referencing error, as it incorrectly multiplies the numbers giving an erroneous result. Since this is the only intended error, all steps that would have followed from the correct result still assume that the mistaken result (0.00196) is the basis for subsequent steps, even though in this case, no such steps exist beyond the initial calculation.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The multiplication is correct. When multiplying two decimal numbers, you multiply them as if they were integers and then count the total number of decimal places in both numbers. In this case, 0.014 has three decimal places, so the total number of decimal places in the product should be 3 + 3 = 6. Multiplying 14 by 14 gives 196, and placing the decimal point six places from the right gives 0.00196, which is the correct answer."
+    },
+    {
+        "question": "Sum of two numbers is 20. Two times the first exceeds by 5 from the three times the second. Find the numbers.",
+        "original_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\nx = 13\nThe two numbers are 13 and 7.\n#### 13, 7",
+        "original_answer": [
+            13,
+            7
+        ],
+        "transformed_solution": "Let the two numbers be x and y.\nAccording to the given conditions, we have x + y = 20 and 2x = 3y + 5.\nFrom the first equation, we get x = 20 - y.\nSubstitute the value of x in the second equation: 2(20 - y) = 3y + 5\n40 - 2y = 3y + 5\n40 - 5 = 3y + 2y\n35 = 5y\ny = 7\nSubstitute the value of y in x + y = 20 to find x: x + 7 = 20\nx = 20 - 7\nx = 15\nThe two numbers are 15 and 7.\n#### 15, 7",
+        "transformed_answer": [
+            15,
+            7
+        ],
+        "wrong_step": 9,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 9 mistakenly references 20 - 7 as 15 from step 8 and changes x + 7 = 20 to x = 15 instead of x = 13. It should be noted that step 8 in the transformed_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> should be the same as the step 8 in the original_solution <Substitute the value of y in x + y = 20 to find x: x + 7 = 20> and calculates its result 20 correctly. Because only one error of referencing is considered, all other steps that follow step 8 still reference the number correctly and are calculated based on the erroneous result from step 9. Therefore, despite the wrong reference at step 9, the subsequent step 10 uses the new incorrect value of x from step 9 to calculate correctly within the context of the transformed solution. The transformed_answer differs from the original_answer as required.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the system of equations derived from the problem statement. The first equation x + y = 20 is used to express x in terms of y. This expression is then substituted into the second equation 2x = 3y + 5, leading to the correct simplification and solution for y. After finding y, the value is substituted back into the first equation to find x, resulting in the correct pair of numbers (15, 7) that satisfy both original conditions."
+    },
+    {
+        "question": "A sum fetched a total simple interest of Rs. 4016.25 at the rate of 5% p.a. in 5 years. What is the sum?",
+        "original_solution": "Simple interest = (P * R * T) / 100\n4016.25 = (P * 5 * 5) / 100\n4016.25 * 100 = 25P\n401625 = 25P\nP = 401625 / 25\nP = 16065\n#### 16065",
+        "original_answer": 16065.0,
+        "transformed_solution": "Simple interest = (P * R * T) / 100\n4016.25 = (P * 5 * 5) / 100\n4016.25 * 100 = 25P\n402625 = 25P\nP = 402625 / 25\nP = 16105\n#### 16105",
+        "transformed_answer": 16105.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references 4016.25 as 4026.25 from step 3 and changes 4016.25 * 100 = 25P to 402625 = 25P. It should be noted that step 3 in the transformed_solution <4016.25 * 100 = 25P> should be the same as the step 3 in the original_solution <4016.25 * 100 = 25P> and calculates its result 401625 correctly. Steps 5 and 6 are affected by the erroneous result of step 4 but still perform the calculations correctly based on the incorrect value introduced at step 4. You need to only consider one error of referencing, so the calculation of all steps is still correct, except for the intentional error introduced at the wrong step.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the formula for simple interest to find the principal amount (P). The steps follow the correct mathematical operations, and the final answer is correctly calculated as Rs. 16105."
+    },
+    {
+        "question": "p runs 20 % faster than q so p gives q a 300 meter head start. if the race ends in a tie, how far (in meters) did p run in the race?",
+        "original_solution": "Let the distance run by q be x meters\nThen, distance run by p = x + 300 meters\nAs per the given condition, the time taken by both p and q to run the same distance is the same.\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, (x + 300) = 120% of x\n(x + 300) = 1.2x\n0.2x = 300\nx = 1500\nSo, distance run by p = x + 300 = 1500 + 300 = 1800 meters\n#### 1800",
+        "original_answer": 1800.0,
+        "transformed_solution": "Let the distance run by q be x meters\nThen, distance run by p = x + 300 meters\nAs per the given condition, the time taken by both p and q to run the same distance is the same.\nThe speed of p is 20% faster than the speed of q, or 120% of the speed of q.\nTherefore, (x + 300) = 120% of x\n(x + 300) = 1.2x\n0.2x = 300\nx = 1500\nSo, distance run by p = x + 300 = 1500 + 300 = 2000 meters\n#### 2000",
+        "transformed_answer": 2000.0,
+        "wrong_step": 9,
+        "wrong_type": "arithmetic_error",
+        "is_single_error": true,
+        "explanation": "Step 9 mistakenly adds 300 to 1500 as 2000 instead of the correct sum of 1800. It should be noted that step 8 in the transformed_solution <x = 1500> should be the same as the step 8 in the original_solution <x = 1500> and calculates its result 1500 correctly. The subsequent step 9 should be affected by step 8 and retain the correct calculation method by adding x to 300, but only the number to be added to 300 was changed from 1500 to 1500 incorrectly resulting in 2000 instead of the correct 1800. All other arithmetic in the solution is applied correctly with only the arithmetic operation in step 9 being incorrect, and this is the only step with a mistake, leading to a different transformed answer from the original answer.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the information that p runs 20% faster than q, which means p's speed is 120% of q's speed. The equation (x + 300) = 1.2x is set up correctly to represent the distances run by p and q, where x is the distance run by q. Solving for x gives 1500 meters, and adding the 300-meter head start gives the correct total distance run by p as 1800 meters. The final answer is correctly calculated."
+    },
+    {
+        "question": "3 consecutive even numbers are such that thrice the first number exceeds double the third number by 7 . what is the third number ?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 15\nx = 15\nThe third number is x + 4 = 15 + 4 = 19\n#### 19",
+        "original_answer": 19.0,
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4\n3x = 2(x+4) + 7\n3x = 2x + 8 + 7\n3x = 2x + 13\nx = 13\nThe third number is x + 4 = 13 + 4 = 17\n#### 17",
+        "transformed_answer": 17.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_previous_step_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 mistakenly references the number 15 as 13 and incorrectly changes 3x = 2x + 8 + 7 to 3x = 2x + 13. It should be noted that step 3 in the transformed_solution <3x = 2x + 8 + 7> should be the same as step 3 in the original_solution <3x = 2x + 8 + 7> and calculates its result correctly. Step 4 affects the subsequent steps 5 and 6 related to it. Step 5 incorrectly determines x as 13 (instead of the correct 15), and step 6 incorrectly calculates the third number as 17 (instead of the correct 19). The remaining calculations for steps 5 and 6 are correct based on the erroneous value obtained in step 4. Since only one error needs to be considered, all other steps that reference this result number still reference this number correctly.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly sets up the equation based on the given information that thrice the first number exceeds double the third number by 7. The algebraic manipulation to solve for x is done correctly, and the third number is accurately calculated as x + 4. Therefore, the final answer of 17 for the third number is correct."
+    }
+]

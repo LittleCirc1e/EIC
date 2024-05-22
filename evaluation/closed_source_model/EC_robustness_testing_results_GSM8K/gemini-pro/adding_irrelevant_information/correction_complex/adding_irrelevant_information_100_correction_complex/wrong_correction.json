@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Mom went shopping at the market. She left with €55. She bought 2 packs of bananas for €4 each, pears for €2, asparagus for €6 and finally a chicken for €11. How much money does Mom have left?",
+        "original_solution": "Mom bought things that cost: 4 + 4 + 2 + 6 + 11 = €27 .\nSo she has 55 – 27 = €28 left\n#### 28",
+        "original_answer": 28.0,
+        "transformed_solution": "Mom bought things that cost: 4 + 4 + 2 + 6 + 11 = €27.\nBecause she also bought a loaf of bread for €3, so she has 55 - 27 - 3 = €25 left.\n#### 25",
+        "transformed_answer": 25.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <because she also bought a loaf of bread for €3>, resulting in step 2 changing from 55 – 27 = €28 in the original_solution to 55 - 27 - 3 = €25 in the transformed_solution. The transformed_answer becomes €25 instead of the original €28 as a result of this additional expense. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "corrected_solution": "Mom bought things that cost: 4 + 4 + 2 + 6 + 11 = €27.\nBecause she also bought a loaf of bread for €3, so she has 55 - 27 - 3 = €25 left.\n#### 25",
+        "corrected_answer": 22.0,
+        "corrected_explanation": "The solution incorrectly adds a loaf of bread that costs €3 to the total cost of the items Mom bought. The correct total cost of the items Mom bought is 4 + 4 + 2 + 6 + 11 = €27, and after subtracting this amount from the €55 she started with, she has €28 left, not €25."
+    },
+    {
+        "question": "A town is trying to clear litter from its streets. The council pays for adding 14 trash cans to the streets and also pays for adding twice as many trash cans to the back of stores. How many trash cans has the town paid for?",
+        "original_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nThe town has therefore added 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans.\n#### 42",
+        "original_answer": 42.0,
+        "transformed_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nBecause the council decided to add an extra 10% for future maintenance to the original number of street trash cans, the town has therefore added (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans.\n#### 43.4",
+        "transformed_answer": 43.4,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <Because the council decided to add an extra 10% for future maintenance to the original number of street trash cans>, resulting in step 2 changing from 14 trash cans on the streets + 28 trash cans at the back of stores = 42 trash cans in the original_solution to (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans in the transformed_solution. The additional 10% of the street trash cans (which is 1.4) has been added to the original 14, making it 15.4 before adding the 28 trash cans at the back of stores. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "is_correct": "no",
+        "corrected_solution": "At the back of stores, the town has paid for 14 trash cans on the streets * 2 = 28 trash cans.\nBecause the council decided to add an extra 10% for future maintenance to the original number of street trash cans, the town has therefore added (14 + 10% of 14) trash cans on the streets + 28 trash cans at the back of stores = 15.4 + 28 = 43.4 trash cans.\n#### 44",
+        "corrected_answer": 44.0,
+        "corrected_explanation": "Step 3 first makes a mistake in the calculation process, calculating 14 + 10% of 14 = 15.4 instead of 14 + 10% of 14 = 15.4. The subsequent step 4 references the result of step 3, calculating 15.4 + 28 = 43.4 instead of 15.4 + 28 = 44, resulting in the final incorrect answer."
+    }
+]

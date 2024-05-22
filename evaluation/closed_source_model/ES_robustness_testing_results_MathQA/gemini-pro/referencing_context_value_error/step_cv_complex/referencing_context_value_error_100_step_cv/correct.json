@@ -1,0 +1,44 @@
+[
+    {
+        "question": "A sports equipment store sold ping pong rackets for a total of $735. If the average (arithmetic mean) price of a pair of rackets is $9.8, how many pairs were sold?",
+        "original_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.8 = 75.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "The number of pairs sold is the total sales divided by the price per pair, so 735 / 9.5 = 77.36842105263158.\n#### 77.36842105263158",
+        "transformed_answer": 77.36842105263158,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 9.8 in the question as 9.5 wrongly, and calculates 735 / 9.5 instead of 735 / 9.8. The subsequent related step will be affected by the erroneous result of this step but is still calculated correctly based on the incorrect premise. All other steps that reference this number (9.8) still reference it correctly.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <If the average (arithmetic mean) price of a pair of rackets is $9.8,>. It erroneously references 9.8 as 9.5, causing the formula to calculate 735 / 9.5 instead of 735 / 9.8. This affects the final result. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+        "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+        "original_answer": 810.0,
+        "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 8000 x 9% x 1 year = 8000 x 0.09 x 1\nInterest = $720\n#### 720",
+        "transformed_answer": 720.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <Alex takes a loan of $9,000 to buy a used truck>. It erroneously references 9,000 as 8,000, causing the formula to calculate 8000 x 9% x 1 year instead of 9000 x 9% x 1 year. This affects subsequent step 2 that references its result. Step 2 incorrectly calculates 8000 x 0.09 x 1 = 720 instead of 9000 x 0.09 x 1 = 810. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    },
+    {
+        "question": "a train moves with a speed of 108 kmph . its speed in metres per second is",
+        "original_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n108 km/h x 5/18 = 30 m/s.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n100 km/h x 5/18 = 27.77 m/s.\n#### 27.77",
+        "transformed_answer": 27.77,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 108 in the question as 100 wrongly, and calculates 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. The subsequent steps inherit this incorrect number but calculate the conversion correctly with the erroneous value given. Please note that you should only consider this one error, and all other steps that reference the number 108 km/h still reference it correctly except for the incorrect step 1.",
+        "is_correct": "no",
+        "pred_wrong_step": 1,
+        "step_explanation": "Step 1 first makes an error in referencing the number of the question description <a train moves with a speed of 108 kmph>. It erroneously references 100 instead of 108, causing the formula to calculate 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. This affects the final answer. The first step to make a mistake, which is the root cause of the mistake, is step 1, so pred_wrong_step is 1."
+    }
+]

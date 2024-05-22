@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+        "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+        "original_answer": 810.0,
+        "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\n",
+        "transformed_answer": 720.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the formula for simple interest, which is Interest = Principal x Rate x Time. Since the rate is given as an annual rate and the question asks for the annual interest, the Time factor is 1 year. Therefore, the calculation of the annual interest is correct as per the formula."
+    },
+    {
+        "question": "If it is assumed that 50 percent of those who receive a questionnaire by mail will respond and 300 responses are needed, what is the minimum number of questionnaires that should be mailed?",
+        "original_solution": "Let x be the number of questionnaires mailed.\n0.50x = 300\nx = 300 / 0.50 = 600\n#### 600",
+        "original_answer": 600.0,
+        "transformed_solution": "Let x be the number of questionnaires mailed.\n",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, and calculates 0.60x=300 instead of 0.50x=300. Its subsequent related step will be affected, calculating x = 300 / 0.60 = 500 instead of 300 / 0.50 = 600 in step 2. Please note that you should only consider one error, so step 2 still references 300 in the question correctly, only the incorrect percentage is carried over in the calculation.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly identifies that if 50 percent of the questionnaires are expected to be responded to, and 300 responses are needed, then the minimum number of questionnaires that should be mailed is double the number of responses needed. Since the solution process is not shown, we assume that the correct calculation is 300 responses / 0.50 response rate = 600 questionnaires to be mailed. The final answer is not explicitly stated, but the process is correct."
+    },
+    {
+        "question": "a train moves with a speed of 108 kmph . its speed in metres per second is",
+        "original_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n108 km/h x 5/18 = 30 m/s.\n#### 30",
+        "original_answer": 30.0,
+        "transformed_solution": "First we convert the speed from km/h to m/s by multiplying by 5/18 because 1 km/h = 5/18 m/s.\n",
+        "transformed_answer": 27.77,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 108 in the question as 100 wrongly, and calculates 100 km/h x 5/18 = 27.77 m/s instead of 108 km/h x 5/18 = 30 m/s. The subsequent steps inherit this incorrect number but calculate the conversion correctly with the erroneous value given. Please note that you should only consider this one error, and all other steps that reference the number 108 km/h still reference it correctly except for the incorrect step 1.",
+        "is_correct": "yes",
+        "corrected_solution": "none",
+        "corrected_answer": "none",
+        "corrected_explanation": "The solution correctly applies the conversion factor from kilometers per hour to meters per second, which is 5/18. Multiplying 108 km/h by 5/18 gives the correct speed in meters per second."
+    }
+]
