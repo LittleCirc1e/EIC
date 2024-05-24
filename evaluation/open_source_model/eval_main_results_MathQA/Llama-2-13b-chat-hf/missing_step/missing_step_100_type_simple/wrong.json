@@ -1,0 +1,14 @@
+[
+    {
+        "question": "a car traveled 462 miles per tankful of gasoline on the highway and 336 miles per tankful of gasoline in the city. if the car traveled 15 fewer miles per gallon in the city than on the highway, how many miles per gallon did the car travel in the city?",
+        "original_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\nSo, 336 =  x * y\n462 = (x + 15) * y\nWe can divide the second equation by the first equation to get:\n462 / 336 = (x + 15) * y / (x * y)\n1.375 = (x + 15) / x\n0.375 = 15 / x\n15 / 0.375 = x\n40 = x\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "Let x be the number of miles per gallon in the city.\nThen x + 15 is the number of miles per gallon on the highway\n462 = (x + 15) * y\nWe can solve for y in terms of x using the highway mileage:\ny = 462 / (x + 15)\nUsing the city mileage equation, we substitute y:\n336 = x * (462 / (x + 15))\n1.375 = 462 / (x + 15)\n1.375x + 20.625 = 462\n1.375x = 462 - 20.625\n1.375x = 441.375\nx = 441.375 / 1.375\nx = 321\n#### 321",
+        "transformed_answer": 321.0,
+        "wrong_step": 4,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Here, the intermediate step 4 '462 / 336 = (x + 15) * y / (x * y)' has been removed. The subsequent steps that originally referred to the result of step 4 now reference x and x + 15, from the equations established in steps 2 and 3. We first solve for y directly from the highway equation: 'y = 462 / (x + 15)'. Then we substitute y into the city equation '336 = x * y' and rearrange the equation to solve for x. Each step thereafter has been changed to reflect this new approach. The transformed solution has a logical error introduced by incorrectly simplifying and manipulating the equation, which results in an incorrect transformed answer of 321 miles per gallon instead of the correct 40 miles per gallon. Since the error first occurs at the now incorrect step 4 (originally step 5), the wrong_step is 4.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is that the [Solution] correctly identifies the wrong type as 'referencing_context_value"
+    }
+]

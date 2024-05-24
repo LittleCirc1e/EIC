@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Steve bought $25 worth of groceries. He bought a gallon of milk for $3, two boxes of cereal for $3.5 each, 4 bananas for $.25 each, four apples that cost $.5 each and a number of boxes of cookies. The cookies cost twice as much per box as the gallon of milk. How many boxes of cookies did he get?",
+        "original_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 13 on everything but the cookies because 3 + 7 + 1 + 2 = 13\nHe spent $12 on cookies because 25 - 13 = 12\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2 boxes of cookies because 12 / 6 = 2\n#### 2",
+        "original_answer": 2.0,
+        "transformed_solution": "He spent $7 on cereal because 2 x 3.5 = 7\nHe spent $1 on bananas because 4 x .25 = 1\nHe spent $2 on apples because 4 x .5 = 2\nHe spent 11 on everything but the cookies because 3 + 7 + 1 + 2 = 11\nHe spent $14 on cookies because 25 - 11 = 14\nEach box of cookies is $6 because 3 x 2 = 6\nHe bought 2.33 boxes of cookies because 14 / 6 = 2.33\n#### 2.33",
+        "transformed_answer": 2.33,
+        "wrong_step": 4,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This example mistakenly calculates the total spent on everything but cookies as $11 instead of $13 in step 4, which affects the subsequent calculation of the money spent on cookies in step 5. The modified formula in step 5 becomes 25 - 11 = 14 instead of 25 - 13 = 12. Step 6 and step 7 remain unaffected as they do not rely on the result of step 4 or step 5. As a result, the error is confined to step 4's calculation and its immediate consequence on step 5, leaving all other steps and their calculations as correct. In step 7, the number of boxes of cookies is inaccurately calculated based on the mistaken $14 value, yielding 14 / 6 = 2.33 boxes of cookies.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The explanation is that the calculation of the cost of the cookies is incorrect because the unit of measurement for the cost of the cookies is not consistent with the unit of measurement for the other groceries. For example, the cost of the cookies is calculated as $6 per box, but the cost of the milk is calculated as"
+    },
+    {
+        "question": "James takes 20 units per semester at community college.  If each unit costs $50 how much does he pay for 2 semesters?",
+        "original_solution": "He pays 20*50=$1000 per semester\nSo he pays 1000*2=$2000\n#### 2000",
+        "original_answer": 2000.0,
+        "transformed_solution": "He pays 20*50=$1000 per semester\nSo he pays 1000*2=$1900\n#### 1900",
+        "transformed_answer": 1900.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "This transformed solution contains a calculation error in step 2, where the correct calculation of 1000*2 should result in $2000, but instead it incorrectly shows $1900. There are no other errors introduced in the transformation process, so this is a single error. The incorrect result from step 2 does not affect the previous step (step 1), and there are no subsequent steps that depend on the output of step 2. Thus, only step 2 is impacted by the erroneous calculation.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The formula in the first wrong step is correct, but the unit conversion is incorrect. The formula should be 20 units per semester * $50 per unit = $1000 per semester. Therefore, James pays $1000 per semester, not $1900."
+    }
+]

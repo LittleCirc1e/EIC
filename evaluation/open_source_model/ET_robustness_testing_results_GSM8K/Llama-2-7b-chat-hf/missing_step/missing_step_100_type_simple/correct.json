@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Daisy is a poodle puppy who loves to play with her dog toys. She often loses them in various ways, and her owner needs to replace them. On Monday, Daisy played with 5 dog toys. On Tuesday, Daisy had 3 dog toys left after losing some, and her owner went to the store and got her 3 more. On Wednesday, all of Daisy's old and new dog toys were missing, so her owner went to the store and bought her 5 more. If Daisy's owner found all the lost dog toys, including the new dog toys, how many dog toys would Daisy have now?",
+        "original_solution": "Daisy originally had 5 dog toys on Monday + 3 more her owner bought her on Tuesday = 8 dog toys.\nOn Wednesday Daisy's owner bought her 5 more dog toys + 8 old ones = 13 total dog toys if none were lost.\n#### 13",
+        "original_answer": 13.0,
+        "transformed_solution": "On Wednesday Daisy's owner bought her 5 more dog toys + 5 old ones = 10 total dog toys if none were lost.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "Removing step 1 entirely which originally added the 5 original toys to the 3 new toys bought on Tuesday, we need to directly add the new toys bought on Wednesday to the total original toys mentioned in the question which is 5. This makes the calculation now 5 (original toys) + 5 (new toys on Wednesday) instead of 8 (from previous step 1) + 5 (new toys on Wednesday). Subsequently, subsequent steps that would have referenced the 8 now reference the 5. It results in a new total of 5+5=10 dog toys if none were lost, which is different from the original answer, and complies with the requirement that the transformed_solution should have one less step compared to the original_solution. The first transformed step that refers to the error is the new step 1, which in this case is the first and only step.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'missing_step'. The explanation is that the solution does not take into account the lost dog toys before the new ones were bought. If the lost dog toys were found, the total number of dog toys Daisy would have now would be 10, as stated in the solution."
+    },
+    {
+        "question": "Ted the T-Rex was planning to bring potato salad to the dinosaur picnic. He knows that an adult dinosaur will eat 10 lbs of potato salad, and a child will eat half as much as an adult. If there will be 20 adults and 5 children at the picnic, how many pounds of potato salad does Ted need to bring to the picnic if he hopes to have enough to feed everyone?",
+        "original_solution": "Half of 10 pounds is 10/2=5 pounds.\nTo feed 20 dinosaur adults, he will need 20*10=200 pounds of potato salad.\nTo feed 5 dinosaur children, he will need 5*5=25 pounds of potato salad.\nIn total, he will need to bring 200+25=225 pounds of potato salad to the picnic.\n#### 225",
+        "original_answer": 225.0,
+        "transformed_solution": "To feed 20 dinosaur adults, he will need 20*10=200 pounds of potato salad.\nTo feed 5 dinosaur children, he will need 5*10=50 pounds of potato salad.\nIn total, he will need to bring 200+50=250 pounds of potato salad to the picnic.\n#### 250",
+        "transformed_answer": 250.0,
+        "wrong_step": 2,
+        "wrong_type": "missing_step",
+        "is_single_error": true,
+        "explanation": "The first step referencing the calculation for the child dinosaur's portion has been removed. In the original_solution, step 1 calculates the child dinosaur's portion as half of the adult's 10 lbs, which is 5 lbs. As this step has been deleted, the transformed_solution should now directly use the adult's portion for calculating the child dinosaur's portion; however, to ensure the transformed_answer differs from the original_answer, we mistakenly multiply the number of child dinosaurs by the full adult portion (10 lbs) instead of the correct half portion (5 lbs). Therefore, we've changed step 2 to multiply the number of child dinosaurs by the full portion: '5*10=50 pounds of potato salad.' Since subsequent related steps rely on the previous step's result, step 3 also changes and adds this error into the total calculation, changing from '200+25=225 pounds of potato salad' to '200+50=250 pounds of potato salad.' The wrong_step is 2 because that is the first step where the incorrect number from the deleted step is referenced.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'missing_step'. The reasoning is as follows:\n\nThe solution assumes that Ted needs to bring 250 pounds of potato salad to the picnic, without considering the number of adults and children at the picnic. In reality, Ted needs to consider the number of adults and children at the picnic to determine the total amount of potato salad he needs to bring. Therefore, the solution is missing a necessary reasoning step."
+    }
+]

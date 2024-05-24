@@ -1,0 +1,110 @@
+[
+    {
+        "question": "Carolyn buys a silverware set with 6 knives, 12 forks, and three times as many spoons as knives. Then her friend trades her 10 knives for 6 spoons. What percentage of Carolyn's silverware is knives?",
+        "original_solution": "First find the final number of knives Carolyn has: 10 knives + 6 knives = 16 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 16 knives + 12 forks = 40 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 16 knives / 40 pieces * 100% = 40%\n#### 40",
+        "original_answer": 40.0,
+        "transformed_solution": "First find the final number of knives Carolyn has: 10 knives + 5 knives = 15 knives\nThen find the initial number of spoons Carolyn has: 6 knives * 3 spoons/knife = 18 spoons\nThen find the final number of spoons Carolyn has: 18 spoons - 6 spoons = 12 spoons\nThen find the total final amount of silverware Carolyn has: 12 spoons + 15 knives + 12 forks = 39 pieces\nThen divide the number of knives by the total number of pieces and multiply by 100% to express the answer as a percentage: 15 knives / 39 pieces * 100% = 38.46%\n#### 38.46",
+        "transformed_answer": 38.46,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 6 in the question as 5 wrongly, and calculates 10 knives + 5 knives = 15 knives instead of 10 knives + 6 knives = 16 knives. Its subsequent related steps, step 4 and 5 will be affected. Step 4 changes from 12 spoons + 16 knives + 12 forks = 40 pieces to 12 spoons + 15 knives + 12 forks = 39 pieces. Step 5 changes from 16 knives / 40 pieces * 100% = 40% to 15 knives / 39 pieces * 100% = 38.46%. Please note that you should only consider one error, so the subsequent related steps of this erroneous step will only inherit its erroneous result and be calculated correctly.",
+        "eval_result": "\n\nPlease determine if the solution is correct.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    },
+    {
+        "question": "To celebrate a recent promotion, Arthur decided to treat himself to dinner at a nice restaurant. He ordered a nice appetizer for $8, a delicious ribeye steak for his entrée at $20, had two glasses of nice red wine with dinner for $3 each, and a slice of caramel cheesecake for dessert for $6. He used a voucher for half off the price of his entrée, but he very thoughtfully tipped his waitress a full 20% of what the full cost of his meal would have been without the discount. How much, including the tip, did Arthur spend on dinner?",
+        "original_solution": "The cost of his food, before the voucher, was $8 + $20 + $3 + $3 + $6 = $40.\nThe tip was $40 * .20 = $8.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $40 - $10 + 8 = $38.\n#### 38",
+        "original_answer": 38.0,
+        "transformed_solution": "The cost of his food, before the voucher, was $8 + $20 + $5 + $5 + $6 = $44.\nThe tip was $44 * .20 = $8.8.\nThe voucher saved him $20 / 2 = $10.\nSo the full price of Arthur's meal, with tip, was $44 - $10 + 8.8 = $42.8.\n#### 42.8",
+        "transformed_answer": 42.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $3 in the question as $5 wrongly for the cost of one glass of wine, and calculates $8 + $20 + $5 + $5 + $6 = $44 instead of $8 + $20 + $3 + $3 + $6 = $40. Its subsequent related steps will be affected. Step 2 will change from $40 * .20 = $8 to $44 * .20 = $8.8 as it uses the incorrect total. Step 4 changes from $40 - $10 + $8 = $38 to $44 - $10 + $8.8 = $42.8. Please note that you should only consider one error, so step 3 still references the price of the entrée as $20 correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_previous_step_value_error'. The first wrong step is the calculation of the tip, where the formula used is correct, but the operand of the formula is incorrect. The formula used is ($44 * .20), which is correct, but the oper"
+    },
+    {
+        "question": "A construction company is building 2 apartment buildings with 12 floors each. The apartments are almost ready to sell but all of them need doors to be completed. Each floor has 6 apartments, and each apartment needs 7 doors in total. How many doors does the company need to buy?",
+        "original_solution": "The number of floors is 12 floors/building x 2 buildings = 24 floors\nThe number of apartments is 6 apartments/floor x 24 floors = 144 apartments\nThe company has to buy 7 doors/apartment x 144 apartments = 1008 doors\n#### 1008",
+        "original_answer": 1008.0,
+        "transformed_solution": "The number of floors is 13 floors/building x 2 buildings = 26 floors\nThe number of apartments is 6 apartments/floor x 26 floors = 156 apartments\nThe company has to buy 7 doors/apartment x 156 apartments = 1092 doors\n#### 1092",
+        "transformed_answer": 1092.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 12 in the question as 13 wrongly, and calculates 6 apartments/floor x 26 floors=156 apartments instead of 6 apartments/floor x 24 floors=144 apartments. Its subsequent related step will be affected, calculating 7 doors/apartment x 156 apartments=1092 doors instead of 7 doors/apartment x 144 apartments=1008 doors in step 3. Please note that you should only consider one error, so step 2 still references 24 in the question correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_context_value_error'. The company needs to buy 7 doors per apartment, but the [Solution] references the number of floors instead of the number of apartments. The correct calculation is 7 doors/apartment x 156 apartments = 1092 doors."
+    },
+    {
+        "question": "Martha collected 90 cans while Diego collected 10 more than half the cans collected by Martha. If both of them should collect a total of 150 cans for their project, how many more cans do they need to collect?",
+        "original_solution": "Half the cans collected by Martha is 90/2 = 45\nSo, Diego collected 45 + 10 =55 cans.\nMartha and Diego collected 90 + 55 = 145 cans together.\nThus, they need to collect 150 - 145 = 5 more cans.\n#### 5",
+        "original_answer": 5.0,
+        "transformed_solution": "Half the cans collected by Martha is 80/2 = 40\nSo, Diego collected 40 + 10 =50 cans.\nMartha and Diego collected 90 + 50 = 140 cans together.\nThus, they need to collect 150 - 140 = 10 more cans.\n#### 10",
+        "transformed_answer": 10.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 90 in the question as 80 wrongly, and calculates 80/2=40 instead of 90/2=45. Its subsequent related step 2 will be affected, calculating 40+10=50 instead of 45+10=55. Steps 3 and 4 will then inherit the outcome from step 2, which will affect the final answer to be 150-140=10 instead of 150-145=5. Please note that you should only consider one error, so all other steps that reference numbers from the question (like steps 3 and 4 referencing the number 90 and 150) still reference these numbers correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_previous_step_value_error'. In the first wrong step, the formula for Diego's cans is calculated as 40 + 10 = 50, which is correct. However, the previous step's value, which is 40, is not correctly referenced in the formula. Instead of referencing the correct value of 40, the formula references the result of the previous step, which is 80/2 = 40, causing an error. Therefore, the solution is incorrect, and the wrong type is 'referencing_previous_step_value_error'."
+    },
+    {
+        "question": "The government gives the bottom 20% of people a $2000 stimulus.  They have found that this kind of stimulus returns 5 times as much money to the government, in terms of tax revenue, as it cost.  The city has 1000 people in it.  What was the government profit from this project?",
+        "original_solution": "They gave money to 1000*.2=200 people\nIt cost 200*2000=$400,000\nThere was a 5 to 1 return so the government collected 5*400000=$2,000,000\nThat means the profit was 2,000,000-400,000=$1,600,000\n#### 1600000",
+        "original_answer": 1600000.0,
+        "transformed_solution": "They gave money to 1000*.2=200 people\nIt cost 200*2500=$500,000\nThere was a 5 to 1 return so the government collected 5*500000=$2,500,000\nThat means the profit was 2,500,000-500,000=$2,000,000\n#### 2000000",
+        "transformed_answer": 2000000.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references $2000 in the question as $2500 wrongly and calculates 200*$2500=$500,000 instead of 200*$2000=$400,000. Its subsequent related steps will be affected, changing the calculation in step 3 to 5*$500000=$2,500,000 and in step 4 to $2,500,000-$500,000=$2,000,000. Please note that you should only consider one error, so step 1 still references 1000 and .2 in the question correctly.",
+        "eval_result": "\n\nPlease determine if the solution is correct.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    },
+    {
+        "question": "Carolyn works for a delivery service company that hires on a contract basis. In May, they hired 40 employees, paying each employee $15 per hour for a 40-hour workweek. In June, 1/4 of the employees' contracts expired. Calculate the total amount of money the company paid to the employees in the two months.",
+        "original_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 40 employees, the company paid 40*$2400= $96000 to all of its contract employees in May.\nIn June, 1/4 of the employees' contracts expired, that is 1/4*40 = 10 employees.\nThe total number of employees whose contracts were valid in June was 40-10 = 30 employees.\nThe total amount of money paid to the contracted employees in June is 30*$2400 = $72000\nIn the two months, the company paid a total of $72000+$96000 = $168000\n#### 168000",
+        "original_answer": 168000.0,
+        "transformed_solution": "When hired, each employee is paid $15*40 = $600 per week.\nThe total earnings of a contracted employee in a month are 4 weeks * $600 per week = $2400\nPaying 35 employees, the company paid 35*$2400= $84000 to all of its contract employees in May.\nIn June, 1/4 of the employees' contracts expired, that is 1/4*40 = 10 employees.\nThe total number of employees whose contracts were valid in June was 40-10 = 30 employees.\nThe total amount of money paid to the contracted employees in June is 30*$2400 = $72000\nIn the two months, the company paid a total of $72000+$84000 = $156000\n#### 156000",
+        "transformed_answer": 156000.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 40 in the question as 35 wrongly, and as a result calculates 35*$2400 = $84000 instead of 40*$2400 = $96000. This affects the final calculation where the total paid over two months is now $72000+$84000 = $156000 instead of $72000+$96000 = $168000. The number 35 erroneously used in this step does not occur in the question; however, for the purpose of this case transformation, it was assumed to be a referencing error. Please note that all other steps reference the original number 40 correctly, except for the step where the error is introduced.",
+        "eval_result": "\n\nPlease determine if the solution is correct.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+    },
+    {
+        "question": "Mark decides to buy packs of old magic cards and open them to sell.  He buys 3 packs for $1800 each.  He gets 1 card that is worth $4000 and another card worth $1000.  There are 30 more cards worth an average of $50 each.  How much money profit did he make?",
+        "original_solution": "The cheaper cards are worth a total of 30*50=$1500\nSo all the cards together are worth 1500+4000+1000=$6500\nThe cost for the cards was 1800*3=$5400\nSo he made a profit of 6500-5400=$1100\n#### 1100",
+        "original_answer": 1100.0,
+        "transformed_solution": "The cheaper cards are worth a total of 30*30=$900\nSo all the cards together are worth 900+4000+1000=$5900\nThe cost for the cards was 1800*3=$5400\nSo he made a profit of 5900-5400=$500\n#### 500",
+        "transformed_answer": 500.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $50 in the question as $30 wrongly, and calculates 30*30=$900 instead of 30*50=$1500. Its subsequent related step will be affected, calculating 900+4000+1000=$5900 instead of 1500+4000+1000=$6500 in step 2. Please note that you should only consider one error, so step 3 still references $1800 in the question correctly, as well as step 4, which correctly calculates profit based on the erroneous total value of $5900.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_context_value_error'. The correct calculation for the total value of the cards is 30*30=$900, not $500. The rest of the calculation is correct."
+    },
+    {
+        "question": "Faith went to a baking shop and bought flour that cost $5 and a cake stand that costs $28. She then gave the cashier two $20 bills and $3 in loose coins. How much change will she receive?",
+        "original_solution": "Faith must pay $28 + $5 = $33 for the flour and cake stand.\nHer two $20 bills amount to $20 x 2 = $40.\nSo, she gave the cashier a total of $40 + $3 = $43.\nHence, her change is $43 - $33 = $10.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Faith must pay $28 + $5 = $33 for the flour and cake stand.\nHer two $20 bills amount to $20 x 2 = $40.\nSo, she gave the cashier a total of $40 + $4 = $44.\nHence, her change is $44 - $33 = $11.\n#### 11",
+        "transformed_answer": 11.0,
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references the $3 in loose coins as $4 wrongly, and calculates $40 + $4 = $44 instead of $40 + $3 = $43. This affects only the calculation for the amount of change she will receive. The subsequent related step 4 will be affected, changing the calculation of her change from $43 - $33 = $10 to $44 - $33 = $11. Please note that you should only consider one step error, so all other steps that reference the amount given in loose coins still reference it correctly except for the step referenced incorrectly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_context_value_error'. The cashier should receive $20 bills amounting to $20 x 2 = $40, not $44, as the total amount Faith gave her is $40 + $4 = $44, which is incorrect."
+    },
+    {
+        "question": "Erin has 7 lollipops. Her mother gives Erin another 10 lollipops. If Erin gives 3 of her lollipops to Ella, how many lollipops does she have left?",
+        "original_solution": "Erin has 7 + 10 = 17 lollipops\nAfter she gives 3 lollipops to Ella she has 17 - 3 = 14 lollipops.\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Erin has 5 + 10 = 15 lollipops\nAfter she gives 3 lollipops to Ella she has 15 - 3 = 12 lollipops.\n#### 12",
+        "transformed_answer": 12.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 7 in the question as 5 wrongly, and calculates 5 + 10 = 15 instead of 7 + 10 = 17. The subsequent related step will be affected, calculating 15 - 3 = 12 instead of 17 - 3 = 14 in step 2. Please note that you should only consider one error, so step 2 still references 3 in the question correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #2, 'counting_error'. The correct answer is 12, but the solution has 15 as the final answer, which is incorrect. The mistake is in the first step, where the operand 7 is counted as 3 days instead of 2 days, which leads to an error in the calculation."
+    }
+]

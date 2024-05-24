@@ -1,0 +1,38 @@
+[
+    {
+        "question": "A sum is divided among x, y, and z in such a way that for each rupee x gets, y gets 45 paisa and z gets 30 paisa. If the share of y is Rs. 36, what is the total amount?",
+        "original_solution": "For every rupee x gets 100 paisa, y gets 45 paisa, and z gets 30 paisa.\nThe total share of y is 36 / 0.45 = 80.\nThe total amount of the sum is 100 + 45 + 30 = 175 paisa or Rs 1.75.\nThe total amount of the sum is 80 * 1.75 = Rs 140.\n#### 140",
+        "original_answer": 140.0,
+        "transformed_solution": "For every rupee, x gets 100 paisa, y gets 45 paisa, and z gets 30 paisa.\nThe total share of y is 36 / 0.45 = 70.\nThe total amount of the sum is 100 + 45 + 30 = 175 paisa or Rs 1.75.\nThe total amount of the sum is 70 * 1.75 = Rs 122.50.\n#### 122.5",
+        "transformed_answer": 122.5,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "The mistake is introduced at step 2 of the original solution by changing the result of 36 / 0.45 from 80 to 70. This single calculation error modifies the outcome while keeping the formula intact. Subsequent steps inherit this wrong calculation, leading to a total amount of the sum calculation of 70 * 1.75 = Rs 122.50, which is incorrect. The formula itself remains the same, but the numbers are changed due to the inherited error from the first wrong step, resulting in Rs 122.50 instead of the correct Rs 140.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The formula in the first wrong step contains unit conversion error, as 100 paisa is equal to 1 rupee, not 100 paisa. Therefore, the total amount of the sum is 100 + 45 + 30 = 175 rupees, not 175 paisa or Rs 122.50. The correct answer is #175."
+    },
+    {
+        "question": "Convert 500 miles into meters?",
+        "original_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 804670 meters\n#### 804670",
+        "original_answer": 804670.0,
+        "transformed_solution": "1 mile = 1609.34 meters\n500 miles = 500 x 1609.34 = 800000 meters\n#### 800000",
+        "transformed_answer": 800000.0,
+        "wrong_step": 2,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In the transformed solution, the calculation of 500 x 1609.34 has been incorrectly modified to result in an incorrect value of 800000 meters instead of the correct value of 804670 meters. The previous step is not affected since it simply establishes the conversion rate without any calculations. The transformation introduces a single error in step 2, which only changes the outcome of that specific step and the final answer, without altering the logic or the methodology of the original solution.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The conversion of miles to meters is not correct, as there are 1609.34 meters in 1 mile, not 1609.34 meters in 500 miles. Therefore, the final answer should be 500 x 1609.34 = 804600 meters."
+    },
+    {
+        "question": "the height of the wall is 6 times its width and length of the wall is 7 times its height. if the volume of the wall be 129024 cu. m., its width is",
+        "original_solution": "Let the width be x\nHeight = 6x\nLength = 7 * (6x) = 42x\nVolume = width * height * length = x * (6x) * 42x = 252x^3\n252x^3 = 129024\nx^3 = 129024 / 252\nx^3 = 512\nx = cubed root of 512 = 8\n#### 8",
+        "original_answer": 8.0,
+        "transformed_solution": "Let the width be x\nHeight = 6x\nLength = 7 * (6x) = 42x\nVolume = width * height * length = x * (6x) * 42x = 252x^3\n252x^3 = 129024\nx^3 = 129024 / 252\nx^3 = 500\nx = cubed root of 500 = 7.94\n#### 7.94",
+        "transformed_answer": 7.94,
+        "wrong_step": 7,
+        "wrong_type": "calculation_error",
+        "is_single_error": true,
+        "explanation": "In this transformed example, step 7 erroneously calculates 129024 / 252 as 500 instead of the correct 512. This error affects the final answer (step 8) causing the cubed root of 500 to be computed as 7.94 instead of the correct cubed root of 512 which is 8. All previous steps remain unchanged, and only the modified step and the direct calculation that follows are affected by this single calculation error.",
+        "eval_result": "\nThe solution is incorrect, the wrong type is 'unit_conversion_error'. The volume of the wall is not 129024 cubic meters, but 129024 cubic feet. The unit conversion error occurs when the volume is expressed in a unit different from the one used in the question. The correct answer is #500."
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "question": "David obtained 70, 60, 78, 60 and 65 marks (out of 100) in English, Mathematics, Physics, Chemistry and Biology. What are his average marks?",
+        "original_solution": "The total marks obtained = 70 + 60 + 78 + 60 + 65 = 333\nAverage marks = Total marks obtained / Total subjects = 333 / 5 = 66.6\n#### 66.6",
+        "original_answer": 66.6,
+        "transformed_solution": "The total marks obtained = 70 + 60 + 78 + 60 + 65 + 10 (bonus points in Biology) = 343\nAverage marks = Total marks obtained / Total subjects = 343 / 5 = 68.6\n#### 68.6",
+        "transformed_answer": 68.6,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <bonus points in Biology>, resulting in step 1 changing from 70 + 60 + 78 + 60 + 65 = 333 in the original_solution to 70 + 60 + 78 + 60 + 65 + 10 = 343 in the transformed_solution. Its subsequent related step 2 is affected, changing from 333 / 5 = 66.6 to 343 / 5 = 68.6. The transformed_answer of 68.6 is different from the original_answer of 66.6.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is 'referencing_context_value_error'. The correct answer should be 68.6, not 68.6\nThe error is in the calculation of the total marks obtained, where the bonus points in Biology (10) are not included in the calculation.\n\nPlease let me know if you have any questions or need further clarification."
+    },
+    {
+        "question": "a shopkeeper labeled the price of his articles so as to earn a profit of 30 % on the cost price. he then sold the articles by offering a discount of 10 % on the labeled price. what is the actual percent profit earned in the deal?",
+        "original_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, so the labeled price is 100 + 30% of 100 = 100 + 30 = $130.\nHe offered a 10% discount on the labeled price, so the selling price is 130 - 10% of 130 = 130 - 13 = $117.\nHis actual profit is 117 - 100 = $17.\nHis actual percent profit is (17/100) x 100% = 17%.\n#### 17%",
+        "original_answer": 17.0,
+        "transformed_solution": "Let the cost price be $100.\nHe labeled the price at a 30% markup, but added an extra $5 for packaging costs, so the labeled price is 100 + 30% of 100 + 5 = 100 + 30 + 5 = $135.\nHe offered a 10% discount on the labeled price, so the selling price is 135 - 10% of 135 = 135 - 13.5 = $121.5.\nHis actual profit is 121.5 - 100 = $21.5.\nHis actual percent profit is (21.5/100) x 100% = 21.5%.\n#### 21.5%",
+        "transformed_answer": 21.5,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement, which is <but added an extra $5 for packaging costs>, resulting in step 2 changing from 100 + 30% of 100 = 130 in the original_solution to 100 + 30% of 100 + 5 = 135 in the transformed_solution. This affects the final selling price and thus the actual profit and actual percent profit figures.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_previous_step_value_error'. The correct calculation for the selling price is 135 - 10% of 135 = 135 - 13.5 = $121.5, not $121"
+    },
+    {
+        "question": "you collect pens . suppose you start out with 25 . mike gives you another 22 pens . since her father makes pens , cindy decides to double your pens . since you 're nice , you give sharon 19 pens . how many pens do you have at the end ?",
+        "original_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, you have 94-19 = 75 pens at the end.\n#### 75",
+        "original_answer": 75.0,
+        "transformed_solution": "You start with 25 pens.\nYou receive 22 more pens from Mike, totaling 25+22 = 47 pens.\nCindy doubles your pens, giving you 2*47 = 94 pens.\nAfter giving away 19 pens, then you find 5 more pens on the street, you have 94-19+5 = 80 pens at the end.\n#### 80",
+        "transformed_answer": 80.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <then you find 5 more pens on the street>, resulting in step 4 changing from 94-19 = 75 pens in the original_solution to 94-19+5 = 80 pens in the transformed_solution. This additional information increases the number of pens you have at the end, which affects the final result. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_context_value_error'. In the first wrong step, Cindy doubles your pens, giving you 2*47 = 94 pens, which is correct. However, in the next step, you give away 19 pens, which is not correct because the total number of pens you have is 94, not 25. Therefore, the first wrong step is step 3, and the wrong type is 'referencing_context_value_error'."
+    },
+    {
+        "question": "Reeya obtained 50, 60, 70, 80, and 80 out of 100 in different subjects. What will be the average?",
+        "original_solution": "The sum of all scores is 50 + 60 + 70 + 80 + 80 = 340\nThe number of subjects is 5 because there are 5 scores\nThe average score is 340 / 5 = 68\n#### 68",
+        "original_answer": 68.0,
+        "transformed_solution": "The sum of all scores including an extra credit of 10 points for excellent performance in one subject is 50 + 60 + 70 + 80 + 80 + 10 = 350\nThe number of subjects is 5 because there are 5 scores\nThe average score including the extra credit is 350 / 5 = 70\n#### 70",
+        "transformed_answer": 70.0,
+        "wrong_step": 1,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 1 adds information that is not mentioned in the question statement <including an extra credit of 10 points for excellent performance in one subject>, resulting in step 1 changing from 50 + 60 + 70 + 80 + 80 = 340 in the original_solution to 50 + 60 + 70 + 80 + 80 + 10 = 350 in the transformed_solution. The subsequent related step 2 is affected, changing from 340 / 5 = 68 to 350 / 5 = 70. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is 'referencing_context_value_error'. The correct answer should be 70, not 80, because there are only 5 scores, not 6. The extra credit of 10 points for excellent performance in one subject should not be included in the calculation of the average score."
+    },
+    {
+        "question": "The ratio of males to females in a class is 2 : 3. The career preferences of the students in the class are represented in a circle graph. If the area of the graph allocated to each career preference is proportional to the number of students who have that career preference, how many degrees of the circle should be used to represent a career that is preferred by one-half of the males and one-fourth of the females in the class?",
+        "original_solution": "There are 2 + 3 = 5 parts in total.\nOne part represents 360 / 5 = 72 degrees.\nOne-half of the males is 2 / 2 = 1, and one-fourth of the females is 3 / 4 = 0.75.\nSo, the career that is preferred by one-half of the males and one-fourth of the females should be represented by 1 + 0.75 = 1.75 parts.\nThus, the career should be represented by 1.75 x 72 = 126 degrees.\n#### 126",
+        "original_answer": 126.0,
+        "transformed_solution": "There are 2 + 3 = 5 parts in total, but it is known that one student has no preference and it accounts for one-sixth of one male part.\nOne part represents 360 / 5 = 72 degrees.\nOne-half of the males is 2 / 2 = 1, less the non-preference portion which is 1/6 of one male part = 1 - 1/6 = 5/6.\nOne-fourth of the females is 3 / 4 = 0.75.\nSo, the career that is preferred by one-half of the males (minus the student without preference) and one-fourth of the females should be represented by 5/6 + 0.75 = 1.5833 parts.\nThus, the career should be represented by 1.5833 x 72 ≈ 114 degrees.\n#### 114",
+        "transformed_answer": 114.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 adds information that is not mentioned in the question statement <but it is known that one student has no preference and it accounts for one-sixth of one male part>, which leads to a modification in the calculation of the male part from 1 to 5/6. This irrelevant piece of information alters the proportional part attributed to the career preference from 1.75 to 1.5833 (5/6 + 0.75) and therefore changes the final answer from 126 degrees to approximately 114 degrees. It should be noted that you only need to consider one error of adding additional information in one step, and the other calculation processes should be correct.",
+        "eval_result": "\n\nPlease determine if the solution is correct.\n\n\n\n\n\n\n\n\n\n\n"
+    },
+    {
+        "question": "bhanu spends 30 % of his income on petrol on scooter 30 % of the remaining on house rent and the balance on food . if he spends rs . 300 on petrol then what is the expenditure on house rent ?",
+        "original_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nHe spends 30% of the remaining income on house rent, so the expenditure on house rent is 0.3 * 0.7x\nHe spends the balance on food, which is 0.7x - 0.3 * 0.7x = 0.7x - 0.21x = 0.49x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, the expenditure on house rent is 0.3 * 0.7 * 1000 = 210\n#### 210",
+        "original_answer": 210.0,
+        "transformed_solution": "Let the income be x.\nHe spends 30% of x on petrol, so the expenditure on petrol is 0.3x.\nTherefore, the remaining income is 0.7x.\nShortly after, the house rent prices increased by 10%, and thus he had to spend an additional 10% on the new rent. So he actually spends 30% of the remaining income plus 10% of that amount on house rent, or (0.3 * 0.7x) * 1.1\nHe spends the balance on food, which is 0.7x - (0.3 * 0.7x) * 1.1 = 0.7x - 0.231x = 0.469x\nWe are given that he spends Rs. 300 on petrol, so 0.3x = 300\nSolving for x, we get x = 1000\nTherefore, after the rent increase, the expenditure on house rent is (0.3 * 0.7 * 1000) * 1.1 = 231\n#### 231",
+        "transformed_answer": 231.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 adds information that is not mentioned in the question statement <Shortly after, the house rent prices increased by 10%, and thus he had to spend an additional 10% on the new rent>, resulting in an integrated modification where the calculation changes from 0.3 * 0.7x to (0.3 * 0.7x) * 1.1. This inflates the house rent expenditure after calculating the total income, changing from 0.3 * 0.7 * 1000 = 210 in the original_solution to (0.3 * 0.7 * 1000) * 1.1 = 231 in the transformed_solution. The other steps remain valid as direct consequences of the modified step.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "Rs. 1500 is divided into two parts such that if one part is invested at 6% and the other at 5% the whole annual interest from both the sum is Rs. 85. How much was lent at 5%?",
+        "original_solution": "Let the amount lent at 6% be x.\nThen the amount lent at 5% is 1500 - x.\nThe interest from the 6% investment is 0.06x.\nThe interest from the 5% investment is 0.05(1500 - x).\nThe total interest is 0.06x + 0.05(1500 - x) = 85.\n0.06x + 75 - 0.05x = 85.\n0.01x = 10.\nx = 1000.\nThe amount lent at 5% is 1500 - 1000 = 500.\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "Let the amount lent at 6% be x and the amount lent at 5% be y.\nThen the amount lent at 5% is y = 1500 - x.\nAssume there is an additional Rs. 20 collected as a service charge for the investments.\nThe interest from the 6% investment is 0.06x.\nThe interest from the 5% investment is 0.05(1500 - x).\nThe total interest including the service charge is 0.06x + 0.05(1500 - x) + 20 = 85.\n0.06x + 75 - 0.05x + 20 = 85.\n0.01x + 95 = 85.\n0.01x = 85 - 95.\n0.01x = -10.\nx = -1000.\nThis solution yields a negative number for x, which is not possible in this context, so we correct the additional charge to ensure a valid result.\nAdding a service charge of Rs. 20 would result in a total interest of 85 + 20 = 105 before the charge.\nSo, the equation becomes 0.06x + 0.05(1500 - x) = 105.\n0.06x + 75 - 0.05x = 105.\n0.01x = 105 - 75.\n0.01x = 30.\nx = 3000 / 10.\nx = 300.\nThe amount lent at 5% is 1500 - 300 = 1200.\n#### 1200",
+        "transformed_answer": 1200.0,
+        "wrong_step": 4,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 4 incorrectly adds an additional condition that is not mentioned in the question <Assume there is an additional Rs. 20 collected as a service charge for the investments>, which changes the total interest calculation. The equation is altered by including the assumed service charge, changing the total from Rs. 85 to Rs. 105 before accounting for the service charge. The addition of the irrelevant service charge leads to the change in the final answer from Rs. 500 to Rs. 1200. This incorrect addition of information makes it a single point error in the solution process.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "Joe needs to paint all the airplane hangars at the airport, so he buys 360 gallons of paint to do the job. During the first week, he uses 1/9 of all the paint. During the second week, he uses 1/5 of the remaining paint. How many gallons of paint has Joe used?",
+        "original_solution": "Joe used 360 / 9 = 40 gallons of paint in the first week.\nHe had 360 - 40 = 320 gallons of paint remaining.\nJoe used 320 / 5 = 64 gallons of paint in the second week.\nJoe has used 40 + 64 = 104 gallons of paint.\n#### 104",
+        "original_answer": 104.0,
+        "transformed_solution": "Joe used 360 / 9 = 40 gallons of paint in the first week.\nHe had 360 - 40 = 320 gallons of paint remaining. Because there was an accidental spill, Joe lost an additional 10 gallons of paint.\nJoe used (320 - 10) / 5 = 62 gallons of paint in the second week.\nJoe has used 40 + 62 = 102 gallons of paint.\n#### 102",
+        "transformed_answer": 102.0,
+        "wrong_step": 2,
+        "wrong_type": "adding_irrelevant_information",
+        "is_single_error": true,
+        "explanation": "Step 2 in the transformed_solution adds information that is not mentioned in the question statement <Because there was an accidental spill, Joe lost an additional 10 gallons of paint.>, resulting in the calculation changing from 320 gallons remaining to (320 - 10) gallons remaining before he uses 1/5 of it in the second week. This affects the result of step 2, which changes from 320 / 5 = 64 in the original_solution to (320 - 10) / 5 = 62 in the transformed_solution. As a result, the transformed_answer changes to 40 + 62 = 102, which is different from the original_answer of 104.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_previous_step_value_error'. In the first step, Joe used 360/9 = 40 gallons of paint, which is correct. However, in the second step, Joe used (320-10)/5 = 62 gallons of paint, which should be (320-10)/4 = 60 gallons of paint, as there are 4 weeks instead of 5 weeks. Therefore, the final answer should be 40 + 60 ="
+    }
+]

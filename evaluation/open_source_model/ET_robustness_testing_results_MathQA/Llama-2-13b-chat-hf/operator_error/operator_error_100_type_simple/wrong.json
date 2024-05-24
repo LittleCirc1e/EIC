@@ -1,0 +1,74 @@
+[
+    {
+        "question": "The product of 3 consecutive numbers is 210 . Then the sum of the smallest two numbers is ?",
+        "original_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x^2 + 3x + 2) = 210\nx^3 + 3x^2 + 2x = 210\nx^3 + 3x^2 + 2x - 210 = 0\n(x-5)(x^2 + 8x + 42) = 0\nThe solutions for x are 5, -4+/-sqrt(4-4(1)(42)) / (2(1)) = 5, -4+/-sqrt(-164) / 2\nThe two solutions are x = 5 and x = -4+/-4.472/2\nThe sum of the smallest two numbers is 5 + 6 = 11\n#### 11",
+        "original_answer": 11.0,
+        "transformed_solution": "Let the three consecutive numbers be x, x+1, and x+2\nThe product of the three numbers is x(x+1)(x+2) = 210\nx(x+1)+x+2 = 210\nx^2 + x + x + 2 = 210\nx^2 + 2x + 2 = 210\nx^2 + 2x + 2 - 210 = 0\nx^2 + 2x - 208 = 0\nUsing the quadratic formula x = [-2 +/- sqrt(2^2 - 4(1)(-208))] / (2(1)) = [-2 +/- sqrt(4 + 832)] / 2 = [-2 +/- sqrt(836)] / 2\nx = [-2 +/- 28.92] / 2\nThe two solutions are x = [-2 + 28.92] / 2 = 13.46 and x = [-2 - 28.92] / 2 = -15.46\nThe sum of the smallest two numbers is 13.46 + 14.46 = 27.92\n#### 27.92",
+        "transformed_answer": 27.92,
+        "wrong_step": 2,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This case changes the multiplication operator in the original solution to addition. In step 2, instead of x(x+1)(x+2) = 210, it is changed to x(x+1)+x+2 = 210. This leads to a different equation and therefore to different solutions for x. Since the next steps depend on the value of x obtained in step 2, all of them are affected and therefore changed, yet the calculations are performed correctly based on the altered equation. The final answer for the sum of the smallest two numbers is consequently different from the original one.",
+        "eval_result": "\n\nThe solution is"
+    },
+    {
+        "question": "An amount of money is to be divided between p, q and r in the ratio of 3 : 7 : 12. If the difference between the shares of p and q is Rs. 3200, what will be the difference between q and r's share?",
+        "original_solution": "The total number of parts is 3 + 7 + 12 = 22\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x - 3x = Rs. 3200\n4x = 3200\nx = 800\nThe share of q is 7x = 7*800 = Rs. 5600\nThe share of r is 12x = 12*800 = Rs. 9600\nThe difference between q and r's share is 9600 - 5600 = Rs. 4000\n#### 4000",
+        "original_answer": 4000.0,
+        "transformed_solution": "The total number of parts is 3 * 7 * 12 = 252\nLet the common multiple be x\nThen the share of p is 3x, the share of q is 7x, and the share of r is 12x\nThe difference between the shares of p and q is 7x * 3x = Rs. 3200\n21x^2 = 3200\nx^2 = 152.38\nx = 12.34\nThe share of q is 7x = 7*12.34 = Rs. 86.38\nThe share of r is 12x = 12*12.34 = Rs. 148.08\nThe difference between q and r's share is 148.08 - 86.38 = Rs. 61.70\n#### 61.70",
+        "transformed_answer": 61.7,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The operator in the formula for the total number of parts has been changed from addition to multiplication (change \"+\" to \"*\") in step 1, which drastically affects the outcome of the entire problem. As such, the resulting share calculations and differences are based on that incorrect understanding of the total parts and are thus incorrect compared to the original solution. However, despite this error, each calculation after the change is performed correctly.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, which is 'referencing_context_value_error'. The error in the solution is that the share of p"
+    },
+    {
+        "question": "p is 40% more efficient than q. p can complete a work in 24 days. If p and q work together, how many days will it take to complete the same work?",
+        "original_solution": "If q is 100, p is 140 because 100 + (40% * 100) = 100 + 40 = 140\nIf p can complete the work in 24 days, q can complete the work in 24 x (140/100) = 33.6 days\nWorking together, they can complete the work in 1 / (1/24 + 1/33.6) = 1 / (0.04166667 + 0.0297619) = 1 / 0.07142857 = 14 days\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "If q is 100, p is 140 because 100 - (40% * 100) = 100 - 40 = 60\nIf p can complete the work in 24 days, q can complete the work in 24 x (60/100) = 14.4 days\nWorking together, they can complete the work in 1 / (1/24 + 1/14.4) = 1 / (0.04166667 + 0.06944444) = 1 / 0.11111111 = 9 days\n#### 9",
+        "transformed_answer": 9.0,
+        "wrong_step": 1,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The original solution's step 1 had an addition operation to calculate p's efficiency as 140%. This was transformed by changing addition to subtraction, incorrectly asserting p's efficiency at 60% instead. Consequently, q would be calculated to finish the work in 14.4 days instead of 33.6 days. Subsequent steps affected by this error calculate the days taken for p and q to complete the work together, turning 14 days into 9 days. Each of these steps uses the incorrect efficiency but correctly follows the operational method. Therefore, only the operator in step 1 was altered, but all the calculations are done correctly based on the modified operator.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #3, 'referencing_context_value_error'. The error in the first wrong step is that the formula for the time it takes q to complete the work is incorrect. The formula should be 24 x (60/100) = 14.4 days, not 24 x (100/60) = 4 days. The correct answer is 9 days, not 4 days."
+    },
+    {
+        "question": "in some quantity of ghee, 60% of pure ghee and 40% is vanaspati. if 10 kg of pure ghee is added, then the strength of vanaspati ghee becomes 20%. the original quantity was?",
+        "original_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x / (x+10) = 20%\n0.4x = 0.2(x+10)\n0.4x = 0.2x + 2\n0.2x = 2\nx = 10\nThe original quantity of ghee was 10 kg.\n#### 10",
+        "original_answer": 10.0,
+        "transformed_solution": "Let the original quantity of ghee be x kg.\nAmount of pure ghee = 0.6x\nAmount of vanaspati ghee = 0.4x\nTotal amount of ghee = x\nAfter adding 10 kg of pure ghee, the total amount of ghee becomes (x+10)\n0.4x * (x+10) = 20%\n0.4x(x+10) = 0.2(x+10)^2\n0.4x^2 + 4x = 0.2x^2 + 2x + 2\n0.2x^2 + 2x - 2 = 0\nThis is a quadratic equation and can be solved using the quadratic formula x = [-b ± sqrt(b^2 - 4ac)] / 2a\nFor this equation, a = 0.2, b = 2, c = -2\nUsing the quadratic formula, x = [-2 ± sqrt(2^2 - 4*0.2*(-2))] / (2*0.2)\nx = [-2 ± sqrt(4 + 1.6)] / 0.4\nx = [-2 ± sqrt(5.6)] / 0.4\nThe two solutions are not realistic in this context since we can't have a negative quantity of ghee. We need to recalculate.\n#### Error in calculation",
+        "transformed_answer": "Error in calculation",
+        "wrong_step": 6,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "The transformation process has incorrectly changed the division operator in step 6 to multiplication, resulting in an erroneous step '0.4x / (x+10) = 20%' becoming '0.4x * (x+10) = 20%'. This affected the subsequent steps and led to an unsolvable quadratic equation, which is not realistic in the given context. The rest of the steps were incorrectly transformed based on the changed operator leading to a fundamentally different equation. As this involves quantities and distribution that cannot be negative, the quadratic equation does not provide a reasonable solution. Thus, the transformed solution does not lead to a valid answer.",
+        "eval_result": "\n"
+    },
+    {
+        "question": "two brother x and y appeared for an exam. the probability of selection of x is 1 / 7 and that of b is 2 / 9. find the probability that both of them are selected.",
+        "original_solution": "The probability that both of them are selected is the product of their individual probabilities.\nProbability of x being selected = 1/7\nProbability of y being selected = 2/9\nProbability of both x and y being selected = (1/7) * (2/9) = 2/63\n#### 2/63",
+        "original_answer": "2/63",
+        "transformed_solution": "The probability that both of them are selected is the sum of their individual probabilities.\nProbability of x being selected = 1/7\nProbability of y being selected = 2/9\nProbability of both x and y being selected = (1/7) + (2/9) = 9/63 + 14/63 = 23/63\n#### 23/63",
+        "transformed_answer": "23/63",
+        "wrong_step": 3,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication in step 3 to addition, turning (1/7) * (2/9) into (1/7) + (2/9). The addition of fractions in transformed step 3 has been calculated correctly after the operator change to obtain 9/63 + 14/63 which is equal to 23/63. The incorrect operator usage changes the entire context of the probability calculation, but the mathematical operation of adding the fractions itself is correct.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #2, which is that the [Solution] correctly identifies the probability of both x and y being selected as the sum of their individual probabilities. The [Solution] correctly calculates the probabilities of x and y being selected as 1/7 and 2/9, respectively, and then adds them to obtain the probability of both being selected, which is 23/63.\n\nThere is no error in the [Solution], and therefore, the wrong type cannot be selected."
+    },
+    {
+        "question": "from a group of 3 women and 3 girls, 4 are to be randomly selected. what is the probability that equal numbers of women and girls will be selected?",
+        "original_solution": "Total ways to select 4 from 6 = 6C4 = 15\nWays to select 2 women from 3 = 3C2 = 3\nWays to select 2 girls from 3 = 3C2 = 3\nTotal favorable outcomes = 3 * 3 = 9\nProbability = 9/15 = 3/5\n#### 3/5",
+        "original_answer": "3/5",
+        "transformed_solution": "Total ways to select 4 from 6 = 6C4 = 15\nWays to select 2 women from 3 = 3C2 = 3\nWays to select 2 girls from 3 = 3C2 = 3\nTotal favorable outcomes = 3 + 3 = 6\nProbability = 6/15 = 2/5\n#### 2/5",
+        "transformed_answer": "2/5",
+        "wrong_step": 4,
+        "wrong_type": "operator_error",
+        "is_single_error": true,
+        "explanation": "This example changes the multiplication operator in step 4 to addition, altering 3 * 3 = 9 to 3 + 3 = 6. The subsequent calculation of probability in step 5 inherits this change and therefore the probability changes from 9/15 = 3/5 to 6/15 = 2/5. The altered step now has an incorrect result, but all the other calculations remain correct, even though they are based on the wrong number obtained in step 4.",
+        "eval_result": "\n\nThe solution is correct, and the explanation is #2, which is 'referencing_context_value_error'. In the first wrong step, the formula 3C2 is used to calculate the number of ways to select 2 women from 3, but the context value of 3 is not correctly referenced. The correct formula should be 3!2, which is 3 × 2 = 6, the same as the total favorable outcomes. Therefore, the probability should be 6/15 instead of 3 + 3 = 6."
+    }
+]

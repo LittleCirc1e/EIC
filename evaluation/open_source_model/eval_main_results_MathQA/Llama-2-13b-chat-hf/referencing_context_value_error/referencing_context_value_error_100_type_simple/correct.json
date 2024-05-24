@@ -1,0 +1,166 @@
+[
+    {
+        "question": "of the total amount that rose spent on a shopping trip, excluding taxes, she spent 50 percent on clothing, 20 percent on food, and 30 percent on other items. if rose paid a 4 percent tax on the clothing, no tax on the food, and an 8 percent tax on all other items, then the total tax that she paid was what percent of the total amount that she spent, excluding taxes?",
+        "original_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.5x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.5x = 0.02x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.02x + 0.024x = 0.044x\nTotal tax as a percent of the total amount spent = (0.044x / x) * 100\nTotal tax as a percent of the total amount spent = 4.4%\n#### 4.4%",
+        "original_answer": 4.4,
+        "transformed_solution": "Let x be the total amount that Rose spent, excluding taxes.\nAmount spent on clothing = 0.6x\nAmount spent on food = 0.2x\nAmount spent on other items = 0.3x\nTax paid on clothing = 0.04 * 0.6x = 0.024x\nTax paid on other items = 0.08 * 0.3x = 0.024x\nTotal amount spent on taxes = 0.024x + 0.024x = 0.048x\nTotal tax as a percent of the total amount spent = (0.048x / x) * 100\nTotal tax as a percent of the total amount spent = 4.8%\n#### 4.8%",
+        "transformed_answer": 4.8,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 50 percent in the question as 60 percent wrongly, calculating 0.6x for the amount spent on clothing instead of the correct 0.5x. This error affects the computation of the tax paid on clothing in step 4, leading to a miscalculation of the tax amount as 0.024x instead of 0.02x. Consequently, the erroneous tax values affect the total tax computation in step 6, changing the total tax from 0.044x to 0.048x, and affecting the final percentage calculation in step 8. Note that the numbers for the other items and their tax rates are referenced correctly, and it's the first erroneous step that causes all subsequent related steps to inherit its erroneous result, though they are computed correctly based on the wrong value provided.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the formula for the"
+    },
+    {
+        "question": "The run rate of a cricket game was only 3.2 in the first 10 overs. What should be the run rate in the remaining 40 overs to reach the target of 282 runs?",
+        "original_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 282 - 32 = 250 runs in the remaining 40 overs.\nThe required run rate is 250 / 40 = 6.25 runs per over.\n#### 6.25",
+        "original_answer": 6.25,
+        "transformed_solution": "The team scored 3.2 x 10 = 32 runs in the first 10 overs.\nThe team needs to score 280 - 32 = 248 runs in the remaining 40 overs.\nThe required run rate is 248 / 40 = 6.2 runs per over.\n#### 6.2",
+        "transformed_answer": 6.2,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 282 in the question as 280 wrongly, and calculates 280 - 32 = 248 instead of 282 - 32 = 250. The subsequent related step 3 will reference the erroneous result from step 2, calculating 248 / 40 = 6.2 instead of 250 / 40 = 6.25. However, it is still calculated correctly under the assumption that step 2 is correct. Please note that you should only consider one error, so step 1 still references 3.2 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is as follows:\n\nIn the first step, the formula 3.2 x 10 is incorrect because it should be 32 runs, not 3.2 runs. The context value of the first step is incorrect, which leads to the error in the second step. Therefore, the solution is incorrect, and the first wrong step is the second step."
+    },
+    {
+        "question": "If a train, traveling at a speed of 360 kmph, crosses a pole in 5 sec, then the length of the train is?",
+        "original_solution": "First, convert the speed from km/h to m/s: 360 km/h * (1000 m/1 km) * (1 h/3600 s) = 100 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 100 m/s * 5 s = 500 m\n#### 500",
+        "original_answer": 500.0,
+        "transformed_solution": "First, convert the speed from km/h to m/s: 350 km/h * (1000 m/1 km) * (1 h/3600 s) = 97.22 m/s\nThe distance traveled by the train is the length of the train: distance = speed * time = 97.22 m/s * 5 s = 486.1 m\n#### 486.1",
+        "transformed_answer": 486.1,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 incorrectly references the speed of the train as 350 km/h instead of 360 km/h and calculates the speed in meters per second incorrectly as 97.22 m/s instead of 100 m/s. The subsequent step, which calculates the distance traveled (length of the train), uses the result from the erroneous step 1 and also calculates it correctly with the wrong input, resulting in 97.22 m/s * 5 s = 486.1 m instead of 100 m/s * 5 s = 500 m. Please note that we should only consider one error, and all other references to the speed should use the correct value of 360 km/h.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: The formula in the first wrong step is incorrect because it converts the speed from km/h to m/s without considering the context of the problem. The speed of the train is given in km/h, and the distance traveled by the train should be calculated in km, not in m. Therefore, the correct formula should be: distance = speed * time = 350 km/h * 5 s = 1750 km, not 486.1 m."
+    },
+    {
+        "question": "There are 15 teams in a soccer league and each team plays each of the other teams once. How many games will be played in total?",
+        "original_solution": "The number of games played by one team is 15-1 = 14 because each team plays each of the other teams once.\nThe total number of games played is 15 x 14 / 2 = 105 because in a complete round-robin tournament, each team plays a game against every other team once.\n#### 105",
+        "original_answer": 105.0,
+        "transformed_solution": "The number of games played by one team is 16-1 = 15 because each team plays each of the other teams once.\nThe total number of games played is 15 x 15 / 2 = 112.5 because in a complete round-robin tournament, each team plays a game against every other team once.\n#### 112.5",
+        "transformed_answer": 112.5,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 15 in the question as 16 wrongly, and calculates 16-1=15 instead of 15-1=14. Its subsequent related step will be affected, calculating 15 x 15 / 2 = 112.5 instead of 15 x 14 / 2 = 105 in step 2. Please note that you should only consider one error, so step 2 still references 15 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is as follows:\n\nIn the first step, the formula 16-1 is correct, but the result is not used correctly in the second step. The formula 15 x 15 / 2 should be 225, not 112.5. The correct solution is 225 games played in total.\n\nThe mistake is in the second step, where the result of the first step is not correctly referenced. The formula 15 x 15 / 2 is correct, but the result of 16-1 is not correctly used. Therefore, the type of error is 'referencing_context_value_error'."
+    },
+    {
+        "question": "jane and thomas are among the 9 people from which a committee of 4 people is to be selected. how many different possible committees of 4 people can be selected from these 9 people if at least one of either jane or thomas is to be selected?",
+        "original_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 7 choose 4 = 7! / (4! * (7-4)!) = 35\nTotal possible committees of 4 including jane and thomas = 126 - 35 = 91\n#### 91",
+        "original_answer": 91.0,
+        "transformed_solution": "Total possible committees of 4 from 9 people = 9 choose 4 = 9! / (4! * (9-4)!) = 126\nTotal possible committees of 4 from the other 7 people = 5 choose 4 = 5! / (4! * (5-4)!) = 5\nTotal possible committees of 4 including jane and thomas = 126 - 5 = 121\n#### 121",
+        "transformed_answer": 121.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 7 in the original_solution incorrectly as 5, and calculates 5 choose 4 = 5! / (4! * (5-4)!) = 5 instead of 7 choose 4 = 7! / (4! * (7-4)!) = 35. Its subsequent related step will be affected, calculating 126 - 5 = 121 instead of 126 - 35 = 91 in step 3. Please note that you should only consider one error, so step 3 still references the number 126 in step 1 correctly although its result is affected by the erroneous result from step 2.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is as follows:\n\nIn the solution, the first wrong step is the calculation of 9! / (4! * (9-4)!), which is incorrect because it references the context value of 9 instead of 7. The correct calculation should be 5! / (4! * (5-4)!). Therefore, the final answer should be 5\n instead of 121."
+    },
+    {
+        "question": "The sum of three consecutive even numbers is 246. What are the numbers?",
+        "original_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 246.\n3x = 240.\nx = 80.\nThe three consecutive even numbers are 80, 82, and 84.\n#### 80, 82, 84",
+        "original_answer": [
+            80,
+            82,
+            84
+        ],
+        "transformed_solution": "Let the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 216.\n3x = 210.\nx = 70.\nThe three consecutive even numbers are 70, 72, and 74.\n#### 70, 72, 74",
+        "transformed_answer": [
+            70,
+            72,
+            74
+        ],
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 246 in the question as 216 wrongly, and calculates 3x + 6 = 216 instead of 3x + 6 = 246. Its subsequent related steps will be affected but still be calculated correctly, resulting in x = 70 and the three consecutive even numbers being 70, 72, and 74 instead of 80, 82, and 84. Please note that you should only consider one error, so all other steps that reference the number 246 still reference it correctly except for the step referenced incorrectly.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the formula 3x + 6 = 216 is incorrect because the context value of 216 is not correct. The correct context value should be 210, not 216. Therefore, the first step should be 3x + 6 = 210, not 216.\n\nThe correct solution is:\n\nLet the three consecutive even numbers be x, x+2, and x+4.\nThe sum of the three numbers is x + (x+2) + (x+4) = 3x + 6.\nAccording to the problem, 3x + 6 = 210.\n3x = 204.\nx = 68.\nThe"
+    },
+    {
+        "question": "Alex takes a loan of $9,000 to buy a used truck at the rate of 9% simple interest. Calculate the annual interest to be paid for the loan amount.",
+        "original_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 9000 x 9% x 1 year = 9000 x 0.09 x 1\nInterest = $810\n#### 810",
+        "original_answer": 810.0,
+        "transformed_solution": "The annual interest is calculated using the formula: Interest = Principal x Rate x Time\nInterest = 8000 x 9% x 1 year = 8000 x 0.09 x 1\nInterest = $720\n#### 720",
+        "transformed_answer": 720.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references $9,000 in the question as $8,000 wrongly, and calculates the interest based on $8,000 instead of $9,000. The incorrect step references 9000 as 8000, leading to the calculation of 8000 x 0.09 x 1=$720 instead of the correct 9000 x 0.09 x 1=$810. The subsequent related step is affected by the erroneous result of this step but still calculated correctly based on the wrong principal of $8,000.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the formula, the value of '1 year' is not correctly referenced from the [Question]. The correct value of '1 year' should be 12 months, not 1 year. Therefore, the annual interest should be calculated as: Interest = Principal x Rate x Time\nInterest = 8000 x 9% x 12 months\nInterest = 8000 x 0.09 x 12\nInterest = $960.\n\nThe correct answer is $960, not $720."
+    },
+    {
+        "question": "From a pack of 52 cards, 1 card is drawn at random. What is the probability that a jack, queen, or king is drawn?",
+        "original_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 52\nProbability = 12/52 = 3/13\n#### 3/13",
+        "original_answer": "3/13",
+        "transformed_solution": "There are 4 jacks, 4 queens, and 4 kings in a deck of cards\nTotal number of favorable outcomes = 4 + 4 + 4 = 12\nTotal possible outcomes = 50\nProbability = 12/50 = 6/25\n#### 6/25",
+        "transformed_answer": "6/25",
+        "wrong_step": 3,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 3 references 52 in the question as 50 wrongly, and calculates the probability as 12/50 = 6/25 instead of 12/52 = 3/13. The related step that calculates the probability will be affected, using the erroneous 12/50 instead of 12/52 but will be calculated correctly from the erroneous result. Note that the mistake is only in step 3; all other references to 52 in the deck are correct.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the total number of favorable outcomes should be 12, not 16, because there is no queen of spades in a standard deck of cards. The correct formula is 12/50 = 2/10 = 20%."
+    },
+    {
+        "question": "if x ¤ y = ( x + y ) ^ 2 - ( x - y ) ^ 2 . then √ 6 ¤ √ 6 =",
+        "original_solution": "Let x = √6 and y = √6\nThen x + y = √6 + √6 = 2√6\nAnd x - y = √6 - √6 = 0\nSo ( x + y ) ^ 2 = (2√6) ^ 2 = 24\nAnd ( x - y ) ^ 2 = 0\nTherefore, √ 6 ¤ √ 6 = 24 - 0 = 24\n#### 24",
+        "original_answer": 24.0,
+        "transformed_solution": "Let x = √6 and y = √6\nThen x + y = √6 + √6 = 2√2\nAnd x - y = √6 - √6 = 0\nSo ( x + y ) ^ 2 = (2√2) ^ 2 = 8\nAnd ( x - y ) ^ 2 = 0\nTherefore, √ 6 ¤ √ 6 = 8 - 0 = 8\n#### 8",
+        "transformed_answer": 8.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references √6 in the question as √2 wrongly, and calculates √6 + √6 = 2√2 instead of √6 + √6 = 2√6. Its subsequent related step will be affected, calculating (2√2) ^ 2 = 8 instead of (2√6)^2 = 24 in step 4. Please note that you should only consider one error, so step 4 still references 2√6 in the question correctly.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is:\n\nIn the solution, the formula ( x + y ) ^ 2 - ( x - y ) ^ 2 is correct, but the operand of the formula in the first wrong step, ( x + y ), is not correct. The correct operand should be ( x + √6 + y + √6 ) instead of ( x + y ), because the question statement is asking for the value of √6 ¤ √6, not √6 + y. Therefore, the first wrong step should be ( x + y ) ^ 2 - ( x - y ) ^ 2 = ( x + √6 + y + √6 ) ^ 2 - ( x - "
+    },
+    {
+        "question": "A club wants to mix 20 pounds of candy worth $10.00 per pound with candy worth $5.00 per pound to reduce the cost of the mixture to $6.00 per pound. How many pounds of the $5.00 per pound candy should be used?",
+        "original_solution": "Let x be the number of pounds of $5.00 per pound candy.\n20(10) + 5x = (20 + x)(6)\n200 + 5x = 120 + 6x\n80 = x\n#### 80",
+        "original_answer": 80.0,
+        "transformed_solution": "Let x be the number of pounds of $5.00 per pound candy.\n20(8) + 5x = (20 + x)(6)\n160 + 5x = 120 + 6x\n40 = x\n#### 40",
+        "transformed_answer": 40.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 incorrectly references $10.00 as $8.00, resulting in the calculation 20(8) instead of the correct 20(10). The subsequent steps inherit the faulty resultant value but are computed correctly based on the new incorrect condition. Consequently, in step 2, the equation 160 + 5x = 120 + 6x is formed instead of the correct 200 + 5x = 120 + 6x, leading to an erroneous solution of x = 40 instead of x = 80.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the formula 20(8) should be 160, not 200, because the question states that 20 pounds of candy worth $10.00 per pound costs $200, not $240. Therefore, the first wrong step is 20(8) + 5x = (20 + x)(6), which leads to an incorrect result."
+    },
+    {
+        "question": "In a group of dogs and people, the number of legs was 28 more than twice the number of heads. How many dogs were there? [Assume none of the people or dogs is missing a leg.]",
+        "original_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 28 + 2(d + p)\n4d + 2p = 28 + 2d + 2p\n2d = 28\nd = 14\n#### 14",
+        "original_answer": 14.0,
+        "transformed_solution": "Let d be the number of dogs and p be the number of people.\nEach dog has 4 legs and each person has 2 legs, so the total number of legs is 4d + 2p.\nThe total number of heads is d + p.\n4d + 2p = 26 + 2(d + p)\n4d + 2p = 26 + 2d + 2p\n2d = 26\nd = 13\n#### 13",
+        "transformed_answer": 13.0,
+        "wrong_step": 4,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 4 references 28 in the question as 26 wrongly, and calculates 26 + 2(d + p) instead of 28 + 2(d + p). Its subsequent related step will be affected, resulting in 2d being equal to 26 instead of 28. This leads to the incorrect calculation of d = 13 instead of d = 14 in step 6. Please note that you should only consider one error, so step 5 still references the correct relationship 4d + 2p = 28 + 2d + 2p.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the formula 4d + 2p = 26 + 2(d + p) is incorrect because the total number of heads is not 26, but 28. The correct formula should be 4d + 2p = 28 + 2(d + p). Therefore, the first step should be corrected as follows: 4d + 2p = 28 + 2(d + p), and the final answer is 13."
+    },
+    {
+        "question": "by approximately what percent is x greater than 4 / 7 if ( 1 / 7 ) ( x ) = 1 ?",
+        "original_solution": "First, multiply both sides of the equation by 7 to get x by itself: x = 7\nNow, calculate the difference between x and 4/7: 7 - 4/7 = 49/7 - 4/7 = 45/7\nFinally, find the percent by which x is greater than 4/7: (45/7) / (4/7) * 100% = (45/4) * 100% = 1125%\n#### 1125%",
+        "original_answer": 1125.0,
+        "transformed_solution": "First, multiply both sides of the equation by 5 to get x by itself: x = 5\nNow, calculate the difference between x and 4/7: 5 - 4/7 = 35/7 - 4/7 = 31/7\nFinally, find the percent by which x is greater than 4/7: (31/7) / (4/7) * 100% = (31/4) * 100% = 775%\n#### 775%",
+        "transformed_answer": 775.0,
+        "wrong_step": 1,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 1 references 7 in the question as 5 wrongly, and calculates 1/7*x = 1, multiplied by 5 to incorrectly get x = 5 instead of correctly multiplying by 7 to get x = 7. Its subsequent related steps will be affected as they rely on the initial value of x; however, all calculations will be performed correctly with the erroneous starting point of x = 5. Step 2 will calculate the difference between x and 4/7 as 5 - 4/7 = 35/7 - 4/7, and step 3 will calculate the percentage correctly based on the incorrect x value, resulting in (31/7) / (4/7) * 100% = (31/4) * 100% = 775%.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is: In the first step, the formula (1/7)x = 1 is incorrect because the context value of 1/7 is not correctly referenced. The correct formula should be (1/7)x = 4/7, which leads to the correct answer of 31/7 - 4/7 = 27/7, not 31/7. Therefore, the final answer is 27/7 * 100% = 375%, not 775%."
+    },
+    {
+        "question": "walking at 3/4 of her normal speed, a worker is 12 minutes later than usual in reaching her office. the usual time (in minutes) taken by her to cover the distance between her home and her office is",
+        "original_solution": "Let x be the usual time taken.\nThen the time taken at 3/4 speed is 4/3 * x.\nSo, 4/3 * x - x = 12.\n4/3 * x - 3/3 * x = 12.\n1/3 * x = 12\nx = 36\n#### 36",
+        "original_answer": 36.0,
+        "transformed_solution": "Let x be the usual time taken.\nThen the time taken at 3/4 speed is 4/5 * x.\nSo, 4/5 * x - x = 12.\n4/5 * x - 5/5 * x = 12.\n-1/5 * x = 12\nx = -60\n#### -60",
+        "transformed_answer": -60.0,
+        "wrong_step": 2,
+        "wrong_type": "referencing_context_value_error",
+        "is_single_error": true,
+        "explanation": "Step 2 references 3/4 in the question as 4/5 wrongly, and calculates 4/5 * x instead of 4/3 * x. The error occurs again in the subtraction step (4/5 * x - 5/5 * x = 12), resulting in an arithmetic error that leads to a negative time, which doesn't make sense in the real-world context. As this is the root error, only this step is considered incorrect, and the following steps correctly apply the erroneous result from this step: Step 4 correctly subtracts -5/5 * x from 4/5 * x, giving -1/5 * x = 12, and Step 5 correctly solves for x, getting x = -60. However, the answer makes no sense as time cannot be negative, showing the influence of the initial error in Step 2.",
+        "eval_result": "\n\nThe solution is incorrect, the wrong type is 'referencing_context_value_error', and the explanation is:\n\nIn the [Solution], the worker's usual time taken to cover the distance between her home and her office is represented by x. However, the value of x is not correctly referenced in the context of the [Question]. The [Question] states that the worker is walking at 3/4 of her normal speed, but the [Solution] does not take this into account when calculating the usual time taken. As a result, the solution is incorrect.\n\nThe correct solution should consider the fact that the worker is walking at 3/4 of her normal speed, and adjust the calculation of the usual time taken accordingly."
+    }
+]
